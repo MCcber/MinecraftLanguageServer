@@ -261,11 +261,11 @@ clearRadical:'clear' optionalSelector itemId count;
 count:Integer;
 
 //clone
-cloneRadical:'clone' cloneFrom;
-cloneFrom:('from' dimensionId pos3D pos3D cloneTo)|(pos3D pos3D cloneTo);
-cloneTo:('to' dimensionId pos3D cloneModes)|(pos3D cloneModes);
-cloneModes:('filtered' blockId cloneBehaviors)|(('masked'|'replace') cloneBehaviors);
-cloneBehaviors:'force'|'move'|'normal';
+cloneRadical: 'clone' cloneSource cloneDestination cloneMode?;
+cloneSource: ('from' fromDimension=dimensionId)? begin=pos3D end=pos3D;
+cloneDestination: ('to' toDimension=dimensionId)? end=pos3D;
+cloneMode: (('filtered' blockId) | ('masked' | 'replace')) cloneBehavior?;
+cloneBehavior: 'force' | 'move' | 'normal';
 
 //damage
 damageRadical:'damage' singleSelector number ' ' damageType damageOptions;
