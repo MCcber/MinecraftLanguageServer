@@ -101,13 +101,20 @@ namespace MinecraftLanguageServer.DataContext
         {
             while (!cts.IsCancellationRequested)
             {
-                mcfunctionPiperServerStream.WaitForConnection();
-                using StreamReader reader = new(mcfunctionPiperServerStream);
-                using StreamWriter writer = new(mcfunctionPiperServerStream);
-                string data = await reader.ReadToEndAsync();
-                CurrentDataContext = JsonConvert.DeserializeObject<McfunctionIntellisenseModel>(data);
-                await IntellisenseService();
-                writer.Write(CurrentDataContext);
+                try
+                {
+                    await mcfunctionPiperServerStream.WaitForConnectionAsync();
+                    using StreamReader reader = new(mcfunctionPiperServerStream);
+                    using StreamWriter writer = new(mcfunctionPiperServerStream);
+                    string data = await reader.ReadToEndAsync();
+                    CurrentDataContext = JsonConvert.DeserializeObject<McfunctionIntellisenseModel>(data);
+                    await IntellisenseService();
+                    writer.Write(CurrentDataContext);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
 
