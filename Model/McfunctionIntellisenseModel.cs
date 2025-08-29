@@ -1,13 +1,10 @@
-﻿using ICSharpCode.AvalonEdit.Document;
-using ICSharpCode.AvalonEdit.Folding;
-
-namespace AutoCompleteServer
+﻿namespace MinecraftLanguageServer.Model
 {
     /// <summary>
     /// 自动补全数据上下文
     /// </summary>
     [Serializable]
-    public class McfunctionIntellisenseDataContext
+    public class McfunctionIntellisenseModel
     {
         /// <summary>
         /// 当前上下文的唯一标记码
@@ -110,69 +107,5 @@ namespace AutoCompleteServer
         public bool TypingTeamNameString { get; set; } = false;
         public string currentTeamVariable { get; set; } = "";
         #endregion
-    }
-
-    #region 代码块折叠策略
-    public class LineFoldingStrategy
-    {
-        /// <summary>
-        /// 添加大纲
-        /// </summary>
-        /// <param name="manager"></param>
-        /// <param name="document"></param>
-        /// <param name="startLine"></param>
-        /// <param name="endLine"></param>
-        public static void AddFolding(FoldingManager manager, TextDocument document, DocumentLine startLine, DocumentLine endLine)
-        {
-            #region 检查重复项
-            bool Had = false;
-            foreach (FoldingSection item in manager.AllFoldings)
-            {
-                if (item.StartOffset == startLine.Offset)
-                {
-                    Had = true;
-                    break;
-                }
-            }
-            if (Had)
-                return;
-            #endregion
-            #region 处理大纲预览文本
-            string previewText = document.GetText(startLine);
-            previewText = previewText.Length < 9 ? "#region" : previewText[9..];
-            if (previewText.Length > 50)
-                previewText = previewText[0..50];
-            #endregion
-            #region 处理添加
-            FoldingSection foldingSection = manager.CreateFolding(startLine.Offset, endLine.EndOffset);
-            foldingSection.Title = previewText;
-            #endregion
-        }
-    }
-    #endregion
-
-    /// <summary>
-    /// 补全成员属性
-    /// </summary>
-    public partial class CompletedItemData
-    {
-        /// <summary>
-        /// 是否补全了复合型选择器参数
-        /// </summary>
-        public bool IsCompoundSelectorParameter = false;
-
-        public object Content
-        {
-            get;
-            set;
-        } = "";
-
-        public object Description
-        {
-            get;
-            set;
-        } = "";
-
-        public string Text { get; set; } = "";
     }
 }

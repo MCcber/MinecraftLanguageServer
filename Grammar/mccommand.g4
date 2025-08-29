@@ -262,7 +262,7 @@ count:Integer;
 
 //clone
 cloneRadical: 'clone' cloneSource cloneDestination cloneMode?;
-cloneSource: ('from' fromDimension=dimensionId)? begin=pos3D end=pos3D;
+cloneSource: ('from' fromDimension=dimensionId)? begin=pos3D;
 cloneDestination: ('to' toDimension=dimensionId)? end=pos3D;
 cloneMode: (('filtered' blockId) | ('masked' | 'replace')) cloneBehavior?;
 cloneBehavior: 'force' | 'move' | 'normal';
