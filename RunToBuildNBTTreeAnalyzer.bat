@@ -1,0 +1,1 @@
+java -jar antlr-4.13.2-complete.jar "Grammar/commonNBTTrees.g4" -o ./Grammar

@@ -6,16 +6,16 @@ options {
 //共用词法规则(PS:词法规则不支持嵌套，请勿在词法规则中编写子词法规则，这样做大概率会导致分析错误)
 // SpaceSkip: [ \t\r\n]+ -> skip;
 // BackSlash:'\\' -> skip;
-Any:[.*];
-DimensionId:([a-z]+':')?[a-z_]+;
+DimensionId:[a-z_:]+;
 dimensionId:DimensionId;
+Any:[.*];
 MobAttribute:'minecraft:'?'generic.'[a-z_]+;
 mobAttribute:MobAttribute;
 Integer:'-'?[0-9]+;
 int:Integer;
 intInterval:(Integer'..')|('..'Integer)|(Integer'..'Integer);
 IntInterval:(Integer'..')|('..'Integer)|(Integer'..'Integer);
-Number:'-'?([0-9]+('.'[0-9]+)?)|(([0-9]+)?('.'[0-9]+));
+Number:('-')?([0-9]+('.'[0-9]+)?)|(([0-9]+)?('.'[0-9]+));
 number:Number;
 positiveNumber:PositiveNumber;
 PositiveNumber:([0-9]+('.'[0-9]+)?)|([0-9]+?('.'[0-9]+));
@@ -76,8 +76,8 @@ entityNBT:jsonValue;
 targetObjective:IdString;
 storageId:IdString;
 storageIdString:IdString;
-Coordinates:(('~'|'^')Number ' ')|('~ '|'^ ')|(Number ' ');
-pos3D:Coordinates Coordinates Coordinates;
+Coordinates:Number|(('~'|'^')Number)|('~'|'^');
+pos3D:Coordinates;
 pos2D:Coordinates Coordinates;
 gamemodeValues:'survival'|'creative'|'adventure'|'spectator';
 GamemodeValues:'survival'|'creative'|'adventure'|'spectator';
@@ -262,10 +262,11 @@ count:Integer;
 
 //clone
 cloneRadical: 'clone' cloneSource cloneDestination cloneMode?;
-cloneSource: ('from' fromDimension=dimensionId)? begin=pos3D;
-cloneDestination: ('to' toDimension=dimensionId)? end=pos3D;
+cloneSource: (from dimensionId)? pos3D;
+cloneDestination: (to dimensionId)? pos3D;
 cloneMode: (('filtered' blockId) | ('masked' | 'replace')) cloneBehavior?;
 cloneBehavior: 'force' | 'move' | 'normal';
+to:'to';
 
 //damage
 damageRadical:'damage' singleSelector number ' ' damageType damageOptions;

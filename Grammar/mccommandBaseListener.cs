@@ -792,6 +792,18 @@ public partial class mccommandBaseListener : ImccommandListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitCloneBehavior([NotNull] mccommandParser.CloneBehaviorContext context) { }
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="mccommandParser.to"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTo([NotNull] mccommandParser.ToContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mccommandParser.to"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTo([NotNull] mccommandParser.ToContext context) { }
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="mccommandParser.damageRadical"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>

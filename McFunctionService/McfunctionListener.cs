@@ -17,10 +17,10 @@ namespace MinecraftLanguageServer.McFunctionService
     /// <summary>
     /// 创建自定义的监听器类，继承自 mccommandBaseListener
     /// </summary>
-    public class McfunctionListener(McfunctionIntellisenseService mcfunctionContext, McfunctionIntellisenseModel CurrentDataContext) : mccommandBaseListener
+    public class McfunctionListener(McfunctionIntellisenseService mcfunctionContext, MCFunctionIntellisenseModel CurrentDataContext) : mccommandBaseListener
     {
-        #region  字段
-        public McfunctionIntellisenseModel CurrentDataContext = CurrentDataContext;
+        #region Field
+        public MCFunctionIntellisenseModel CurrentDataContext = CurrentDataContext;
 
         public int CursorOffset = 0;
 
@@ -38,7 +38,9 @@ namespace MinecraftLanguageServer.McFunctionService
         public override void EnterEveryRule(ParserRuleContext context)
         {
             if (CurrentDataContext.RunningPaste || !CurrentDataContext.IsNeedCalculate)
+            {
                 return;
+            }
 
             #region 提取当前上下文类型
             string currentType = context.GetType().ToString().Replace("mccommandParser+", "").Replace("Radical", "").Replace("Context", "");

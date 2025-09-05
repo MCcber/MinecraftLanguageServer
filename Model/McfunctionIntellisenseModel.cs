@@ -4,7 +4,7 @@
     /// 自动补全数据上下文
     /// </summary>
     [Serializable]
-    public class McfunctionIntellisenseModel
+    public class MCFunctionIntellisenseModel
     {
         /// <summary>
         /// 当前上下文的唯一标记码

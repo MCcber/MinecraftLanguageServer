@@ -661,6 +661,16 @@ public interface ImccommandListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitCloneBehavior([NotNull] mccommandParser.CloneBehaviorContext context);
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="mccommandParser.to"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTo([NotNull] mccommandParser.ToContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mccommandParser.to"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTo([NotNull] mccommandParser.ToContext context);
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="mccommandParser.damageRadical"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

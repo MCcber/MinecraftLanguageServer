@@ -7,9 +7,9 @@ namespace MinecraftLanguageServer.McFunctionService
     /// <summary>
     /// 选择器监听器
     /// </summary>
-    public class SelectorListener(McfunctionIntellisenseModel context) : selectorBaseListener
+    public class SelectorListener(MCFunctionIntellisenseModel context) : selectorBaseListener
     {
-        public McfunctionIntellisenseModel mcfunctionContext = context;
+        public MCFunctionIntellisenseModel mcfunctionContext = context;
 
         public int CursorOffset = 0;
 
