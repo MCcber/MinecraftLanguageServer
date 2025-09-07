@@ -1,1 +1,0 @@
-java -cp "D:\C#Project\MinecraftLanguageServer\JavaMCDocument;D:\C#Project\MinecraftLanguageServer\antlr-4.13.2-complete.jar" org.antlr.v4.gui.TestRig mcdocParser document -tokens -gui < code.mcdoc
