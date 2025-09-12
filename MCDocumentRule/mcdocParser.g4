@@ -6,183 +6,143 @@ options {
 import mcdocLexer;
 
 logicalOR:LogicalOR;
-
-baseDataType:StringKeyType|BooleanKeyType|ByteKeyType|ShortKeyType|IntKeyType|FloatKeyType|DoubleKeyType|LongKeyType;
-keywordType:'any'|booleanType;
-booleanType:'true'|'false';
-booleanKeyType:'boolean';
+path:Path;
+resourceLocation: ResourceLocation;
+at:'@';
+dot:'.';
+baseDataType:'string'|'boolean'|'byte'|'short'|'int'|'float'|'double'|'long';
+keywordType:(Any|BoolValue);
 questionMark: '?';
-integerRange:(DoubleDot? integer) | (integer DoubleDot integer?);
-floatRange:(DoubleDot? float) | (float DoubleDot float?);
+structKeyType:'struct';
+inject:'inject';
+enum:'enum';
+use:'use';
+dispatch:'dispatch';
+typeKeyType:'type';
+doubleDot:'..';
 
 integer:Integer;
-
 float:Float;
 
-versionString:VersionString;
-positiveInteger:PositiveInteger;
+integerRange:IntegerRange;
+// floatRange:(DoubleDot float) | (float DoubleDot) | (float DoubleDot float) | float;
+
 identifier:Identifier;
 
 commentary:Commentary;
-fieldValue: FieldValue;
+docCommentary:DocCommentary;
+typedNumber:(integer IntTypedUnit?)|(float FloatTypedUnit?);
 
-stringType:'string' integerRange;
-literalType:'false'|'true'|TypedNumber|String;
-numericType:('byte'('@'integerRange)?)
-            |('short'('@'integerRange)?)
-            |('int'('@'integerRange)?)
-            |('long'('@'integerRange)?)
-            |('float'('@'integerRange)?)
-            |('double'('@'integerRange)?);
+stringType:StringKeyType (at IntegerRange)?;
 
-listType:'['type']' ('@'integerRange)?;
+literalType:BoolValue|TypedNumberLexer|String|Identifier;
 
-tupleType:('['type',]')|('['type(','type)+','?']');
+numericType:baseDataType(at integerRange)?;
 
-prelim:commentary;
-enumType:'byte'|'short'|'int'|'long'|'string'|'float'|'double';
-enumValue:TypedNumber|String;
-enumField:prelim identifier '=' enumValue;
-enumBlock:'{''}'|'{'enumField(','enumField)*','?'}';
-enum:prelim 'enum' '('enumType')'identifier?enumBlock;
+primitiveArrayType:(('byte'|'int'|'long') (at WS* integerRange)?SquareBrackets WS* (at WS* (integerRange|integer))?);
+
+listType:LeftSquareBracket type RightSquareBracket (at integerRange)?;
+
+tupleType:(LeftSquareBracket type Comma RightSquareBracket)
+|(LeftSquareBracket type(Comma type)+Comma?RightSquareBracket);
+
+enumMemberType:'byte'|'short'|'int'|'long'|'string'|'float'|'double';
+enumValue:typedNumber|string;
+enumField:prelim? attribute* identifier Equal enumValue;
+enumBlock:CurlyBrackets|(LeftCurlyBracket enumField(Comma enumField)*Comma?RightCurlyBracket);
+enumType:prelim? enum LeftRoundBracket enumMemberType RightRoundBracket identifier?enumBlock;
+
+prelim:(docCommentary|commentary) attribute?;
 
 referenceType:Path;
 
-dispatcherType:ResourceLocation indexBody;
+dispatcherType:resourceLocation indexBodyWithDynamic;
 
-unionType:('('')')|(type('|'type)*'|'?);
+unionType: RoundBrackets
+         | (LeftRoundBracket type (logicalOR type)* logicalOR? RightRoundBracket)
+         ;
 
-index:StaticIndexKey | DynamicIndex;
-indexBody:'[' index ( index',')* ','? ']';
-indexOnAType:indexBody;
+staticIndexKey:'%fallback' | '%none' | '%unknown'| Identifier | String | ResourceLocation;
 
-typeArgBlock:'<''>' | type ( type'<,')* ','?'>';
+accessor: accessorKey accessorKey*;
+accessorKey: '%parent' | '%key' | Identifier | String;
+dynamicIndex : LeftSquareBracket accessor RightSquareBracket;
 
-unAttributedType:keywordType 
+indexWithOutDynamic:staticIndexKey;
+indexWithDynamic:staticIndexKey|dynamicIndex;
+
+indexBodyWithOutDynamic:LeftSquareBracket indexWithOutDynamic (Comma indexWithOutDynamic)* Comma? RightSquareBracket;
+indexBodyWithDynamic:LeftSquareBracket indexWithDynamic (Comma indexWithDynamic)* Comma? RightSquareBracket;
+
+indexingOnAType:indexBodyWithDynamic;
+
+typeArgBlock:AngleBrackets | (LeftAngleBracket type (Comma type)* Comma? RightAngleBracket);
+
+unAttributedType:(keywordType 
 |stringType 
 |literalType 
 |numericType 
 |primitiveArrayType 
 |listType 
 |tupleType 
-|enum 
-|structSentence
+|enumType
+|struct
 |referenceType 
 |dispatcherType 
 |unionType
-|indexOnAType
+|indexingOnAType) Comma?
 ;
 
-type:documentAttribute unAttributedType (indexBody|typeArgBlock)*;
+type:attribute* unAttributedType (indexBodyWithDynamic|typeArgBlock)*;
 
-// unknownKey:FieldValue;
-// unknownValue:FieldValue;
-// unknownResource:'#['unknownKey'='unknownValue']';
+attributeSet:commentary* attribute* commentary* identifier* commentary*;
 
-documentAttributeSet:commentary* documentAttribute* commentary* fieldValue* commentary*;
+arrayLength:at PositiveInteger;
 
-arrayLength:'@ ' PositiveInteger;
+string:String;
+positionalValues:value(Comma value)*;
 
-primitiveArrayType:((('byte'|'short'|'int'|'float'|'double'| 'long') (At integerRange)?'[]'))
-|(('['('byte'|'short'|'int'|'float'|'double'| 'long')']') (At integerRange)?);
+namedValue:((identifier|string)Equal value)
+|((identifier|string) treeValue);
 
-dataType:primitiveArrayType|booleanKeyType|numericType|documentAttributeSet;
+namedValues:namedValue (Comma namedValue)*;
 
-canonical: '#[canonical]' dataType;
+treeBody:(positionalValues Comma?)
+|namedValues Comma?
+|positionalValues Comma namedValues Comma?;
 
-color: '#[color=' String ']' dataType;
+treeValue:(LeftRoundBracket treeBody? RightRoundBracket)
+|(LeftSquareBracket treeBody? RightSquareBracket)
+|(LeftCurlyBracket treeBody? RightCurlyBracket);
 
-commandSlashOptions: 'slash=' String;
-commandMacroOptions: 'macro=' String;
-commandEmptyOptions: 'empty=' String;
-commandMaxLength: 'max_length=' integer;
-commandParameters:
-    commandSlashOptions
-    | commandMacroOptions
-    | commandEmptyOptions
-    | commandMaxLength;
-command:'#[command(' (commandParameters (',' commandParameters*)?) ') string';
+value:type|treeValue;
 
-deprecated: '#[deprecated=' versionString ']';
+attribute:(Sharp LeftSquareBracket identifier RightSquareBracket)
+|(Sharp LeftSquareBracket identifier Equal value RightSquareBracket)
+|(Sharp LeftSquareBracket identifier treeValue RightSquareBracket);
 
-dispatcher_key:'#[dispatcher_key=' DispatcherKeyString '] string';
+dispatchStatement:prelim? dispatch resourceLocation indexBodyWithOutDynamic typeParamBlock? 'to' type;
 
-divisible_by: '#[divisible_by=' integer ']' 'int';
+structInjection:structKeyType path structBlock;
+enumInjection:EnumKeyType LeftRoundBracket enumType RightRoundBracket path enumBlock;
+injection:inject (enumInjection | structInjection);
 
-entityAmount: 'amount=' ('multiple' | 'single');
-entityType: 'type=' ('entities' | 'players');
-entityParameters: entityAmount | entityType;
-entity:'#[entity(' (entityParameters (',' entityParameters*)?) ') string';
+useStatement:use path (As identifier)?;
 
-gameRuleParameter: 'type=' ('"boolean"' | '"int"');
-gameRule: '#[game_rule(' gameRuleParameter ')]';
+typeParam:Identifier;
 
-idRegistry: 'registry=' String;
-idTags: 'tags=' ('allowed' | 'implicit' | 'required');
-idParameters: idRegistry | idTags;
-id: '#[id(' (idParameters (',' idParameters*)?) ')] string';
+typeParamBlock:AngleBrackets
+|(LeftAngleBracket typeParam (Comma typeParam)* Comma? RightAngleBracket);
 
-match_regex: '#[match_regex="' RegexPattern? '"] string';
+typeAlias:prelim? typeKeyType identifier typeParamBlock? Equal type;
 
-nbt: '#[nbt=ItemStack] string';
+structKey:String|Identifier|(LeftSquareBracket type RightSquareBracket);
+structField:(prelim* attribute* structKey questionMark? ColonMark type)
+|(attribute? TripleDot?type);
 
-nbt_path: '#[nbt_path] string';
+structBlock:CurlyBrackets
+|(LeftCurlyBracket structField(Comma structField)* Comma? RightCurlyBracket);
 
-objective: '#[objective] string';
+struct:prelim? structKeyType identifier? structBlock;
 
-regex_pattern: '#[regex_pattern] string';
-
-score_holder: '#[score_holder] string';
-
-since: '#[since="' versionString '"]';
-
-until: '#[until="' versionString '"]';
-
-tag: '#[tag] string';
-
-team: '#[team] string';
-
-text_component: '#[text_component] string';
-
-uuid:'#[uuid]';
-
-usefilePath:Path;
-
-useSentence:'use' usefilePath;
-
-documentAttribute:
-    // canonical
-     color
-    // | command
-    | deprecated
-    | dispatcher_key
-    | divisible_by
-    | entity
-    | gameRule
-    // | id
-    // | match_regex
-    | nbt
-    | nbt_path
-    | objective
-    | regex_pattern
-    | score_holder
-    | since
-    | tag
-    | team
-    | text_component
-    | until
-    | uuid;
-
-field: fieldValue questionMark? ColonMark dataType;
-fields: field (Comma commentary* field)* (Comma)?;
-
-structReference:'...'FieldValue;
-superInvoke:'...super::' FieldValue;
-
-structContent: (commentary|fields|superInvoke|structReference|documentAttribute)*;
-
-structName:FieldValue;
-
-structSentence: 'struct' structName '{' structContent '}';
-
-document:useSentence* commentary* structSentence;
+file:(struct|enumType|typeAlias|useStatement|injection|dispatchStatement)*;

@@ -1,2 +1,12 @@
-use ::java::util::text::Text
-use super::java::world::component::CustomData
+enum (int) {
+		Enchantments = 1,
+		AttributeModifiers = 2,
+		Unbreakable = 3,
+		CanDestroy = 4,
+		CanPlaceOn = 5,
+		Other = 6,
+		#[since="1.16.2"]
+		LeatherColor = 7,
+		#[since="1.19.4"]
+		Trim = 8
+	}
