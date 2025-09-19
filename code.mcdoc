@@ -1,1 +1,1 @@
-execute as @a at @s anchored eyes run particle smoke ^ ^ ^3
+execute as @a if data entity @s Inventory[{Slot:0b}].components."minecraft: enchantments".levels."minecraft:efficiency" run tp @s 0 64 0

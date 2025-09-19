@@ -339,11 +339,11 @@ ResourceLocation:OriginResource;
 BlockStateKey:Identifier;
 BlockStateValue:([a-z0-9_])+|BooleanValue;
 
-MessageContent:~[\r\n] ->pushMode(Message_Mode);
+MessageContent:[ ] -> pushMode(Message_Mode);
 
 mode Message_Mode;
 Message:~[\r\n]+;
-MESSAGE_END: [\r\n] -> popMode;
+MESSAGE_END: EOF -> popMode;
 
 mode Coordinate_Mode;
 Coordinate:((('~'|'^') (Double|Integer)?) | (Double|Integer));

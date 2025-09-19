@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from d:/C#Project/MCFunctionSyntaxCompletionServer/Grammar/commonNBTTrees.g4 by ANTLR 4.13.1
+// Generated from d:/C#Project/MinecraftLanguageServer/MCFunctionRule/commonNBTTrees.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162

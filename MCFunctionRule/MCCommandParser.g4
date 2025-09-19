@@ -36,7 +36,7 @@ dataType:ByteKey|DoubleKey|FloatKey|IntKey|LongKey|ShortKey;
 itemId:ResourceLocation;
 
 blockState:BlockStateKey equal BlockStateValue;
-blockID:Identifier leftSquareBracket blockState(Comma  blockState)* rightSquareBracket;
+blockID:ResourceLocation | (Identifier (leftSquareBracket blockState(Comma  blockState)* rightSquareBracket)?);
 
 blockNBT:jsonValue;
 entityNBT:jsonValue;
@@ -524,32 +524,51 @@ axes:Axes;
 executeAllOrMasked:all|masked;
 executeMaxOrValue:max|value;
 executeJudgeDataOptions:
-(block pos3D nbtPath executeOptions)
-|(entity selector nbtPath executeOptions)
-|(storage storageId nbtPath executeOptions);
+(block pos3D nbtPath)
+|(entity selector nbtPath)
+|(storage storageId nbtPath);
+
 executeJudgementOptions:
-((biome pos3D biomeId executeOptions)
-|(block pos3D blockID executeOptions)
-|(blocks pos3D pos3D pos3D (executeAllOrMasked executeOptions))
+((biome pos3D biomeId)
+|(block pos3D blockID)
+|(blocks pos3D pos3D pos3D (executeAllOrMasked))
 |(dataKey executeJudgeDataOptions)
-|(dimension dimensionId executeOptions)
-|(entity selector executeOptions)
-|(loaded pos3D executeOptions)
-|(predicate exclamationMark?predicateValue executeOptions)
-|(score selector targetObjective executeOperations executeOptions));
+|(dimension dimensionId)
+|(entity selector)
+|(loaded pos3D)
+|(predicate exclamationMark?predicateValue)
+|(score selector targetObjective executeOperations));
+
 executeOperations:((lessThan|lessThanOrEqualTo|equal|greaterThanOrEqualTo) selector targetObjective)|(matches integer|intInterval);
+
 executeOn:attacker|controller|leasher|origin|owner|passengers|target|vehicle;
+
 executeOver:motion_blocking|motion_blocking_no_leaves|ocean_floor|world_surface;
+
 executePositioned:(as selector)|(over executeOver);
+
 executeStoreTarget:(block pos3D nbtPath dataType Double)
 |(bossbarKey bossbarID executeMaxOrValue)
 |(entity selector nbtPath dataType Double)
 |(score selector targetObjective)
 |(storage storageId nbtPath dataType Double);
+
 executeStore:(result|success) executeStoreTarget;
+
 executeFacing:(pos3D executeOptions)|(entity selector executeEyesOrFeet executeOptions);
 
-executeOptions:(align axes executeOptions)|(anchored executeEyesOrFeet executeOptions)|((as|atLetter) selector executeOptions)|(facing executeFacing executeOptions)|((if|unless) executeJudgementOptions executeOptions)|(in dimensionId executeOptions)|(on executeOn executeOptions)|(positioned (pos3D|executePositioned) executeOptions)|(rotated as selector executeOptions)|(run commands)|(store executeStore executeOptions)|(summonKey entityType executeOptions);
+executeOptions:(align axes executeOptions)
+|(anchored executeEyesOrFeet executeOptions)
+|((as|atLetter) selector executeOptions)
+|(facing executeFacing executeOptions)
+|((if|unless) executeJudgementOptions executeOptions)
+|(in dimensionId executeOptions)
+|(on executeOn executeOptions)
+|(positioned (pos3D|executePositioned) executeOptions)
+|(rotated as selector executeOptions)
+|(run commands)
+|(store executeStore executeOptions)
+|(summonKey entityType executeOptions);
 
 //experience
 experienceRadical:experienceKey experienceOptions;
@@ -630,7 +649,7 @@ meRadical:meKey action;
 action:MessageContent;
 
 //msg
-msgRadical:msgKey selector msgMessage?;
+msgRadical:msgKey selector msgMessage;
 msgMessage:MessageContent;
 
 //particle
