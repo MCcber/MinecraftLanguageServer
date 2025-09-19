@@ -2,22 +2,18 @@
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using MinecraftLanguageServer.DataContext;
-using MinecraftLanguageServer.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using MinecraftLanguageServer.McFunctionService;
+using MinecraftLanguageServer.Model.MCFunction;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using static mccommandParser;
 using static selectorParser;
 
-namespace MinecraftLanguageServer.McFunctionService
+namespace MinecraftLanguageServer.MCFunctionService
 {
     /// <summary>
     /// 创建自定义的监听器类，继承自 mccommandBaseListener
     /// </summary>
-    public class McfunctionListener(McfunctionIntellisenseService mcfunctionContext, MCFunctionIntellisenseModel CurrentDataContext) : mccommandBaseListener
+    public class MCFunctionListener(MCFunctionIntellisenseService mcfunctionContext, MCFunctionIntellisenseModel CurrentDataContext) : mccommandBaseListener
     {
         #region Field
         public MCFunctionIntellisenseModel CurrentDataContext = CurrentDataContext;

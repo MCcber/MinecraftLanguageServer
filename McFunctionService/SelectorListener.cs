@@ -1,5 +1,5 @@
 ﻿using Antlr4.Runtime;
-using MinecraftLanguageServer.Model;
+using MinecraftLanguageServer.Model.MCFunction;
 using static selectorParser;
 
 namespace MinecraftLanguageServer.McFunctionService

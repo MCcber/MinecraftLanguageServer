@@ -1,0 +1,26893 @@
+// Generated from d:/C#Project/MinecraftLanguageServer/MCFunctionRule/MCCommandParser.g4 by ANTLR 4.13.1
+import org.antlr.v4.runtime.atn.*;
+import org.antlr.v4.runtime.dfa.DFA;
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
+import org.antlr.v4.runtime.tree.*;
+import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
+
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
+public class MCCommandParser extends Parser {
+	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
+
+	protected static final DFA[] _decisionToDFA;
+	protected static final PredictionContextCache _sharedContextCache =
+		new PredictionContextCache();
+	public static final int
+		WS=1, Sharp=2, Slash=3, AtChar=4, AtLetter=5, ExclamationMark=6, Comma=7, 
+		Dot=8, Colon=9, DoubleDot=10, SquareBrackets=11, LeftSquareBracket=12, 
+		RightSquareBracket=13, RoundBrackets=14, LeftRoundBracket=15, RightRoundBracket=16, 
+		CurlyBrackets=17, LeftCurlyBracket=18, RightCurlyBracket=19, AngleBrackets=20, 
+		LeftAngleBracket=21, RightAngleBracket=22, DoubleQuotes=23, Quote=24, 
+		ByteKey=25, IntKey=26, LongKey=27, StringKey=28, BooleanKey=29, ShortKey=30, 
+		FloatKey=31, DoubleKey=32, BooleanValue=33, SelectorName=34, AxeKey=35, 
+		AxeLengthKey=36, Axes=37, ViewRotationKey=38, Level=39, LimitKey=40, NBTKey=41, 
+		ScoreKey=42, TypeKey=43, SortKey=44, AdvancementKey=45, AttributeKey=46, 
+		BossbarKey=47, ClearKey=48, CloneKey=49, DamageKey=50, DataKey=51, DatapackKey=52, 
+		DebugKey=53, DefaultgamemodeKey=54, DifficultyKey=55, EffectKey=56, EnchantKey=57, 
+		ExecuteKey=58, ExperienceKey=59, FillKey=60, FillbiomeKey=61, ForceloadKey=62, 
+		FunctionKey=63, GamemodeKey=64, GameruleKey=65, GiveKey=66, HelpKey=67, 
+		ItemKey=68, JfrKey=69, KickKey=70, KillKey=71, ListKey=72, LocateKey=73, 
+		LootKey=74, MeKey=75, MsgKey=76, ParticleKey=77, PlaceKey=78, PlaysoundKey=79, 
+		PublishKey=80, RecipeKey=81, ReloadKey=82, ReturnKey=83, RideKey=84, SayKey=85, 
+		ScheduleKey=86, ScoreboardKey=87, SeedKey=88, SetblockKey=89, SetworldspawnKey=90, 
+		SpawnpointKey=91, SpectateKey=92, SpreadplayersKey=93, StopsoundKey=94, 
+		SummonKey=95, TagKey=96, TeamKey=97, TeammsgKey=98, TeleportKey=99, TellKey=100, 
+		TellrawKey=101, TimeKey=102, TitleKey=103, TmKey=104, TpKey=105, TriggerKey=106, 
+		WeatherKey=107, WorldborderKey=108, XpKey=109, Star=110, Add=111, Remove=112, 
+		Value=113, Set=114, Multiply=115, Multiply_Base=116, Max=117, Players=118, 
+		Visible=119, Color=120, Name=121, Style=122, Filtered=123, Masked=124, 
+		Replace=125, Force=126, Move=127, Normal=128, To=129, By=130, Merge=131, 
+		Modify=132, Block=133, Entity=134, Storage=135, As=136, Grant=137, Revoke=138, 
+		Everything=139, Only=140, From=141, Through=142, Until=143, Base=144, 
+		Get=145, Modifier=146, Available=147, Enable=148, After=149, Before=150, 
+		First=151, Last=152, Disable=153, Start=154, Stop=155, Infinite=156, Easy=157, 
+		Hard=158, Peaceful=159, Eyes=160, Feet=161, All=162, Biome=163, Blocks=164, 
+		Dimension=165, Loaded=166, Predicate=167, Score=168, Matches=169, Attacker=170, 
+		Controller=171, Leasher=172, Origin=173, Owner=174, Passengers=175, Target=176, 
+		Vehicle=177, Motion_blocking=178, Motion_blocking_no_leaves=179, Ocean_floor=180, 
+		World_surface=181, Over=182, Result=183, Success=184, Align=185, Anchored=186, 
+		If=187, Unless=188, In=189, On=190, Positioned=191, Rotated=192, Run=193, 
+		Store=194, Query=195, Levels=196, Points=197, Destroy=198, Hollow=199, 
+		Keep=200, Outline=201, Uuids=202, Poi=203, Structure=204, Insert=205, 
+		Spawn=206, Fish=207, Mine=208, Feature=209, Jigsaw=210, Template=211, 
+		Front_back=212, Left_right=213, None=214, Clockwise_90=215, Counterclockwise_90=216, 
+		Ambient=217, Hostile=218, Master=219, Music=220, Neutral=221, Player=222, 
+		Record=223, Voice=224, Append=225, Dismount=226, Mount=227, Objectives=228, 
+		Hearts=229, DisplayName=230, Rendertype=231, Setdisplay=232, Operation=233, 
+		Reset=234, Under=235, Actionbar=236, Subtitle=237, Times=238, FadeIn=239, 
+		Stay=240, FadeOut=241, Center=242, Warning=243, Amount=244, Buffer=245, 
+		Facing=246, Prepend=247, Bossbar=248, With=249, Mainhand=250, Offhand=251, 
+		Take=252, Always=253, Never=254, PushOtherTeams=255, PushOwnTeam=256, 
+		HideForOtherTeams=257, HideForOwnTeam=258, FriendlyFire=259, NametagVisibility=260, 
+		SeeFriendlyInvisibles=261, Rain=262, Thunder=263, Day=264, Midnight=265, 
+		Night=266, Daytime=267, Noon=268, Gametime=269, Distance=270, Empty=271, 
+		Join=272, Leave=273, CollisionRule=274, DeathMessageVisibility=275, Prefix=276, 
+		Suffix=277, LessThanOrEqualTo=278, Equal=279, GreaterThanOrEqualTo=280, 
+		OneHundredAndEighty=281, GreaterThanLessThan=282, DivisionEqual=283, MultiplicationEqual=284, 
+		AdditionEqual=285, SubtractionEqual=286, RemainderEqual=287, UUID=288, 
+		Integer=289, IntInterval=290, PositiveDouble=291, PositiveDoubleInterval=292, 
+		Double=293, DoubleInterval=294, Float=295, GameTimeValue=296, IntTypedUnit=297, 
+		FloatTypedUnit=298, Identifier=299, FileReference=300, String=301, ScoreboardObjective=302, 
+		ResourceLocation=303, BlockStateKey=304, BlockStateValue=305, MessageContent=306, 
+		Message=307, MESSAGE_END=308, Coordinate=309, COORDINATE_END=310;
+	public static final int
+		RULE_atChar = 0, RULE_atLetter = 1, RULE_exclamationMark = 2, RULE_leftSquareBracket = 3, 
+		RULE_rightSquareBracket = 4, RULE_leftCurlyBracket = 5, RULE_rightCurlyBracket = 6, 
+		RULE_dimensionId = 7, RULE_mobAttribute = 8, RULE_integer = 9, RULE_intInterval = 10, 
+		RULE_axeValue = 11, RULE_gameTimeValue = 12, RULE_biomeId = 13, RULE_bool = 14, 
+		RULE_stringValue = 15, RULE_jsonComponent = 16, RULE_uuid = 17, RULE_jobject = 18, 
+		RULE_jarray = 19, RULE_jkey = 20, RULE_jpair = 21, RULE_jsonValue = 22, 
+		RULE_jvalue = 23, RULE_nbtPath = 24, RULE_dataType = 25, RULE_itemId = 26, 
+		RULE_blockState = 27, RULE_blockID = 28, RULE_blockNBT = 29, RULE_entityNBT = 30, 
+		RULE_targetObjective = 31, RULE_storageId = 32, RULE_storageIdString = 33, 
+		RULE_coordinateX = 34, RULE_coordinateY = 35, RULE_coordinateZ = 36, RULE_pos3D = 37, 
+		RULE_pos2D = 38, RULE_gamemodeValue = 39, RULE_sortValue = 40, RULE_identifier = 41, 
+		RULE_viewRotationValue = 42, RULE_doubleInterval = 43, RULE_positiveDouble = 44, 
+		RULE_positiveDoubleInterval = 45, RULE_levelValue = 46, RULE_nameValue = 47, 
+		RULE_entityType = 48, RULE_predicateValue = 49, RULE_selector = 50, RULE_selectorName = 51, 
+		RULE_selectorParameter = 52, RULE_scorePath = 53, RULE_scoreParameter = 54, 
+		RULE_scoresValue = 55, RULE_parameter = 56, RULE_commands = 57, RULE_axeKey = 58, 
+		RULE_star = 59, RULE_advancementKey = 60, RULE_attributeKey = 61, RULE_bossbarKey = 62, 
+		RULE_clearKey = 63, RULE_cloneKey = 64, RULE_damageKey = 65, RULE_dataKey = 66, 
+		RULE_datapackKey = 67, RULE_debugKey = 68, RULE_defaultgamemodeKey = 69, 
+		RULE_difficultyKey = 70, RULE_effectKey = 71, RULE_enchantKey = 72, RULE_executeKey = 73, 
+		RULE_experienceKey = 74, RULE_fillKey = 75, RULE_fillbiomeKey = 76, RULE_forceloadKey = 77, 
+		RULE_functionKey = 78, RULE_gamemodeKey = 79, RULE_gameruleKey = 80, RULE_giveKey = 81, 
+		RULE_helpKey = 82, RULE_itemKey = 83, RULE_jfrKey = 84, RULE_kickKey = 85, 
+		RULE_killKey = 86, RULE_listKey = 87, RULE_locateKey = 88, RULE_lootKey = 89, 
+		RULE_meKey = 90, RULE_msgKey = 91, RULE_particleKey = 92, RULE_placeKey = 93, 
+		RULE_playsoundKey = 94, RULE_publishKey = 95, RULE_recipeKey = 96, RULE_reloadKey = 97, 
+		RULE_returnKey = 98, RULE_rideKey = 99, RULE_sayKey = 100, RULE_scheduleKey = 101, 
+		RULE_scoreboardKey = 102, RULE_seedKey = 103, RULE_setblockKey = 104, 
+		RULE_setworldspawnKey = 105, RULE_spawnpointKey = 106, RULE_spectateKey = 107, 
+		RULE_spreadplayersKey = 108, RULE_stopsoundKey = 109, RULE_summonKey = 110, 
+		RULE_tagKey = 111, RULE_teamKey = 112, RULE_teammsgKey = 113, RULE_teleportKey = 114, 
+		RULE_tellKey = 115, RULE_tellrawKey = 116, RULE_timeKey = 117, RULE_titleKey = 118, 
+		RULE_tmKey = 119, RULE_tpKey = 120, RULE_triggerKey = 121, RULE_weatherKey = 122, 
+		RULE_worldborderKey = 123, RULE_xpKey = 124, RULE_axeLengthKey = 125, 
+		RULE_viewRotationKey = 126, RULE_level = 127, RULE_scoreKey = 128, RULE_limit = 129, 
+		RULE_typeKey = 130, RULE_nbtKey = 131, RULE_sortKey = 132, RULE_divisionEqual = 133, 
+		RULE_multiplicationEqual = 134, RULE_additionEqual = 135, RULE_subtractionEqual = 136, 
+		RULE_remainderEqual = 137, RULE_lessThan = 138, RULE_lessThanOrEqualTo = 139, 
+		RULE_equal = 140, RULE_greaterThan = 141, RULE_greaterThanOrEqualTo = 142, 
+		RULE_greaterThanLessThan = 143, RULE_add = 144, RULE_remove = 145, RULE_value = 146, 
+		RULE_set = 147, RULE_multiply = 148, RULE_multiply_base = 149, RULE_max = 150, 
+		RULE_players = 151, RULE_visible = 152, RULE_color = 153, RULE_name = 154, 
+		RULE_style = 155, RULE_filtered = 156, RULE_masked = 157, RULE_replace = 158, 
+		RULE_force = 159, RULE_move = 160, RULE_normal = 161, RULE_to = 162, RULE_by = 163, 
+		RULE_merge = 164, RULE_modify = 165, RULE_block = 166, RULE_entity = 167, 
+		RULE_storage = 168, RULE_stringKey = 169, RULE_as = 170, RULE_grant = 171, 
+		RULE_revoke = 172, RULE_everything = 173, RULE_only = 174, RULE_from = 175, 
+		RULE_through = 176, RULE_until = 177, RULE_base = 178, RULE_get = 179, 
+		RULE_modifier = 180, RULE_available = 181, RULE_enable = 182, RULE_after = 183, 
+		RULE_before = 184, RULE_first = 185, RULE_last = 186, RULE_disable = 187, 
+		RULE_start = 188, RULE_stop = 189, RULE_infinite = 190, RULE_easy = 191, 
+		RULE_hard = 192, RULE_peaceful = 193, RULE_eyes = 194, RULE_feet = 195, 
+		RULE_all = 196, RULE_biome = 197, RULE_blocks = 198, RULE_dimension = 199, 
+		RULE_loaded = 200, RULE_predicate = 201, RULE_score = 202, RULE_matches = 203, 
+		RULE_attacker = 204, RULE_controller = 205, RULE_leasher = 206, RULE_origin = 207, 
+		RULE_owner = 208, RULE_passengers = 209, RULE_target = 210, RULE_vehicle = 211, 
+		RULE_motion_blocking = 212, RULE_motion_blocking_no_leaves = 213, RULE_ocean_floor = 214, 
+		RULE_world_surface = 215, RULE_over = 216, RULE_result = 217, RULE_success = 218, 
+		RULE_align = 219, RULE_anchored = 220, RULE_if = 221, RULE_unless = 222, 
+		RULE_in = 223, RULE_on = 224, RULE_positioned = 225, RULE_rotated = 226, 
+		RULE_run = 227, RULE_store = 228, RULE_query = 229, RULE_levels = 230, 
+		RULE_points = 231, RULE_destroy = 232, RULE_hollow = 233, RULE_keep = 234, 
+		RULE_outline = 235, RULE_uuids = 236, RULE_poi = 237, RULE_structure = 238, 
+		RULE_insert = 239, RULE_spawn = 240, RULE_fish = 241, RULE_mine = 242, 
+		RULE_feature = 243, RULE_jigsaw = 244, RULE_template = 245, RULE_front_back = 246, 
+		RULE_left_right = 247, RULE_none = 248, RULE_clockwise_90 = 249, RULE_counterclockwise_90 = 250, 
+		RULE_ambient = 251, RULE_hostile = 252, RULE_master = 253, RULE_music = 254, 
+		RULE_neutral = 255, RULE_player = 256, RULE_record = 257, RULE_voice = 258, 
+		RULE_append = 259, RULE_dismount = 260, RULE_mount = 261, RULE_objectives = 262, 
+		RULE_hearts = 263, RULE_rendertype = 264, RULE_setdisplay = 265, RULE_operation = 266, 
+		RULE_reset = 267, RULE_under = 268, RULE_actionbar = 269, RULE_subtitle = 270, 
+		RULE_times = 271, RULE_fadeIn = 272, RULE_stay = 273, RULE_fadeOut = 274, 
+		RULE_center = 275, RULE_warning = 276, RULE_amount = 277, RULE_buffer = 278, 
+		RULE_facing = 279, RULE_prepend = 280, RULE_with = 281, RULE_mainhand = 282, 
+		RULE_offhand = 283, RULE_take = 284, RULE_always = 285, RULE_never = 286, 
+		RULE_pushOtherTeams = 287, RULE_pushOwnTeam = 288, RULE_hideForOtherTeams = 289, 
+		RULE_hideForOwnTeam = 290, RULE_friendlyFire = 291, RULE_nametagVisibility = 292, 
+		RULE_seeFriendlyInvisibles = 293, RULE_rain = 294, RULE_thunder = 295, 
+		RULE_day = 296, RULE_midnight = 297, RULE_night = 298, RULE_daytime = 299, 
+		RULE_noon = 300, RULE_gametime = 301, RULE_distance = 302, RULE_empty = 303, 
+		RULE_join = 304, RULE_leave = 305, RULE_collisionRule = 306, RULE_deathMessageVisibility = 307, 
+		RULE_prefix = 308, RULE_suffix = 309, RULE_displayName = 310, RULE_booleanValue = 311, 
+		RULE_oneHundredAndEighty = 312, RULE_advancementRadical = 313, RULE_advancementCriterion = 314, 
+		RULE_advancementCriterionBlock = 315, RULE_advancementValue = 316, RULE_advancementModes = 317, 
+		RULE_attributeRadical = 318, RULE_attributeOptions = 319, RULE_baseModifier = 320, 
+		RULE_modifierOptions = 321, RULE_modifierModes = 322, RULE_bossbarRadical = 323, 
+		RULE_bossbarID = 324, RULE_bossbarIdString = 325, RULE_bossbarOptions = 326, 
+		RULE_bossbarStyle = 327, RULE_bossbarColor = 328, RULE_bossbarGetTarget = 329, 
+		RULE_bossbarAttributes = 330, RULE_clearRadical = 331, RULE_count = 332, 
+		RULE_cloneRadical = 333, RULE_cloneSource = 334, RULE_cloneBegin = 335, 
+		RULE_cloneEnd = 336, RULE_cloneDestination = 337, RULE_destinationPos = 338, 
+		RULE_cloneMode = 339, RULE_cloneBehavior = 340, RULE_damageRadical = 341, 
+		RULE_damageType = 342, RULE_damageOptions = 343, RULE_dataRadical = 344, 
+		RULE_dataStringStart = 345, RULE_dataStringEnd = 346, RULE_entityNBTPath = 347, 
+		RULE_blockNBTPath = 348, RULE_dataOptions = 349, RULE_dataGetTarget = 350, 
+		RULE_dataMergeTarget = 351, RULE_dataModifyStringTarget = 352, RULE_dataModifyFromTarget = 353, 
+		RULE_dataModifyBehaviors = 354, RULE_dataModifyOptions = 355, RULE_dataModifyTarget = 356, 
+		RULE_dataRemoveTarget = 357, RULE_datapackRadical = 358, RULE_datapackState = 359, 
+		RULE_datapackId = 360, RULE_datapackBehaviors = 361, RULE_datapackOptions = 362, 
+		RULE_debugRadical = 363, RULE_debugOptions = 364, RULE_defaultgamemodeRadical = 365, 
+		RULE_difficultyRadical = 366, RULE_difficultyValues = 367, RULE_effectRadical = 368, 
+		RULE_effectOption = 369, RULE_effectID = 370, RULE_effectTime = 371, RULE_seconds = 372, 
+		RULE_amplifier = 373, RULE_hideParticles = 374, RULE_enchantRadical = 375, 
+		RULE_enchantLevel = 376, RULE_enchantID = 377, RULE_executeRadical = 378, 
+		RULE_executeEyesOrFeet = 379, RULE_axes = 380, RULE_executeAllOrMasked = 381, 
+		RULE_executeMaxOrValue = 382, RULE_executeJudgeDataOptions = 383, RULE_executeJudgementOptions = 384, 
+		RULE_executeOperations = 385, RULE_executeOn = 386, RULE_executeOver = 387, 
+		RULE_executePositioned = 388, RULE_executeStoreTarget = 389, RULE_executeStore = 390, 
+		RULE_executeFacing = 391, RULE_executeOptions = 392, RULE_experienceRadical = 393, 
+		RULE_experienceAmount = 394, RULE_expreienceType = 395, RULE_experienceOptions = 396, 
+		RULE_fillRadical = 397, RULE_fillOptions = 398, RULE_fillbiomeRadical = 399, 
+		RULE_fillBiomeOptions = 400, RULE_forceloadRadical = 401, RULE_forceloadRemoveObjectives = 402, 
+		RULE_forceloadOptions = 403, RULE_functionRadical = 404, RULE_gamemodeRadical = 405, 
+		RULE_gameruleRadical = 406, RULE_gameruleName = 407, RULE_gameruleValue = 408, 
+		RULE_giveRadical = 409, RULE_helpRadical = 410, RULE_commandList = 411, 
+		RULE_itemRadical = 412, RULE_itemSlot = 413, RULE_itemModifierFile = 414, 
+		RULE_itemOptions = 415, RULE_itemBehaviors = 416, RULE_itemModifyTarget = 417, 
+		RULE_itemReplaceTarget = 418, RULE_jfrRadical = 419, RULE_jfrStartOrStop = 420, 
+		RULE_kickRadical = 421, RULE_reason = 422, RULE_killRadical = 423, RULE_listRadical = 424, 
+		RULE_locateRadical = 425, RULE_poiId = 426, RULE_structureId = 427, RULE_locateOptions = 428, 
+		RULE_lootRadical = 429, RULE_lootFilePath = 430, RULE_lootTool = 431, 
+		RULE_lootOptions = 432, RULE_lootReplace = 433, RULE_lootModes = 434, 
+		RULE_meRadical = 435, RULE_action = 436, RULE_msgRadical = 437, RULE_msgMessage = 438, 
+		RULE_particleRadical = 439, RULE_particleSpeed = 440, RULE_particleCount = 441, 
+		RULE_particleDelta = 442, RULE_particleOptions = 443, RULE_particleId = 444, 
+		RULE_particleIDString = 445, RULE_placeRadical = 446, RULE_featureId = 447, 
+		RULE_jigsawTarget = 448, RULE_jigsawFilePath = 449, RULE_templateFilePath = 450, 
+		RULE_placeModes = 451, RULE_placeMirrorItems = 452, RULE_placeRotationModes = 453, 
+		RULE_playsoundRadical = 454, RULE_volume = 455, RULE_pitch = 456, RULE_minVolume = 457, 
+		RULE_soundTypes = 458, RULE_publishRadical = 459, RULE_port = 460, RULE_recipeRadical = 461, 
+		RULE_recipeFilePath = 462, RULE_recipeGiveOrTake = 463, RULE_reloadRadical = 464, 
+		RULE_returnRadical = 465, RULE_rideRadical = 466, RULE_rideModes = 467, 
+		RULE_sayRadical = 468, RULE_sayMessage = 469, RULE_scheduleRadical = 470, 
+		RULE_functionId = 471, RULE_scheduleAppendOrReplace = 472, RULE_scheduleModes = 473, 
+		RULE_scoreboardRadical = 474, RULE_scoreboardOptions = 475, RULE_scoreboardObjective = 476, 
+		RULE_scoreboardType = 477, RULE_scoreboardHeartsOrInteger = 478, RULE_scoreboardOperator = 479, 
+		RULE_scoreboardSlots = 480, RULE_scoreboardObjectivesBehaviors = 481, 
+		RULE_scoreboardPlayersBehaviors = 482, RULE_seedRadical = 483, RULE_setblockRadical = 484, 
+		RULE_setblockModes = 485, RULE_setworldspawnRadical = 486, RULE_spawnpointRadical = 487, 
+		RULE_spectateRadical = 488, RULE_spreadplayersRadical = 489, RULE_spreadplayersOptions = 490, 
+		RULE_spreadDistance = 491, RULE_maxRange = 492, RULE_respectTeams = 493, 
+		RULE_stopsoundRadical = 494, RULE_soundId = 495, RULE_stopsoundTypes = 496, 
+		RULE_summonRadical = 497, RULE_tagRadical = 498, RULE_tagOptions = 499, 
+		RULE_tagValue = 500, RULE_teamRadical = 501, RULE_teamId = 502, RULE_teamName = 503, 
+		RULE_teamCollisionRule = 504, RULE_teamColor = 505, RULE_teamVisibility = 506, 
+		RULE_teamOptions = 507, RULE_teamAttributes = 508, RULE_teammsgRadical = 509, 
+		RULE_teamMessage = 510, RULE_teleportRadical = 511, RULE_teleportEyesOrFeet = 512, 
+		RULE_teleportOptions = 513, RULE_tellRadical = 514, RULE_tellMessage = 515, 
+		RULE_tellrawRadical = 516, RULE_timeRadical = 517, RULE_timeDataTypes = 518, 
+		RULE_timeTimePoints = 519, RULE_timeOptions = 520, RULE_titleRadical = 521, 
+		RULE_titleBehaviors = 522, RULE_faedIn = 523, RULE_tmRadical = 524, RULE_tmMessage = 525, 
+		RULE_tpRadical = 526, RULE_triggerRadical = 527, RULE_triggerObjective = 528, 
+		RULE_triggerBehaviors = 529, RULE_weatherRadical = 530, RULE_weatherMembers = 531, 
+		RULE_worldborderRadical = 532, RULE_worldborderOptions = 533, RULE_worldborderWarningTypes = 534, 
+		RULE_worldborderModes = 535, RULE_xpRadical = 536;
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"atChar", "atLetter", "exclamationMark", "leftSquareBracket", "rightSquareBracket", 
+			"leftCurlyBracket", "rightCurlyBracket", "dimensionId", "mobAttribute", 
+			"integer", "intInterval", "axeValue", "gameTimeValue", "biomeId", "bool", 
+			"stringValue", "jsonComponent", "uuid", "jobject", "jarray", "jkey", 
+			"jpair", "jsonValue", "jvalue", "nbtPath", "dataType", "itemId", "blockState", 
+			"blockID", "blockNBT", "entityNBT", "targetObjective", "storageId", "storageIdString", 
+			"coordinateX", "coordinateY", "coordinateZ", "pos3D", "pos2D", "gamemodeValue", 
+			"sortValue", "identifier", "viewRotationValue", "doubleInterval", "positiveDouble", 
+			"positiveDoubleInterval", "levelValue", "nameValue", "entityType", "predicateValue", 
+			"selector", "selectorName", "selectorParameter", "scorePath", "scoreParameter", 
+			"scoresValue", "parameter", "commands", "axeKey", "star", "advancementKey", 
+			"attributeKey", "bossbarKey", "clearKey", "cloneKey", "damageKey", "dataKey", 
+			"datapackKey", "debugKey", "defaultgamemodeKey", "difficultyKey", "effectKey", 
+			"enchantKey", "executeKey", "experienceKey", "fillKey", "fillbiomeKey", 
+			"forceloadKey", "functionKey", "gamemodeKey", "gameruleKey", "giveKey", 
+			"helpKey", "itemKey", "jfrKey", "kickKey", "killKey", "listKey", "locateKey", 
+			"lootKey", "meKey", "msgKey", "particleKey", "placeKey", "playsoundKey", 
+			"publishKey", "recipeKey", "reloadKey", "returnKey", "rideKey", "sayKey", 
+			"scheduleKey", "scoreboardKey", "seedKey", "setblockKey", "setworldspawnKey", 
+			"spawnpointKey", "spectateKey", "spreadplayersKey", "stopsoundKey", "summonKey", 
+			"tagKey", "teamKey", "teammsgKey", "teleportKey", "tellKey", "tellrawKey", 
+			"timeKey", "titleKey", "tmKey", "tpKey", "triggerKey", "weatherKey", 
+			"worldborderKey", "xpKey", "axeLengthKey", "viewRotationKey", "level", 
+			"scoreKey", "limit", "typeKey", "nbtKey", "sortKey", "divisionEqual", 
+			"multiplicationEqual", "additionEqual", "subtractionEqual", "remainderEqual", 
+			"lessThan", "lessThanOrEqualTo", "equal", "greaterThan", "greaterThanOrEqualTo", 
+			"greaterThanLessThan", "add", "remove", "value", "set", "multiply", "multiply_base", 
+			"max", "players", "visible", "color", "name", "style", "filtered", "masked", 
+			"replace", "force", "move", "normal", "to", "by", "merge", "modify", 
+			"block", "entity", "storage", "stringKey", "as", "grant", "revoke", "everything", 
+			"only", "from", "through", "until", "base", "get", "modifier", "available", 
+			"enable", "after", "before", "first", "last", "disable", "start", "stop", 
+			"infinite", "easy", "hard", "peaceful", "eyes", "feet", "all", "biome", 
+			"blocks", "dimension", "loaded", "predicate", "score", "matches", "attacker", 
+			"controller", "leasher", "origin", "owner", "passengers", "target", "vehicle", 
+			"motion_blocking", "motion_blocking_no_leaves", "ocean_floor", "world_surface", 
+			"over", "result", "success", "align", "anchored", "if", "unless", "in", 
+			"on", "positioned", "rotated", "run", "store", "query", "levels", "points", 
+			"destroy", "hollow", "keep", "outline", "uuids", "poi", "structure", 
+			"insert", "spawn", "fish", "mine", "feature", "jigsaw", "template", "front_back", 
+			"left_right", "none", "clockwise_90", "counterclockwise_90", "ambient", 
+			"hostile", "master", "music", "neutral", "player", "record", "voice", 
+			"append", "dismount", "mount", "objectives", "hearts", "rendertype", 
+			"setdisplay", "operation", "reset", "under", "actionbar", "subtitle", 
+			"times", "fadeIn", "stay", "fadeOut", "center", "warning", "amount", 
+			"buffer", "facing", "prepend", "with", "mainhand", "offhand", "take", 
+			"always", "never", "pushOtherTeams", "pushOwnTeam", "hideForOtherTeams", 
+			"hideForOwnTeam", "friendlyFire", "nametagVisibility", "seeFriendlyInvisibles", 
+			"rain", "thunder", "day", "midnight", "night", "daytime", "noon", "gametime", 
+			"distance", "empty", "join", "leave", "collisionRule", "deathMessageVisibility", 
+			"prefix", "suffix", "displayName", "booleanValue", "oneHundredAndEighty", 
+			"advancementRadical", "advancementCriterion", "advancementCriterionBlock", 
+			"advancementValue", "advancementModes", "attributeRadical", "attributeOptions", 
+			"baseModifier", "modifierOptions", "modifierModes", "bossbarRadical", 
+			"bossbarID", "bossbarIdString", "bossbarOptions", "bossbarStyle", "bossbarColor", 
+			"bossbarGetTarget", "bossbarAttributes", "clearRadical", "count", "cloneRadical", 
+			"cloneSource", "cloneBegin", "cloneEnd", "cloneDestination", "destinationPos", 
+			"cloneMode", "cloneBehavior", "damageRadical", "damageType", "damageOptions", 
+			"dataRadical", "dataStringStart", "dataStringEnd", "entityNBTPath", "blockNBTPath", 
+			"dataOptions", "dataGetTarget", "dataMergeTarget", "dataModifyStringTarget", 
+			"dataModifyFromTarget", "dataModifyBehaviors", "dataModifyOptions", "dataModifyTarget", 
+			"dataRemoveTarget", "datapackRadical", "datapackState", "datapackId", 
+			"datapackBehaviors", "datapackOptions", "debugRadical", "debugOptions", 
+			"defaultgamemodeRadical", "difficultyRadical", "difficultyValues", "effectRadical", 
+			"effectOption", "effectID", "effectTime", "seconds", "amplifier", "hideParticles", 
+			"enchantRadical", "enchantLevel", "enchantID", "executeRadical", "executeEyesOrFeet", 
+			"axes", "executeAllOrMasked", "executeMaxOrValue", "executeJudgeDataOptions", 
+			"executeJudgementOptions", "executeOperations", "executeOn", "executeOver", 
+			"executePositioned", "executeStoreTarget", "executeStore", "executeFacing", 
+			"executeOptions", "experienceRadical", "experienceAmount", "expreienceType", 
+			"experienceOptions", "fillRadical", "fillOptions", "fillbiomeRadical", 
+			"fillBiomeOptions", "forceloadRadical", "forceloadRemoveObjectives", 
+			"forceloadOptions", "functionRadical", "gamemodeRadical", "gameruleRadical", 
+			"gameruleName", "gameruleValue", "giveRadical", "helpRadical", "commandList", 
+			"itemRadical", "itemSlot", "itemModifierFile", "itemOptions", "itemBehaviors", 
+			"itemModifyTarget", "itemReplaceTarget", "jfrRadical", "jfrStartOrStop", 
+			"kickRadical", "reason", "killRadical", "listRadical", "locateRadical", 
+			"poiId", "structureId", "locateOptions", "lootRadical", "lootFilePath", 
+			"lootTool", "lootOptions", "lootReplace", "lootModes", "meRadical", "action", 
+			"msgRadical", "msgMessage", "particleRadical", "particleSpeed", "particleCount", 
+			"particleDelta", "particleOptions", "particleId", "particleIDString", 
+			"placeRadical", "featureId", "jigsawTarget", "jigsawFilePath", "templateFilePath", 
+			"placeModes", "placeMirrorItems", "placeRotationModes", "playsoundRadical", 
+			"volume", "pitch", "minVolume", "soundTypes", "publishRadical", "port", 
+			"recipeRadical", "recipeFilePath", "recipeGiveOrTake", "reloadRadical", 
+			"returnRadical", "rideRadical", "rideModes", "sayRadical", "sayMessage", 
+			"scheduleRadical", "functionId", "scheduleAppendOrReplace", "scheduleModes", 
+			"scoreboardRadical", "scoreboardOptions", "scoreboardObjective", "scoreboardType", 
+			"scoreboardHeartsOrInteger", "scoreboardOperator", "scoreboardSlots", 
+			"scoreboardObjectivesBehaviors", "scoreboardPlayersBehaviors", "seedRadical", 
+			"setblockRadical", "setblockModes", "setworldspawnRadical", "spawnpointRadical", 
+			"spectateRadical", "spreadplayersRadical", "spreadplayersOptions", "spreadDistance", 
+			"maxRange", "respectTeams", "stopsoundRadical", "soundId", "stopsoundTypes", 
+			"summonRadical", "tagRadical", "tagOptions", "tagValue", "teamRadical", 
+			"teamId", "teamName", "teamCollisionRule", "teamColor", "teamVisibility", 
+			"teamOptions", "teamAttributes", "teammsgRadical", "teamMessage", "teleportRadical", 
+			"teleportEyesOrFeet", "teleportOptions", "tellRadical", "tellMessage", 
+			"tellrawRadical", "timeRadical", "timeDataTypes", "timeTimePoints", "timeOptions", 
+			"titleRadical", "titleBehaviors", "faedIn", "tmRadical", "tmMessage", 
+			"tpRadical", "triggerRadical", "triggerObjective", "triggerBehaviors", 
+			"weatherRadical", "weatherMembers", "worldborderRadical", "worldborderOptions", 
+			"worldborderWarningTypes", "worldborderModes", "xpRadical"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
+
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, null, "'#'", "'/'", "'@'", "'at'", "'!'", "','", "'.'", "':'", 
+			"'..'", "'[]'", "'['", "']'", "'()'", "'('", "')'", "'{}'", "'{'", "'}'", 
+			"'<>'", "'<'", "'>'", "'\"'", "'''", "'byte'", "'int'", "'long'", "'string'", 
+			"'boolean'", "'short'", "'float'", "'double'", null, null, null, null, 
+			null, null, "'level'", "'limit'", "'nbt'", "'scores'", "'type'", "'sort'", 
+			"'advancements'", "'attribute'", "'bossbar'", "'clear'", "'clone'", "'damage'", 
+			"'data'", "'datapack'", "'debug'", "'defaultgamemode'", "'difficulty'", 
+			"'effect'", "'enchant'", "'execute'", "'experience'", "'fill'", "'fillbiome'", 
+			"'forceload'", "'function'", "'gamemode'", "'gamerule'", "'give'", "'help'", 
+			"'item'", "'jfr'", "'kick'", "'kill'", "'list'", "'locate'", "'loot'", 
+			"'me'", "'msg'", "'particle'", "'place'", "'playsound'", "'publish'", 
+			"'recipe'", "'reload'", "'return'", "'ride'", "'say'", "'schedule'", 
+			"'scoreboard'", "'seed'", "'setblock'", "'setworldspawn'", "'spawnpoint'", 
+			"'spectate'", "'spreadplayers'", "'stopsound'", "'summon'", "'tag'", 
+			"'team'", "'teammsg'", "'teleport'", "'tell'", "'tellraw'", "'time'", 
+			"'title'", "'tm'", "'tp'", "'trigger'", "'weather'", "'worldborder'", 
+			"'xp'", "'*'", "'add'", "'remove'", "'value'", "'set'", "'multiply'", 
+			"'multiply_base'", "'max'", "'players'", "'visible'", "'color'", "'name'", 
+			"'style'", "'filtered'", "'masked'", "'replace'", "'force'", "'move'", 
+			"'normal'", "'to'", "'by'", "'merge'", "'modify'", "'block'", "'entity'", 
+			"'storage'", "'as'", "'grant'", "'revoke'", "'everything'", "'only'", 
+			"'from'", "'through'", "'until'", "'base'", "'get'", "'modifier'", "'available'", 
+			"'enable'", "'after'", "'before'", "'first'", "'last'", "'disable'", 
+			"'start'", "'stop'", "'infinite'", "'easy'", "'hard'", "'peaceful'", 
+			"'eyes'", "'feet'", "'all'", "'biome'", "'blocks'", "'dimension'", "'loaded'", 
+			"'predicate'", "'score'", "'matches'", "'attacker'", "'controller'", 
+			"'leasher'", "'origin'", "'owner'", "'passengers'", "'target'", "'vehicle'", 
+			"'motion_blocking'", "'motion_blocking_no_leaves'", "'ocean_floor'", 
+			"'world_surface'", "'over'", "'result'", "'success'", "'align'", "'anchored'", 
+			"'if'", "'unless'", "'in'", "'on'", "'positioned'", "'rotated'", "'run'", 
+			"'store'", "'query'", "'levels'", "'points'", "'destroy'", "'hollow'", 
+			"'keep'", "'outline'", "'uuids'", "'poi'", "'structure'", "'insert'", 
+			"'spawn'", "'fish'", "'mine'", "'feature'", "'jigsaw'", "'template'", 
+			"'front_back'", "'left_right'", "'none'", "'clockwise_90'", "'counterclockwise_90'", 
+			"'ambient'", "'hostile'", "'master'", "'music'", "'neutral'", "'player'", 
+			"'record'", "'voice'", "'append'", "'dismount'", "'mount'", "'objectives'", 
+			"'hearts'", "'displayname'", "'rendertype'", "'setdisplay'", "'operation'", 
+			"'reset'", "'under'", "'actionbar'", "'subtitle'", "'times'", "'fadeIn'", 
+			"'stay'", "'fadeOut'", "'center'", "'warning'", "'amount'", "'buffer'", 
+			"'facing'", "'prepend'", "'bossBar'", "'with'", "'mainhand'", "'offhand'", 
+			"'take'", "'always'", "'never'", "'pushOtherTeams'", "'pushOwnTeam'", 
+			"'hideForOtherTeams'", "'hideForOwnTeam'", "'friendlyFire'", "'nametagVisibility'", 
+			"'seeFriendlyInvisibles'", "'rain'", "'thunder'", "'day'", "'midnight'", 
+			"'night'", "'daytime'", "'noon'", "'gametime'", "'distance'", "'empty'", 
+			"'join'", "'leave'", "'collisionRule'", "'deathMessageVisibility'", "'prefix'", 
+			"'suffix'", "'<='", "'='", "'>='", "'180'", "'><'", "'/='", "'*='", "'+='", 
+			"'-='", "'%='"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, "WS", "Sharp", "Slash", "AtChar", "AtLetter", "ExclamationMark", 
+			"Comma", "Dot", "Colon", "DoubleDot", "SquareBrackets", "LeftSquareBracket", 
+			"RightSquareBracket", "RoundBrackets", "LeftRoundBracket", "RightRoundBracket", 
+			"CurlyBrackets", "LeftCurlyBracket", "RightCurlyBracket", "AngleBrackets", 
+			"LeftAngleBracket", "RightAngleBracket", "DoubleQuotes", "Quote", "ByteKey", 
+			"IntKey", "LongKey", "StringKey", "BooleanKey", "ShortKey", "FloatKey", 
+			"DoubleKey", "BooleanValue", "SelectorName", "AxeKey", "AxeLengthKey", 
+			"Axes", "ViewRotationKey", "Level", "LimitKey", "NBTKey", "ScoreKey", 
+			"TypeKey", "SortKey", "AdvancementKey", "AttributeKey", "BossbarKey", 
+			"ClearKey", "CloneKey", "DamageKey", "DataKey", "DatapackKey", "DebugKey", 
+			"DefaultgamemodeKey", "DifficultyKey", "EffectKey", "EnchantKey", "ExecuteKey", 
+			"ExperienceKey", "FillKey", "FillbiomeKey", "ForceloadKey", "FunctionKey", 
+			"GamemodeKey", "GameruleKey", "GiveKey", "HelpKey", "ItemKey", "JfrKey", 
+			"KickKey", "KillKey", "ListKey", "LocateKey", "LootKey", "MeKey", "MsgKey", 
+			"ParticleKey", "PlaceKey", "PlaysoundKey", "PublishKey", "RecipeKey", 
+			"ReloadKey", "ReturnKey", "RideKey", "SayKey", "ScheduleKey", "ScoreboardKey", 
+			"SeedKey", "SetblockKey", "SetworldspawnKey", "SpawnpointKey", "SpectateKey", 
+			"SpreadplayersKey", "StopsoundKey", "SummonKey", "TagKey", "TeamKey", 
+			"TeammsgKey", "TeleportKey", "TellKey", "TellrawKey", "TimeKey", "TitleKey", 
+			"TmKey", "TpKey", "TriggerKey", "WeatherKey", "WorldborderKey", "XpKey", 
+			"Star", "Add", "Remove", "Value", "Set", "Multiply", "Multiply_Base", 
+			"Max", "Players", "Visible", "Color", "Name", "Style", "Filtered", "Masked", 
+			"Replace", "Force", "Move", "Normal", "To", "By", "Merge", "Modify", 
+			"Block", "Entity", "Storage", "As", "Grant", "Revoke", "Everything", 
+			"Only", "From", "Through", "Until", "Base", "Get", "Modifier", "Available", 
+			"Enable", "After", "Before", "First", "Last", "Disable", "Start", "Stop", 
+			"Infinite", "Easy", "Hard", "Peaceful", "Eyes", "Feet", "All", "Biome", 
+			"Blocks", "Dimension", "Loaded", "Predicate", "Score", "Matches", "Attacker", 
+			"Controller", "Leasher", "Origin", "Owner", "Passengers", "Target", "Vehicle", 
+			"Motion_blocking", "Motion_blocking_no_leaves", "Ocean_floor", "World_surface", 
+			"Over", "Result", "Success", "Align", "Anchored", "If", "Unless", "In", 
+			"On", "Positioned", "Rotated", "Run", "Store", "Query", "Levels", "Points", 
+			"Destroy", "Hollow", "Keep", "Outline", "Uuids", "Poi", "Structure", 
+			"Insert", "Spawn", "Fish", "Mine", "Feature", "Jigsaw", "Template", "Front_back", 
+			"Left_right", "None", "Clockwise_90", "Counterclockwise_90", "Ambient", 
+			"Hostile", "Master", "Music", "Neutral", "Player", "Record", "Voice", 
+			"Append", "Dismount", "Mount", "Objectives", "Hearts", "DisplayName", 
+			"Rendertype", "Setdisplay", "Operation", "Reset", "Under", "Actionbar", 
+			"Subtitle", "Times", "FadeIn", "Stay", "FadeOut", "Center", "Warning", 
+			"Amount", "Buffer", "Facing", "Prepend", "Bossbar", "With", "Mainhand", 
+			"Offhand", "Take", "Always", "Never", "PushOtherTeams", "PushOwnTeam", 
+			"HideForOtherTeams", "HideForOwnTeam", "FriendlyFire", "NametagVisibility", 
+			"SeeFriendlyInvisibles", "Rain", "Thunder", "Day", "Midnight", "Night", 
+			"Daytime", "Noon", "Gametime", "Distance", "Empty", "Join", "Leave", 
+			"CollisionRule", "DeathMessageVisibility", "Prefix", "Suffix", "LessThanOrEqualTo", 
+			"Equal", "GreaterThanOrEqualTo", "OneHundredAndEighty", "GreaterThanLessThan", 
+			"DivisionEqual", "MultiplicationEqual", "AdditionEqual", "SubtractionEqual", 
+			"RemainderEqual", "UUID", "Integer", "IntInterval", "PositiveDouble", 
+			"PositiveDoubleInterval", "Double", "DoubleInterval", "Float", "GameTimeValue", 
+			"IntTypedUnit", "FloatTypedUnit", "Identifier", "FileReference", "String", 
+			"ScoreboardObjective", "ResourceLocation", "BlockStateKey", "BlockStateValue", 
+			"MessageContent", "Message", "MESSAGE_END", "Coordinate", "COORDINATE_END"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
+	static {
+		tokenNames = new String[_SYMBOLIC_NAMES.length];
+		for (int i = 0; i < tokenNames.length; i++) {
+			tokenNames[i] = VOCABULARY.getLiteralName(i);
+			if (tokenNames[i] == null) {
+				tokenNames[i] = VOCABULARY.getSymbolicName(i);
+			}
+
+			if (tokenNames[i] == null) {
+				tokenNames[i] = "<INVALID>";
+			}
+		}
+	}
+
+	@Override
+	@Deprecated
+	public String[] getTokenNames() {
+		return tokenNames;
+	}
+
+	@Override
+
+	public Vocabulary getVocabulary() {
+		return VOCABULARY;
+	}
+
+	@Override
+	public String getGrammarFileName() { return "MCCommandParser.g4"; }
+
+	@Override
+	public String[] getRuleNames() { return ruleNames; }
+
+	@Override
+	public String getSerializedATN() { return _serializedATN; }
+
+	@Override
+	public ATN getATN() { return _ATN; }
+
+	public MCCommandParser(TokenStream input) {
+		super(input);
+		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AtCharContext extends ParserRuleContext {
+		public TerminalNode AtChar() { return getToken(MCCommandParser.AtChar, 0); }
+		public AtCharContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_atChar; }
+	}
+
+	public final AtCharContext atChar() throws RecognitionException {
+		AtCharContext _localctx = new AtCharContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_atChar);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1074);
+			match(AtChar);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AtLetterContext extends ParserRuleContext {
+		public TerminalNode AtLetter() { return getToken(MCCommandParser.AtLetter, 0); }
+		public AtLetterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_atLetter; }
+	}
+
+	public final AtLetterContext atLetter() throws RecognitionException {
+		AtLetterContext _localctx = new AtLetterContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_atLetter);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1076);
+			match(AtLetter);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExclamationMarkContext extends ParserRuleContext {
+		public TerminalNode ExclamationMark() { return getToken(MCCommandParser.ExclamationMark, 0); }
+		public ExclamationMarkContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_exclamationMark; }
+	}
+
+	public final ExclamationMarkContext exclamationMark() throws RecognitionException {
+		ExclamationMarkContext _localctx = new ExclamationMarkContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_exclamationMark);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1078);
+			match(ExclamationMark);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LeftSquareBracketContext extends ParserRuleContext {
+		public TerminalNode LeftSquareBracket() { return getToken(MCCommandParser.LeftSquareBracket, 0); }
+		public LeftSquareBracketContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_leftSquareBracket; }
+	}
+
+	public final LeftSquareBracketContext leftSquareBracket() throws RecognitionException {
+		LeftSquareBracketContext _localctx = new LeftSquareBracketContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_leftSquareBracket);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1080);
+			match(LeftSquareBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RightSquareBracketContext extends ParserRuleContext {
+		public TerminalNode RightSquareBracket() { return getToken(MCCommandParser.RightSquareBracket, 0); }
+		public RightSquareBracketContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rightSquareBracket; }
+	}
+
+	public final RightSquareBracketContext rightSquareBracket() throws RecognitionException {
+		RightSquareBracketContext _localctx = new RightSquareBracketContext(_ctx, getState());
+		enterRule(_localctx, 8, RULE_rightSquareBracket);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1082);
+			match(RightSquareBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LeftCurlyBracketContext extends ParserRuleContext {
+		public TerminalNode LeftCurlyBracket() { return getToken(MCCommandParser.LeftCurlyBracket, 0); }
+		public LeftCurlyBracketContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_leftCurlyBracket; }
+	}
+
+	public final LeftCurlyBracketContext leftCurlyBracket() throws RecognitionException {
+		LeftCurlyBracketContext _localctx = new LeftCurlyBracketContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_leftCurlyBracket);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1084);
+			match(LeftCurlyBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RightCurlyBracketContext extends ParserRuleContext {
+		public TerminalNode RightCurlyBracket() { return getToken(MCCommandParser.RightCurlyBracket, 0); }
+		public RightCurlyBracketContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rightCurlyBracket; }
+	}
+
+	public final RightCurlyBracketContext rightCurlyBracket() throws RecognitionException {
+		RightCurlyBracketContext _localctx = new RightCurlyBracketContext(_ctx, getState());
+		enterRule(_localctx, 12, RULE_rightCurlyBracket);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1086);
+			match(RightCurlyBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DimensionIdContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public DimensionIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dimensionId; }
+	}
+
+	public final DimensionIdContext dimensionId() throws RecognitionException {
+		DimensionIdContext _localctx = new DimensionIdContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_dimensionId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1088);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MobAttributeContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public MobAttributeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_mobAttribute; }
+	}
+
+	public final MobAttributeContext mobAttribute() throws RecognitionException {
+		MobAttributeContext _localctx = new MobAttributeContext(_ctx, getState());
+		enterRule(_localctx, 16, RULE_mobAttribute);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1090);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class IntegerContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public IntegerContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_integer; }
+	}
+
+	public final IntegerContext integer() throws RecognitionException {
+		IntegerContext _localctx = new IntegerContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_integer);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1092);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class IntIntervalContext extends ParserRuleContext {
+		public TerminalNode IntInterval() { return getToken(MCCommandParser.IntInterval, 0); }
+		public IntIntervalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_intInterval; }
+	}
+
+	public final IntIntervalContext intInterval() throws RecognitionException {
+		IntIntervalContext _localctx = new IntIntervalContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_intInterval);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1094);
+			match(IntInterval);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AxeValueContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public AxeValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_axeValue; }
+	}
+
+	public final AxeValueContext axeValue() throws RecognitionException {
+		AxeValueContext _localctx = new AxeValueContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_axeValue);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1096);
+			_la = _input.LA(1);
+			if ( !(_la==Integer || _la==Double) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GameTimeValueContext extends ParserRuleContext {
+		public TerminalNode GameTimeValue() { return getToken(MCCommandParser.GameTimeValue, 0); }
+		public GameTimeValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gameTimeValue; }
+	}
+
+	public final GameTimeValueContext gameTimeValue() throws RecognitionException {
+		GameTimeValueContext _localctx = new GameTimeValueContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_gameTimeValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1098);
+			match(GameTimeValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BiomeIdContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public BiomeIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_biomeId; }
+	}
+
+	public final BiomeIdContext biomeId() throws RecognitionException {
+		BiomeIdContext _localctx = new BiomeIdContext(_ctx, getState());
+		enterRule(_localctx, 26, RULE_biomeId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1100);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BoolContext extends ParserRuleContext {
+		public TerminalNode BooleanValue() { return getToken(MCCommandParser.BooleanValue, 0); }
+		public BoolContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bool; }
+	}
+
+	public final BoolContext bool() throws RecognitionException {
+		BoolContext _localctx = new BoolContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_bool);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1102);
+			match(BooleanValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StringValueContext extends ParserRuleContext {
+		public TerminalNode String() { return getToken(MCCommandParser.String, 0); }
+		public StringValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_stringValue; }
+	}
+
+	public final StringValueContext stringValue() throws RecognitionException {
+		StringValueContext _localctx = new StringValueContext(_ctx, getState());
+		enterRule(_localctx, 30, RULE_stringValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1104);
+			match(String);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JsonComponentContext extends ParserRuleContext {
+		public JsonValueContext jsonValue() {
+			return getRuleContext(JsonValueContext.class,0);
+		}
+		public JsonComponentContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jsonComponent; }
+	}
+
+	public final JsonComponentContext jsonComponent() throws RecognitionException {
+		JsonComponentContext _localctx = new JsonComponentContext(_ctx, getState());
+		enterRule(_localctx, 32, RULE_jsonComponent);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1106);
+			jsonValue();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class UuidContext extends ParserRuleContext {
+		public TerminalNode UUID() { return getToken(MCCommandParser.UUID, 0); }
+		public UuidContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_uuid; }
+	}
+
+	public final UuidContext uuid() throws RecognitionException {
+		UuidContext _localctx = new UuidContext(_ctx, getState());
+		enterRule(_localctx, 34, RULE_uuid);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1108);
+			match(UUID);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JobjectContext extends ParserRuleContext {
+		public TerminalNode CurlyBrackets() { return getToken(MCCommandParser.CurlyBrackets, 0); }
+		public TerminalNode LeftCurlyBracket() { return getToken(MCCommandParser.LeftCurlyBracket, 0); }
+		public List<JpairContext> jpair() {
+			return getRuleContexts(JpairContext.class);
+		}
+		public JpairContext jpair(int i) {
+			return getRuleContext(JpairContext.class,i);
+		}
+		public TerminalNode RightCurlyBracket() { return getToken(MCCommandParser.RightCurlyBracket, 0); }
+		public List<TerminalNode> Comma() { return getTokens(MCCommandParser.Comma); }
+		public TerminalNode Comma(int i) {
+			return getToken(MCCommandParser.Comma, i);
+		}
+		public JobjectContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jobject; }
+	}
+
+	public final JobjectContext jobject() throws RecognitionException {
+		JobjectContext _localctx = new JobjectContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_jobject);
+		int _la;
+		try {
+			setState(1122);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case CurlyBrackets:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1110);
+				match(CurlyBrackets);
+				}
+				break;
+			case LeftCurlyBracket:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1111);
+				match(LeftCurlyBracket);
+				setState(1112);
+				jpair();
+				setState(1117);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==Comma) {
+					{
+					{
+					setState(1113);
+					match(Comma);
+					setState(1114);
+					jpair();
+					}
+					}
+					setState(1119);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(1120);
+				match(RightCurlyBracket);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JarrayContext extends ParserRuleContext {
+		public TerminalNode SquareBrackets() { return getToken(MCCommandParser.SquareBrackets, 0); }
+		public TerminalNode LeftSquareBracket() { return getToken(MCCommandParser.LeftSquareBracket, 0); }
+		public List<JvalueContext> jvalue() {
+			return getRuleContexts(JvalueContext.class);
+		}
+		public JvalueContext jvalue(int i) {
+			return getRuleContext(JvalueContext.class,i);
+		}
+		public TerminalNode RightSquareBracket() { return getToken(MCCommandParser.RightSquareBracket, 0); }
+		public List<TerminalNode> Comma() { return getTokens(MCCommandParser.Comma); }
+		public TerminalNode Comma(int i) {
+			return getToken(MCCommandParser.Comma, i);
+		}
+		public JarrayContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jarray; }
+	}
+
+	public final JarrayContext jarray() throws RecognitionException {
+		JarrayContext _localctx = new JarrayContext(_ctx, getState());
+		enterRule(_localctx, 38, RULE_jarray);
+		int _la;
+		try {
+			setState(1136);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case SquareBrackets:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1124);
+				match(SquareBrackets);
+				}
+				break;
+			case LeftSquareBracket:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1125);
+				match(LeftSquareBracket);
+				setState(1126);
+				jvalue();
+				setState(1131);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==Comma) {
+					{
+					{
+					setState(1127);
+					match(Comma);
+					setState(1128);
+					jvalue();
+					}
+					}
+					setState(1133);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(1134);
+				match(RightSquareBracket);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JkeyContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public JkeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jkey; }
+	}
+
+	public final JkeyContext jkey() throws RecognitionException {
+		JkeyContext _localctx = new JkeyContext(_ctx, getState());
+		enterRule(_localctx, 40, RULE_jkey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1138);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JpairContext extends ParserRuleContext {
+		public JkeyContext jkey() {
+			return getRuleContext(JkeyContext.class,0);
+		}
+		public TerminalNode Colon() { return getToken(MCCommandParser.Colon, 0); }
+		public JvalueContext jvalue() {
+			return getRuleContext(JvalueContext.class,0);
+		}
+		public JpairContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jpair; }
+	}
+
+	public final JpairContext jpair() throws RecognitionException {
+		JpairContext _localctx = new JpairContext(_ctx, getState());
+		enterRule(_localctx, 42, RULE_jpair);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1140);
+			jkey();
+			setState(1141);
+			match(Colon);
+			setState(1142);
+			jvalue();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JsonValueContext extends ParserRuleContext {
+		public JobjectContext jobject() {
+			return getRuleContext(JobjectContext.class,0);
+		}
+		public JsonValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jsonValue; }
+	}
+
+	public final JsonValueContext jsonValue() throws RecognitionException {
+		JsonValueContext _localctx = new JsonValueContext(_ctx, getState());
+		enterRule(_localctx, 44, RULE_jsonValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1144);
+			jobject();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JvalueContext extends ParserRuleContext {
+		public StringValueContext stringValue() {
+			return getRuleContext(StringValueContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public JobjectContext jobject() {
+			return getRuleContext(JobjectContext.class,0);
+		}
+		public JarrayContext jarray() {
+			return getRuleContext(JarrayContext.class,0);
+		}
+		public BoolContext bool() {
+			return getRuleContext(BoolContext.class,0);
+		}
+		public JvalueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jvalue; }
+	}
+
+	public final JvalueContext jvalue() throws RecognitionException {
+		JvalueContext _localctx = new JvalueContext(_ctx, getState());
+		enterRule(_localctx, 46, RULE_jvalue);
+		try {
+			setState(1151);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case String:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1146);
+				stringValue();
+				}
+				break;
+			case Double:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(1147);
+				match(Double);
+				}
+				break;
+			case CurlyBrackets:
+			case LeftCurlyBracket:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(1148);
+				jobject();
+				}
+				break;
+			case SquareBrackets:
+			case LeftSquareBracket:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(1149);
+				jarray();
+				}
+				break;
+			case BooleanValue:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(1150);
+				bool();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NbtPathContext extends ParserRuleContext {
+		public List<TerminalNode> Identifier() { return getTokens(MCCommandParser.Identifier); }
+		public TerminalNode Identifier(int i) {
+			return getToken(MCCommandParser.Identifier, i);
+		}
+		public List<TerminalNode> Dot() { return getTokens(MCCommandParser.Dot); }
+		public TerminalNode Dot(int i) {
+			return getToken(MCCommandParser.Dot, i);
+		}
+		public NbtPathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_nbtPath; }
+	}
+
+	public final NbtPathContext nbtPath() throws RecognitionException {
+		NbtPathContext _localctx = new NbtPathContext(_ctx, getState());
+		enterRule(_localctx, 48, RULE_nbtPath);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1153);
+			match(Identifier);
+			setState(1158);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==Dot) {
+				{
+				{
+				setState(1154);
+				match(Dot);
+				setState(1155);
+				match(Identifier);
+				}
+				}
+				setState(1160);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataTypeContext extends ParserRuleContext {
+		public TerminalNode ByteKey() { return getToken(MCCommandParser.ByteKey, 0); }
+		public TerminalNode DoubleKey() { return getToken(MCCommandParser.DoubleKey, 0); }
+		public TerminalNode FloatKey() { return getToken(MCCommandParser.FloatKey, 0); }
+		public TerminalNode IntKey() { return getToken(MCCommandParser.IntKey, 0); }
+		public TerminalNode LongKey() { return getToken(MCCommandParser.LongKey, 0); }
+		public TerminalNode ShortKey() { return getToken(MCCommandParser.ShortKey, 0); }
+		public DataTypeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataType; }
+	}
+
+	public final DataTypeContext dataType() throws RecognitionException {
+		DataTypeContext _localctx = new DataTypeContext(_ctx, getState());
+		enterRule(_localctx, 50, RULE_dataType);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1161);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 7751073792L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemIdContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public ItemIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemId; }
+	}
+
+	public final ItemIdContext itemId() throws RecognitionException {
+		ItemIdContext _localctx = new ItemIdContext(_ctx, getState());
+		enterRule(_localctx, 52, RULE_itemId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1163);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BlockStateContext extends ParserRuleContext {
+		public TerminalNode BlockStateKey() { return getToken(MCCommandParser.BlockStateKey, 0); }
+		public EqualContext equal() {
+			return getRuleContext(EqualContext.class,0);
+		}
+		public TerminalNode BlockStateValue() { return getToken(MCCommandParser.BlockStateValue, 0); }
+		public BlockStateContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_blockState; }
+	}
+
+	public final BlockStateContext blockState() throws RecognitionException {
+		BlockStateContext _localctx = new BlockStateContext(_ctx, getState());
+		enterRule(_localctx, 54, RULE_blockState);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1165);
+			match(BlockStateKey);
+			setState(1166);
+			equal();
+			setState(1167);
+			match(BlockStateValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BlockIDContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public LeftSquareBracketContext leftSquareBracket() {
+			return getRuleContext(LeftSquareBracketContext.class,0);
+		}
+		public List<BlockStateContext> blockState() {
+			return getRuleContexts(BlockStateContext.class);
+		}
+		public BlockStateContext blockState(int i) {
+			return getRuleContext(BlockStateContext.class,i);
+		}
+		public RightSquareBracketContext rightSquareBracket() {
+			return getRuleContext(RightSquareBracketContext.class,0);
+		}
+		public List<TerminalNode> Comma() { return getTokens(MCCommandParser.Comma); }
+		public TerminalNode Comma(int i) {
+			return getToken(MCCommandParser.Comma, i);
+		}
+		public BlockIDContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_blockID; }
+	}
+
+	public final BlockIDContext blockID() throws RecognitionException {
+		BlockIDContext _localctx = new BlockIDContext(_ctx, getState());
+		enterRule(_localctx, 56, RULE_blockID);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1169);
+			match(Identifier);
+			setState(1170);
+			leftSquareBracket();
+			setState(1171);
+			blockState();
+			setState(1176);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==Comma) {
+				{
+				{
+				setState(1172);
+				match(Comma);
+				setState(1173);
+				blockState();
+				}
+				}
+				setState(1178);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(1179);
+			rightSquareBracket();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BlockNBTContext extends ParserRuleContext {
+		public JsonValueContext jsonValue() {
+			return getRuleContext(JsonValueContext.class,0);
+		}
+		public BlockNBTContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_blockNBT; }
+	}
+
+	public final BlockNBTContext blockNBT() throws RecognitionException {
+		BlockNBTContext _localctx = new BlockNBTContext(_ctx, getState());
+		enterRule(_localctx, 58, RULE_blockNBT);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1181);
+			jsonValue();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EntityNBTContext extends ParserRuleContext {
+		public JsonValueContext jsonValue() {
+			return getRuleContext(JsonValueContext.class,0);
+		}
+		public EntityNBTContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_entityNBT; }
+	}
+
+	public final EntityNBTContext entityNBT() throws RecognitionException {
+		EntityNBTContext _localctx = new EntityNBTContext(_ctx, getState());
+		enterRule(_localctx, 60, RULE_entityNBT);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1183);
+			jsonValue();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TargetObjectiveContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TargetObjectiveContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_targetObjective; }
+	}
+
+	public final TargetObjectiveContext targetObjective() throws RecognitionException {
+		TargetObjectiveContext _localctx = new TargetObjectiveContext(_ctx, getState());
+		enterRule(_localctx, 62, RULE_targetObjective);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1185);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StorageIdContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public StorageIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_storageId; }
+	}
+
+	public final StorageIdContext storageId() throws RecognitionException {
+		StorageIdContext _localctx = new StorageIdContext(_ctx, getState());
+		enterRule(_localctx, 64, RULE_storageId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1187);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StorageIdStringContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public StorageIdStringContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_storageIdString; }
+	}
+
+	public final StorageIdStringContext storageIdString() throws RecognitionException {
+		StorageIdStringContext _localctx = new StorageIdStringContext(_ctx, getState());
+		enterRule(_localctx, 66, RULE_storageIdString);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1189);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CoordinateXContext extends ParserRuleContext {
+		public TerminalNode Coordinate() { return getToken(MCCommandParser.Coordinate, 0); }
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public CoordinateXContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_coordinateX; }
+	}
+
+	public final CoordinateXContext coordinateX() throws RecognitionException {
+		CoordinateXContext _localctx = new CoordinateXContext(_ctx, getState());
+		enterRule(_localctx, 68, RULE_coordinateX);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1191);
+			_la = _input.LA(1);
+			if ( !(((((_la - 289)) & ~0x3f) == 0 && ((1L << (_la - 289)) & 1048593L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CoordinateYContext extends ParserRuleContext {
+		public TerminalNode Coordinate() { return getToken(MCCommandParser.Coordinate, 0); }
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public CoordinateYContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_coordinateY; }
+	}
+
+	public final CoordinateYContext coordinateY() throws RecognitionException {
+		CoordinateYContext _localctx = new CoordinateYContext(_ctx, getState());
+		enterRule(_localctx, 70, RULE_coordinateY);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1193);
+			_la = _input.LA(1);
+			if ( !(((((_la - 289)) & ~0x3f) == 0 && ((1L << (_la - 289)) & 1048593L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CoordinateZContext extends ParserRuleContext {
+		public TerminalNode Coordinate() { return getToken(MCCommandParser.Coordinate, 0); }
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public CoordinateZContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_coordinateZ; }
+	}
+
+	public final CoordinateZContext coordinateZ() throws RecognitionException {
+		CoordinateZContext _localctx = new CoordinateZContext(_ctx, getState());
+		enterRule(_localctx, 72, RULE_coordinateZ);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1195);
+			_la = _input.LA(1);
+			if ( !(((((_la - 289)) & ~0x3f) == 0 && ((1L << (_la - 289)) & 1048593L) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Pos3DContext extends ParserRuleContext {
+		public CoordinateXContext coordinateX() {
+			return getRuleContext(CoordinateXContext.class,0);
+		}
+		public CoordinateYContext coordinateY() {
+			return getRuleContext(CoordinateYContext.class,0);
+		}
+		public CoordinateZContext coordinateZ() {
+			return getRuleContext(CoordinateZContext.class,0);
+		}
+		public Pos3DContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_pos3D; }
+	}
+
+	public final Pos3DContext pos3D() throws RecognitionException {
+		Pos3DContext _localctx = new Pos3DContext(_ctx, getState());
+		enterRule(_localctx, 74, RULE_pos3D);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1197);
+			coordinateX();
+			setState(1198);
+			coordinateY();
+			setState(1199);
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Pos2DContext extends ParserRuleContext {
+		public CoordinateXContext coordinateX() {
+			return getRuleContext(CoordinateXContext.class,0);
+		}
+		public CoordinateZContext coordinateZ() {
+			return getRuleContext(CoordinateZContext.class,0);
+		}
+		public Pos2DContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_pos2D; }
+	}
+
+	public final Pos2DContext pos2D() throws RecognitionException {
+		Pos2DContext _localctx = new Pos2DContext(_ctx, getState());
+		enterRule(_localctx, 76, RULE_pos2D);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1201);
+			coordinateX();
+			setState(1202);
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GamemodeValueContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public GamemodeValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gamemodeValue; }
+	}
+
+	public final GamemodeValueContext gamemodeValue() throws RecognitionException {
+		GamemodeValueContext _localctx = new GamemodeValueContext(_ctx, getState());
+		enterRule(_localctx, 78, RULE_gamemodeValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1204);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SortValueContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public SortValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_sortValue; }
+	}
+
+	public final SortValueContext sortValue() throws RecognitionException {
+		SortValueContext _localctx = new SortValueContext(_ctx, getState());
+		enterRule(_localctx, 80, RULE_sortValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1206);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class IdentifierContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public IdentifierContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_identifier; }
+	}
+
+	public final IdentifierContext identifier() throws RecognitionException {
+		IdentifierContext _localctx = new IdentifierContext(_ctx, getState());
+		enterRule(_localctx, 82, RULE_identifier);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1208);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ViewRotationValueContext extends ParserRuleContext {
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public TerminalNode PositiveDouble() { return getToken(MCCommandParser.PositiveDouble, 0); }
+		public ViewRotationValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_viewRotationValue; }
+	}
+
+	public final ViewRotationValueContext viewRotationValue() throws RecognitionException {
+		ViewRotationValueContext _localctx = new ViewRotationValueContext(_ctx, getState());
+		enterRule(_localctx, 84, RULE_viewRotationValue);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1210);
+			_la = _input.LA(1);
+			if ( !(_la==PositiveDouble || _la==Double) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DoubleIntervalContext extends ParserRuleContext {
+		public TerminalNode DoubleInterval() { return getToken(MCCommandParser.DoubleInterval, 0); }
+		public DoubleIntervalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_doubleInterval; }
+	}
+
+	public final DoubleIntervalContext doubleInterval() throws RecognitionException {
+		DoubleIntervalContext _localctx = new DoubleIntervalContext(_ctx, getState());
+		enterRule(_localctx, 86, RULE_doubleInterval);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1212);
+			match(DoubleInterval);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PositiveDoubleContext extends ParserRuleContext {
+		public TerminalNode PositiveDouble() { return getToken(MCCommandParser.PositiveDouble, 0); }
+		public PositiveDoubleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_positiveDouble; }
+	}
+
+	public final PositiveDoubleContext positiveDouble() throws RecognitionException {
+		PositiveDoubleContext _localctx = new PositiveDoubleContext(_ctx, getState());
+		enterRule(_localctx, 88, RULE_positiveDouble);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1214);
+			match(PositiveDouble);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PositiveDoubleIntervalContext extends ParserRuleContext {
+		public TerminalNode PositiveDoubleInterval() { return getToken(MCCommandParser.PositiveDoubleInterval, 0); }
+		public PositiveDoubleIntervalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_positiveDoubleInterval; }
+	}
+
+	public final PositiveDoubleIntervalContext positiveDoubleInterval() throws RecognitionException {
+		PositiveDoubleIntervalContext _localctx = new PositiveDoubleIntervalContext(_ctx, getState());
+		enterRule(_localctx, 90, RULE_positiveDoubleInterval);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1216);
+			match(PositiveDoubleInterval);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LevelValueContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public LevelValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_levelValue; }
+	}
+
+	public final LevelValueContext levelValue() throws RecognitionException {
+		LevelValueContext _localctx = new LevelValueContext(_ctx, getState());
+		enterRule(_localctx, 92, RULE_levelValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1218);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NameValueContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TerminalNode String() { return getToken(MCCommandParser.String, 0); }
+		public NameValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_nameValue; }
+	}
+
+	public final NameValueContext nameValue() throws RecognitionException {
+		NameValueContext _localctx = new NameValueContext(_ctx, getState());
+		enterRule(_localctx, 94, RULE_nameValue);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1220);
+			_la = _input.LA(1);
+			if ( !(_la==Identifier || _la==String) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EntityTypeContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public EntityTypeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_entityType; }
+	}
+
+	public final EntityTypeContext entityType() throws RecognitionException {
+		EntityTypeContext _localctx = new EntityTypeContext(_ctx, getState());
+		enterRule(_localctx, 96, RULE_entityType);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1222);
+			_la = _input.LA(1);
+			if ( !(_la==Identifier || _la==ResourceLocation) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PredicateValueContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public PredicateValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_predicateValue; }
+	}
+
+	public final PredicateValueContext predicateValue() throws RecognitionException {
+		PredicateValueContext _localctx = new PredicateValueContext(_ctx, getState());
+		enterRule(_localctx, 98, RULE_predicateValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1224);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SelectorContext extends ParserRuleContext {
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public AtCharContext atChar() {
+			return getRuleContext(AtCharContext.class,0);
+		}
+		public SelectorNameContext selectorName() {
+			return getRuleContext(SelectorNameContext.class,0);
+		}
+		public SelectorParameterContext selectorParameter() {
+			return getRuleContext(SelectorParameterContext.class,0);
+		}
+		public SelectorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_selector; }
+	}
+
+	public final SelectorContext selector() throws RecognitionException {
+		SelectorContext _localctx = new SelectorContext(_ctx, getState());
+		enterRule(_localctx, 100, RULE_selector);
+		int _la;
+		try {
+			setState(1232);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Identifier:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1226);
+				identifier();
+				}
+				break;
+			case AtChar:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1227);
+				atChar();
+				setState(1228);
+				selectorName();
+				setState(1230);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==SquareBrackets || _la==LeftSquareBracket) {
+					{
+					setState(1229);
+					selectorParameter();
+					}
+				}
+
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SelectorNameContext extends ParserRuleContext {
+		public TerminalNode SelectorName() { return getToken(MCCommandParser.SelectorName, 0); }
+		public SelectorNameContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_selectorName; }
+	}
+
+	public final SelectorNameContext selectorName() throws RecognitionException {
+		SelectorNameContext _localctx = new SelectorNameContext(_ctx, getState());
+		enterRule(_localctx, 102, RULE_selectorName);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1234);
+			match(SelectorName);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SelectorParameterContext extends ParserRuleContext {
+		public TerminalNode SquareBrackets() { return getToken(MCCommandParser.SquareBrackets, 0); }
+		public LeftSquareBracketContext leftSquareBracket() {
+			return getRuleContext(LeftSquareBracketContext.class,0);
+		}
+		public RightSquareBracketContext rightSquareBracket() {
+			return getRuleContext(RightSquareBracketContext.class,0);
+		}
+		public List<ParameterContext> parameter() {
+			return getRuleContexts(ParameterContext.class);
+		}
+		public ParameterContext parameter(int i) {
+			return getRuleContext(ParameterContext.class,i);
+		}
+		public List<TerminalNode> Comma() { return getTokens(MCCommandParser.Comma); }
+		public TerminalNode Comma(int i) {
+			return getToken(MCCommandParser.Comma, i);
+		}
+		public SelectorParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_selectorParameter; }
+	}
+
+	public final SelectorParameterContext selectorParameter() throws RecognitionException {
+		SelectorParameterContext _localctx = new SelectorParameterContext(_ctx, getState());
+		enterRule(_localctx, 104, RULE_selectorParameter);
+		int _la;
+		try {
+			setState(1250);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case SquareBrackets:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1236);
+				match(SquareBrackets);
+				}
+				break;
+			case LeftSquareBracket:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1237);
+				leftSquareBracket();
+				setState(1246);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (((((_la - 35)) & ~0x3f) == 0 && ((1L << (_la - 35)) & 4611686018964260859L) != 0) || _la==Name || _la==Predicate || _la==Distance) {
+					{
+					setState(1238);
+					parameter();
+					setState(1243);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					while (_la==Comma) {
+						{
+						{
+						setState(1239);
+						match(Comma);
+						setState(1240);
+						parameter();
+						}
+						}
+						setState(1245);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+					}
+					}
+				}
+
+				setState(1248);
+				rightSquareBracket();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScorePathContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public ScorePathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scorePath; }
+	}
+
+	public final ScorePathContext scorePath() throws RecognitionException {
+		ScorePathContext _localctx = new ScorePathContext(_ctx, getState());
+		enterRule(_localctx, 106, RULE_scorePath);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1252);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreParameterContext extends ParserRuleContext {
+		public ScorePathContext scorePath() {
+			return getRuleContext(ScorePathContext.class,0);
+		}
+		public EqualContext equal() {
+			return getRuleContext(EqualContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public IntIntervalContext intInterval() {
+			return getRuleContext(IntIntervalContext.class,0);
+		}
+		public ExclamationMarkContext exclamationMark() {
+			return getRuleContext(ExclamationMarkContext.class,0);
+		}
+		public ScoreParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreParameter; }
+	}
+
+	public final ScoreParameterContext scoreParameter() throws RecognitionException {
+		ScoreParameterContext _localctx = new ScoreParameterContext(_ctx, getState());
+		enterRule(_localctx, 108, RULE_scoreParameter);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1254);
+			scorePath();
+			setState(1255);
+			equal();
+			setState(1257);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==ExclamationMark) {
+				{
+				setState(1256);
+				exclamationMark();
+				}
+			}
+
+			setState(1261);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Integer:
+				{
+				setState(1259);
+				integer();
+				}
+				break;
+			case IntInterval:
+				{
+				setState(1260);
+				intInterval();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoresValueContext extends ParserRuleContext {
+		public TerminalNode CurlyBrackets() { return getToken(MCCommandParser.CurlyBrackets, 0); }
+		public LeftCurlyBracketContext leftCurlyBracket() {
+			return getRuleContext(LeftCurlyBracketContext.class,0);
+		}
+		public RightCurlyBracketContext rightCurlyBracket() {
+			return getRuleContext(RightCurlyBracketContext.class,0);
+		}
+		public List<ScoreParameterContext> scoreParameter() {
+			return getRuleContexts(ScoreParameterContext.class);
+		}
+		public ScoreParameterContext scoreParameter(int i) {
+			return getRuleContext(ScoreParameterContext.class,i);
+		}
+		public List<TerminalNode> Comma() { return getTokens(MCCommandParser.Comma); }
+		public TerminalNode Comma(int i) {
+			return getToken(MCCommandParser.Comma, i);
+		}
+		public ScoresValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoresValue; }
+	}
+
+	public final ScoresValueContext scoresValue() throws RecognitionException {
+		ScoresValueContext _localctx = new ScoresValueContext(_ctx, getState());
+		enterRule(_localctx, 110, RULE_scoresValue);
+		int _la;
+		try {
+			setState(1277);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case CurlyBrackets:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1263);
+				match(CurlyBrackets);
+				}
+				break;
+			case LeftCurlyBracket:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1264);
+				leftCurlyBracket();
+				setState(1273);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==Identifier) {
+					{
+					setState(1265);
+					scoreParameter();
+					setState(1270);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					while (_la==Comma) {
+						{
+						{
+						setState(1266);
+						match(Comma);
+						setState(1267);
+						scoreParameter();
+						}
+						}
+						setState(1272);
+						_errHandler.sync(this);
+						_la = _input.LA(1);
+					}
+					}
+				}
+
+				setState(1275);
+				rightCurlyBracket();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParameterContext extends ParserRuleContext {
+		public AxeKeyContext axeKey() {
+			return getRuleContext(AxeKeyContext.class,0);
+		}
+		public EqualContext equal() {
+			return getRuleContext(EqualContext.class,0);
+		}
+		public AxeValueContext axeValue() {
+			return getRuleContext(AxeValueContext.class,0);
+		}
+		public AxeLengthKeyContext axeLengthKey() {
+			return getRuleContext(AxeLengthKeyContext.class,0);
+		}
+		public PositiveDoubleContext positiveDouble() {
+			return getRuleContext(PositiveDoubleContext.class,0);
+		}
+		public ViewRotationKeyContext viewRotationKey() {
+			return getRuleContext(ViewRotationKeyContext.class,0);
+		}
+		public ViewRotationValueContext viewRotationValue() {
+			return getRuleContext(ViewRotationValueContext.class,0);
+		}
+		public DoubleIntervalContext doubleInterval() {
+			return getRuleContext(DoubleIntervalContext.class,0);
+		}
+		public DistanceContext distance() {
+			return getRuleContext(DistanceContext.class,0);
+		}
+		public PositiveDoubleIntervalContext positiveDoubleInterval() {
+			return getRuleContext(PositiveDoubleIntervalContext.class,0);
+		}
+		public LevelContext level() {
+			return getRuleContext(LevelContext.class,0);
+		}
+		public LevelValueContext levelValue() {
+			return getRuleContext(LevelValueContext.class,0);
+		}
+		public IntIntervalContext intInterval() {
+			return getRuleContext(IntIntervalContext.class,0);
+		}
+		public GamemodeKeyContext gamemodeKey() {
+			return getRuleContext(GamemodeKeyContext.class,0);
+		}
+		public GamemodeValueContext gamemodeValue() {
+			return getRuleContext(GamemodeValueContext.class,0);
+		}
+		public ExclamationMarkContext exclamationMark() {
+			return getRuleContext(ExclamationMarkContext.class,0);
+		}
+		public AdvancementKeyContext advancementKey() {
+			return getRuleContext(AdvancementKeyContext.class,0);
+		}
+		public AdvancementValueContext advancementValue() {
+			return getRuleContext(AdvancementValueContext.class,0);
+		}
+		public ScoreKeyContext scoreKey() {
+			return getRuleContext(ScoreKeyContext.class,0);
+		}
+		public ScoresValueContext scoresValue() {
+			return getRuleContext(ScoresValueContext.class,0);
+		}
+		public LimitContext limit() {
+			return getRuleContext(LimitContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public TeamKeyContext teamKey() {
+			return getRuleContext(TeamKeyContext.class,0);
+		}
+		public TeamNameContext teamName() {
+			return getRuleContext(TeamNameContext.class,0);
+		}
+		public NameContext name() {
+			return getRuleContext(NameContext.class,0);
+		}
+		public NameValueContext nameValue() {
+			return getRuleContext(NameValueContext.class,0);
+		}
+		public TypeKeyContext typeKey() {
+			return getRuleContext(TypeKeyContext.class,0);
+		}
+		public EntityTypeContext entityType() {
+			return getRuleContext(EntityTypeContext.class,0);
+		}
+		public PredicateContext predicate() {
+			return getRuleContext(PredicateContext.class,0);
+		}
+		public PredicateValueContext predicateValue() {
+			return getRuleContext(PredicateValueContext.class,0);
+		}
+		public NbtKeyContext nbtKey() {
+			return getRuleContext(NbtKeyContext.class,0);
+		}
+		public JsonValueContext jsonValue() {
+			return getRuleContext(JsonValueContext.class,0);
+		}
+		public SortKeyContext sortKey() {
+			return getRuleContext(SortKeyContext.class,0);
+		}
+		public SortValueContext sortValue() {
+			return getRuleContext(SortValueContext.class,0);
+		}
+		public ParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_parameter; }
+	}
+
+	public final ParameterContext parameter() throws RecognitionException {
+		ParameterContext _localctx = new ParameterContext(_ctx, getState());
+		enterRule(_localctx, 112, RULE_parameter);
+		int _la;
+		try {
+			setState(1366);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case AxeKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(1279);
+				axeKey();
+				setState(1280);
+				equal();
+				setState(1281);
+				axeValue();
+				}
+				}
+				break;
+			case AxeLengthKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1283);
+				axeLengthKey();
+				setState(1284);
+				equal();
+				setState(1285);
+				positiveDouble();
+				}
+				}
+				break;
+			case ViewRotationKey:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(1287);
+				viewRotationKey();
+				setState(1288);
+				equal();
+				setState(1291);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case PositiveDouble:
+				case Double:
+					{
+					setState(1289);
+					viewRotationValue();
+					}
+					break;
+				case DoubleInterval:
+					{
+					setState(1290);
+					doubleInterval();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				}
+				break;
+			case Distance:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(1293);
+				distance();
+				setState(1294);
+				equal();
+				setState(1297);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case PositiveDouble:
+					{
+					setState(1295);
+					positiveDouble();
+					}
+					break;
+				case PositiveDoubleInterval:
+					{
+					setState(1296);
+					positiveDoubleInterval();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				}
+				break;
+			case Level:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(1299);
+				level();
+				setState(1300);
+				equal();
+				setState(1303);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Integer:
+					{
+					setState(1301);
+					levelValue();
+					}
+					break;
+				case IntInterval:
+					{
+					setState(1302);
+					intInterval();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				}
+				break;
+			case GamemodeKey:
+				enterOuterAlt(_localctx, 6);
+				{
+				{
+				setState(1305);
+				gamemodeKey();
+				setState(1306);
+				equal();
+				setState(1308);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					setState(1307);
+					exclamationMark();
+					}
+				}
+
+				setState(1310);
+				gamemodeValue();
+				}
+				}
+				break;
+			case AdvancementKey:
+				enterOuterAlt(_localctx, 7);
+				{
+				{
+				setState(1312);
+				advancementKey();
+				setState(1313);
+				equal();
+				setState(1314);
+				advancementValue();
+				}
+				}
+				break;
+			case ScoreKey:
+				enterOuterAlt(_localctx, 8);
+				{
+				{
+				setState(1316);
+				scoreKey();
+				setState(1317);
+				equal();
+				setState(1318);
+				scoresValue();
+				}
+				}
+				break;
+			case LimitKey:
+				enterOuterAlt(_localctx, 9);
+				{
+				{
+				setState(1320);
+				limit();
+				setState(1321);
+				equal();
+				setState(1322);
+				integer();
+				}
+				}
+				break;
+			case TeamKey:
+				enterOuterAlt(_localctx, 10);
+				{
+				{
+				setState(1324);
+				teamKey();
+				setState(1325);
+				equal();
+				setState(1327);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					setState(1326);
+					exclamationMark();
+					}
+				}
+
+				setState(1330);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==Identifier) {
+					{
+					setState(1329);
+					teamName();
+					}
+				}
+
+				}
+				}
+				break;
+			case Name:
+				enterOuterAlt(_localctx, 11);
+				{
+				{
+				setState(1332);
+				name();
+				setState(1333);
+				equal();
+				setState(1335);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					setState(1334);
+					exclamationMark();
+					}
+				}
+
+				setState(1337);
+				nameValue();
+				}
+				}
+				break;
+			case TypeKey:
+				enterOuterAlt(_localctx, 12);
+				{
+				{
+				setState(1339);
+				typeKey();
+				setState(1340);
+				equal();
+				setState(1342);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					setState(1341);
+					exclamationMark();
+					}
+				}
+
+				setState(1344);
+				entityType();
+				}
+				}
+				break;
+			case Predicate:
+				enterOuterAlt(_localctx, 13);
+				{
+				{
+				setState(1346);
+				predicate();
+				setState(1347);
+				equal();
+				setState(1349);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					setState(1348);
+					exclamationMark();
+					}
+				}
+
+				setState(1351);
+				predicateValue();
+				}
+				}
+				break;
+			case NBTKey:
+				enterOuterAlt(_localctx, 14);
+				{
+				{
+				setState(1353);
+				nbtKey();
+				setState(1354);
+				equal();
+				setState(1356);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					setState(1355);
+					exclamationMark();
+					}
+				}
+
+				setState(1359);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==CurlyBrackets || _la==LeftCurlyBracket) {
+					{
+					setState(1358);
+					jsonValue();
+					}
+				}
+
+				}
+				}
+				break;
+			case SortKey:
+				enterOuterAlt(_localctx, 15);
+				{
+				{
+				setState(1361);
+				sortKey();
+				setState(1362);
+				equal();
+				setState(1364);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==Identifier) {
+					{
+					setState(1363);
+					sortValue();
+					}
+				}
+
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CommandsContext extends ParserRuleContext {
+		public AdvancementRadicalContext advancementRadical() {
+			return getRuleContext(AdvancementRadicalContext.class,0);
+		}
+		public AttributeRadicalContext attributeRadical() {
+			return getRuleContext(AttributeRadicalContext.class,0);
+		}
+		public BossbarRadicalContext bossbarRadical() {
+			return getRuleContext(BossbarRadicalContext.class,0);
+		}
+		public ClearRadicalContext clearRadical() {
+			return getRuleContext(ClearRadicalContext.class,0);
+		}
+		public CloneRadicalContext cloneRadical() {
+			return getRuleContext(CloneRadicalContext.class,0);
+		}
+		public DamageRadicalContext damageRadical() {
+			return getRuleContext(DamageRadicalContext.class,0);
+		}
+		public DataRadicalContext dataRadical() {
+			return getRuleContext(DataRadicalContext.class,0);
+		}
+		public DatapackRadicalContext datapackRadical() {
+			return getRuleContext(DatapackRadicalContext.class,0);
+		}
+		public DebugRadicalContext debugRadical() {
+			return getRuleContext(DebugRadicalContext.class,0);
+		}
+		public DefaultgamemodeRadicalContext defaultgamemodeRadical() {
+			return getRuleContext(DefaultgamemodeRadicalContext.class,0);
+		}
+		public DifficultyRadicalContext difficultyRadical() {
+			return getRuleContext(DifficultyRadicalContext.class,0);
+		}
+		public EffectRadicalContext effectRadical() {
+			return getRuleContext(EffectRadicalContext.class,0);
+		}
+		public EnchantRadicalContext enchantRadical() {
+			return getRuleContext(EnchantRadicalContext.class,0);
+		}
+		public ExecuteRadicalContext executeRadical() {
+			return getRuleContext(ExecuteRadicalContext.class,0);
+		}
+		public ExperienceRadicalContext experienceRadical() {
+			return getRuleContext(ExperienceRadicalContext.class,0);
+		}
+		public FillRadicalContext fillRadical() {
+			return getRuleContext(FillRadicalContext.class,0);
+		}
+		public FillbiomeRadicalContext fillbiomeRadical() {
+			return getRuleContext(FillbiomeRadicalContext.class,0);
+		}
+		public ForceloadRadicalContext forceloadRadical() {
+			return getRuleContext(ForceloadRadicalContext.class,0);
+		}
+		public FunctionRadicalContext functionRadical() {
+			return getRuleContext(FunctionRadicalContext.class,0);
+		}
+		public GamemodeRadicalContext gamemodeRadical() {
+			return getRuleContext(GamemodeRadicalContext.class,0);
+		}
+		public GameruleRadicalContext gameruleRadical() {
+			return getRuleContext(GameruleRadicalContext.class,0);
+		}
+		public GiveRadicalContext giveRadical() {
+			return getRuleContext(GiveRadicalContext.class,0);
+		}
+		public HelpRadicalContext helpRadical() {
+			return getRuleContext(HelpRadicalContext.class,0);
+		}
+		public ItemRadicalContext itemRadical() {
+			return getRuleContext(ItemRadicalContext.class,0);
+		}
+		public JfrRadicalContext jfrRadical() {
+			return getRuleContext(JfrRadicalContext.class,0);
+		}
+		public KickRadicalContext kickRadical() {
+			return getRuleContext(KickRadicalContext.class,0);
+		}
+		public KillRadicalContext killRadical() {
+			return getRuleContext(KillRadicalContext.class,0);
+		}
+		public ListRadicalContext listRadical() {
+			return getRuleContext(ListRadicalContext.class,0);
+		}
+		public LocateRadicalContext locateRadical() {
+			return getRuleContext(LocateRadicalContext.class,0);
+		}
+		public LootRadicalContext lootRadical() {
+			return getRuleContext(LootRadicalContext.class,0);
+		}
+		public MeRadicalContext meRadical() {
+			return getRuleContext(MeRadicalContext.class,0);
+		}
+		public MsgRadicalContext msgRadical() {
+			return getRuleContext(MsgRadicalContext.class,0);
+		}
+		public ParticleRadicalContext particleRadical() {
+			return getRuleContext(ParticleRadicalContext.class,0);
+		}
+		public PlaceRadicalContext placeRadical() {
+			return getRuleContext(PlaceRadicalContext.class,0);
+		}
+		public PlaysoundRadicalContext playsoundRadical() {
+			return getRuleContext(PlaysoundRadicalContext.class,0);
+		}
+		public PublishRadicalContext publishRadical() {
+			return getRuleContext(PublishRadicalContext.class,0);
+		}
+		public RecipeRadicalContext recipeRadical() {
+			return getRuleContext(RecipeRadicalContext.class,0);
+		}
+		public ReloadRadicalContext reloadRadical() {
+			return getRuleContext(ReloadRadicalContext.class,0);
+		}
+		public ReturnRadicalContext returnRadical() {
+			return getRuleContext(ReturnRadicalContext.class,0);
+		}
+		public RideRadicalContext rideRadical() {
+			return getRuleContext(RideRadicalContext.class,0);
+		}
+		public SayRadicalContext sayRadical() {
+			return getRuleContext(SayRadicalContext.class,0);
+		}
+		public ScheduleRadicalContext scheduleRadical() {
+			return getRuleContext(ScheduleRadicalContext.class,0);
+		}
+		public ScoreboardRadicalContext scoreboardRadical() {
+			return getRuleContext(ScoreboardRadicalContext.class,0);
+		}
+		public SeedRadicalContext seedRadical() {
+			return getRuleContext(SeedRadicalContext.class,0);
+		}
+		public SetblockRadicalContext setblockRadical() {
+			return getRuleContext(SetblockRadicalContext.class,0);
+		}
+		public SetworldspawnRadicalContext setworldspawnRadical() {
+			return getRuleContext(SetworldspawnRadicalContext.class,0);
+		}
+		public SpawnpointRadicalContext spawnpointRadical() {
+			return getRuleContext(SpawnpointRadicalContext.class,0);
+		}
+		public SpectateRadicalContext spectateRadical() {
+			return getRuleContext(SpectateRadicalContext.class,0);
+		}
+		public SpreadplayersRadicalContext spreadplayersRadical() {
+			return getRuleContext(SpreadplayersRadicalContext.class,0);
+		}
+		public StopsoundRadicalContext stopsoundRadical() {
+			return getRuleContext(StopsoundRadicalContext.class,0);
+		}
+		public SummonRadicalContext summonRadical() {
+			return getRuleContext(SummonRadicalContext.class,0);
+		}
+		public TagRadicalContext tagRadical() {
+			return getRuleContext(TagRadicalContext.class,0);
+		}
+		public TeamRadicalContext teamRadical() {
+			return getRuleContext(TeamRadicalContext.class,0);
+		}
+		public TeammsgRadicalContext teammsgRadical() {
+			return getRuleContext(TeammsgRadicalContext.class,0);
+		}
+		public TeleportRadicalContext teleportRadical() {
+			return getRuleContext(TeleportRadicalContext.class,0);
+		}
+		public TellRadicalContext tellRadical() {
+			return getRuleContext(TellRadicalContext.class,0);
+		}
+		public TellrawRadicalContext tellrawRadical() {
+			return getRuleContext(TellrawRadicalContext.class,0);
+		}
+		public TimeRadicalContext timeRadical() {
+			return getRuleContext(TimeRadicalContext.class,0);
+		}
+		public TitleRadicalContext titleRadical() {
+			return getRuleContext(TitleRadicalContext.class,0);
+		}
+		public TmRadicalContext tmRadical() {
+			return getRuleContext(TmRadicalContext.class,0);
+		}
+		public TpRadicalContext tpRadical() {
+			return getRuleContext(TpRadicalContext.class,0);
+		}
+		public TriggerRadicalContext triggerRadical() {
+			return getRuleContext(TriggerRadicalContext.class,0);
+		}
+		public WeatherRadicalContext weatherRadical() {
+			return getRuleContext(WeatherRadicalContext.class,0);
+		}
+		public WorldborderRadicalContext worldborderRadical() {
+			return getRuleContext(WorldborderRadicalContext.class,0);
+		}
+		public XpRadicalContext xpRadical() {
+			return getRuleContext(XpRadicalContext.class,0);
+		}
+		public CommandsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_commands; }
+	}
+
+	public final CommandsContext commands() throws RecognitionException {
+		CommandsContext _localctx = new CommandsContext(_ctx, getState());
+		enterRule(_localctx, 114, RULE_commands);
+		try {
+			setState(1433);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case AdvancementKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1368);
+				advancementRadical();
+				}
+				break;
+			case AttributeKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(1369);
+				attributeRadical();
+				}
+				break;
+			case BossbarKey:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(1370);
+				bossbarRadical();
+				}
+				break;
+			case ClearKey:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(1371);
+				clearRadical();
+				}
+				break;
+			case CloneKey:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(1372);
+				cloneRadical();
+				}
+				break;
+			case DamageKey:
+				enterOuterAlt(_localctx, 6);
+				{
+				setState(1373);
+				damageRadical();
+				}
+				break;
+			case DataKey:
+				enterOuterAlt(_localctx, 7);
+				{
+				setState(1374);
+				dataRadical();
+				}
+				break;
+			case DatapackKey:
+				enterOuterAlt(_localctx, 8);
+				{
+				setState(1375);
+				datapackRadical();
+				}
+				break;
+			case DebugKey:
+				enterOuterAlt(_localctx, 9);
+				{
+				setState(1376);
+				debugRadical();
+				}
+				break;
+			case DefaultgamemodeKey:
+				enterOuterAlt(_localctx, 10);
+				{
+				setState(1377);
+				defaultgamemodeRadical();
+				}
+				break;
+			case DifficultyKey:
+				enterOuterAlt(_localctx, 11);
+				{
+				setState(1378);
+				difficultyRadical();
+				}
+				break;
+			case EffectKey:
+				enterOuterAlt(_localctx, 12);
+				{
+				setState(1379);
+				effectRadical();
+				}
+				break;
+			case EnchantKey:
+				enterOuterAlt(_localctx, 13);
+				{
+				setState(1380);
+				enchantRadical();
+				}
+				break;
+			case ExecuteKey:
+				enterOuterAlt(_localctx, 14);
+				{
+				setState(1381);
+				executeRadical();
+				}
+				break;
+			case ExperienceKey:
+				enterOuterAlt(_localctx, 15);
+				{
+				setState(1382);
+				experienceRadical();
+				}
+				break;
+			case FillKey:
+				enterOuterAlt(_localctx, 16);
+				{
+				setState(1383);
+				fillRadical();
+				}
+				break;
+			case FillbiomeKey:
+				enterOuterAlt(_localctx, 17);
+				{
+				setState(1384);
+				fillbiomeRadical();
+				}
+				break;
+			case ForceloadKey:
+				enterOuterAlt(_localctx, 18);
+				{
+				setState(1385);
+				forceloadRadical();
+				}
+				break;
+			case FunctionKey:
+				enterOuterAlt(_localctx, 19);
+				{
+				setState(1386);
+				functionRadical();
+				}
+				break;
+			case GamemodeKey:
+				enterOuterAlt(_localctx, 20);
+				{
+				setState(1387);
+				gamemodeRadical();
+				}
+				break;
+			case GameruleKey:
+				enterOuterAlt(_localctx, 21);
+				{
+				setState(1388);
+				gameruleRadical();
+				}
+				break;
+			case GiveKey:
+				enterOuterAlt(_localctx, 22);
+				{
+				setState(1389);
+				giveRadical();
+				}
+				break;
+			case HelpKey:
+				enterOuterAlt(_localctx, 23);
+				{
+				setState(1390);
+				helpRadical();
+				}
+				break;
+			case ItemKey:
+				enterOuterAlt(_localctx, 24);
+				{
+				setState(1391);
+				itemRadical();
+				}
+				break;
+			case JfrKey:
+				enterOuterAlt(_localctx, 25);
+				{
+				setState(1392);
+				jfrRadical();
+				}
+				break;
+			case KickKey:
+				enterOuterAlt(_localctx, 26);
+				{
+				setState(1393);
+				kickRadical();
+				}
+				break;
+			case KillKey:
+				enterOuterAlt(_localctx, 27);
+				{
+				setState(1394);
+				killRadical();
+				}
+				break;
+			case ListKey:
+				enterOuterAlt(_localctx, 28);
+				{
+				setState(1395);
+				listRadical();
+				}
+				break;
+			case LocateKey:
+				enterOuterAlt(_localctx, 29);
+				{
+				setState(1396);
+				locateRadical();
+				}
+				break;
+			case LootKey:
+				enterOuterAlt(_localctx, 30);
+				{
+				setState(1397);
+				lootRadical();
+				}
+				break;
+			case MeKey:
+				enterOuterAlt(_localctx, 31);
+				{
+				setState(1398);
+				meRadical();
+				}
+				break;
+			case MsgKey:
+				enterOuterAlt(_localctx, 32);
+				{
+				setState(1399);
+				msgRadical();
+				}
+				break;
+			case ParticleKey:
+				enterOuterAlt(_localctx, 33);
+				{
+				setState(1400);
+				particleRadical();
+				}
+				break;
+			case PlaceKey:
+				enterOuterAlt(_localctx, 34);
+				{
+				setState(1401);
+				placeRadical();
+				}
+				break;
+			case PlaysoundKey:
+				enterOuterAlt(_localctx, 35);
+				{
+				setState(1402);
+				playsoundRadical();
+				}
+				break;
+			case PublishKey:
+				enterOuterAlt(_localctx, 36);
+				{
+				setState(1403);
+				publishRadical();
+				}
+				break;
+			case RecipeKey:
+				enterOuterAlt(_localctx, 37);
+				{
+				setState(1404);
+				recipeRadical();
+				}
+				break;
+			case ReloadKey:
+				enterOuterAlt(_localctx, 38);
+				{
+				setState(1405);
+				reloadRadical();
+				}
+				break;
+			case ReturnKey:
+				enterOuterAlt(_localctx, 39);
+				{
+				setState(1406);
+				returnRadical();
+				}
+				break;
+			case RideKey:
+				enterOuterAlt(_localctx, 40);
+				{
+				setState(1407);
+				rideRadical();
+				}
+				break;
+			case SayKey:
+				enterOuterAlt(_localctx, 41);
+				{
+				setState(1408);
+				sayRadical();
+				}
+				break;
+			case ScheduleKey:
+				enterOuterAlt(_localctx, 42);
+				{
+				setState(1409);
+				scheduleRadical();
+				}
+				break;
+			case ScoreboardKey:
+				enterOuterAlt(_localctx, 43);
+				{
+				setState(1410);
+				scoreboardRadical();
+				}
+				break;
+			case SeedKey:
+				enterOuterAlt(_localctx, 44);
+				{
+				setState(1411);
+				seedRadical();
+				}
+				break;
+			case SetblockKey:
+				enterOuterAlt(_localctx, 45);
+				{
+				setState(1412);
+				setblockRadical();
+				}
+				break;
+			case SetworldspawnKey:
+				enterOuterAlt(_localctx, 46);
+				{
+				setState(1413);
+				setworldspawnRadical();
+				}
+				break;
+			case SpawnpointKey:
+				enterOuterAlt(_localctx, 47);
+				{
+				setState(1414);
+				spawnpointRadical();
+				}
+				break;
+			case SpectateKey:
+				enterOuterAlt(_localctx, 48);
+				{
+				setState(1415);
+				spectateRadical();
+				}
+				break;
+			case SpreadplayersKey:
+				enterOuterAlt(_localctx, 49);
+				{
+				setState(1416);
+				spreadplayersRadical();
+				}
+				break;
+			case StopsoundKey:
+				enterOuterAlt(_localctx, 50);
+				{
+				setState(1417);
+				stopsoundRadical();
+				}
+				break;
+			case SummonKey:
+				enterOuterAlt(_localctx, 51);
+				{
+				setState(1418);
+				summonRadical();
+				}
+				break;
+			case TagKey:
+				enterOuterAlt(_localctx, 52);
+				{
+				setState(1419);
+				tagRadical();
+				}
+				break;
+			case TeamKey:
+				enterOuterAlt(_localctx, 53);
+				{
+				setState(1420);
+				teamRadical();
+				}
+				break;
+			case TeammsgKey:
+				enterOuterAlt(_localctx, 54);
+				{
+				setState(1421);
+				teammsgRadical();
+				}
+				break;
+			case TeleportKey:
+				enterOuterAlt(_localctx, 55);
+				{
+				setState(1422);
+				teleportRadical();
+				}
+				break;
+			case TellKey:
+				enterOuterAlt(_localctx, 56);
+				{
+				setState(1423);
+				tellRadical();
+				}
+				break;
+			case TellrawKey:
+				enterOuterAlt(_localctx, 57);
+				{
+				setState(1424);
+				tellrawRadical();
+				}
+				break;
+			case TimeKey:
+				enterOuterAlt(_localctx, 58);
+				{
+				setState(1425);
+				timeRadical();
+				}
+				break;
+			case TitleKey:
+				enterOuterAlt(_localctx, 59);
+				{
+				setState(1426);
+				titleRadical();
+				}
+				break;
+			case TmKey:
+				enterOuterAlt(_localctx, 60);
+				{
+				setState(1427);
+				tmRadical();
+				}
+				break;
+			case TpKey:
+				enterOuterAlt(_localctx, 61);
+				{
+				setState(1428);
+				tpRadical();
+				}
+				break;
+			case TriggerKey:
+				enterOuterAlt(_localctx, 62);
+				{
+				setState(1429);
+				triggerRadical();
+				}
+				break;
+			case WeatherKey:
+				enterOuterAlt(_localctx, 63);
+				{
+				setState(1430);
+				weatherRadical();
+				}
+				break;
+			case WorldborderKey:
+				enterOuterAlt(_localctx, 64);
+				{
+				setState(1431);
+				worldborderRadical();
+				}
+				break;
+			case XpKey:
+				enterOuterAlt(_localctx, 65);
+				{
+				setState(1432);
+				xpRadical();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AxeKeyContext extends ParserRuleContext {
+		public TerminalNode AxeKey() { return getToken(MCCommandParser.AxeKey, 0); }
+		public AxeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_axeKey; }
+	}
+
+	public final AxeKeyContext axeKey() throws RecognitionException {
+		AxeKeyContext _localctx = new AxeKeyContext(_ctx, getState());
+		enterRule(_localctx, 116, RULE_axeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1435);
+			match(AxeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StarContext extends ParserRuleContext {
+		public TerminalNode Star() { return getToken(MCCommandParser.Star, 0); }
+		public StarContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_star; }
+	}
+
+	public final StarContext star() throws RecognitionException {
+		StarContext _localctx = new StarContext(_ctx, getState());
+		enterRule(_localctx, 118, RULE_star);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1437);
+			match(Star);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AdvancementKeyContext extends ParserRuleContext {
+		public TerminalNode AdvancementKey() { return getToken(MCCommandParser.AdvancementKey, 0); }
+		public AdvancementKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_advancementKey; }
+	}
+
+	public final AdvancementKeyContext advancementKey() throws RecognitionException {
+		AdvancementKeyContext _localctx = new AdvancementKeyContext(_ctx, getState());
+		enterRule(_localctx, 120, RULE_advancementKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1439);
+			match(AdvancementKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AttributeKeyContext extends ParserRuleContext {
+		public TerminalNode AttributeKey() { return getToken(MCCommandParser.AttributeKey, 0); }
+		public AttributeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_attributeKey; }
+	}
+
+	public final AttributeKeyContext attributeKey() throws RecognitionException {
+		AttributeKeyContext _localctx = new AttributeKeyContext(_ctx, getState());
+		enterRule(_localctx, 122, RULE_attributeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1441);
+			match(AttributeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarKeyContext extends ParserRuleContext {
+		public TerminalNode BossbarKey() { return getToken(MCCommandParser.BossbarKey, 0); }
+		public BossbarKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarKey; }
+	}
+
+	public final BossbarKeyContext bossbarKey() throws RecognitionException {
+		BossbarKeyContext _localctx = new BossbarKeyContext(_ctx, getState());
+		enterRule(_localctx, 124, RULE_bossbarKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1443);
+			match(BossbarKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ClearKeyContext extends ParserRuleContext {
+		public TerminalNode ClearKey() { return getToken(MCCommandParser.ClearKey, 0); }
+		public ClearKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_clearKey; }
+	}
+
+	public final ClearKeyContext clearKey() throws RecognitionException {
+		ClearKeyContext _localctx = new ClearKeyContext(_ctx, getState());
+		enterRule(_localctx, 126, RULE_clearKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1445);
+			match(ClearKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneKeyContext extends ParserRuleContext {
+		public TerminalNode CloneKey() { return getToken(MCCommandParser.CloneKey, 0); }
+		public CloneKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneKey; }
+	}
+
+	public final CloneKeyContext cloneKey() throws RecognitionException {
+		CloneKeyContext _localctx = new CloneKeyContext(_ctx, getState());
+		enterRule(_localctx, 128, RULE_cloneKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1447);
+			match(CloneKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DamageKeyContext extends ParserRuleContext {
+		public TerminalNode DamageKey() { return getToken(MCCommandParser.DamageKey, 0); }
+		public DamageKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_damageKey; }
+	}
+
+	public final DamageKeyContext damageKey() throws RecognitionException {
+		DamageKeyContext _localctx = new DamageKeyContext(_ctx, getState());
+		enterRule(_localctx, 130, RULE_damageKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1449);
+			match(DamageKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataKeyContext extends ParserRuleContext {
+		public TerminalNode DataKey() { return getToken(MCCommandParser.DataKey, 0); }
+		public DataKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataKey; }
+	}
+
+	public final DataKeyContext dataKey() throws RecognitionException {
+		DataKeyContext _localctx = new DataKeyContext(_ctx, getState());
+		enterRule(_localctx, 132, RULE_dataKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1451);
+			match(DataKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DatapackKeyContext extends ParserRuleContext {
+		public TerminalNode DatapackKey() { return getToken(MCCommandParser.DatapackKey, 0); }
+		public DatapackKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_datapackKey; }
+	}
+
+	public final DatapackKeyContext datapackKey() throws RecognitionException {
+		DatapackKeyContext _localctx = new DatapackKeyContext(_ctx, getState());
+		enterRule(_localctx, 134, RULE_datapackKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1453);
+			match(DatapackKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DebugKeyContext extends ParserRuleContext {
+		public TerminalNode DebugKey() { return getToken(MCCommandParser.DebugKey, 0); }
+		public DebugKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_debugKey; }
+	}
+
+	public final DebugKeyContext debugKey() throws RecognitionException {
+		DebugKeyContext _localctx = new DebugKeyContext(_ctx, getState());
+		enterRule(_localctx, 136, RULE_debugKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1455);
+			match(DebugKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DefaultgamemodeKeyContext extends ParserRuleContext {
+		public TerminalNode DefaultgamemodeKey() { return getToken(MCCommandParser.DefaultgamemodeKey, 0); }
+		public DefaultgamemodeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_defaultgamemodeKey; }
+	}
+
+	public final DefaultgamemodeKeyContext defaultgamemodeKey() throws RecognitionException {
+		DefaultgamemodeKeyContext _localctx = new DefaultgamemodeKeyContext(_ctx, getState());
+		enterRule(_localctx, 138, RULE_defaultgamemodeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1457);
+			match(DefaultgamemodeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DifficultyKeyContext extends ParserRuleContext {
+		public TerminalNode DifficultyKey() { return getToken(MCCommandParser.DifficultyKey, 0); }
+		public DifficultyKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_difficultyKey; }
+	}
+
+	public final DifficultyKeyContext difficultyKey() throws RecognitionException {
+		DifficultyKeyContext _localctx = new DifficultyKeyContext(_ctx, getState());
+		enterRule(_localctx, 140, RULE_difficultyKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1459);
+			match(DifficultyKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EffectKeyContext extends ParserRuleContext {
+		public TerminalNode EffectKey() { return getToken(MCCommandParser.EffectKey, 0); }
+		public EffectKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_effectKey; }
+	}
+
+	public final EffectKeyContext effectKey() throws RecognitionException {
+		EffectKeyContext _localctx = new EffectKeyContext(_ctx, getState());
+		enterRule(_localctx, 142, RULE_effectKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1461);
+			match(EffectKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EnchantKeyContext extends ParserRuleContext {
+		public TerminalNode EnchantKey() { return getToken(MCCommandParser.EnchantKey, 0); }
+		public EnchantKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_enchantKey; }
+	}
+
+	public final EnchantKeyContext enchantKey() throws RecognitionException {
+		EnchantKeyContext _localctx = new EnchantKeyContext(_ctx, getState());
+		enterRule(_localctx, 144, RULE_enchantKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1463);
+			match(EnchantKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteKeyContext extends ParserRuleContext {
+		public TerminalNode ExecuteKey() { return getToken(MCCommandParser.ExecuteKey, 0); }
+		public ExecuteKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeKey; }
+	}
+
+	public final ExecuteKeyContext executeKey() throws RecognitionException {
+		ExecuteKeyContext _localctx = new ExecuteKeyContext(_ctx, getState());
+		enterRule(_localctx, 146, RULE_executeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1465);
+			match(ExecuteKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExperienceKeyContext extends ParserRuleContext {
+		public TerminalNode ExperienceKey() { return getToken(MCCommandParser.ExperienceKey, 0); }
+		public ExperienceKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_experienceKey; }
+	}
+
+	public final ExperienceKeyContext experienceKey() throws RecognitionException {
+		ExperienceKeyContext _localctx = new ExperienceKeyContext(_ctx, getState());
+		enterRule(_localctx, 148, RULE_experienceKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1467);
+			match(ExperienceKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FillKeyContext extends ParserRuleContext {
+		public TerminalNode FillKey() { return getToken(MCCommandParser.FillKey, 0); }
+		public FillKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fillKey; }
+	}
+
+	public final FillKeyContext fillKey() throws RecognitionException {
+		FillKeyContext _localctx = new FillKeyContext(_ctx, getState());
+		enterRule(_localctx, 150, RULE_fillKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1469);
+			match(FillKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FillbiomeKeyContext extends ParserRuleContext {
+		public TerminalNode FillbiomeKey() { return getToken(MCCommandParser.FillbiomeKey, 0); }
+		public FillbiomeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fillbiomeKey; }
+	}
+
+	public final FillbiomeKeyContext fillbiomeKey() throws RecognitionException {
+		FillbiomeKeyContext _localctx = new FillbiomeKeyContext(_ctx, getState());
+		enterRule(_localctx, 152, RULE_fillbiomeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1471);
+			match(FillbiomeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ForceloadKeyContext extends ParserRuleContext {
+		public TerminalNode ForceloadKey() { return getToken(MCCommandParser.ForceloadKey, 0); }
+		public ForceloadKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_forceloadKey; }
+	}
+
+	public final ForceloadKeyContext forceloadKey() throws RecognitionException {
+		ForceloadKeyContext _localctx = new ForceloadKeyContext(_ctx, getState());
+		enterRule(_localctx, 154, RULE_forceloadKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1473);
+			match(ForceloadKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FunctionKeyContext extends ParserRuleContext {
+		public TerminalNode FunctionKey() { return getToken(MCCommandParser.FunctionKey, 0); }
+		public FunctionKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_functionKey; }
+	}
+
+	public final FunctionKeyContext functionKey() throws RecognitionException {
+		FunctionKeyContext _localctx = new FunctionKeyContext(_ctx, getState());
+		enterRule(_localctx, 156, RULE_functionKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1475);
+			match(FunctionKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GamemodeKeyContext extends ParserRuleContext {
+		public TerminalNode GamemodeKey() { return getToken(MCCommandParser.GamemodeKey, 0); }
+		public GamemodeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gamemodeKey; }
+	}
+
+	public final GamemodeKeyContext gamemodeKey() throws RecognitionException {
+		GamemodeKeyContext _localctx = new GamemodeKeyContext(_ctx, getState());
+		enterRule(_localctx, 158, RULE_gamemodeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1477);
+			match(GamemodeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GameruleKeyContext extends ParserRuleContext {
+		public TerminalNode GameruleKey() { return getToken(MCCommandParser.GameruleKey, 0); }
+		public GameruleKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gameruleKey; }
+	}
+
+	public final GameruleKeyContext gameruleKey() throws RecognitionException {
+		GameruleKeyContext _localctx = new GameruleKeyContext(_ctx, getState());
+		enterRule(_localctx, 160, RULE_gameruleKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1479);
+			match(GameruleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GiveKeyContext extends ParserRuleContext {
+		public TerminalNode GiveKey() { return getToken(MCCommandParser.GiveKey, 0); }
+		public GiveKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_giveKey; }
+	}
+
+	public final GiveKeyContext giveKey() throws RecognitionException {
+		GiveKeyContext _localctx = new GiveKeyContext(_ctx, getState());
+		enterRule(_localctx, 162, RULE_giveKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1481);
+			match(GiveKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HelpKeyContext extends ParserRuleContext {
+		public TerminalNode HelpKey() { return getToken(MCCommandParser.HelpKey, 0); }
+		public HelpKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_helpKey; }
+	}
+
+	public final HelpKeyContext helpKey() throws RecognitionException {
+		HelpKeyContext _localctx = new HelpKeyContext(_ctx, getState());
+		enterRule(_localctx, 164, RULE_helpKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1483);
+			match(HelpKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemKeyContext extends ParserRuleContext {
+		public TerminalNode ItemKey() { return getToken(MCCommandParser.ItemKey, 0); }
+		public ItemKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemKey; }
+	}
+
+	public final ItemKeyContext itemKey() throws RecognitionException {
+		ItemKeyContext _localctx = new ItemKeyContext(_ctx, getState());
+		enterRule(_localctx, 166, RULE_itemKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1485);
+			match(ItemKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JfrKeyContext extends ParserRuleContext {
+		public TerminalNode JfrKey() { return getToken(MCCommandParser.JfrKey, 0); }
+		public JfrKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jfrKey; }
+	}
+
+	public final JfrKeyContext jfrKey() throws RecognitionException {
+		JfrKeyContext _localctx = new JfrKeyContext(_ctx, getState());
+		enterRule(_localctx, 168, RULE_jfrKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1487);
+			match(JfrKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class KickKeyContext extends ParserRuleContext {
+		public TerminalNode KickKey() { return getToken(MCCommandParser.KickKey, 0); }
+		public KickKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_kickKey; }
+	}
+
+	public final KickKeyContext kickKey() throws RecognitionException {
+		KickKeyContext _localctx = new KickKeyContext(_ctx, getState());
+		enterRule(_localctx, 170, RULE_kickKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1489);
+			match(KickKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class KillKeyContext extends ParserRuleContext {
+		public TerminalNode KillKey() { return getToken(MCCommandParser.KillKey, 0); }
+		public KillKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_killKey; }
+	}
+
+	public final KillKeyContext killKey() throws RecognitionException {
+		KillKeyContext _localctx = new KillKeyContext(_ctx, getState());
+		enterRule(_localctx, 172, RULE_killKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1491);
+			match(KillKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ListKeyContext extends ParserRuleContext {
+		public TerminalNode ListKey() { return getToken(MCCommandParser.ListKey, 0); }
+		public ListKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_listKey; }
+	}
+
+	public final ListKeyContext listKey() throws RecognitionException {
+		ListKeyContext _localctx = new ListKeyContext(_ctx, getState());
+		enterRule(_localctx, 174, RULE_listKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1493);
+			match(ListKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LocateKeyContext extends ParserRuleContext {
+		public TerminalNode LocateKey() { return getToken(MCCommandParser.LocateKey, 0); }
+		public LocateKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_locateKey; }
+	}
+
+	public final LocateKeyContext locateKey() throws RecognitionException {
+		LocateKeyContext _localctx = new LocateKeyContext(_ctx, getState());
+		enterRule(_localctx, 176, RULE_locateKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1495);
+			match(LocateKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LootKeyContext extends ParserRuleContext {
+		public TerminalNode LootKey() { return getToken(MCCommandParser.LootKey, 0); }
+		public LootKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lootKey; }
+	}
+
+	public final LootKeyContext lootKey() throws RecognitionException {
+		LootKeyContext _localctx = new LootKeyContext(_ctx, getState());
+		enterRule(_localctx, 178, RULE_lootKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1497);
+			match(LootKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MeKeyContext extends ParserRuleContext {
+		public TerminalNode MeKey() { return getToken(MCCommandParser.MeKey, 0); }
+		public MeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_meKey; }
+	}
+
+	public final MeKeyContext meKey() throws RecognitionException {
+		MeKeyContext _localctx = new MeKeyContext(_ctx, getState());
+		enterRule(_localctx, 180, RULE_meKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1499);
+			match(MeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MsgKeyContext extends ParserRuleContext {
+		public TerminalNode MsgKey() { return getToken(MCCommandParser.MsgKey, 0); }
+		public MsgKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_msgKey; }
+	}
+
+	public final MsgKeyContext msgKey() throws RecognitionException {
+		MsgKeyContext _localctx = new MsgKeyContext(_ctx, getState());
+		enterRule(_localctx, 182, RULE_msgKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1501);
+			match(MsgKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleKeyContext extends ParserRuleContext {
+		public TerminalNode ParticleKey() { return getToken(MCCommandParser.ParticleKey, 0); }
+		public ParticleKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleKey; }
+	}
+
+	public final ParticleKeyContext particleKey() throws RecognitionException {
+		ParticleKeyContext _localctx = new ParticleKeyContext(_ctx, getState());
+		enterRule(_localctx, 184, RULE_particleKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1503);
+			match(ParticleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlaceKeyContext extends ParserRuleContext {
+		public TerminalNode PlaceKey() { return getToken(MCCommandParser.PlaceKey, 0); }
+		public PlaceKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_placeKey; }
+	}
+
+	public final PlaceKeyContext placeKey() throws RecognitionException {
+		PlaceKeyContext _localctx = new PlaceKeyContext(_ctx, getState());
+		enterRule(_localctx, 186, RULE_placeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1505);
+			match(PlaceKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlaysoundKeyContext extends ParserRuleContext {
+		public TerminalNode PlaysoundKey() { return getToken(MCCommandParser.PlaysoundKey, 0); }
+		public PlaysoundKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_playsoundKey; }
+	}
+
+	public final PlaysoundKeyContext playsoundKey() throws RecognitionException {
+		PlaysoundKeyContext _localctx = new PlaysoundKeyContext(_ctx, getState());
+		enterRule(_localctx, 188, RULE_playsoundKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1507);
+			match(PlaysoundKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PublishKeyContext extends ParserRuleContext {
+		public TerminalNode PublishKey() { return getToken(MCCommandParser.PublishKey, 0); }
+		public PublishKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_publishKey; }
+	}
+
+	public final PublishKeyContext publishKey() throws RecognitionException {
+		PublishKeyContext _localctx = new PublishKeyContext(_ctx, getState());
+		enterRule(_localctx, 190, RULE_publishKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1509);
+			match(PublishKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RecipeKeyContext extends ParserRuleContext {
+		public TerminalNode RecipeKey() { return getToken(MCCommandParser.RecipeKey, 0); }
+		public RecipeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_recipeKey; }
+	}
+
+	public final RecipeKeyContext recipeKey() throws RecognitionException {
+		RecipeKeyContext _localctx = new RecipeKeyContext(_ctx, getState());
+		enterRule(_localctx, 192, RULE_recipeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1511);
+			match(RecipeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ReloadKeyContext extends ParserRuleContext {
+		public TerminalNode ReloadKey() { return getToken(MCCommandParser.ReloadKey, 0); }
+		public ReloadKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_reloadKey; }
+	}
+
+	public final ReloadKeyContext reloadKey() throws RecognitionException {
+		ReloadKeyContext _localctx = new ReloadKeyContext(_ctx, getState());
+		enterRule(_localctx, 194, RULE_reloadKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1513);
+			match(ReloadKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ReturnKeyContext extends ParserRuleContext {
+		public TerminalNode ReturnKey() { return getToken(MCCommandParser.ReturnKey, 0); }
+		public ReturnKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_returnKey; }
+	}
+
+	public final ReturnKeyContext returnKey() throws RecognitionException {
+		ReturnKeyContext _localctx = new ReturnKeyContext(_ctx, getState());
+		enterRule(_localctx, 196, RULE_returnKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1515);
+			match(ReturnKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RideKeyContext extends ParserRuleContext {
+		public TerminalNode RideKey() { return getToken(MCCommandParser.RideKey, 0); }
+		public RideKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rideKey; }
+	}
+
+	public final RideKeyContext rideKey() throws RecognitionException {
+		RideKeyContext _localctx = new RideKeyContext(_ctx, getState());
+		enterRule(_localctx, 198, RULE_rideKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1517);
+			match(RideKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SayKeyContext extends ParserRuleContext {
+		public TerminalNode SayKey() { return getToken(MCCommandParser.SayKey, 0); }
+		public SayKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_sayKey; }
+	}
+
+	public final SayKeyContext sayKey() throws RecognitionException {
+		SayKeyContext _localctx = new SayKeyContext(_ctx, getState());
+		enterRule(_localctx, 200, RULE_sayKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1519);
+			match(SayKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScheduleKeyContext extends ParserRuleContext {
+		public TerminalNode ScheduleKey() { return getToken(MCCommandParser.ScheduleKey, 0); }
+		public ScheduleKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scheduleKey; }
+	}
+
+	public final ScheduleKeyContext scheduleKey() throws RecognitionException {
+		ScheduleKeyContext _localctx = new ScheduleKeyContext(_ctx, getState());
+		enterRule(_localctx, 202, RULE_scheduleKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1521);
+			match(ScheduleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardKeyContext extends ParserRuleContext {
+		public TerminalNode ScoreboardKey() { return getToken(MCCommandParser.ScoreboardKey, 0); }
+		public ScoreboardKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardKey; }
+	}
+
+	public final ScoreboardKeyContext scoreboardKey() throws RecognitionException {
+		ScoreboardKeyContext _localctx = new ScoreboardKeyContext(_ctx, getState());
+		enterRule(_localctx, 204, RULE_scoreboardKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1523);
+			match(ScoreboardKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SeedKeyContext extends ParserRuleContext {
+		public TerminalNode SeedKey() { return getToken(MCCommandParser.SeedKey, 0); }
+		public SeedKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_seedKey; }
+	}
+
+	public final SeedKeyContext seedKey() throws RecognitionException {
+		SeedKeyContext _localctx = new SeedKeyContext(_ctx, getState());
+		enterRule(_localctx, 206, RULE_seedKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1525);
+			match(SeedKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SetblockKeyContext extends ParserRuleContext {
+		public TerminalNode SetblockKey() { return getToken(MCCommandParser.SetblockKey, 0); }
+		public SetblockKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_setblockKey; }
+	}
+
+	public final SetblockKeyContext setblockKey() throws RecognitionException {
+		SetblockKeyContext _localctx = new SetblockKeyContext(_ctx, getState());
+		enterRule(_localctx, 208, RULE_setblockKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1527);
+			match(SetblockKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SetworldspawnKeyContext extends ParserRuleContext {
+		public TerminalNode SetworldspawnKey() { return getToken(MCCommandParser.SetworldspawnKey, 0); }
+		public SetworldspawnKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_setworldspawnKey; }
+	}
+
+	public final SetworldspawnKeyContext setworldspawnKey() throws RecognitionException {
+		SetworldspawnKeyContext _localctx = new SetworldspawnKeyContext(_ctx, getState());
+		enterRule(_localctx, 210, RULE_setworldspawnKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1529);
+			match(SetworldspawnKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpawnpointKeyContext extends ParserRuleContext {
+		public TerminalNode SpawnpointKey() { return getToken(MCCommandParser.SpawnpointKey, 0); }
+		public SpawnpointKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spawnpointKey; }
+	}
+
+	public final SpawnpointKeyContext spawnpointKey() throws RecognitionException {
+		SpawnpointKeyContext _localctx = new SpawnpointKeyContext(_ctx, getState());
+		enterRule(_localctx, 212, RULE_spawnpointKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1531);
+			match(SpawnpointKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpectateKeyContext extends ParserRuleContext {
+		public TerminalNode SpectateKey() { return getToken(MCCommandParser.SpectateKey, 0); }
+		public SpectateKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spectateKey; }
+	}
+
+	public final SpectateKeyContext spectateKey() throws RecognitionException {
+		SpectateKeyContext _localctx = new SpectateKeyContext(_ctx, getState());
+		enterRule(_localctx, 214, RULE_spectateKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1533);
+			match(SpectateKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpreadplayersKeyContext extends ParserRuleContext {
+		public TerminalNode SpreadplayersKey() { return getToken(MCCommandParser.SpreadplayersKey, 0); }
+		public SpreadplayersKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spreadplayersKey; }
+	}
+
+	public final SpreadplayersKeyContext spreadplayersKey() throws RecognitionException {
+		SpreadplayersKeyContext _localctx = new SpreadplayersKeyContext(_ctx, getState());
+		enterRule(_localctx, 216, RULE_spreadplayersKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1535);
+			match(SpreadplayersKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StopsoundKeyContext extends ParserRuleContext {
+		public TerminalNode StopsoundKey() { return getToken(MCCommandParser.StopsoundKey, 0); }
+		public StopsoundKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_stopsoundKey; }
+	}
+
+	public final StopsoundKeyContext stopsoundKey() throws RecognitionException {
+		StopsoundKeyContext _localctx = new StopsoundKeyContext(_ctx, getState());
+		enterRule(_localctx, 218, RULE_stopsoundKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1537);
+			match(StopsoundKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SummonKeyContext extends ParserRuleContext {
+		public TerminalNode SummonKey() { return getToken(MCCommandParser.SummonKey, 0); }
+		public SummonKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_summonKey; }
+	}
+
+	public final SummonKeyContext summonKey() throws RecognitionException {
+		SummonKeyContext _localctx = new SummonKeyContext(_ctx, getState());
+		enterRule(_localctx, 220, RULE_summonKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1539);
+			match(SummonKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TagKeyContext extends ParserRuleContext {
+		public TerminalNode TagKey() { return getToken(MCCommandParser.TagKey, 0); }
+		public TagKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tagKey; }
+	}
+
+	public final TagKeyContext tagKey() throws RecognitionException {
+		TagKeyContext _localctx = new TagKeyContext(_ctx, getState());
+		enterRule(_localctx, 222, RULE_tagKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1541);
+			match(TagKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamKeyContext extends ParserRuleContext {
+		public TerminalNode TeamKey() { return getToken(MCCommandParser.TeamKey, 0); }
+		public TeamKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamKey; }
+	}
+
+	public final TeamKeyContext teamKey() throws RecognitionException {
+		TeamKeyContext _localctx = new TeamKeyContext(_ctx, getState());
+		enterRule(_localctx, 224, RULE_teamKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1543);
+			match(TeamKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeammsgKeyContext extends ParserRuleContext {
+		public TerminalNode TeammsgKey() { return getToken(MCCommandParser.TeammsgKey, 0); }
+		public TeammsgKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teammsgKey; }
+	}
+
+	public final TeammsgKeyContext teammsgKey() throws RecognitionException {
+		TeammsgKeyContext _localctx = new TeammsgKeyContext(_ctx, getState());
+		enterRule(_localctx, 226, RULE_teammsgKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1545);
+			match(TeammsgKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeleportKeyContext extends ParserRuleContext {
+		public TerminalNode TeleportKey() { return getToken(MCCommandParser.TeleportKey, 0); }
+		public TeleportKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teleportKey; }
+	}
+
+	public final TeleportKeyContext teleportKey() throws RecognitionException {
+		TeleportKeyContext _localctx = new TeleportKeyContext(_ctx, getState());
+		enterRule(_localctx, 228, RULE_teleportKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1547);
+			match(TeleportKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TellKeyContext extends ParserRuleContext {
+		public TerminalNode TellKey() { return getToken(MCCommandParser.TellKey, 0); }
+		public TellKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tellKey; }
+	}
+
+	public final TellKeyContext tellKey() throws RecognitionException {
+		TellKeyContext _localctx = new TellKeyContext(_ctx, getState());
+		enterRule(_localctx, 230, RULE_tellKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1549);
+			match(TellKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TellrawKeyContext extends ParserRuleContext {
+		public TerminalNode TellrawKey() { return getToken(MCCommandParser.TellrawKey, 0); }
+		public TellrawKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tellrawKey; }
+	}
+
+	public final TellrawKeyContext tellrawKey() throws RecognitionException {
+		TellrawKeyContext _localctx = new TellrawKeyContext(_ctx, getState());
+		enterRule(_localctx, 232, RULE_tellrawKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1551);
+			match(TellrawKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TimeKeyContext extends ParserRuleContext {
+		public TerminalNode TimeKey() { return getToken(MCCommandParser.TimeKey, 0); }
+		public TimeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_timeKey; }
+	}
+
+	public final TimeKeyContext timeKey() throws RecognitionException {
+		TimeKeyContext _localctx = new TimeKeyContext(_ctx, getState());
+		enterRule(_localctx, 234, RULE_timeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1553);
+			match(TimeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TitleKeyContext extends ParserRuleContext {
+		public TerminalNode TitleKey() { return getToken(MCCommandParser.TitleKey, 0); }
+		public TitleKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_titleKey; }
+	}
+
+	public final TitleKeyContext titleKey() throws RecognitionException {
+		TitleKeyContext _localctx = new TitleKeyContext(_ctx, getState());
+		enterRule(_localctx, 236, RULE_titleKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1555);
+			match(TitleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TmKeyContext extends ParserRuleContext {
+		public TerminalNode TmKey() { return getToken(MCCommandParser.TmKey, 0); }
+		public TmKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tmKey; }
+	}
+
+	public final TmKeyContext tmKey() throws RecognitionException {
+		TmKeyContext _localctx = new TmKeyContext(_ctx, getState());
+		enterRule(_localctx, 238, RULE_tmKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1557);
+			match(TmKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TpKeyContext extends ParserRuleContext {
+		public TerminalNode TpKey() { return getToken(MCCommandParser.TpKey, 0); }
+		public TpKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tpKey; }
+	}
+
+	public final TpKeyContext tpKey() throws RecognitionException {
+		TpKeyContext _localctx = new TpKeyContext(_ctx, getState());
+		enterRule(_localctx, 240, RULE_tpKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1559);
+			match(TpKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TriggerKeyContext extends ParserRuleContext {
+		public TerminalNode TriggerKey() { return getToken(MCCommandParser.TriggerKey, 0); }
+		public TriggerKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_triggerKey; }
+	}
+
+	public final TriggerKeyContext triggerKey() throws RecognitionException {
+		TriggerKeyContext _localctx = new TriggerKeyContext(_ctx, getState());
+		enterRule(_localctx, 242, RULE_triggerKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1561);
+			match(TriggerKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WeatherKeyContext extends ParserRuleContext {
+		public TerminalNode WeatherKey() { return getToken(MCCommandParser.WeatherKey, 0); }
+		public WeatherKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_weatherKey; }
+	}
+
+	public final WeatherKeyContext weatherKey() throws RecognitionException {
+		WeatherKeyContext _localctx = new WeatherKeyContext(_ctx, getState());
+		enterRule(_localctx, 244, RULE_weatherKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1563);
+			match(WeatherKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WorldborderKeyContext extends ParserRuleContext {
+		public TerminalNode WorldborderKey() { return getToken(MCCommandParser.WorldborderKey, 0); }
+		public WorldborderKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_worldborderKey; }
+	}
+
+	public final WorldborderKeyContext worldborderKey() throws RecognitionException {
+		WorldborderKeyContext _localctx = new WorldborderKeyContext(_ctx, getState());
+		enterRule(_localctx, 246, RULE_worldborderKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1565);
+			match(WorldborderKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class XpKeyContext extends ParserRuleContext {
+		public TerminalNode XpKey() { return getToken(MCCommandParser.XpKey, 0); }
+		public XpKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_xpKey; }
+	}
+
+	public final XpKeyContext xpKey() throws RecognitionException {
+		XpKeyContext _localctx = new XpKeyContext(_ctx, getState());
+		enterRule(_localctx, 248, RULE_xpKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1567);
+			match(XpKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AxeLengthKeyContext extends ParserRuleContext {
+		public TerminalNode AxeLengthKey() { return getToken(MCCommandParser.AxeLengthKey, 0); }
+		public AxeLengthKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_axeLengthKey; }
+	}
+
+	public final AxeLengthKeyContext axeLengthKey() throws RecognitionException {
+		AxeLengthKeyContext _localctx = new AxeLengthKeyContext(_ctx, getState());
+		enterRule(_localctx, 250, RULE_axeLengthKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1569);
+			match(AxeLengthKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ViewRotationKeyContext extends ParserRuleContext {
+		public TerminalNode ViewRotationKey() { return getToken(MCCommandParser.ViewRotationKey, 0); }
+		public ViewRotationKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_viewRotationKey; }
+	}
+
+	public final ViewRotationKeyContext viewRotationKey() throws RecognitionException {
+		ViewRotationKeyContext _localctx = new ViewRotationKeyContext(_ctx, getState());
+		enterRule(_localctx, 252, RULE_viewRotationKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1571);
+			match(ViewRotationKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LevelContext extends ParserRuleContext {
+		public TerminalNode Level() { return getToken(MCCommandParser.Level, 0); }
+		public LevelContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_level; }
+	}
+
+	public final LevelContext level() throws RecognitionException {
+		LevelContext _localctx = new LevelContext(_ctx, getState());
+		enterRule(_localctx, 254, RULE_level);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1573);
+			match(Level);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreKeyContext extends ParserRuleContext {
+		public TerminalNode ScoreKey() { return getToken(MCCommandParser.ScoreKey, 0); }
+		public ScoreKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreKey; }
+	}
+
+	public final ScoreKeyContext scoreKey() throws RecognitionException {
+		ScoreKeyContext _localctx = new ScoreKeyContext(_ctx, getState());
+		enterRule(_localctx, 256, RULE_scoreKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1575);
+			match(ScoreKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LimitContext extends ParserRuleContext {
+		public TerminalNode LimitKey() { return getToken(MCCommandParser.LimitKey, 0); }
+		public LimitContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_limit; }
+	}
+
+	public final LimitContext limit() throws RecognitionException {
+		LimitContext _localctx = new LimitContext(_ctx, getState());
+		enterRule(_localctx, 258, RULE_limit);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1577);
+			match(LimitKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TypeKeyContext extends ParserRuleContext {
+		public TerminalNode TypeKey() { return getToken(MCCommandParser.TypeKey, 0); }
+		public TypeKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_typeKey; }
+	}
+
+	public final TypeKeyContext typeKey() throws RecognitionException {
+		TypeKeyContext _localctx = new TypeKeyContext(_ctx, getState());
+		enterRule(_localctx, 260, RULE_typeKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1579);
+			match(TypeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NbtKeyContext extends ParserRuleContext {
+		public TerminalNode NBTKey() { return getToken(MCCommandParser.NBTKey, 0); }
+		public NbtKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_nbtKey; }
+	}
+
+	public final NbtKeyContext nbtKey() throws RecognitionException {
+		NbtKeyContext _localctx = new NbtKeyContext(_ctx, getState());
+		enterRule(_localctx, 262, RULE_nbtKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1581);
+			match(NBTKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SortKeyContext extends ParserRuleContext {
+		public TerminalNode SortKey() { return getToken(MCCommandParser.SortKey, 0); }
+		public SortKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_sortKey; }
+	}
+
+	public final SortKeyContext sortKey() throws RecognitionException {
+		SortKeyContext _localctx = new SortKeyContext(_ctx, getState());
+		enterRule(_localctx, 264, RULE_sortKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1583);
+			match(SortKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DivisionEqualContext extends ParserRuleContext {
+		public TerminalNode DivisionEqual() { return getToken(MCCommandParser.DivisionEqual, 0); }
+		public DivisionEqualContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_divisionEqual; }
+	}
+
+	public final DivisionEqualContext divisionEqual() throws RecognitionException {
+		DivisionEqualContext _localctx = new DivisionEqualContext(_ctx, getState());
+		enterRule(_localctx, 266, RULE_divisionEqual);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1585);
+			match(DivisionEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MultiplicationEqualContext extends ParserRuleContext {
+		public TerminalNode MultiplicationEqual() { return getToken(MCCommandParser.MultiplicationEqual, 0); }
+		public MultiplicationEqualContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_multiplicationEqual; }
+	}
+
+	public final MultiplicationEqualContext multiplicationEqual() throws RecognitionException {
+		MultiplicationEqualContext _localctx = new MultiplicationEqualContext(_ctx, getState());
+		enterRule(_localctx, 268, RULE_multiplicationEqual);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1587);
+			match(MultiplicationEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AdditionEqualContext extends ParserRuleContext {
+		public TerminalNode AdditionEqual() { return getToken(MCCommandParser.AdditionEqual, 0); }
+		public AdditionEqualContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_additionEqual; }
+	}
+
+	public final AdditionEqualContext additionEqual() throws RecognitionException {
+		AdditionEqualContext _localctx = new AdditionEqualContext(_ctx, getState());
+		enterRule(_localctx, 270, RULE_additionEqual);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1589);
+			match(AdditionEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SubtractionEqualContext extends ParserRuleContext {
+		public TerminalNode SubtractionEqual() { return getToken(MCCommandParser.SubtractionEqual, 0); }
+		public SubtractionEqualContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_subtractionEqual; }
+	}
+
+	public final SubtractionEqualContext subtractionEqual() throws RecognitionException {
+		SubtractionEqualContext _localctx = new SubtractionEqualContext(_ctx, getState());
+		enterRule(_localctx, 272, RULE_subtractionEqual);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1591);
+			match(SubtractionEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RemainderEqualContext extends ParserRuleContext {
+		public TerminalNode RemainderEqual() { return getToken(MCCommandParser.RemainderEqual, 0); }
+		public RemainderEqualContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_remainderEqual; }
+	}
+
+	public final RemainderEqualContext remainderEqual() throws RecognitionException {
+		RemainderEqualContext _localctx = new RemainderEqualContext(_ctx, getState());
+		enterRule(_localctx, 274, RULE_remainderEqual);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1593);
+			match(RemainderEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LessThanContext extends ParserRuleContext {
+		public TerminalNode LeftAngleBracket() { return getToken(MCCommandParser.LeftAngleBracket, 0); }
+		public LessThanContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lessThan; }
+	}
+
+	public final LessThanContext lessThan() throws RecognitionException {
+		LessThanContext _localctx = new LessThanContext(_ctx, getState());
+		enterRule(_localctx, 276, RULE_lessThan);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1595);
+			match(LeftAngleBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LessThanOrEqualToContext extends ParserRuleContext {
+		public TerminalNode LessThanOrEqualTo() { return getToken(MCCommandParser.LessThanOrEqualTo, 0); }
+		public LessThanOrEqualToContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lessThanOrEqualTo; }
+	}
+
+	public final LessThanOrEqualToContext lessThanOrEqualTo() throws RecognitionException {
+		LessThanOrEqualToContext _localctx = new LessThanOrEqualToContext(_ctx, getState());
+		enterRule(_localctx, 278, RULE_lessThanOrEqualTo);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1597);
+			match(LessThanOrEqualTo);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EqualContext extends ParserRuleContext {
+		public TerminalNode Equal() { return getToken(MCCommandParser.Equal, 0); }
+		public EqualContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_equal; }
+	}
+
+	public final EqualContext equal() throws RecognitionException {
+		EqualContext _localctx = new EqualContext(_ctx, getState());
+		enterRule(_localctx, 280, RULE_equal);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1599);
+			match(Equal);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GreaterThanContext extends ParserRuleContext {
+		public TerminalNode RightAngleBracket() { return getToken(MCCommandParser.RightAngleBracket, 0); }
+		public GreaterThanContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_greaterThan; }
+	}
+
+	public final GreaterThanContext greaterThan() throws RecognitionException {
+		GreaterThanContext _localctx = new GreaterThanContext(_ctx, getState());
+		enterRule(_localctx, 282, RULE_greaterThan);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1601);
+			match(RightAngleBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GreaterThanOrEqualToContext extends ParserRuleContext {
+		public TerminalNode GreaterThanOrEqualTo() { return getToken(MCCommandParser.GreaterThanOrEqualTo, 0); }
+		public GreaterThanOrEqualToContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_greaterThanOrEqualTo; }
+	}
+
+	public final GreaterThanOrEqualToContext greaterThanOrEqualTo() throws RecognitionException {
+		GreaterThanOrEqualToContext _localctx = new GreaterThanOrEqualToContext(_ctx, getState());
+		enterRule(_localctx, 284, RULE_greaterThanOrEqualTo);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1603);
+			match(GreaterThanOrEqualTo);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GreaterThanLessThanContext extends ParserRuleContext {
+		public TerminalNode GreaterThanLessThan() { return getToken(MCCommandParser.GreaterThanLessThan, 0); }
+		public GreaterThanLessThanContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_greaterThanLessThan; }
+	}
+
+	public final GreaterThanLessThanContext greaterThanLessThan() throws RecognitionException {
+		GreaterThanLessThanContext _localctx = new GreaterThanLessThanContext(_ctx, getState());
+		enterRule(_localctx, 286, RULE_greaterThanLessThan);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1605);
+			match(GreaterThanLessThan);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AddContext extends ParserRuleContext {
+		public TerminalNode Add() { return getToken(MCCommandParser.Add, 0); }
+		public AddContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_add; }
+	}
+
+	public final AddContext add() throws RecognitionException {
+		AddContext _localctx = new AddContext(_ctx, getState());
+		enterRule(_localctx, 288, RULE_add);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1607);
+			match(Add);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RemoveContext extends ParserRuleContext {
+		public TerminalNode Remove() { return getToken(MCCommandParser.Remove, 0); }
+		public RemoveContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_remove; }
+	}
+
+	public final RemoveContext remove() throws RecognitionException {
+		RemoveContext _localctx = new RemoveContext(_ctx, getState());
+		enterRule(_localctx, 290, RULE_remove);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1609);
+			match(Remove);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ValueContext extends ParserRuleContext {
+		public TerminalNode Value() { return getToken(MCCommandParser.Value, 0); }
+		public ValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_value; }
+	}
+
+	public final ValueContext value() throws RecognitionException {
+		ValueContext _localctx = new ValueContext(_ctx, getState());
+		enterRule(_localctx, 292, RULE_value);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1611);
+			match(Value);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SetContext extends ParserRuleContext {
+		public TerminalNode Set() { return getToken(MCCommandParser.Set, 0); }
+		public SetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_set; }
+	}
+
+	public final SetContext set() throws RecognitionException {
+		SetContext _localctx = new SetContext(_ctx, getState());
+		enterRule(_localctx, 294, RULE_set);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1613);
+			match(Set);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MultiplyContext extends ParserRuleContext {
+		public TerminalNode Multiply() { return getToken(MCCommandParser.Multiply, 0); }
+		public MultiplyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_multiply; }
+	}
+
+	public final MultiplyContext multiply() throws RecognitionException {
+		MultiplyContext _localctx = new MultiplyContext(_ctx, getState());
+		enterRule(_localctx, 296, RULE_multiply);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1615);
+			match(Multiply);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Multiply_baseContext extends ParserRuleContext {
+		public TerminalNode Multiply_Base() { return getToken(MCCommandParser.Multiply_Base, 0); }
+		public Multiply_baseContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_multiply_base; }
+	}
+
+	public final Multiply_baseContext multiply_base() throws RecognitionException {
+		Multiply_baseContext _localctx = new Multiply_baseContext(_ctx, getState());
+		enterRule(_localctx, 298, RULE_multiply_base);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1617);
+			match(Multiply_Base);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MaxContext extends ParserRuleContext {
+		public TerminalNode Max() { return getToken(MCCommandParser.Max, 0); }
+		public MaxContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_max; }
+	}
+
+	public final MaxContext max() throws RecognitionException {
+		MaxContext _localctx = new MaxContext(_ctx, getState());
+		enterRule(_localctx, 300, RULE_max);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1619);
+			match(Max);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlayersContext extends ParserRuleContext {
+		public TerminalNode Players() { return getToken(MCCommandParser.Players, 0); }
+		public PlayersContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_players; }
+	}
+
+	public final PlayersContext players() throws RecognitionException {
+		PlayersContext _localctx = new PlayersContext(_ctx, getState());
+		enterRule(_localctx, 302, RULE_players);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1621);
+			match(Players);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class VisibleContext extends ParserRuleContext {
+		public TerminalNode Visible() { return getToken(MCCommandParser.Visible, 0); }
+		public VisibleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_visible; }
+	}
+
+	public final VisibleContext visible() throws RecognitionException {
+		VisibleContext _localctx = new VisibleContext(_ctx, getState());
+		enterRule(_localctx, 304, RULE_visible);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1623);
+			match(Visible);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ColorContext extends ParserRuleContext {
+		public TerminalNode Color() { return getToken(MCCommandParser.Color, 0); }
+		public ColorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_color; }
+	}
+
+	public final ColorContext color() throws RecognitionException {
+		ColorContext _localctx = new ColorContext(_ctx, getState());
+		enterRule(_localctx, 306, RULE_color);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1625);
+			match(Color);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NameContext extends ParserRuleContext {
+		public TerminalNode Name() { return getToken(MCCommandParser.Name, 0); }
+		public NameContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_name; }
+	}
+
+	public final NameContext name() throws RecognitionException {
+		NameContext _localctx = new NameContext(_ctx, getState());
+		enterRule(_localctx, 308, RULE_name);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1627);
+			match(Name);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StyleContext extends ParserRuleContext {
+		public TerminalNode Style() { return getToken(MCCommandParser.Style, 0); }
+		public StyleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_style; }
+	}
+
+	public final StyleContext style() throws RecognitionException {
+		StyleContext _localctx = new StyleContext(_ctx, getState());
+		enterRule(_localctx, 310, RULE_style);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1629);
+			match(Style);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FilteredContext extends ParserRuleContext {
+		public TerminalNode Filtered() { return getToken(MCCommandParser.Filtered, 0); }
+		public FilteredContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_filtered; }
+	}
+
+	public final FilteredContext filtered() throws RecognitionException {
+		FilteredContext _localctx = new FilteredContext(_ctx, getState());
+		enterRule(_localctx, 312, RULE_filtered);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1631);
+			match(Filtered);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MaskedContext extends ParserRuleContext {
+		public TerminalNode Masked() { return getToken(MCCommandParser.Masked, 0); }
+		public MaskedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_masked; }
+	}
+
+	public final MaskedContext masked() throws RecognitionException {
+		MaskedContext _localctx = new MaskedContext(_ctx, getState());
+		enterRule(_localctx, 314, RULE_masked);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1633);
+			match(Masked);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ReplaceContext extends ParserRuleContext {
+		public TerminalNode Replace() { return getToken(MCCommandParser.Replace, 0); }
+		public ReplaceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_replace; }
+	}
+
+	public final ReplaceContext replace() throws RecognitionException {
+		ReplaceContext _localctx = new ReplaceContext(_ctx, getState());
+		enterRule(_localctx, 316, RULE_replace);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1635);
+			match(Replace);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ForceContext extends ParserRuleContext {
+		public TerminalNode Force() { return getToken(MCCommandParser.Force, 0); }
+		public ForceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_force; }
+	}
+
+	public final ForceContext force() throws RecognitionException {
+		ForceContext _localctx = new ForceContext(_ctx, getState());
+		enterRule(_localctx, 318, RULE_force);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1637);
+			match(Force);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MoveContext extends ParserRuleContext {
+		public TerminalNode Move() { return getToken(MCCommandParser.Move, 0); }
+		public MoveContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_move; }
+	}
+
+	public final MoveContext move() throws RecognitionException {
+		MoveContext _localctx = new MoveContext(_ctx, getState());
+		enterRule(_localctx, 320, RULE_move);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1639);
+			match(Move);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NormalContext extends ParserRuleContext {
+		public TerminalNode Normal() { return getToken(MCCommandParser.Normal, 0); }
+		public NormalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_normal; }
+	}
+
+	public final NormalContext normal() throws RecognitionException {
+		NormalContext _localctx = new NormalContext(_ctx, getState());
+		enterRule(_localctx, 322, RULE_normal);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1641);
+			match(Normal);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ToContext extends ParserRuleContext {
+		public TerminalNode To() { return getToken(MCCommandParser.To, 0); }
+		public ToContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_to; }
+	}
+
+	public final ToContext to() throws RecognitionException {
+		ToContext _localctx = new ToContext(_ctx, getState());
+		enterRule(_localctx, 324, RULE_to);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1643);
+			match(To);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ByContext extends ParserRuleContext {
+		public TerminalNode By() { return getToken(MCCommandParser.By, 0); }
+		public ByContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_by; }
+	}
+
+	public final ByContext by() throws RecognitionException {
+		ByContext _localctx = new ByContext(_ctx, getState());
+		enterRule(_localctx, 326, RULE_by);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1645);
+			match(By);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MergeContext extends ParserRuleContext {
+		public TerminalNode Merge() { return getToken(MCCommandParser.Merge, 0); }
+		public MergeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_merge; }
+	}
+
+	public final MergeContext merge() throws RecognitionException {
+		MergeContext _localctx = new MergeContext(_ctx, getState());
+		enterRule(_localctx, 328, RULE_merge);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1647);
+			match(Merge);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ModifyContext extends ParserRuleContext {
+		public TerminalNode Modify() { return getToken(MCCommandParser.Modify, 0); }
+		public ModifyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_modify; }
+	}
+
+	public final ModifyContext modify() throws RecognitionException {
+		ModifyContext _localctx = new ModifyContext(_ctx, getState());
+		enterRule(_localctx, 330, RULE_modify);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1649);
+			match(Modify);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BlockContext extends ParserRuleContext {
+		public TerminalNode Block() { return getToken(MCCommandParser.Block, 0); }
+		public BlockContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_block; }
+	}
+
+	public final BlockContext block() throws RecognitionException {
+		BlockContext _localctx = new BlockContext(_ctx, getState());
+		enterRule(_localctx, 332, RULE_block);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1651);
+			match(Block);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EntityContext extends ParserRuleContext {
+		public TerminalNode Entity() { return getToken(MCCommandParser.Entity, 0); }
+		public EntityContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_entity; }
+	}
+
+	public final EntityContext entity() throws RecognitionException {
+		EntityContext _localctx = new EntityContext(_ctx, getState());
+		enterRule(_localctx, 334, RULE_entity);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1653);
+			match(Entity);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StorageContext extends ParserRuleContext {
+		public TerminalNode Storage() { return getToken(MCCommandParser.Storage, 0); }
+		public StorageContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_storage; }
+	}
+
+	public final StorageContext storage() throws RecognitionException {
+		StorageContext _localctx = new StorageContext(_ctx, getState());
+		enterRule(_localctx, 336, RULE_storage);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1655);
+			match(Storage);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StringKeyContext extends ParserRuleContext {
+		public TerminalNode StringKey() { return getToken(MCCommandParser.StringKey, 0); }
+		public StringKeyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_stringKey; }
+	}
+
+	public final StringKeyContext stringKey() throws RecognitionException {
+		StringKeyContext _localctx = new StringKeyContext(_ctx, getState());
+		enterRule(_localctx, 338, RULE_stringKey);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1657);
+			match(StringKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AsContext extends ParserRuleContext {
+		public TerminalNode As() { return getToken(MCCommandParser.As, 0); }
+		public AsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_as; }
+	}
+
+	public final AsContext as() throws RecognitionException {
+		AsContext _localctx = new AsContext(_ctx, getState());
+		enterRule(_localctx, 340, RULE_as);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1659);
+			match(As);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GrantContext extends ParserRuleContext {
+		public TerminalNode Grant() { return getToken(MCCommandParser.Grant, 0); }
+		public GrantContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_grant; }
+	}
+
+	public final GrantContext grant() throws RecognitionException {
+		GrantContext _localctx = new GrantContext(_ctx, getState());
+		enterRule(_localctx, 342, RULE_grant);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1661);
+			match(Grant);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RevokeContext extends ParserRuleContext {
+		public TerminalNode Revoke() { return getToken(MCCommandParser.Revoke, 0); }
+		public RevokeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_revoke; }
+	}
+
+	public final RevokeContext revoke() throws RecognitionException {
+		RevokeContext _localctx = new RevokeContext(_ctx, getState());
+		enterRule(_localctx, 344, RULE_revoke);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1663);
+			match(Revoke);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EverythingContext extends ParserRuleContext {
+		public TerminalNode Everything() { return getToken(MCCommandParser.Everything, 0); }
+		public EverythingContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_everything; }
+	}
+
+	public final EverythingContext everything() throws RecognitionException {
+		EverythingContext _localctx = new EverythingContext(_ctx, getState());
+		enterRule(_localctx, 346, RULE_everything);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1665);
+			match(Everything);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OnlyContext extends ParserRuleContext {
+		public TerminalNode Only() { return getToken(MCCommandParser.Only, 0); }
+		public OnlyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_only; }
+	}
+
+	public final OnlyContext only() throws RecognitionException {
+		OnlyContext _localctx = new OnlyContext(_ctx, getState());
+		enterRule(_localctx, 348, RULE_only);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1667);
+			match(Only);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FromContext extends ParserRuleContext {
+		public TerminalNode From() { return getToken(MCCommandParser.From, 0); }
+		public FromContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_from; }
+	}
+
+	public final FromContext from() throws RecognitionException {
+		FromContext _localctx = new FromContext(_ctx, getState());
+		enterRule(_localctx, 350, RULE_from);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1669);
+			match(From);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ThroughContext extends ParserRuleContext {
+		public TerminalNode Through() { return getToken(MCCommandParser.Through, 0); }
+		public ThroughContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_through; }
+	}
+
+	public final ThroughContext through() throws RecognitionException {
+		ThroughContext _localctx = new ThroughContext(_ctx, getState());
+		enterRule(_localctx, 352, RULE_through);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1671);
+			match(Through);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class UntilContext extends ParserRuleContext {
+		public TerminalNode Until() { return getToken(MCCommandParser.Until, 0); }
+		public UntilContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_until; }
+	}
+
+	public final UntilContext until() throws RecognitionException {
+		UntilContext _localctx = new UntilContext(_ctx, getState());
+		enterRule(_localctx, 354, RULE_until);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1673);
+			match(Until);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BaseContext extends ParserRuleContext {
+		public TerminalNode Base() { return getToken(MCCommandParser.Base, 0); }
+		public BaseContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_base; }
+	}
+
+	public final BaseContext base() throws RecognitionException {
+		BaseContext _localctx = new BaseContext(_ctx, getState());
+		enterRule(_localctx, 356, RULE_base);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1675);
+			match(Base);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GetContext extends ParserRuleContext {
+		public TerminalNode Get() { return getToken(MCCommandParser.Get, 0); }
+		public GetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_get; }
+	}
+
+	public final GetContext get() throws RecognitionException {
+		GetContext _localctx = new GetContext(_ctx, getState());
+		enterRule(_localctx, 358, RULE_get);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1677);
+			match(Get);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ModifierContext extends ParserRuleContext {
+		public TerminalNode Modifier() { return getToken(MCCommandParser.Modifier, 0); }
+		public ModifierContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_modifier; }
+	}
+
+	public final ModifierContext modifier() throws RecognitionException {
+		ModifierContext _localctx = new ModifierContext(_ctx, getState());
+		enterRule(_localctx, 360, RULE_modifier);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1679);
+			match(Modifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AvailableContext extends ParserRuleContext {
+		public TerminalNode Available() { return getToken(MCCommandParser.Available, 0); }
+		public AvailableContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_available; }
+	}
+
+	public final AvailableContext available() throws RecognitionException {
+		AvailableContext _localctx = new AvailableContext(_ctx, getState());
+		enterRule(_localctx, 362, RULE_available);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1681);
+			match(Available);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EnableContext extends ParserRuleContext {
+		public TerminalNode Enable() { return getToken(MCCommandParser.Enable, 0); }
+		public EnableContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_enable; }
+	}
+
+	public final EnableContext enable() throws RecognitionException {
+		EnableContext _localctx = new EnableContext(_ctx, getState());
+		enterRule(_localctx, 364, RULE_enable);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1683);
+			match(Enable);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AfterContext extends ParserRuleContext {
+		public TerminalNode After() { return getToken(MCCommandParser.After, 0); }
+		public AfterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_after; }
+	}
+
+	public final AfterContext after() throws RecognitionException {
+		AfterContext _localctx = new AfterContext(_ctx, getState());
+		enterRule(_localctx, 366, RULE_after);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1685);
+			match(After);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BeforeContext extends ParserRuleContext {
+		public TerminalNode Before() { return getToken(MCCommandParser.Before, 0); }
+		public BeforeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_before; }
+	}
+
+	public final BeforeContext before() throws RecognitionException {
+		BeforeContext _localctx = new BeforeContext(_ctx, getState());
+		enterRule(_localctx, 368, RULE_before);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1687);
+			match(Before);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FirstContext extends ParserRuleContext {
+		public TerminalNode First() { return getToken(MCCommandParser.First, 0); }
+		public FirstContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_first; }
+	}
+
+	public final FirstContext first() throws RecognitionException {
+		FirstContext _localctx = new FirstContext(_ctx, getState());
+		enterRule(_localctx, 370, RULE_first);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1689);
+			match(First);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LastContext extends ParserRuleContext {
+		public TerminalNode Last() { return getToken(MCCommandParser.Last, 0); }
+		public LastContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_last; }
+	}
+
+	public final LastContext last() throws RecognitionException {
+		LastContext _localctx = new LastContext(_ctx, getState());
+		enterRule(_localctx, 372, RULE_last);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1691);
+			match(Last);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DisableContext extends ParserRuleContext {
+		public TerminalNode Disable() { return getToken(MCCommandParser.Disable, 0); }
+		public DisableContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_disable; }
+	}
+
+	public final DisableContext disable() throws RecognitionException {
+		DisableContext _localctx = new DisableContext(_ctx, getState());
+		enterRule(_localctx, 374, RULE_disable);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1693);
+			match(Disable);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StartContext extends ParserRuleContext {
+		public TerminalNode Start() { return getToken(MCCommandParser.Start, 0); }
+		public StartContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_start; }
+	}
+
+	public final StartContext start() throws RecognitionException {
+		StartContext _localctx = new StartContext(_ctx, getState());
+		enterRule(_localctx, 376, RULE_start);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1695);
+			match(Start);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StopContext extends ParserRuleContext {
+		public TerminalNode Stop() { return getToken(MCCommandParser.Stop, 0); }
+		public StopContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_stop; }
+	}
+
+	public final StopContext stop() throws RecognitionException {
+		StopContext _localctx = new StopContext(_ctx, getState());
+		enterRule(_localctx, 378, RULE_stop);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1697);
+			match(Stop);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class InfiniteContext extends ParserRuleContext {
+		public TerminalNode Infinite() { return getToken(MCCommandParser.Infinite, 0); }
+		public InfiniteContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_infinite; }
+	}
+
+	public final InfiniteContext infinite() throws RecognitionException {
+		InfiniteContext _localctx = new InfiniteContext(_ctx, getState());
+		enterRule(_localctx, 380, RULE_infinite);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1699);
+			match(Infinite);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EasyContext extends ParserRuleContext {
+		public TerminalNode Easy() { return getToken(MCCommandParser.Easy, 0); }
+		public EasyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_easy; }
+	}
+
+	public final EasyContext easy() throws RecognitionException {
+		EasyContext _localctx = new EasyContext(_ctx, getState());
+		enterRule(_localctx, 382, RULE_easy);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1701);
+			match(Easy);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HardContext extends ParserRuleContext {
+		public TerminalNode Hard() { return getToken(MCCommandParser.Hard, 0); }
+		public HardContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_hard; }
+	}
+
+	public final HardContext hard() throws RecognitionException {
+		HardContext _localctx = new HardContext(_ctx, getState());
+		enterRule(_localctx, 384, RULE_hard);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1703);
+			match(Hard);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PeacefulContext extends ParserRuleContext {
+		public TerminalNode Peaceful() { return getToken(MCCommandParser.Peaceful, 0); }
+		public PeacefulContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_peaceful; }
+	}
+
+	public final PeacefulContext peaceful() throws RecognitionException {
+		PeacefulContext _localctx = new PeacefulContext(_ctx, getState());
+		enterRule(_localctx, 386, RULE_peaceful);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1705);
+			match(Peaceful);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EyesContext extends ParserRuleContext {
+		public TerminalNode Eyes() { return getToken(MCCommandParser.Eyes, 0); }
+		public EyesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_eyes; }
+	}
+
+	public final EyesContext eyes() throws RecognitionException {
+		EyesContext _localctx = new EyesContext(_ctx, getState());
+		enterRule(_localctx, 388, RULE_eyes);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1707);
+			match(Eyes);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FeetContext extends ParserRuleContext {
+		public TerminalNode Feet() { return getToken(MCCommandParser.Feet, 0); }
+		public FeetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_feet; }
+	}
+
+	public final FeetContext feet() throws RecognitionException {
+		FeetContext _localctx = new FeetContext(_ctx, getState());
+		enterRule(_localctx, 390, RULE_feet);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1709);
+			match(Feet);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AllContext extends ParserRuleContext {
+		public TerminalNode All() { return getToken(MCCommandParser.All, 0); }
+		public AllContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_all; }
+	}
+
+	public final AllContext all() throws RecognitionException {
+		AllContext _localctx = new AllContext(_ctx, getState());
+		enterRule(_localctx, 392, RULE_all);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1711);
+			match(All);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BiomeContext extends ParserRuleContext {
+		public TerminalNode Biome() { return getToken(MCCommandParser.Biome, 0); }
+		public BiomeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_biome; }
+	}
+
+	public final BiomeContext biome() throws RecognitionException {
+		BiomeContext _localctx = new BiomeContext(_ctx, getState());
+		enterRule(_localctx, 394, RULE_biome);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1713);
+			match(Biome);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BlocksContext extends ParserRuleContext {
+		public TerminalNode Blocks() { return getToken(MCCommandParser.Blocks, 0); }
+		public BlocksContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_blocks; }
+	}
+
+	public final BlocksContext blocks() throws RecognitionException {
+		BlocksContext _localctx = new BlocksContext(_ctx, getState());
+		enterRule(_localctx, 396, RULE_blocks);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1715);
+			match(Blocks);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DimensionContext extends ParserRuleContext {
+		public TerminalNode Dimension() { return getToken(MCCommandParser.Dimension, 0); }
+		public DimensionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dimension; }
+	}
+
+	public final DimensionContext dimension() throws RecognitionException {
+		DimensionContext _localctx = new DimensionContext(_ctx, getState());
+		enterRule(_localctx, 398, RULE_dimension);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1717);
+			match(Dimension);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LoadedContext extends ParserRuleContext {
+		public TerminalNode Loaded() { return getToken(MCCommandParser.Loaded, 0); }
+		public LoadedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_loaded; }
+	}
+
+	public final LoadedContext loaded() throws RecognitionException {
+		LoadedContext _localctx = new LoadedContext(_ctx, getState());
+		enterRule(_localctx, 400, RULE_loaded);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1719);
+			match(Loaded);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PredicateContext extends ParserRuleContext {
+		public TerminalNode Predicate() { return getToken(MCCommandParser.Predicate, 0); }
+		public PredicateContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_predicate; }
+	}
+
+	public final PredicateContext predicate() throws RecognitionException {
+		PredicateContext _localctx = new PredicateContext(_ctx, getState());
+		enterRule(_localctx, 402, RULE_predicate);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1721);
+			match(Predicate);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreContext extends ParserRuleContext {
+		public TerminalNode Score() { return getToken(MCCommandParser.Score, 0); }
+		public ScoreContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_score; }
+	}
+
+	public final ScoreContext score() throws RecognitionException {
+		ScoreContext _localctx = new ScoreContext(_ctx, getState());
+		enterRule(_localctx, 404, RULE_score);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1723);
+			match(Score);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MatchesContext extends ParserRuleContext {
+		public TerminalNode Matches() { return getToken(MCCommandParser.Matches, 0); }
+		public MatchesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_matches; }
+	}
+
+	public final MatchesContext matches() throws RecognitionException {
+		MatchesContext _localctx = new MatchesContext(_ctx, getState());
+		enterRule(_localctx, 406, RULE_matches);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1725);
+			match(Matches);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AttackerContext extends ParserRuleContext {
+		public TerminalNode Attacker() { return getToken(MCCommandParser.Attacker, 0); }
+		public AttackerContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_attacker; }
+	}
+
+	public final AttackerContext attacker() throws RecognitionException {
+		AttackerContext _localctx = new AttackerContext(_ctx, getState());
+		enterRule(_localctx, 408, RULE_attacker);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1727);
+			match(Attacker);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ControllerContext extends ParserRuleContext {
+		public TerminalNode Controller() { return getToken(MCCommandParser.Controller, 0); }
+		public ControllerContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_controller; }
+	}
+
+	public final ControllerContext controller() throws RecognitionException {
+		ControllerContext _localctx = new ControllerContext(_ctx, getState());
+		enterRule(_localctx, 410, RULE_controller);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1729);
+			match(Controller);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LeasherContext extends ParserRuleContext {
+		public TerminalNode Leasher() { return getToken(MCCommandParser.Leasher, 0); }
+		public LeasherContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_leasher; }
+	}
+
+	public final LeasherContext leasher() throws RecognitionException {
+		LeasherContext _localctx = new LeasherContext(_ctx, getState());
+		enterRule(_localctx, 412, RULE_leasher);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1731);
+			match(Leasher);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OriginContext extends ParserRuleContext {
+		public TerminalNode Origin() { return getToken(MCCommandParser.Origin, 0); }
+		public OriginContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_origin; }
+	}
+
+	public final OriginContext origin() throws RecognitionException {
+		OriginContext _localctx = new OriginContext(_ctx, getState());
+		enterRule(_localctx, 414, RULE_origin);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1733);
+			match(Origin);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OwnerContext extends ParserRuleContext {
+		public TerminalNode Owner() { return getToken(MCCommandParser.Owner, 0); }
+		public OwnerContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_owner; }
+	}
+
+	public final OwnerContext owner() throws RecognitionException {
+		OwnerContext _localctx = new OwnerContext(_ctx, getState());
+		enterRule(_localctx, 416, RULE_owner);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1735);
+			match(Owner);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PassengersContext extends ParserRuleContext {
+		public TerminalNode Passengers() { return getToken(MCCommandParser.Passengers, 0); }
+		public PassengersContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_passengers; }
+	}
+
+	public final PassengersContext passengers() throws RecognitionException {
+		PassengersContext _localctx = new PassengersContext(_ctx, getState());
+		enterRule(_localctx, 418, RULE_passengers);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1737);
+			match(Passengers);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TargetContext extends ParserRuleContext {
+		public TerminalNode Target() { return getToken(MCCommandParser.Target, 0); }
+		public TargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_target; }
+	}
+
+	public final TargetContext target() throws RecognitionException {
+		TargetContext _localctx = new TargetContext(_ctx, getState());
+		enterRule(_localctx, 420, RULE_target);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1739);
+			match(Target);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class VehicleContext extends ParserRuleContext {
+		public TerminalNode Vehicle() { return getToken(MCCommandParser.Vehicle, 0); }
+		public VehicleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_vehicle; }
+	}
+
+	public final VehicleContext vehicle() throws RecognitionException {
+		VehicleContext _localctx = new VehicleContext(_ctx, getState());
+		enterRule(_localctx, 422, RULE_vehicle);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1741);
+			match(Vehicle);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Motion_blockingContext extends ParserRuleContext {
+		public TerminalNode Motion_blocking() { return getToken(MCCommandParser.Motion_blocking, 0); }
+		public Motion_blockingContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_motion_blocking; }
+	}
+
+	public final Motion_blockingContext motion_blocking() throws RecognitionException {
+		Motion_blockingContext _localctx = new Motion_blockingContext(_ctx, getState());
+		enterRule(_localctx, 424, RULE_motion_blocking);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1743);
+			match(Motion_blocking);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Motion_blocking_no_leavesContext extends ParserRuleContext {
+		public TerminalNode Motion_blocking_no_leaves() { return getToken(MCCommandParser.Motion_blocking_no_leaves, 0); }
+		public Motion_blocking_no_leavesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_motion_blocking_no_leaves; }
+	}
+
+	public final Motion_blocking_no_leavesContext motion_blocking_no_leaves() throws RecognitionException {
+		Motion_blocking_no_leavesContext _localctx = new Motion_blocking_no_leavesContext(_ctx, getState());
+		enterRule(_localctx, 426, RULE_motion_blocking_no_leaves);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1745);
+			match(Motion_blocking_no_leaves);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Ocean_floorContext extends ParserRuleContext {
+		public TerminalNode Ocean_floor() { return getToken(MCCommandParser.Ocean_floor, 0); }
+		public Ocean_floorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_ocean_floor; }
+	}
+
+	public final Ocean_floorContext ocean_floor() throws RecognitionException {
+		Ocean_floorContext _localctx = new Ocean_floorContext(_ctx, getState());
+		enterRule(_localctx, 428, RULE_ocean_floor);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1747);
+			match(Ocean_floor);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class World_surfaceContext extends ParserRuleContext {
+		public TerminalNode World_surface() { return getToken(MCCommandParser.World_surface, 0); }
+		public World_surfaceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_world_surface; }
+	}
+
+	public final World_surfaceContext world_surface() throws RecognitionException {
+		World_surfaceContext _localctx = new World_surfaceContext(_ctx, getState());
+		enterRule(_localctx, 430, RULE_world_surface);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1749);
+			match(World_surface);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OverContext extends ParserRuleContext {
+		public TerminalNode Over() { return getToken(MCCommandParser.Over, 0); }
+		public OverContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_over; }
+	}
+
+	public final OverContext over() throws RecognitionException {
+		OverContext _localctx = new OverContext(_ctx, getState());
+		enterRule(_localctx, 432, RULE_over);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1751);
+			match(Over);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ResultContext extends ParserRuleContext {
+		public TerminalNode Result() { return getToken(MCCommandParser.Result, 0); }
+		public ResultContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_result; }
+	}
+
+	public final ResultContext result() throws RecognitionException {
+		ResultContext _localctx = new ResultContext(_ctx, getState());
+		enterRule(_localctx, 434, RULE_result);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1753);
+			match(Result);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SuccessContext extends ParserRuleContext {
+		public TerminalNode Success() { return getToken(MCCommandParser.Success, 0); }
+		public SuccessContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_success; }
+	}
+
+	public final SuccessContext success() throws RecognitionException {
+		SuccessContext _localctx = new SuccessContext(_ctx, getState());
+		enterRule(_localctx, 436, RULE_success);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1755);
+			match(Success);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AlignContext extends ParserRuleContext {
+		public TerminalNode Align() { return getToken(MCCommandParser.Align, 0); }
+		public AlignContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_align; }
+	}
+
+	public final AlignContext align() throws RecognitionException {
+		AlignContext _localctx = new AlignContext(_ctx, getState());
+		enterRule(_localctx, 438, RULE_align);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1757);
+			match(Align);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AnchoredContext extends ParserRuleContext {
+		public TerminalNode Anchored() { return getToken(MCCommandParser.Anchored, 0); }
+		public AnchoredContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_anchored; }
+	}
+
+	public final AnchoredContext anchored() throws RecognitionException {
+		AnchoredContext _localctx = new AnchoredContext(_ctx, getState());
+		enterRule(_localctx, 440, RULE_anchored);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1759);
+			match(Anchored);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class IfContext extends ParserRuleContext {
+		public TerminalNode If() { return getToken(MCCommandParser.If, 0); }
+		public IfContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_if; }
+	}
+
+	public final IfContext if_() throws RecognitionException {
+		IfContext _localctx = new IfContext(_ctx, getState());
+		enterRule(_localctx, 442, RULE_if);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1761);
+			match(If);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class UnlessContext extends ParserRuleContext {
+		public TerminalNode Unless() { return getToken(MCCommandParser.Unless, 0); }
+		public UnlessContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_unless; }
+	}
+
+	public final UnlessContext unless() throws RecognitionException {
+		UnlessContext _localctx = new UnlessContext(_ctx, getState());
+		enterRule(_localctx, 444, RULE_unless);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1763);
+			match(Unless);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class InContext extends ParserRuleContext {
+		public TerminalNode In() { return getToken(MCCommandParser.In, 0); }
+		public InContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_in; }
+	}
+
+	public final InContext in() throws RecognitionException {
+		InContext _localctx = new InContext(_ctx, getState());
+		enterRule(_localctx, 446, RULE_in);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1765);
+			match(In);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OnContext extends ParserRuleContext {
+		public TerminalNode On() { return getToken(MCCommandParser.On, 0); }
+		public OnContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_on; }
+	}
+
+	public final OnContext on() throws RecognitionException {
+		OnContext _localctx = new OnContext(_ctx, getState());
+		enterRule(_localctx, 448, RULE_on);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1767);
+			match(On);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PositionedContext extends ParserRuleContext {
+		public TerminalNode Positioned() { return getToken(MCCommandParser.Positioned, 0); }
+		public PositionedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_positioned; }
+	}
+
+	public final PositionedContext positioned() throws RecognitionException {
+		PositionedContext _localctx = new PositionedContext(_ctx, getState());
+		enterRule(_localctx, 450, RULE_positioned);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1769);
+			match(Positioned);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RotatedContext extends ParserRuleContext {
+		public TerminalNode Rotated() { return getToken(MCCommandParser.Rotated, 0); }
+		public RotatedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rotated; }
+	}
+
+	public final RotatedContext rotated() throws RecognitionException {
+		RotatedContext _localctx = new RotatedContext(_ctx, getState());
+		enterRule(_localctx, 452, RULE_rotated);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1771);
+			match(Rotated);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RunContext extends ParserRuleContext {
+		public TerminalNode Run() { return getToken(MCCommandParser.Run, 0); }
+		public RunContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_run; }
+	}
+
+	public final RunContext run() throws RecognitionException {
+		RunContext _localctx = new RunContext(_ctx, getState());
+		enterRule(_localctx, 454, RULE_run);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1773);
+			match(Run);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StoreContext extends ParserRuleContext {
+		public TerminalNode Store() { return getToken(MCCommandParser.Store, 0); }
+		public StoreContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_store; }
+	}
+
+	public final StoreContext store() throws RecognitionException {
+		StoreContext _localctx = new StoreContext(_ctx, getState());
+		enterRule(_localctx, 456, RULE_store);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1775);
+			match(Store);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class QueryContext extends ParserRuleContext {
+		public TerminalNode Query() { return getToken(MCCommandParser.Query, 0); }
+		public QueryContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_query; }
+	}
+
+	public final QueryContext query() throws RecognitionException {
+		QueryContext _localctx = new QueryContext(_ctx, getState());
+		enterRule(_localctx, 458, RULE_query);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1777);
+			match(Query);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LevelsContext extends ParserRuleContext {
+		public TerminalNode Levels() { return getToken(MCCommandParser.Levels, 0); }
+		public LevelsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_levels; }
+	}
+
+	public final LevelsContext levels() throws RecognitionException {
+		LevelsContext _localctx = new LevelsContext(_ctx, getState());
+		enterRule(_localctx, 460, RULE_levels);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1779);
+			match(Levels);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PointsContext extends ParserRuleContext {
+		public TerminalNode Points() { return getToken(MCCommandParser.Points, 0); }
+		public PointsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_points; }
+	}
+
+	public final PointsContext points() throws RecognitionException {
+		PointsContext _localctx = new PointsContext(_ctx, getState());
+		enterRule(_localctx, 462, RULE_points);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1781);
+			match(Points);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DestroyContext extends ParserRuleContext {
+		public TerminalNode Destroy() { return getToken(MCCommandParser.Destroy, 0); }
+		public DestroyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_destroy; }
+	}
+
+	public final DestroyContext destroy() throws RecognitionException {
+		DestroyContext _localctx = new DestroyContext(_ctx, getState());
+		enterRule(_localctx, 464, RULE_destroy);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1783);
+			match(Destroy);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HollowContext extends ParserRuleContext {
+		public TerminalNode Hollow() { return getToken(MCCommandParser.Hollow, 0); }
+		public HollowContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_hollow; }
+	}
+
+	public final HollowContext hollow() throws RecognitionException {
+		HollowContext _localctx = new HollowContext(_ctx, getState());
+		enterRule(_localctx, 466, RULE_hollow);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1785);
+			match(Hollow);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class KeepContext extends ParserRuleContext {
+		public TerminalNode Keep() { return getToken(MCCommandParser.Keep, 0); }
+		public KeepContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_keep; }
+	}
+
+	public final KeepContext keep() throws RecognitionException {
+		KeepContext _localctx = new KeepContext(_ctx, getState());
+		enterRule(_localctx, 468, RULE_keep);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1787);
+			match(Keep);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OutlineContext extends ParserRuleContext {
+		public TerminalNode Outline() { return getToken(MCCommandParser.Outline, 0); }
+		public OutlineContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_outline; }
+	}
+
+	public final OutlineContext outline() throws RecognitionException {
+		OutlineContext _localctx = new OutlineContext(_ctx, getState());
+		enterRule(_localctx, 470, RULE_outline);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1789);
+			match(Outline);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class UuidsContext extends ParserRuleContext {
+		public TerminalNode Uuids() { return getToken(MCCommandParser.Uuids, 0); }
+		public UuidsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_uuids; }
+	}
+
+	public final UuidsContext uuids() throws RecognitionException {
+		UuidsContext _localctx = new UuidsContext(_ctx, getState());
+		enterRule(_localctx, 472, RULE_uuids);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1791);
+			match(Uuids);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PoiContext extends ParserRuleContext {
+		public TerminalNode Poi() { return getToken(MCCommandParser.Poi, 0); }
+		public PoiContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_poi; }
+	}
+
+	public final PoiContext poi() throws RecognitionException {
+		PoiContext _localctx = new PoiContext(_ctx, getState());
+		enterRule(_localctx, 474, RULE_poi);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1793);
+			match(Poi);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StructureContext extends ParserRuleContext {
+		public TerminalNode Structure() { return getToken(MCCommandParser.Structure, 0); }
+		public StructureContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_structure; }
+	}
+
+	public final StructureContext structure() throws RecognitionException {
+		StructureContext _localctx = new StructureContext(_ctx, getState());
+		enterRule(_localctx, 476, RULE_structure);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1795);
+			match(Structure);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class InsertContext extends ParserRuleContext {
+		public TerminalNode Insert() { return getToken(MCCommandParser.Insert, 0); }
+		public InsertContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_insert; }
+	}
+
+	public final InsertContext insert() throws RecognitionException {
+		InsertContext _localctx = new InsertContext(_ctx, getState());
+		enterRule(_localctx, 478, RULE_insert);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1797);
+			match(Insert);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpawnContext extends ParserRuleContext {
+		public TerminalNode Spawn() { return getToken(MCCommandParser.Spawn, 0); }
+		public SpawnContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spawn; }
+	}
+
+	public final SpawnContext spawn() throws RecognitionException {
+		SpawnContext _localctx = new SpawnContext(_ctx, getState());
+		enterRule(_localctx, 480, RULE_spawn);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1799);
+			match(Spawn);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FishContext extends ParserRuleContext {
+		public TerminalNode Fish() { return getToken(MCCommandParser.Fish, 0); }
+		public FishContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fish; }
+	}
+
+	public final FishContext fish() throws RecognitionException {
+		FishContext _localctx = new FishContext(_ctx, getState());
+		enterRule(_localctx, 482, RULE_fish);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1801);
+			match(Fish);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MineContext extends ParserRuleContext {
+		public TerminalNode Mine() { return getToken(MCCommandParser.Mine, 0); }
+		public MineContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_mine; }
+	}
+
+	public final MineContext mine() throws RecognitionException {
+		MineContext _localctx = new MineContext(_ctx, getState());
+		enterRule(_localctx, 484, RULE_mine);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1803);
+			match(Mine);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FeatureContext extends ParserRuleContext {
+		public TerminalNode Feature() { return getToken(MCCommandParser.Feature, 0); }
+		public FeatureContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_feature; }
+	}
+
+	public final FeatureContext feature() throws RecognitionException {
+		FeatureContext _localctx = new FeatureContext(_ctx, getState());
+		enterRule(_localctx, 486, RULE_feature);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1805);
+			match(Feature);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JigsawContext extends ParserRuleContext {
+		public TerminalNode Jigsaw() { return getToken(MCCommandParser.Jigsaw, 0); }
+		public JigsawContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jigsaw; }
+	}
+
+	public final JigsawContext jigsaw() throws RecognitionException {
+		JigsawContext _localctx = new JigsawContext(_ctx, getState());
+		enterRule(_localctx, 488, RULE_jigsaw);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1807);
+			match(Jigsaw);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TemplateContext extends ParserRuleContext {
+		public TerminalNode Template() { return getToken(MCCommandParser.Template, 0); }
+		public TemplateContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_template; }
+	}
+
+	public final TemplateContext template() throws RecognitionException {
+		TemplateContext _localctx = new TemplateContext(_ctx, getState());
+		enterRule(_localctx, 490, RULE_template);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1809);
+			match(Template);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Front_backContext extends ParserRuleContext {
+		public TerminalNode Front_back() { return getToken(MCCommandParser.Front_back, 0); }
+		public Front_backContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_front_back; }
+	}
+
+	public final Front_backContext front_back() throws RecognitionException {
+		Front_backContext _localctx = new Front_backContext(_ctx, getState());
+		enterRule(_localctx, 492, RULE_front_back);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1811);
+			match(Front_back);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Left_rightContext extends ParserRuleContext {
+		public TerminalNode Left_right() { return getToken(MCCommandParser.Left_right, 0); }
+		public Left_rightContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_left_right; }
+	}
+
+	public final Left_rightContext left_right() throws RecognitionException {
+		Left_rightContext _localctx = new Left_rightContext(_ctx, getState());
+		enterRule(_localctx, 494, RULE_left_right);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1813);
+			match(Left_right);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NoneContext extends ParserRuleContext {
+		public TerminalNode None() { return getToken(MCCommandParser.None, 0); }
+		public NoneContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_none; }
+	}
+
+	public final NoneContext none() throws RecognitionException {
+		NoneContext _localctx = new NoneContext(_ctx, getState());
+		enterRule(_localctx, 496, RULE_none);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1815);
+			match(None);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Clockwise_90Context extends ParserRuleContext {
+		public TerminalNode Clockwise_90() { return getToken(MCCommandParser.Clockwise_90, 0); }
+		public Clockwise_90Context(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_clockwise_90; }
+	}
+
+	public final Clockwise_90Context clockwise_90() throws RecognitionException {
+		Clockwise_90Context _localctx = new Clockwise_90Context(_ctx, getState());
+		enterRule(_localctx, 498, RULE_clockwise_90);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1817);
+			match(Clockwise_90);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class Counterclockwise_90Context extends ParserRuleContext {
+		public TerminalNode Counterclockwise_90() { return getToken(MCCommandParser.Counterclockwise_90, 0); }
+		public Counterclockwise_90Context(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_counterclockwise_90; }
+	}
+
+	public final Counterclockwise_90Context counterclockwise_90() throws RecognitionException {
+		Counterclockwise_90Context _localctx = new Counterclockwise_90Context(_ctx, getState());
+		enterRule(_localctx, 500, RULE_counterclockwise_90);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1819);
+			match(Counterclockwise_90);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AmbientContext extends ParserRuleContext {
+		public TerminalNode Ambient() { return getToken(MCCommandParser.Ambient, 0); }
+		public AmbientContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_ambient; }
+	}
+
+	public final AmbientContext ambient() throws RecognitionException {
+		AmbientContext _localctx = new AmbientContext(_ctx, getState());
+		enterRule(_localctx, 502, RULE_ambient);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1821);
+			match(Ambient);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HostileContext extends ParserRuleContext {
+		public TerminalNode Hostile() { return getToken(MCCommandParser.Hostile, 0); }
+		public HostileContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_hostile; }
+	}
+
+	public final HostileContext hostile() throws RecognitionException {
+		HostileContext _localctx = new HostileContext(_ctx, getState());
+		enterRule(_localctx, 504, RULE_hostile);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1823);
+			match(Hostile);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MasterContext extends ParserRuleContext {
+		public TerminalNode Master() { return getToken(MCCommandParser.Master, 0); }
+		public MasterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_master; }
+	}
+
+	public final MasterContext master() throws RecognitionException {
+		MasterContext _localctx = new MasterContext(_ctx, getState());
+		enterRule(_localctx, 506, RULE_master);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1825);
+			match(Master);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MusicContext extends ParserRuleContext {
+		public TerminalNode Music() { return getToken(MCCommandParser.Music, 0); }
+		public MusicContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_music; }
+	}
+
+	public final MusicContext music() throws RecognitionException {
+		MusicContext _localctx = new MusicContext(_ctx, getState());
+		enterRule(_localctx, 508, RULE_music);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1827);
+			match(Music);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NeutralContext extends ParserRuleContext {
+		public TerminalNode Neutral() { return getToken(MCCommandParser.Neutral, 0); }
+		public NeutralContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_neutral; }
+	}
+
+	public final NeutralContext neutral() throws RecognitionException {
+		NeutralContext _localctx = new NeutralContext(_ctx, getState());
+		enterRule(_localctx, 510, RULE_neutral);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1829);
+			match(Neutral);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlayerContext extends ParserRuleContext {
+		public TerminalNode Player() { return getToken(MCCommandParser.Player, 0); }
+		public PlayerContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_player; }
+	}
+
+	public final PlayerContext player() throws RecognitionException {
+		PlayerContext _localctx = new PlayerContext(_ctx, getState());
+		enterRule(_localctx, 512, RULE_player);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1831);
+			match(Player);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RecordContext extends ParserRuleContext {
+		public TerminalNode Record() { return getToken(MCCommandParser.Record, 0); }
+		public RecordContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_record; }
+	}
+
+	public final RecordContext record() throws RecognitionException {
+		RecordContext _localctx = new RecordContext(_ctx, getState());
+		enterRule(_localctx, 514, RULE_record);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1833);
+			match(Record);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class VoiceContext extends ParserRuleContext {
+		public TerminalNode Voice() { return getToken(MCCommandParser.Voice, 0); }
+		public VoiceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_voice; }
+	}
+
+	public final VoiceContext voice() throws RecognitionException {
+		VoiceContext _localctx = new VoiceContext(_ctx, getState());
+		enterRule(_localctx, 516, RULE_voice);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1835);
+			match(Voice);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AppendContext extends ParserRuleContext {
+		public TerminalNode Append() { return getToken(MCCommandParser.Append, 0); }
+		public AppendContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_append; }
+	}
+
+	public final AppendContext append() throws RecognitionException {
+		AppendContext _localctx = new AppendContext(_ctx, getState());
+		enterRule(_localctx, 518, RULE_append);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1837);
+			match(Append);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DismountContext extends ParserRuleContext {
+		public TerminalNode Dismount() { return getToken(MCCommandParser.Dismount, 0); }
+		public DismountContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dismount; }
+	}
+
+	public final DismountContext dismount() throws RecognitionException {
+		DismountContext _localctx = new DismountContext(_ctx, getState());
+		enterRule(_localctx, 520, RULE_dismount);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1839);
+			match(Dismount);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MountContext extends ParserRuleContext {
+		public TerminalNode Mount() { return getToken(MCCommandParser.Mount, 0); }
+		public MountContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_mount; }
+	}
+
+	public final MountContext mount() throws RecognitionException {
+		MountContext _localctx = new MountContext(_ctx, getState());
+		enterRule(_localctx, 522, RULE_mount);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1841);
+			match(Mount);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ObjectivesContext extends ParserRuleContext {
+		public TerminalNode Objectives() { return getToken(MCCommandParser.Objectives, 0); }
+		public ObjectivesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_objectives; }
+	}
+
+	public final ObjectivesContext objectives() throws RecognitionException {
+		ObjectivesContext _localctx = new ObjectivesContext(_ctx, getState());
+		enterRule(_localctx, 524, RULE_objectives);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1843);
+			match(Objectives);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HeartsContext extends ParserRuleContext {
+		public TerminalNode Hearts() { return getToken(MCCommandParser.Hearts, 0); }
+		public HeartsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_hearts; }
+	}
+
+	public final HeartsContext hearts() throws RecognitionException {
+		HeartsContext _localctx = new HeartsContext(_ctx, getState());
+		enterRule(_localctx, 526, RULE_hearts);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1845);
+			match(Hearts);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RendertypeContext extends ParserRuleContext {
+		public TerminalNode Rendertype() { return getToken(MCCommandParser.Rendertype, 0); }
+		public RendertypeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rendertype; }
+	}
+
+	public final RendertypeContext rendertype() throws RecognitionException {
+		RendertypeContext _localctx = new RendertypeContext(_ctx, getState());
+		enterRule(_localctx, 528, RULE_rendertype);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1847);
+			match(Rendertype);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SetdisplayContext extends ParserRuleContext {
+		public TerminalNode Setdisplay() { return getToken(MCCommandParser.Setdisplay, 0); }
+		public SetdisplayContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_setdisplay; }
+	}
+
+	public final SetdisplayContext setdisplay() throws RecognitionException {
+		SetdisplayContext _localctx = new SetdisplayContext(_ctx, getState());
+		enterRule(_localctx, 530, RULE_setdisplay);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1849);
+			match(Setdisplay);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OperationContext extends ParserRuleContext {
+		public TerminalNode Operation() { return getToken(MCCommandParser.Operation, 0); }
+		public OperationContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_operation; }
+	}
+
+	public final OperationContext operation() throws RecognitionException {
+		OperationContext _localctx = new OperationContext(_ctx, getState());
+		enterRule(_localctx, 532, RULE_operation);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1851);
+			match(Operation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ResetContext extends ParserRuleContext {
+		public TerminalNode Reset() { return getToken(MCCommandParser.Reset, 0); }
+		public ResetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_reset; }
+	}
+
+	public final ResetContext reset() throws RecognitionException {
+		ResetContext _localctx = new ResetContext(_ctx, getState());
+		enterRule(_localctx, 534, RULE_reset);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1853);
+			match(Reset);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class UnderContext extends ParserRuleContext {
+		public TerminalNode Under() { return getToken(MCCommandParser.Under, 0); }
+		public UnderContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_under; }
+	}
+
+	public final UnderContext under() throws RecognitionException {
+		UnderContext _localctx = new UnderContext(_ctx, getState());
+		enterRule(_localctx, 536, RULE_under);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1855);
+			match(Under);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ActionbarContext extends ParserRuleContext {
+		public TerminalNode Actionbar() { return getToken(MCCommandParser.Actionbar, 0); }
+		public ActionbarContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_actionbar; }
+	}
+
+	public final ActionbarContext actionbar() throws RecognitionException {
+		ActionbarContext _localctx = new ActionbarContext(_ctx, getState());
+		enterRule(_localctx, 538, RULE_actionbar);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1857);
+			match(Actionbar);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SubtitleContext extends ParserRuleContext {
+		public TerminalNode Subtitle() { return getToken(MCCommandParser.Subtitle, 0); }
+		public SubtitleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_subtitle; }
+	}
+
+	public final SubtitleContext subtitle() throws RecognitionException {
+		SubtitleContext _localctx = new SubtitleContext(_ctx, getState());
+		enterRule(_localctx, 540, RULE_subtitle);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1859);
+			match(Subtitle);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TimesContext extends ParserRuleContext {
+		public TerminalNode Times() { return getToken(MCCommandParser.Times, 0); }
+		public TimesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_times; }
+	}
+
+	public final TimesContext times() throws RecognitionException {
+		TimesContext _localctx = new TimesContext(_ctx, getState());
+		enterRule(_localctx, 542, RULE_times);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1861);
+			match(Times);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FadeInContext extends ParserRuleContext {
+		public TerminalNode FadeIn() { return getToken(MCCommandParser.FadeIn, 0); }
+		public FadeInContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fadeIn; }
+	}
+
+	public final FadeInContext fadeIn() throws RecognitionException {
+		FadeInContext _localctx = new FadeInContext(_ctx, getState());
+		enterRule(_localctx, 544, RULE_fadeIn);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1863);
+			match(FadeIn);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StayContext extends ParserRuleContext {
+		public TerminalNode Stay() { return getToken(MCCommandParser.Stay, 0); }
+		public StayContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_stay; }
+	}
+
+	public final StayContext stay() throws RecognitionException {
+		StayContext _localctx = new StayContext(_ctx, getState());
+		enterRule(_localctx, 546, RULE_stay);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1865);
+			match(Stay);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FadeOutContext extends ParserRuleContext {
+		public TerminalNode FadeOut() { return getToken(MCCommandParser.FadeOut, 0); }
+		public FadeOutContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fadeOut; }
+	}
+
+	public final FadeOutContext fadeOut() throws RecognitionException {
+		FadeOutContext _localctx = new FadeOutContext(_ctx, getState());
+		enterRule(_localctx, 548, RULE_fadeOut);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1867);
+			match(FadeOut);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CenterContext extends ParserRuleContext {
+		public TerminalNode Center() { return getToken(MCCommandParser.Center, 0); }
+		public CenterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_center; }
+	}
+
+	public final CenterContext center() throws RecognitionException {
+		CenterContext _localctx = new CenterContext(_ctx, getState());
+		enterRule(_localctx, 550, RULE_center);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1869);
+			match(Center);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WarningContext extends ParserRuleContext {
+		public TerminalNode Warning() { return getToken(MCCommandParser.Warning, 0); }
+		public WarningContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_warning; }
+	}
+
+	public final WarningContext warning() throws RecognitionException {
+		WarningContext _localctx = new WarningContext(_ctx, getState());
+		enterRule(_localctx, 552, RULE_warning);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1871);
+			match(Warning);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AmountContext extends ParserRuleContext {
+		public TerminalNode Amount() { return getToken(MCCommandParser.Amount, 0); }
+		public AmountContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_amount; }
+	}
+
+	public final AmountContext amount() throws RecognitionException {
+		AmountContext _localctx = new AmountContext(_ctx, getState());
+		enterRule(_localctx, 554, RULE_amount);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1873);
+			match(Amount);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BufferContext extends ParserRuleContext {
+		public TerminalNode Buffer() { return getToken(MCCommandParser.Buffer, 0); }
+		public BufferContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_buffer; }
+	}
+
+	public final BufferContext buffer() throws RecognitionException {
+		BufferContext _localctx = new BufferContext(_ctx, getState());
+		enterRule(_localctx, 556, RULE_buffer);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1875);
+			match(Buffer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FacingContext extends ParserRuleContext {
+		public TerminalNode Facing() { return getToken(MCCommandParser.Facing, 0); }
+		public FacingContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_facing; }
+	}
+
+	public final FacingContext facing() throws RecognitionException {
+		FacingContext _localctx = new FacingContext(_ctx, getState());
+		enterRule(_localctx, 558, RULE_facing);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1877);
+			match(Facing);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PrependContext extends ParserRuleContext {
+		public TerminalNode Prepend() { return getToken(MCCommandParser.Prepend, 0); }
+		public PrependContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_prepend; }
+	}
+
+	public final PrependContext prepend() throws RecognitionException {
+		PrependContext _localctx = new PrependContext(_ctx, getState());
+		enterRule(_localctx, 560, RULE_prepend);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1879);
+			match(Prepend);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WithContext extends ParserRuleContext {
+		public TerminalNode With() { return getToken(MCCommandParser.With, 0); }
+		public WithContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_with; }
+	}
+
+	public final WithContext with() throws RecognitionException {
+		WithContext _localctx = new WithContext(_ctx, getState());
+		enterRule(_localctx, 562, RULE_with);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1881);
+			match(With);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MainhandContext extends ParserRuleContext {
+		public TerminalNode Mainhand() { return getToken(MCCommandParser.Mainhand, 0); }
+		public MainhandContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_mainhand; }
+	}
+
+	public final MainhandContext mainhand() throws RecognitionException {
+		MainhandContext _localctx = new MainhandContext(_ctx, getState());
+		enterRule(_localctx, 564, RULE_mainhand);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1883);
+			match(Mainhand);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OffhandContext extends ParserRuleContext {
+		public TerminalNode Offhand() { return getToken(MCCommandParser.Offhand, 0); }
+		public OffhandContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_offhand; }
+	}
+
+	public final OffhandContext offhand() throws RecognitionException {
+		OffhandContext _localctx = new OffhandContext(_ctx, getState());
+		enterRule(_localctx, 566, RULE_offhand);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1885);
+			match(Offhand);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TakeContext extends ParserRuleContext {
+		public TerminalNode Take() { return getToken(MCCommandParser.Take, 0); }
+		public TakeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_take; }
+	}
+
+	public final TakeContext take() throws RecognitionException {
+		TakeContext _localctx = new TakeContext(_ctx, getState());
+		enterRule(_localctx, 568, RULE_take);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1887);
+			match(Take);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AlwaysContext extends ParserRuleContext {
+		public TerminalNode Always() { return getToken(MCCommandParser.Always, 0); }
+		public AlwaysContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_always; }
+	}
+
+	public final AlwaysContext always() throws RecognitionException {
+		AlwaysContext _localctx = new AlwaysContext(_ctx, getState());
+		enterRule(_localctx, 570, RULE_always);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1889);
+			match(Always);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NeverContext extends ParserRuleContext {
+		public TerminalNode Never() { return getToken(MCCommandParser.Never, 0); }
+		public NeverContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_never; }
+	}
+
+	public final NeverContext never() throws RecognitionException {
+		NeverContext _localctx = new NeverContext(_ctx, getState());
+		enterRule(_localctx, 572, RULE_never);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1891);
+			match(Never);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PushOtherTeamsContext extends ParserRuleContext {
+		public TerminalNode PushOtherTeams() { return getToken(MCCommandParser.PushOtherTeams, 0); }
+		public PushOtherTeamsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_pushOtherTeams; }
+	}
+
+	public final PushOtherTeamsContext pushOtherTeams() throws RecognitionException {
+		PushOtherTeamsContext _localctx = new PushOtherTeamsContext(_ctx, getState());
+		enterRule(_localctx, 574, RULE_pushOtherTeams);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1893);
+			match(PushOtherTeams);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PushOwnTeamContext extends ParserRuleContext {
+		public TerminalNode PushOwnTeam() { return getToken(MCCommandParser.PushOwnTeam, 0); }
+		public PushOwnTeamContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_pushOwnTeam; }
+	}
+
+	public final PushOwnTeamContext pushOwnTeam() throws RecognitionException {
+		PushOwnTeamContext _localctx = new PushOwnTeamContext(_ctx, getState());
+		enterRule(_localctx, 576, RULE_pushOwnTeam);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1895);
+			match(PushOwnTeam);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HideForOtherTeamsContext extends ParserRuleContext {
+		public TerminalNode HideForOtherTeams() { return getToken(MCCommandParser.HideForOtherTeams, 0); }
+		public HideForOtherTeamsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_hideForOtherTeams; }
+	}
+
+	public final HideForOtherTeamsContext hideForOtherTeams() throws RecognitionException {
+		HideForOtherTeamsContext _localctx = new HideForOtherTeamsContext(_ctx, getState());
+		enterRule(_localctx, 578, RULE_hideForOtherTeams);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1897);
+			match(HideForOtherTeams);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HideForOwnTeamContext extends ParserRuleContext {
+		public TerminalNode HideForOwnTeam() { return getToken(MCCommandParser.HideForOwnTeam, 0); }
+		public HideForOwnTeamContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_hideForOwnTeam; }
+	}
+
+	public final HideForOwnTeamContext hideForOwnTeam() throws RecognitionException {
+		HideForOwnTeamContext _localctx = new HideForOwnTeamContext(_ctx, getState());
+		enterRule(_localctx, 580, RULE_hideForOwnTeam);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1899);
+			match(HideForOwnTeam);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FriendlyFireContext extends ParserRuleContext {
+		public TerminalNode FriendlyFire() { return getToken(MCCommandParser.FriendlyFire, 0); }
+		public FriendlyFireContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_friendlyFire; }
+	}
+
+	public final FriendlyFireContext friendlyFire() throws RecognitionException {
+		FriendlyFireContext _localctx = new FriendlyFireContext(_ctx, getState());
+		enterRule(_localctx, 582, RULE_friendlyFire);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1901);
+			match(FriendlyFire);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NametagVisibilityContext extends ParserRuleContext {
+		public TerminalNode NametagVisibility() { return getToken(MCCommandParser.NametagVisibility, 0); }
+		public NametagVisibilityContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_nametagVisibility; }
+	}
+
+	public final NametagVisibilityContext nametagVisibility() throws RecognitionException {
+		NametagVisibilityContext _localctx = new NametagVisibilityContext(_ctx, getState());
+		enterRule(_localctx, 584, RULE_nametagVisibility);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1903);
+			match(NametagVisibility);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SeeFriendlyInvisiblesContext extends ParserRuleContext {
+		public TerminalNode SeeFriendlyInvisibles() { return getToken(MCCommandParser.SeeFriendlyInvisibles, 0); }
+		public SeeFriendlyInvisiblesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_seeFriendlyInvisibles; }
+	}
+
+	public final SeeFriendlyInvisiblesContext seeFriendlyInvisibles() throws RecognitionException {
+		SeeFriendlyInvisiblesContext _localctx = new SeeFriendlyInvisiblesContext(_ctx, getState());
+		enterRule(_localctx, 586, RULE_seeFriendlyInvisibles);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1905);
+			match(SeeFriendlyInvisibles);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RainContext extends ParserRuleContext {
+		public TerminalNode Rain() { return getToken(MCCommandParser.Rain, 0); }
+		public RainContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rain; }
+	}
+
+	public final RainContext rain() throws RecognitionException {
+		RainContext _localctx = new RainContext(_ctx, getState());
+		enterRule(_localctx, 588, RULE_rain);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1907);
+			match(Rain);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ThunderContext extends ParserRuleContext {
+		public TerminalNode Thunder() { return getToken(MCCommandParser.Thunder, 0); }
+		public ThunderContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_thunder; }
+	}
+
+	public final ThunderContext thunder() throws RecognitionException {
+		ThunderContext _localctx = new ThunderContext(_ctx, getState());
+		enterRule(_localctx, 590, RULE_thunder);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1909);
+			match(Thunder);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DayContext extends ParserRuleContext {
+		public TerminalNode Day() { return getToken(MCCommandParser.Day, 0); }
+		public DayContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_day; }
+	}
+
+	public final DayContext day() throws RecognitionException {
+		DayContext _localctx = new DayContext(_ctx, getState());
+		enterRule(_localctx, 592, RULE_day);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1911);
+			match(Day);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MidnightContext extends ParserRuleContext {
+		public TerminalNode Midnight() { return getToken(MCCommandParser.Midnight, 0); }
+		public MidnightContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_midnight; }
+	}
+
+	public final MidnightContext midnight() throws RecognitionException {
+		MidnightContext _localctx = new MidnightContext(_ctx, getState());
+		enterRule(_localctx, 594, RULE_midnight);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1913);
+			match(Midnight);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NightContext extends ParserRuleContext {
+		public TerminalNode Night() { return getToken(MCCommandParser.Night, 0); }
+		public NightContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_night; }
+	}
+
+	public final NightContext night() throws RecognitionException {
+		NightContext _localctx = new NightContext(_ctx, getState());
+		enterRule(_localctx, 596, RULE_night);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1915);
+			match(Night);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DaytimeContext extends ParserRuleContext {
+		public TerminalNode Daytime() { return getToken(MCCommandParser.Daytime, 0); }
+		public DaytimeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_daytime; }
+	}
+
+	public final DaytimeContext daytime() throws RecognitionException {
+		DaytimeContext _localctx = new DaytimeContext(_ctx, getState());
+		enterRule(_localctx, 598, RULE_daytime);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1917);
+			match(Daytime);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class NoonContext extends ParserRuleContext {
+		public TerminalNode Noon() { return getToken(MCCommandParser.Noon, 0); }
+		public NoonContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_noon; }
+	}
+
+	public final NoonContext noon() throws RecognitionException {
+		NoonContext _localctx = new NoonContext(_ctx, getState());
+		enterRule(_localctx, 600, RULE_noon);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1919);
+			match(Noon);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GametimeContext extends ParserRuleContext {
+		public TerminalNode Gametime() { return getToken(MCCommandParser.Gametime, 0); }
+		public GametimeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gametime; }
+	}
+
+	public final GametimeContext gametime() throws RecognitionException {
+		GametimeContext _localctx = new GametimeContext(_ctx, getState());
+		enterRule(_localctx, 602, RULE_gametime);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1921);
+			match(Gametime);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DistanceContext extends ParserRuleContext {
+		public TerminalNode Distance() { return getToken(MCCommandParser.Distance, 0); }
+		public DistanceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_distance; }
+	}
+
+	public final DistanceContext distance() throws RecognitionException {
+		DistanceContext _localctx = new DistanceContext(_ctx, getState());
+		enterRule(_localctx, 604, RULE_distance);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1923);
+			match(Distance);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EmptyContext extends ParserRuleContext {
+		public TerminalNode Empty() { return getToken(MCCommandParser.Empty, 0); }
+		public EmptyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_empty; }
+	}
+
+	public final EmptyContext empty() throws RecognitionException {
+		EmptyContext _localctx = new EmptyContext(_ctx, getState());
+		enterRule(_localctx, 606, RULE_empty);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1925);
+			match(Empty);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JoinContext extends ParserRuleContext {
+		public TerminalNode Join() { return getToken(MCCommandParser.Join, 0); }
+		public JoinContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_join; }
+	}
+
+	public final JoinContext join() throws RecognitionException {
+		JoinContext _localctx = new JoinContext(_ctx, getState());
+		enterRule(_localctx, 608, RULE_join);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1927);
+			match(Join);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LeaveContext extends ParserRuleContext {
+		public TerminalNode Leave() { return getToken(MCCommandParser.Leave, 0); }
+		public LeaveContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_leave; }
+	}
+
+	public final LeaveContext leave() throws RecognitionException {
+		LeaveContext _localctx = new LeaveContext(_ctx, getState());
+		enterRule(_localctx, 610, RULE_leave);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1929);
+			match(Leave);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CollisionRuleContext extends ParserRuleContext {
+		public TerminalNode CollisionRule() { return getToken(MCCommandParser.CollisionRule, 0); }
+		public CollisionRuleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_collisionRule; }
+	}
+
+	public final CollisionRuleContext collisionRule() throws RecognitionException {
+		CollisionRuleContext _localctx = new CollisionRuleContext(_ctx, getState());
+		enterRule(_localctx, 612, RULE_collisionRule);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1931);
+			match(CollisionRule);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DeathMessageVisibilityContext extends ParserRuleContext {
+		public TerminalNode DeathMessageVisibility() { return getToken(MCCommandParser.DeathMessageVisibility, 0); }
+		public DeathMessageVisibilityContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_deathMessageVisibility; }
+	}
+
+	public final DeathMessageVisibilityContext deathMessageVisibility() throws RecognitionException {
+		DeathMessageVisibilityContext _localctx = new DeathMessageVisibilityContext(_ctx, getState());
+		enterRule(_localctx, 614, RULE_deathMessageVisibility);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1933);
+			match(DeathMessageVisibility);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PrefixContext extends ParserRuleContext {
+		public TerminalNode Prefix() { return getToken(MCCommandParser.Prefix, 0); }
+		public PrefixContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_prefix; }
+	}
+
+	public final PrefixContext prefix() throws RecognitionException {
+		PrefixContext _localctx = new PrefixContext(_ctx, getState());
+		enterRule(_localctx, 616, RULE_prefix);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1935);
+			match(Prefix);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SuffixContext extends ParserRuleContext {
+		public TerminalNode Suffix() { return getToken(MCCommandParser.Suffix, 0); }
+		public SuffixContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_suffix; }
+	}
+
+	public final SuffixContext suffix() throws RecognitionException {
+		SuffixContext _localctx = new SuffixContext(_ctx, getState());
+		enterRule(_localctx, 618, RULE_suffix);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1937);
+			match(Suffix);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DisplayNameContext extends ParserRuleContext {
+		public TerminalNode DisplayName() { return getToken(MCCommandParser.DisplayName, 0); }
+		public DisplayNameContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_displayName; }
+	}
+
+	public final DisplayNameContext displayName() throws RecognitionException {
+		DisplayNameContext _localctx = new DisplayNameContext(_ctx, getState());
+		enterRule(_localctx, 620, RULE_displayName);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1939);
+			match(DisplayName);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BooleanValueContext extends ParserRuleContext {
+		public TerminalNode BooleanValue() { return getToken(MCCommandParser.BooleanValue, 0); }
+		public BooleanValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_booleanValue; }
+	}
+
+	public final BooleanValueContext booleanValue() throws RecognitionException {
+		BooleanValueContext _localctx = new BooleanValueContext(_ctx, getState());
+		enterRule(_localctx, 622, RULE_booleanValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1941);
+			match(BooleanValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class OneHundredAndEightyContext extends ParserRuleContext {
+		public TerminalNode OneHundredAndEighty() { return getToken(MCCommandParser.OneHundredAndEighty, 0); }
+		public OneHundredAndEightyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_oneHundredAndEighty; }
+	}
+
+	public final OneHundredAndEightyContext oneHundredAndEighty() throws RecognitionException {
+		OneHundredAndEightyContext _localctx = new OneHundredAndEightyContext(_ctx, getState());
+		enterRule(_localctx, 624, RULE_oneHundredAndEighty);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1943);
+			match(OneHundredAndEighty);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AdvancementRadicalContext extends ParserRuleContext {
+		public AdvancementKeyContext advancementKey() {
+			return getRuleContext(AdvancementKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public AdvancementModesContext advancementModes() {
+			return getRuleContext(AdvancementModesContext.class,0);
+		}
+		public GrantContext grant() {
+			return getRuleContext(GrantContext.class,0);
+		}
+		public RevokeContext revoke() {
+			return getRuleContext(RevokeContext.class,0);
+		}
+		public AdvancementRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_advancementRadical; }
+	}
+
+	public final AdvancementRadicalContext advancementRadical() throws RecognitionException {
+		AdvancementRadicalContext _localctx = new AdvancementRadicalContext(_ctx, getState());
+		enterRule(_localctx, 626, RULE_advancementRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1945);
+			advancementKey();
+			setState(1948);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Grant:
+				{
+				setState(1946);
+				grant();
+				}
+				break;
+			case Revoke:
+				{
+				setState(1947);
+				revoke();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(1950);
+			selector();
+			setState(1951);
+			advancementModes();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AdvancementCriterionContext extends ParserRuleContext {
+		public TerminalNode FileReference() { return getToken(MCCommandParser.FileReference, 0); }
+		public AdvancementCriterionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_advancementCriterion; }
+	}
+
+	public final AdvancementCriterionContext advancementCriterion() throws RecognitionException {
+		AdvancementCriterionContext _localctx = new AdvancementCriterionContext(_ctx, getState());
+		enterRule(_localctx, 628, RULE_advancementCriterion);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1953);
+			match(FileReference);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AdvancementCriterionBlockContext extends ParserRuleContext {
+		public AdvancementCriterionContext advancementCriterion() {
+			return getRuleContext(AdvancementCriterionContext.class,0);
+		}
+		public List<EqualContext> equal() {
+			return getRuleContexts(EqualContext.class);
+		}
+		public EqualContext equal(int i) {
+			return getRuleContext(EqualContext.class,i);
+		}
+		public BooleanValueContext booleanValue() {
+			return getRuleContext(BooleanValueContext.class,0);
+		}
+		public LeftCurlyBracketContext leftCurlyBracket() {
+			return getRuleContext(LeftCurlyBracketContext.class,0);
+		}
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public RightCurlyBracketContext rightCurlyBracket() {
+			return getRuleContext(RightCurlyBracketContext.class,0);
+		}
+		public AdvancementCriterionBlockContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_advancementCriterionBlock; }
+	}
+
+	public final AdvancementCriterionBlockContext advancementCriterionBlock() throws RecognitionException {
+		AdvancementCriterionBlockContext _localctx = new AdvancementCriterionBlockContext(_ctx, getState());
+		enterRule(_localctx, 630, RULE_advancementCriterionBlock);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1955);
+			advancementCriterion();
+			setState(1956);
+			equal();
+			setState(1964);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case BooleanValue:
+				{
+				setState(1957);
+				booleanValue();
+				}
+				break;
+			case LeftCurlyBracket:
+				{
+				{
+				setState(1958);
+				leftCurlyBracket();
+				setState(1959);
+				identifier();
+				setState(1960);
+				equal();
+				setState(1961);
+				booleanValue();
+				setState(1962);
+				rightCurlyBracket();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AdvancementValueContext extends ParserRuleContext {
+		public TerminalNode CurlyBrackets() { return getToken(MCCommandParser.CurlyBrackets, 0); }
+		public LeftCurlyBracketContext leftCurlyBracket() {
+			return getRuleContext(LeftCurlyBracketContext.class,0);
+		}
+		public List<AdvancementCriterionBlockContext> advancementCriterionBlock() {
+			return getRuleContexts(AdvancementCriterionBlockContext.class);
+		}
+		public AdvancementCriterionBlockContext advancementCriterionBlock(int i) {
+			return getRuleContext(AdvancementCriterionBlockContext.class,i);
+		}
+		public RightCurlyBracketContext rightCurlyBracket() {
+			return getRuleContext(RightCurlyBracketContext.class,0);
+		}
+		public List<TerminalNode> Comma() { return getTokens(MCCommandParser.Comma); }
+		public TerminalNode Comma(int i) {
+			return getToken(MCCommandParser.Comma, i);
+		}
+		public AdvancementValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_advancementValue; }
+	}
+
+	public final AdvancementValueContext advancementValue() throws RecognitionException {
+		AdvancementValueContext _localctx = new AdvancementValueContext(_ctx, getState());
+		enterRule(_localctx, 632, RULE_advancementValue);
+		int _la;
+		try {
+			setState(1978);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case CurlyBrackets:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1966);
+				match(CurlyBrackets);
+				}
+				break;
+			case LeftCurlyBracket:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1967);
+				leftCurlyBracket();
+				setState(1968);
+				advancementCriterionBlock();
+				setState(1973);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				while (_la==Comma) {
+					{
+					{
+					setState(1969);
+					match(Comma);
+					setState(1970);
+					advancementCriterionBlock();
+					}
+					}
+					setState(1975);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+				}
+				setState(1976);
+				rightCurlyBracket();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AdvancementModesContext extends ParserRuleContext {
+		public EverythingContext everything() {
+			return getRuleContext(EverythingContext.class,0);
+		}
+		public OnlyContext only() {
+			return getRuleContext(OnlyContext.class,0);
+		}
+		public AdvancementCriterionContext advancementCriterion() {
+			return getRuleContext(AdvancementCriterionContext.class,0);
+		}
+		public FromContext from() {
+			return getRuleContext(FromContext.class,0);
+		}
+		public ThroughContext through() {
+			return getRuleContext(ThroughContext.class,0);
+		}
+		public UntilContext until() {
+			return getRuleContext(UntilContext.class,0);
+		}
+		public AdvancementModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_advancementModes; }
+	}
+
+	public final AdvancementModesContext advancementModes() throws RecognitionException {
+		AdvancementModesContext _localctx = new AdvancementModesContext(_ctx, getState());
+		enterRule(_localctx, 634, RULE_advancementModes);
+		try {
+			setState(1995);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Everything:
+			case Only:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(1984);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Everything:
+					{
+					setState(1980);
+					everything();
+					}
+					break;
+				case Only:
+					{
+					{
+					setState(1981);
+					only();
+					setState(1982);
+					advancementCriterion();
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			case From:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(1986);
+				from();
+				setState(1987);
+				advancementCriterion();
+				}
+				}
+				break;
+			case Through:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(1989);
+				through();
+				setState(1990);
+				advancementCriterion();
+				}
+				}
+				break;
+			case Until:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(1992);
+				until();
+				setState(1993);
+				advancementCriterion();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AttributeRadicalContext extends ParserRuleContext {
+		public AttributeKeyContext attributeKey() {
+			return getRuleContext(AttributeKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public MobAttributeContext mobAttribute() {
+			return getRuleContext(MobAttributeContext.class,0);
+		}
+		public AttributeOptionsContext attributeOptions() {
+			return getRuleContext(AttributeOptionsContext.class,0);
+		}
+		public AttributeRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_attributeRadical; }
+	}
+
+	public final AttributeRadicalContext attributeRadical() throws RecognitionException {
+		AttributeRadicalContext _localctx = new AttributeRadicalContext(_ctx, getState());
+		enterRule(_localctx, 636, RULE_attributeRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1997);
+			attributeKey();
+			setState(1998);
+			selector();
+			setState(1999);
+			mobAttribute();
+			setState(2000);
+			attributeOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AttributeOptionsContext extends ParserRuleContext {
+		public BaseContext base() {
+			return getRuleContext(BaseContext.class,0);
+		}
+		public BaseModifierContext baseModifier() {
+			return getRuleContext(BaseModifierContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public GetContext get() {
+			return getRuleContext(GetContext.class,0);
+		}
+		public ModifierContext modifier() {
+			return getRuleContext(ModifierContext.class,0);
+		}
+		public ModifierOptionsContext modifierOptions() {
+			return getRuleContext(ModifierOptionsContext.class,0);
+		}
+		public AttributeOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_attributeOptions; }
+	}
+
+	public final AttributeOptionsContext attributeOptions() throws RecognitionException {
+		AttributeOptionsContext _localctx = new AttributeOptionsContext(_ctx, getState());
+		enterRule(_localctx, 638, RULE_attributeOptions);
+		try {
+			setState(2012);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Base:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2002);
+				base();
+				setState(2003);
+				baseModifier();
+				setState(2004);
+				match(Double);
+				}
+				}
+				break;
+			case Get:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2006);
+				get();
+				setState(2007);
+				match(Double);
+				}
+				}
+				break;
+			case Modifier:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2009);
+				modifier();
+				setState(2010);
+				modifierOptions();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BaseModifierContext extends ParserRuleContext {
+		public GetContext get() {
+			return getRuleContext(GetContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public BaseModifierContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_baseModifier; }
+	}
+
+	public final BaseModifierContext baseModifier() throws RecognitionException {
+		BaseModifierContext _localctx = new BaseModifierContext(_ctx, getState());
+		enterRule(_localctx, 640, RULE_baseModifier);
+		try {
+			setState(2016);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Get:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2014);
+				get();
+				}
+				break;
+			case Set:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2015);
+				set();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ModifierOptionsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public UuidContext uuid() {
+			return getRuleContext(UuidContext.class,0);
+		}
+		public StringValueContext stringValue() {
+			return getRuleContext(StringValueContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public ModifierModesContext modifierModes() {
+			return getRuleContext(ModifierModesContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public ValueContext value() {
+			return getRuleContext(ValueContext.class,0);
+		}
+		public GetContext get() {
+			return getRuleContext(GetContext.class,0);
+		}
+		public ModifierOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_modifierOptions; }
+	}
+
+	public final ModifierOptionsContext modifierOptions() throws RecognitionException {
+		ModifierOptionsContext _localctx = new ModifierOptionsContext(_ctx, getState());
+		enterRule(_localctx, 642, RULE_modifierOptions);
+		try {
+			setState(2032);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2018);
+				add();
+				setState(2019);
+				uuid();
+				setState(2020);
+				stringValue();
+				setState(2021);
+				match(Double);
+				setState(2022);
+				modifierModes();
+				}
+				}
+				break;
+			case Remove:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2024);
+				remove();
+				setState(2025);
+				uuid();
+				}
+				}
+				break;
+			case Value:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2027);
+				value();
+				setState(2028);
+				get();
+				setState(2029);
+				uuid();
+				setState(2030);
+				match(Double);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ModifierModesContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public MultiplyContext multiply() {
+			return getRuleContext(MultiplyContext.class,0);
+		}
+		public Multiply_baseContext multiply_base() {
+			return getRuleContext(Multiply_baseContext.class,0);
+		}
+		public ModifierModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_modifierModes; }
+	}
+
+	public final ModifierModesContext modifierModes() throws RecognitionException {
+		ModifierModesContext _localctx = new ModifierModesContext(_ctx, getState());
+		enterRule(_localctx, 644, RULE_modifierModes);
+		try {
+			setState(2037);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2034);
+				add();
+				}
+				break;
+			case Multiply:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2035);
+				multiply();
+				}
+				break;
+			case Multiply_Base:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2036);
+				multiply_base();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarRadicalContext extends ParserRuleContext {
+		public BossbarKeyContext bossbarKey() {
+			return getRuleContext(BossbarKeyContext.class,0);
+		}
+		public BossbarOptionsContext bossbarOptions() {
+			return getRuleContext(BossbarOptionsContext.class,0);
+		}
+		public BossbarRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarRadical; }
+	}
+
+	public final BossbarRadicalContext bossbarRadical() throws RecognitionException {
+		BossbarRadicalContext _localctx = new BossbarRadicalContext(_ctx, getState());
+		enterRule(_localctx, 646, RULE_bossbarRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2039);
+			bossbarKey();
+			setState(2040);
+			bossbarOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarIDContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public BossbarIDContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarID; }
+	}
+
+	public final BossbarIDContext bossbarID() throws RecognitionException {
+		BossbarIDContext _localctx = new BossbarIDContext(_ctx, getState());
+		enterRule(_localctx, 648, RULE_bossbarID);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2042);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarIdStringContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public BossbarIdStringContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarIdString; }
+	}
+
+	public final BossbarIdStringContext bossbarIdString() throws RecognitionException {
+		BossbarIdStringContext _localctx = new BossbarIdStringContext(_ctx, getState());
+		enterRule(_localctx, 650, RULE_bossbarIdString);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2044);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarOptionsContext extends ParserRuleContext {
+		public ListKeyContext listKey() {
+			return getRuleContext(ListKeyContext.class,0);
+		}
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public BossbarIdStringContext bossbarIdString() {
+			return getRuleContext(BossbarIdStringContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public GetContext get() {
+			return getRuleContext(GetContext.class,0);
+		}
+		public BossbarIDContext bossbarID() {
+			return getRuleContext(BossbarIDContext.class,0);
+		}
+		public BossbarGetTargetContext bossbarGetTarget() {
+			return getRuleContext(BossbarGetTargetContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public BossbarAttributesContext bossbarAttributes() {
+			return getRuleContext(BossbarAttributesContext.class,0);
+		}
+		public BossbarOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarOptions; }
+	}
+
+	public final BossbarOptionsContext bossbarOptions() throws RecognitionException {
+		BossbarOptionsContext _localctx = new BossbarOptionsContext(_ctx, getState());
+		enterRule(_localctx, 652, RULE_bossbarOptions);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2062);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				{
+				{
+				setState(2046);
+				add();
+				setState(2047);
+				bossbarIdString();
+				setState(2048);
+				jsonComponent();
+				}
+				}
+				break;
+			case Get:
+				{
+				{
+				setState(2050);
+				get();
+				setState(2051);
+				bossbarID();
+				setState(2052);
+				bossbarGetTarget();
+				}
+				}
+				break;
+			case ListKey:
+				{
+				setState(2054);
+				listKey();
+				}
+				break;
+			case Remove:
+				{
+				{
+				setState(2055);
+				remove();
+				setState(2056);
+				bossbarID();
+				}
+				}
+				break;
+			case Set:
+				{
+				{
+				setState(2058);
+				set();
+				setState(2059);
+				bossbarID();
+				setState(2060);
+				bossbarAttributes();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarStyleContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public BossbarStyleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarStyle; }
+	}
+
+	public final BossbarStyleContext bossbarStyle() throws RecognitionException {
+		BossbarStyleContext _localctx = new BossbarStyleContext(_ctx, getState());
+		enterRule(_localctx, 654, RULE_bossbarStyle);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2064);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarColorContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public BossbarColorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarColor; }
+	}
+
+	public final BossbarColorContext bossbarColor() throws RecognitionException {
+		BossbarColorContext _localctx = new BossbarColorContext(_ctx, getState());
+		enterRule(_localctx, 656, RULE_bossbarColor);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2066);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarGetTargetContext extends ParserRuleContext {
+		public MaxContext max() {
+			return getRuleContext(MaxContext.class,0);
+		}
+		public PlayersContext players() {
+			return getRuleContext(PlayersContext.class,0);
+		}
+		public ValueContext value() {
+			return getRuleContext(ValueContext.class,0);
+		}
+		public VisibleContext visible() {
+			return getRuleContext(VisibleContext.class,0);
+		}
+		public BossbarGetTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarGetTarget; }
+	}
+
+	public final BossbarGetTargetContext bossbarGetTarget() throws RecognitionException {
+		BossbarGetTargetContext _localctx = new BossbarGetTargetContext(_ctx, getState());
+		enterRule(_localctx, 658, RULE_bossbarGetTarget);
+		try {
+			setState(2072);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Max:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2068);
+				max();
+				}
+				break;
+			case Players:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2069);
+				players();
+				}
+				break;
+			case Value:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2070);
+				value();
+				}
+				break;
+			case Visible:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(2071);
+				visible();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BossbarAttributesContext extends ParserRuleContext {
+		public ColorContext color() {
+			return getRuleContext(ColorContext.class,0);
+		}
+		public BossbarColorContext bossbarColor() {
+			return getRuleContext(BossbarColorContext.class,0);
+		}
+		public MaxContext max() {
+			return getRuleContext(MaxContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public NameContext name() {
+			return getRuleContext(NameContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public PlayersContext players() {
+			return getRuleContext(PlayersContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public StyleContext style() {
+			return getRuleContext(StyleContext.class,0);
+		}
+		public BossbarStyleContext bossbarStyle() {
+			return getRuleContext(BossbarStyleContext.class,0);
+		}
+		public ValueContext value() {
+			return getRuleContext(ValueContext.class,0);
+		}
+		public VisibleContext visible() {
+			return getRuleContext(VisibleContext.class,0);
+		}
+		public BoolContext bool() {
+			return getRuleContext(BoolContext.class,0);
+		}
+		public BossbarAttributesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_bossbarAttributes; }
+	}
+
+	public final BossbarAttributesContext bossbarAttributes() throws RecognitionException {
+		BossbarAttributesContext _localctx = new BossbarAttributesContext(_ctx, getState());
+		enterRule(_localctx, 660, RULE_bossbarAttributes);
+		try {
+			setState(2095);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Color:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2074);
+				color();
+				setState(2075);
+				bossbarColor();
+				}
+				}
+				break;
+			case Max:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2077);
+				max();
+				setState(2078);
+				integer();
+				}
+				}
+				break;
+			case Name:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2080);
+				name();
+				setState(2081);
+				jsonComponent();
+				}
+				}
+				break;
+			case Players:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2083);
+				players();
+				setState(2084);
+				selector();
+				}
+				}
+				break;
+			case Style:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(2086);
+				style();
+				setState(2087);
+				bossbarStyle();
+				}
+				}
+				break;
+			case Value:
+				enterOuterAlt(_localctx, 6);
+				{
+				{
+				setState(2089);
+				value();
+				setState(2090);
+				integer();
+				}
+				}
+				break;
+			case Visible:
+				enterOuterAlt(_localctx, 7);
+				{
+				{
+				setState(2092);
+				visible();
+				setState(2093);
+				bool();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ClearRadicalContext extends ParserRuleContext {
+		public ClearKeyContext clearKey() {
+			return getRuleContext(ClearKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ItemIdContext itemId() {
+			return getRuleContext(ItemIdContext.class,0);
+		}
+		public CountContext count() {
+			return getRuleContext(CountContext.class,0);
+		}
+		public ClearRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_clearRadical; }
+	}
+
+	public final ClearRadicalContext clearRadical() throws RecognitionException {
+		ClearRadicalContext _localctx = new ClearRadicalContext(_ctx, getState());
+		enterRule(_localctx, 662, RULE_clearRadical);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2097);
+			clearKey();
+			setState(2105);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==AtChar || _la==Identifier) {
+				{
+				setState(2098);
+				selector();
+				setState(2100);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ResourceLocation) {
+					{
+					setState(2099);
+					itemId();
+					}
+				}
+
+				setState(2103);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==Integer) {
+					{
+					setState(2102);
+					count();
+					}
+				}
+
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CountContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public CountContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_count; }
+	}
+
+	public final CountContext count() throws RecognitionException {
+		CountContext _localctx = new CountContext(_ctx, getState());
+		enterRule(_localctx, 664, RULE_count);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2107);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneRadicalContext extends ParserRuleContext {
+		public CloneKeyContext cloneKey() {
+			return getRuleContext(CloneKeyContext.class,0);
+		}
+		public CloneSourceContext cloneSource() {
+			return getRuleContext(CloneSourceContext.class,0);
+		}
+		public CloneDestinationContext cloneDestination() {
+			return getRuleContext(CloneDestinationContext.class,0);
+		}
+		public CloneModeContext cloneMode() {
+			return getRuleContext(CloneModeContext.class,0);
+		}
+		public CloneRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneRadical; }
+	}
+
+	public final CloneRadicalContext cloneRadical() throws RecognitionException {
+		CloneRadicalContext _localctx = new CloneRadicalContext(_ctx, getState());
+		enterRule(_localctx, 666, RULE_cloneRadical);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2109);
+			cloneKey();
+			setState(2110);
+			cloneSource();
+			setState(2111);
+			cloneDestination();
+			setState(2113);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (((((_la - 123)) & ~0x3f) == 0 && ((1L << (_la - 123)) & 7L) != 0)) {
+				{
+				setState(2112);
+				cloneMode();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneSourceContext extends ParserRuleContext {
+		public CloneBeginContext cloneBegin() {
+			return getRuleContext(CloneBeginContext.class,0);
+		}
+		public CloneEndContext cloneEnd() {
+			return getRuleContext(CloneEndContext.class,0);
+		}
+		public FromContext from() {
+			return getRuleContext(FromContext.class,0);
+		}
+		public DimensionIdContext dimensionId() {
+			return getRuleContext(DimensionIdContext.class,0);
+		}
+		public CloneSourceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneSource; }
+	}
+
+	public final CloneSourceContext cloneSource() throws RecognitionException {
+		CloneSourceContext _localctx = new CloneSourceContext(_ctx, getState());
+		enterRule(_localctx, 668, RULE_cloneSource);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2118);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==From) {
+				{
+				setState(2115);
+				from();
+				setState(2116);
+				dimensionId();
+				}
+			}
+
+			setState(2120);
+			cloneBegin();
+			setState(2121);
+			cloneEnd();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneBeginContext extends ParserRuleContext {
+		public CoordinateXContext coordinateX() {
+			return getRuleContext(CoordinateXContext.class,0);
+		}
+		public CoordinateYContext coordinateY() {
+			return getRuleContext(CoordinateYContext.class,0);
+		}
+		public CoordinateZContext coordinateZ() {
+			return getRuleContext(CoordinateZContext.class,0);
+		}
+		public CloneBeginContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneBegin; }
+	}
+
+	public final CloneBeginContext cloneBegin() throws RecognitionException {
+		CloneBeginContext _localctx = new CloneBeginContext(_ctx, getState());
+		enterRule(_localctx, 670, RULE_cloneBegin);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2123);
+			coordinateX();
+			setState(2124);
+			coordinateY();
+			setState(2125);
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneEndContext extends ParserRuleContext {
+		public CoordinateXContext coordinateX() {
+			return getRuleContext(CoordinateXContext.class,0);
+		}
+		public CoordinateYContext coordinateY() {
+			return getRuleContext(CoordinateYContext.class,0);
+		}
+		public CoordinateZContext coordinateZ() {
+			return getRuleContext(CoordinateZContext.class,0);
+		}
+		public CloneEndContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneEnd; }
+	}
+
+	public final CloneEndContext cloneEnd() throws RecognitionException {
+		CloneEndContext _localctx = new CloneEndContext(_ctx, getState());
+		enterRule(_localctx, 672, RULE_cloneEnd);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2127);
+			coordinateX();
+			setState(2128);
+			coordinateY();
+			setState(2129);
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneDestinationContext extends ParserRuleContext {
+		public DestinationPosContext destinationPos() {
+			return getRuleContext(DestinationPosContext.class,0);
+		}
+		public ToContext to() {
+			return getRuleContext(ToContext.class,0);
+		}
+		public DimensionIdContext dimensionId() {
+			return getRuleContext(DimensionIdContext.class,0);
+		}
+		public CloneDestinationContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneDestination; }
+	}
+
+	public final CloneDestinationContext cloneDestination() throws RecognitionException {
+		CloneDestinationContext _localctx = new CloneDestinationContext(_ctx, getState());
+		enterRule(_localctx, 674, RULE_cloneDestination);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2134);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==To) {
+				{
+				setState(2131);
+				to();
+				setState(2132);
+				dimensionId();
+				}
+			}
+
+			setState(2136);
+			destinationPos();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DestinationPosContext extends ParserRuleContext {
+		public CoordinateXContext coordinateX() {
+			return getRuleContext(CoordinateXContext.class,0);
+		}
+		public CoordinateYContext coordinateY() {
+			return getRuleContext(CoordinateYContext.class,0);
+		}
+		public CoordinateZContext coordinateZ() {
+			return getRuleContext(CoordinateZContext.class,0);
+		}
+		public DestinationPosContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_destinationPos; }
+	}
+
+	public final DestinationPosContext destinationPos() throws RecognitionException {
+		DestinationPosContext _localctx = new DestinationPosContext(_ctx, getState());
+		enterRule(_localctx, 676, RULE_destinationPos);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2138);
+			coordinateX();
+			setState(2139);
+			coordinateY();
+			setState(2140);
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneModeContext extends ParserRuleContext {
+		public CloneBehaviorContext cloneBehavior() {
+			return getRuleContext(CloneBehaviorContext.class,0);
+		}
+		public FilteredContext filtered() {
+			return getRuleContext(FilteredContext.class,0);
+		}
+		public BlockIDContext blockID() {
+			return getRuleContext(BlockIDContext.class,0);
+		}
+		public MaskedContext masked() {
+			return getRuleContext(MaskedContext.class,0);
+		}
+		public ReplaceContext replace() {
+			return getRuleContext(ReplaceContext.class,0);
+		}
+		public CloneModeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneMode; }
+	}
+
+	public final CloneModeContext cloneMode() throws RecognitionException {
+		CloneModeContext _localctx = new CloneModeContext(_ctx, getState());
+		enterRule(_localctx, 678, RULE_cloneMode);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2149);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Filtered:
+				{
+				{
+				setState(2142);
+				filtered();
+				setState(2143);
+				blockID();
+				}
+				}
+				break;
+			case Masked:
+			case Replace:
+				{
+				setState(2147);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Masked:
+					{
+					setState(2145);
+					masked();
+					}
+					break;
+				case Replace:
+					{
+					setState(2146);
+					replace();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(2152);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (((((_la - 126)) & ~0x3f) == 0 && ((1L << (_la - 126)) & 7L) != 0)) {
+				{
+				setState(2151);
+				cloneBehavior();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CloneBehaviorContext extends ParserRuleContext {
+		public ForceContext force() {
+			return getRuleContext(ForceContext.class,0);
+		}
+		public MoveContext move() {
+			return getRuleContext(MoveContext.class,0);
+		}
+		public NormalContext normal() {
+			return getRuleContext(NormalContext.class,0);
+		}
+		public CloneBehaviorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_cloneBehavior; }
+	}
+
+	public final CloneBehaviorContext cloneBehavior() throws RecognitionException {
+		CloneBehaviorContext _localctx = new CloneBehaviorContext(_ctx, getState());
+		enterRule(_localctx, 680, RULE_cloneBehavior);
+		try {
+			setState(2157);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Force:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2154);
+				force();
+				}
+				break;
+			case Move:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2155);
+				move();
+				}
+				break;
+			case Normal:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2156);
+				normal();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DamageRadicalContext extends ParserRuleContext {
+		public DamageKeyContext damageKey() {
+			return getRuleContext(DamageKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public DamageTypeContext damageType() {
+			return getRuleContext(DamageTypeContext.class,0);
+		}
+		public DamageOptionsContext damageOptions() {
+			return getRuleContext(DamageOptionsContext.class,0);
+		}
+		public DamageRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_damageRadical; }
+	}
+
+	public final DamageRadicalContext damageRadical() throws RecognitionException {
+		DamageRadicalContext _localctx = new DamageRadicalContext(_ctx, getState());
+		enterRule(_localctx, 682, RULE_damageRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2159);
+			damageKey();
+			setState(2160);
+			selector();
+			setState(2161);
+			match(Double);
+			setState(2162);
+			damageType();
+			setState(2163);
+			damageOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DamageTypeContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public DamageTypeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_damageType; }
+	}
+
+	public final DamageTypeContext damageType() throws RecognitionException {
+		DamageTypeContext _localctx = new DamageTypeContext(_ctx, getState());
+		enterRule(_localctx, 684, RULE_damageType);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2165);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DamageOptionsContext extends ParserRuleContext {
+		public AtLetterContext atLetter() {
+			return getRuleContext(AtLetterContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ByContext by() {
+			return getRuleContext(ByContext.class,0);
+		}
+		public List<SelectorContext> selector() {
+			return getRuleContexts(SelectorContext.class);
+		}
+		public SelectorContext selector(int i) {
+			return getRuleContext(SelectorContext.class,i);
+		}
+		public FromContext from() {
+			return getRuleContext(FromContext.class,0);
+		}
+		public DamageOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_damageOptions; }
+	}
+
+	public final DamageOptionsContext damageOptions() throws RecognitionException {
+		DamageOptionsContext _localctx = new DamageOptionsContext(_ctx, getState());
+		enterRule(_localctx, 686, RULE_damageOptions);
+		try {
+			setState(2175);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case AtLetter:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2167);
+				atLetter();
+				setState(2168);
+				pos3D();
+				}
+				}
+				break;
+			case By:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2170);
+				by();
+				setState(2171);
+				selector();
+				setState(2172);
+				from();
+				setState(2173);
+				selector();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataRadicalContext extends ParserRuleContext {
+		public DataKeyContext dataKey() {
+			return getRuleContext(DataKeyContext.class,0);
+		}
+		public DataOptionsContext dataOptions() {
+			return getRuleContext(DataOptionsContext.class,0);
+		}
+		public DataRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataRadical; }
+	}
+
+	public final DataRadicalContext dataRadical() throws RecognitionException {
+		DataRadicalContext _localctx = new DataRadicalContext(_ctx, getState());
+		enterRule(_localctx, 688, RULE_dataRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2177);
+			dataKey();
+			setState(2178);
+			dataOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataStringStartContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public DataStringStartContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataStringStart; }
+	}
+
+	public final DataStringStartContext dataStringStart() throws RecognitionException {
+		DataStringStartContext _localctx = new DataStringStartContext(_ctx, getState());
+		enterRule(_localctx, 690, RULE_dataStringStart);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2180);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataStringEndContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public DataStringEndContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataStringEnd; }
+	}
+
+	public final DataStringEndContext dataStringEnd() throws RecognitionException {
+		DataStringEndContext _localctx = new DataStringEndContext(_ctx, getState());
+		enterRule(_localctx, 692, RULE_dataStringEnd);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2182);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EntityNBTPathContext extends ParserRuleContext {
+		public List<TerminalNode> Identifier() { return getTokens(MCCommandParser.Identifier); }
+		public TerminalNode Identifier(int i) {
+			return getToken(MCCommandParser.Identifier, i);
+		}
+		public List<TerminalNode> Dot() { return getTokens(MCCommandParser.Dot); }
+		public TerminalNode Dot(int i) {
+			return getToken(MCCommandParser.Dot, i);
+		}
+		public EntityNBTPathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_entityNBTPath; }
+	}
+
+	public final EntityNBTPathContext entityNBTPath() throws RecognitionException {
+		EntityNBTPathContext _localctx = new EntityNBTPathContext(_ctx, getState());
+		enterRule(_localctx, 694, RULE_entityNBTPath);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2184);
+			match(Identifier);
+			setState(2189);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==Dot) {
+				{
+				{
+				setState(2185);
+				match(Dot);
+				setState(2186);
+				match(Identifier);
+				}
+				}
+				setState(2191);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class BlockNBTPathContext extends ParserRuleContext {
+		public List<TerminalNode> Identifier() { return getTokens(MCCommandParser.Identifier); }
+		public TerminalNode Identifier(int i) {
+			return getToken(MCCommandParser.Identifier, i);
+		}
+		public List<TerminalNode> Dot() { return getTokens(MCCommandParser.Dot); }
+		public TerminalNode Dot(int i) {
+			return getToken(MCCommandParser.Dot, i);
+		}
+		public BlockNBTPathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_blockNBTPath; }
+	}
+
+	public final BlockNBTPathContext blockNBTPath() throws RecognitionException {
+		BlockNBTPathContext _localctx = new BlockNBTPathContext(_ctx, getState());
+		enterRule(_localctx, 696, RULE_blockNBTPath);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2192);
+			match(Identifier);
+			setState(2197);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==Dot) {
+				{
+				{
+				setState(2193);
+				match(Dot);
+				setState(2194);
+				match(Identifier);
+				}
+				}
+				setState(2199);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataOptionsContext extends ParserRuleContext {
+		public GetContext get() {
+			return getRuleContext(GetContext.class,0);
+		}
+		public DataGetTargetContext dataGetTarget() {
+			return getRuleContext(DataGetTargetContext.class,0);
+		}
+		public MergeContext merge() {
+			return getRuleContext(MergeContext.class,0);
+		}
+		public DataMergeTargetContext dataMergeTarget() {
+			return getRuleContext(DataMergeTargetContext.class,0);
+		}
+		public ModifyContext modify() {
+			return getRuleContext(ModifyContext.class,0);
+		}
+		public DataModifyTargetContext dataModifyTarget() {
+			return getRuleContext(DataModifyTargetContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public DataRemoveTargetContext dataRemoveTarget() {
+			return getRuleContext(DataRemoveTargetContext.class,0);
+		}
+		public DataOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataOptions; }
+	}
+
+	public final DataOptionsContext dataOptions() throws RecognitionException {
+		DataOptionsContext _localctx = new DataOptionsContext(_ctx, getState());
+		enterRule(_localctx, 698, RULE_dataOptions);
+		try {
+			setState(2212);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Get:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2200);
+				get();
+				setState(2201);
+				dataGetTarget();
+				}
+				}
+				break;
+			case Merge:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2203);
+				merge();
+				setState(2204);
+				dataMergeTarget();
+				}
+				}
+				break;
+			case Modify:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2206);
+				modify();
+				setState(2207);
+				dataModifyTarget();
+				}
+				}
+				break;
+			case Remove:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2209);
+				remove();
+				setState(2210);
+				dataRemoveTarget();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataGetTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public BlockNBTPathContext blockNBTPath() {
+			return getRuleContext(BlockNBTPathContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EntityNBTPathContext entityNBTPath() {
+			return getRuleContext(EntityNBTPathContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdStringContext storageIdString() {
+			return getRuleContext(StorageIdStringContext.class,0);
+		}
+		public NbtPathContext nbtPath() {
+			return getRuleContext(NbtPathContext.class,0);
+		}
+		public DataGetTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataGetTarget; }
+	}
+
+	public final DataGetTargetContext dataGetTarget() throws RecognitionException {
+		DataGetTargetContext _localctx = new DataGetTargetContext(_ctx, getState());
+		enterRule(_localctx, 700, RULE_dataGetTarget);
+		try {
+			setState(2229);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2214);
+				block();
+				setState(2215);
+				pos3D();
+				setState(2216);
+				blockNBTPath();
+				setState(2217);
+				match(Double);
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2219);
+				entity();
+				setState(2220);
+				selector();
+				setState(2221);
+				entityNBTPath();
+				setState(2222);
+				match(Double);
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2224);
+				storage();
+				setState(2225);
+				storageIdString();
+				setState(2226);
+				nbtPath();
+				setState(2227);
+				match(Double);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataMergeTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public BlockNBTContext blockNBT() {
+			return getRuleContext(BlockNBTContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EntityNBTContext entityNBT() {
+			return getRuleContext(EntityNBTContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdContext storageId() {
+			return getRuleContext(StorageIdContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public DataMergeTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataMergeTarget; }
+	}
+
+	public final DataMergeTargetContext dataMergeTarget() throws RecognitionException {
+		DataMergeTargetContext _localctx = new DataMergeTargetContext(_ctx, getState());
+		enterRule(_localctx, 702, RULE_dataMergeTarget);
+		try {
+			setState(2243);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2231);
+				block();
+				setState(2232);
+				pos3D();
+				setState(2233);
+				blockNBT();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2235);
+				entity();
+				setState(2236);
+				selector();
+				setState(2237);
+				entityNBT();
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2239);
+				storage();
+				setState(2240);
+				storageId();
+				setState(2241);
+				jsonComponent();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataModifyStringTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public BlockNBTPathContext blockNBTPath() {
+			return getRuleContext(BlockNBTPathContext.class,0);
+		}
+		public DataStringStartContext dataStringStart() {
+			return getRuleContext(DataStringStartContext.class,0);
+		}
+		public DataStringEndContext dataStringEnd() {
+			return getRuleContext(DataStringEndContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EntityNBTPathContext entityNBTPath() {
+			return getRuleContext(EntityNBTPathContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdContext storageId() {
+			return getRuleContext(StorageIdContext.class,0);
+		}
+		public NbtPathContext nbtPath() {
+			return getRuleContext(NbtPathContext.class,0);
+		}
+		public DataModifyStringTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataModifyStringTarget; }
+	}
+
+	public final DataModifyStringTargetContext dataModifyStringTarget() throws RecognitionException {
+		DataModifyStringTargetContext _localctx = new DataModifyStringTargetContext(_ctx, getState());
+		enterRule(_localctx, 704, RULE_dataModifyStringTarget);
+		try {
+			setState(2263);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2245);
+				block();
+				setState(2246);
+				pos3D();
+				setState(2247);
+				blockNBTPath();
+				setState(2248);
+				dataStringStart();
+				setState(2249);
+				dataStringEnd();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2251);
+				entity();
+				setState(2252);
+				selector();
+				setState(2253);
+				entityNBTPath();
+				setState(2254);
+				dataStringStart();
+				setState(2255);
+				dataStringEnd();
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2257);
+				storage();
+				setState(2258);
+				storageId();
+				setState(2259);
+				nbtPath();
+				setState(2260);
+				dataStringStart();
+				setState(2261);
+				dataStringEnd();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataModifyFromTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public BlockNBTPathContext blockNBTPath() {
+			return getRuleContext(BlockNBTPathContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EntityNBTPathContext entityNBTPath() {
+			return getRuleContext(EntityNBTPathContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdContext storageId() {
+			return getRuleContext(StorageIdContext.class,0);
+		}
+		public NbtPathContext nbtPath() {
+			return getRuleContext(NbtPathContext.class,0);
+		}
+		public DataModifyFromTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataModifyFromTarget; }
+	}
+
+	public final DataModifyFromTargetContext dataModifyFromTarget() throws RecognitionException {
+		DataModifyFromTargetContext _localctx = new DataModifyFromTargetContext(_ctx, getState());
+		enterRule(_localctx, 706, RULE_dataModifyFromTarget);
+		try {
+			setState(2277);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2265);
+				block();
+				setState(2266);
+				pos3D();
+				setState(2267);
+				blockNBTPath();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2269);
+				entity();
+				setState(2270);
+				selector();
+				setState(2271);
+				entityNBTPath();
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2273);
+				storage();
+				setState(2274);
+				storageId();
+				setState(2275);
+				nbtPath();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataModifyBehaviorsContext extends ParserRuleContext {
+		public FromContext from() {
+			return getRuleContext(FromContext.class,0);
+		}
+		public DataModifyFromTargetContext dataModifyFromTarget() {
+			return getRuleContext(DataModifyFromTargetContext.class,0);
+		}
+		public StringKeyContext stringKey() {
+			return getRuleContext(StringKeyContext.class,0);
+		}
+		public DataModifyStringTargetContext dataModifyStringTarget() {
+			return getRuleContext(DataModifyStringTargetContext.class,0);
+		}
+		public ValueContext value() {
+			return getRuleContext(ValueContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public DataModifyBehaviorsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataModifyBehaviors; }
+	}
+
+	public final DataModifyBehaviorsContext dataModifyBehaviors() throws RecognitionException {
+		DataModifyBehaviorsContext _localctx = new DataModifyBehaviorsContext(_ctx, getState());
+		enterRule(_localctx, 708, RULE_dataModifyBehaviors);
+		try {
+			setState(2288);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case From:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2279);
+				from();
+				setState(2280);
+				dataModifyFromTarget();
+				}
+				}
+				break;
+			case StringKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2282);
+				stringKey();
+				setState(2283);
+				dataModifyStringTarget();
+				}
+				}
+				break;
+			case Value:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2285);
+				value();
+				setState(2286);
+				jsonComponent();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataModifyOptionsContext extends ParserRuleContext {
+		public AppendContext append() {
+			return getRuleContext(AppendContext.class,0);
+		}
+		public DataModifyBehaviorsContext dataModifyBehaviors() {
+			return getRuleContext(DataModifyBehaviorsContext.class,0);
+		}
+		public InsertContext insert() {
+			return getRuleContext(InsertContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public MergeContext merge() {
+			return getRuleContext(MergeContext.class,0);
+		}
+		public PrependContext prepend() {
+			return getRuleContext(PrependContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public DataModifyOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataModifyOptions; }
+	}
+
+	public final DataModifyOptionsContext dataModifyOptions() throws RecognitionException {
+		DataModifyOptionsContext _localctx = new DataModifyOptionsContext(_ctx, getState());
+		enterRule(_localctx, 710, RULE_dataModifyOptions);
+		try {
+			setState(2306);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Append:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2290);
+				append();
+				setState(2291);
+				dataModifyBehaviors();
+				}
+				}
+				break;
+			case Insert:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2293);
+				insert();
+				setState(2294);
+				integer();
+				setState(2295);
+				dataModifyBehaviors();
+				}
+				}
+				break;
+			case Merge:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2297);
+				merge();
+				setState(2298);
+				dataModifyBehaviors();
+				}
+				}
+				break;
+			case Prepend:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2300);
+				prepend();
+				setState(2301);
+				dataModifyBehaviors();
+				}
+				}
+				break;
+			case Set:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(2303);
+				set();
+				setState(2304);
+				dataModifyBehaviors();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataModifyTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public BlockNBTPathContext blockNBTPath() {
+			return getRuleContext(BlockNBTPathContext.class,0);
+		}
+		public DataModifyOptionsContext dataModifyOptions() {
+			return getRuleContext(DataModifyOptionsContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EntityNBTPathContext entityNBTPath() {
+			return getRuleContext(EntityNBTPathContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdContext storageId() {
+			return getRuleContext(StorageIdContext.class,0);
+		}
+		public NbtPathContext nbtPath() {
+			return getRuleContext(NbtPathContext.class,0);
+		}
+		public DataModifyTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataModifyTarget; }
+	}
+
+	public final DataModifyTargetContext dataModifyTarget() throws RecognitionException {
+		DataModifyTargetContext _localctx = new DataModifyTargetContext(_ctx, getState());
+		enterRule(_localctx, 712, RULE_dataModifyTarget);
+		try {
+			setState(2323);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2308);
+				block();
+				setState(2309);
+				pos3D();
+				setState(2310);
+				blockNBTPath();
+				setState(2311);
+				dataModifyOptions();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2313);
+				entity();
+				setState(2314);
+				selector();
+				setState(2315);
+				entityNBTPath();
+				setState(2316);
+				dataModifyOptions();
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2318);
+				storage();
+				setState(2319);
+				storageId();
+				setState(2320);
+				nbtPath();
+				setState(2321);
+				dataModifyOptions();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DataRemoveTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public BlockNBTPathContext blockNBTPath() {
+			return getRuleContext(BlockNBTPathContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EntityNBTPathContext entityNBTPath() {
+			return getRuleContext(EntityNBTPathContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdStringContext storageIdString() {
+			return getRuleContext(StorageIdStringContext.class,0);
+		}
+		public NbtPathContext nbtPath() {
+			return getRuleContext(NbtPathContext.class,0);
+		}
+		public DataRemoveTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_dataRemoveTarget; }
+	}
+
+	public final DataRemoveTargetContext dataRemoveTarget() throws RecognitionException {
+		DataRemoveTargetContext _localctx = new DataRemoveTargetContext(_ctx, getState());
+		enterRule(_localctx, 714, RULE_dataRemoveTarget);
+		try {
+			setState(2337);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2325);
+				block();
+				setState(2326);
+				pos3D();
+				setState(2327);
+				blockNBTPath();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2329);
+				entity();
+				setState(2330);
+				selector();
+				setState(2331);
+				entityNBTPath();
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2333);
+				storage();
+				setState(2334);
+				storageIdString();
+				setState(2335);
+				nbtPath();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DatapackRadicalContext extends ParserRuleContext {
+		public DatapackKeyContext datapackKey() {
+			return getRuleContext(DatapackKeyContext.class,0);
+		}
+		public DatapackOptionsContext datapackOptions() {
+			return getRuleContext(DatapackOptionsContext.class,0);
+		}
+		public DatapackRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_datapackRadical; }
+	}
+
+	public final DatapackRadicalContext datapackRadical() throws RecognitionException {
+		DatapackRadicalContext _localctx = new DatapackRadicalContext(_ctx, getState());
+		enterRule(_localctx, 716, RULE_datapackRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2339);
+			datapackKey();
+			setState(2340);
+			datapackOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DatapackStateContext extends ParserRuleContext {
+		public AvailableContext available() {
+			return getRuleContext(AvailableContext.class,0);
+		}
+		public EnableContext enable() {
+			return getRuleContext(EnableContext.class,0);
+		}
+		public DatapackStateContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_datapackState; }
+	}
+
+	public final DatapackStateContext datapackState() throws RecognitionException {
+		DatapackStateContext _localctx = new DatapackStateContext(_ctx, getState());
+		enterRule(_localctx, 718, RULE_datapackState);
+		try {
+			setState(2344);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Available:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2342);
+				available();
+				}
+				break;
+			case Enable:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2343);
+				enable();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DatapackIdContext extends ParserRuleContext {
+		public TerminalNode String() { return getToken(MCCommandParser.String, 0); }
+		public DatapackIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_datapackId; }
+	}
+
+	public final DatapackIdContext datapackId() throws RecognitionException {
+		DatapackIdContext _localctx = new DatapackIdContext(_ctx, getState());
+		enterRule(_localctx, 720, RULE_datapackId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2346);
+			match(String);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DatapackBehaviorsContext extends ParserRuleContext {
+		public AfterContext after() {
+			return getRuleContext(AfterContext.class,0);
+		}
+		public DatapackIdContext datapackId() {
+			return getRuleContext(DatapackIdContext.class,0);
+		}
+		public BeforeContext before() {
+			return getRuleContext(BeforeContext.class,0);
+		}
+		public FirstContext first() {
+			return getRuleContext(FirstContext.class,0);
+		}
+		public LastContext last() {
+			return getRuleContext(LastContext.class,0);
+		}
+		public DatapackBehaviorsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_datapackBehaviors; }
+	}
+
+	public final DatapackBehaviorsContext datapackBehaviors() throws RecognitionException {
+		DatapackBehaviorsContext _localctx = new DatapackBehaviorsContext(_ctx, getState());
+		enterRule(_localctx, 722, RULE_datapackBehaviors);
+		try {
+			setState(2356);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case After:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2348);
+				after();
+				setState(2349);
+				datapackId();
+				}
+				}
+				break;
+			case Before:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2351);
+				before();
+				setState(2352);
+				datapackId();
+				}
+				}
+				break;
+			case First:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2354);
+				first();
+				}
+				break;
+			case Last:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(2355);
+				last();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DatapackOptionsContext extends ParserRuleContext {
+		public DisableContext disable() {
+			return getRuleContext(DisableContext.class,0);
+		}
+		public DatapackIdContext datapackId() {
+			return getRuleContext(DatapackIdContext.class,0);
+		}
+		public EnableContext enable() {
+			return getRuleContext(EnableContext.class,0);
+		}
+		public DatapackBehaviorsContext datapackBehaviors() {
+			return getRuleContext(DatapackBehaviorsContext.class,0);
+		}
+		public ListKeyContext listKey() {
+			return getRuleContext(ListKeyContext.class,0);
+		}
+		public DatapackStateContext datapackState() {
+			return getRuleContext(DatapackStateContext.class,0);
+		}
+		public DatapackOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_datapackOptions; }
+	}
+
+	public final DatapackOptionsContext datapackOptions() throws RecognitionException {
+		DatapackOptionsContext _localctx = new DatapackOptionsContext(_ctx, getState());
+		enterRule(_localctx, 724, RULE_datapackOptions);
+		try {
+			setState(2368);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Disable:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2358);
+				disable();
+				setState(2359);
+				datapackId();
+				}
+				}
+				break;
+			case Enable:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2361);
+				enable();
+				setState(2362);
+				datapackId();
+				setState(2363);
+				datapackBehaviors();
+				}
+				}
+				break;
+			case ListKey:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2365);
+				listKey();
+				setState(2366);
+				datapackState();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DebugRadicalContext extends ParserRuleContext {
+		public DebugKeyContext debugKey() {
+			return getRuleContext(DebugKeyContext.class,0);
+		}
+		public DebugOptionsContext debugOptions() {
+			return getRuleContext(DebugOptionsContext.class,0);
+		}
+		public DebugRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_debugRadical; }
+	}
+
+	public final DebugRadicalContext debugRadical() throws RecognitionException {
+		DebugRadicalContext _localctx = new DebugRadicalContext(_ctx, getState());
+		enterRule(_localctx, 726, RULE_debugRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2370);
+			debugKey();
+			setState(2371);
+			debugOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DebugOptionsContext extends ParserRuleContext {
+		public FunctionKeyContext functionKey() {
+			return getRuleContext(FunctionKeyContext.class,0);
+		}
+		public DatapackIdContext datapackId() {
+			return getRuleContext(DatapackIdContext.class,0);
+		}
+		public StartContext start() {
+			return getRuleContext(StartContext.class,0);
+		}
+		public StopContext stop() {
+			return getRuleContext(StopContext.class,0);
+		}
+		public DebugOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_debugOptions; }
+	}
+
+	public final DebugOptionsContext debugOptions() throws RecognitionException {
+		DebugOptionsContext _localctx = new DebugOptionsContext(_ctx, getState());
+		enterRule(_localctx, 728, RULE_debugOptions);
+		try {
+			setState(2378);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case FunctionKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2373);
+				functionKey();
+				setState(2374);
+				datapackId();
+				}
+				}
+				break;
+			case Start:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2376);
+				start();
+				}
+				break;
+			case Stop:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2377);
+				stop();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DefaultgamemodeRadicalContext extends ParserRuleContext {
+		public DefaultgamemodeKeyContext defaultgamemodeKey() {
+			return getRuleContext(DefaultgamemodeKeyContext.class,0);
+		}
+		public GamemodeValueContext gamemodeValue() {
+			return getRuleContext(GamemodeValueContext.class,0);
+		}
+		public DefaultgamemodeRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_defaultgamemodeRadical; }
+	}
+
+	public final DefaultgamemodeRadicalContext defaultgamemodeRadical() throws RecognitionException {
+		DefaultgamemodeRadicalContext _localctx = new DefaultgamemodeRadicalContext(_ctx, getState());
+		enterRule(_localctx, 730, RULE_defaultgamemodeRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2380);
+			defaultgamemodeKey();
+			setState(2381);
+			gamemodeValue();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DifficultyRadicalContext extends ParserRuleContext {
+		public DifficultyKeyContext difficultyKey() {
+			return getRuleContext(DifficultyKeyContext.class,0);
+		}
+		public DifficultyValuesContext difficultyValues() {
+			return getRuleContext(DifficultyValuesContext.class,0);
+		}
+		public DifficultyRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_difficultyRadical; }
+	}
+
+	public final DifficultyRadicalContext difficultyRadical() throws RecognitionException {
+		DifficultyRadicalContext _localctx = new DifficultyRadicalContext(_ctx, getState());
+		enterRule(_localctx, 732, RULE_difficultyRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2383);
+			difficultyKey();
+			setState(2384);
+			difficultyValues();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class DifficultyValuesContext extends ParserRuleContext {
+		public EasyContext easy() {
+			return getRuleContext(EasyContext.class,0);
+		}
+		public HardContext hard() {
+			return getRuleContext(HardContext.class,0);
+		}
+		public NormalContext normal() {
+			return getRuleContext(NormalContext.class,0);
+		}
+		public PeacefulContext peaceful() {
+			return getRuleContext(PeacefulContext.class,0);
+		}
+		public DifficultyValuesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_difficultyValues; }
+	}
+
+	public final DifficultyValuesContext difficultyValues() throws RecognitionException {
+		DifficultyValuesContext _localctx = new DifficultyValuesContext(_ctx, getState());
+		enterRule(_localctx, 734, RULE_difficultyValues);
+		try {
+			setState(2390);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Easy:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2386);
+				easy();
+				}
+				break;
+			case Hard:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2387);
+				hard();
+				}
+				break;
+			case Normal:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2388);
+				normal();
+				}
+				break;
+			case Peaceful:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(2389);
+				peaceful();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EffectRadicalContext extends ParserRuleContext {
+		public EffectKeyContext effectKey() {
+			return getRuleContext(EffectKeyContext.class,0);
+		}
+		public EffectOptionContext effectOption() {
+			return getRuleContext(EffectOptionContext.class,0);
+		}
+		public EffectRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_effectRadical; }
+	}
+
+	public final EffectRadicalContext effectRadical() throws RecognitionException {
+		EffectRadicalContext _localctx = new EffectRadicalContext(_ctx, getState());
+		enterRule(_localctx, 736, RULE_effectRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2392);
+			effectKey();
+			setState(2393);
+			effectOption();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EffectOptionContext extends ParserRuleContext {
+		public ClearKeyContext clearKey() {
+			return getRuleContext(ClearKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EffectIDContext effectID() {
+			return getRuleContext(EffectIDContext.class,0);
+		}
+		public GiveKeyContext giveKey() {
+			return getRuleContext(GiveKeyContext.class,0);
+		}
+		public EffectTimeContext effectTime() {
+			return getRuleContext(EffectTimeContext.class,0);
+		}
+		public InfiniteContext infinite() {
+			return getRuleContext(InfiniteContext.class,0);
+		}
+		public AmplifierContext amplifier() {
+			return getRuleContext(AmplifierContext.class,0);
+		}
+		public HideParticlesContext hideParticles() {
+			return getRuleContext(HideParticlesContext.class,0);
+		}
+		public EffectOptionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_effectOption; }
+	}
+
+	public final EffectOptionContext effectOption() throws RecognitionException {
+		EffectOptionContext _localctx = new EffectOptionContext(_ctx, getState());
+		enterRule(_localctx, 738, RULE_effectOption);
+		int _la;
+		try {
+			setState(2413);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case ClearKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2395);
+				clearKey();
+				setState(2400);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==AtChar || _la==Identifier) {
+					{
+					setState(2396);
+					selector();
+					setState(2398);
+					_errHandler.sync(this);
+					_la = _input.LA(1);
+					if (_la==ResourceLocation) {
+						{
+						setState(2397);
+						effectID();
+						}
+					}
+
+					}
+				}
+
+				}
+				}
+				break;
+			case GiveKey:
+			case Infinite:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2411);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case GiveKey:
+					{
+					setState(2402);
+					giveKey();
+					setState(2403);
+					selector();
+					setState(2404);
+					effectID();
+					setState(2405);
+					effectTime();
+					}
+					break;
+				case Infinite:
+					{
+					setState(2407);
+					infinite();
+					setState(2408);
+					amplifier();
+					setState(2409);
+					hideParticles();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EffectIDContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public EffectIDContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_effectID; }
+	}
+
+	public final EffectIDContext effectID() throws RecognitionException {
+		EffectIDContext _localctx = new EffectIDContext(_ctx, getState());
+		enterRule(_localctx, 740, RULE_effectID);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2415);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EffectTimeContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public EffectTimeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_effectTime; }
+	}
+
+	public final EffectTimeContext effectTime() throws RecognitionException {
+		EffectTimeContext _localctx = new EffectTimeContext(_ctx, getState());
+		enterRule(_localctx, 742, RULE_effectTime);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2417);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SecondsContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public SecondsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_seconds; }
+	}
+
+	public final SecondsContext seconds() throws RecognitionException {
+		SecondsContext _localctx = new SecondsContext(_ctx, getState());
+		enterRule(_localctx, 744, RULE_seconds);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2419);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AmplifierContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public AmplifierContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_amplifier; }
+	}
+
+	public final AmplifierContext amplifier() throws RecognitionException {
+		AmplifierContext _localctx = new AmplifierContext(_ctx, getState());
+		enterRule(_localctx, 746, RULE_amplifier);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2421);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HideParticlesContext extends ParserRuleContext {
+		public TerminalNode BooleanValue() { return getToken(MCCommandParser.BooleanValue, 0); }
+		public HideParticlesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_hideParticles; }
+	}
+
+	public final HideParticlesContext hideParticles() throws RecognitionException {
+		HideParticlesContext _localctx = new HideParticlesContext(_ctx, getState());
+		enterRule(_localctx, 748, RULE_hideParticles);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2423);
+			match(BooleanValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EnchantRadicalContext extends ParserRuleContext {
+		public EnchantKeyContext enchantKey() {
+			return getRuleContext(EnchantKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public EnchantIDContext enchantID() {
+			return getRuleContext(EnchantIDContext.class,0);
+		}
+		public EnchantLevelContext enchantLevel() {
+			return getRuleContext(EnchantLevelContext.class,0);
+		}
+		public EnchantRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_enchantRadical; }
+	}
+
+	public final EnchantRadicalContext enchantRadical() throws RecognitionException {
+		EnchantRadicalContext _localctx = new EnchantRadicalContext(_ctx, getState());
+		enterRule(_localctx, 750, RULE_enchantRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2425);
+			enchantKey();
+			setState(2426);
+			selector();
+			setState(2427);
+			enchantID();
+			setState(2428);
+			enchantLevel();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EnchantLevelContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public EnchantLevelContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_enchantLevel; }
+	}
+
+	public final EnchantLevelContext enchantLevel() throws RecognitionException {
+		EnchantLevelContext _localctx = new EnchantLevelContext(_ctx, getState());
+		enterRule(_localctx, 752, RULE_enchantLevel);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2430);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class EnchantIDContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public EnchantIDContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_enchantID; }
+	}
+
+	public final EnchantIDContext enchantID() throws RecognitionException {
+		EnchantIDContext _localctx = new EnchantIDContext(_ctx, getState());
+		enterRule(_localctx, 754, RULE_enchantID);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2432);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteRadicalContext extends ParserRuleContext {
+		public ExecuteKeyContext executeKey() {
+			return getRuleContext(ExecuteKeyContext.class,0);
+		}
+		public ExecuteOptionsContext executeOptions() {
+			return getRuleContext(ExecuteOptionsContext.class,0);
+		}
+		public ExecuteRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeRadical; }
+	}
+
+	public final ExecuteRadicalContext executeRadical() throws RecognitionException {
+		ExecuteRadicalContext _localctx = new ExecuteRadicalContext(_ctx, getState());
+		enterRule(_localctx, 756, RULE_executeRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2434);
+			executeKey();
+			setState(2435);
+			executeOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteEyesOrFeetContext extends ParserRuleContext {
+		public EyesContext eyes() {
+			return getRuleContext(EyesContext.class,0);
+		}
+		public FeetContext feet() {
+			return getRuleContext(FeetContext.class,0);
+		}
+		public ExecuteEyesOrFeetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeEyesOrFeet; }
+	}
+
+	public final ExecuteEyesOrFeetContext executeEyesOrFeet() throws RecognitionException {
+		ExecuteEyesOrFeetContext _localctx = new ExecuteEyesOrFeetContext(_ctx, getState());
+		enterRule(_localctx, 758, RULE_executeEyesOrFeet);
+		try {
+			setState(2439);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Eyes:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2437);
+				eyes();
+				}
+				break;
+			case Feet:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2438);
+				feet();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class AxesContext extends ParserRuleContext {
+		public TerminalNode Axes() { return getToken(MCCommandParser.Axes, 0); }
+		public AxesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_axes; }
+	}
+
+	public final AxesContext axes() throws RecognitionException {
+		AxesContext _localctx = new AxesContext(_ctx, getState());
+		enterRule(_localctx, 760, RULE_axes);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2441);
+			match(Axes);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteAllOrMaskedContext extends ParserRuleContext {
+		public AllContext all() {
+			return getRuleContext(AllContext.class,0);
+		}
+		public MaskedContext masked() {
+			return getRuleContext(MaskedContext.class,0);
+		}
+		public ExecuteAllOrMaskedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeAllOrMasked; }
+	}
+
+	public final ExecuteAllOrMaskedContext executeAllOrMasked() throws RecognitionException {
+		ExecuteAllOrMaskedContext _localctx = new ExecuteAllOrMaskedContext(_ctx, getState());
+		enterRule(_localctx, 762, RULE_executeAllOrMasked);
+		try {
+			setState(2445);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case All:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2443);
+				all();
+				}
+				break;
+			case Masked:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2444);
+				masked();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteMaxOrValueContext extends ParserRuleContext {
+		public MaxContext max() {
+			return getRuleContext(MaxContext.class,0);
+		}
+		public ValueContext value() {
+			return getRuleContext(ValueContext.class,0);
+		}
+		public ExecuteMaxOrValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeMaxOrValue; }
+	}
+
+	public final ExecuteMaxOrValueContext executeMaxOrValue() throws RecognitionException {
+		ExecuteMaxOrValueContext _localctx = new ExecuteMaxOrValueContext(_ctx, getState());
+		enterRule(_localctx, 764, RULE_executeMaxOrValue);
+		try {
+			setState(2449);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Max:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2447);
+				max();
+				}
+				break;
+			case Value:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2448);
+				value();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteJudgeDataOptionsContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public NbtPathContext nbtPath() {
+			return getRuleContext(NbtPathContext.class,0);
+		}
+		public ExecuteOptionsContext executeOptions() {
+			return getRuleContext(ExecuteOptionsContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdContext storageId() {
+			return getRuleContext(StorageIdContext.class,0);
+		}
+		public ExecuteJudgeDataOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeJudgeDataOptions; }
+	}
+
+	public final ExecuteJudgeDataOptionsContext executeJudgeDataOptions() throws RecognitionException {
+		ExecuteJudgeDataOptionsContext _localctx = new ExecuteJudgeDataOptionsContext(_ctx, getState());
+		enterRule(_localctx, 766, RULE_executeJudgeDataOptions);
+		try {
+			setState(2466);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2451);
+				block();
+				setState(2452);
+				pos3D();
+				setState(2453);
+				nbtPath();
+				setState(2454);
+				executeOptions();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2456);
+				entity();
+				setState(2457);
+				selector();
+				setState(2458);
+				nbtPath();
+				setState(2459);
+				executeOptions();
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2461);
+				storage();
+				setState(2462);
+				storageId();
+				setState(2463);
+				nbtPath();
+				setState(2464);
+				executeOptions();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteJudgementOptionsContext extends ParserRuleContext {
+		public BiomeContext biome() {
+			return getRuleContext(BiomeContext.class,0);
+		}
+		public List<Pos3DContext> pos3D() {
+			return getRuleContexts(Pos3DContext.class);
+		}
+		public Pos3DContext pos3D(int i) {
+			return getRuleContext(Pos3DContext.class,i);
+		}
+		public BiomeIdContext biomeId() {
+			return getRuleContext(BiomeIdContext.class,0);
+		}
+		public ExecuteOptionsContext executeOptions() {
+			return getRuleContext(ExecuteOptionsContext.class,0);
+		}
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public BlockIDContext blockID() {
+			return getRuleContext(BlockIDContext.class,0);
+		}
+		public BlocksContext blocks() {
+			return getRuleContext(BlocksContext.class,0);
+		}
+		public DataKeyContext dataKey() {
+			return getRuleContext(DataKeyContext.class,0);
+		}
+		public ExecuteJudgeDataOptionsContext executeJudgeDataOptions() {
+			return getRuleContext(ExecuteJudgeDataOptionsContext.class,0);
+		}
+		public DimensionContext dimension() {
+			return getRuleContext(DimensionContext.class,0);
+		}
+		public DimensionIdContext dimensionId() {
+			return getRuleContext(DimensionIdContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public LoadedContext loaded() {
+			return getRuleContext(LoadedContext.class,0);
+		}
+		public PredicateContext predicate() {
+			return getRuleContext(PredicateContext.class,0);
+		}
+		public PredicateValueContext predicateValue() {
+			return getRuleContext(PredicateValueContext.class,0);
+		}
+		public ScoreContext score() {
+			return getRuleContext(ScoreContext.class,0);
+		}
+		public TargetObjectiveContext targetObjective() {
+			return getRuleContext(TargetObjectiveContext.class,0);
+		}
+		public ExecuteOperationsContext executeOperations() {
+			return getRuleContext(ExecuteOperationsContext.class,0);
+		}
+		public ExecuteAllOrMaskedContext executeAllOrMasked() {
+			return getRuleContext(ExecuteAllOrMaskedContext.class,0);
+		}
+		public ExclamationMarkContext exclamationMark() {
+			return getRuleContext(ExclamationMarkContext.class,0);
+		}
+		public ExecuteJudgementOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeJudgementOptions; }
+	}
+
+	public final ExecuteJudgementOptionsContext executeJudgementOptions() throws RecognitionException {
+		ExecuteJudgementOptionsContext _localctx = new ExecuteJudgementOptionsContext(_ctx, getState());
+		enterRule(_localctx, 768, RULE_executeJudgementOptions);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2513);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Biome:
+				{
+				{
+				setState(2468);
+				biome();
+				setState(2469);
+				pos3D();
+				setState(2470);
+				biomeId();
+				setState(2471);
+				executeOptions();
+				}
+				}
+				break;
+			case Block:
+				{
+				{
+				setState(2473);
+				block();
+				setState(2474);
+				pos3D();
+				setState(2475);
+				blockID();
+				setState(2476);
+				executeOptions();
+				}
+				}
+				break;
+			case Blocks:
+				{
+				{
+				setState(2478);
+				blocks();
+				setState(2479);
+				pos3D();
+				setState(2480);
+				pos3D();
+				setState(2481);
+				pos3D();
+				{
+				setState(2482);
+				executeAllOrMasked();
+				setState(2483);
+				executeOptions();
+				}
+				}
+				}
+				break;
+			case DataKey:
+				{
+				{
+				setState(2485);
+				dataKey();
+				setState(2486);
+				executeJudgeDataOptions();
+				}
+				}
+				break;
+			case Dimension:
+				{
+				{
+				setState(2488);
+				dimension();
+				setState(2489);
+				dimensionId();
+				setState(2490);
+				executeOptions();
+				}
+				}
+				break;
+			case Entity:
+				{
+				{
+				setState(2492);
+				entity();
+				setState(2493);
+				selector();
+				setState(2494);
+				executeOptions();
+				}
+				}
+				break;
+			case Loaded:
+				{
+				{
+				setState(2496);
+				loaded();
+				setState(2497);
+				pos3D();
+				setState(2498);
+				executeOptions();
+				}
+				}
+				break;
+			case Predicate:
+				{
+				{
+				setState(2500);
+				predicate();
+				setState(2502);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					setState(2501);
+					exclamationMark();
+					}
+				}
+
+				setState(2504);
+				predicateValue();
+				setState(2505);
+				executeOptions();
+				}
+				}
+				break;
+			case Score:
+				{
+				{
+				setState(2507);
+				score();
+				setState(2508);
+				selector();
+				setState(2509);
+				targetObjective();
+				setState(2510);
+				executeOperations();
+				setState(2511);
+				executeOptions();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteOperationsContext extends ParserRuleContext {
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public TargetObjectiveContext targetObjective() {
+			return getRuleContext(TargetObjectiveContext.class,0);
+		}
+		public LessThanContext lessThan() {
+			return getRuleContext(LessThanContext.class,0);
+		}
+		public LessThanOrEqualToContext lessThanOrEqualTo() {
+			return getRuleContext(LessThanOrEqualToContext.class,0);
+		}
+		public EqualContext equal() {
+			return getRuleContext(EqualContext.class,0);
+		}
+		public GreaterThanOrEqualToContext greaterThanOrEqualTo() {
+			return getRuleContext(GreaterThanOrEqualToContext.class,0);
+		}
+		public MatchesContext matches() {
+			return getRuleContext(MatchesContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public IntIntervalContext intInterval() {
+			return getRuleContext(IntIntervalContext.class,0);
+		}
+		public ExecuteOperationsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeOperations; }
+	}
+
+	public final ExecuteOperationsContext executeOperations() throws RecognitionException {
+		ExecuteOperationsContext _localctx = new ExecuteOperationsContext(_ctx, getState());
+		enterRule(_localctx, 770, RULE_executeOperations);
+		try {
+			setState(2530);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case LeftAngleBracket:
+			case LessThanOrEqualTo:
+			case Equal:
+			case GreaterThanOrEqualTo:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2519);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case LeftAngleBracket:
+					{
+					setState(2515);
+					lessThan();
+					}
+					break;
+				case LessThanOrEqualTo:
+					{
+					setState(2516);
+					lessThanOrEqualTo();
+					}
+					break;
+				case Equal:
+					{
+					setState(2517);
+					equal();
+					}
+					break;
+				case GreaterThanOrEqualTo:
+					{
+					setState(2518);
+					greaterThanOrEqualTo();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(2521);
+				selector();
+				setState(2522);
+				targetObjective();
+				}
+				}
+				break;
+			case Matches:
+			case IntInterval:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2528);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Matches:
+					{
+					setState(2524);
+					matches();
+					setState(2525);
+					integer();
+					}
+					break;
+				case IntInterval:
+					{
+					setState(2527);
+					intInterval();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteOnContext extends ParserRuleContext {
+		public AttackerContext attacker() {
+			return getRuleContext(AttackerContext.class,0);
+		}
+		public ControllerContext controller() {
+			return getRuleContext(ControllerContext.class,0);
+		}
+		public LeasherContext leasher() {
+			return getRuleContext(LeasherContext.class,0);
+		}
+		public OriginContext origin() {
+			return getRuleContext(OriginContext.class,0);
+		}
+		public OwnerContext owner() {
+			return getRuleContext(OwnerContext.class,0);
+		}
+		public PassengersContext passengers() {
+			return getRuleContext(PassengersContext.class,0);
+		}
+		public TargetContext target() {
+			return getRuleContext(TargetContext.class,0);
+		}
+		public VehicleContext vehicle() {
+			return getRuleContext(VehicleContext.class,0);
+		}
+		public ExecuteOnContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeOn; }
+	}
+
+	public final ExecuteOnContext executeOn() throws RecognitionException {
+		ExecuteOnContext _localctx = new ExecuteOnContext(_ctx, getState());
+		enterRule(_localctx, 772, RULE_executeOn);
+		try {
+			setState(2540);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Attacker:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2532);
+				attacker();
+				}
+				break;
+			case Controller:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2533);
+				controller();
+				}
+				break;
+			case Leasher:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2534);
+				leasher();
+				}
+				break;
+			case Origin:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(2535);
+				origin();
+				}
+				break;
+			case Owner:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(2536);
+				owner();
+				}
+				break;
+			case Passengers:
+				enterOuterAlt(_localctx, 6);
+				{
+				setState(2537);
+				passengers();
+				}
+				break;
+			case Target:
+				enterOuterAlt(_localctx, 7);
+				{
+				setState(2538);
+				target();
+				}
+				break;
+			case Vehicle:
+				enterOuterAlt(_localctx, 8);
+				{
+				setState(2539);
+				vehicle();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteOverContext extends ParserRuleContext {
+		public Motion_blockingContext motion_blocking() {
+			return getRuleContext(Motion_blockingContext.class,0);
+		}
+		public Motion_blocking_no_leavesContext motion_blocking_no_leaves() {
+			return getRuleContext(Motion_blocking_no_leavesContext.class,0);
+		}
+		public Ocean_floorContext ocean_floor() {
+			return getRuleContext(Ocean_floorContext.class,0);
+		}
+		public World_surfaceContext world_surface() {
+			return getRuleContext(World_surfaceContext.class,0);
+		}
+		public ExecuteOverContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeOver; }
+	}
+
+	public final ExecuteOverContext executeOver() throws RecognitionException {
+		ExecuteOverContext _localctx = new ExecuteOverContext(_ctx, getState());
+		enterRule(_localctx, 774, RULE_executeOver);
+		try {
+			setState(2546);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Motion_blocking:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2542);
+				motion_blocking();
+				}
+				break;
+			case Motion_blocking_no_leaves:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2543);
+				motion_blocking_no_leaves();
+				}
+				break;
+			case Ocean_floor:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2544);
+				ocean_floor();
+				}
+				break;
+			case World_surface:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(2545);
+				world_surface();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecutePositionedContext extends ParserRuleContext {
+		public AsContext as() {
+			return getRuleContext(AsContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public OverContext over() {
+			return getRuleContext(OverContext.class,0);
+		}
+		public ExecuteOverContext executeOver() {
+			return getRuleContext(ExecuteOverContext.class,0);
+		}
+		public ExecutePositionedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executePositioned; }
+	}
+
+	public final ExecutePositionedContext executePositioned() throws RecognitionException {
+		ExecutePositionedContext _localctx = new ExecutePositionedContext(_ctx, getState());
+		enterRule(_localctx, 776, RULE_executePositioned);
+		try {
+			setState(2554);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case As:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2548);
+				as();
+				setState(2549);
+				selector();
+				}
+				}
+				break;
+			case Over:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2551);
+				over();
+				setState(2552);
+				executeOver();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteStoreTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public NbtPathContext nbtPath() {
+			return getRuleContext(NbtPathContext.class,0);
+		}
+		public DataTypeContext dataType() {
+			return getRuleContext(DataTypeContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public BossbarKeyContext bossbarKey() {
+			return getRuleContext(BossbarKeyContext.class,0);
+		}
+		public BossbarIDContext bossbarID() {
+			return getRuleContext(BossbarIDContext.class,0);
+		}
+		public ExecuteMaxOrValueContext executeMaxOrValue() {
+			return getRuleContext(ExecuteMaxOrValueContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ScoreContext score() {
+			return getRuleContext(ScoreContext.class,0);
+		}
+		public TargetObjectiveContext targetObjective() {
+			return getRuleContext(TargetObjectiveContext.class,0);
+		}
+		public StorageContext storage() {
+			return getRuleContext(StorageContext.class,0);
+		}
+		public StorageIdContext storageId() {
+			return getRuleContext(StorageIdContext.class,0);
+		}
+		public ExecuteStoreTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeStoreTarget; }
+	}
+
+	public final ExecuteStoreTargetContext executeStoreTarget() throws RecognitionException {
+		ExecuteStoreTargetContext _localctx = new ExecuteStoreTargetContext(_ctx, getState());
+		enterRule(_localctx, 778, RULE_executeStoreTarget);
+		try {
+			setState(2582);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2556);
+				block();
+				setState(2557);
+				pos3D();
+				setState(2558);
+				nbtPath();
+				setState(2559);
+				dataType();
+				setState(2560);
+				match(Double);
+				}
+				}
+				break;
+			case BossbarKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2562);
+				bossbarKey();
+				setState(2563);
+				bossbarID();
+				setState(2564);
+				executeMaxOrValue();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2566);
+				entity();
+				setState(2567);
+				selector();
+				setState(2568);
+				nbtPath();
+				setState(2569);
+				dataType();
+				setState(2570);
+				match(Double);
+				}
+				}
+				break;
+			case Score:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2572);
+				score();
+				setState(2573);
+				selector();
+				setState(2574);
+				targetObjective();
+				}
+				}
+				break;
+			case Storage:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(2576);
+				storage();
+				setState(2577);
+				storageId();
+				setState(2578);
+				nbtPath();
+				setState(2579);
+				dataType();
+				setState(2580);
+				match(Double);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteStoreContext extends ParserRuleContext {
+		public ExecuteStoreTargetContext executeStoreTarget() {
+			return getRuleContext(ExecuteStoreTargetContext.class,0);
+		}
+		public ResultContext result() {
+			return getRuleContext(ResultContext.class,0);
+		}
+		public SuccessContext success() {
+			return getRuleContext(SuccessContext.class,0);
+		}
+		public ExecuteStoreContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeStore; }
+	}
+
+	public final ExecuteStoreContext executeStore() throws RecognitionException {
+		ExecuteStoreContext _localctx = new ExecuteStoreContext(_ctx, getState());
+		enterRule(_localctx, 780, RULE_executeStore);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2586);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Result:
+				{
+				setState(2584);
+				result();
+				}
+				break;
+			case Success:
+				{
+				setState(2585);
+				success();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(2588);
+			executeStoreTarget();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteFacingContext extends ParserRuleContext {
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ExecuteOptionsContext executeOptions() {
+			return getRuleContext(ExecuteOptionsContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ExecuteEyesOrFeetContext executeEyesOrFeet() {
+			return getRuleContext(ExecuteEyesOrFeetContext.class,0);
+		}
+		public ExecuteFacingContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeFacing; }
+	}
+
+	public final ExecuteFacingContext executeFacing() throws RecognitionException {
+		ExecuteFacingContext _localctx = new ExecuteFacingContext(_ctx, getState());
+		enterRule(_localctx, 782, RULE_executeFacing);
+		try {
+			setState(2598);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Integer:
+			case Double:
+			case Coordinate:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2590);
+				pos3D();
+				setState(2591);
+				executeOptions();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2593);
+				entity();
+				setState(2594);
+				selector();
+				setState(2595);
+				executeEyesOrFeet();
+				setState(2596);
+				executeOptions();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExecuteOptionsContext extends ParserRuleContext {
+		public AlignContext align() {
+			return getRuleContext(AlignContext.class,0);
+		}
+		public AxesContext axes() {
+			return getRuleContext(AxesContext.class,0);
+		}
+		public ExecuteOptionsContext executeOptions() {
+			return getRuleContext(ExecuteOptionsContext.class,0);
+		}
+		public AnchoredContext anchored() {
+			return getRuleContext(AnchoredContext.class,0);
+		}
+		public ExecuteEyesOrFeetContext executeEyesOrFeet() {
+			return getRuleContext(ExecuteEyesOrFeetContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public AsContext as() {
+			return getRuleContext(AsContext.class,0);
+		}
+		public AtLetterContext atLetter() {
+			return getRuleContext(AtLetterContext.class,0);
+		}
+		public FacingContext facing() {
+			return getRuleContext(FacingContext.class,0);
+		}
+		public ExecuteFacingContext executeFacing() {
+			return getRuleContext(ExecuteFacingContext.class,0);
+		}
+		public ExecuteJudgementOptionsContext executeJudgementOptions() {
+			return getRuleContext(ExecuteJudgementOptionsContext.class,0);
+		}
+		public IfContext if_() {
+			return getRuleContext(IfContext.class,0);
+		}
+		public UnlessContext unless() {
+			return getRuleContext(UnlessContext.class,0);
+		}
+		public InContext in() {
+			return getRuleContext(InContext.class,0);
+		}
+		public DimensionIdContext dimensionId() {
+			return getRuleContext(DimensionIdContext.class,0);
+		}
+		public OnContext on() {
+			return getRuleContext(OnContext.class,0);
+		}
+		public ExecuteOnContext executeOn() {
+			return getRuleContext(ExecuteOnContext.class,0);
+		}
+		public PositionedContext positioned() {
+			return getRuleContext(PositionedContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ExecutePositionedContext executePositioned() {
+			return getRuleContext(ExecutePositionedContext.class,0);
+		}
+		public RotatedContext rotated() {
+			return getRuleContext(RotatedContext.class,0);
+		}
+		public RunContext run() {
+			return getRuleContext(RunContext.class,0);
+		}
+		public CommandsContext commands() {
+			return getRuleContext(CommandsContext.class,0);
+		}
+		public StoreContext store() {
+			return getRuleContext(StoreContext.class,0);
+		}
+		public ExecuteStoreContext executeStore() {
+			return getRuleContext(ExecuteStoreContext.class,0);
+		}
+		public SummonKeyContext summonKey() {
+			return getRuleContext(SummonKeyContext.class,0);
+		}
+		public EntityTypeContext entityType() {
+			return getRuleContext(EntityTypeContext.class,0);
+		}
+		public ExecuteOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_executeOptions; }
+	}
+
+	public final ExecuteOptionsContext executeOptions() throws RecognitionException {
+		ExecuteOptionsContext _localctx = new ExecuteOptionsContext(_ctx, getState());
+		enterRule(_localctx, 784, RULE_executeOptions);
+		try {
+			setState(2657);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Align:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2600);
+				align();
+				setState(2601);
+				axes();
+				setState(2602);
+				executeOptions();
+				}
+				}
+				break;
+			case Anchored:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2604);
+				anchored();
+				setState(2605);
+				executeEyesOrFeet();
+				setState(2606);
+				executeOptions();
+				}
+				}
+				break;
+			case AtLetter:
+			case As:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2610);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case As:
+					{
+					setState(2608);
+					as();
+					}
+					break;
+				case AtLetter:
+					{
+					setState(2609);
+					atLetter();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(2612);
+				selector();
+				setState(2613);
+				executeOptions();
+				}
+				}
+				break;
+			case Facing:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2615);
+				facing();
+				setState(2616);
+				executeFacing();
+				setState(2617);
+				executeOptions();
+				}
+				}
+				break;
+			case If:
+			case Unless:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(2621);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case If:
+					{
+					setState(2619);
+					if_();
+					}
+					break;
+				case Unless:
+					{
+					setState(2620);
+					unless();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(2623);
+				executeJudgementOptions();
+				setState(2624);
+				executeOptions();
+				}
+				}
+				break;
+			case In:
+				enterOuterAlt(_localctx, 6);
+				{
+				{
+				setState(2626);
+				in();
+				setState(2627);
+				dimensionId();
+				setState(2628);
+				executeOptions();
+				}
+				}
+				break;
+			case On:
+				enterOuterAlt(_localctx, 7);
+				{
+				{
+				setState(2630);
+				on();
+				setState(2631);
+				executeOn();
+				setState(2632);
+				executeOptions();
+				}
+				}
+				break;
+			case Positioned:
+				enterOuterAlt(_localctx, 8);
+				{
+				{
+				setState(2634);
+				positioned();
+				setState(2637);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Integer:
+				case Double:
+				case Coordinate:
+					{
+					setState(2635);
+					pos3D();
+					}
+					break;
+				case As:
+				case Over:
+					{
+					setState(2636);
+					executePositioned();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(2639);
+				executeOptions();
+				}
+				}
+				break;
+			case Rotated:
+				enterOuterAlt(_localctx, 9);
+				{
+				{
+				setState(2641);
+				rotated();
+				setState(2642);
+				as();
+				setState(2643);
+				selector();
+				setState(2644);
+				executeOptions();
+				}
+				}
+				break;
+			case Run:
+				enterOuterAlt(_localctx, 10);
+				{
+				{
+				setState(2646);
+				run();
+				setState(2647);
+				commands();
+				}
+				}
+				break;
+			case Store:
+				enterOuterAlt(_localctx, 11);
+				{
+				{
+				setState(2649);
+				store();
+				setState(2650);
+				executeStore();
+				setState(2651);
+				executeOptions();
+				}
+				}
+				break;
+			case SummonKey:
+				enterOuterAlt(_localctx, 12);
+				{
+				{
+				setState(2653);
+				summonKey();
+				setState(2654);
+				entityType();
+				setState(2655);
+				executeOptions();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExperienceRadicalContext extends ParserRuleContext {
+		public ExperienceKeyContext experienceKey() {
+			return getRuleContext(ExperienceKeyContext.class,0);
+		}
+		public ExperienceOptionsContext experienceOptions() {
+			return getRuleContext(ExperienceOptionsContext.class,0);
+		}
+		public ExperienceRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_experienceRadical; }
+	}
+
+	public final ExperienceRadicalContext experienceRadical() throws RecognitionException {
+		ExperienceRadicalContext _localctx = new ExperienceRadicalContext(_ctx, getState());
+		enterRule(_localctx, 786, RULE_experienceRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2659);
+			experienceKey();
+			setState(2660);
+			experienceOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExperienceAmountContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public ExperienceAmountContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_experienceAmount; }
+	}
+
+	public final ExperienceAmountContext experienceAmount() throws RecognitionException {
+		ExperienceAmountContext _localctx = new ExperienceAmountContext(_ctx, getState());
+		enterRule(_localctx, 788, RULE_experienceAmount);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2662);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExpreienceTypeContext extends ParserRuleContext {
+		public LevelsContext levels() {
+			return getRuleContext(LevelsContext.class,0);
+		}
+		public PointsContext points() {
+			return getRuleContext(PointsContext.class,0);
+		}
+		public ExpreienceTypeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_expreienceType; }
+	}
+
+	public final ExpreienceTypeContext expreienceType() throws RecognitionException {
+		ExpreienceTypeContext _localctx = new ExpreienceTypeContext(_ctx, getState());
+		enterRule(_localctx, 790, RULE_expreienceType);
+		try {
+			setState(2666);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Levels:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2664);
+				levels();
+				}
+				break;
+			case Points:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2665);
+				points();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExperienceOptionsContext extends ParserRuleContext {
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ExperienceAmountContext experienceAmount() {
+			return getRuleContext(ExperienceAmountContext.class,0);
+		}
+		public ExpreienceTypeContext expreienceType() {
+			return getRuleContext(ExpreienceTypeContext.class,0);
+		}
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public QueryContext query() {
+			return getRuleContext(QueryContext.class,0);
+		}
+		public ExperienceOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_experienceOptions; }
+	}
+
+	public final ExperienceOptionsContext experienceOptions() throws RecognitionException {
+		ExperienceOptionsContext _localctx = new ExperienceOptionsContext(_ctx, getState());
+		enterRule(_localctx, 792, RULE_experienceOptions);
+		try {
+			setState(2680);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+			case Set:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2670);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Add:
+					{
+					setState(2668);
+					add();
+					}
+					break;
+				case Set:
+					{
+					setState(2669);
+					set();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(2672);
+				selector();
+				setState(2673);
+				experienceAmount();
+				setState(2674);
+				expreienceType();
+				}
+				}
+				break;
+			case Query:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2676);
+				query();
+				setState(2677);
+				selector();
+				setState(2678);
+				expreienceType();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FillRadicalContext extends ParserRuleContext {
+		public FillKeyContext fillKey() {
+			return getRuleContext(FillKeyContext.class,0);
+		}
+		public List<Pos3DContext> pos3D() {
+			return getRuleContexts(Pos3DContext.class);
+		}
+		public Pos3DContext pos3D(int i) {
+			return getRuleContext(Pos3DContext.class,i);
+		}
+		public BlockIDContext blockID() {
+			return getRuleContext(BlockIDContext.class,0);
+		}
+		public FillOptionsContext fillOptions() {
+			return getRuleContext(FillOptionsContext.class,0);
+		}
+		public FillRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fillRadical; }
+	}
+
+	public final FillRadicalContext fillRadical() throws RecognitionException {
+		FillRadicalContext _localctx = new FillRadicalContext(_ctx, getState());
+		enterRule(_localctx, 794, RULE_fillRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2682);
+			fillKey();
+			setState(2683);
+			pos3D();
+			setState(2684);
+			pos3D();
+			setState(2685);
+			blockID();
+			setState(2686);
+			fillOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FillOptionsContext extends ParserRuleContext {
+		public DestroyContext destroy() {
+			return getRuleContext(DestroyContext.class,0);
+		}
+		public HollowContext hollow() {
+			return getRuleContext(HollowContext.class,0);
+		}
+		public KeepContext keep() {
+			return getRuleContext(KeepContext.class,0);
+		}
+		public OutlineContext outline() {
+			return getRuleContext(OutlineContext.class,0);
+		}
+		public ReplaceContext replace() {
+			return getRuleContext(ReplaceContext.class,0);
+		}
+		public BlockIDContext blockID() {
+			return getRuleContext(BlockIDContext.class,0);
+		}
+		public FillOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fillOptions; }
+	}
+
+	public final FillOptionsContext fillOptions() throws RecognitionException {
+		FillOptionsContext _localctx = new FillOptionsContext(_ctx, getState());
+		enterRule(_localctx, 796, RULE_fillOptions);
+		try {
+			setState(2697);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Destroy:
+			case Hollow:
+			case Keep:
+			case Outline:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2692);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Destroy:
+					{
+					setState(2688);
+					destroy();
+					}
+					break;
+				case Hollow:
+					{
+					setState(2689);
+					hollow();
+					}
+					break;
+				case Keep:
+					{
+					setState(2690);
+					keep();
+					}
+					break;
+				case Outline:
+					{
+					setState(2691);
+					outline();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			case Replace:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2694);
+				replace();
+				setState(2695);
+				blockID();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FillbiomeRadicalContext extends ParserRuleContext {
+		public FillbiomeKeyContext fillbiomeKey() {
+			return getRuleContext(FillbiomeKeyContext.class,0);
+		}
+		public List<Pos3DContext> pos3D() {
+			return getRuleContexts(Pos3DContext.class);
+		}
+		public Pos3DContext pos3D(int i) {
+			return getRuleContext(Pos3DContext.class,i);
+		}
+		public BiomeIdContext biomeId() {
+			return getRuleContext(BiomeIdContext.class,0);
+		}
+		public FillBiomeOptionsContext fillBiomeOptions() {
+			return getRuleContext(FillBiomeOptionsContext.class,0);
+		}
+		public FillbiomeRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fillbiomeRadical; }
+	}
+
+	public final FillbiomeRadicalContext fillbiomeRadical() throws RecognitionException {
+		FillbiomeRadicalContext _localctx = new FillbiomeRadicalContext(_ctx, getState());
+		enterRule(_localctx, 798, RULE_fillbiomeRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2699);
+			fillbiomeKey();
+			setState(2700);
+			pos3D();
+			setState(2701);
+			pos3D();
+			setState(2702);
+			biomeId();
+			setState(2703);
+			fillBiomeOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FillBiomeOptionsContext extends ParserRuleContext {
+		public ReplaceContext replace() {
+			return getRuleContext(ReplaceContext.class,0);
+		}
+		public BiomeIdContext biomeId() {
+			return getRuleContext(BiomeIdContext.class,0);
+		}
+		public FillBiomeOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_fillBiomeOptions; }
+	}
+
+	public final FillBiomeOptionsContext fillBiomeOptions() throws RecognitionException {
+		FillBiomeOptionsContext _localctx = new FillBiomeOptionsContext(_ctx, getState());
+		enterRule(_localctx, 800, RULE_fillBiomeOptions);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2705);
+			replace();
+			setState(2706);
+			biomeId();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ForceloadRadicalContext extends ParserRuleContext {
+		public ForceloadKeyContext forceloadKey() {
+			return getRuleContext(ForceloadKeyContext.class,0);
+		}
+		public ForceloadOptionsContext forceloadOptions() {
+			return getRuleContext(ForceloadOptionsContext.class,0);
+		}
+		public ForceloadRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_forceloadRadical; }
+	}
+
+	public final ForceloadRadicalContext forceloadRadical() throws RecognitionException {
+		ForceloadRadicalContext _localctx = new ForceloadRadicalContext(_ctx, getState());
+		enterRule(_localctx, 802, RULE_forceloadRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2708);
+			forceloadKey();
+			setState(2709);
+			forceloadOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ForceloadRemoveObjectivesContext extends ParserRuleContext {
+		public List<Pos2DContext> pos2D() {
+			return getRuleContexts(Pos2DContext.class);
+		}
+		public Pos2DContext pos2D(int i) {
+			return getRuleContext(Pos2DContext.class,i);
+		}
+		public AllContext all() {
+			return getRuleContext(AllContext.class,0);
+		}
+		public ForceloadRemoveObjectivesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_forceloadRemoveObjectives; }
+	}
+
+	public final ForceloadRemoveObjectivesContext forceloadRemoveObjectives() throws RecognitionException {
+		ForceloadRemoveObjectivesContext _localctx = new ForceloadRemoveObjectivesContext(_ctx, getState());
+		enterRule(_localctx, 804, RULE_forceloadRemoveObjectives);
+		try {
+			setState(2715);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Integer:
+			case Double:
+			case Coordinate:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2711);
+				pos2D();
+				setState(2712);
+				pos2D();
+				}
+				}
+				break;
+			case All:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2714);
+				all();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ForceloadOptionsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public List<Pos2DContext> pos2D() {
+			return getRuleContexts(Pos2DContext.class);
+		}
+		public Pos2DContext pos2D(int i) {
+			return getRuleContext(Pos2DContext.class,i);
+		}
+		public QueryContext query() {
+			return getRuleContext(QueryContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public ForceloadRemoveObjectivesContext forceloadRemoveObjectives() {
+			return getRuleContext(ForceloadRemoveObjectivesContext.class,0);
+		}
+		public ForceloadOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_forceloadOptions; }
+	}
+
+	public final ForceloadOptionsContext forceloadOptions() throws RecognitionException {
+		ForceloadOptionsContext _localctx = new ForceloadOptionsContext(_ctx, getState());
+		enterRule(_localctx, 806, RULE_forceloadOptions);
+		try {
+			setState(2727);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2717);
+				add();
+				setState(2718);
+				pos2D();
+				setState(2719);
+				pos2D();
+				}
+				}
+				break;
+			case Query:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2721);
+				query();
+				setState(2722);
+				pos2D();
+				}
+				}
+				break;
+			case Remove:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2724);
+				remove();
+				setState(2725);
+				forceloadRemoveObjectives();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FunctionRadicalContext extends ParserRuleContext {
+		public FunctionKeyContext functionKey() {
+			return getRuleContext(FunctionKeyContext.class,0);
+		}
+		public FunctionIdContext functionId() {
+			return getRuleContext(FunctionIdContext.class,0);
+		}
+		public FunctionRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_functionRadical; }
+	}
+
+	public final FunctionRadicalContext functionRadical() throws RecognitionException {
+		FunctionRadicalContext _localctx = new FunctionRadicalContext(_ctx, getState());
+		enterRule(_localctx, 808, RULE_functionRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2729);
+			functionKey();
+			setState(2730);
+			functionId();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GamemodeRadicalContext extends ParserRuleContext {
+		public GamemodeKeyContext gamemodeKey() {
+			return getRuleContext(GamemodeKeyContext.class,0);
+		}
+		public GamemodeValueContext gamemodeValue() {
+			return getRuleContext(GamemodeValueContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public GamemodeRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gamemodeRadical; }
+	}
+
+	public final GamemodeRadicalContext gamemodeRadical() throws RecognitionException {
+		GamemodeRadicalContext _localctx = new GamemodeRadicalContext(_ctx, getState());
+		enterRule(_localctx, 810, RULE_gamemodeRadical);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2732);
+			gamemodeKey();
+			setState(2733);
+			gamemodeValue();
+			setState(2735);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==AtChar || _la==Identifier) {
+				{
+				setState(2734);
+				selector();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GameruleRadicalContext extends ParserRuleContext {
+		public GameruleKeyContext gameruleKey() {
+			return getRuleContext(GameruleKeyContext.class,0);
+		}
+		public GameruleNameContext gameruleName() {
+			return getRuleContext(GameruleNameContext.class,0);
+		}
+		public GameruleValueContext gameruleValue() {
+			return getRuleContext(GameruleValueContext.class,0);
+		}
+		public GameruleRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gameruleRadical; }
+	}
+
+	public final GameruleRadicalContext gameruleRadical() throws RecognitionException {
+		GameruleRadicalContext _localctx = new GameruleRadicalContext(_ctx, getState());
+		enterRule(_localctx, 812, RULE_gameruleRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2737);
+			gameruleKey();
+			setState(2738);
+			gameruleName();
+			setState(2739);
+			gameruleValue();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GameruleNameContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public GameruleNameContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gameruleName; }
+	}
+
+	public final GameruleNameContext gameruleName() throws RecognitionException {
+		GameruleNameContext _localctx = new GameruleNameContext(_ctx, getState());
+		enterRule(_localctx, 814, RULE_gameruleName);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2741);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GameruleValueContext extends ParserRuleContext {
+		public TerminalNode BooleanValue() { return getToken(MCCommandParser.BooleanValue, 0); }
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public GameruleValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_gameruleValue; }
+	}
+
+	public final GameruleValueContext gameruleValue() throws RecognitionException {
+		GameruleValueContext _localctx = new GameruleValueContext(_ctx, getState());
+		enterRule(_localctx, 816, RULE_gameruleValue);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2743);
+			_la = _input.LA(1);
+			if ( !(_la==BooleanValue || _la==Integer) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class GiveRadicalContext extends ParserRuleContext {
+		public GiveKeyContext giveKey() {
+			return getRuleContext(GiveKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ItemIdContext itemId() {
+			return getRuleContext(ItemIdContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public GiveRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_giveRadical; }
+	}
+
+	public final GiveRadicalContext giveRadical() throws RecognitionException {
+		GiveRadicalContext _localctx = new GiveRadicalContext(_ctx, getState());
+		enterRule(_localctx, 818, RULE_giveRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2745);
+			giveKey();
+			setState(2746);
+			selector();
+			setState(2747);
+			itemId();
+			setState(2748);
+			integer();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class HelpRadicalContext extends ParserRuleContext {
+		public HelpKeyContext helpKey() {
+			return getRuleContext(HelpKeyContext.class,0);
+		}
+		public CommandListContext commandList() {
+			return getRuleContext(CommandListContext.class,0);
+		}
+		public HelpRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_helpRadical; }
+	}
+
+	public final HelpRadicalContext helpRadical() throws RecognitionException {
+		HelpRadicalContext _localctx = new HelpRadicalContext(_ctx, getState());
+		enterRule(_localctx, 820, RULE_helpRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2750);
+			helpKey();
+			{
+			setState(2751);
+			commandList();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class CommandListContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public CommandListContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_commandList; }
+	}
+
+	public final CommandListContext commandList() throws RecognitionException {
+		CommandListContext _localctx = new CommandListContext(_ctx, getState());
+		enterRule(_localctx, 822, RULE_commandList);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2753);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemRadicalContext extends ParserRuleContext {
+		public ItemKeyContext itemKey() {
+			return getRuleContext(ItemKeyContext.class,0);
+		}
+		public ItemOptionsContext itemOptions() {
+			return getRuleContext(ItemOptionsContext.class,0);
+		}
+		public ItemRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemRadical; }
+	}
+
+	public final ItemRadicalContext itemRadical() throws RecognitionException {
+		ItemRadicalContext _localctx = new ItemRadicalContext(_ctx, getState());
+		enterRule(_localctx, 824, RULE_itemRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2755);
+			itemKey();
+			setState(2756);
+			itemOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemSlotContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public ItemSlotContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemSlot; }
+	}
+
+	public final ItemSlotContext itemSlot() throws RecognitionException {
+		ItemSlotContext _localctx = new ItemSlotContext(_ctx, getState());
+		enterRule(_localctx, 826, RULE_itemSlot);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2758);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemModifierFileContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public ItemModifierFileContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemModifierFile; }
+	}
+
+	public final ItemModifierFileContext itemModifierFile() throws RecognitionException {
+		ItemModifierFileContext _localctx = new ItemModifierFileContext(_ctx, getState());
+		enterRule(_localctx, 828, RULE_itemModifierFile);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2760);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemOptionsContext extends ParserRuleContext {
+		public ModifyContext modify() {
+			return getRuleContext(ModifyContext.class,0);
+		}
+		public ItemModifyTargetContext itemModifyTarget() {
+			return getRuleContext(ItemModifyTargetContext.class,0);
+		}
+		public ReplaceContext replace() {
+			return getRuleContext(ReplaceContext.class,0);
+		}
+		public ItemReplaceTargetContext itemReplaceTarget() {
+			return getRuleContext(ItemReplaceTargetContext.class,0);
+		}
+		public ItemOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemOptions; }
+	}
+
+	public final ItemOptionsContext itemOptions() throws RecognitionException {
+		ItemOptionsContext _localctx = new ItemOptionsContext(_ctx, getState());
+		enterRule(_localctx, 830, RULE_itemOptions);
+		try {
+			setState(2768);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Modify:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2762);
+				modify();
+				setState(2763);
+				itemModifyTarget();
+				}
+				}
+				break;
+			case Replace:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2765);
+				replace();
+				setState(2766);
+				itemReplaceTarget();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemBehaviorsContext extends ParserRuleContext {
+		public FromContext from() {
+			return getRuleContext(FromContext.class,0);
+		}
+		public ItemModifyTargetContext itemModifyTarget() {
+			return getRuleContext(ItemModifyTargetContext.class,0);
+		}
+		public WithContext with() {
+			return getRuleContext(WithContext.class,0);
+		}
+		public ItemIdContext itemId() {
+			return getRuleContext(ItemIdContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public ItemBehaviorsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemBehaviors; }
+	}
+
+	public final ItemBehaviorsContext itemBehaviors() throws RecognitionException {
+		ItemBehaviorsContext _localctx = new ItemBehaviorsContext(_ctx, getState());
+		enterRule(_localctx, 832, RULE_itemBehaviors);
+		try {
+			setState(2777);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case From:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2770);
+				from();
+				setState(2771);
+				itemModifyTarget();
+				}
+				}
+				break;
+			case With:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2773);
+				with();
+				setState(2774);
+				itemId();
+				setState(2775);
+				integer();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemModifyTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ItemSlotContext itemSlot() {
+			return getRuleContext(ItemSlotContext.class,0);
+		}
+		public ItemModifierFileContext itemModifierFile() {
+			return getRuleContext(ItemModifierFileContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ItemModifyTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemModifyTarget; }
+	}
+
+	public final ItemModifyTargetContext itemModifyTarget() throws RecognitionException {
+		ItemModifyTargetContext _localctx = new ItemModifyTargetContext(_ctx, getState());
+		enterRule(_localctx, 834, RULE_itemModifyTarget);
+		try {
+			setState(2789);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2779);
+				block();
+				setState(2780);
+				pos3D();
+				setState(2781);
+				itemSlot();
+				setState(2782);
+				itemModifierFile();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2784);
+				entity();
+				setState(2785);
+				selector();
+				setState(2786);
+				itemSlot();
+				setState(2787);
+				itemModifierFile();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ItemReplaceTargetContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ItemSlotContext itemSlot() {
+			return getRuleContext(ItemSlotContext.class,0);
+		}
+		public ItemBehaviorsContext itemBehaviors() {
+			return getRuleContext(ItemBehaviorsContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ItemReplaceTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_itemReplaceTarget; }
+	}
+
+	public final ItemReplaceTargetContext itemReplaceTarget() throws RecognitionException {
+		ItemReplaceTargetContext _localctx = new ItemReplaceTargetContext(_ctx, getState());
+		enterRule(_localctx, 836, RULE_itemReplaceTarget);
+		try {
+			setState(2801);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2791);
+				block();
+				setState(2792);
+				pos3D();
+				setState(2793);
+				itemSlot();
+				setState(2794);
+				itemBehaviors();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2796);
+				entity();
+				setState(2797);
+				selector();
+				setState(2798);
+				itemSlot();
+				setState(2799);
+				itemBehaviors();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JfrRadicalContext extends ParserRuleContext {
+		public JfrKeyContext jfrKey() {
+			return getRuleContext(JfrKeyContext.class,0);
+		}
+		public JfrStartOrStopContext jfrStartOrStop() {
+			return getRuleContext(JfrStartOrStopContext.class,0);
+		}
+		public JfrRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jfrRadical; }
+	}
+
+	public final JfrRadicalContext jfrRadical() throws RecognitionException {
+		JfrRadicalContext _localctx = new JfrRadicalContext(_ctx, getState());
+		enterRule(_localctx, 838, RULE_jfrRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2803);
+			jfrKey();
+			setState(2804);
+			jfrStartOrStop();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JfrStartOrStopContext extends ParserRuleContext {
+		public StartContext start() {
+			return getRuleContext(StartContext.class,0);
+		}
+		public StopContext stop() {
+			return getRuleContext(StopContext.class,0);
+		}
+		public JfrStartOrStopContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jfrStartOrStop; }
+	}
+
+	public final JfrStartOrStopContext jfrStartOrStop() throws RecognitionException {
+		JfrStartOrStopContext _localctx = new JfrStartOrStopContext(_ctx, getState());
+		enterRule(_localctx, 840, RULE_jfrStartOrStop);
+		try {
+			setState(2808);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Start:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2806);
+				start();
+				}
+				break;
+			case Stop:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2807);
+				stop();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class KickRadicalContext extends ParserRuleContext {
+		public KickKeyContext kickKey() {
+			return getRuleContext(KickKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ReasonContext reason() {
+			return getRuleContext(ReasonContext.class,0);
+		}
+		public KickRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_kickRadical; }
+	}
+
+	public final KickRadicalContext kickRadical() throws RecognitionException {
+		KickRadicalContext _localctx = new KickRadicalContext(_ctx, getState());
+		enterRule(_localctx, 842, RULE_kickRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2810);
+			kickKey();
+			setState(2811);
+			selector();
+			setState(2812);
+			reason();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ReasonContext extends ParserRuleContext {
+		public TerminalNode MessageContent() { return getToken(MCCommandParser.MessageContent, 0); }
+		public ReasonContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_reason; }
+	}
+
+	public final ReasonContext reason() throws RecognitionException {
+		ReasonContext _localctx = new ReasonContext(_ctx, getState());
+		enterRule(_localctx, 844, RULE_reason);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2814);
+			match(MessageContent);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class KillRadicalContext extends ParserRuleContext {
+		public KillKeyContext killKey() {
+			return getRuleContext(KillKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public KillRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_killRadical; }
+	}
+
+	public final KillRadicalContext killRadical() throws RecognitionException {
+		KillRadicalContext _localctx = new KillRadicalContext(_ctx, getState());
+		enterRule(_localctx, 846, RULE_killRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2816);
+			killKey();
+			setState(2817);
+			selector();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ListRadicalContext extends ParserRuleContext {
+		public ListKeyContext listKey() {
+			return getRuleContext(ListKeyContext.class,0);
+		}
+		public UuidsContext uuids() {
+			return getRuleContext(UuidsContext.class,0);
+		}
+		public ListRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_listRadical; }
+	}
+
+	public final ListRadicalContext listRadical() throws RecognitionException {
+		ListRadicalContext _localctx = new ListRadicalContext(_ctx, getState());
+		enterRule(_localctx, 848, RULE_listRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2819);
+			listKey();
+			setState(2820);
+			uuids();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LocateRadicalContext extends ParserRuleContext {
+		public LocateKeyContext locateKey() {
+			return getRuleContext(LocateKeyContext.class,0);
+		}
+		public LocateOptionsContext locateOptions() {
+			return getRuleContext(LocateOptionsContext.class,0);
+		}
+		public LocateRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_locateRadical; }
+	}
+
+	public final LocateRadicalContext locateRadical() throws RecognitionException {
+		LocateRadicalContext _localctx = new LocateRadicalContext(_ctx, getState());
+		enterRule(_localctx, 850, RULE_locateRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2822);
+			locateKey();
+			setState(2823);
+			locateOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PoiIdContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public PoiIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_poiId; }
+	}
+
+	public final PoiIdContext poiId() throws RecognitionException {
+		PoiIdContext _localctx = new PoiIdContext(_ctx, getState());
+		enterRule(_localctx, 852, RULE_poiId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2825);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StructureIdContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public StructureIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_structureId; }
+	}
+
+	public final StructureIdContext structureId() throws RecognitionException {
+		StructureIdContext _localctx = new StructureIdContext(_ctx, getState());
+		enterRule(_localctx, 854, RULE_structureId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2827);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LocateOptionsContext extends ParserRuleContext {
+		public BiomeContext biome() {
+			return getRuleContext(BiomeContext.class,0);
+		}
+		public BiomeIdContext biomeId() {
+			return getRuleContext(BiomeIdContext.class,0);
+		}
+		public PoiContext poi() {
+			return getRuleContext(PoiContext.class,0);
+		}
+		public PoiIdContext poiId() {
+			return getRuleContext(PoiIdContext.class,0);
+		}
+		public StructureContext structure() {
+			return getRuleContext(StructureContext.class,0);
+		}
+		public StructureIdContext structureId() {
+			return getRuleContext(StructureIdContext.class,0);
+		}
+		public LocateOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_locateOptions; }
+	}
+
+	public final LocateOptionsContext locateOptions() throws RecognitionException {
+		LocateOptionsContext _localctx = new LocateOptionsContext(_ctx, getState());
+		enterRule(_localctx, 856, RULE_locateOptions);
+		try {
+			setState(2838);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Biome:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2829);
+				biome();
+				setState(2830);
+				biomeId();
+				}
+				}
+				break;
+			case Poi:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2832);
+				poi();
+				setState(2833);
+				poiId();
+				}
+				}
+				break;
+			case Structure:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2835);
+				structure();
+				setState(2836);
+				structureId();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LootRadicalContext extends ParserRuleContext {
+		public LootKeyContext lootKey() {
+			return getRuleContext(LootKeyContext.class,0);
+		}
+		public LootOptionsContext lootOptions() {
+			return getRuleContext(LootOptionsContext.class,0);
+		}
+		public LootRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lootRadical; }
+	}
+
+	public final LootRadicalContext lootRadical() throws RecognitionException {
+		LootRadicalContext _localctx = new LootRadicalContext(_ctx, getState());
+		enterRule(_localctx, 858, RULE_lootRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2840);
+			lootKey();
+			setState(2841);
+			lootOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LootFilePathContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public LootFilePathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lootFilePath; }
+	}
+
+	public final LootFilePathContext lootFilePath() throws RecognitionException {
+		LootFilePathContext _localctx = new LootFilePathContext(_ctx, getState());
+		enterRule(_localctx, 860, RULE_lootFilePath);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2843);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LootToolContext extends ParserRuleContext {
+		public MainhandContext mainhand() {
+			return getRuleContext(MainhandContext.class,0);
+		}
+		public OffhandContext offhand() {
+			return getRuleContext(OffhandContext.class,0);
+		}
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public LootToolContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lootTool; }
+	}
+
+	public final LootToolContext lootTool() throws RecognitionException {
+		LootToolContext _localctx = new LootToolContext(_ctx, getState());
+		enterRule(_localctx, 862, RULE_lootTool);
+		try {
+			setState(2848);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Mainhand:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2845);
+				mainhand();
+				}
+				break;
+			case Offhand:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2846);
+				offhand();
+				}
+				break;
+			case ResourceLocation:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2847);
+				match(ResourceLocation);
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LootOptionsContext extends ParserRuleContext {
+		public GiveKeyContext giveKey() {
+			return getRuleContext(GiveKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public LootModesContext lootModes() {
+			return getRuleContext(LootModesContext.class,0);
+		}
+		public InsertContext insert() {
+			return getRuleContext(InsertContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ReplaceContext replace() {
+			return getRuleContext(ReplaceContext.class,0);
+		}
+		public LootReplaceContext lootReplace() {
+			return getRuleContext(LootReplaceContext.class,0);
+		}
+		public SpawnContext spawn() {
+			return getRuleContext(SpawnContext.class,0);
+		}
+		public LootOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lootOptions; }
+	}
+
+	public final LootOptionsContext lootOptions() throws RecognitionException {
+		LootOptionsContext _localctx = new LootOptionsContext(_ctx, getState());
+		enterRule(_localctx, 864, RULE_lootOptions);
+		try {
+			setState(2865);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case GiveKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2850);
+				giveKey();
+				setState(2851);
+				selector();
+				setState(2852);
+				lootModes();
+				}
+				}
+				break;
+			case Insert:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2854);
+				insert();
+				setState(2855);
+				pos3D();
+				setState(2856);
+				lootModes();
+				}
+				}
+				break;
+			case Replace:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2858);
+				replace();
+				setState(2859);
+				lootReplace();
+				}
+				}
+				break;
+			case Spawn:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2861);
+				spawn();
+				setState(2862);
+				pos3D();
+				setState(2863);
+				lootModes();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LootReplaceContext extends ParserRuleContext {
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ItemSlotContext itemSlot() {
+			return getRuleContext(ItemSlotContext.class,0);
+		}
+		public LootModesContext lootModes() {
+			return getRuleContext(LootModesContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public LootReplaceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lootReplace; }
+	}
+
+	public final LootReplaceContext lootReplace() throws RecognitionException {
+		LootReplaceContext _localctx = new LootReplaceContext(_ctx, getState());
+		enterRule(_localctx, 866, RULE_lootReplace);
+		try {
+			setState(2877);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Block:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2867);
+				block();
+				setState(2868);
+				pos3D();
+				setState(2869);
+				itemSlot();
+				setState(2870);
+				lootModes();
+				}
+				}
+				break;
+			case Entity:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2872);
+				entity();
+				setState(2873);
+				selector();
+				setState(2874);
+				itemSlot();
+				setState(2875);
+				lootModes();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class LootModesContext extends ParserRuleContext {
+		public FishContext fish() {
+			return getRuleContext(FishContext.class,0);
+		}
+		public LootFilePathContext lootFilePath() {
+			return getRuleContext(LootFilePathContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public LootToolContext lootTool() {
+			return getRuleContext(LootToolContext.class,0);
+		}
+		public KillKeyContext killKey() {
+			return getRuleContext(KillKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public LootKeyContext lootKey() {
+			return getRuleContext(LootKeyContext.class,0);
+		}
+		public MineContext mine() {
+			return getRuleContext(MineContext.class,0);
+		}
+		public LootModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_lootModes; }
+	}
+
+	public final LootModesContext lootModes() throws RecognitionException {
+		LootModesContext _localctx = new LootModesContext(_ctx, getState());
+		enterRule(_localctx, 868, RULE_lootModes);
+		try {
+			setState(2894);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Fish:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2879);
+				fish();
+				setState(2880);
+				lootFilePath();
+				setState(2881);
+				pos3D();
+				setState(2882);
+				lootTool();
+				}
+				}
+				break;
+			case KillKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2884);
+				killKey();
+				setState(2885);
+				selector();
+				}
+				}
+				break;
+			case LootKey:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2887);
+				lootKey();
+				setState(2888);
+				lootFilePath();
+				}
+				}
+				break;
+			case Mine:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2890);
+				mine();
+				setState(2891);
+				pos3D();
+				setState(2892);
+				lootTool();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MeRadicalContext extends ParserRuleContext {
+		public MeKeyContext meKey() {
+			return getRuleContext(MeKeyContext.class,0);
+		}
+		public ActionContext action() {
+			return getRuleContext(ActionContext.class,0);
+		}
+		public MeRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_meRadical; }
+	}
+
+	public final MeRadicalContext meRadical() throws RecognitionException {
+		MeRadicalContext _localctx = new MeRadicalContext(_ctx, getState());
+		enterRule(_localctx, 870, RULE_meRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2896);
+			meKey();
+			setState(2897);
+			action();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ActionContext extends ParserRuleContext {
+		public TerminalNode MessageContent() { return getToken(MCCommandParser.MessageContent, 0); }
+		public ActionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_action; }
+	}
+
+	public final ActionContext action() throws RecognitionException {
+		ActionContext _localctx = new ActionContext(_ctx, getState());
+		enterRule(_localctx, 872, RULE_action);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2899);
+			match(MessageContent);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MsgRadicalContext extends ParserRuleContext {
+		public MsgKeyContext msgKey() {
+			return getRuleContext(MsgKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public MsgMessageContext msgMessage() {
+			return getRuleContext(MsgMessageContext.class,0);
+		}
+		public MsgRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_msgRadical; }
+	}
+
+	public final MsgRadicalContext msgRadical() throws RecognitionException {
+		MsgRadicalContext _localctx = new MsgRadicalContext(_ctx, getState());
+		enterRule(_localctx, 874, RULE_msgRadical);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2901);
+			msgKey();
+			setState(2902);
+			selector();
+			setState(2904);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==MessageContent) {
+				{
+				setState(2903);
+				msgMessage();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MsgMessageContext extends ParserRuleContext {
+		public TerminalNode MessageContent() { return getToken(MCCommandParser.MessageContent, 0); }
+		public MsgMessageContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_msgMessage; }
+	}
+
+	public final MsgMessageContext msgMessage() throws RecognitionException {
+		MsgMessageContext _localctx = new MsgMessageContext(_ctx, getState());
+		enterRule(_localctx, 876, RULE_msgMessage);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2906);
+			match(MessageContent);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleRadicalContext extends ParserRuleContext {
+		public ParticleKeyContext particleKey() {
+			return getRuleContext(ParticleKeyContext.class,0);
+		}
+		public ParticleIdContext particleId() {
+			return getRuleContext(ParticleIdContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public ParticleDeltaContext particleDelta() {
+			return getRuleContext(ParticleDeltaContext.class,0);
+		}
+		public ParticleSpeedContext particleSpeed() {
+			return getRuleContext(ParticleSpeedContext.class,0);
+		}
+		public ParticleCountContext particleCount() {
+			return getRuleContext(ParticleCountContext.class,0);
+		}
+		public ParticleOptionsContext particleOptions() {
+			return getRuleContext(ParticleOptionsContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public ParticleRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleRadical; }
+	}
+
+	public final ParticleRadicalContext particleRadical() throws RecognitionException {
+		ParticleRadicalContext _localctx = new ParticleRadicalContext(_ctx, getState());
+		enterRule(_localctx, 878, RULE_particleRadical);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2908);
+			particleKey();
+			setState(2909);
+			particleId();
+			setState(2910);
+			pos3D();
+			setState(2912);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,113,_ctx) ) {
+			case 1:
+				{
+				setState(2911);
+				particleDelta();
+				}
+				break;
+			}
+			setState(2915);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,114,_ctx) ) {
+			case 1:
+				{
+				setState(2914);
+				particleSpeed();
+				}
+				break;
+			}
+			setState(2918);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==Integer) {
+				{
+				setState(2917);
+				particleCount();
+				}
+			}
+
+			setState(2921);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==Force || _la==Normal) {
+				{
+				setState(2920);
+				particleOptions();
+				}
+			}
+
+			setState(2924);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==AtChar || _la==Identifier) {
+				{
+				setState(2923);
+				selector();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleSpeedContext extends ParserRuleContext {
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public ParticleSpeedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleSpeed; }
+	}
+
+	public final ParticleSpeedContext particleSpeed() throws RecognitionException {
+		ParticleSpeedContext _localctx = new ParticleSpeedContext(_ctx, getState());
+		enterRule(_localctx, 880, RULE_particleSpeed);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2926);
+			_la = _input.LA(1);
+			if ( !(_la==Integer || _la==Double) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleCountContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public ParticleCountContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleCount; }
+	}
+
+	public final ParticleCountContext particleCount() throws RecognitionException {
+		ParticleCountContext _localctx = new ParticleCountContext(_ctx, getState());
+		enterRule(_localctx, 882, RULE_particleCount);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2928);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleDeltaContext extends ParserRuleContext {
+		public CoordinateXContext coordinateX() {
+			return getRuleContext(CoordinateXContext.class,0);
+		}
+		public CoordinateYContext coordinateY() {
+			return getRuleContext(CoordinateYContext.class,0);
+		}
+		public CoordinateZContext coordinateZ() {
+			return getRuleContext(CoordinateZContext.class,0);
+		}
+		public ParticleDeltaContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleDelta; }
+	}
+
+	public final ParticleDeltaContext particleDelta() throws RecognitionException {
+		ParticleDeltaContext _localctx = new ParticleDeltaContext(_ctx, getState());
+		enterRule(_localctx, 884, RULE_particleDelta);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2930);
+			coordinateX();
+			setState(2931);
+			coordinateY();
+			setState(2932);
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleOptionsContext extends ParserRuleContext {
+		public ForceContext force() {
+			return getRuleContext(ForceContext.class,0);
+		}
+		public NormalContext normal() {
+			return getRuleContext(NormalContext.class,0);
+		}
+		public ParticleOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleOptions; }
+	}
+
+	public final ParticleOptionsContext particleOptions() throws RecognitionException {
+		ParticleOptionsContext _localctx = new ParticleOptionsContext(_ctx, getState());
+		enterRule(_localctx, 886, RULE_particleOptions);
+		try {
+			setState(2936);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Force:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2934);
+				force();
+				}
+				break;
+			case Normal:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2935);
+				normal();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleIdContext extends ParserRuleContext {
+		public ParticleIDStringContext particleIDString() {
+			return getRuleContext(ParticleIDStringContext.class,0);
+		}
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public JobjectContext jobject() {
+			return getRuleContext(JobjectContext.class,0);
+		}
+		public ParticleIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleId; }
+	}
+
+	public final ParticleIdContext particleId() throws RecognitionException {
+		ParticleIdContext _localctx = new ParticleIdContext(_ctx, getState());
+		enterRule(_localctx, 888, RULE_particleId);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2940);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case ResourceLocation:
+				{
+				setState(2938);
+				particleIDString();
+				}
+				break;
+			case Identifier:
+				{
+				setState(2939);
+				identifier();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(2943);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==CurlyBrackets || _la==LeftCurlyBracket) {
+				{
+				setState(2942);
+				jobject();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParticleIDStringContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public ParticleIDStringContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_particleIDString; }
+	}
+
+	public final ParticleIDStringContext particleIDString() throws RecognitionException {
+		ParticleIDStringContext _localctx = new ParticleIDStringContext(_ctx, getState());
+		enterRule(_localctx, 890, RULE_particleIDString);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2945);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlaceRadicalContext extends ParserRuleContext {
+		public PlaceKeyContext placeKey() {
+			return getRuleContext(PlaceKeyContext.class,0);
+		}
+		public PlaceModesContext placeModes() {
+			return getRuleContext(PlaceModesContext.class,0);
+		}
+		public PlaceRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_placeRadical; }
+	}
+
+	public final PlaceRadicalContext placeRadical() throws RecognitionException {
+		PlaceRadicalContext _localctx = new PlaceRadicalContext(_ctx, getState());
+		enterRule(_localctx, 892, RULE_placeRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2947);
+			placeKey();
+			setState(2948);
+			placeModes();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FeatureIdContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public FeatureIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_featureId; }
+	}
+
+	public final FeatureIdContext featureId() throws RecognitionException {
+		FeatureIdContext _localctx = new FeatureIdContext(_ctx, getState());
+		enterRule(_localctx, 894, RULE_featureId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2950);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JigsawTargetContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public JigsawTargetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jigsawTarget; }
+	}
+
+	public final JigsawTargetContext jigsawTarget() throws RecognitionException {
+		JigsawTargetContext _localctx = new JigsawTargetContext(_ctx, getState());
+		enterRule(_localctx, 896, RULE_jigsawTarget);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2952);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JigsawFilePathContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public JigsawFilePathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jigsawFilePath; }
+	}
+
+	public final JigsawFilePathContext jigsawFilePath() throws RecognitionException {
+		JigsawFilePathContext _localctx = new JigsawFilePathContext(_ctx, getState());
+		enterRule(_localctx, 898, RULE_jigsawFilePath);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2954);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TemplateFilePathContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public TemplateFilePathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_templateFilePath; }
+	}
+
+	public final TemplateFilePathContext templateFilePath() throws RecognitionException {
+		TemplateFilePathContext _localctx = new TemplateFilePathContext(_ctx, getState());
+		enterRule(_localctx, 900, RULE_templateFilePath);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2956);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlaceModesContext extends ParserRuleContext {
+		public FeatureContext feature() {
+			return getRuleContext(FeatureContext.class,0);
+		}
+		public FeatureIdContext featureId() {
+			return getRuleContext(FeatureIdContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public JigsawContext jigsaw() {
+			return getRuleContext(JigsawContext.class,0);
+		}
+		public JigsawFilePathContext jigsawFilePath() {
+			return getRuleContext(JigsawFilePathContext.class,0);
+		}
+		public JigsawTargetContext jigsawTarget() {
+			return getRuleContext(JigsawTargetContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public StructureContext structure() {
+			return getRuleContext(StructureContext.class,0);
+		}
+		public StructureIdContext structureId() {
+			return getRuleContext(StructureIdContext.class,0);
+		}
+		public TemplateContext template() {
+			return getRuleContext(TemplateContext.class,0);
+		}
+		public TemplateFilePathContext templateFilePath() {
+			return getRuleContext(TemplateFilePathContext.class,0);
+		}
+		public PlaceRotationModesContext placeRotationModes() {
+			return getRuleContext(PlaceRotationModesContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public PlaceModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_placeModes; }
+	}
+
+	public final PlaceModesContext placeModes() throws RecognitionException {
+		PlaceModesContext _localctx = new PlaceModesContext(_ctx, getState());
+		enterRule(_localctx, 902, RULE_placeModes);
+		try {
+			setState(2979);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Feature:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(2958);
+				feature();
+				setState(2959);
+				featureId();
+				setState(2960);
+				pos3D();
+				}
+				}
+				break;
+			case Jigsaw:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(2962);
+				jigsaw();
+				setState(2963);
+				jigsawFilePath();
+				setState(2964);
+				jigsawTarget();
+				setState(2965);
+				integer();
+				setState(2966);
+				pos3D();
+				}
+				}
+				break;
+			case Structure:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(2968);
+				structure();
+				setState(2969);
+				structureId();
+				setState(2970);
+				pos3D();
+				}
+				}
+				break;
+			case Template:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(2972);
+				template();
+				setState(2973);
+				templateFilePath();
+				setState(2974);
+				pos3D();
+				setState(2975);
+				placeRotationModes();
+				setState(2976);
+				match(Double);
+				setState(2977);
+				integer();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlaceMirrorItemsContext extends ParserRuleContext {
+		public Front_backContext front_back() {
+			return getRuleContext(Front_backContext.class,0);
+		}
+		public Left_rightContext left_right() {
+			return getRuleContext(Left_rightContext.class,0);
+		}
+		public NoneContext none() {
+			return getRuleContext(NoneContext.class,0);
+		}
+		public PlaceMirrorItemsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_placeMirrorItems; }
+	}
+
+	public final PlaceMirrorItemsContext placeMirrorItems() throws RecognitionException {
+		PlaceMirrorItemsContext _localctx = new PlaceMirrorItemsContext(_ctx, getState());
+		enterRule(_localctx, 904, RULE_placeMirrorItems);
+		try {
+			setState(2984);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Front_back:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(2981);
+				front_back();
+				}
+				break;
+			case Left_right:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(2982);
+				left_right();
+				}
+				break;
+			case None:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(2983);
+				none();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlaceRotationModesContext extends ParserRuleContext {
+		public PlaceMirrorItemsContext placeMirrorItems() {
+			return getRuleContext(PlaceMirrorItemsContext.class,0);
+		}
+		public OneHundredAndEightyContext oneHundredAndEighty() {
+			return getRuleContext(OneHundredAndEightyContext.class,0);
+		}
+		public Clockwise_90Context clockwise_90() {
+			return getRuleContext(Clockwise_90Context.class,0);
+		}
+		public Counterclockwise_90Context counterclockwise_90() {
+			return getRuleContext(Counterclockwise_90Context.class,0);
+		}
+		public NoneContext none() {
+			return getRuleContext(NoneContext.class,0);
+		}
+		public PlaceRotationModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_placeRotationModes; }
+	}
+
+	public final PlaceRotationModesContext placeRotationModes() throws RecognitionException {
+		PlaceRotationModesContext _localctx = new PlaceRotationModesContext(_ctx, getState());
+		enterRule(_localctx, 906, RULE_placeRotationModes);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2990);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case OneHundredAndEighty:
+				{
+				setState(2986);
+				oneHundredAndEighty();
+				}
+				break;
+			case Clockwise_90:
+				{
+				setState(2987);
+				clockwise_90();
+				}
+				break;
+			case Counterclockwise_90:
+				{
+				setState(2988);
+				counterclockwise_90();
+				}
+				break;
+			case None:
+				{
+				setState(2989);
+				none();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			setState(2992);
+			placeMirrorItems();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PlaysoundRadicalContext extends ParserRuleContext {
+		public PlaysoundKeyContext playsoundKey() {
+			return getRuleContext(PlaysoundKeyContext.class,0);
+		}
+		public SoundIdContext soundId() {
+			return getRuleContext(SoundIdContext.class,0);
+		}
+		public SoundTypesContext soundTypes() {
+			return getRuleContext(SoundTypesContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public VolumeContext volume() {
+			return getRuleContext(VolumeContext.class,0);
+		}
+		public PitchContext pitch() {
+			return getRuleContext(PitchContext.class,0);
+		}
+		public MinVolumeContext minVolume() {
+			return getRuleContext(MinVolumeContext.class,0);
+		}
+		public PlaysoundRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_playsoundRadical; }
+	}
+
+	public final PlaysoundRadicalContext playsoundRadical() throws RecognitionException {
+		PlaysoundRadicalContext _localctx = new PlaysoundRadicalContext(_ctx, getState());
+		enterRule(_localctx, 908, RULE_playsoundRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(2994);
+			playsoundKey();
+			setState(2995);
+			soundId();
+			setState(2996);
+			soundTypes();
+			setState(2997);
+			selector();
+			setState(2998);
+			pos3D();
+			setState(2999);
+			volume();
+			setState(3000);
+			pitch();
+			setState(3001);
+			minVolume();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class VolumeContext extends ParserRuleContext {
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public VolumeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_volume; }
+	}
+
+	public final VolumeContext volume() throws RecognitionException {
+		VolumeContext _localctx = new VolumeContext(_ctx, getState());
+		enterRule(_localctx, 910, RULE_volume);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3003);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PitchContext extends ParserRuleContext {
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public PitchContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_pitch; }
+	}
+
+	public final PitchContext pitch() throws RecognitionException {
+		PitchContext _localctx = new PitchContext(_ctx, getState());
+		enterRule(_localctx, 912, RULE_pitch);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3005);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MinVolumeContext extends ParserRuleContext {
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public MinVolumeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_minVolume; }
+	}
+
+	public final MinVolumeContext minVolume() throws RecognitionException {
+		MinVolumeContext _localctx = new MinVolumeContext(_ctx, getState());
+		enterRule(_localctx, 914, RULE_minVolume);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3007);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SoundTypesContext extends ParserRuleContext {
+		public AmbientContext ambient() {
+			return getRuleContext(AmbientContext.class,0);
+		}
+		public HostileContext hostile() {
+			return getRuleContext(HostileContext.class,0);
+		}
+		public MasterContext master() {
+			return getRuleContext(MasterContext.class,0);
+		}
+		public MusicContext music() {
+			return getRuleContext(MusicContext.class,0);
+		}
+		public NeutralContext neutral() {
+			return getRuleContext(NeutralContext.class,0);
+		}
+		public PlayerContext player() {
+			return getRuleContext(PlayerContext.class,0);
+		}
+		public RecordContext record() {
+			return getRuleContext(RecordContext.class,0);
+		}
+		public VoiceContext voice() {
+			return getRuleContext(VoiceContext.class,0);
+		}
+		public WeatherKeyContext weatherKey() {
+			return getRuleContext(WeatherKeyContext.class,0);
+		}
+		public SoundTypesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_soundTypes; }
+	}
+
+	public final SoundTypesContext soundTypes() throws RecognitionException {
+		SoundTypesContext _localctx = new SoundTypesContext(_ctx, getState());
+		enterRule(_localctx, 916, RULE_soundTypes);
+		try {
+			setState(3018);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Ambient:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3009);
+				ambient();
+				}
+				break;
+			case Hostile:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3010);
+				hostile();
+				}
+				break;
+			case Master:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3011);
+				master();
+				}
+				break;
+			case Music:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(3012);
+				music();
+				}
+				break;
+			case Neutral:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(3013);
+				neutral();
+				}
+				break;
+			case Player:
+				enterOuterAlt(_localctx, 6);
+				{
+				setState(3014);
+				player();
+				}
+				break;
+			case Record:
+				enterOuterAlt(_localctx, 7);
+				{
+				setState(3015);
+				record();
+				}
+				break;
+			case Voice:
+				enterOuterAlt(_localctx, 8);
+				{
+				setState(3016);
+				voice();
+				}
+				break;
+			case WeatherKey:
+				enterOuterAlt(_localctx, 9);
+				{
+				setState(3017);
+				weatherKey();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PublishRadicalContext extends ParserRuleContext {
+		public PublishKeyContext publishKey() {
+			return getRuleContext(PublishKeyContext.class,0);
+		}
+		public BoolContext bool() {
+			return getRuleContext(BoolContext.class,0);
+		}
+		public GamemodeValueContext gamemodeValue() {
+			return getRuleContext(GamemodeValueContext.class,0);
+		}
+		public PortContext port() {
+			return getRuleContext(PortContext.class,0);
+		}
+		public PublishRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_publishRadical; }
+	}
+
+	public final PublishRadicalContext publishRadical() throws RecognitionException {
+		PublishRadicalContext _localctx = new PublishRadicalContext(_ctx, getState());
+		enterRule(_localctx, 918, RULE_publishRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3020);
+			publishKey();
+			setState(3021);
+			bool();
+			setState(3022);
+			gamemodeValue();
+			setState(3023);
+			port();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class PortContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public PortContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_port; }
+	}
+
+	public final PortContext port() throws RecognitionException {
+		PortContext _localctx = new PortContext(_ctx, getState());
+		enterRule(_localctx, 920, RULE_port);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3025);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RecipeRadicalContext extends ParserRuleContext {
+		public RecipeKeyContext recipeKey() {
+			return getRuleContext(RecipeKeyContext.class,0);
+		}
+		public RecipeGiveOrTakeContext recipeGiveOrTake() {
+			return getRuleContext(RecipeGiveOrTakeContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public RecipeFilePathContext recipeFilePath() {
+			return getRuleContext(RecipeFilePathContext.class,0);
+		}
+		public RecipeRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_recipeRadical; }
+	}
+
+	public final RecipeRadicalContext recipeRadical() throws RecognitionException {
+		RecipeRadicalContext _localctx = new RecipeRadicalContext(_ctx, getState());
+		enterRule(_localctx, 922, RULE_recipeRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3027);
+			recipeKey();
+			setState(3028);
+			recipeGiveOrTake();
+			setState(3029);
+			selector();
+			setState(3030);
+			recipeFilePath();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RecipeFilePathContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public RecipeFilePathContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_recipeFilePath; }
+	}
+
+	public final RecipeFilePathContext recipeFilePath() throws RecognitionException {
+		RecipeFilePathContext _localctx = new RecipeFilePathContext(_ctx, getState());
+		enterRule(_localctx, 924, RULE_recipeFilePath);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3032);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RecipeGiveOrTakeContext extends ParserRuleContext {
+		public GiveKeyContext giveKey() {
+			return getRuleContext(GiveKeyContext.class,0);
+		}
+		public TakeContext take() {
+			return getRuleContext(TakeContext.class,0);
+		}
+		public RecipeGiveOrTakeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_recipeGiveOrTake; }
+	}
+
+	public final RecipeGiveOrTakeContext recipeGiveOrTake() throws RecognitionException {
+		RecipeGiveOrTakeContext _localctx = new RecipeGiveOrTakeContext(_ctx, getState());
+		enterRule(_localctx, 926, RULE_recipeGiveOrTake);
+		try {
+			setState(3036);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case GiveKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3034);
+				giveKey();
+				}
+				break;
+			case Take:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3035);
+				take();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ReloadRadicalContext extends ParserRuleContext {
+		public ReloadKeyContext reloadKey() {
+			return getRuleContext(ReloadKeyContext.class,0);
+		}
+		public ReloadRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_reloadRadical; }
+	}
+
+	public final ReloadRadicalContext reloadRadical() throws RecognitionException {
+		ReloadRadicalContext _localctx = new ReloadRadicalContext(_ctx, getState());
+		enterRule(_localctx, 928, RULE_reloadRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3038);
+			reloadKey();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ReturnRadicalContext extends ParserRuleContext {
+		public ReturnKeyContext returnKey() {
+			return getRuleContext(ReturnKeyContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public ReturnRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_returnRadical; }
+	}
+
+	public final ReturnRadicalContext returnRadical() throws RecognitionException {
+		ReturnRadicalContext _localctx = new ReturnRadicalContext(_ctx, getState());
+		enterRule(_localctx, 930, RULE_returnRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3040);
+			returnKey();
+			setState(3041);
+			integer();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RideRadicalContext extends ParserRuleContext {
+		public RideKeyContext rideKey() {
+			return getRuleContext(RideKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public RideModesContext rideModes() {
+			return getRuleContext(RideModesContext.class,0);
+		}
+		public RideRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rideRadical; }
+	}
+
+	public final RideRadicalContext rideRadical() throws RecognitionException {
+		RideRadicalContext _localctx = new RideRadicalContext(_ctx, getState());
+		enterRule(_localctx, 932, RULE_rideRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3043);
+			rideKey();
+			setState(3044);
+			selector();
+			setState(3045);
+			rideModes();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RideModesContext extends ParserRuleContext {
+		public DismountContext dismount() {
+			return getRuleContext(DismountContext.class,0);
+		}
+		public MountContext mount() {
+			return getRuleContext(MountContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public RideModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_rideModes; }
+	}
+
+	public final RideModesContext rideModes() throws RecognitionException {
+		RideModesContext _localctx = new RideModesContext(_ctx, getState());
+		enterRule(_localctx, 934, RULE_rideModes);
+		try {
+			setState(3051);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Dismount:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3047);
+				dismount();
+				}
+				break;
+			case Mount:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3048);
+				mount();
+				setState(3049);
+				selector();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SayRadicalContext extends ParserRuleContext {
+		public SayKeyContext sayKey() {
+			return getRuleContext(SayKeyContext.class,0);
+		}
+		public SayMessageContext sayMessage() {
+			return getRuleContext(SayMessageContext.class,0);
+		}
+		public SayRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_sayRadical; }
+	}
+
+	public final SayRadicalContext sayRadical() throws RecognitionException {
+		SayRadicalContext _localctx = new SayRadicalContext(_ctx, getState());
+		enterRule(_localctx, 936, RULE_sayRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3053);
+			sayKey();
+			setState(3054);
+			sayMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SayMessageContext extends ParserRuleContext {
+		public TerminalNode MessageContent() { return getToken(MCCommandParser.MessageContent, 0); }
+		public SayMessageContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_sayMessage; }
+	}
+
+	public final SayMessageContext sayMessage() throws RecognitionException {
+		SayMessageContext _localctx = new SayMessageContext(_ctx, getState());
+		enterRule(_localctx, 938, RULE_sayMessage);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3056);
+			match(MessageContent);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScheduleRadicalContext extends ParserRuleContext {
+		public ScheduleKeyContext scheduleKey() {
+			return getRuleContext(ScheduleKeyContext.class,0);
+		}
+		public ScheduleModesContext scheduleModes() {
+			return getRuleContext(ScheduleModesContext.class,0);
+		}
+		public ScheduleRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scheduleRadical; }
+	}
+
+	public final ScheduleRadicalContext scheduleRadical() throws RecognitionException {
+		ScheduleRadicalContext _localctx = new ScheduleRadicalContext(_ctx, getState());
+		enterRule(_localctx, 940, RULE_scheduleRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3058);
+			scheduleKey();
+			setState(3059);
+			scheduleModes();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FunctionIdContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public FunctionIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_functionId; }
+	}
+
+	public final FunctionIdContext functionId() throws RecognitionException {
+		FunctionIdContext _localctx = new FunctionIdContext(_ctx, getState());
+		enterRule(_localctx, 942, RULE_functionId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3061);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScheduleAppendOrReplaceContext extends ParserRuleContext {
+		public AppendContext append() {
+			return getRuleContext(AppendContext.class,0);
+		}
+		public ReplaceContext replace() {
+			return getRuleContext(ReplaceContext.class,0);
+		}
+		public ScheduleAppendOrReplaceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scheduleAppendOrReplace; }
+	}
+
+	public final ScheduleAppendOrReplaceContext scheduleAppendOrReplace() throws RecognitionException {
+		ScheduleAppendOrReplaceContext _localctx = new ScheduleAppendOrReplaceContext(_ctx, getState());
+		enterRule(_localctx, 944, RULE_scheduleAppendOrReplace);
+		try {
+			setState(3065);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Append:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3063);
+				append();
+				}
+				break;
+			case Replace:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3064);
+				replace();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScheduleModesContext extends ParserRuleContext {
+		public ClearKeyContext clearKey() {
+			return getRuleContext(ClearKeyContext.class,0);
+		}
+		public FunctionIdContext functionId() {
+			return getRuleContext(FunctionIdContext.class,0);
+		}
+		public FunctionKeyContext functionKey() {
+			return getRuleContext(FunctionKeyContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public ScheduleAppendOrReplaceContext scheduleAppendOrReplace() {
+			return getRuleContext(ScheduleAppendOrReplaceContext.class,0);
+		}
+		public ScheduleModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scheduleModes; }
+	}
+
+	public final ScheduleModesContext scheduleModes() throws RecognitionException {
+		ScheduleModesContext _localctx = new ScheduleModesContext(_ctx, getState());
+		enterRule(_localctx, 946, RULE_scheduleModes);
+		try {
+			setState(3075);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case ClearKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3067);
+				clearKey();
+				setState(3068);
+				functionId();
+				}
+				}
+				break;
+			case FunctionKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3070);
+				functionKey();
+				setState(3071);
+				functionId();
+				setState(3072);
+				match(Double);
+				setState(3073);
+				scheduleAppendOrReplace();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardRadicalContext extends ParserRuleContext {
+		public ScoreboardKeyContext scoreboardKey() {
+			return getRuleContext(ScoreboardKeyContext.class,0);
+		}
+		public ScoreboardOptionsContext scoreboardOptions() {
+			return getRuleContext(ScoreboardOptionsContext.class,0);
+		}
+		public ScoreboardRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardRadical; }
+	}
+
+	public final ScoreboardRadicalContext scoreboardRadical() throws RecognitionException {
+		ScoreboardRadicalContext _localctx = new ScoreboardRadicalContext(_ctx, getState());
+		enterRule(_localctx, 948, RULE_scoreboardRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3077);
+			scoreboardKey();
+			setState(3078);
+			scoreboardOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardOptionsContext extends ParserRuleContext {
+		public ObjectivesContext objectives() {
+			return getRuleContext(ObjectivesContext.class,0);
+		}
+		public ScoreboardObjectivesBehaviorsContext scoreboardObjectivesBehaviors() {
+			return getRuleContext(ScoreboardObjectivesBehaviorsContext.class,0);
+		}
+		public PlayersContext players() {
+			return getRuleContext(PlayersContext.class,0);
+		}
+		public ScoreboardPlayersBehaviorsContext scoreboardPlayersBehaviors() {
+			return getRuleContext(ScoreboardPlayersBehaviorsContext.class,0);
+		}
+		public ScoreboardOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardOptions; }
+	}
+
+	public final ScoreboardOptionsContext scoreboardOptions() throws RecognitionException {
+		ScoreboardOptionsContext _localctx = new ScoreboardOptionsContext(_ctx, getState());
+		enterRule(_localctx, 950, RULE_scoreboardOptions);
+		try {
+			setState(3086);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Objectives:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3080);
+				objectives();
+				setState(3081);
+				scoreboardObjectivesBehaviors();
+				}
+				}
+				break;
+			case Players:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3083);
+				players();
+				setState(3084);
+				scoreboardPlayersBehaviors();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardObjectiveContext extends ParserRuleContext {
+		public TerminalNode ScoreboardObjective() { return getToken(MCCommandParser.ScoreboardObjective, 0); }
+		public ScoreboardObjectiveContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardObjective; }
+	}
+
+	public final ScoreboardObjectiveContext scoreboardObjective() throws RecognitionException {
+		ScoreboardObjectiveContext _localctx = new ScoreboardObjectiveContext(_ctx, getState());
+		enterRule(_localctx, 952, RULE_scoreboardObjective);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3088);
+			match(ScoreboardObjective);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardTypeContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public ScoreboardTypeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardType; }
+	}
+
+	public final ScoreboardTypeContext scoreboardType() throws RecognitionException {
+		ScoreboardTypeContext _localctx = new ScoreboardTypeContext(_ctx, getState());
+		enterRule(_localctx, 954, RULE_scoreboardType);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3090);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardHeartsOrIntegerContext extends ParserRuleContext {
+		public HeartsContext hearts() {
+			return getRuleContext(HeartsContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public ScoreboardHeartsOrIntegerContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardHeartsOrInteger; }
+	}
+
+	public final ScoreboardHeartsOrIntegerContext scoreboardHeartsOrInteger() throws RecognitionException {
+		ScoreboardHeartsOrIntegerContext _localctx = new ScoreboardHeartsOrIntegerContext(_ctx, getState());
+		enterRule(_localctx, 956, RULE_scoreboardHeartsOrInteger);
+		try {
+			setState(3094);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Hearts:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3092);
+				hearts();
+				}
+				break;
+			case Integer:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3093);
+				integer();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardOperatorContext extends ParserRuleContext {
+		public RemainderEqualContext remainderEqual() {
+			return getRuleContext(RemainderEqualContext.class,0);
+		}
+		public MultiplicationEqualContext multiplicationEqual() {
+			return getRuleContext(MultiplicationEqualContext.class,0);
+		}
+		public AdditionEqualContext additionEqual() {
+			return getRuleContext(AdditionEqualContext.class,0);
+		}
+		public SubtractionEqualContext subtractionEqual() {
+			return getRuleContext(SubtractionEqualContext.class,0);
+		}
+		public DivisionEqualContext divisionEqual() {
+			return getRuleContext(DivisionEqualContext.class,0);
+		}
+		public LessThanContext lessThan() {
+			return getRuleContext(LessThanContext.class,0);
+		}
+		public EqualContext equal() {
+			return getRuleContext(EqualContext.class,0);
+		}
+		public GreaterThanContext greaterThan() {
+			return getRuleContext(GreaterThanContext.class,0);
+		}
+		public GreaterThanLessThanContext greaterThanLessThan() {
+			return getRuleContext(GreaterThanLessThanContext.class,0);
+		}
+		public ScoreboardOperatorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardOperator; }
+	}
+
+	public final ScoreboardOperatorContext scoreboardOperator() throws RecognitionException {
+		ScoreboardOperatorContext _localctx = new ScoreboardOperatorContext(_ctx, getState());
+		enterRule(_localctx, 958, RULE_scoreboardOperator);
+		try {
+			setState(3105);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case RemainderEqual:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3096);
+				remainderEqual();
+				}
+				break;
+			case MultiplicationEqual:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3097);
+				multiplicationEqual();
+				}
+				break;
+			case AdditionEqual:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3098);
+				additionEqual();
+				}
+				break;
+			case SubtractionEqual:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(3099);
+				subtractionEqual();
+				}
+				break;
+			case DivisionEqual:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(3100);
+				divisionEqual();
+				}
+				break;
+			case LeftAngleBracket:
+				enterOuterAlt(_localctx, 6);
+				{
+				setState(3101);
+				lessThan();
+				}
+				break;
+			case Equal:
+				enterOuterAlt(_localctx, 7);
+				{
+				setState(3102);
+				equal();
+				}
+				break;
+			case RightAngleBracket:
+				enterOuterAlt(_localctx, 8);
+				{
+				setState(3103);
+				greaterThan();
+				}
+				break;
+			case GreaterThanLessThan:
+				enterOuterAlt(_localctx, 9);
+				{
+				setState(3104);
+				greaterThanLessThan();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardSlotsContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public ScoreboardSlotsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardSlots; }
+	}
+
+	public final ScoreboardSlotsContext scoreboardSlots() throws RecognitionException {
+		ScoreboardSlotsContext _localctx = new ScoreboardSlotsContext(_ctx, getState());
+		enterRule(_localctx, 960, RULE_scoreboardSlots);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3107);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardObjectivesBehaviorsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public ScoreboardObjectiveContext scoreboardObjective() {
+			return getRuleContext(ScoreboardObjectiveContext.class,0);
+		}
+		public ScoreboardTypeContext scoreboardType() {
+			return getRuleContext(ScoreboardTypeContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public ListKeyContext listKey() {
+			return getRuleContext(ListKeyContext.class,0);
+		}
+		public ModifyContext modify() {
+			return getRuleContext(ModifyContext.class,0);
+		}
+		public TargetObjectiveContext targetObjective() {
+			return getRuleContext(TargetObjectiveContext.class,0);
+		}
+		public DisplayNameContext displayName() {
+			return getRuleContext(DisplayNameContext.class,0);
+		}
+		public RendertypeContext rendertype() {
+			return getRuleContext(RendertypeContext.class,0);
+		}
+		public ScoreboardHeartsOrIntegerContext scoreboardHeartsOrInteger() {
+			return getRuleContext(ScoreboardHeartsOrIntegerContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public SetdisplayContext setdisplay() {
+			return getRuleContext(SetdisplayContext.class,0);
+		}
+		public ScoreboardSlotsContext scoreboardSlots() {
+			return getRuleContext(ScoreboardSlotsContext.class,0);
+		}
+		public ScoreboardObjectivesBehaviorsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardObjectivesBehaviors; }
+	}
+
+	public final ScoreboardObjectivesBehaviorsContext scoreboardObjectivesBehaviors() throws RecognitionException {
+		ScoreboardObjectivesBehaviorsContext _localctx = new ScoreboardObjectivesBehaviorsContext(_ctx, getState());
+		enterRule(_localctx, 962, RULE_scoreboardObjectivesBehaviors);
+		try {
+			setState(3132);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3109);
+				add();
+				setState(3110);
+				scoreboardObjective();
+				setState(3111);
+				scoreboardType();
+				setState(3112);
+				jsonComponent();
+				}
+				}
+				break;
+			case ListKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3114);
+				listKey();
+				}
+				break;
+			case Modify:
+			case Rendertype:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3123);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Modify:
+					{
+					setState(3115);
+					modify();
+					setState(3116);
+					targetObjective();
+					{
+					setState(3117);
+					displayName();
+					setState(3118);
+					jsonComponent();
+					}
+					}
+					break;
+				case Rendertype:
+					{
+					{
+					setState(3120);
+					rendertype();
+					setState(3121);
+					scoreboardHeartsOrInteger();
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			case Remove:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(3125);
+				remove();
+				setState(3126);
+				targetObjective();
+				}
+				}
+				break;
+			case Setdisplay:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(3128);
+				setdisplay();
+				setState(3129);
+				scoreboardSlots();
+				setState(3130);
+				targetObjective();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class ScoreboardPlayersBehaviorsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public List<SelectorContext> selector() {
+			return getRuleContexts(SelectorContext.class);
+		}
+		public SelectorContext selector(int i) {
+			return getRuleContext(SelectorContext.class,i);
+		}
+		public List<TargetObjectiveContext> targetObjective() {
+			return getRuleContexts(TargetObjectiveContext.class);
+		}
+		public TargetObjectiveContext targetObjective(int i) {
+			return getRuleContext(TargetObjectiveContext.class,i);
+		}
+		public ValueContext value() {
+			return getRuleContext(ValueContext.class,0);
+		}
+		public EnableContext enable() {
+			return getRuleContext(EnableContext.class,0);
+		}
+		public GetContext get() {
+			return getRuleContext(GetContext.class,0);
+		}
+		public ScoreboardObjectiveContext scoreboardObjective() {
+			return getRuleContext(ScoreboardObjectiveContext.class,0);
+		}
+		public ListKeyContext listKey() {
+			return getRuleContext(ListKeyContext.class,0);
+		}
+		public OperationContext operation() {
+			return getRuleContext(OperationContext.class,0);
+		}
+		public ScoreboardOperatorContext scoreboardOperator() {
+			return getRuleContext(ScoreboardOperatorContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public ResetContext reset() {
+			return getRuleContext(ResetContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public ScoreboardPlayersBehaviorsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_scoreboardPlayersBehaviors; }
+	}
+
+	public final ScoreboardPlayersBehaviorsContext scoreboardPlayersBehaviors() throws RecognitionException {
+		ScoreboardPlayersBehaviorsContext _localctx = new ScoreboardPlayersBehaviorsContext(_ctx, getState());
+		enterRule(_localctx, 964, RULE_scoreboardPlayersBehaviors);
+		try {
+			setState(3171);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3134);
+				add();
+				setState(3135);
+				selector();
+				setState(3136);
+				targetObjective();
+				setState(3137);
+				value();
+				}
+				}
+				break;
+			case Enable:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3139);
+				enable();
+				setState(3140);
+				selector();
+				setState(3141);
+				targetObjective();
+				}
+				}
+				break;
+			case Get:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(3143);
+				get();
+				setState(3144);
+				selector();
+				setState(3145);
+				scoreboardObjective();
+				}
+				}
+				break;
+			case ListKey:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(3147);
+				listKey();
+				setState(3148);
+				selector();
+				}
+				}
+				break;
+			case Operation:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(3150);
+				operation();
+				setState(3151);
+				selector();
+				setState(3152);
+				targetObjective();
+				setState(3153);
+				scoreboardOperator();
+				setState(3154);
+				selector();
+				setState(3155);
+				targetObjective();
+				}
+				}
+				break;
+			case Remove:
+				enterOuterAlt(_localctx, 6);
+				{
+				{
+				setState(3157);
+				remove();
+				setState(3158);
+				selector();
+				setState(3159);
+				scoreboardObjective();
+				setState(3160);
+				value();
+				}
+				}
+				break;
+			case Reset:
+				enterOuterAlt(_localctx, 7);
+				{
+				{
+				setState(3162);
+				reset();
+				setState(3163);
+				selector();
+				setState(3164);
+				targetObjective();
+				}
+				}
+				break;
+			case Set:
+				enterOuterAlt(_localctx, 8);
+				{
+				{
+				setState(3166);
+				set();
+				setState(3167);
+				selector();
+				setState(3168);
+				targetObjective();
+				setState(3169);
+				value();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SeedRadicalContext extends ParserRuleContext {
+		public SeedKeyContext seedKey() {
+			return getRuleContext(SeedKeyContext.class,0);
+		}
+		public SeedRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_seedRadical; }
+	}
+
+	public final SeedRadicalContext seedRadical() throws RecognitionException {
+		SeedRadicalContext _localctx = new SeedRadicalContext(_ctx, getState());
+		enterRule(_localctx, 966, RULE_seedRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3173);
+			seedKey();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SetblockRadicalContext extends ParserRuleContext {
+		public SetblockKeyContext setblockKey() {
+			return getRuleContext(SetblockKeyContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public BlockIDContext blockID() {
+			return getRuleContext(BlockIDContext.class,0);
+		}
+		public SetblockModesContext setblockModes() {
+			return getRuleContext(SetblockModesContext.class,0);
+		}
+		public SetblockRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_setblockRadical; }
+	}
+
+	public final SetblockRadicalContext setblockRadical() throws RecognitionException {
+		SetblockRadicalContext _localctx = new SetblockRadicalContext(_ctx, getState());
+		enterRule(_localctx, 968, RULE_setblockRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3175);
+			setblockKey();
+			setState(3176);
+			pos3D();
+			setState(3177);
+			blockID();
+			setState(3178);
+			setblockModes();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SetblockModesContext extends ParserRuleContext {
+		public DestroyContext destroy() {
+			return getRuleContext(DestroyContext.class,0);
+		}
+		public KeepContext keep() {
+			return getRuleContext(KeepContext.class,0);
+		}
+		public ReplaceContext replace() {
+			return getRuleContext(ReplaceContext.class,0);
+		}
+		public SetblockModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_setblockModes; }
+	}
+
+	public final SetblockModesContext setblockModes() throws RecognitionException {
+		SetblockModesContext _localctx = new SetblockModesContext(_ctx, getState());
+		enterRule(_localctx, 970, RULE_setblockModes);
+		try {
+			setState(3183);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Destroy:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3180);
+				destroy();
+				}
+				break;
+			case Keep:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3181);
+				keep();
+				}
+				break;
+			case Replace:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3182);
+				replace();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SetworldspawnRadicalContext extends ParserRuleContext {
+		public SetworldspawnKeyContext setworldspawnKey() {
+			return getRuleContext(SetworldspawnKeyContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public SetworldspawnRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_setworldspawnRadical; }
+	}
+
+	public final SetworldspawnRadicalContext setworldspawnRadical() throws RecognitionException {
+		SetworldspawnRadicalContext _localctx = new SetworldspawnRadicalContext(_ctx, getState());
+		enterRule(_localctx, 972, RULE_setworldspawnRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3185);
+			setworldspawnKey();
+			setState(3186);
+			pos3D();
+			setState(3187);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpawnpointRadicalContext extends ParserRuleContext {
+		public SpawnpointKeyContext spawnpointKey() {
+			return getRuleContext(SpawnpointKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public SpawnpointRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spawnpointRadical; }
+	}
+
+	public final SpawnpointRadicalContext spawnpointRadical() throws RecognitionException {
+		SpawnpointRadicalContext _localctx = new SpawnpointRadicalContext(_ctx, getState());
+		enterRule(_localctx, 974, RULE_spawnpointRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3189);
+			spawnpointKey();
+			setState(3190);
+			selector();
+			setState(3191);
+			pos3D();
+			setState(3192);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpectateRadicalContext extends ParserRuleContext {
+		public SpectateKeyContext spectateKey() {
+			return getRuleContext(SpectateKeyContext.class,0);
+		}
+		public List<SelectorContext> selector() {
+			return getRuleContexts(SelectorContext.class);
+		}
+		public SelectorContext selector(int i) {
+			return getRuleContext(SelectorContext.class,i);
+		}
+		public SpectateRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spectateRadical; }
+	}
+
+	public final SpectateRadicalContext spectateRadical() throws RecognitionException {
+		SpectateRadicalContext _localctx = new SpectateRadicalContext(_ctx, getState());
+		enterRule(_localctx, 976, RULE_spectateRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3194);
+			spectateKey();
+			setState(3195);
+			selector();
+			setState(3196);
+			selector();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpreadplayersRadicalContext extends ParserRuleContext {
+		public SpreadplayersKeyContext spreadplayersKey() {
+			return getRuleContext(SpreadplayersKeyContext.class,0);
+		}
+		public Pos2DContext pos2D() {
+			return getRuleContext(Pos2DContext.class,0);
+		}
+		public SpreadDistanceContext spreadDistance() {
+			return getRuleContext(SpreadDistanceContext.class,0);
+		}
+		public MaxRangeContext maxRange() {
+			return getRuleContext(MaxRangeContext.class,0);
+		}
+		public SpreadplayersOptionsContext spreadplayersOptions() {
+			return getRuleContext(SpreadplayersOptionsContext.class,0);
+		}
+		public SpreadplayersRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spreadplayersRadical; }
+	}
+
+	public final SpreadplayersRadicalContext spreadplayersRadical() throws RecognitionException {
+		SpreadplayersRadicalContext _localctx = new SpreadplayersRadicalContext(_ctx, getState());
+		enterRule(_localctx, 978, RULE_spreadplayersRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3198);
+			spreadplayersKey();
+			setState(3199);
+			pos2D();
+			setState(3200);
+			spreadDistance();
+			setState(3201);
+			maxRange();
+			setState(3202);
+			spreadplayersOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpreadplayersOptionsContext extends ParserRuleContext {
+		public BooleanValueContext booleanValue() {
+			return getRuleContext(BooleanValueContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public UnderContext under() {
+			return getRuleContext(UnderContext.class,0);
+		}
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public BoolContext bool() {
+			return getRuleContext(BoolContext.class,0);
+		}
+		public SpreadplayersOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spreadplayersOptions; }
+	}
+
+	public final SpreadplayersOptionsContext spreadplayersOptions() throws RecognitionException {
+		SpreadplayersOptionsContext _localctx = new SpreadplayersOptionsContext(_ctx, getState());
+		enterRule(_localctx, 980, RULE_spreadplayersOptions);
+		try {
+			setState(3212);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case BooleanValue:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3204);
+				booleanValue();
+				setState(3205);
+				selector();
+				}
+				}
+				break;
+			case Under:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3207);
+				under();
+				setState(3208);
+				integer();
+				setState(3209);
+				bool();
+				setState(3210);
+				selector();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SpreadDistanceContext extends ParserRuleContext {
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public SpreadDistanceContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_spreadDistance; }
+	}
+
+	public final SpreadDistanceContext spreadDistance() throws RecognitionException {
+		SpreadDistanceContext _localctx = new SpreadDistanceContext(_ctx, getState());
+		enterRule(_localctx, 982, RULE_spreadDistance);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3214);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class MaxRangeContext extends ParserRuleContext {
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public MaxRangeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_maxRange; }
+	}
+
+	public final MaxRangeContext maxRange() throws RecognitionException {
+		MaxRangeContext _localctx = new MaxRangeContext(_ctx, getState());
+		enterRule(_localctx, 984, RULE_maxRange);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3216);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class RespectTeamsContext extends ParserRuleContext {
+		public TerminalNode BooleanValue() { return getToken(MCCommandParser.BooleanValue, 0); }
+		public RespectTeamsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_respectTeams; }
+	}
+
+	public final RespectTeamsContext respectTeams() throws RecognitionException {
+		RespectTeamsContext _localctx = new RespectTeamsContext(_ctx, getState());
+		enterRule(_localctx, 986, RULE_respectTeams);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3218);
+			match(BooleanValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StopsoundRadicalContext extends ParserRuleContext {
+		public StopsoundKeyContext stopsoundKey() {
+			return getRuleContext(StopsoundKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public StopsoundTypesContext stopsoundTypes() {
+			return getRuleContext(StopsoundTypesContext.class,0);
+		}
+		public SoundIdContext soundId() {
+			return getRuleContext(SoundIdContext.class,0);
+		}
+		public StopsoundRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_stopsoundRadical; }
+	}
+
+	public final StopsoundRadicalContext stopsoundRadical() throws RecognitionException {
+		StopsoundRadicalContext _localctx = new StopsoundRadicalContext(_ctx, getState());
+		enterRule(_localctx, 988, RULE_stopsoundRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3220);
+			stopsoundKey();
+			setState(3221);
+			selector();
+			setState(3222);
+			stopsoundTypes();
+			setState(3223);
+			soundId();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SoundIdContext extends ParserRuleContext {
+		public TerminalNode ResourceLocation() { return getToken(MCCommandParser.ResourceLocation, 0); }
+		public SoundIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_soundId; }
+	}
+
+	public final SoundIdContext soundId() throws RecognitionException {
+		SoundIdContext _localctx = new SoundIdContext(_ctx, getState());
+		enterRule(_localctx, 990, RULE_soundId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3225);
+			match(ResourceLocation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class StopsoundTypesContext extends ParserRuleContext {
+		public StarContext star() {
+			return getRuleContext(StarContext.class,0);
+		}
+		public AmbientContext ambient() {
+			return getRuleContext(AmbientContext.class,0);
+		}
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public HostileContext hostile() {
+			return getRuleContext(HostileContext.class,0);
+		}
+		public MasterContext master() {
+			return getRuleContext(MasterContext.class,0);
+		}
+		public MusicContext music() {
+			return getRuleContext(MusicContext.class,0);
+		}
+		public NeutralContext neutral() {
+			return getRuleContext(NeutralContext.class,0);
+		}
+		public PlayerContext player() {
+			return getRuleContext(PlayerContext.class,0);
+		}
+		public RecordContext record() {
+			return getRuleContext(RecordContext.class,0);
+		}
+		public VoiceContext voice() {
+			return getRuleContext(VoiceContext.class,0);
+		}
+		public WeatherKeyContext weatherKey() {
+			return getRuleContext(WeatherKeyContext.class,0);
+		}
+		public StopsoundTypesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_stopsoundTypes; }
+	}
+
+	public final StopsoundTypesContext stopsoundTypes() throws RecognitionException {
+		StopsoundTypesContext _localctx = new StopsoundTypesContext(_ctx, getState());
+		enterRule(_localctx, 992, RULE_stopsoundTypes);
+		try {
+			setState(3238);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Star:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3227);
+				star();
+				}
+				break;
+			case Ambient:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3228);
+				ambient();
+				}
+				break;
+			case Block:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3229);
+				block();
+				}
+				break;
+			case Hostile:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(3230);
+				hostile();
+				}
+				break;
+			case Master:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(3231);
+				master();
+				}
+				break;
+			case Music:
+				enterOuterAlt(_localctx, 6);
+				{
+				setState(3232);
+				music();
+				}
+				break;
+			case Neutral:
+				enterOuterAlt(_localctx, 7);
+				{
+				setState(3233);
+				neutral();
+				}
+				break;
+			case Player:
+				enterOuterAlt(_localctx, 8);
+				{
+				setState(3234);
+				player();
+				}
+				break;
+			case Record:
+				enterOuterAlt(_localctx, 9);
+				{
+				setState(3235);
+				record();
+				}
+				break;
+			case Voice:
+				enterOuterAlt(_localctx, 10);
+				{
+				setState(3236);
+				voice();
+				}
+				break;
+			case WeatherKey:
+				enterOuterAlt(_localctx, 11);
+				{
+				setState(3237);
+				weatherKey();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class SummonRadicalContext extends ParserRuleContext {
+		public SummonKeyContext summonKey() {
+			return getRuleContext(SummonKeyContext.class,0);
+		}
+		public EntityTypeContext entityType() {
+			return getRuleContext(EntityTypeContext.class,0);
+		}
+		public Pos3DContext pos3D() {
+			return getRuleContext(Pos3DContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public SummonRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_summonRadical; }
+	}
+
+	public final SummonRadicalContext summonRadical() throws RecognitionException {
+		SummonRadicalContext _localctx = new SummonRadicalContext(_ctx, getState());
+		enterRule(_localctx, 994, RULE_summonRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3240);
+			summonKey();
+			setState(3241);
+			entityType();
+			setState(3242);
+			pos3D();
+			setState(3243);
+			jsonComponent();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TagRadicalContext extends ParserRuleContext {
+		public TagKeyContext tagKey() {
+			return getRuleContext(TagKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public TagOptionsContext tagOptions() {
+			return getRuleContext(TagOptionsContext.class,0);
+		}
+		public TagRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tagRadical; }
+	}
+
+	public final TagRadicalContext tagRadical() throws RecognitionException {
+		TagRadicalContext _localctx = new TagRadicalContext(_ctx, getState());
+		enterRule(_localctx, 996, RULE_tagRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3245);
+			tagKey();
+			setState(3246);
+			selector();
+			setState(3247);
+			tagOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TagOptionsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public TagValueContext tagValue() {
+			return getRuleContext(TagValueContext.class,0);
+		}
+		public ListKeyContext listKey() {
+			return getRuleContext(ListKeyContext.class,0);
+		}
+		public TagOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tagOptions; }
+	}
+
+	public final TagOptionsContext tagOptions() throws RecognitionException {
+		TagOptionsContext _localctx = new TagOptionsContext(_ctx, getState());
+		enterRule(_localctx, 998, RULE_tagOptions);
+		try {
+			setState(3256);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+			case Remove:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3253);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Add:
+					{
+					setState(3249);
+					add();
+					}
+					break;
+				case Remove:
+					{
+					setState(3250);
+					remove();
+					setState(3251);
+					tagValue();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			case ListKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3255);
+				listKey();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TagValueContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TagValueContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tagValue; }
+	}
+
+	public final TagValueContext tagValue() throws RecognitionException {
+		TagValueContext _localctx = new TagValueContext(_ctx, getState());
+		enterRule(_localctx, 1000, RULE_tagValue);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3258);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamRadicalContext extends ParserRuleContext {
+		public TeamKeyContext teamKey() {
+			return getRuleContext(TeamKeyContext.class,0);
+		}
+		public TeamOptionsContext teamOptions() {
+			return getRuleContext(TeamOptionsContext.class,0);
+		}
+		public TeamRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamRadical; }
+	}
+
+	public final TeamRadicalContext teamRadical() throws RecognitionException {
+		TeamRadicalContext _localctx = new TeamRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1002, RULE_teamRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3260);
+			teamKey();
+			setState(3261);
+			teamOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamIdContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TeamIdContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamId; }
+	}
+
+	public final TeamIdContext teamId() throws RecognitionException {
+		TeamIdContext _localctx = new TeamIdContext(_ctx, getState());
+		enterRule(_localctx, 1004, RULE_teamId);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3263);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamNameContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TeamNameContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamName; }
+	}
+
+	public final TeamNameContext teamName() throws RecognitionException {
+		TeamNameContext _localctx = new TeamNameContext(_ctx, getState());
+		enterRule(_localctx, 1006, RULE_teamName);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3265);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamCollisionRuleContext extends ParserRuleContext {
+		public AlwaysContext always() {
+			return getRuleContext(AlwaysContext.class,0);
+		}
+		public NeverContext never() {
+			return getRuleContext(NeverContext.class,0);
+		}
+		public PushOtherTeamsContext pushOtherTeams() {
+			return getRuleContext(PushOtherTeamsContext.class,0);
+		}
+		public PushOwnTeamContext pushOwnTeam() {
+			return getRuleContext(PushOwnTeamContext.class,0);
+		}
+		public TeamCollisionRuleContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamCollisionRule; }
+	}
+
+	public final TeamCollisionRuleContext teamCollisionRule() throws RecognitionException {
+		TeamCollisionRuleContext _localctx = new TeamCollisionRuleContext(_ctx, getState());
+		enterRule(_localctx, 1008, RULE_teamCollisionRule);
+		try {
+			setState(3271);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Always:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3267);
+				always();
+				}
+				break;
+			case Never:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3268);
+				never();
+				}
+				break;
+			case PushOtherTeams:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3269);
+				pushOtherTeams();
+				}
+				break;
+			case PushOwnTeam:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(3270);
+				pushOwnTeam();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamColorContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TeamColorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamColor; }
+	}
+
+	public final TeamColorContext teamColor() throws RecognitionException {
+		TeamColorContext _localctx = new TeamColorContext(_ctx, getState());
+		enterRule(_localctx, 1010, RULE_teamColor);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3273);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamVisibilityContext extends ParserRuleContext {
+		public AlwaysContext always() {
+			return getRuleContext(AlwaysContext.class,0);
+		}
+		public HideForOtherTeamsContext hideForOtherTeams() {
+			return getRuleContext(HideForOtherTeamsContext.class,0);
+		}
+		public HideForOwnTeamContext hideForOwnTeam() {
+			return getRuleContext(HideForOwnTeamContext.class,0);
+		}
+		public NeverContext never() {
+			return getRuleContext(NeverContext.class,0);
+		}
+		public TeamVisibilityContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamVisibility; }
+	}
+
+	public final TeamVisibilityContext teamVisibility() throws RecognitionException {
+		TeamVisibilityContext _localctx = new TeamVisibilityContext(_ctx, getState());
+		enterRule(_localctx, 1012, RULE_teamVisibility);
+		try {
+			setState(3279);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Always:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3275);
+				always();
+				}
+				break;
+			case HideForOtherTeams:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3276);
+				hideForOtherTeams();
+				}
+				break;
+			case HideForOwnTeam:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3277);
+				hideForOwnTeam();
+				}
+				break;
+			case Never:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(3278);
+				never();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamOptionsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public TeamNameContext teamName() {
+			return getRuleContext(TeamNameContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public EmptyContext empty() {
+			return getRuleContext(EmptyContext.class,0);
+		}
+		public TeamIdContext teamId() {
+			return getRuleContext(TeamIdContext.class,0);
+		}
+		public JoinContext join() {
+			return getRuleContext(JoinContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public LeaveContext leave() {
+			return getRuleContext(LeaveContext.class,0);
+		}
+		public ListKeyContext listKey() {
+			return getRuleContext(ListKeyContext.class,0);
+		}
+		public ModifyContext modify() {
+			return getRuleContext(ModifyContext.class,0);
+		}
+		public TeamAttributesContext teamAttributes() {
+			return getRuleContext(TeamAttributesContext.class,0);
+		}
+		public RemoveContext remove() {
+			return getRuleContext(RemoveContext.class,0);
+		}
+		public TeamOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamOptions; }
+	}
+
+	public final TeamOptionsContext teamOptions() throws RecognitionException {
+		TeamOptionsContext _localctx = new TeamOptionsContext(_ctx, getState());
+		enterRule(_localctx, 1014, RULE_teamOptions);
+		int _la;
+		try {
+			setState(3306);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3281);
+				add();
+				setState(3282);
+				teamName();
+				setState(3283);
+				jsonComponent();
+				}
+				}
+				break;
+			case Empty:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3285);
+				empty();
+				setState(3286);
+				teamId();
+				}
+				}
+				break;
+			case Join:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(3288);
+				join();
+				setState(3289);
+				teamId();
+				setState(3291);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==AtChar || _la==Identifier) {
+					{
+					setState(3290);
+					selector();
+					}
+				}
+
+				}
+				}
+				break;
+			case Leave:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(3293);
+				leave();
+				setState(3294);
+				selector();
+				}
+				}
+				break;
+			case ListKey:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(3296);
+				listKey();
+				setState(3297);
+				teamId();
+				}
+				}
+				break;
+			case Modify:
+				enterOuterAlt(_localctx, 6);
+				{
+				{
+				setState(3299);
+				modify();
+				setState(3300);
+				teamId();
+				setState(3301);
+				teamAttributes();
+				}
+				}
+				break;
+			case Remove:
+				enterOuterAlt(_localctx, 7);
+				{
+				{
+				setState(3303);
+				remove();
+				setState(3304);
+				teamId();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamAttributesContext extends ParserRuleContext {
+		public CollisionRuleContext collisionRule() {
+			return getRuleContext(CollisionRuleContext.class,0);
+		}
+		public TeamCollisionRuleContext teamCollisionRule() {
+			return getRuleContext(TeamCollisionRuleContext.class,0);
+		}
+		public ColorContext color() {
+			return getRuleContext(ColorContext.class,0);
+		}
+		public TeamColorContext teamColor() {
+			return getRuleContext(TeamColorContext.class,0);
+		}
+		public DeathMessageVisibilityContext deathMessageVisibility() {
+			return getRuleContext(DeathMessageVisibilityContext.class,0);
+		}
+		public TeamVisibilityContext teamVisibility() {
+			return getRuleContext(TeamVisibilityContext.class,0);
+		}
+		public DisplayNameContext displayName() {
+			return getRuleContext(DisplayNameContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public FriendlyFireContext friendlyFire() {
+			return getRuleContext(FriendlyFireContext.class,0);
+		}
+		public BoolContext bool() {
+			return getRuleContext(BoolContext.class,0);
+		}
+		public NametagVisibilityContext nametagVisibility() {
+			return getRuleContext(NametagVisibilityContext.class,0);
+		}
+		public PrefixContext prefix() {
+			return getRuleContext(PrefixContext.class,0);
+		}
+		public SuffixContext suffix() {
+			return getRuleContext(SuffixContext.class,0);
+		}
+		public SeeFriendlyInvisiblesContext seeFriendlyInvisibles() {
+			return getRuleContext(SeeFriendlyInvisiblesContext.class,0);
+		}
+		public TeamAttributesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamAttributes; }
+	}
+
+	public final TeamAttributesContext teamAttributes() throws RecognitionException {
+		TeamAttributesContext _localctx = new TeamAttributesContext(_ctx, getState());
+		enterRule(_localctx, 1016, RULE_teamAttributes);
+		try {
+			setState(3335);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case CollisionRule:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3308);
+				collisionRule();
+				setState(3309);
+				teamCollisionRule();
+				}
+				}
+				break;
+			case Color:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3311);
+				color();
+				setState(3312);
+				teamColor();
+				}
+				}
+				break;
+			case DeathMessageVisibility:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(3314);
+				deathMessageVisibility();
+				setState(3315);
+				teamVisibility();
+				}
+				}
+				break;
+			case DisplayName:
+				enterOuterAlt(_localctx, 4);
+				{
+				{
+				setState(3317);
+				displayName();
+				setState(3318);
+				jsonComponent();
+				}
+				}
+				break;
+			case FriendlyFire:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(3320);
+				friendlyFire();
+				setState(3321);
+				bool();
+				}
+				}
+				break;
+			case NametagVisibility:
+				enterOuterAlt(_localctx, 6);
+				{
+				{
+				setState(3323);
+				nametagVisibility();
+				setState(3324);
+				teamVisibility();
+				}
+				}
+				break;
+			case Prefix:
+			case Suffix:
+				enterOuterAlt(_localctx, 7);
+				{
+				{
+				setState(3328);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Prefix:
+					{
+					setState(3326);
+					prefix();
+					}
+					break;
+				case Suffix:
+					{
+					setState(3327);
+					suffix();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(3330);
+				jsonComponent();
+				}
+				}
+				break;
+			case SeeFriendlyInvisibles:
+				enterOuterAlt(_localctx, 8);
+				{
+				{
+				setState(3332);
+				seeFriendlyInvisibles();
+				setState(3333);
+				bool();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeammsgRadicalContext extends ParserRuleContext {
+		public TeammsgKeyContext teammsgKey() {
+			return getRuleContext(TeammsgKeyContext.class,0);
+		}
+		public TeamMessageContext teamMessage() {
+			return getRuleContext(TeamMessageContext.class,0);
+		}
+		public TeammsgRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teammsgRadical; }
+	}
+
+	public final TeammsgRadicalContext teammsgRadical() throws RecognitionException {
+		TeammsgRadicalContext _localctx = new TeammsgRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1018, RULE_teammsgRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3337);
+			teammsgKey();
+			setState(3338);
+			teamMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeamMessageContext extends ParserRuleContext {
+		public TerminalNode MessageContent() { return getToken(MCCommandParser.MessageContent, 0); }
+		public TeamMessageContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teamMessage; }
+	}
+
+	public final TeamMessageContext teamMessage() throws RecognitionException {
+		TeamMessageContext _localctx = new TeamMessageContext(_ctx, getState());
+		enterRule(_localctx, 1020, RULE_teamMessage);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3340);
+			match(MessageContent);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeleportRadicalContext extends ParserRuleContext {
+		public TeleportKeyContext teleportKey() {
+			return getRuleContext(TeleportKeyContext.class,0);
+		}
+		public TeleportOptionsContext teleportOptions() {
+			return getRuleContext(TeleportOptionsContext.class,0);
+		}
+		public TeleportRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teleportRadical; }
+	}
+
+	public final TeleportRadicalContext teleportRadical() throws RecognitionException {
+		TeleportRadicalContext _localctx = new TeleportRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1022, RULE_teleportRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3342);
+			teleportKey();
+			setState(3343);
+			teleportOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeleportEyesOrFeetContext extends ParserRuleContext {
+		public EyesContext eyes() {
+			return getRuleContext(EyesContext.class,0);
+		}
+		public FeetContext feet() {
+			return getRuleContext(FeetContext.class,0);
+		}
+		public TeleportEyesOrFeetContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teleportEyesOrFeet; }
+	}
+
+	public final TeleportEyesOrFeetContext teleportEyesOrFeet() throws RecognitionException {
+		TeleportEyesOrFeetContext _localctx = new TeleportEyesOrFeetContext(_ctx, getState());
+		enterRule(_localctx, 1024, RULE_teleportEyesOrFeet);
+		try {
+			setState(3347);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Eyes:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3345);
+				eyes();
+				}
+				break;
+			case Feet:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3346);
+				feet();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TeleportOptionsContext extends ParserRuleContext {
+		public List<Pos3DContext> pos3D() {
+			return getRuleContexts(Pos3DContext.class);
+		}
+		public Pos3DContext pos3D(int i) {
+			return getRuleContext(Pos3DContext.class,i);
+		}
+		public List<SelectorContext> selector() {
+			return getRuleContexts(SelectorContext.class);
+		}
+		public SelectorContext selector(int i) {
+			return getRuleContext(SelectorContext.class,i);
+		}
+		public Pos2DContext pos2D() {
+			return getRuleContext(Pos2DContext.class,0);
+		}
+		public FacingContext facing() {
+			return getRuleContext(FacingContext.class,0);
+		}
+		public EntityContext entity() {
+			return getRuleContext(EntityContext.class,0);
+		}
+		public TeleportEyesOrFeetContext teleportEyesOrFeet() {
+			return getRuleContext(TeleportEyesOrFeetContext.class,0);
+		}
+		public TeleportOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_teleportOptions; }
+	}
+
+	public final TeleportOptionsContext teleportOptions() throws RecognitionException {
+		TeleportOptionsContext _localctx = new TeleportOptionsContext(_ctx, getState());
+		enterRule(_localctx, 1026, RULE_teleportOptions);
+		try {
+			setState(3366);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Integer:
+			case Double:
+			case Coordinate:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3349);
+				pos3D();
+				}
+				break;
+			case AtChar:
+			case Identifier:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3350);
+				selector();
+				setState(3364);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case AtChar:
+				case Identifier:
+					{
+					setState(3351);
+					selector();
+					}
+					break;
+				case Integer:
+				case Double:
+				case Coordinate:
+					{
+					setState(3362);
+					_errHandler.sync(this);
+					switch ( getInterpreter().adaptivePredict(_input,148,_ctx) ) {
+					case 1:
+						{
+						setState(3352);
+						pos3D();
+						{
+						setState(3353);
+						facing();
+						setState(3359);
+						_errHandler.sync(this);
+						switch (_input.LA(1)) {
+						case Entity:
+							{
+							{
+							setState(3354);
+							entity();
+							setState(3355);
+							selector();
+							setState(3356);
+							teleportEyesOrFeet();
+							}
+							}
+							break;
+						case Integer:
+						case Double:
+						case Coordinate:
+							{
+							setState(3358);
+							pos3D();
+							}
+							break;
+						default:
+							throw new NoViableAltException(this);
+						}
+						}
+						}
+						break;
+					case 2:
+						{
+						setState(3361);
+						pos2D();
+						}
+						break;
+					}
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TellRadicalContext extends ParserRuleContext {
+		public TellKeyContext tellKey() {
+			return getRuleContext(TellKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public TellMessageContext tellMessage() {
+			return getRuleContext(TellMessageContext.class,0);
+		}
+		public TellRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tellRadical; }
+	}
+
+	public final TellRadicalContext tellRadical() throws RecognitionException {
+		TellRadicalContext _localctx = new TellRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1028, RULE_tellRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3368);
+			tellKey();
+			setState(3369);
+			selector();
+			setState(3370);
+			tellMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TellMessageContext extends ParserRuleContext {
+		public TerminalNode MessageContent() { return getToken(MCCommandParser.MessageContent, 0); }
+		public TellMessageContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tellMessage; }
+	}
+
+	public final TellMessageContext tellMessage() throws RecognitionException {
+		TellMessageContext _localctx = new TellMessageContext(_ctx, getState());
+		enterRule(_localctx, 1030, RULE_tellMessage);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3372);
+			match(MessageContent);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TellrawRadicalContext extends ParserRuleContext {
+		public TellrawKeyContext tellrawKey() {
+			return getRuleContext(TellrawKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public TellrawRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tellrawRadical; }
+	}
+
+	public final TellrawRadicalContext tellrawRadical() throws RecognitionException {
+		TellrawRadicalContext _localctx = new TellrawRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1032, RULE_tellrawRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3374);
+			tellrawKey();
+			setState(3375);
+			selector();
+			setState(3376);
+			jsonComponent();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TimeRadicalContext extends ParserRuleContext {
+		public TimeKeyContext timeKey() {
+			return getRuleContext(TimeKeyContext.class,0);
+		}
+		public TimeOptionsContext timeOptions() {
+			return getRuleContext(TimeOptionsContext.class,0);
+		}
+		public TimeRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_timeRadical; }
+	}
+
+	public final TimeRadicalContext timeRadical() throws RecognitionException {
+		TimeRadicalContext _localctx = new TimeRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1034, RULE_timeRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3378);
+			timeKey();
+			setState(3379);
+			timeOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TimeDataTypesContext extends ParserRuleContext {
+		public DayContext day() {
+			return getRuleContext(DayContext.class,0);
+		}
+		public DaytimeContext daytime() {
+			return getRuleContext(DaytimeContext.class,0);
+		}
+		public GametimeContext gametime() {
+			return getRuleContext(GametimeContext.class,0);
+		}
+		public TimeDataTypesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_timeDataTypes; }
+	}
+
+	public final TimeDataTypesContext timeDataTypes() throws RecognitionException {
+		TimeDataTypesContext _localctx = new TimeDataTypesContext(_ctx, getState());
+		enterRule(_localctx, 1036, RULE_timeDataTypes);
+		try {
+			setState(3384);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Day:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3381);
+				day();
+				}
+				break;
+			case Daytime:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3382);
+				daytime();
+				}
+				break;
+			case Gametime:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3383);
+				gametime();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TimeTimePointsContext extends ParserRuleContext {
+		public DayContext day() {
+			return getRuleContext(DayContext.class,0);
+		}
+		public MidnightContext midnight() {
+			return getRuleContext(MidnightContext.class,0);
+		}
+		public NightContext night() {
+			return getRuleContext(NightContext.class,0);
+		}
+		public NoonContext noon() {
+			return getRuleContext(NoonContext.class,0);
+		}
+		public TimeTimePointsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_timeTimePoints; }
+	}
+
+	public final TimeTimePointsContext timeTimePoints() throws RecognitionException {
+		TimeTimePointsContext _localctx = new TimeTimePointsContext(_ctx, getState());
+		enterRule(_localctx, 1038, RULE_timeTimePoints);
+		try {
+			setState(3390);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Day:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3386);
+				day();
+				}
+				break;
+			case Midnight:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3387);
+				midnight();
+				}
+				break;
+			case Night:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3388);
+				night();
+				}
+				break;
+			case Noon:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(3389);
+				noon();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TimeOptionsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public GameTimeValueContext gameTimeValue() {
+			return getRuleContext(GameTimeValueContext.class,0);
+		}
+		public QueryContext query() {
+			return getRuleContext(QueryContext.class,0);
+		}
+		public TimeDataTypesContext timeDataTypes() {
+			return getRuleContext(TimeDataTypesContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public TimeTimePointsContext timeTimePoints() {
+			return getRuleContext(TimeTimePointsContext.class,0);
+		}
+		public TimeOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_timeOptions; }
+	}
+
+	public final TimeOptionsContext timeOptions() throws RecognitionException {
+		TimeOptionsContext _localctx = new TimeOptionsContext(_ctx, getState());
+		enterRule(_localctx, 1040, RULE_timeOptions);
+		try {
+			setState(3404);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3392);
+				add();
+				setState(3393);
+				gameTimeValue();
+				}
+				}
+				break;
+			case Query:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3395);
+				query();
+				setState(3396);
+				timeDataTypes();
+				}
+				}
+				break;
+			case Set:
+			case GameTimeValue:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3402);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Set:
+					{
+					setState(3398);
+					set();
+					setState(3399);
+					timeTimePoints();
+					}
+					break;
+				case GameTimeValue:
+					{
+					setState(3401);
+					gameTimeValue();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TitleRadicalContext extends ParserRuleContext {
+		public TitleKeyContext titleKey() {
+			return getRuleContext(TitleKeyContext.class,0);
+		}
+		public SelectorContext selector() {
+			return getRuleContext(SelectorContext.class,0);
+		}
+		public TitleBehaviorsContext titleBehaviors() {
+			return getRuleContext(TitleBehaviorsContext.class,0);
+		}
+		public TitleRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_titleRadical; }
+	}
+
+	public final TitleRadicalContext titleRadical() throws RecognitionException {
+		TitleRadicalContext _localctx = new TitleRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1042, RULE_titleRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3406);
+			titleKey();
+			setState(3407);
+			selector();
+			setState(3408);
+			titleBehaviors();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TitleBehaviorsContext extends ParserRuleContext {
+		public JsonComponentContext jsonComponent() {
+			return getRuleContext(JsonComponentContext.class,0);
+		}
+		public ActionbarContext actionbar() {
+			return getRuleContext(ActionbarContext.class,0);
+		}
+		public SubtitleContext subtitle() {
+			return getRuleContext(SubtitleContext.class,0);
+		}
+		public TitleKeyContext titleKey() {
+			return getRuleContext(TitleKeyContext.class,0);
+		}
+		public ClearKeyContext clearKey() {
+			return getRuleContext(ClearKeyContext.class,0);
+		}
+		public ResetContext reset() {
+			return getRuleContext(ResetContext.class,0);
+		}
+		public TimesContext times() {
+			return getRuleContext(TimesContext.class,0);
+		}
+		public FadeInContext fadeIn() {
+			return getRuleContext(FadeInContext.class,0);
+		}
+		public StayContext stay() {
+			return getRuleContext(StayContext.class,0);
+		}
+		public FadeOutContext fadeOut() {
+			return getRuleContext(FadeOutContext.class,0);
+		}
+		public TitleBehaviorsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_titleBehaviors; }
+	}
+
+	public final TitleBehaviorsContext titleBehaviors() throws RecognitionException {
+		TitleBehaviorsContext _localctx = new TitleBehaviorsContext(_ctx, getState());
+		enterRule(_localctx, 1044, RULE_titleBehaviors);
+		try {
+			setState(3426);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case TitleKey:
+			case Actionbar:
+			case Subtitle:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3413);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case Actionbar:
+					{
+					setState(3410);
+					actionbar();
+					}
+					break;
+				case Subtitle:
+					{
+					setState(3411);
+					subtitle();
+					}
+					break;
+				case TitleKey:
+					{
+					setState(3412);
+					titleKey();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				setState(3415);
+				jsonComponent();
+				}
+				}
+				break;
+			case ClearKey:
+			case Reset:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3419);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case ClearKey:
+					{
+					setState(3417);
+					clearKey();
+					}
+					break;
+				case Reset:
+					{
+					setState(3418);
+					reset();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				break;
+			case Times:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(3421);
+				times();
+				setState(3422);
+				fadeIn();
+				setState(3423);
+				stay();
+				setState(3424);
+				fadeOut();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class FaedInContext extends ParserRuleContext {
+		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public FaedInContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_faedIn; }
+	}
+
+	public final FaedInContext faedIn() throws RecognitionException {
+		FaedInContext _localctx = new FaedInContext(_ctx, getState());
+		enterRule(_localctx, 1046, RULE_faedIn);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3428);
+			match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TmRadicalContext extends ParserRuleContext {
+		public TmKeyContext tmKey() {
+			return getRuleContext(TmKeyContext.class,0);
+		}
+		public TmMessageContext tmMessage() {
+			return getRuleContext(TmMessageContext.class,0);
+		}
+		public TmRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tmRadical; }
+	}
+
+	public final TmRadicalContext tmRadical() throws RecognitionException {
+		TmRadicalContext _localctx = new TmRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1048, RULE_tmRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3430);
+			tmKey();
+			setState(3431);
+			tmMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TmMessageContext extends ParserRuleContext {
+		public TerminalNode MessageContent() { return getToken(MCCommandParser.MessageContent, 0); }
+		public TmMessageContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tmMessage; }
+	}
+
+	public final TmMessageContext tmMessage() throws RecognitionException {
+		TmMessageContext _localctx = new TmMessageContext(_ctx, getState());
+		enterRule(_localctx, 1050, RULE_tmMessage);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3433);
+			match(MessageContent);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TpRadicalContext extends ParserRuleContext {
+		public TpKeyContext tpKey() {
+			return getRuleContext(TpKeyContext.class,0);
+		}
+		public TeleportOptionsContext teleportOptions() {
+			return getRuleContext(TeleportOptionsContext.class,0);
+		}
+		public TpRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tpRadical; }
+	}
+
+	public final TpRadicalContext tpRadical() throws RecognitionException {
+		TpRadicalContext _localctx = new TpRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1052, RULE_tpRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3435);
+			tpKey();
+			setState(3436);
+			teleportOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TriggerRadicalContext extends ParserRuleContext {
+		public TriggerKeyContext triggerKey() {
+			return getRuleContext(TriggerKeyContext.class,0);
+		}
+		public TriggerObjectiveContext triggerObjective() {
+			return getRuleContext(TriggerObjectiveContext.class,0);
+		}
+		public TriggerBehaviorsContext triggerBehaviors() {
+			return getRuleContext(TriggerBehaviorsContext.class,0);
+		}
+		public ValueContext value() {
+			return getRuleContext(ValueContext.class,0);
+		}
+		public TriggerRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_triggerRadical; }
+	}
+
+	public final TriggerRadicalContext triggerRadical() throws RecognitionException {
+		TriggerRadicalContext _localctx = new TriggerRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1054, RULE_triggerRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3438);
+			triggerKey();
+			setState(3439);
+			triggerObjective();
+			setState(3440);
+			triggerBehaviors();
+			setState(3441);
+			value();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TriggerObjectiveContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(MCCommandParser.Identifier, 0); }
+		public TriggerObjectiveContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_triggerObjective; }
+	}
+
+	public final TriggerObjectiveContext triggerObjective() throws RecognitionException {
+		TriggerObjectiveContext _localctx = new TriggerObjectiveContext(_ctx, getState());
+		enterRule(_localctx, 1056, RULE_triggerObjective);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3443);
+			match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class TriggerBehaviorsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public TriggerBehaviorsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_triggerBehaviors; }
+	}
+
+	public final TriggerBehaviorsContext triggerBehaviors() throws RecognitionException {
+		TriggerBehaviorsContext _localctx = new TriggerBehaviorsContext(_ctx, getState());
+		enterRule(_localctx, 1058, RULE_triggerBehaviors);
+		try {
+			setState(3447);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3445);
+				add();
+				}
+				break;
+			case Set:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3446);
+				set();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WeatherRadicalContext extends ParserRuleContext {
+		public WeatherKeyContext weatherKey() {
+			return getRuleContext(WeatherKeyContext.class,0);
+		}
+		public WeatherMembersContext weatherMembers() {
+			return getRuleContext(WeatherMembersContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public WeatherRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_weatherRadical; }
+	}
+
+	public final WeatherRadicalContext weatherRadical() throws RecognitionException {
+		WeatherRadicalContext _localctx = new WeatherRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1060, RULE_weatherRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3449);
+			weatherKey();
+			setState(3450);
+			weatherMembers();
+			setState(3451);
+			match(Double);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WeatherMembersContext extends ParserRuleContext {
+		public ClearKeyContext clearKey() {
+			return getRuleContext(ClearKeyContext.class,0);
+		}
+		public RainContext rain() {
+			return getRuleContext(RainContext.class,0);
+		}
+		public ThunderContext thunder() {
+			return getRuleContext(ThunderContext.class,0);
+		}
+		public WeatherMembersContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_weatherMembers; }
+	}
+
+	public final WeatherMembersContext weatherMembers() throws RecognitionException {
+		WeatherMembersContext _localctx = new WeatherMembersContext(_ctx, getState());
+		enterRule(_localctx, 1062, RULE_weatherMembers);
+		try {
+			setState(3456);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case ClearKey:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3453);
+				clearKey();
+				}
+				break;
+			case Rain:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3454);
+				rain();
+				}
+				break;
+			case Thunder:
+				enterOuterAlt(_localctx, 3);
+				{
+				setState(3455);
+				thunder();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WorldborderRadicalContext extends ParserRuleContext {
+		public WorldborderKeyContext worldborderKey() {
+			return getRuleContext(WorldborderKeyContext.class,0);
+		}
+		public WorldborderOptionsContext worldborderOptions() {
+			return getRuleContext(WorldborderOptionsContext.class,0);
+		}
+		public WorldborderRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_worldborderRadical; }
+	}
+
+	public final WorldborderRadicalContext worldborderRadical() throws RecognitionException {
+		WorldborderRadicalContext _localctx = new WorldborderRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1064, RULE_worldborderRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3458);
+			worldborderKey();
+			setState(3459);
+			worldborderOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WorldborderOptionsContext extends ParserRuleContext {
+		public AddContext add() {
+			return getRuleContext(AddContext.class,0);
+		}
+		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
+		public IntegerContext integer() {
+			return getRuleContext(IntegerContext.class,0);
+		}
+		public CenterContext center() {
+			return getRuleContext(CenterContext.class,0);
+		}
+		public Pos2DContext pos2D() {
+			return getRuleContext(Pos2DContext.class,0);
+		}
+		public DamageKeyContext damageKey() {
+			return getRuleContext(DamageKeyContext.class,0);
+		}
+		public WorldborderModesContext worldborderModes() {
+			return getRuleContext(WorldborderModesContext.class,0);
+		}
+		public GetContext get() {
+			return getRuleContext(GetContext.class,0);
+		}
+		public SetContext set() {
+			return getRuleContext(SetContext.class,0);
+		}
+		public WarningContext warning() {
+			return getRuleContext(WarningContext.class,0);
+		}
+		public WorldborderWarningTypesContext worldborderWarningTypes() {
+			return getRuleContext(WorldborderWarningTypesContext.class,0);
+		}
+		public WorldborderOptionsContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_worldborderOptions; }
+	}
+
+	public final WorldborderOptionsContext worldborderOptions() throws RecognitionException {
+		WorldborderOptionsContext _localctx = new WorldborderOptionsContext(_ctx, getState());
+		enterRule(_localctx, 1066, RULE_worldborderOptions);
+		try {
+			setState(3481);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Add:
+				enterOuterAlt(_localctx, 1);
+				{
+				{
+				setState(3461);
+				add();
+				setState(3462);
+				match(Double);
+				setState(3463);
+				integer();
+				}
+				}
+				break;
+			case Center:
+				enterOuterAlt(_localctx, 2);
+				{
+				{
+				setState(3465);
+				center();
+				setState(3466);
+				pos2D();
+				}
+				}
+				break;
+			case DamageKey:
+				enterOuterAlt(_localctx, 3);
+				{
+				{
+				setState(3468);
+				damageKey();
+				setState(3469);
+				worldborderModes();
+				setState(3470);
+				match(Double);
+				}
+				}
+				break;
+			case Get:
+				enterOuterAlt(_localctx, 4);
+				{
+				setState(3472);
+				get();
+				}
+				break;
+			case Set:
+				enterOuterAlt(_localctx, 5);
+				{
+				{
+				setState(3473);
+				set();
+				setState(3474);
+				match(Double);
+				setState(3475);
+				integer();
+				}
+				}
+				break;
+			case Warning:
+				enterOuterAlt(_localctx, 6);
+				{
+				{
+				setState(3477);
+				warning();
+				setState(3478);
+				worldborderWarningTypes();
+				setState(3479);
+				integer();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WorldborderWarningTypesContext extends ParserRuleContext {
+		public DistanceContext distance() {
+			return getRuleContext(DistanceContext.class,0);
+		}
+		public TimeKeyContext timeKey() {
+			return getRuleContext(TimeKeyContext.class,0);
+		}
+		public WorldborderWarningTypesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_worldborderWarningTypes; }
+	}
+
+	public final WorldborderWarningTypesContext worldborderWarningTypes() throws RecognitionException {
+		WorldborderWarningTypesContext _localctx = new WorldborderWarningTypesContext(_ctx, getState());
+		enterRule(_localctx, 1068, RULE_worldborderWarningTypes);
+		try {
+			setState(3485);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Distance:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3483);
+				distance();
+				}
+				break;
+			case TimeKey:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3484);
+				timeKey();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class WorldborderModesContext extends ParserRuleContext {
+		public AmountContext amount() {
+			return getRuleContext(AmountContext.class,0);
+		}
+		public BufferContext buffer() {
+			return getRuleContext(BufferContext.class,0);
+		}
+		public WorldborderModesContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_worldborderModes; }
+	}
+
+	public final WorldborderModesContext worldborderModes() throws RecognitionException {
+		WorldborderModesContext _localctx = new WorldborderModesContext(_ctx, getState());
+		enterRule(_localctx, 1070, RULE_worldborderModes);
+		try {
+			setState(3489);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case Amount:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(3487);
+				amount();
+				}
+				break;
+			case Buffer:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(3488);
+				buffer();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class XpRadicalContext extends ParserRuleContext {
+		public XpKeyContext xpKey() {
+			return getRuleContext(XpKeyContext.class,0);
+		}
+		public ExperienceOptionsContext experienceOptions() {
+			return getRuleContext(ExperienceOptionsContext.class,0);
+		}
+		public XpRadicalContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_xpRadical; }
+	}
+
+	public final XpRadicalContext xpRadical() throws RecognitionException {
+		XpRadicalContext _localctx = new XpRadicalContext(_ctx, getState());
+		enterRule(_localctx, 1072, RULE_xpRadical);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(3491);
+			xpKey();
+			setState(3492);
+			experienceOptions();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	private static final String _serializedATNSegment0 =
+		"\u0004\u0001\u0136\u0da7\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
+		"\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004"+
+		"\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007"+
+		"\u0002\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b"+
+		"\u0002\f\u0007\f\u0002\r\u0007\r\u0002\u000e\u0007\u000e\u0002\u000f\u0007"+
+		"\u000f\u0002\u0010\u0007\u0010\u0002\u0011\u0007\u0011\u0002\u0012\u0007"+
+		"\u0012\u0002\u0013\u0007\u0013\u0002\u0014\u0007\u0014\u0002\u0015\u0007"+
+		"\u0015\u0002\u0016\u0007\u0016\u0002\u0017\u0007\u0017\u0002\u0018\u0007"+
+		"\u0018\u0002\u0019\u0007\u0019\u0002\u001a\u0007\u001a\u0002\u001b\u0007"+
+		"\u001b\u0002\u001c\u0007\u001c\u0002\u001d\u0007\u001d\u0002\u001e\u0007"+
+		"\u001e\u0002\u001f\u0007\u001f\u0002 \u0007 \u0002!\u0007!\u0002\"\u0007"+
+		"\"\u0002#\u0007#\u0002$\u0007$\u0002%\u0007%\u0002&\u0007&\u0002\'\u0007"+
+		"\'\u0002(\u0007(\u0002)\u0007)\u0002*\u0007*\u0002+\u0007+\u0002,\u0007"+
+		",\u0002-\u0007-\u0002.\u0007.\u0002/\u0007/\u00020\u00070\u00021\u0007"+
+		"1\u00022\u00072\u00023\u00073\u00024\u00074\u00025\u00075\u00026\u0007"+
+		"6\u00027\u00077\u00028\u00078\u00029\u00079\u0002:\u0007:\u0002;\u0007"+
+		";\u0002<\u0007<\u0002=\u0007=\u0002>\u0007>\u0002?\u0007?\u0002@\u0007"+
+		"@\u0002A\u0007A\u0002B\u0007B\u0002C\u0007C\u0002D\u0007D\u0002E\u0007"+
+		"E\u0002F\u0007F\u0002G\u0007G\u0002H\u0007H\u0002I\u0007I\u0002J\u0007"+
+		"J\u0002K\u0007K\u0002L\u0007L\u0002M\u0007M\u0002N\u0007N\u0002O\u0007"+
+		"O\u0002P\u0007P\u0002Q\u0007Q\u0002R\u0007R\u0002S\u0007S\u0002T\u0007"+
+		"T\u0002U\u0007U\u0002V\u0007V\u0002W\u0007W\u0002X\u0007X\u0002Y\u0007"+
+		"Y\u0002Z\u0007Z\u0002[\u0007[\u0002\\\u0007\\\u0002]\u0007]\u0002^\u0007"+
+		"^\u0002_\u0007_\u0002`\u0007`\u0002a\u0007a\u0002b\u0007b\u0002c\u0007"+
+		"c\u0002d\u0007d\u0002e\u0007e\u0002f\u0007f\u0002g\u0007g\u0002h\u0007"+
+		"h\u0002i\u0007i\u0002j\u0007j\u0002k\u0007k\u0002l\u0007l\u0002m\u0007"+
+		"m\u0002n\u0007n\u0002o\u0007o\u0002p\u0007p\u0002q\u0007q\u0002r\u0007"+
+		"r\u0002s\u0007s\u0002t\u0007t\u0002u\u0007u\u0002v\u0007v\u0002w\u0007"+
+		"w\u0002x\u0007x\u0002y\u0007y\u0002z\u0007z\u0002{\u0007{\u0002|\u0007"+
+		"|\u0002}\u0007}\u0002~\u0007~\u0002\u007f\u0007\u007f\u0002\u0080\u0007"+
+		"\u0080\u0002\u0081\u0007\u0081\u0002\u0082\u0007\u0082\u0002\u0083\u0007"+
+		"\u0083\u0002\u0084\u0007\u0084\u0002\u0085\u0007\u0085\u0002\u0086\u0007"+
+		"\u0086\u0002\u0087\u0007\u0087\u0002\u0088\u0007\u0088\u0002\u0089\u0007"+
+		"\u0089\u0002\u008a\u0007\u008a\u0002\u008b\u0007\u008b\u0002\u008c\u0007"+
+		"\u008c\u0002\u008d\u0007\u008d\u0002\u008e\u0007\u008e\u0002\u008f\u0007"+
+		"\u008f\u0002\u0090\u0007\u0090\u0002\u0091\u0007\u0091\u0002\u0092\u0007"+
+		"\u0092\u0002\u0093\u0007\u0093\u0002\u0094\u0007\u0094\u0002\u0095\u0007"+
+		"\u0095\u0002\u0096\u0007\u0096\u0002\u0097\u0007\u0097\u0002\u0098\u0007"+
+		"\u0098\u0002\u0099\u0007\u0099\u0002\u009a\u0007\u009a\u0002\u009b\u0007"+
+		"\u009b\u0002\u009c\u0007\u009c\u0002\u009d\u0007\u009d\u0002\u009e\u0007"+
+		"\u009e\u0002\u009f\u0007\u009f\u0002\u00a0\u0007\u00a0\u0002\u00a1\u0007"+
+		"\u00a1\u0002\u00a2\u0007\u00a2\u0002\u00a3\u0007\u00a3\u0002\u00a4\u0007"+
+		"\u00a4\u0002\u00a5\u0007\u00a5\u0002\u00a6\u0007\u00a6\u0002\u00a7\u0007"+
+		"\u00a7\u0002\u00a8\u0007\u00a8\u0002\u00a9\u0007\u00a9\u0002\u00aa\u0007"+
+		"\u00aa\u0002\u00ab\u0007\u00ab\u0002\u00ac\u0007\u00ac\u0002\u00ad\u0007"+
+		"\u00ad\u0002\u00ae\u0007\u00ae\u0002\u00af\u0007\u00af\u0002\u00b0\u0007"+
+		"\u00b0\u0002\u00b1\u0007\u00b1\u0002\u00b2\u0007\u00b2\u0002\u00b3\u0007"+
+		"\u00b3\u0002\u00b4\u0007\u00b4\u0002\u00b5\u0007\u00b5\u0002\u00b6\u0007"+
+		"\u00b6\u0002\u00b7\u0007\u00b7\u0002\u00b8\u0007\u00b8\u0002\u00b9\u0007"+
+		"\u00b9\u0002\u00ba\u0007\u00ba\u0002\u00bb\u0007\u00bb\u0002\u00bc\u0007"+
+		"\u00bc\u0002\u00bd\u0007\u00bd\u0002\u00be\u0007\u00be\u0002\u00bf\u0007"+
+		"\u00bf\u0002\u00c0\u0007\u00c0\u0002\u00c1\u0007\u00c1\u0002\u00c2\u0007"+
+		"\u00c2\u0002\u00c3\u0007\u00c3\u0002\u00c4\u0007\u00c4\u0002\u00c5\u0007"+
+		"\u00c5\u0002\u00c6\u0007\u00c6\u0002\u00c7\u0007\u00c7\u0002\u00c8\u0007"+
+		"\u00c8\u0002\u00c9\u0007\u00c9\u0002\u00ca\u0007\u00ca\u0002\u00cb\u0007"+
+		"\u00cb\u0002\u00cc\u0007\u00cc\u0002\u00cd\u0007\u00cd\u0002\u00ce\u0007"+
+		"\u00ce\u0002\u00cf\u0007\u00cf\u0002\u00d0\u0007\u00d0\u0002\u00d1\u0007"+
+		"\u00d1\u0002\u00d2\u0007\u00d2\u0002\u00d3\u0007\u00d3\u0002\u00d4\u0007"+
+		"\u00d4\u0002\u00d5\u0007\u00d5\u0002\u00d6\u0007\u00d6\u0002\u00d7\u0007"+
+		"\u00d7\u0002\u00d8\u0007\u00d8\u0002\u00d9\u0007\u00d9\u0002\u00da\u0007"+
+		"\u00da\u0002\u00db\u0007\u00db\u0002\u00dc\u0007\u00dc\u0002\u00dd\u0007"+
+		"\u00dd\u0002\u00de\u0007\u00de\u0002\u00df\u0007\u00df\u0002\u00e0\u0007"+
+		"\u00e0\u0002\u00e1\u0007\u00e1\u0002\u00e2\u0007\u00e2\u0002\u00e3\u0007"+
+		"\u00e3\u0002\u00e4\u0007\u00e4\u0002\u00e5\u0007\u00e5\u0002\u00e6\u0007"+
+		"\u00e6\u0002\u00e7\u0007\u00e7\u0002\u00e8\u0007\u00e8\u0002\u00e9\u0007"+
+		"\u00e9\u0002\u00ea\u0007\u00ea\u0002\u00eb\u0007\u00eb\u0002\u00ec\u0007"+
+		"\u00ec\u0002\u00ed\u0007\u00ed\u0002\u00ee\u0007\u00ee\u0002\u00ef\u0007"+
+		"\u00ef\u0002\u00f0\u0007\u00f0\u0002\u00f1\u0007\u00f1\u0002\u00f2\u0007"+
+		"\u00f2\u0002\u00f3\u0007\u00f3\u0002\u00f4\u0007\u00f4\u0002\u00f5\u0007"+
+		"\u00f5\u0002\u00f6\u0007\u00f6\u0002\u00f7\u0007\u00f7\u0002\u00f8\u0007"+
+		"\u00f8\u0002\u00f9\u0007\u00f9\u0002\u00fa\u0007\u00fa\u0002\u00fb\u0007"+
+		"\u00fb\u0002\u00fc\u0007\u00fc\u0002\u00fd\u0007\u00fd\u0002\u00fe\u0007"+
+		"\u00fe\u0002\u00ff\u0007\u00ff\u0002\u0100\u0007\u0100\u0002\u0101\u0007"+
+		"\u0101\u0002\u0102\u0007\u0102\u0002\u0103\u0007\u0103\u0002\u0104\u0007"+
+		"\u0104\u0002\u0105\u0007\u0105\u0002\u0106\u0007\u0106\u0002\u0107\u0007"+
+		"\u0107\u0002\u0108\u0007\u0108\u0002\u0109\u0007\u0109\u0002\u010a\u0007"+
+		"\u010a\u0002\u010b\u0007\u010b\u0002\u010c\u0007\u010c\u0002\u010d\u0007"+
+		"\u010d\u0002\u010e\u0007\u010e\u0002\u010f\u0007\u010f\u0002\u0110\u0007"+
+		"\u0110\u0002\u0111\u0007\u0111\u0002\u0112\u0007\u0112\u0002\u0113\u0007"+
+		"\u0113\u0002\u0114\u0007\u0114\u0002\u0115\u0007\u0115\u0002\u0116\u0007"+
+		"\u0116\u0002\u0117\u0007\u0117\u0002\u0118\u0007\u0118\u0002\u0119\u0007"+
+		"\u0119\u0002\u011a\u0007\u011a\u0002\u011b\u0007\u011b\u0002\u011c\u0007"+
+		"\u011c\u0002\u011d\u0007\u011d\u0002\u011e\u0007\u011e\u0002\u011f\u0007"+
+		"\u011f\u0002\u0120\u0007\u0120\u0002\u0121\u0007\u0121\u0002\u0122\u0007"+
+		"\u0122\u0002\u0123\u0007\u0123\u0002\u0124\u0007\u0124\u0002\u0125\u0007"+
+		"\u0125\u0002\u0126\u0007\u0126\u0002\u0127\u0007\u0127\u0002\u0128\u0007"+
+		"\u0128\u0002\u0129\u0007\u0129\u0002\u012a\u0007\u012a\u0002\u012b\u0007"+
+		"\u012b\u0002\u012c\u0007\u012c\u0002\u012d\u0007\u012d\u0002\u012e\u0007"+
+		"\u012e\u0002\u012f\u0007\u012f\u0002\u0130\u0007\u0130\u0002\u0131\u0007"+
+		"\u0131\u0002\u0132\u0007\u0132\u0002\u0133\u0007\u0133\u0002\u0134\u0007"+
+		"\u0134\u0002\u0135\u0007\u0135\u0002\u0136\u0007\u0136\u0002\u0137\u0007"+
+		"\u0137\u0002\u0138\u0007\u0138\u0002\u0139\u0007\u0139\u0002\u013a\u0007"+
+		"\u013a\u0002\u013b\u0007\u013b\u0002\u013c\u0007\u013c\u0002\u013d\u0007"+
+		"\u013d\u0002\u013e\u0007\u013e\u0002\u013f\u0007\u013f\u0002\u0140\u0007"+
+		"\u0140\u0002\u0141\u0007\u0141\u0002\u0142\u0007\u0142\u0002\u0143\u0007"+
+		"\u0143\u0002\u0144\u0007\u0144\u0002\u0145\u0007\u0145\u0002\u0146\u0007"+
+		"\u0146\u0002\u0147\u0007\u0147\u0002\u0148\u0007\u0148\u0002\u0149\u0007"+
+		"\u0149\u0002\u014a\u0007\u014a\u0002\u014b\u0007\u014b\u0002\u014c\u0007"+
+		"\u014c\u0002\u014d\u0007\u014d\u0002\u014e\u0007\u014e\u0002\u014f\u0007"+
+		"\u014f\u0002\u0150\u0007\u0150\u0002\u0151\u0007\u0151\u0002\u0152\u0007"+
+		"\u0152\u0002\u0153\u0007\u0153\u0002\u0154\u0007\u0154\u0002\u0155\u0007"+
+		"\u0155\u0002\u0156\u0007\u0156\u0002\u0157\u0007\u0157\u0002\u0158\u0007"+
+		"\u0158\u0002\u0159\u0007\u0159\u0002\u015a\u0007\u015a\u0002\u015b\u0007"+
+		"\u015b\u0002\u015c\u0007\u015c\u0002\u015d\u0007\u015d\u0002\u015e\u0007"+
+		"\u015e\u0002\u015f\u0007\u015f\u0002\u0160\u0007\u0160\u0002\u0161\u0007"+
+		"\u0161\u0002\u0162\u0007\u0162\u0002\u0163\u0007\u0163\u0002\u0164\u0007"+
+		"\u0164\u0002\u0165\u0007\u0165\u0002\u0166\u0007\u0166\u0002\u0167\u0007"+
+		"\u0167\u0002\u0168\u0007\u0168\u0002\u0169\u0007\u0169\u0002\u016a\u0007"+
+		"\u016a\u0002\u016b\u0007\u016b\u0002\u016c\u0007\u016c\u0002\u016d\u0007"+
+		"\u016d\u0002\u016e\u0007\u016e\u0002\u016f\u0007\u016f\u0002\u0170\u0007"+
+		"\u0170\u0002\u0171\u0007\u0171\u0002\u0172\u0007\u0172\u0002\u0173\u0007"+
+		"\u0173\u0002\u0174\u0007\u0174\u0002\u0175\u0007\u0175\u0002\u0176\u0007"+
+		"\u0176\u0002\u0177\u0007\u0177\u0002\u0178\u0007\u0178\u0002\u0179\u0007"+
+		"\u0179\u0002\u017a\u0007\u017a\u0002\u017b\u0007\u017b\u0002\u017c\u0007"+
+		"\u017c\u0002\u017d\u0007\u017d\u0002\u017e\u0007\u017e\u0002\u017f\u0007"+
+		"\u017f\u0002\u0180\u0007\u0180\u0002\u0181\u0007\u0181\u0002\u0182\u0007"+
+		"\u0182\u0002\u0183\u0007\u0183\u0002\u0184\u0007\u0184\u0002\u0185\u0007"+
+		"\u0185\u0002\u0186\u0007\u0186\u0002\u0187\u0007\u0187\u0002\u0188\u0007"+
+		"\u0188\u0002\u0189\u0007\u0189\u0002\u018a\u0007\u018a\u0002\u018b\u0007"+
+		"\u018b\u0002\u018c\u0007\u018c\u0002\u018d\u0007\u018d\u0002\u018e\u0007"+
+		"\u018e\u0002\u018f\u0007\u018f\u0002\u0190\u0007\u0190\u0002\u0191\u0007"+
+		"\u0191\u0002\u0192\u0007\u0192\u0002\u0193\u0007\u0193\u0002\u0194\u0007"+
+		"\u0194\u0002\u0195\u0007\u0195\u0002\u0196\u0007\u0196\u0002\u0197\u0007"+
+		"\u0197\u0002\u0198\u0007\u0198\u0002\u0199\u0007\u0199\u0002\u019a\u0007"+
+		"\u019a\u0002\u019b\u0007\u019b\u0002\u019c\u0007\u019c\u0002\u019d\u0007"+
+		"\u019d\u0002\u019e\u0007\u019e\u0002\u019f\u0007\u019f\u0002\u01a0\u0007"+
+		"\u01a0\u0002\u01a1\u0007\u01a1\u0002\u01a2\u0007\u01a2\u0002\u01a3\u0007"+
+		"\u01a3\u0002\u01a4\u0007\u01a4\u0002\u01a5\u0007\u01a5\u0002\u01a6\u0007"+
+		"\u01a6\u0002\u01a7\u0007\u01a7\u0002\u01a8\u0007\u01a8\u0002\u01a9\u0007"+
+		"\u01a9\u0002\u01aa\u0007\u01aa\u0002\u01ab\u0007\u01ab\u0002\u01ac\u0007"+
+		"\u01ac\u0002\u01ad\u0007\u01ad\u0002\u01ae\u0007\u01ae\u0002\u01af\u0007"+
+		"\u01af\u0002\u01b0\u0007\u01b0\u0002\u01b1\u0007\u01b1\u0002\u01b2\u0007"+
+		"\u01b2\u0002\u01b3\u0007\u01b3\u0002\u01b4\u0007\u01b4\u0002\u01b5\u0007"+
+		"\u01b5\u0002\u01b6\u0007\u01b6\u0002\u01b7\u0007\u01b7\u0002\u01b8\u0007"+
+		"\u01b8\u0002\u01b9\u0007\u01b9\u0002\u01ba\u0007\u01ba\u0002\u01bb\u0007"+
+		"\u01bb\u0002\u01bc\u0007\u01bc\u0002\u01bd\u0007\u01bd\u0002\u01be\u0007"+
+		"\u01be\u0002\u01bf\u0007\u01bf\u0002\u01c0\u0007\u01c0\u0002\u01c1\u0007"+
+		"\u01c1\u0002\u01c2\u0007\u01c2\u0002\u01c3\u0007\u01c3\u0002\u01c4\u0007"+
+		"\u01c4\u0002\u01c5\u0007\u01c5\u0002\u01c6\u0007\u01c6\u0002\u01c7\u0007"+
+		"\u01c7\u0002\u01c8\u0007\u01c8\u0002\u01c9\u0007\u01c9\u0002\u01ca\u0007"+
+		"\u01ca\u0002\u01cb\u0007\u01cb\u0002\u01cc\u0007\u01cc\u0002\u01cd\u0007"+
+		"\u01cd\u0002\u01ce\u0007\u01ce\u0002\u01cf\u0007\u01cf\u0002\u01d0\u0007"+
+		"\u01d0\u0002\u01d1\u0007\u01d1\u0002\u01d2\u0007\u01d2\u0002\u01d3\u0007"+
+		"\u01d3\u0002\u01d4\u0007\u01d4\u0002\u01d5\u0007\u01d5\u0002\u01d6\u0007"+
+		"\u01d6\u0002\u01d7\u0007\u01d7\u0002\u01d8\u0007\u01d8\u0002\u01d9\u0007"+
+		"\u01d9\u0002\u01da\u0007\u01da\u0002\u01db\u0007\u01db\u0002\u01dc\u0007"+
+		"\u01dc\u0002\u01dd\u0007\u01dd\u0002\u01de\u0007\u01de\u0002\u01df\u0007"+
+		"\u01df\u0002\u01e0\u0007\u01e0\u0002\u01e1\u0007\u01e1\u0002\u01e2\u0007"+
+		"\u01e2\u0002\u01e3\u0007\u01e3\u0002\u01e4\u0007\u01e4\u0002\u01e5\u0007"+
+		"\u01e5\u0002\u01e6\u0007\u01e6\u0002\u01e7\u0007\u01e7\u0002\u01e8\u0007"+
+		"\u01e8\u0002\u01e9\u0007\u01e9\u0002\u01ea\u0007\u01ea\u0002\u01eb\u0007"+
+		"\u01eb\u0002\u01ec\u0007\u01ec\u0002\u01ed\u0007\u01ed\u0002\u01ee\u0007"+
+		"\u01ee\u0002\u01ef\u0007\u01ef\u0002\u01f0\u0007\u01f0\u0002\u01f1\u0007"+
+		"\u01f1\u0002\u01f2\u0007\u01f2\u0002\u01f3\u0007\u01f3\u0002\u01f4\u0007"+
+		"\u01f4\u0002\u01f5\u0007\u01f5\u0002\u01f6\u0007\u01f6\u0002\u01f7\u0007"+
+		"\u01f7\u0002\u01f8\u0007\u01f8\u0002\u01f9\u0007\u01f9\u0002\u01fa\u0007"+
+		"\u01fa\u0002\u01fb\u0007\u01fb\u0002\u01fc\u0007\u01fc\u0002\u01fd\u0007"+
+		"\u01fd\u0002\u01fe\u0007\u01fe\u0002\u01ff\u0007\u01ff\u0002\u0200\u0007"+
+		"\u0200\u0002\u0201\u0007\u0201\u0002\u0202\u0007\u0202\u0002\u0203\u0007"+
+		"\u0203\u0002\u0204\u0007\u0204\u0002\u0205\u0007\u0205\u0002\u0206\u0007"+
+		"\u0206\u0002\u0207\u0007\u0207\u0002\u0208\u0007\u0208\u0002\u0209\u0007"+
+		"\u0209\u0002\u020a\u0007\u020a\u0002\u020b\u0007\u020b\u0002\u020c\u0007"+
+		"\u020c\u0002\u020d\u0007\u020d\u0002\u020e\u0007\u020e\u0002\u020f\u0007"+
+		"\u020f\u0002\u0210\u0007\u0210\u0002\u0211\u0007\u0211\u0002\u0212\u0007"+
+		"\u0212\u0002\u0213\u0007\u0213\u0002\u0214\u0007\u0214\u0002\u0215\u0007"+
+		"\u0215\u0002\u0216\u0007\u0216\u0002\u0217\u0007\u0217\u0002\u0218\u0007"+
+		"\u0218\u0001\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0002\u0001"+
+		"\u0002\u0001\u0003\u0001\u0003\u0001\u0004\u0001\u0004\u0001\u0005\u0001"+
+		"\u0005\u0001\u0006\u0001\u0006\u0001\u0007\u0001\u0007\u0001\b\u0001\b"+
+		"\u0001\t\u0001\t\u0001\n\u0001\n\u0001\u000b\u0001\u000b\u0001\f\u0001"+
+		"\f\u0001\r\u0001\r\u0001\u000e\u0001\u000e\u0001\u000f\u0001\u000f\u0001"+
+		"\u0010\u0001\u0010\u0001\u0011\u0001\u0011\u0001\u0012\u0001\u0012\u0001"+
+		"\u0012\u0001\u0012\u0001\u0012\u0005\u0012\u045c\b\u0012\n\u0012\f\u0012"+
+		"\u045f\t\u0012\u0001\u0012\u0001\u0012\u0003\u0012\u0463\b\u0012\u0001"+
+		"\u0013\u0001\u0013\u0001\u0013\u0001\u0013\u0001\u0013\u0005\u0013\u046a"+
+		"\b\u0013\n\u0013\f\u0013\u046d\t\u0013\u0001\u0013\u0001\u0013\u0003\u0013"+
+		"\u0471\b\u0013\u0001\u0014\u0001\u0014\u0001\u0015\u0001\u0015\u0001\u0015"+
+		"\u0001\u0015\u0001\u0016\u0001\u0016\u0001\u0017\u0001\u0017\u0001\u0017"+
+		"\u0001\u0017\u0001\u0017\u0003\u0017\u0480\b\u0017\u0001\u0018\u0001\u0018"+
+		"\u0001\u0018\u0005\u0018\u0485\b\u0018\n\u0018\f\u0018\u0488\t\u0018\u0001"+
+		"\u0019\u0001\u0019\u0001\u001a\u0001\u001a\u0001\u001b\u0001\u001b\u0001"+
+		"\u001b\u0001\u001b\u0001\u001c\u0001\u001c\u0001\u001c\u0001\u001c\u0001"+
+		"\u001c\u0005\u001c\u0497\b\u001c\n\u001c\f\u001c\u049a\t\u001c\u0001\u001c"+
+		"\u0001\u001c\u0001\u001d\u0001\u001d\u0001\u001e\u0001\u001e\u0001\u001f"+
+		"\u0001\u001f\u0001 \u0001 \u0001!\u0001!\u0001\"\u0001\"\u0001#\u0001"+
+		"#\u0001$\u0001$\u0001%\u0001%\u0001%\u0001%\u0001&\u0001&\u0001&\u0001"+
+		"\'\u0001\'\u0001(\u0001(\u0001)\u0001)\u0001*\u0001*\u0001+\u0001+\u0001"+
+		",\u0001,\u0001-\u0001-\u0001.\u0001.\u0001/\u0001/\u00010\u00010\u0001"+
+		"1\u00011\u00012\u00012\u00012\u00012\u00032\u04cf\b2\u00032\u04d1\b2\u0001"+
+		"3\u00013\u00014\u00014\u00014\u00014\u00014\u00054\u04da\b4\n4\f4\u04dd"+
+		"\t4\u00034\u04df\b4\u00014\u00014\u00034\u04e3\b4\u00015\u00015\u0001"+
+		"6\u00016\u00016\u00036\u04ea\b6\u00016\u00016\u00036\u04ee\b6\u00017\u0001"+
+		"7\u00017\u00017\u00017\u00057\u04f5\b7\n7\f7\u04f8\t7\u00037\u04fa\b7"+
+		"\u00017\u00017\u00037\u04fe\b7\u00018\u00018\u00018\u00018\u00018\u0001"+
+		"8\u00018\u00018\u00018\u00018\u00018\u00018\u00038\u050c\b8\u00018\u0001"+
+		"8\u00018\u00018\u00038\u0512\b8\u00018\u00018\u00018\u00018\u00038\u0518"+
+		"\b8\u00018\u00018\u00018\u00038\u051d\b8\u00018\u00018\u00018\u00018\u0001"+
+		"8\u00018\u00018\u00018\u00018\u00018\u00018\u00018\u00018\u00018\u0001"+
+		"8\u00018\u00018\u00038\u0530\b8\u00018\u00038\u0533\b8\u00018\u00018\u0001"+
+		"8\u00038\u0538\b8\u00018\u00018\u00018\u00018\u00018\u00038\u053f\b8\u0001"+
+		"8\u00018\u00018\u00018\u00018\u00038\u0546\b8\u00018\u00018\u00018\u0001"+
+		"8\u00018\u00038\u054d\b8\u00018\u00038\u0550\b8\u00018\u00018\u00018\u0003"+
+		"8\u0555\b8\u00038\u0557\b8\u00019\u00019\u00019\u00019\u00019\u00019\u0001"+
+		"9\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u0001"+
+		"9\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u0001"+
+		"9\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u0001"+
+		"9\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u0001"+
+		"9\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u0001"+
+		"9\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00019\u00039\u059a"+
+		"\b9\u0001:\u0001:\u0001;\u0001;\u0001<\u0001<\u0001=\u0001=\u0001>\u0001"+
+		">\u0001?\u0001?\u0001@\u0001@\u0001A\u0001A\u0001B\u0001B\u0001C\u0001"+
+		"C\u0001D\u0001D\u0001E\u0001E\u0001F\u0001F\u0001G\u0001G\u0001H\u0001"+
+		"H\u0001I\u0001I\u0001J\u0001J\u0001K\u0001K\u0001L\u0001L\u0001M\u0001"+
+		"M\u0001N\u0001N\u0001O\u0001O\u0001P\u0001P\u0001Q\u0001Q\u0001R\u0001"+
+		"R\u0001S\u0001S\u0001T\u0001T\u0001U\u0001U\u0001V\u0001V\u0001W\u0001"+
+		"W\u0001X\u0001X\u0001Y\u0001Y\u0001Z\u0001Z\u0001[\u0001[\u0001\\\u0001"+
+		"\\\u0001]\u0001]\u0001^\u0001^\u0001_\u0001_\u0001`\u0001`\u0001a\u0001"+
+		"a\u0001b\u0001b\u0001c\u0001c\u0001d\u0001d\u0001e\u0001e\u0001f\u0001"+
+		"f\u0001g\u0001g\u0001h\u0001h\u0001i\u0001i\u0001j\u0001j\u0001k\u0001"+
+		"k\u0001l\u0001l\u0001m\u0001m\u0001n\u0001n\u0001o\u0001o\u0001p\u0001"+
+		"p\u0001q\u0001q\u0001r\u0001r\u0001s\u0001s\u0001t\u0001t\u0001u\u0001"+
+		"u\u0001v\u0001v\u0001w\u0001w\u0001x\u0001x\u0001y\u0001y\u0001z\u0001"+
+		"z\u0001{\u0001{\u0001|\u0001|\u0001}\u0001}\u0001~\u0001~\u0001\u007f"+
+		"\u0001\u007f\u0001\u0080\u0001\u0080\u0001\u0081\u0001\u0081\u0001\u0082"+
+		"\u0001\u0082\u0001\u0083\u0001\u0083\u0001\u0084\u0001\u0084\u0001\u0085"+
+		"\u0001\u0085\u0001\u0086\u0001\u0086\u0001\u0087\u0001\u0087\u0001\u0088"+
+		"\u0001\u0088\u0001\u0089\u0001\u0089\u0001\u008a\u0001\u008a\u0001\u008b"+
+		"\u0001\u008b\u0001\u008c\u0001\u008c\u0001\u008d\u0001\u008d\u0001\u008e"+
+		"\u0001\u008e\u0001\u008f\u0001\u008f\u0001\u0090\u0001\u0090\u0001\u0091"+
+		"\u0001\u0091\u0001\u0092\u0001\u0092\u0001\u0093\u0001\u0093\u0001\u0094"+
+		"\u0001\u0094\u0001\u0095\u0001\u0095\u0001\u0096\u0001\u0096\u0001\u0097"+
+		"\u0001\u0097\u0001\u0098\u0001\u0098\u0001\u0099\u0001\u0099\u0001\u009a"+
+		"\u0001\u009a\u0001\u009b\u0001\u009b\u0001\u009c\u0001\u009c\u0001\u009d"+
+		"\u0001\u009d\u0001\u009e\u0001\u009e\u0001\u009f\u0001\u009f\u0001\u00a0"+
+		"\u0001\u00a0\u0001\u00a1\u0001\u00a1\u0001\u00a2\u0001\u00a2\u0001\u00a3"+
+		"\u0001\u00a3\u0001\u00a4\u0001\u00a4\u0001\u00a5\u0001\u00a5\u0001\u00a6"+
+		"\u0001\u00a6\u0001\u00a7\u0001\u00a7\u0001\u00a8\u0001\u00a8\u0001\u00a9"+
+		"\u0001\u00a9\u0001\u00aa\u0001\u00aa\u0001\u00ab\u0001\u00ab\u0001\u00ac"+
+		"\u0001\u00ac\u0001\u00ad\u0001\u00ad\u0001\u00ae\u0001\u00ae\u0001\u00af"+
+		"\u0001\u00af\u0001\u00b0\u0001\u00b0\u0001\u00b1\u0001\u00b1\u0001\u00b2"+
+		"\u0001\u00b2\u0001\u00b3\u0001\u00b3\u0001\u00b4\u0001\u00b4\u0001\u00b5"+
+		"\u0001\u00b5\u0001\u00b6\u0001\u00b6\u0001\u00b7\u0001\u00b7\u0001\u00b8"+
+		"\u0001\u00b8\u0001\u00b9\u0001\u00b9\u0001\u00ba\u0001\u00ba\u0001\u00bb"+
+		"\u0001\u00bb\u0001\u00bc\u0001\u00bc\u0001\u00bd\u0001\u00bd\u0001\u00be"+
+		"\u0001\u00be\u0001\u00bf\u0001\u00bf\u0001\u00c0\u0001\u00c0\u0001\u00c1"+
+		"\u0001\u00c1\u0001\u00c2\u0001\u00c2\u0001\u00c3\u0001\u00c3\u0001\u00c4"+
+		"\u0001\u00c4\u0001\u00c5\u0001\u00c5\u0001\u00c6\u0001\u00c6\u0001\u00c7"+
+		"\u0001\u00c7\u0001\u00c8\u0001\u00c8\u0001\u00c9\u0001\u00c9\u0001\u00ca"+
+		"\u0001\u00ca\u0001\u00cb\u0001\u00cb\u0001\u00cc\u0001\u00cc\u0001\u00cd"+
+		"\u0001\u00cd\u0001\u00ce\u0001\u00ce\u0001\u00cf\u0001\u00cf\u0001\u00d0"+
+		"\u0001\u00d0\u0001\u00d1\u0001\u00d1\u0001\u00d2\u0001\u00d2\u0001\u00d3"+
+		"\u0001\u00d3\u0001\u00d4\u0001\u00d4\u0001\u00d5\u0001\u00d5\u0001\u00d6"+
+		"\u0001\u00d6\u0001\u00d7\u0001\u00d7\u0001\u00d8\u0001\u00d8\u0001\u00d9"+
+		"\u0001\u00d9\u0001\u00da\u0001\u00da\u0001\u00db\u0001\u00db\u0001\u00dc"+
+		"\u0001\u00dc\u0001\u00dd\u0001\u00dd\u0001\u00de\u0001\u00de\u0001\u00df"+
+		"\u0001\u00df\u0001\u00e0\u0001\u00e0\u0001\u00e1\u0001\u00e1\u0001\u00e2"+
+		"\u0001\u00e2\u0001\u00e3\u0001\u00e3\u0001\u00e4\u0001\u00e4\u0001\u00e5"+
+		"\u0001\u00e5\u0001\u00e6\u0001\u00e6\u0001\u00e7\u0001\u00e7\u0001\u00e8"+
+		"\u0001\u00e8\u0001\u00e9\u0001\u00e9\u0001\u00ea\u0001\u00ea\u0001\u00eb"+
+		"\u0001\u00eb\u0001\u00ec\u0001\u00ec\u0001\u00ed\u0001\u00ed\u0001\u00ee"+
+		"\u0001\u00ee\u0001\u00ef\u0001\u00ef\u0001\u00f0\u0001\u00f0\u0001\u00f1"+
+		"\u0001\u00f1\u0001\u00f2\u0001\u00f2\u0001\u00f3\u0001\u00f3\u0001\u00f4"+
+		"\u0001\u00f4\u0001\u00f5\u0001\u00f5\u0001\u00f6\u0001\u00f6\u0001\u00f7"+
+		"\u0001\u00f7\u0001\u00f8\u0001\u00f8\u0001\u00f9\u0001\u00f9\u0001\u00fa"+
+		"\u0001\u00fa\u0001\u00fb\u0001\u00fb\u0001\u00fc\u0001\u00fc\u0001\u00fd"+
+		"\u0001\u00fd\u0001\u00fe\u0001\u00fe\u0001\u00ff\u0001\u00ff\u0001\u0100"+
+		"\u0001\u0100\u0001\u0101\u0001\u0101\u0001\u0102\u0001\u0102\u0001\u0103"+
+		"\u0001\u0103\u0001\u0104\u0001\u0104\u0001\u0105\u0001\u0105\u0001\u0106"+
+		"\u0001\u0106\u0001\u0107\u0001\u0107\u0001\u0108\u0001\u0108\u0001\u0109"+
+		"\u0001\u0109\u0001\u010a\u0001\u010a\u0001\u010b\u0001\u010b\u0001\u010c"+
+		"\u0001\u010c\u0001\u010d\u0001\u010d\u0001\u010e\u0001\u010e\u0001\u010f"+
+		"\u0001\u010f\u0001\u0110\u0001\u0110\u0001\u0111\u0001\u0111\u0001\u0112"+
+		"\u0001\u0112\u0001\u0113\u0001\u0113\u0001\u0114\u0001\u0114\u0001\u0115"+
+		"\u0001\u0115\u0001\u0116\u0001\u0116\u0001\u0117\u0001\u0117\u0001\u0118"+
+		"\u0001\u0118\u0001\u0119\u0001\u0119\u0001\u011a\u0001\u011a\u0001\u011b"+
+		"\u0001\u011b\u0001\u011c\u0001\u011c\u0001\u011d\u0001\u011d\u0001\u011e"+
+		"\u0001\u011e\u0001\u011f\u0001\u011f\u0001\u0120\u0001\u0120\u0001\u0121"+
+		"\u0001\u0121\u0001\u0122\u0001\u0122\u0001\u0123\u0001\u0123\u0001\u0124"+
+		"\u0001\u0124\u0001\u0125\u0001\u0125\u0001\u0126\u0001\u0126\u0001\u0127"+
+		"\u0001\u0127\u0001\u0128\u0001\u0128\u0001\u0129\u0001\u0129\u0001\u012a"+
+		"\u0001\u012a\u0001\u012b\u0001\u012b\u0001\u012c\u0001\u012c\u0001\u012d"+
+		"\u0001\u012d\u0001\u012e\u0001\u012e\u0001\u012f\u0001\u012f\u0001\u0130"+
+		"\u0001\u0130\u0001\u0131\u0001\u0131\u0001\u0132\u0001\u0132\u0001\u0133"+
+		"\u0001\u0133\u0001\u0134\u0001\u0134\u0001\u0135\u0001\u0135\u0001\u0136"+
+		"\u0001\u0136\u0001\u0137\u0001\u0137\u0001\u0138\u0001\u0138\u0001\u0139"+
+		"\u0001\u0139\u0001\u0139\u0003\u0139\u079d\b\u0139\u0001\u0139\u0001\u0139"+
+		"\u0001\u0139\u0001\u013a\u0001\u013a\u0001\u013b\u0001\u013b\u0001\u013b"+
+		"\u0001\u013b\u0001\u013b\u0001\u013b\u0001\u013b\u0001\u013b\u0001\u013b"+
+		"\u0003\u013b\u07ad\b\u013b\u0001\u013c\u0001\u013c\u0001\u013c\u0001\u013c"+
+		"\u0001\u013c\u0005\u013c\u07b4\b\u013c\n\u013c\f\u013c\u07b7\t\u013c\u0001"+
+		"\u013c\u0001\u013c\u0003\u013c\u07bb\b\u013c\u0001\u013d\u0001\u013d\u0001"+
+		"\u013d\u0001\u013d\u0003\u013d\u07c1\b\u013d\u0001\u013d\u0001\u013d\u0001"+
+		"\u013d\u0001\u013d\u0001\u013d\u0001\u013d\u0001\u013d\u0001\u013d\u0001"+
+		"\u013d\u0003\u013d\u07cc\b\u013d\u0001\u013e\u0001\u013e\u0001\u013e\u0001"+
+		"\u013e\u0001\u013e\u0001\u013f\u0001\u013f\u0001\u013f\u0001\u013f\u0001"+
+		"\u013f\u0001\u013f\u0001\u013f\u0001\u013f\u0001\u013f\u0001\u013f\u0003"+
+		"\u013f\u07dd\b\u013f\u0001\u0140\u0001\u0140\u0003\u0140\u07e1\b\u0140"+
+		"\u0001\u0141\u0001\u0141\u0001\u0141\u0001\u0141\u0001\u0141\u0001\u0141"+
+		"\u0001\u0141\u0001\u0141\u0001\u0141\u0001\u0141\u0001\u0141\u0001\u0141"+
+		"\u0001\u0141\u0001\u0141\u0003\u0141\u07f1\b\u0141\u0001\u0142\u0001\u0142"+
+		"\u0001\u0142\u0003\u0142\u07f6\b\u0142\u0001\u0143\u0001\u0143\u0001\u0143"+
+		"\u0001\u0144\u0001\u0144\u0001\u0145\u0001\u0145\u0001\u0146\u0001\u0146"+
+		"\u0001\u0146\u0001\u0146\u0001\u0146\u0001\u0146\u0001\u0146\u0001\u0146"+
+		"\u0001\u0146\u0001\u0146\u0001\u0146\u0001\u0146\u0001\u0146\u0001\u0146"+
+		"\u0001\u0146\u0001\u0146\u0003\u0146\u080f\b\u0146\u0001\u0147\u0001\u0147"+
+		"\u0001\u0148\u0001\u0148\u0001\u0149\u0001\u0149\u0001\u0149\u0001\u0149"+
+		"\u0003\u0149\u0819\b\u0149\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a"+
+		"\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a"+
+		"\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a"+
+		"\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a\u0001\u014a\u0003\u014a"+
+		"\u0830\b\u014a\u0001\u014b\u0001\u014b\u0001\u014b\u0003\u014b\u0835\b"+
+		"\u014b\u0001\u014b\u0003\u014b\u0838\b\u014b\u0003\u014b\u083a\b\u014b"+
+		"\u0001\u014c\u0001\u014c\u0001\u014d\u0001\u014d\u0001\u014d\u0001\u014d"+
+		"\u0003\u014d\u0842\b\u014d\u0001\u014e\u0001\u014e\u0001\u014e\u0003\u014e"+
+		"\u0847\b\u014e\u0001\u014e\u0001\u014e\u0001\u014e\u0001\u014f\u0001\u014f"+
+		"\u0001\u014f\u0001\u014f\u0001\u0150\u0001\u0150\u0001\u0150\u0001\u0150"+
+		"\u0001\u0151\u0001\u0151\u0001\u0151\u0003\u0151\u0857\b\u0151\u0001\u0151"+
+		"\u0001\u0151\u0001\u0152\u0001\u0152\u0001\u0152\u0001\u0152\u0001\u0153"+
+		"\u0001\u0153\u0001\u0153\u0001\u0153\u0001\u0153\u0003\u0153\u0864\b\u0153"+
+		"\u0003\u0153\u0866\b\u0153\u0001\u0153\u0003\u0153\u0869\b\u0153\u0001"+
+		"\u0154\u0001\u0154\u0001\u0154\u0003\u0154\u086e\b\u0154\u0001\u0155\u0001"+
+		"\u0155\u0001\u0155\u0001\u0155\u0001\u0155\u0001\u0155\u0001\u0156\u0001"+
+		"\u0156\u0001\u0157\u0001\u0157\u0001\u0157\u0001\u0157\u0001\u0157\u0001"+
+		"\u0157\u0001\u0157\u0001\u0157\u0003\u0157\u0880\b\u0157\u0001\u0158\u0001"+
+		"\u0158\u0001\u0158\u0001\u0159\u0001\u0159\u0001\u015a\u0001\u015a\u0001"+
+		"\u015b\u0001\u015b\u0001\u015b\u0005\u015b\u088c\b\u015b\n\u015b\f\u015b"+
+		"\u088f\t\u015b\u0001\u015c\u0001\u015c\u0001\u015c\u0005\u015c\u0894\b"+
+		"\u015c\n\u015c\f\u015c\u0897\t\u015c\u0001\u015d\u0001\u015d\u0001\u015d"+
+		"\u0001\u015d\u0001\u015d\u0001\u015d\u0001\u015d\u0001\u015d\u0001\u015d"+
+		"\u0001\u015d\u0001\u015d\u0001\u015d\u0003\u015d\u08a5\b\u015d\u0001\u015e"+
+		"\u0001\u015e\u0001\u015e\u0001\u015e\u0001\u015e\u0001\u015e\u0001\u015e"+
+		"\u0001\u015e\u0001\u015e\u0001\u015e\u0001\u015e\u0001\u015e\u0001\u015e"+
+		"\u0001\u015e\u0001\u015e\u0003\u015e\u08b6\b\u015e\u0001\u015f\u0001\u015f"+
+		"\u0001\u015f\u0001\u015f\u0001\u015f\u0001\u015f\u0001\u015f\u0001\u015f"+
+		"\u0001\u015f\u0001\u015f\u0001\u015f\u0001\u015f\u0003\u015f\u08c4\b\u015f"+
+		"\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160"+
+		"\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160"+
+		"\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160\u0001\u0160"+
+		"\u0003\u0160\u08d8\b\u0160\u0001\u0161\u0001\u0161\u0001\u0161\u0001\u0161"+
+		"\u0001\u0161\u0001\u0161\u0001\u0161\u0001\u0161\u0001\u0161\u0001\u0161"+
+		"\u0001\u0161\u0001\u0161\u0003\u0161\u08e6\b\u0161\u0001\u0162\u0001\u0162"+
+		"\u0001\u0162\u0001\u0162\u0001\u0162\u0001\u0162\u0001\u0162\u0001\u0162"+
+		"\u0001\u0162\u0003\u0162\u08f1\b\u0162\u0001\u0163\u0001\u0163\u0001\u0163"+
+		"\u0001\u0163\u0001\u0163\u0001\u0163\u0001\u0163\u0001\u0163\u0001\u0163"+
+		"\u0001\u0163\u0001\u0163\u0001\u0163\u0001\u0163\u0001\u0163\u0001\u0163"+
+		"\u0001\u0163\u0003\u0163\u0903\b\u0163\u0001\u0164\u0001\u0164\u0001\u0164"+
+		"\u0001\u0164\u0001\u0164\u0001\u0164\u0001\u0164\u0001\u0164\u0001\u0164"+
+		"\u0001\u0164\u0001\u0164\u0001\u0164\u0001\u0164\u0001\u0164\u0001\u0164"+
+		"\u0003\u0164\u0914\b\u0164\u0001\u0165\u0001\u0165\u0001\u0165\u0001\u0165"+
+		"\u0001\u0165\u0001\u0165\u0001\u0165\u0001\u0165\u0001\u0165\u0001\u0165"+
+		"\u0001\u0165\u0001\u0165\u0003\u0165\u0922\b\u0165\u0001\u0166\u0001\u0166"+
+		"\u0001\u0166\u0001\u0167\u0001\u0167\u0003\u0167\u0929\b\u0167\u0001\u0168"+
+		"\u0001\u0168\u0001\u0169\u0001\u0169\u0001\u0169\u0001\u0169\u0001\u0169"+
+		"\u0001\u0169\u0001\u0169\u0001\u0169\u0003\u0169\u0935\b\u0169\u0001\u016a"+
+		"\u0001\u016a\u0001\u016a\u0001\u016a\u0001\u016a\u0001\u016a\u0001\u016a"+
+		"\u0001\u016a\u0001\u016a\u0001\u016a\u0003\u016a\u0941\b\u016a\u0001\u016b"+
+		"\u0001\u016b\u0001\u016b\u0001\u016c\u0001\u016c\u0001\u016c\u0001\u016c"+
+		"\u0001\u016c\u0003\u016c\u094b\b\u016c\u0001\u016d\u0001\u016d\u0001\u016d"+
+		"\u0001\u016e\u0001\u016e\u0001\u016e\u0001\u016f\u0001\u016f\u0001\u016f"+
+		"\u0001\u016f\u0003\u016f\u0957\b\u016f\u0001\u0170\u0001\u0170\u0001\u0170"+
+		"\u0001\u0171\u0001\u0171\u0001\u0171\u0003\u0171\u095f\b\u0171\u0003\u0171"+
+		"\u0961\b\u0171\u0001\u0171\u0001\u0171\u0001\u0171\u0001\u0171\u0001\u0171"+
+		"\u0001\u0171\u0001\u0171\u0001\u0171\u0001\u0171\u0003\u0171\u096c\b\u0171"+
+		"\u0003\u0171\u096e\b\u0171\u0001\u0172\u0001\u0172\u0001\u0173\u0001\u0173"+
+		"\u0001\u0174\u0001\u0174\u0001\u0175\u0001\u0175\u0001\u0176\u0001\u0176"+
+		"\u0001\u0177\u0001\u0177\u0001\u0177\u0001\u0177\u0001\u0177\u0001\u0178"+
+		"\u0001\u0178\u0001\u0179\u0001\u0179\u0001\u017a\u0001\u017a\u0001\u017a"+
+		"\u0001\u017b\u0001\u017b\u0003\u017b\u0988\b\u017b\u0001\u017c\u0001\u017c"+
+		"\u0001\u017d\u0001\u017d\u0003\u017d\u098e\b\u017d\u0001\u017e\u0001\u017e"+
+		"\u0003\u017e\u0992\b\u017e\u0001\u017f\u0001\u017f\u0001\u017f\u0001\u017f"+
+		"\u0001\u017f\u0001\u017f\u0001\u017f\u0001\u017f\u0001\u017f\u0001\u017f"+
+		"\u0001\u017f\u0001\u017f\u0001\u017f\u0001\u017f\u0001\u017f\u0003\u017f"+
+		"\u09a3\b\u017f\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180"+
+		"\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180"+
+		"\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180"+
+		"\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180"+
+		"\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180"+
+		"\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0003\u0180"+
+		"\u09c7\b\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180"+
+		"\u0001\u0180\u0001\u0180\u0001\u0180\u0001\u0180\u0003\u0180\u09d2\b\u0180"+
+		"\u0001\u0181\u0001\u0181\u0001\u0181\u0001\u0181\u0003\u0181\u09d8\b\u0181"+
+		"\u0001\u0181\u0001\u0181\u0001\u0181\u0001\u0181\u0001\u0181\u0001\u0181"+
+		"\u0001\u0181\u0003\u0181\u09e1\b\u0181\u0003\u0181\u09e3\b\u0181\u0001"+
+		"\u0182\u0001\u0182\u0001\u0182\u0001\u0182\u0001\u0182\u0001\u0182\u0001"+
+		"\u0182\u0001\u0182\u0003\u0182\u09ed\b\u0182\u0001\u0183\u0001\u0183\u0001"+
+		"\u0183\u0001\u0183\u0003\u0183\u09f3\b\u0183\u0001\u0184\u0001\u0184\u0001"+
+		"\u0184\u0001\u0184\u0001\u0184\u0001\u0184\u0003\u0184\u09fb\b\u0184\u0001"+
+		"\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001"+
+		"\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001"+
+		"\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001"+
+		"\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001\u0185\u0001"+
+		"\u0185\u0001\u0185\u0003\u0185\u0a17\b\u0185\u0001\u0186\u0001\u0186\u0003"+
+		"\u0186\u0a1b\b\u0186\u0001\u0186\u0001\u0186\u0001\u0187\u0001\u0187\u0001"+
+		"\u0187\u0001\u0187\u0001\u0187\u0001\u0187\u0001\u0187\u0001\u0187\u0003"+
+		"\u0187\u0a27\b\u0187\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001"+
+		"\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0003"+
+		"\u0188\u0a33\b\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001"+
+		"\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0003\u0188\u0a3e"+
+		"\b\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001"+
+		"\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001"+
+		"\u0188\u0001\u0188\u0001\u0188\u0003\u0188\u0a4e\b\u0188\u0001\u0188\u0001"+
+		"\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001"+
+		"\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001"+
+		"\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0001\u0188\u0003\u0188\u0a62"+
+		"\b\u0188\u0001\u0189\u0001\u0189\u0001\u0189\u0001\u018a\u0001\u018a\u0001"+
+		"\u018b\u0001\u018b\u0003\u018b\u0a6b\b\u018b\u0001\u018c\u0001\u018c\u0003"+
+		"\u018c\u0a6f\b\u018c\u0001\u018c\u0001\u018c\u0001\u018c\u0001\u018c\u0001"+
+		"\u018c\u0001\u018c\u0001\u018c\u0001\u018c\u0003\u018c\u0a79\b\u018c\u0001"+
+		"\u018d\u0001\u018d\u0001\u018d\u0001\u018d\u0001\u018d\u0001\u018d\u0001"+
+		"\u018e\u0001\u018e\u0001\u018e\u0001\u018e\u0003\u018e\u0a85\b\u018e\u0001"+
+		"\u018e\u0001\u018e\u0001\u018e\u0003\u018e\u0a8a\b\u018e\u0001\u018f\u0001"+
+		"\u018f\u0001\u018f\u0001\u018f\u0001\u018f\u0001\u018f\u0001\u0190\u0001"+
+		"\u0190\u0001\u0190\u0001\u0191\u0001\u0191\u0001\u0191\u0001\u0192\u0001"+
+		"\u0192\u0001\u0192\u0001\u0192\u0003\u0192\u0a9c\b\u0192\u0001\u0193\u0001"+
+		"\u0193\u0001\u0193\u0001\u0193\u0001\u0193\u0001\u0193\u0001\u0193\u0001"+
+		"\u0193\u0001\u0193\u0001\u0193\u0003\u0193\u0aa8\b\u0193\u0001\u0194\u0001"+
+		"\u0194\u0001\u0194\u0001\u0195\u0001\u0195\u0001\u0195\u0003\u0195\u0ab0"+
+		"\b\u0195\u0001\u0196\u0001\u0196\u0001\u0196\u0001\u0196\u0001\u0197\u0001"+
+		"\u0197\u0001\u0198\u0001\u0198\u0001\u0199\u0001\u0199\u0001\u0199\u0001"+
+		"\u0199\u0001\u0199\u0001\u019a\u0001\u019a\u0001\u019a\u0001\u019b\u0001"+
+		"\u019b\u0001\u019c\u0001\u019c\u0001\u019c\u0001\u019d\u0001\u019d\u0001"+
+		"\u019e\u0001\u019e\u0001\u019f\u0001\u019f\u0001\u019f\u0001\u019f\u0001"+
+		"\u019f\u0001\u019f\u0003\u019f\u0ad1\b\u019f\u0001\u01a0\u0001\u01a0\u0001"+
+		"\u01a0\u0001\u01a0\u0001\u01a0\u0001\u01a0\u0001\u01a0\u0003\u01a0\u0ada"+
+		"\b\u01a0\u0001\u01a1\u0001\u01a1\u0001\u01a1\u0001\u01a1\u0001\u01a1\u0001"+
+		"\u01a1\u0001\u01a1\u0001\u01a1\u0001\u01a1\u0001\u01a1\u0003\u01a1\u0ae6"+
+		"\b\u01a1\u0001\u01a2\u0001\u01a2\u0001\u01a2\u0001\u01a2\u0001\u01a2\u0001"+
+		"\u01a2\u0001\u01a2\u0001\u01a2\u0001\u01a2\u0001\u01a2\u0003\u01a2\u0af2"+
+		"\b\u01a2\u0001\u01a3\u0001\u01a3\u0001\u01a3\u0001\u01a4\u0001\u01a4\u0003"+
+		"\u01a4\u0af9\b\u01a4\u0001\u01a5\u0001\u01a5\u0001\u01a5\u0001\u01a5\u0001"+
+		"\u01a6\u0001\u01a6\u0001\u01a7\u0001\u01a7\u0001\u01a7\u0001\u01a8\u0001"+
+		"\u01a8\u0001\u01a8\u0001\u01a9\u0001\u01a9\u0001\u01a9\u0001\u01aa\u0001"+
+		"\u01aa\u0001\u01ab\u0001\u01ab\u0001\u01ac\u0001\u01ac\u0001\u01ac\u0001"+
+		"\u01ac\u0001\u01ac\u0001\u01ac\u0001\u01ac\u0001\u01ac\u0001\u01ac\u0003"+
+		"\u01ac\u0b17\b\u01ac\u0001\u01ad\u0001\u01ad\u0001\u01ad\u0001\u01ae\u0001"+
+		"\u01ae\u0001\u01af\u0001\u01af\u0001\u01af\u0003\u01af\u0b21\b\u01af\u0001"+
+		"\u01b0\u0001\u01b0\u0001\u01b0\u0001\u01b0\u0001\u01b0\u0001\u01b0\u0001"+
+		"\u01b0\u0001\u01b0\u0001\u01b0\u0001\u01b0\u0001\u01b0\u0001\u01b0\u0001"+
+		"\u01b0\u0001\u01b0\u0001\u01b0\u0003\u01b0\u0b32\b\u01b0\u0001\u01b1\u0001"+
+		"\u01b1\u0001\u01b1\u0001\u01b1\u0001\u01b1\u0001\u01b1\u0001\u01b1\u0001"+
+		"\u01b1\u0001\u01b1\u0001\u01b1\u0003\u01b1\u0b3e\b\u01b1\u0001\u01b2\u0001"+
+		"\u01b2\u0001\u01b2\u0001\u01b2\u0001\u01b2\u0001\u01b2\u0001\u01b2\u0001"+
+		"\u01b2\u0001\u01b2\u0001\u01b2\u0001\u01b2\u0001\u01b2\u0001\u01b2\u0001"+
+		"\u01b2\u0001\u01b2\u0003\u01b2\u0b4f\b\u01b2\u0001\u01b3\u0001\u01b3\u0001"+
+		"\u01b3\u0001\u01b4\u0001\u01b4\u0001\u01b5\u0001\u01b5\u0001\u01b5\u0003"+
+		"\u01b5\u0b59\b\u01b5\u0001\u01b6\u0001\u01b6\u0001\u01b7\u0001\u01b7\u0001"+
+		"\u01b7\u0001\u01b7\u0003\u01b7\u0b61\b\u01b7\u0001\u01b7\u0003\u01b7\u0b64"+
+		"\b\u01b7\u0001\u01b7\u0003\u01b7\u0b67\b\u01b7\u0001\u01b7\u0003\u01b7"+
+		"\u0b6a\b\u01b7\u0001\u01b7\u0003\u01b7\u0b6d\b\u01b7\u0001\u01b8\u0001"+
+		"\u01b8\u0001\u01b9\u0001\u01b9\u0001\u01ba\u0001\u01ba\u0001\u01ba\u0001"+
+		"\u01ba\u0001\u01bb\u0001\u01bb\u0003\u01bb\u0b79\b\u01bb\u0001\u01bc\u0001"+
+		"\u01bc\u0003\u01bc\u0b7d\b\u01bc\u0001\u01bc\u0003\u01bc\u0b80\b\u01bc"+
+		"\u0001\u01bd\u0001\u01bd\u0001\u01be\u0001\u01be\u0001\u01be\u0001\u01bf"+
+		"\u0001\u01bf\u0001\u01c0\u0001\u01c0\u0001\u01c1\u0001\u01c1\u0001\u01c2"+
+		"\u0001\u01c2\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3"+
+		"\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3"+
+		"\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3"+
+		"\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0001\u01c3\u0003\u01c3\u0ba4\b\u01c3"+
+		"\u0001\u01c4\u0001\u01c4\u0001\u01c4\u0003\u01c4\u0ba9\b\u01c4\u0001\u01c5"+
+		"\u0001\u01c5\u0001\u01c5\u0001\u01c5\u0003\u01c5\u0baf\b\u01c5\u0001\u01c5"+
+		"\u0001\u01c5\u0001\u01c6\u0001\u01c6\u0001\u01c6\u0001\u01c6\u0001\u01c6"+
+		"\u0001\u01c6\u0001\u01c6\u0001\u01c6\u0001\u01c6\u0001\u01c7\u0001\u01c7"+
+		"\u0001\u01c8\u0001\u01c8\u0001\u01c9\u0001\u01c9\u0001\u01ca\u0001\u01ca"+
+		"\u0001\u01ca\u0001\u01ca\u0001\u01ca\u0001\u01ca\u0001\u01ca\u0001\u01ca"+
+		"\u0001\u01ca\u0003\u01ca\u0bcb\b\u01ca\u0001\u01cb\u0001\u01cb\u0001\u01cb"+
+		"\u0001\u01cb\u0001\u01cb\u0001\u01cc\u0001\u01cc\u0001\u01cd\u0001\u01cd"+
+		"\u0001\u01cd\u0001\u01cd\u0001\u01cd\u0001\u01ce\u0001\u01ce\u0001\u01cf"+
+		"\u0001\u01cf\u0003\u01cf\u0bdd\b\u01cf\u0001\u01d0\u0001\u01d0\u0001\u01d1"+
+		"\u0001\u01d1\u0001\u01d1\u0001\u01d2\u0001\u01d2\u0001\u01d2\u0001\u01d2"+
+		"\u0001\u01d3\u0001\u01d3\u0001\u01d3\u0001\u01d3\u0003\u01d3\u0bec\b\u01d3"+
+		"\u0001\u01d4\u0001\u01d4\u0001\u01d4\u0001\u01d5\u0001\u01d5\u0001\u01d6"+
+		"\u0001\u01d6\u0001\u01d6\u0001\u01d7\u0001\u01d7\u0001\u01d8\u0001\u01d8"+
+		"\u0003\u01d8\u0bfa\b\u01d8\u0001\u01d9\u0001\u01d9\u0001\u01d9\u0001\u01d9"+
+		"\u0001\u01d9\u0001\u01d9\u0001\u01d9\u0001\u01d9\u0003\u01d9\u0c04\b\u01d9"+
+		"\u0001\u01da\u0001\u01da\u0001\u01da\u0001\u01db\u0001\u01db\u0001\u01db"+
+		"\u0001\u01db\u0001\u01db\u0001\u01db\u0003\u01db\u0c0f\b\u01db\u0001\u01dc"+
+		"\u0001\u01dc\u0001\u01dd\u0001\u01dd\u0001\u01de\u0001\u01de\u0003\u01de"+
+		"\u0c17\b\u01de\u0001\u01df\u0001\u01df\u0001\u01df\u0001\u01df\u0001\u01df"+
+		"\u0001\u01df\u0001\u01df\u0001\u01df\u0001\u01df\u0003\u01df\u0c22\b\u01df"+
+		"\u0001\u01e0\u0001\u01e0\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1"+
+		"\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1"+
+		"\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0003\u01e1\u0c34\b\u01e1"+
+		"\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1\u0001\u01e1"+
+		"\u0001\u01e1\u0003\u01e1\u0c3d\b\u01e1\u0001\u01e2\u0001\u01e2\u0001\u01e2"+
+		"\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2"+
+		"\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2"+
+		"\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2"+
+		"\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2"+
+		"\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2"+
+		"\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0001\u01e2\u0003\u01e2\u0c64\b\u01e2"+
+		"\u0001\u01e3\u0001\u01e3\u0001\u01e4\u0001\u01e4\u0001\u01e4\u0001\u01e4"+
+		"\u0001\u01e4\u0001\u01e5\u0001\u01e5\u0001\u01e5\u0003\u01e5\u0c70\b\u01e5"+
+		"\u0001\u01e6\u0001\u01e6\u0001\u01e6\u0001\u01e6\u0001\u01e7\u0001\u01e7"+
+		"\u0001\u01e7\u0001\u01e7\u0001\u01e7\u0001\u01e8\u0001\u01e8\u0001\u01e8"+
+		"\u0001\u01e8\u0001\u01e9\u0001\u01e9\u0001\u01e9\u0001\u01e9\u0001\u01e9"+
+		"\u0001\u01e9\u0001\u01ea\u0001\u01ea\u0001\u01ea\u0001\u01ea\u0001\u01ea"+
+		"\u0001\u01ea\u0001\u01ea\u0001\u01ea\u0003\u01ea\u0c8d\b\u01ea\u0001\u01eb"+
+		"\u0001\u01eb\u0001\u01ec\u0001\u01ec\u0001\u01ed\u0001\u01ed\u0001\u01ee"+
+		"\u0001\u01ee\u0001\u01ee\u0001\u01ee\u0001\u01ee\u0001\u01ef\u0001\u01ef"+
+		"\u0001\u01f0\u0001\u01f0\u0001\u01f0\u0001\u01f0\u0001\u01f0\u0001\u01f0"+
+		"\u0001\u01f0\u0001\u01f0\u0001\u01f0\u0001\u01f0\u0001\u01f0\u0003\u01f0"+
+		"\u0ca7\b\u01f0\u0001\u01f1\u0001\u01f1\u0001\u01f1\u0001\u01f1\u0001\u01f1"+
+		"\u0001\u01f2\u0001\u01f2\u0001\u01f2\u0001\u01f2\u0001\u01f3\u0001\u01f3"+
+		"\u0001\u01f3\u0001\u01f3\u0003\u01f3\u0cb6\b\u01f3\u0001\u01f3\u0003\u01f3"+
+		"\u0cb9\b\u01f3\u0001\u01f4\u0001\u01f4\u0001\u01f5\u0001\u01f5\u0001\u01f5"+
+		"\u0001\u01f6\u0001\u01f6\u0001\u01f7\u0001\u01f7\u0001\u01f8\u0001\u01f8"+
+		"\u0001\u01f8\u0001\u01f8\u0003\u01f8\u0cc8\b\u01f8\u0001\u01f9\u0001\u01f9"+
+		"\u0001\u01fa\u0001\u01fa\u0001\u01fa\u0001\u01fa\u0003\u01fa\u0cd0\b\u01fa"+
+		"\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb"+
+		"\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0003\u01fb\u0cdc\b\u01fb"+
+		"\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb"+
+		"\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb\u0001\u01fb"+
+		"\u0001\u01fb\u0003\u01fb\u0ceb\b\u01fb\u0001\u01fc\u0001\u01fc\u0001\u01fc"+
+		"\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc"+
+		"\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc"+
+		"\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0003\u01fc"+
+		"\u0d01\b\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc\u0001\u01fc"+
+		"\u0003\u01fc\u0d08\b\u01fc\u0001\u01fd\u0001\u01fd\u0001\u01fd\u0001\u01fe"+
+		"\u0001\u01fe\u0001\u01ff\u0001\u01ff\u0001\u01ff\u0001\u0200\u0001\u0200"+
+		"\u0003\u0200\u0d14\b\u0200\u0001\u0201\u0001\u0201\u0001\u0201\u0001\u0201"+
+		"\u0001\u0201\u0001\u0201\u0001\u0201\u0001\u0201\u0001\u0201\u0001\u0201"+
+		"\u0003\u0201\u0d20\b\u0201\u0001\u0201\u0003\u0201\u0d23\b\u0201\u0003"+
+		"\u0201\u0d25\b\u0201\u0003\u0201\u0d27\b\u0201\u0001\u0202\u0001\u0202"+
+		"\u0001\u0202\u0001\u0202\u0001\u0203\u0001\u0203\u0001\u0204\u0001\u0204"+
+		"\u0001\u0204\u0001\u0204\u0001\u0205\u0001\u0205\u0001\u0205\u0001\u0206"+
+		"\u0001\u0206\u0001\u0206\u0003\u0206\u0d39\b\u0206\u0001\u0207\u0001\u0207"+
+		"\u0001\u0207\u0001\u0207\u0003\u0207\u0d3f\b\u0207\u0001\u0208\u0001\u0208"+
+		"\u0001\u0208\u0001\u0208\u0001\u0208\u0001\u0208\u0001\u0208\u0001\u0208"+
+		"\u0001\u0208\u0001\u0208\u0003\u0208\u0d4b\b\u0208\u0003\u0208\u0d4d\b"+
+		"\u0208\u0001\u0209\u0001\u0209\u0001\u0209\u0001\u0209\u0001\u020a\u0001"+
+		"\u020a\u0001\u020a\u0003\u020a\u0d56\b\u020a\u0001\u020a\u0001\u020a\u0001"+
+		"\u020a\u0001\u020a\u0003\u020a\u0d5c\b\u020a\u0001\u020a\u0001\u020a\u0001"+
+		"\u020a\u0001\u020a\u0001\u020a\u0003\u020a\u0d63\b\u020a\u0001\u020b\u0001"+
+		"\u020b\u0001\u020c\u0001\u020c\u0001\u020c\u0001\u020d\u0001\u020d\u0001"+
+		"\u020e\u0001\u020e\u0001\u020e\u0001\u020f\u0001\u020f\u0001\u020f\u0001"+
+		"\u020f\u0001\u020f\u0001\u0210\u0001\u0210\u0001\u0211\u0001\u0211\u0003"+
+		"\u0211\u0d78\b\u0211\u0001\u0212\u0001\u0212\u0001\u0212\u0001\u0212\u0001"+
+		"\u0213\u0001\u0213\u0001\u0213\u0003\u0213\u0d81\b\u0213\u0001\u0214\u0001"+
+		"\u0214\u0001\u0214\u0001\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0001"+
+		"\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0001"+
+		"\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0001"+
+		"\u0215\u0001\u0215\u0001\u0215\u0001\u0215\u0003\u0215\u0d9a\b\u0215\u0001"+
+		"\u0216\u0001\u0216\u0003\u0216\u0d9e\b\u0216\u0001\u0217\u0001\u0217\u0003"+
+		"\u0217\u0da2\b\u0217\u0001\u0218\u0001\u0218\u0001\u0218\u0001\u0218\u0000"+
+		"\u0000\u0219\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016"+
+		"\u0018\u001a\u001c\u001e \"$&(*,.02468:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprt"+
+		"vxz|~\u0080\u0082\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094"+
+		"\u0096\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac"+
+		"\u00ae\u00b0\u00b2\u00b4\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4"+
+		"\u00c6\u00c8\u00ca\u00cc\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8\u00da\u00dc"+
+		"\u00de\u00e0\u00e2\u00e4\u00e6\u00e8\u00ea\u00ec\u00ee\u00f0\u00f2\u00f4"+
+		"\u00f6\u00f8\u00fa\u00fc\u00fe\u0100\u0102\u0104\u0106\u0108\u010a\u010c"+
+		"\u010e\u0110\u0112\u0114\u0116\u0118\u011a\u011c\u011e\u0120\u0122\u0124"+
+		"\u0126\u0128\u012a\u012c\u012e\u0130\u0132\u0134\u0136\u0138\u013a\u013c"+
+		"\u013e\u0140\u0142\u0144\u0146\u0148\u014a\u014c\u014e\u0150\u0152\u0154"+
+		"\u0156\u0158\u015a\u015c\u015e\u0160\u0162\u0164\u0166\u0168\u016a\u016c"+
+		"\u016e\u0170\u0172\u0174\u0176\u0178\u017a\u017c\u017e\u0180\u0182\u0184"+
+		"\u0186\u0188\u018a\u018c\u018e\u0190\u0192\u0194\u0196\u0198\u019a\u019c"+
+		"\u019e\u01a0\u01a2\u01a4\u01a6\u01a8\u01aa\u01ac\u01ae\u01b0\u01b2\u01b4"+
+		"\u01b6\u01b8\u01ba\u01bc\u01be\u01c0\u01c2\u01c4\u01c6\u01c8\u01ca\u01cc"+
+		"\u01ce\u01d0\u01d2\u01d4\u01d6\u01d8\u01da\u01dc\u01de\u01e0\u01e2\u01e4"+
+		"\u01e6\u01e8\u01ea\u01ec\u01ee\u01f0\u01f2\u01f4\u01f6\u01f8\u01fa\u01fc"+
+		"\u01fe\u0200\u0202\u0204\u0206\u0208\u020a\u020c\u020e\u0210\u0212\u0214"+
+		"\u0216\u0218\u021a\u021c\u021e\u0220\u0222\u0224\u0226\u0228\u022a\u022c"+
+		"\u022e\u0230\u0232\u0234\u0236\u0238\u023a\u023c\u023e\u0240\u0242\u0244"+
+		"\u0246\u0248\u024a\u024c\u024e\u0250\u0252\u0254\u0256\u0258\u025a\u025c"+
+		"\u025e\u0260\u0262\u0264\u0266\u0268\u026a\u026c\u026e\u0270\u0272\u0274"+
+		"\u0276\u0278\u027a\u027c\u027e\u0280\u0282\u0284\u0286\u0288\u028a\u028c"+
+		"\u028e\u0290\u0292\u0294\u0296\u0298\u029a\u029c\u029e\u02a0\u02a2\u02a4"+
+		"\u02a6\u02a8\u02aa\u02ac\u02ae\u02b0\u02b2\u02b4\u02b6\u02b8\u02ba\u02bc"+
+		"\u02be\u02c0\u02c2\u02c4\u02c6\u02c8\u02ca\u02cc\u02ce\u02d0\u02d2\u02d4"+
+		"\u02d6\u02d8\u02da\u02dc\u02de\u02e0\u02e2\u02e4\u02e6\u02e8\u02ea\u02ec"+
+		"\u02ee\u02f0\u02f2\u02f4\u02f6\u02f8\u02fa\u02fc\u02fe\u0300\u0302\u0304"+
+		"\u0306\u0308\u030a\u030c\u030e\u0310\u0312\u0314\u0316\u0318\u031a\u031c"+
+		"\u031e\u0320\u0322\u0324\u0326\u0328\u032a\u032c\u032e\u0330\u0332\u0334"+
+		"\u0336\u0338\u033a\u033c\u033e\u0340\u0342\u0344\u0346\u0348\u034a\u034c"+
+		"\u034e\u0350\u0352\u0354\u0356\u0358\u035a\u035c\u035e\u0360\u0362\u0364"+
+		"\u0366\u0368\u036a\u036c\u036e\u0370\u0372\u0374\u0376\u0378\u037a\u037c"+
+		"\u037e\u0380\u0382\u0384\u0386\u0388\u038a\u038c\u038e\u0390\u0392\u0394"+
+		"\u0396\u0398\u039a\u039c\u039e\u03a0\u03a2\u03a4\u03a6\u03a8\u03aa\u03ac"+
+		"\u03ae\u03b0\u03b2\u03b4\u03b6\u03b8\u03ba\u03bc\u03be\u03c0\u03c2\u03c4"+
+		"\u03c6\u03c8\u03ca\u03cc\u03ce\u03d0\u03d2\u03d4\u03d6\u03d8\u03da\u03dc"+
+		"\u03de\u03e0\u03e2\u03e4\u03e6\u03e8\u03ea\u03ec\u03ee\u03f0\u03f2\u03f4"+
+		"\u03f6\u03f8\u03fa\u03fc\u03fe\u0400\u0402\u0404\u0406\u0408\u040a\u040c"+
+		"\u040e\u0410\u0412\u0414\u0416\u0418\u041a\u041c\u041e\u0420\u0422\u0424"+
+		"\u0426\u0428\u042a\u042c\u042e\u0430\u0000\u0007\u0002\u0000\u0121\u0121"+
+		"\u0125\u0125\u0002\u0000\u0019\u001b\u001e \u0003\u0000\u0121\u0121\u0125"+
+		"\u0125\u0135\u0135\u0002\u0000\u0123\u0123\u0125\u0125\u0002\u0000\u012b"+
+		"\u012b\u012d\u012d\u0002\u0000\u012b\u012b\u012f\u012f\u0002\u0000!!\u0121"+
+		"\u0121\u0d09\u0000\u0432\u0001\u0000\u0000\u0000\u0002\u0434\u0001\u0000"+
+		"\u0000\u0000\u0004\u0436\u0001\u0000\u0000\u0000\u0006\u0438\u0001\u0000"+
+		"\u0000\u0000\b\u043a\u0001\u0000\u0000\u0000\n\u043c\u0001\u0000\u0000"+
+		"\u0000\f\u043e\u0001\u0000\u0000\u0000\u000e\u0440\u0001\u0000\u0000\u0000"+
+		"\u0010\u0442\u0001\u0000\u0000\u0000\u0012\u0444\u0001\u0000\u0000\u0000"+
+		"\u0014\u0446\u0001\u0000\u0000\u0000\u0016\u0448\u0001\u0000\u0000\u0000"+
+		"\u0018\u044a\u0001\u0000\u0000\u0000\u001a\u044c\u0001\u0000\u0000\u0000"+
+		"\u001c\u044e\u0001\u0000\u0000\u0000\u001e\u0450\u0001\u0000\u0000\u0000"+
+		" \u0452\u0001\u0000\u0000\u0000\"\u0454\u0001\u0000\u0000\u0000$\u0462"+
+		"\u0001\u0000\u0000\u0000&\u0470\u0001\u0000\u0000\u0000(\u0472\u0001\u0000"+
+		"\u0000\u0000*\u0474\u0001\u0000\u0000\u0000,\u0478\u0001\u0000\u0000\u0000"+
+		".\u047f\u0001\u0000\u0000\u00000\u0481\u0001\u0000\u0000\u00002\u0489"+
+		"\u0001\u0000\u0000\u00004\u048b\u0001\u0000\u0000\u00006\u048d\u0001\u0000"+
+		"\u0000\u00008\u0491\u0001\u0000\u0000\u0000:\u049d\u0001\u0000\u0000\u0000"+
+		"<\u049f\u0001\u0000\u0000\u0000>\u04a1\u0001\u0000\u0000\u0000@\u04a3"+
+		"\u0001\u0000\u0000\u0000B\u04a5\u0001\u0000\u0000\u0000D\u04a7\u0001\u0000"+
+		"\u0000\u0000F\u04a9\u0001\u0000\u0000\u0000H\u04ab\u0001\u0000\u0000\u0000"+
+		"J\u04ad\u0001\u0000\u0000\u0000L\u04b1\u0001\u0000\u0000\u0000N\u04b4"+
+		"\u0001\u0000\u0000\u0000P\u04b6\u0001\u0000\u0000\u0000R\u04b8\u0001\u0000"+
+		"\u0000\u0000T\u04ba\u0001\u0000\u0000\u0000V\u04bc\u0001\u0000\u0000\u0000"+
+		"X\u04be\u0001\u0000\u0000\u0000Z\u04c0\u0001\u0000\u0000\u0000\\\u04c2"+
+		"\u0001\u0000\u0000\u0000^\u04c4\u0001\u0000\u0000\u0000`\u04c6\u0001\u0000"+
+		"\u0000\u0000b\u04c8\u0001\u0000\u0000\u0000d\u04d0\u0001\u0000\u0000\u0000"+
+		"f\u04d2\u0001\u0000\u0000\u0000h\u04e2\u0001\u0000\u0000\u0000j\u04e4"+
+		"\u0001\u0000\u0000\u0000l\u04e6\u0001\u0000\u0000\u0000n\u04fd\u0001\u0000"+
+		"\u0000\u0000p\u0556\u0001\u0000\u0000\u0000r\u0599\u0001\u0000\u0000\u0000"+
+		"t\u059b\u0001\u0000\u0000\u0000v\u059d\u0001\u0000\u0000\u0000x\u059f"+
+		"\u0001\u0000\u0000\u0000z\u05a1\u0001\u0000\u0000\u0000|\u05a3\u0001\u0000"+
+		"\u0000\u0000~\u05a5\u0001\u0000\u0000\u0000\u0080\u05a7\u0001\u0000\u0000"+
+		"\u0000\u0082\u05a9\u0001\u0000\u0000\u0000\u0084\u05ab\u0001\u0000\u0000"+
+		"\u0000\u0086\u05ad\u0001\u0000\u0000\u0000\u0088\u05af\u0001\u0000\u0000"+
+		"\u0000\u008a\u05b1\u0001\u0000\u0000\u0000\u008c\u05b3\u0001\u0000\u0000"+
+		"\u0000\u008e\u05b5\u0001\u0000\u0000\u0000\u0090\u05b7\u0001\u0000\u0000"+
+		"\u0000\u0092\u05b9\u0001\u0000\u0000\u0000\u0094\u05bb\u0001\u0000\u0000"+
+		"\u0000\u0096\u05bd\u0001\u0000\u0000\u0000\u0098\u05bf\u0001\u0000\u0000"+
+		"\u0000\u009a\u05c1\u0001\u0000\u0000\u0000\u009c\u05c3\u0001\u0000\u0000"+
+		"\u0000\u009e\u05c5\u0001\u0000\u0000\u0000\u00a0\u05c7\u0001\u0000\u0000"+
+		"\u0000\u00a2\u05c9\u0001\u0000\u0000\u0000\u00a4\u05cb\u0001\u0000\u0000"+
+		"\u0000\u00a6\u05cd\u0001\u0000\u0000\u0000\u00a8\u05cf\u0001\u0000\u0000"+
+		"\u0000\u00aa\u05d1\u0001\u0000\u0000\u0000\u00ac\u05d3\u0001\u0000\u0000"+
+		"\u0000\u00ae\u05d5\u0001\u0000\u0000\u0000\u00b0\u05d7\u0001\u0000\u0000"+
+		"\u0000\u00b2\u05d9\u0001\u0000\u0000\u0000\u00b4\u05db\u0001\u0000\u0000"+
+		"\u0000\u00b6\u05dd\u0001\u0000\u0000\u0000\u00b8\u05df\u0001\u0000\u0000"+
+		"\u0000\u00ba\u05e1\u0001\u0000\u0000\u0000\u00bc\u05e3\u0001\u0000\u0000"+
+		"\u0000\u00be\u05e5\u0001\u0000\u0000\u0000\u00c0\u05e7\u0001\u0000\u0000"+
+		"\u0000\u00c2\u05e9\u0001\u0000\u0000\u0000\u00c4\u05eb\u0001\u0000\u0000"+
+		"\u0000\u00c6\u05ed\u0001\u0000\u0000\u0000\u00c8\u05ef\u0001\u0000\u0000"+
+		"\u0000\u00ca\u05f1\u0001\u0000\u0000\u0000\u00cc\u05f3\u0001\u0000\u0000"+
+		"\u0000\u00ce\u05f5\u0001\u0000\u0000\u0000\u00d0\u05f7\u0001\u0000\u0000"+
+		"\u0000\u00d2\u05f9\u0001\u0000\u0000\u0000\u00d4\u05fb\u0001\u0000\u0000"+
+		"\u0000\u00d6\u05fd\u0001\u0000\u0000\u0000\u00d8\u05ff\u0001\u0000\u0000"+
+		"\u0000\u00da\u0601\u0001\u0000\u0000\u0000\u00dc\u0603\u0001\u0000\u0000"+
+		"\u0000\u00de\u0605\u0001\u0000\u0000\u0000\u00e0\u0607\u0001\u0000\u0000"+
+		"\u0000\u00e2\u0609\u0001\u0000\u0000\u0000\u00e4\u060b\u0001\u0000\u0000"+
+		"\u0000\u00e6\u060d\u0001\u0000\u0000\u0000\u00e8\u060f\u0001\u0000\u0000"+
+		"\u0000\u00ea\u0611\u0001\u0000\u0000\u0000\u00ec\u0613\u0001\u0000\u0000"+
+		"\u0000\u00ee\u0615\u0001\u0000\u0000\u0000\u00f0\u0617\u0001\u0000\u0000"+
+		"\u0000\u00f2\u0619\u0001\u0000\u0000\u0000\u00f4\u061b\u0001\u0000\u0000"+
+		"\u0000\u00f6\u061d\u0001\u0000\u0000\u0000\u00f8\u061f\u0001\u0000\u0000"+
+		"\u0000\u00fa\u0621\u0001\u0000\u0000\u0000\u00fc\u0623\u0001\u0000\u0000"+
+		"\u0000\u00fe\u0625\u0001\u0000\u0000\u0000\u0100\u0627\u0001\u0000\u0000"+
+		"\u0000\u0102\u0629\u0001\u0000\u0000\u0000\u0104\u062b\u0001\u0000\u0000"+
+		"\u0000\u0106\u062d\u0001\u0000\u0000\u0000\u0108\u062f\u0001\u0000\u0000"+
+		"\u0000\u010a\u0631\u0001\u0000\u0000\u0000\u010c\u0633\u0001\u0000\u0000"+
+		"\u0000\u010e\u0635\u0001\u0000\u0000\u0000\u0110\u0637\u0001\u0000\u0000"+
+		"\u0000\u0112\u0639\u0001\u0000\u0000\u0000\u0114\u063b\u0001\u0000\u0000"+
+		"\u0000\u0116\u063d\u0001\u0000\u0000\u0000\u0118\u063f\u0001\u0000\u0000"+
+		"\u0000\u011a\u0641\u0001\u0000\u0000\u0000\u011c\u0643\u0001\u0000\u0000"+
+		"\u0000\u011e\u0645\u0001\u0000\u0000\u0000\u0120\u0647\u0001\u0000\u0000"+
+		"\u0000\u0122\u0649\u0001\u0000\u0000\u0000\u0124\u064b\u0001\u0000\u0000"+
+		"\u0000\u0126\u064d\u0001\u0000\u0000\u0000\u0128\u064f\u0001\u0000\u0000"+
+		"\u0000\u012a\u0651\u0001\u0000\u0000\u0000\u012c\u0653\u0001\u0000\u0000"+
+		"\u0000\u012e\u0655\u0001\u0000\u0000\u0000\u0130\u0657\u0001\u0000\u0000"+
+		"\u0000\u0132\u0659\u0001\u0000\u0000\u0000\u0134\u065b\u0001\u0000\u0000"+
+		"\u0000\u0136\u065d\u0001\u0000\u0000\u0000\u0138\u065f\u0001\u0000\u0000"+
+		"\u0000\u013a\u0661\u0001\u0000\u0000\u0000\u013c\u0663\u0001\u0000\u0000"+
+		"\u0000\u013e\u0665\u0001\u0000\u0000\u0000\u0140\u0667\u0001\u0000\u0000"+
+		"\u0000\u0142\u0669\u0001\u0000\u0000\u0000\u0144\u066b\u0001\u0000\u0000"+
+		"\u0000\u0146\u066d\u0001\u0000\u0000\u0000\u0148\u066f\u0001\u0000\u0000"+
+		"\u0000\u014a\u0671\u0001\u0000\u0000\u0000\u014c\u0673\u0001\u0000\u0000"+
+		"\u0000\u014e\u0675\u0001\u0000\u0000\u0000\u0150\u0677\u0001\u0000\u0000"+
+		"\u0000\u0152\u0679\u0001\u0000\u0000\u0000\u0154\u067b\u0001\u0000\u0000"+
+		"\u0000\u0156\u067d\u0001\u0000\u0000\u0000\u0158\u067f\u0001\u0000\u0000"+
+		"\u0000\u015a\u0681\u0001\u0000\u0000\u0000\u015c\u0683\u0001\u0000\u0000"+
+		"\u0000\u015e\u0685\u0001\u0000\u0000\u0000\u0160\u0687\u0001\u0000\u0000"+
+		"\u0000\u0162\u0689\u0001\u0000\u0000\u0000\u0164\u068b\u0001\u0000\u0000"+
+		"\u0000\u0166\u068d\u0001\u0000\u0000\u0000\u0168\u068f\u0001\u0000\u0000"+
+		"\u0000\u016a\u0691\u0001\u0000\u0000\u0000\u016c\u0693\u0001\u0000\u0000"+
+		"\u0000\u016e\u0695\u0001\u0000\u0000\u0000\u0170\u0697\u0001\u0000\u0000"+
+		"\u0000\u0172\u0699\u0001\u0000\u0000\u0000\u0174\u069b\u0001\u0000\u0000"+
+		"\u0000\u0176\u069d\u0001\u0000\u0000\u0000\u0178\u069f\u0001\u0000\u0000"+
+		"\u0000\u017a\u06a1\u0001\u0000\u0000\u0000\u017c\u06a3\u0001\u0000\u0000"+
+		"\u0000\u017e\u06a5\u0001\u0000\u0000\u0000\u0180\u06a7\u0001\u0000\u0000"+
+		"\u0000\u0182\u06a9\u0001\u0000\u0000\u0000\u0184\u06ab\u0001\u0000\u0000"+
+		"\u0000\u0186\u06ad\u0001\u0000\u0000\u0000\u0188\u06af\u0001\u0000\u0000"+
+		"\u0000\u018a\u06b1\u0001\u0000\u0000\u0000\u018c\u06b3\u0001\u0000\u0000"+
+		"\u0000\u018e\u06b5\u0001\u0000\u0000\u0000\u0190\u06b7\u0001\u0000\u0000"+
+		"\u0000\u0192\u06b9\u0001\u0000\u0000\u0000\u0194\u06bb\u0001\u0000\u0000"+
+		"\u0000\u0196\u06bd\u0001\u0000\u0000\u0000\u0198\u06bf\u0001\u0000\u0000"+
+		"\u0000\u019a\u06c1\u0001\u0000\u0000\u0000\u019c\u06c3\u0001\u0000\u0000"+
+		"\u0000\u019e\u06c5\u0001\u0000\u0000\u0000\u01a0\u06c7\u0001\u0000\u0000"+
+		"\u0000\u01a2\u06c9\u0001\u0000\u0000\u0000\u01a4\u06cb\u0001\u0000\u0000"+
+		"\u0000\u01a6\u06cd\u0001\u0000\u0000\u0000\u01a8\u06cf\u0001\u0000\u0000"+
+		"\u0000\u01aa\u06d1\u0001\u0000\u0000\u0000\u01ac\u06d3\u0001\u0000\u0000"+
+		"\u0000\u01ae\u06d5\u0001\u0000\u0000\u0000\u01b0\u06d7\u0001\u0000\u0000"+
+		"\u0000\u01b2\u06d9\u0001\u0000\u0000\u0000\u01b4\u06db\u0001\u0000\u0000"+
+		"\u0000\u01b6\u06dd\u0001\u0000\u0000\u0000\u01b8\u06df\u0001\u0000\u0000"+
+		"\u0000\u01ba\u06e1\u0001\u0000\u0000\u0000\u01bc\u06e3\u0001\u0000\u0000"+
+		"\u0000\u01be\u06e5\u0001\u0000\u0000\u0000\u01c0\u06e7\u0001\u0000\u0000"+
+		"\u0000\u01c2\u06e9\u0001\u0000\u0000\u0000\u01c4\u06eb\u0001\u0000\u0000"+
+		"\u0000\u01c6\u06ed\u0001\u0000\u0000\u0000\u01c8\u06ef\u0001\u0000\u0000"+
+		"\u0000\u01ca\u06f1\u0001\u0000\u0000\u0000\u01cc\u06f3\u0001\u0000\u0000"+
+		"\u0000\u01ce\u06f5\u0001\u0000\u0000\u0000\u01d0\u06f7\u0001\u0000\u0000"+
+		"\u0000\u01d2\u06f9\u0001\u0000\u0000\u0000\u01d4\u06fb\u0001\u0000\u0000"+
+		"\u0000\u01d6\u06fd\u0001\u0000\u0000\u0000\u01d8\u06ff\u0001\u0000\u0000"+
+		"\u0000\u01da\u0701\u0001\u0000\u0000\u0000\u01dc\u0703\u0001\u0000\u0000"+
+		"\u0000\u01de\u0705\u0001\u0000\u0000\u0000\u01e0\u0707\u0001\u0000\u0000"+
+		"\u0000\u01e2\u0709\u0001\u0000\u0000\u0000\u01e4\u070b\u0001\u0000\u0000"+
+		"\u0000\u01e6\u070d\u0001\u0000\u0000\u0000\u01e8\u070f\u0001\u0000\u0000"+
+		"\u0000\u01ea\u0711\u0001\u0000\u0000\u0000\u01ec\u0713\u0001\u0000\u0000"+
+		"\u0000\u01ee\u0715\u0001\u0000\u0000\u0000\u01f0\u0717\u0001\u0000\u0000"+
+		"\u0000\u01f2\u0719\u0001\u0000\u0000\u0000\u01f4\u071b\u0001\u0000\u0000"+
+		"\u0000\u01f6\u071d\u0001\u0000\u0000\u0000\u01f8\u071f\u0001\u0000\u0000"+
+		"\u0000\u01fa\u0721\u0001\u0000\u0000\u0000\u01fc\u0723\u0001\u0000\u0000"+
+		"\u0000\u01fe\u0725\u0001\u0000\u0000\u0000\u0200\u0727\u0001\u0000\u0000"+
+		"\u0000\u0202\u0729\u0001\u0000\u0000\u0000\u0204\u072b\u0001\u0000\u0000"+
+		"\u0000\u0206\u072d\u0001\u0000\u0000\u0000\u0208\u072f\u0001\u0000\u0000"+
+		"\u0000\u020a\u0731\u0001\u0000\u0000\u0000\u020c\u0733\u0001\u0000\u0000"+
+		"\u0000\u020e\u0735\u0001\u0000\u0000\u0000\u0210\u0737\u0001\u0000\u0000"+
+		"\u0000\u0212\u0739\u0001\u0000\u0000\u0000\u0214\u073b\u0001\u0000\u0000"+
+		"\u0000\u0216\u073d\u0001\u0000\u0000\u0000\u0218\u073f\u0001\u0000\u0000"+
+		"\u0000\u021a\u0741\u0001\u0000\u0000\u0000\u021c\u0743\u0001\u0000\u0000"+
+		"\u0000\u021e\u0745\u0001\u0000\u0000\u0000\u0220\u0747\u0001\u0000\u0000"+
+		"\u0000\u0222\u0749\u0001\u0000\u0000\u0000\u0224\u074b\u0001\u0000\u0000"+
+		"\u0000\u0226\u074d\u0001\u0000\u0000\u0000\u0228\u074f\u0001\u0000\u0000"+
+		"\u0000\u022a\u0751\u0001\u0000\u0000\u0000\u022c\u0753\u0001\u0000\u0000"+
+		"\u0000\u022e\u0755\u0001\u0000\u0000\u0000\u0230\u0757\u0001\u0000\u0000"+
+		"\u0000\u0232\u0759\u0001\u0000\u0000\u0000\u0234\u075b\u0001\u0000\u0000"+
+		"\u0000\u0236\u075d\u0001\u0000\u0000\u0000\u0238\u075f\u0001\u0000\u0000"+
+		"\u0000\u023a\u0761\u0001\u0000\u0000\u0000\u023c\u0763\u0001\u0000\u0000"+
+		"\u0000\u023e\u0765\u0001\u0000\u0000\u0000\u0240\u0767\u0001\u0000\u0000"+
+		"\u0000\u0242\u0769\u0001\u0000\u0000\u0000\u0244\u076b\u0001\u0000\u0000"+
+		"\u0000\u0246\u076d\u0001\u0000\u0000\u0000\u0248\u076f\u0001\u0000\u0000"+
+		"\u0000\u024a\u0771\u0001\u0000\u0000\u0000\u024c\u0773\u0001\u0000\u0000"+
+		"\u0000\u024e\u0775\u0001\u0000\u0000\u0000\u0250\u0777\u0001\u0000\u0000"+
+		"\u0000\u0252\u0779\u0001\u0000\u0000\u0000\u0254\u077b\u0001\u0000\u0000"+
+		"\u0000\u0256\u077d\u0001\u0000\u0000\u0000\u0258\u077f\u0001\u0000\u0000"+
+		"\u0000\u025a\u0781\u0001\u0000\u0000\u0000\u025c\u0783\u0001\u0000\u0000"+
+		"\u0000\u025e\u0785\u0001\u0000\u0000\u0000\u0260\u0787\u0001\u0000\u0000"+
+		"\u0000\u0262\u0789\u0001\u0000\u0000\u0000\u0264\u078b\u0001\u0000\u0000"+
+		"\u0000\u0266\u078d\u0001\u0000\u0000\u0000\u0268\u078f\u0001\u0000\u0000"+
+		"\u0000\u026a\u0791\u0001\u0000\u0000\u0000\u026c\u0793\u0001\u0000\u0000"+
+		"\u0000\u026e\u0795\u0001\u0000\u0000\u0000\u0270\u0797\u0001\u0000\u0000"+
+		"\u0000\u0272\u0799\u0001\u0000\u0000\u0000\u0274\u07a1\u0001\u0000\u0000"+
+		"\u0000\u0276\u07a3\u0001\u0000\u0000\u0000\u0278\u07ba\u0001\u0000\u0000"+
+		"\u0000\u027a\u07cb\u0001\u0000\u0000\u0000\u027c\u07cd\u0001\u0000\u0000"+
+		"\u0000\u027e\u07dc\u0001\u0000\u0000\u0000\u0280\u07e0\u0001\u0000\u0000"+
+		"\u0000\u0282\u07f0\u0001\u0000\u0000\u0000\u0284\u07f5\u0001\u0000\u0000"+
+		"\u0000\u0286\u07f7\u0001\u0000\u0000\u0000\u0288\u07fa\u0001\u0000\u0000"+
+		"\u0000\u028a\u07fc\u0001\u0000\u0000\u0000\u028c\u080e\u0001\u0000\u0000"+
+		"\u0000\u028e\u0810\u0001\u0000\u0000\u0000\u0290\u0812\u0001\u0000\u0000"+
+		"\u0000\u0292\u0818\u0001\u0000\u0000\u0000\u0294\u082f\u0001\u0000\u0000"+
+		"\u0000\u0296\u0831\u0001\u0000\u0000\u0000\u0298\u083b\u0001\u0000\u0000"+
+		"\u0000\u029a\u083d\u0001\u0000\u0000\u0000\u029c\u0846\u0001\u0000\u0000"+
+		"\u0000\u029e\u084b\u0001\u0000\u0000\u0000\u02a0\u084f\u0001\u0000\u0000"+
+		"\u0000\u02a2\u0856\u0001\u0000\u0000\u0000\u02a4\u085a\u0001\u0000\u0000"+
+		"\u0000\u02a6\u0865\u0001\u0000\u0000\u0000\u02a8\u086d\u0001\u0000\u0000"+
+		"\u0000\u02aa\u086f\u0001\u0000\u0000\u0000\u02ac\u0875\u0001\u0000\u0000"+
+		"\u0000\u02ae\u087f\u0001\u0000\u0000\u0000\u02b0\u0881\u0001\u0000\u0000"+
+		"\u0000\u02b2\u0884\u0001\u0000\u0000\u0000\u02b4\u0886\u0001\u0000\u0000"+
+		"\u0000\u02b6\u0888\u0001\u0000\u0000\u0000\u02b8\u0890\u0001\u0000\u0000"+
+		"\u0000\u02ba\u08a4\u0001\u0000\u0000\u0000\u02bc\u08b5\u0001\u0000\u0000"+
+		"\u0000\u02be\u08c3\u0001\u0000\u0000\u0000\u02c0\u08d7\u0001\u0000\u0000"+
+		"\u0000\u02c2\u08e5\u0001\u0000\u0000\u0000\u02c4\u08f0\u0001\u0000\u0000"+
+		"\u0000\u02c6\u0902\u0001\u0000\u0000\u0000\u02c8\u0913\u0001\u0000\u0000"+
+		"\u0000\u02ca\u0921\u0001\u0000\u0000\u0000\u02cc\u0923\u0001\u0000\u0000"+
+		"\u0000\u02ce\u0928\u0001\u0000\u0000\u0000\u02d0\u092a\u0001\u0000\u0000"+
+		"\u0000\u02d2\u0934\u0001\u0000\u0000\u0000\u02d4\u0940\u0001\u0000\u0000"+
+		"\u0000\u02d6\u0942\u0001\u0000\u0000\u0000\u02d8\u094a\u0001\u0000\u0000"+
+		"\u0000\u02da\u094c\u0001\u0000\u0000\u0000\u02dc\u094f\u0001\u0000\u0000"+
+		"\u0000\u02de\u0956\u0001\u0000\u0000\u0000\u02e0\u0958\u0001\u0000\u0000"+
+		"\u0000\u02e2\u096d\u0001\u0000\u0000\u0000\u02e4\u096f\u0001\u0000\u0000"+
+		"\u0000\u02e6\u0971\u0001\u0000\u0000\u0000\u02e8\u0973\u0001\u0000\u0000"+
+		"\u0000\u02ea\u0975\u0001\u0000\u0000\u0000\u02ec\u0977\u0001\u0000\u0000"+
+		"\u0000\u02ee\u0979\u0001\u0000\u0000\u0000\u02f0\u097e\u0001\u0000\u0000"+
+		"\u0000\u02f2\u0980\u0001\u0000\u0000\u0000\u02f4\u0982\u0001\u0000\u0000"+
+		"\u0000\u02f6\u0987\u0001\u0000\u0000\u0000\u02f8\u0989\u0001\u0000\u0000"+
+		"\u0000\u02fa\u098d\u0001\u0000\u0000\u0000\u02fc\u0991\u0001\u0000\u0000"+
+		"\u0000\u02fe\u09a2\u0001\u0000\u0000\u0000\u0300\u09d1\u0001\u0000\u0000"+
+		"\u0000\u0302\u09e2\u0001\u0000\u0000\u0000\u0304\u09ec\u0001\u0000\u0000"+
+		"\u0000\u0306\u09f2\u0001\u0000\u0000\u0000\u0308\u09fa\u0001\u0000\u0000"+
+		"\u0000\u030a\u0a16\u0001\u0000\u0000\u0000\u030c\u0a1a\u0001\u0000\u0000"+
+		"\u0000\u030e\u0a26\u0001\u0000\u0000\u0000\u0310\u0a61\u0001\u0000\u0000"+
+		"\u0000\u0312\u0a63\u0001\u0000\u0000\u0000\u0314\u0a66\u0001\u0000\u0000"+
+		"\u0000\u0316\u0a6a\u0001\u0000\u0000\u0000\u0318\u0a78\u0001\u0000\u0000"+
+		"\u0000\u031a\u0a7a\u0001\u0000\u0000\u0000\u031c\u0a89\u0001\u0000\u0000"+
+		"\u0000\u031e\u0a8b\u0001\u0000\u0000\u0000\u0320\u0a91\u0001\u0000\u0000"+
+		"\u0000\u0322\u0a94\u0001\u0000\u0000\u0000\u0324\u0a9b\u0001\u0000\u0000"+
+		"\u0000\u0326\u0aa7\u0001\u0000\u0000\u0000\u0328\u0aa9\u0001\u0000\u0000"+
+		"\u0000\u032a\u0aac\u0001\u0000\u0000\u0000\u032c\u0ab1\u0001\u0000\u0000"+
+		"\u0000\u032e\u0ab5\u0001\u0000\u0000\u0000\u0330\u0ab7\u0001\u0000\u0000"+
+		"\u0000\u0332\u0ab9\u0001\u0000\u0000\u0000\u0334\u0abe\u0001\u0000\u0000"+
+		"\u0000\u0336\u0ac1\u0001\u0000\u0000\u0000\u0338\u0ac3\u0001\u0000\u0000"+
+		"\u0000\u033a\u0ac6\u0001\u0000\u0000\u0000\u033c\u0ac8\u0001\u0000\u0000"+
+		"\u0000\u033e\u0ad0\u0001\u0000\u0000\u0000\u0340\u0ad9\u0001\u0000\u0000"+
+		"\u0000\u0342\u0ae5\u0001\u0000\u0000\u0000\u0344\u0af1\u0001\u0000\u0000"+
+		"\u0000\u0346\u0af3\u0001\u0000\u0000\u0000\u0348\u0af8\u0001\u0000\u0000"+
+		"\u0000\u034a\u0afa\u0001\u0000\u0000\u0000\u034c\u0afe\u0001\u0000\u0000"+
+		"\u0000\u034e\u0b00\u0001\u0000\u0000\u0000\u0350\u0b03\u0001\u0000\u0000"+
+		"\u0000\u0352\u0b06\u0001\u0000\u0000\u0000\u0354\u0b09\u0001\u0000\u0000"+
+		"\u0000\u0356\u0b0b\u0001\u0000\u0000\u0000\u0358\u0b16\u0001\u0000\u0000"+
+		"\u0000\u035a\u0b18\u0001\u0000\u0000\u0000\u035c\u0b1b\u0001\u0000\u0000"+
+		"\u0000\u035e\u0b20\u0001\u0000\u0000\u0000\u0360\u0b31\u0001\u0000\u0000"+
+		"\u0000\u0362\u0b3d\u0001\u0000\u0000\u0000\u0364\u0b4e\u0001\u0000\u0000"+
+		"\u0000\u0366\u0b50\u0001\u0000\u0000\u0000\u0368\u0b53\u0001\u0000\u0000"+
+		"\u0000\u036a\u0b55\u0001\u0000\u0000\u0000\u036c\u0b5a\u0001\u0000\u0000"+
+		"\u0000\u036e\u0b5c\u0001\u0000\u0000\u0000\u0370\u0b6e\u0001\u0000\u0000"+
+		"\u0000\u0372\u0b70\u0001\u0000\u0000\u0000\u0374\u0b72\u0001\u0000\u0000"+
+		"\u0000\u0376\u0b78\u0001\u0000\u0000\u0000\u0378\u0b7c\u0001\u0000\u0000"+
+		"\u0000\u037a\u0b81\u0001\u0000\u0000\u0000\u037c\u0b83\u0001\u0000\u0000"+
+		"\u0000\u037e\u0b86\u0001\u0000\u0000\u0000\u0380\u0b88\u0001\u0000\u0000"+
+		"\u0000\u0382\u0b8a\u0001\u0000\u0000\u0000\u0384\u0b8c\u0001\u0000\u0000"+
+		"\u0000\u0386\u0ba3\u0001\u0000\u0000\u0000\u0388\u0ba8\u0001\u0000\u0000"+
+		"\u0000\u038a\u0bae\u0001\u0000\u0000\u0000\u038c\u0bb2\u0001\u0000\u0000"+
+		"\u0000\u038e\u0bbb\u0001\u0000\u0000\u0000\u0390\u0bbd\u0001\u0000\u0000"+
+		"\u0000\u0392\u0bbf\u0001\u0000\u0000\u0000\u0394\u0bca\u0001\u0000\u0000"+
+		"\u0000\u0396\u0bcc\u0001\u0000\u0000\u0000\u0398\u0bd1\u0001\u0000\u0000"+
+		"\u0000\u039a\u0bd3\u0001\u0000\u0000\u0000\u039c\u0bd8\u0001\u0000\u0000"+
+		"\u0000\u039e\u0bdc\u0001\u0000\u0000\u0000\u03a0\u0bde\u0001\u0000\u0000"+
+		"\u0000\u03a2\u0be0\u0001\u0000\u0000\u0000\u03a4\u0be3\u0001\u0000\u0000"+
+		"\u0000\u03a6\u0beb\u0001\u0000\u0000\u0000\u03a8\u0bed\u0001\u0000\u0000"+
+		"\u0000\u03aa\u0bf0\u0001\u0000\u0000\u0000\u03ac\u0bf2\u0001\u0000\u0000"+
+		"\u0000\u03ae\u0bf5\u0001\u0000\u0000\u0000\u03b0\u0bf9\u0001\u0000\u0000"+
+		"\u0000\u03b2\u0c03\u0001\u0000\u0000\u0000\u03b4\u0c05\u0001\u0000\u0000"+
+		"\u0000\u03b6\u0c0e\u0001\u0000\u0000\u0000\u03b8\u0c10\u0001\u0000\u0000"+
+		"\u0000\u03ba\u0c12\u0001\u0000\u0000\u0000\u03bc\u0c16\u0001\u0000\u0000"+
+		"\u0000\u03be\u0c21\u0001\u0000\u0000\u0000\u03c0\u0c23\u0001\u0000\u0000"+
+		"\u0000\u03c2\u0c3c\u0001\u0000\u0000\u0000\u03c4\u0c63\u0001\u0000\u0000"+
+		"\u0000\u03c6\u0c65\u0001\u0000\u0000\u0000\u03c8\u0c67\u0001\u0000\u0000"+
+		"\u0000\u03ca\u0c6f\u0001\u0000\u0000\u0000\u03cc\u0c71\u0001\u0000\u0000"+
+		"\u0000\u03ce\u0c75\u0001\u0000\u0000\u0000\u03d0\u0c7a\u0001\u0000\u0000"+
+		"\u0000\u03d2\u0c7e\u0001\u0000\u0000\u0000\u03d4\u0c8c\u0001\u0000\u0000"+
+		"\u0000\u03d6\u0c8e\u0001\u0000\u0000\u0000\u03d8\u0c90\u0001\u0000\u0000"+
+		"\u0000\u03da\u0c92\u0001\u0000\u0000\u0000\u03dc\u0c94\u0001\u0000\u0000"+
+		"\u0000\u03de\u0c99\u0001\u0000\u0000\u0000\u03e0\u0ca6\u0001\u0000\u0000"+
+		"\u0000\u03e2\u0ca8\u0001\u0000\u0000\u0000\u03e4\u0cad\u0001\u0000\u0000"+
+		"\u0000\u03e6\u0cb8\u0001\u0000\u0000\u0000\u03e8\u0cba\u0001\u0000\u0000"+
+		"\u0000\u03ea\u0cbc\u0001\u0000\u0000\u0000\u03ec\u0cbf\u0001\u0000\u0000"+
+		"\u0000\u03ee\u0cc1\u0001\u0000\u0000\u0000\u03f0\u0cc7\u0001\u0000\u0000"+
+		"\u0000\u03f2\u0cc9\u0001\u0000\u0000\u0000\u03f4\u0ccf\u0001\u0000\u0000"+
+		"\u0000\u03f6\u0cea\u0001\u0000\u0000\u0000\u03f8\u0d07\u0001\u0000\u0000"+
+		"\u0000\u03fa\u0d09\u0001\u0000\u0000\u0000\u03fc\u0d0c\u0001\u0000\u0000"+
+		"\u0000\u03fe\u0d0e\u0001\u0000\u0000\u0000\u0400\u0d13\u0001\u0000\u0000"+
+		"\u0000\u0402\u0d26\u0001\u0000\u0000\u0000\u0404\u0d28\u0001\u0000\u0000"+
+		"\u0000\u0406\u0d2c\u0001\u0000\u0000\u0000\u0408\u0d2e\u0001\u0000\u0000"+
+		"\u0000\u040a\u0d32\u0001\u0000\u0000\u0000\u040c\u0d38\u0001\u0000\u0000"+
+		"\u0000\u040e\u0d3e\u0001\u0000\u0000\u0000\u0410\u0d4c\u0001\u0000\u0000"+
+		"\u0000\u0412\u0d4e\u0001\u0000\u0000\u0000\u0414\u0d62\u0001\u0000\u0000"+
+		"\u0000\u0416\u0d64\u0001\u0000\u0000\u0000\u0418\u0d66\u0001\u0000\u0000"+
+		"\u0000\u041a\u0d69\u0001\u0000\u0000\u0000\u041c\u0d6b\u0001\u0000\u0000"+
+		"\u0000\u041e\u0d6e\u0001\u0000\u0000\u0000\u0420\u0d73\u0001\u0000\u0000"+
+		"\u0000\u0422\u0d77\u0001\u0000\u0000\u0000\u0424\u0d79\u0001\u0000\u0000"+
+		"\u0000\u0426\u0d80\u0001\u0000\u0000\u0000\u0428\u0d82\u0001\u0000\u0000"+
+		"\u0000\u042a\u0d99\u0001\u0000\u0000\u0000\u042c\u0d9d\u0001\u0000\u0000"+
+		"\u0000\u042e\u0da1\u0001\u0000\u0000\u0000\u0430\u0da3\u0001\u0000\u0000"+
+		"\u0000\u0432\u0433\u0005\u0004\u0000\u0000\u0433\u0001\u0001\u0000\u0000"+
+		"\u0000\u0434\u0435\u0005\u0005\u0000\u0000\u0435\u0003\u0001\u0000\u0000"+
+		"\u0000\u0436\u0437\u0005\u0006\u0000\u0000\u0437\u0005\u0001\u0000\u0000"+
+		"\u0000\u0438\u0439\u0005\f\u0000\u0000\u0439\u0007\u0001\u0000\u0000\u0000"+
+		"\u043a\u043b\u0005\r\u0000\u0000\u043b\t\u0001\u0000\u0000\u0000\u043c"+
+		"\u043d\u0005\u0012\u0000\u0000\u043d\u000b\u0001\u0000\u0000\u0000\u043e"+
+		"\u043f\u0005\u0013\u0000\u0000\u043f\r\u0001\u0000\u0000\u0000\u0440\u0441"+
+		"\u0005\u012f\u0000\u0000\u0441\u000f\u0001\u0000\u0000\u0000\u0442\u0443"+
+		"\u0005\u012f\u0000\u0000\u0443\u0011\u0001\u0000\u0000\u0000\u0444\u0445"+
+		"\u0005\u0121\u0000\u0000\u0445\u0013\u0001\u0000\u0000\u0000\u0446\u0447"+
+		"\u0005\u0122\u0000\u0000\u0447\u0015\u0001\u0000\u0000\u0000\u0448\u0449"+
+		"\u0007\u0000\u0000\u0000\u0449\u0017\u0001\u0000\u0000\u0000\u044a\u044b"+
+		"\u0005\u0128\u0000\u0000\u044b\u0019\u0001\u0000\u0000\u0000\u044c\u044d"+
+		"\u0005\u012f\u0000\u0000\u044d\u001b\u0001\u0000\u0000\u0000\u044e\u044f"+
+		"\u0005!\u0000\u0000\u044f\u001d\u0001\u0000\u0000\u0000\u0450\u0451\u0005"+
+		"\u012d\u0000\u0000\u0451\u001f\u0001\u0000\u0000\u0000\u0452\u0453\u0003"+
+		",\u0016\u0000\u0453!\u0001\u0000\u0000\u0000\u0454\u0455\u0005\u0120\u0000"+
+		"\u0000\u0455#\u0001\u0000\u0000\u0000\u0456\u0463\u0005\u0011\u0000\u0000"+
+		"\u0457\u0458\u0005\u0012\u0000\u0000\u0458\u045d\u0003*\u0015\u0000\u0459"+
+		"\u045a\u0005\u0007\u0000\u0000\u045a\u045c\u0003*\u0015\u0000\u045b\u0459"+
+		"\u0001\u0000\u0000\u0000\u045c\u045f\u0001\u0000\u0000\u0000\u045d\u045b"+
+		"\u0001\u0000\u0000\u0000\u045d\u045e\u0001\u0000\u0000\u0000\u045e\u0460"+
+		"\u0001\u0000\u0000\u0000\u045f\u045d\u0001\u0000\u0000\u0000\u0460\u0461"+
+		"\u0005\u0013\u0000\u0000\u0461\u0463\u0001\u0000\u0000\u0000\u0462\u0456"+
+		"\u0001\u0000\u0000\u0000\u0462\u0457\u0001\u0000\u0000\u0000\u0463%\u0001"+
+		"\u0000\u0000\u0000\u0464\u0471\u0005\u000b\u0000\u0000\u0465\u0466\u0005"+
+		"\f\u0000\u0000\u0466\u046b\u0003.\u0017\u0000\u0467\u0468\u0005\u0007"+
+		"\u0000\u0000\u0468\u046a\u0003.\u0017\u0000\u0469\u0467\u0001\u0000\u0000"+
+		"\u0000\u046a\u046d\u0001\u0000\u0000\u0000\u046b\u0469\u0001\u0000\u0000"+
+		"\u0000\u046b\u046c\u0001\u0000\u0000\u0000\u046c\u046e\u0001\u0000\u0000"+
+		"\u0000\u046d\u046b\u0001\u0000\u0000\u0000\u046e\u046f\u0005\r\u0000\u0000"+
+		"\u046f\u0471\u0001\u0000\u0000\u0000\u0470\u0464\u0001\u0000\u0000\u0000"+
+		"\u0470\u0465\u0001\u0000\u0000\u0000\u0471\'\u0001\u0000\u0000\u0000\u0472"+
+		"\u0473\u0005\u012b\u0000\u0000\u0473)\u0001\u0000\u0000\u0000\u0474\u0475"+
+		"\u0003(\u0014\u0000\u0475\u0476\u0005\t\u0000\u0000\u0476\u0477\u0003"+
+		".\u0017\u0000\u0477+\u0001\u0000\u0000\u0000\u0478\u0479\u0003$\u0012"+
+		"\u0000\u0479-\u0001\u0000\u0000\u0000\u047a\u0480\u0003\u001e\u000f\u0000"+
+		"\u047b\u0480\u0005\u0125\u0000\u0000\u047c\u0480\u0003$\u0012\u0000\u047d"+
+		"\u0480\u0003&\u0013\u0000\u047e\u0480\u0003\u001c\u000e\u0000\u047f\u047a"+
+		"\u0001\u0000\u0000\u0000\u047f\u047b\u0001\u0000\u0000\u0000\u047f\u047c"+
+		"\u0001\u0000\u0000\u0000\u047f\u047d\u0001\u0000\u0000\u0000\u047f\u047e"+
+		"\u0001\u0000\u0000\u0000\u0480/\u0001\u0000\u0000\u0000\u0481\u0486\u0005"+
+		"\u012b\u0000\u0000\u0482\u0483\u0005\b\u0000\u0000\u0483\u0485\u0005\u012b"+
+		"\u0000\u0000\u0484\u0482\u0001\u0000\u0000\u0000\u0485\u0488\u0001\u0000"+
+		"\u0000\u0000\u0486\u0484\u0001\u0000\u0000\u0000\u0486\u0487\u0001\u0000"+
+		"\u0000\u0000\u04871\u0001\u0000\u0000\u0000\u0488\u0486\u0001\u0000\u0000"+
+		"\u0000\u0489\u048a\u0007\u0001\u0000\u0000\u048a3\u0001\u0000\u0000\u0000"+
+		"\u048b\u048c\u0005\u012f\u0000\u0000\u048c5\u0001\u0000\u0000\u0000\u048d"+
+		"\u048e\u0005\u0130\u0000\u0000\u048e\u048f\u0003\u0118\u008c\u0000\u048f"+
+		"\u0490\u0005\u0131\u0000\u0000\u04907\u0001\u0000\u0000\u0000\u0491\u0492"+
+		"\u0005\u012b\u0000\u0000\u0492\u0493\u0003\u0006\u0003\u0000\u0493\u0498"+
+		"\u00036\u001b\u0000\u0494\u0495\u0005\u0007\u0000\u0000\u0495\u0497\u0003"+
+		"6\u001b\u0000\u0496\u0494\u0001\u0000\u0000\u0000\u0497\u049a\u0001\u0000"+
+		"\u0000\u0000\u0498\u0496\u0001\u0000\u0000\u0000\u0498\u0499\u0001\u0000"+
+		"\u0000\u0000\u0499\u049b\u0001\u0000\u0000\u0000\u049a\u0498\u0001\u0000"+
+		"\u0000\u0000\u049b\u049c\u0003\b\u0004\u0000\u049c9\u0001\u0000\u0000"+
+		"\u0000\u049d\u049e\u0003,\u0016\u0000\u049e;\u0001\u0000\u0000\u0000\u049f"+
+		"\u04a0\u0003,\u0016\u0000\u04a0=\u0001\u0000\u0000\u0000\u04a1\u04a2\u0005"+
+		"\u012b\u0000\u0000\u04a2?\u0001\u0000\u0000\u0000\u04a3\u04a4\u0005\u012b"+
+		"\u0000\u0000\u04a4A\u0001\u0000\u0000\u0000\u04a5\u04a6\u0005\u012b\u0000"+
+		"\u0000\u04a6C\u0001\u0000\u0000\u0000\u04a7\u04a8\u0007\u0002\u0000\u0000"+
+		"\u04a8E\u0001\u0000\u0000\u0000\u04a9\u04aa\u0007\u0002\u0000\u0000\u04aa"+
+		"G\u0001\u0000\u0000\u0000\u04ab\u04ac\u0007\u0002\u0000\u0000\u04acI\u0001"+
+		"\u0000\u0000\u0000\u04ad\u04ae\u0003D\"\u0000\u04ae\u04af\u0003F#\u0000"+
+		"\u04af\u04b0\u0003H$\u0000\u04b0K\u0001\u0000\u0000\u0000\u04b1\u04b2"+
+		"\u0003D\"\u0000\u04b2\u04b3\u0003H$\u0000\u04b3M\u0001\u0000\u0000\u0000"+
+		"\u04b4\u04b5\u0005\u012b\u0000\u0000\u04b5O\u0001\u0000\u0000\u0000\u04b6"+
+		"\u04b7\u0005\u012b\u0000\u0000\u04b7Q\u0001\u0000\u0000\u0000\u04b8\u04b9"+
+		"\u0005\u012b\u0000\u0000\u04b9S\u0001\u0000\u0000\u0000\u04ba\u04bb\u0007"+
+		"\u0003\u0000\u0000\u04bbU\u0001\u0000\u0000\u0000\u04bc\u04bd\u0005\u0126"+
+		"\u0000\u0000\u04bdW\u0001\u0000\u0000\u0000\u04be\u04bf\u0005\u0123\u0000"+
+		"\u0000\u04bfY\u0001\u0000\u0000\u0000\u04c0\u04c1\u0005\u0124\u0000\u0000"+
+		"\u04c1[\u0001\u0000\u0000\u0000\u04c2\u04c3\u0005\u0121\u0000\u0000\u04c3"+
+		"]\u0001\u0000\u0000\u0000\u04c4\u04c5\u0007\u0004\u0000\u0000\u04c5_\u0001"+
+		"\u0000\u0000\u0000\u04c6\u04c7\u0007\u0005\u0000\u0000\u04c7a\u0001\u0000"+
+		"\u0000\u0000\u04c8\u04c9\u0005\u012f\u0000\u0000\u04c9c\u0001\u0000\u0000"+
+		"\u0000\u04ca\u04d1\u0003R)\u0000\u04cb\u04cc\u0003\u0000\u0000\u0000\u04cc"+
+		"\u04ce\u0003f3\u0000\u04cd\u04cf\u0003h4\u0000\u04ce\u04cd\u0001\u0000"+
+		"\u0000\u0000\u04ce\u04cf\u0001\u0000\u0000\u0000\u04cf\u04d1\u0001\u0000"+
+		"\u0000\u0000\u04d0\u04ca\u0001\u0000\u0000\u0000\u04d0\u04cb\u0001\u0000"+
+		"\u0000\u0000\u04d1e\u0001\u0000\u0000\u0000\u04d2\u04d3\u0005\"\u0000"+
+		"\u0000\u04d3g\u0001\u0000\u0000\u0000\u04d4\u04e3\u0005\u000b\u0000\u0000"+
+		"\u04d5\u04de\u0003\u0006\u0003\u0000\u04d6\u04db\u0003p8\u0000\u04d7\u04d8"+
+		"\u0005\u0007\u0000\u0000\u04d8\u04da\u0003p8\u0000\u04d9\u04d7\u0001\u0000"+
+		"\u0000\u0000\u04da\u04dd\u0001\u0000\u0000\u0000\u04db\u04d9\u0001\u0000"+
+		"\u0000\u0000\u04db\u04dc\u0001\u0000\u0000\u0000\u04dc\u04df\u0001\u0000"+
+		"\u0000\u0000\u04dd\u04db\u0001\u0000\u0000\u0000\u04de\u04d6\u0001\u0000"+
+		"\u0000\u0000\u04de\u04df\u0001\u0000\u0000\u0000\u04df\u04e0\u0001\u0000"+
+		"\u0000\u0000\u04e0\u04e1\u0003\b\u0004\u0000\u04e1\u04e3\u0001\u0000\u0000"+
+		"\u0000\u04e2\u04d4\u0001\u0000\u0000\u0000\u04e2\u04d5\u0001\u0000\u0000"+
+		"\u0000\u04e3i\u0001\u0000\u0000\u0000\u04e4\u04e5\u0005\u012b\u0000\u0000"+
+		"\u04e5k\u0001\u0000\u0000\u0000\u04e6\u04e7\u0003j5\u0000\u04e7\u04e9"+
+		"\u0003\u0118\u008c\u0000\u04e8\u04ea\u0003\u0004\u0002\u0000\u04e9\u04e8"+
+		"\u0001\u0000\u0000\u0000\u04e9\u04ea\u0001\u0000\u0000\u0000\u04ea\u04ed"+
+		"\u0001\u0000\u0000\u0000\u04eb\u04ee\u0003\u0012\t\u0000\u04ec\u04ee\u0003"+
+		"\u0014\n\u0000\u04ed\u04eb\u0001\u0000\u0000\u0000\u04ed\u04ec\u0001\u0000"+
+		"\u0000\u0000\u04eem\u0001\u0000\u0000\u0000\u04ef\u04fe\u0005\u0011\u0000"+
+		"\u0000\u04f0\u04f9\u0003\n\u0005\u0000\u04f1\u04f6\u0003l6\u0000\u04f2"+
+		"\u04f3\u0005\u0007\u0000\u0000\u04f3\u04f5\u0003l6\u0000\u04f4\u04f2\u0001"+
+		"\u0000\u0000\u0000\u04f5\u04f8\u0001\u0000\u0000\u0000\u04f6\u04f4\u0001"+
+		"\u0000\u0000\u0000\u04f6\u04f7\u0001\u0000\u0000\u0000\u04f7\u04fa\u0001"+
+		"\u0000\u0000\u0000\u04f8\u04f6\u0001\u0000\u0000\u0000\u04f9\u04f1\u0001"+
+		"\u0000\u0000\u0000\u04f9\u04fa\u0001\u0000\u0000\u0000\u04fa\u04fb\u0001"+
+		"\u0000\u0000\u0000\u04fb\u04fc\u0003\f\u0006\u0000\u04fc\u04fe\u0001\u0000"+
+		"\u0000\u0000\u04fd\u04ef\u0001\u0000\u0000\u0000\u04fd\u04f0\u0001\u0000"+
+		"\u0000\u0000\u04feo\u0001\u0000\u0000\u0000\u04ff\u0500\u0003t:\u0000"+
+		"\u0500\u0501\u0003\u0118\u008c\u0000\u0501\u0502\u0003\u0016\u000b\u0000"+
+		"\u0502\u0557\u0001\u0000\u0000\u0000\u0503\u0504\u0003\u00fa}\u0000\u0504"+
+		"\u0505\u0003\u0118\u008c\u0000\u0505\u0506\u0003X,\u0000\u0506\u0557\u0001"+
+		"\u0000\u0000\u0000\u0507\u0508\u0003\u00fc~\u0000\u0508\u050b\u0003\u0118"+
+		"\u008c\u0000\u0509\u050c\u0003T*\u0000\u050a\u050c\u0003V+\u0000\u050b"+
+		"\u0509\u0001\u0000\u0000\u0000\u050b\u050a\u0001\u0000\u0000\u0000\u050c"+
+		"\u0557\u0001\u0000\u0000\u0000\u050d\u050e\u0003\u025c\u012e\u0000\u050e"+
+		"\u0511\u0003\u0118\u008c\u0000\u050f\u0512\u0003X,\u0000\u0510\u0512\u0003"+
+		"Z-\u0000\u0511\u050f\u0001\u0000\u0000\u0000\u0511\u0510\u0001\u0000\u0000"+
+		"\u0000\u0512\u0557\u0001\u0000\u0000\u0000\u0513\u0514\u0003\u00fe\u007f"+
+		"\u0000\u0514\u0517\u0003\u0118\u008c\u0000\u0515\u0518\u0003\\.\u0000"+
+		"\u0516\u0518\u0003\u0014\n\u0000\u0517\u0515\u0001\u0000\u0000\u0000\u0517"+
+		"\u0516\u0001\u0000\u0000\u0000\u0518\u0557\u0001\u0000\u0000\u0000\u0519"+
+		"\u051a\u0003\u009eO\u0000\u051a\u051c\u0003\u0118\u008c\u0000\u051b\u051d"+
+		"\u0003\u0004\u0002\u0000\u051c\u051b\u0001\u0000\u0000\u0000\u051c\u051d"+
+		"\u0001\u0000\u0000\u0000\u051d\u051e\u0001\u0000\u0000\u0000\u051e\u051f"+
+		"\u0003N\'\u0000\u051f\u0557\u0001\u0000\u0000\u0000\u0520\u0521\u0003"+
+		"x<\u0000\u0521\u0522\u0003\u0118\u008c\u0000\u0522\u0523\u0003\u0278\u013c"+
+		"\u0000\u0523\u0557\u0001\u0000\u0000\u0000\u0524\u0525\u0003\u0100\u0080"+
+		"\u0000\u0525\u0526\u0003\u0118\u008c\u0000\u0526\u0527\u0003n7\u0000\u0527"+
+		"\u0557\u0001\u0000\u0000\u0000\u0528\u0529\u0003\u0102\u0081\u0000\u0529"+
+		"\u052a\u0003\u0118\u008c\u0000\u052a\u052b\u0003\u0012\t\u0000\u052b\u0557"+
+		"\u0001\u0000\u0000\u0000\u052c\u052d\u0003\u00e0p\u0000\u052d\u052f\u0003"+
+		"\u0118\u008c\u0000\u052e\u0530\u0003\u0004\u0002\u0000\u052f\u052e\u0001"+
+		"\u0000\u0000\u0000\u052f\u0530\u0001\u0000\u0000\u0000\u0530\u0532\u0001"+
+		"\u0000\u0000\u0000\u0531\u0533\u0003\u03ee\u01f7\u0000\u0532\u0531\u0001"+
+		"\u0000\u0000\u0000\u0532\u0533\u0001\u0000\u0000\u0000\u0533\u0557\u0001"+
+		"\u0000\u0000\u0000\u0534\u0535\u0003\u0134\u009a\u0000\u0535\u0537\u0003"+
+		"\u0118\u008c\u0000\u0536\u0538\u0003\u0004\u0002\u0000\u0537\u0536\u0001"+
+		"\u0000\u0000\u0000\u0537\u0538\u0001\u0000\u0000\u0000\u0538\u0539\u0001"+
+		"\u0000\u0000\u0000\u0539\u053a\u0003^/\u0000\u053a\u0557\u0001\u0000\u0000"+
+		"\u0000\u053b\u053c\u0003\u0104\u0082\u0000\u053c\u053e\u0003\u0118\u008c"+
+		"\u0000\u053d\u053f\u0003\u0004\u0002\u0000\u053e\u053d\u0001\u0000\u0000"+
+		"\u0000\u053e\u053f\u0001\u0000\u0000\u0000\u053f\u0540\u0001\u0000\u0000"+
+		"\u0000\u0540\u0541\u0003`0\u0000\u0541\u0557\u0001\u0000\u0000\u0000\u0542"+
+		"\u0543\u0003\u0192\u00c9\u0000\u0543\u0545\u0003\u0118\u008c\u0000\u0544"+
+		"\u0546\u0003\u0004\u0002\u0000\u0545\u0544\u0001\u0000\u0000\u0000\u0545"+
+		"\u0546\u0001\u0000\u0000\u0000\u0546\u0547\u0001\u0000\u0000\u0000\u0547"+
+		"\u0548\u0003b1\u0000\u0548\u0557\u0001\u0000\u0000\u0000\u0549\u054a\u0003"+
+		"\u0106\u0083\u0000\u054a\u054c\u0003\u0118\u008c\u0000\u054b\u054d\u0003"+
+		"\u0004\u0002\u0000\u054c\u054b\u0001\u0000\u0000\u0000\u054c\u054d\u0001"+
+		"\u0000\u0000\u0000\u054d\u054f\u0001\u0000\u0000\u0000\u054e\u0550\u0003"+
+		",\u0016\u0000\u054f\u054e\u0001\u0000\u0000\u0000\u054f\u0550\u0001\u0000"+
+		"\u0000\u0000\u0550\u0557\u0001\u0000\u0000\u0000\u0551\u0552\u0003\u0108"+
+		"\u0084\u0000\u0552\u0554\u0003\u0118\u008c\u0000\u0553\u0555\u0003P(\u0000"+
+		"\u0554\u0553\u0001\u0000\u0000\u0000\u0554\u0555\u0001\u0000\u0000\u0000"+
+		"\u0555\u0557\u0001\u0000\u0000\u0000\u0556\u04ff\u0001\u0000\u0000\u0000"+
+		"\u0556\u0503\u0001\u0000\u0000\u0000\u0556\u0507\u0001\u0000\u0000\u0000"+
+		"\u0556\u050d\u0001\u0000\u0000\u0000\u0556\u0513\u0001\u0000\u0000\u0000"+
+		"\u0556\u0519\u0001\u0000\u0000\u0000\u0556\u0520\u0001\u0000\u0000\u0000"+
+		"\u0556\u0524\u0001\u0000\u0000\u0000\u0556\u0528\u0001\u0000\u0000\u0000"+
+		"\u0556\u052c\u0001\u0000\u0000\u0000\u0556\u0534\u0001\u0000\u0000\u0000"+
+		"\u0556\u053b\u0001\u0000\u0000\u0000\u0556\u0542\u0001\u0000\u0000\u0000"+
+		"\u0556\u0549\u0001\u0000\u0000\u0000\u0556\u0551\u0001\u0000\u0000\u0000"+
+		"\u0557q\u0001\u0000\u0000\u0000\u0558\u059a\u0003\u0272\u0139\u0000\u0559"+
+		"\u059a\u0003\u027c\u013e\u0000\u055a\u059a\u0003\u0286\u0143\u0000\u055b"+
+		"\u059a\u0003\u0296\u014b\u0000\u055c\u059a\u0003\u029a\u014d\u0000\u055d"+
+		"\u059a\u0003\u02aa\u0155\u0000\u055e\u059a\u0003\u02b0\u0158\u0000\u055f"+
+		"\u059a\u0003\u02cc\u0166\u0000\u0560\u059a\u0003\u02d6\u016b\u0000\u0561"+
+		"\u059a\u0003\u02da\u016d\u0000\u0562\u059a\u0003\u02dc\u016e\u0000\u0563"+
+		"\u059a\u0003\u02e0\u0170\u0000\u0564\u059a\u0003\u02ee\u0177\u0000\u0565"+
+		"\u059a\u0003\u02f4\u017a\u0000\u0566\u059a\u0003\u0312\u0189\u0000\u0567"+
+		"\u059a\u0003\u031a\u018d\u0000\u0568\u059a\u0003\u031e\u018f\u0000\u0569"+
+		"\u059a\u0003\u0322\u0191\u0000\u056a\u059a\u0003\u0328\u0194\u0000\u056b"+
+		"\u059a\u0003\u032a\u0195\u0000\u056c\u059a\u0003\u032c\u0196\u0000\u056d"+
+		"\u059a\u0003\u0332\u0199\u0000\u056e\u059a\u0003\u0334\u019a\u0000\u056f"+
+		"\u059a\u0003\u0338\u019c\u0000\u0570\u059a\u0003\u0346\u01a3\u0000\u0571"+
+		"\u059a\u0003\u034a\u01a5\u0000\u0572\u059a\u0003\u034e\u01a7\u0000\u0573"+
+		"\u059a\u0003\u0350\u01a8\u0000\u0574\u059a\u0003\u0352\u01a9\u0000\u0575"+
+		"\u059a\u0003\u035a\u01ad\u0000\u0576\u059a\u0003\u0366\u01b3\u0000\u0577"+
+		"\u059a\u0003\u036a\u01b5\u0000\u0578\u059a\u0003\u036e\u01b7\u0000\u0579"+
+		"\u059a\u0003\u037c\u01be\u0000\u057a\u059a\u0003\u038c\u01c6\u0000\u057b"+
+		"\u059a\u0003\u0396\u01cb\u0000\u057c\u059a\u0003\u039a\u01cd\u0000\u057d"+
+		"\u059a\u0003\u03a0\u01d0\u0000\u057e\u059a\u0003\u03a2\u01d1\u0000\u057f"+
+		"\u059a\u0003\u03a4\u01d2\u0000\u0580\u059a\u0003\u03a8\u01d4\u0000\u0581"+
+		"\u059a\u0003\u03ac\u01d6\u0000\u0582\u059a\u0003\u03b4\u01da\u0000\u0583"+
+		"\u059a\u0003\u03c6\u01e3\u0000\u0584\u059a\u0003\u03c8\u01e4\u0000\u0585"+
+		"\u059a\u0003\u03cc\u01e6\u0000\u0586\u059a\u0003\u03ce\u01e7\u0000\u0587"+
+		"\u059a\u0003\u03d0\u01e8\u0000\u0588\u059a\u0003\u03d2\u01e9\u0000\u0589"+
+		"\u059a\u0003\u03dc\u01ee\u0000\u058a\u059a\u0003\u03e2\u01f1\u0000\u058b"+
+		"\u059a\u0003\u03e4\u01f2\u0000\u058c\u059a\u0003\u03ea\u01f5\u0000\u058d"+
+		"\u059a\u0003\u03fa\u01fd\u0000\u058e\u059a\u0003\u03fe\u01ff\u0000\u058f"+
+		"\u059a\u0003\u0404\u0202\u0000\u0590\u059a\u0003\u0408\u0204\u0000\u0591"+
+		"\u059a\u0003\u040a\u0205\u0000\u0592\u059a\u0003\u0412\u0209\u0000\u0593"+
+		"\u059a\u0003\u0418\u020c\u0000\u0594\u059a\u0003\u041c\u020e\u0000\u0595"+
+		"\u059a\u0003\u041e\u020f\u0000\u0596\u059a\u0003\u0424\u0212\u0000\u0597"+
+		"\u059a\u0003\u0428\u0214\u0000\u0598\u059a\u0003\u0430\u0218\u0000\u0599"+
+		"\u0558\u0001\u0000\u0000\u0000\u0599\u0559\u0001\u0000\u0000\u0000\u0599"+
+		"\u055a\u0001\u0000\u0000\u0000\u0599\u055b\u0001\u0000\u0000\u0000\u0599"+
+		"\u055c\u0001\u0000\u0000\u0000\u0599\u055d\u0001\u0000\u0000\u0000\u0599"+
+		"\u055e\u0001\u0000\u0000\u0000\u0599\u055f\u0001\u0000\u0000\u0000\u0599"+
+		"\u0560\u0001\u0000\u0000\u0000\u0599\u0561\u0001\u0000\u0000\u0000\u0599"+
+		"\u0562\u0001\u0000\u0000\u0000\u0599\u0563\u0001\u0000\u0000\u0000\u0599"+
+		"\u0564\u0001\u0000\u0000\u0000\u0599\u0565\u0001\u0000\u0000\u0000\u0599"+
+		"\u0566\u0001\u0000\u0000\u0000\u0599\u0567\u0001\u0000\u0000\u0000\u0599"+
+		"\u0568\u0001\u0000\u0000\u0000\u0599\u0569\u0001\u0000\u0000\u0000\u0599"+
+		"\u056a\u0001\u0000\u0000\u0000\u0599\u056b\u0001\u0000\u0000\u0000\u0599"+
+		"\u056c\u0001\u0000\u0000\u0000\u0599\u056d\u0001\u0000\u0000\u0000\u0599"+
+		"\u056e\u0001\u0000\u0000\u0000\u0599\u056f\u0001\u0000\u0000\u0000\u0599"+
+		"\u0570\u0001\u0000\u0000\u0000\u0599\u0571\u0001\u0000\u0000\u0000\u0599"+
+		"\u0572\u0001\u0000\u0000\u0000\u0599\u0573\u0001\u0000\u0000\u0000\u0599"+
+		"\u0574\u0001\u0000\u0000\u0000\u0599\u0575\u0001\u0000\u0000\u0000\u0599"+
+		"\u0576\u0001\u0000\u0000\u0000\u0599\u0577\u0001\u0000\u0000\u0000\u0599"+
+		"\u0578\u0001\u0000\u0000\u0000\u0599\u0579\u0001\u0000\u0000\u0000\u0599"+
+		"\u057a\u0001\u0000\u0000\u0000\u0599\u057b\u0001\u0000\u0000\u0000\u0599"+
+		"\u057c\u0001\u0000\u0000\u0000\u0599\u057d\u0001\u0000\u0000\u0000\u0599"+
+		"\u057e\u0001\u0000\u0000\u0000\u0599\u057f\u0001\u0000\u0000\u0000\u0599"+
+		"\u0580\u0001\u0000\u0000\u0000\u0599\u0581\u0001\u0000\u0000\u0000\u0599"+
+		"\u0582\u0001\u0000\u0000\u0000\u0599\u0583\u0001\u0000\u0000\u0000\u0599"+
+		"\u0584\u0001\u0000\u0000\u0000\u0599\u0585\u0001\u0000\u0000\u0000\u0599"+
+		"\u0586\u0001\u0000\u0000\u0000\u0599\u0587\u0001\u0000\u0000\u0000\u0599"+
+		"\u0588\u0001\u0000\u0000\u0000\u0599\u0589\u0001\u0000\u0000\u0000\u0599"+
+		"\u058a\u0001\u0000\u0000\u0000\u0599\u058b\u0001\u0000\u0000\u0000\u0599"+
+		"\u058c\u0001\u0000\u0000\u0000\u0599\u058d\u0001\u0000\u0000\u0000\u0599"+
+		"\u058e\u0001\u0000\u0000\u0000\u0599\u058f\u0001\u0000\u0000\u0000\u0599"+
+		"\u0590\u0001\u0000\u0000\u0000\u0599\u0591\u0001\u0000\u0000\u0000\u0599"+
+		"\u0592\u0001\u0000\u0000\u0000\u0599\u0593\u0001\u0000\u0000\u0000\u0599"+
+		"\u0594\u0001\u0000\u0000\u0000\u0599\u0595\u0001\u0000\u0000\u0000\u0599"+
+		"\u0596\u0001\u0000\u0000\u0000\u0599\u0597\u0001\u0000\u0000\u0000\u0599"+
+		"\u0598\u0001\u0000\u0000\u0000\u059as\u0001\u0000\u0000\u0000\u059b\u059c"+
+		"\u0005#\u0000\u0000\u059cu\u0001\u0000\u0000\u0000\u059d\u059e\u0005n"+
+		"\u0000\u0000\u059ew\u0001\u0000\u0000\u0000\u059f\u05a0\u0005-\u0000\u0000"+
+		"\u05a0y\u0001\u0000\u0000\u0000\u05a1\u05a2\u0005.\u0000\u0000\u05a2{"+
+		"\u0001\u0000\u0000\u0000\u05a3\u05a4\u0005/\u0000\u0000\u05a4}\u0001\u0000"+
+		"\u0000\u0000\u05a5\u05a6\u00050\u0000\u0000\u05a6\u007f\u0001\u0000\u0000"+
+		"\u0000\u05a7\u05a8\u00051\u0000\u0000\u05a8\u0081\u0001\u0000\u0000\u0000"+
+		"\u05a9\u05aa\u00052\u0000\u0000\u05aa\u0083\u0001\u0000\u0000\u0000\u05ab"+
+		"\u05ac\u00053\u0000\u0000\u05ac\u0085\u0001\u0000\u0000\u0000\u05ad\u05ae"+
+		"\u00054\u0000\u0000\u05ae\u0087\u0001\u0000\u0000\u0000\u05af\u05b0\u0005"+
+		"5\u0000\u0000\u05b0\u0089\u0001\u0000\u0000\u0000\u05b1\u05b2\u00056\u0000"+
+		"\u0000\u05b2\u008b\u0001\u0000\u0000\u0000\u05b3\u05b4\u00057\u0000\u0000"+
+		"\u05b4\u008d\u0001\u0000\u0000\u0000\u05b5\u05b6\u00058\u0000\u0000\u05b6"+
+		"\u008f\u0001\u0000\u0000\u0000\u05b7\u05b8\u00059\u0000\u0000\u05b8\u0091"+
+		"\u0001\u0000\u0000\u0000\u05b9\u05ba\u0005:\u0000\u0000\u05ba\u0093\u0001"+
+		"\u0000\u0000\u0000\u05bb\u05bc\u0005;\u0000\u0000\u05bc\u0095\u0001\u0000"+
+		"\u0000\u0000\u05bd\u05be\u0005<\u0000\u0000\u05be\u0097\u0001\u0000\u0000"+
+		"\u0000\u05bf\u05c0\u0005=\u0000\u0000\u05c0\u0099\u0001\u0000\u0000\u0000"+
+		"\u05c1\u05c2\u0005>\u0000\u0000\u05c2\u009b\u0001\u0000\u0000\u0000\u05c3"+
+		"\u05c4\u0005?\u0000\u0000\u05c4\u009d\u0001\u0000\u0000\u0000\u05c5\u05c6"+
+		"\u0005@\u0000\u0000\u05c6\u009f\u0001\u0000\u0000\u0000\u05c7\u05c8\u0005"+
+		"A\u0000\u0000\u05c8\u00a1\u0001\u0000\u0000\u0000\u05c9\u05ca\u0005B\u0000"+
+		"\u0000\u05ca\u00a3\u0001\u0000\u0000\u0000\u05cb\u05cc\u0005C\u0000\u0000"+
+		"\u05cc\u00a5\u0001\u0000\u0000\u0000\u05cd\u05ce\u0005D\u0000\u0000\u05ce"+
+		"\u00a7\u0001\u0000\u0000\u0000\u05cf\u05d0\u0005E\u0000\u0000\u05d0\u00a9"+
+		"\u0001\u0000\u0000\u0000\u05d1\u05d2\u0005F\u0000\u0000\u05d2\u00ab\u0001"+
+		"\u0000\u0000\u0000\u05d3\u05d4\u0005G\u0000\u0000\u05d4\u00ad\u0001\u0000"+
+		"\u0000\u0000\u05d5\u05d6\u0005H\u0000\u0000\u05d6\u00af\u0001\u0000\u0000"+
+		"\u0000\u05d7\u05d8\u0005I\u0000\u0000\u05d8\u00b1\u0001\u0000\u0000\u0000"+
+		"\u05d9\u05da\u0005J\u0000\u0000\u05da\u00b3\u0001\u0000\u0000\u0000\u05db"+
+		"\u05dc\u0005K\u0000\u0000\u05dc\u00b5\u0001\u0000\u0000\u0000\u05dd\u05de"+
+		"\u0005L\u0000\u0000\u05de\u00b7\u0001\u0000\u0000\u0000\u05df\u05e0\u0005"+
+		"M\u0000\u0000\u05e0\u00b9\u0001\u0000\u0000\u0000\u05e1\u05e2\u0005N\u0000"+
+		"\u0000\u05e2\u00bb\u0001\u0000\u0000\u0000\u05e3\u05e4\u0005O\u0000\u0000"+
+		"\u05e4\u00bd\u0001\u0000\u0000\u0000\u05e5\u05e6\u0005P\u0000\u0000\u05e6"+
+		"\u00bf\u0001\u0000\u0000\u0000\u05e7\u05e8\u0005Q\u0000\u0000\u05e8\u00c1"+
+		"\u0001\u0000\u0000\u0000\u05e9\u05ea\u0005R\u0000\u0000\u05ea\u00c3\u0001"+
+		"\u0000\u0000\u0000\u05eb\u05ec\u0005S\u0000\u0000\u05ec\u00c5\u0001\u0000"+
+		"\u0000\u0000\u05ed\u05ee\u0005T\u0000\u0000\u05ee\u00c7\u0001\u0000\u0000"+
+		"\u0000\u05ef\u05f0\u0005U\u0000\u0000\u05f0\u00c9\u0001\u0000\u0000\u0000"+
+		"\u05f1\u05f2\u0005V\u0000\u0000\u05f2\u00cb\u0001\u0000\u0000\u0000\u05f3"+
+		"\u05f4\u0005W\u0000\u0000\u05f4\u00cd\u0001\u0000\u0000\u0000\u05f5\u05f6"+
+		"\u0005X\u0000\u0000\u05f6\u00cf\u0001\u0000\u0000\u0000\u05f7\u05f8\u0005"+
+		"Y\u0000\u0000\u05f8\u00d1\u0001\u0000\u0000\u0000\u05f9\u05fa\u0005Z\u0000"+
+		"\u0000\u05fa\u00d3\u0001\u0000\u0000\u0000\u05fb\u05fc\u0005[\u0000\u0000"+
+		"\u05fc\u00d5\u0001\u0000\u0000\u0000\u05fd\u05fe\u0005\\\u0000\u0000\u05fe"+
+		"\u00d7\u0001\u0000\u0000\u0000\u05ff\u0600\u0005]\u0000\u0000\u0600\u00d9"+
+		"\u0001\u0000\u0000\u0000\u0601\u0602\u0005^\u0000\u0000\u0602\u00db\u0001"+
+		"\u0000\u0000\u0000\u0603\u0604\u0005_\u0000\u0000\u0604\u00dd\u0001\u0000"+
+		"\u0000\u0000\u0605\u0606\u0005`\u0000\u0000\u0606\u00df\u0001\u0000\u0000"+
+		"\u0000\u0607\u0608\u0005a\u0000\u0000\u0608\u00e1\u0001\u0000\u0000\u0000"+
+		"\u0609\u060a\u0005b\u0000\u0000\u060a\u00e3\u0001\u0000\u0000\u0000\u060b"+
+		"\u060c\u0005c\u0000\u0000\u060c\u00e5\u0001\u0000\u0000\u0000\u060d\u060e"+
+		"\u0005d\u0000\u0000\u060e\u00e7\u0001\u0000\u0000\u0000\u060f\u0610\u0005"+
+		"e\u0000\u0000\u0610\u00e9\u0001\u0000\u0000\u0000\u0611\u0612\u0005f\u0000"+
+		"\u0000\u0612\u00eb\u0001\u0000\u0000\u0000\u0613\u0614\u0005g\u0000\u0000"+
+		"\u0614\u00ed\u0001\u0000\u0000\u0000\u0615\u0616\u0005h\u0000\u0000\u0616"+
+		"\u00ef\u0001\u0000\u0000\u0000\u0617\u0618\u0005i\u0000\u0000\u0618\u00f1"+
+		"\u0001\u0000\u0000\u0000\u0619\u061a\u0005j\u0000\u0000\u061a\u00f3\u0001"+
+		"\u0000\u0000\u0000\u061b\u061c\u0005k\u0000\u0000\u061c\u00f5\u0001\u0000"+
+		"\u0000\u0000\u061d\u061e\u0005l\u0000\u0000\u061e\u00f7\u0001\u0000\u0000"+
+		"\u0000\u061f\u0620\u0005m\u0000\u0000\u0620\u00f9\u0001\u0000\u0000\u0000"+
+		"\u0621\u0622\u0005$\u0000\u0000\u0622\u00fb\u0001\u0000\u0000\u0000\u0623"+
+		"\u0624\u0005&\u0000\u0000\u0624\u00fd\u0001\u0000\u0000\u0000\u0625\u0626"+
+		"\u0005\'\u0000\u0000\u0626\u00ff\u0001\u0000\u0000\u0000\u0627\u0628\u0005"+
+		"*\u0000\u0000\u0628\u0101\u0001\u0000\u0000\u0000\u0629\u062a\u0005(\u0000"+
+		"\u0000\u062a\u0103\u0001\u0000\u0000\u0000\u062b\u062c\u0005+\u0000\u0000"+
+		"\u062c\u0105\u0001\u0000\u0000\u0000\u062d\u062e\u0005)\u0000\u0000\u062e"+
+		"\u0107\u0001\u0000\u0000\u0000\u062f\u0630\u0005,\u0000\u0000\u0630\u0109"+
+		"\u0001\u0000\u0000\u0000\u0631\u0632\u0005\u011b\u0000\u0000\u0632\u010b"+
+		"\u0001\u0000\u0000\u0000\u0633\u0634\u0005\u011c\u0000\u0000\u0634\u010d"+
+		"\u0001\u0000\u0000\u0000\u0635\u0636\u0005\u011d\u0000\u0000\u0636\u010f"+
+		"\u0001\u0000\u0000\u0000\u0637\u0638\u0005\u011e\u0000\u0000\u0638\u0111"+
+		"\u0001\u0000\u0000\u0000\u0639\u063a\u0005\u011f\u0000\u0000\u063a\u0113"+
+		"\u0001\u0000\u0000\u0000\u063b\u063c\u0005\u0015\u0000\u0000\u063c\u0115"+
+		"\u0001\u0000\u0000\u0000\u063d\u063e\u0005\u0116\u0000\u0000\u063e\u0117"+
+		"\u0001\u0000\u0000\u0000\u063f\u0640\u0005\u0117\u0000\u0000\u0640\u0119"+
+		"\u0001\u0000\u0000\u0000\u0641\u0642\u0005\u0016\u0000\u0000\u0642\u011b"+
+		"\u0001\u0000\u0000\u0000\u0643\u0644\u0005\u0118\u0000\u0000\u0644\u011d"+
+		"\u0001\u0000\u0000\u0000\u0645\u0646\u0005\u011a\u0000\u0000\u0646\u011f"+
+		"\u0001\u0000\u0000\u0000\u0647\u0648\u0005o\u0000\u0000\u0648\u0121\u0001"+
+		"\u0000\u0000\u0000\u0649\u064a\u0005p\u0000\u0000\u064a\u0123\u0001\u0000"+
+		"\u0000\u0000\u064b\u064c\u0005q\u0000\u0000\u064c\u0125\u0001\u0000\u0000"+
+		"\u0000\u064d\u064e\u0005r\u0000\u0000\u064e\u0127\u0001\u0000\u0000\u0000"+
+		"\u064f\u0650\u0005s\u0000\u0000\u0650\u0129\u0001\u0000\u0000\u0000\u0651"+
+		"\u0652\u0005t\u0000\u0000\u0652\u012b\u0001\u0000\u0000\u0000\u0653\u0654"+
+		"\u0005u\u0000\u0000\u0654\u012d\u0001\u0000\u0000\u0000\u0655\u0656\u0005"+
+		"v\u0000\u0000\u0656\u012f\u0001\u0000\u0000\u0000\u0657\u0658\u0005w\u0000"+
+		"\u0000\u0658\u0131\u0001\u0000\u0000\u0000\u0659\u065a\u0005x\u0000\u0000"+
+		"\u065a\u0133\u0001\u0000\u0000\u0000\u065b\u065c\u0005y\u0000\u0000\u065c"+
+		"\u0135\u0001\u0000\u0000\u0000\u065d\u065e\u0005z\u0000\u0000\u065e\u0137"+
+		"\u0001\u0000\u0000\u0000\u065f\u0660\u0005{\u0000\u0000\u0660\u0139\u0001"+
+		"\u0000\u0000\u0000\u0661\u0662\u0005|\u0000\u0000\u0662\u013b\u0001\u0000"+
+		"\u0000\u0000\u0663\u0664\u0005}\u0000\u0000\u0664\u013d\u0001\u0000\u0000"+
+		"\u0000\u0665\u0666\u0005~\u0000\u0000\u0666\u013f\u0001\u0000\u0000\u0000"+
+		"\u0667\u0668\u0005\u007f\u0000\u0000\u0668\u0141\u0001\u0000\u0000\u0000"+
+		"\u0669\u066a\u0005\u0080\u0000\u0000\u066a\u0143\u0001\u0000\u0000\u0000"+
+		"\u066b\u066c\u0005\u0081\u0000\u0000\u066c\u0145\u0001\u0000\u0000\u0000"+
+		"\u066d\u066e\u0005\u0082\u0000\u0000\u066e\u0147\u0001\u0000\u0000\u0000"+
+		"\u066f\u0670\u0005\u0083\u0000\u0000\u0670\u0149\u0001\u0000\u0000\u0000"+
+		"\u0671\u0672\u0005\u0084\u0000\u0000\u0672\u014b\u0001\u0000\u0000\u0000"+
+		"\u0673\u0674\u0005\u0085\u0000\u0000\u0674\u014d\u0001\u0000\u0000\u0000"+
+		"\u0675\u0676\u0005\u0086\u0000\u0000\u0676\u014f\u0001\u0000\u0000\u0000"+
+		"\u0677\u0678\u0005\u0087\u0000\u0000\u0678\u0151\u0001\u0000\u0000\u0000"+
+		"\u0679\u067a\u0005\u001c\u0000\u0000\u067a\u0153\u0001\u0000\u0000\u0000"+
+		"\u067b\u067c\u0005\u0088\u0000\u0000\u067c\u0155\u0001\u0000\u0000\u0000"+
+		"\u067d\u067e\u0005\u0089\u0000\u0000\u067e\u0157\u0001\u0000\u0000\u0000"+
+		"\u067f\u0680\u0005\u008a\u0000\u0000\u0680\u0159\u0001\u0000\u0000\u0000"+
+		"\u0681\u0682\u0005\u008b\u0000\u0000\u0682\u015b\u0001\u0000\u0000\u0000"+
+		"\u0683\u0684\u0005\u008c\u0000\u0000\u0684\u015d\u0001\u0000\u0000\u0000"+
+		"\u0685\u0686\u0005\u008d\u0000\u0000\u0686\u015f\u0001\u0000\u0000\u0000"+
+		"\u0687\u0688\u0005\u008e\u0000\u0000\u0688\u0161\u0001\u0000\u0000\u0000"+
+		"\u0689\u068a\u0005\u008f\u0000\u0000\u068a\u0163\u0001\u0000\u0000\u0000"+
+		"\u068b\u068c\u0005\u0090\u0000\u0000\u068c\u0165\u0001\u0000\u0000\u0000"+
+		"\u068d\u068e\u0005\u0091\u0000\u0000\u068e\u0167\u0001\u0000\u0000\u0000"+
+		"\u068f\u0690\u0005\u0092\u0000\u0000\u0690\u0169\u0001\u0000\u0000\u0000"+
+		"\u0691\u0692\u0005\u0093\u0000\u0000\u0692\u016b\u0001\u0000\u0000\u0000"+
+		"\u0693\u0694\u0005\u0094\u0000\u0000\u0694\u016d\u0001\u0000\u0000\u0000"+
+		"\u0695\u0696\u0005\u0095\u0000\u0000\u0696\u016f\u0001\u0000\u0000\u0000"+
+		"\u0697\u0698\u0005\u0096\u0000\u0000\u0698\u0171\u0001\u0000\u0000\u0000"+
+		"\u0699\u069a\u0005\u0097\u0000\u0000\u069a\u0173\u0001\u0000\u0000\u0000"+
+		"\u069b\u069c\u0005\u0098\u0000\u0000\u069c\u0175\u0001\u0000\u0000\u0000"+
+		"\u069d\u069e\u0005\u0099\u0000\u0000\u069e\u0177\u0001\u0000\u0000\u0000"+
+		"\u069f\u06a0\u0005\u009a\u0000\u0000\u06a0\u0179\u0001\u0000\u0000\u0000"+
+		"\u06a1\u06a2\u0005\u009b\u0000\u0000\u06a2\u017b\u0001\u0000\u0000\u0000"+
+		"\u06a3\u06a4\u0005\u009c\u0000\u0000\u06a4\u017d\u0001\u0000\u0000\u0000"+
+		"\u06a5\u06a6\u0005\u009d\u0000\u0000\u06a6\u017f\u0001\u0000\u0000\u0000"+
+		"\u06a7\u06a8\u0005\u009e\u0000\u0000\u06a8\u0181\u0001\u0000\u0000\u0000"+
+		"\u06a9\u06aa\u0005\u009f\u0000\u0000\u06aa\u0183\u0001\u0000\u0000\u0000"+
+		"\u06ab\u06ac\u0005\u00a0\u0000\u0000\u06ac\u0185\u0001\u0000\u0000\u0000"+
+		"\u06ad\u06ae\u0005\u00a1\u0000\u0000\u06ae\u0187\u0001\u0000\u0000\u0000"+
+		"\u06af\u06b0\u0005\u00a2\u0000\u0000\u06b0\u0189\u0001\u0000\u0000\u0000"+
+		"\u06b1\u06b2\u0005\u00a3\u0000\u0000\u06b2\u018b\u0001\u0000\u0000\u0000"+
+		"\u06b3\u06b4\u0005\u00a4\u0000\u0000\u06b4\u018d\u0001\u0000\u0000\u0000"+
+		"\u06b5\u06b6\u0005\u00a5\u0000\u0000\u06b6\u018f\u0001\u0000\u0000\u0000"+
+		"\u06b7\u06b8\u0005\u00a6\u0000\u0000\u06b8\u0191\u0001\u0000\u0000\u0000"+
+		"\u06b9\u06ba\u0005\u00a7\u0000\u0000\u06ba\u0193\u0001\u0000\u0000\u0000"+
+		"\u06bb\u06bc\u0005\u00a8\u0000\u0000\u06bc\u0195\u0001\u0000\u0000\u0000"+
+		"\u06bd\u06be\u0005\u00a9\u0000\u0000\u06be\u0197\u0001\u0000\u0000\u0000"+
+		"\u06bf\u06c0\u0005\u00aa\u0000\u0000\u06c0\u0199\u0001\u0000\u0000\u0000"+
+		"\u06c1\u06c2\u0005\u00ab\u0000\u0000\u06c2\u019b\u0001\u0000\u0000\u0000"+
+		"\u06c3\u06c4\u0005\u00ac\u0000\u0000\u06c4\u019d\u0001\u0000\u0000\u0000"+
+		"\u06c5\u06c6\u0005\u00ad\u0000\u0000\u06c6\u019f\u0001\u0000\u0000\u0000"+
+		"\u06c7\u06c8\u0005\u00ae\u0000\u0000\u06c8\u01a1\u0001\u0000\u0000\u0000"+
+		"\u06c9\u06ca\u0005\u00af\u0000\u0000\u06ca\u01a3\u0001\u0000\u0000\u0000"+
+		"\u06cb\u06cc\u0005\u00b0\u0000\u0000\u06cc\u01a5\u0001\u0000\u0000\u0000"+
+		"\u06cd\u06ce\u0005\u00b1\u0000\u0000\u06ce\u01a7\u0001\u0000\u0000\u0000"+
+		"\u06cf\u06d0\u0005\u00b2\u0000\u0000\u06d0\u01a9\u0001\u0000\u0000\u0000"+
+		"\u06d1\u06d2\u0005\u00b3\u0000\u0000\u06d2\u01ab\u0001\u0000\u0000\u0000"+
+		"\u06d3\u06d4\u0005\u00b4\u0000\u0000\u06d4\u01ad\u0001\u0000\u0000\u0000"+
+		"\u06d5\u06d6\u0005\u00b5\u0000\u0000\u06d6\u01af\u0001\u0000\u0000\u0000"+
+		"\u06d7\u06d8\u0005\u00b6\u0000\u0000\u06d8\u01b1\u0001\u0000\u0000\u0000"+
+		"\u06d9\u06da\u0005\u00b7\u0000\u0000\u06da\u01b3\u0001\u0000\u0000\u0000"+
+		"\u06db\u06dc\u0005\u00b8\u0000\u0000\u06dc\u01b5\u0001\u0000\u0000\u0000"+
+		"\u06dd\u06de\u0005\u00b9\u0000\u0000\u06de\u01b7\u0001\u0000\u0000\u0000"+
+		"\u06df\u06e0\u0005\u00ba\u0000\u0000\u06e0\u01b9\u0001\u0000\u0000\u0000"+
+		"\u06e1\u06e2\u0005\u00bb\u0000\u0000\u06e2\u01bb\u0001\u0000\u0000\u0000"+
+		"\u06e3\u06e4\u0005\u00bc\u0000\u0000\u06e4\u01bd\u0001\u0000\u0000\u0000"+
+		"\u06e5\u06e6\u0005\u00bd\u0000\u0000\u06e6\u01bf\u0001\u0000\u0000\u0000"+
+		"\u06e7\u06e8\u0005\u00be\u0000\u0000\u06e8\u01c1\u0001\u0000\u0000\u0000"+
+		"\u06e9\u06ea\u0005\u00bf\u0000\u0000\u06ea\u01c3\u0001\u0000\u0000\u0000"+
+		"\u06eb\u06ec\u0005\u00c0\u0000\u0000\u06ec\u01c5\u0001\u0000\u0000\u0000"+
+		"\u06ed\u06ee\u0005\u00c1\u0000\u0000\u06ee\u01c7\u0001\u0000\u0000\u0000"+
+		"\u06ef\u06f0\u0005\u00c2\u0000\u0000\u06f0\u01c9\u0001\u0000\u0000\u0000"+
+		"\u06f1\u06f2\u0005\u00c3\u0000\u0000\u06f2\u01cb\u0001\u0000\u0000\u0000"+
+		"\u06f3\u06f4\u0005\u00c4\u0000\u0000\u06f4\u01cd\u0001\u0000\u0000\u0000"+
+		"\u06f5\u06f6\u0005\u00c5\u0000\u0000\u06f6\u01cf\u0001\u0000\u0000\u0000"+
+		"\u06f7\u06f8\u0005\u00c6\u0000\u0000\u06f8\u01d1\u0001\u0000\u0000\u0000"+
+		"\u06f9\u06fa\u0005\u00c7\u0000\u0000\u06fa\u01d3\u0001\u0000\u0000\u0000"+
+		"\u06fb\u06fc\u0005\u00c8\u0000\u0000\u06fc\u01d5\u0001\u0000\u0000\u0000"+
+		"\u06fd\u06fe\u0005\u00c9\u0000\u0000\u06fe\u01d7\u0001\u0000\u0000\u0000"+
+		"\u06ff\u0700\u0005\u00ca\u0000\u0000\u0700\u01d9\u0001\u0000\u0000\u0000"+
+		"\u0701\u0702\u0005\u00cb\u0000\u0000\u0702\u01db\u0001\u0000\u0000\u0000"+
+		"\u0703\u0704\u0005\u00cc\u0000\u0000\u0704\u01dd\u0001\u0000\u0000\u0000"+
+		"\u0705\u0706\u0005\u00cd\u0000\u0000\u0706\u01df\u0001\u0000\u0000\u0000"+
+		"\u0707\u0708\u0005\u00ce\u0000\u0000\u0708\u01e1\u0001\u0000\u0000\u0000"+
+		"\u0709\u070a\u0005\u00cf\u0000\u0000\u070a\u01e3\u0001\u0000\u0000\u0000"+
+		"\u070b\u070c\u0005\u00d0\u0000\u0000\u070c\u01e5\u0001\u0000\u0000\u0000"+
+		"\u070d\u070e\u0005\u00d1\u0000\u0000\u070e\u01e7\u0001\u0000\u0000\u0000"+
+		"\u070f\u0710\u0005\u00d2\u0000\u0000\u0710\u01e9\u0001\u0000\u0000\u0000"+
+		"\u0711\u0712\u0005\u00d3\u0000\u0000\u0712\u01eb\u0001\u0000\u0000\u0000"+
+		"\u0713\u0714\u0005\u00d4\u0000\u0000\u0714\u01ed\u0001\u0000\u0000\u0000"+
+		"\u0715\u0716\u0005\u00d5\u0000\u0000\u0716\u01ef\u0001\u0000\u0000\u0000"+
+		"\u0717\u0718\u0005\u00d6\u0000\u0000\u0718\u01f1\u0001\u0000\u0000\u0000"+
+		"\u0719\u071a\u0005\u00d7\u0000\u0000\u071a\u01f3\u0001\u0000\u0000\u0000"+
+		"\u071b\u071c\u0005\u00d8\u0000\u0000\u071c\u01f5\u0001\u0000\u0000\u0000"+
+		"\u071d\u071e\u0005\u00d9\u0000\u0000\u071e\u01f7\u0001\u0000\u0000\u0000"+
+		"\u071f\u0720\u0005\u00da\u0000\u0000\u0720\u01f9\u0001\u0000\u0000\u0000"+
+		"\u0721\u0722\u0005\u00db\u0000\u0000\u0722\u01fb\u0001\u0000\u0000\u0000"+
+		"\u0723\u0724\u0005\u00dc\u0000\u0000\u0724\u01fd\u0001\u0000\u0000\u0000"+
+		"\u0725\u0726\u0005\u00dd\u0000\u0000\u0726\u01ff\u0001\u0000\u0000\u0000"+
+		"\u0727\u0728\u0005\u00de\u0000\u0000\u0728\u0201\u0001\u0000\u0000\u0000"+
+		"\u0729\u072a\u0005\u00df\u0000\u0000\u072a\u0203\u0001\u0000\u0000\u0000"+
+		"\u072b\u072c\u0005\u00e0\u0000\u0000\u072c\u0205\u0001\u0000\u0000\u0000"+
+		"\u072d\u072e\u0005\u00e1\u0000\u0000\u072e\u0207\u0001\u0000\u0000\u0000"+
+		"\u072f\u0730\u0005\u00e2\u0000\u0000\u0730\u0209\u0001\u0000\u0000\u0000"+
+		"\u0731\u0732\u0005\u00e3\u0000\u0000\u0732\u020b\u0001\u0000\u0000\u0000"+
+		"\u0733\u0734\u0005\u00e4\u0000\u0000\u0734\u020d\u0001\u0000\u0000\u0000"+
+		"\u0735\u0736\u0005\u00e5\u0000\u0000\u0736\u020f\u0001\u0000\u0000\u0000"+
+		"\u0737\u0738\u0005\u00e7\u0000\u0000\u0738\u0211\u0001\u0000\u0000\u0000"+
+		"\u0739\u073a\u0005\u00e8\u0000\u0000\u073a\u0213\u0001\u0000\u0000\u0000"+
+		"\u073b\u073c\u0005\u00e9\u0000\u0000\u073c\u0215\u0001\u0000\u0000\u0000"+
+		"\u073d\u073e\u0005\u00ea\u0000\u0000\u073e\u0217\u0001\u0000\u0000\u0000"+
+		"\u073f\u0740\u0005\u00eb\u0000\u0000\u0740\u0219\u0001\u0000\u0000\u0000"+
+		"\u0741\u0742\u0005\u00ec\u0000\u0000\u0742\u021b\u0001\u0000\u0000\u0000"+
+		"\u0743\u0744\u0005\u00ed\u0000\u0000\u0744\u021d\u0001\u0000\u0000\u0000"+
+		"\u0745\u0746\u0005\u00ee\u0000\u0000\u0746\u021f\u0001\u0000\u0000\u0000"+
+		"\u0747\u0748\u0005\u00ef\u0000\u0000\u0748\u0221\u0001\u0000\u0000\u0000"+
+		"\u0749\u074a\u0005\u00f0\u0000\u0000\u074a\u0223\u0001\u0000\u0000\u0000"+
+		"\u074b\u074c\u0005\u00f1\u0000\u0000\u074c\u0225\u0001\u0000\u0000\u0000"+
+		"\u074d\u074e\u0005\u00f2\u0000\u0000\u074e\u0227\u0001\u0000\u0000\u0000"+
+		"\u074f\u0750\u0005\u00f3\u0000\u0000\u0750\u0229\u0001\u0000\u0000\u0000"+
+		"\u0751\u0752\u0005\u00f4\u0000\u0000\u0752\u022b\u0001\u0000\u0000\u0000"+
+		"\u0753\u0754\u0005\u00f5\u0000\u0000\u0754\u022d\u0001\u0000\u0000\u0000"+
+		"\u0755\u0756\u0005\u00f6\u0000\u0000\u0756\u022f\u0001\u0000\u0000\u0000"+
+		"\u0757\u0758\u0005\u00f7\u0000\u0000\u0758\u0231\u0001\u0000\u0000\u0000"+
+		"\u0759\u075a\u0005\u00f9\u0000\u0000\u075a\u0233\u0001\u0000\u0000\u0000"+
+		"\u075b\u075c\u0005\u00fa\u0000\u0000\u075c\u0235\u0001\u0000\u0000\u0000"+
+		"\u075d\u075e\u0005\u00fb\u0000\u0000\u075e\u0237\u0001\u0000\u0000\u0000"+
+		"\u075f\u0760\u0005\u00fc\u0000\u0000\u0760\u0239\u0001\u0000\u0000\u0000"+
+		"\u0761\u0762\u0005\u00fd\u0000\u0000\u0762\u023b\u0001\u0000\u0000\u0000"+
+		"\u0763\u0764\u0005\u00fe\u0000\u0000\u0764\u023d\u0001\u0000\u0000\u0000"+
+		"\u0765\u0766\u0005\u00ff\u0000\u0000\u0766\u023f\u0001\u0000\u0000\u0000"+
+		"\u0767\u0768\u0005\u0100\u0000\u0000\u0768\u0241\u0001\u0000\u0000\u0000"+
+		"\u0769\u076a\u0005\u0101\u0000\u0000\u076a\u0243\u0001\u0000\u0000\u0000"+
+		"\u076b\u076c\u0005\u0102\u0000\u0000\u076c\u0245\u0001\u0000\u0000\u0000"+
+		"\u076d\u076e\u0005\u0103\u0000\u0000\u076e\u0247\u0001\u0000\u0000\u0000"+
+		"\u076f\u0770\u0005\u0104\u0000\u0000\u0770\u0249\u0001\u0000\u0000\u0000"+
+		"\u0771\u0772\u0005\u0105\u0000\u0000\u0772\u024b\u0001\u0000\u0000\u0000"+
+		"\u0773\u0774\u0005\u0106\u0000\u0000\u0774\u024d\u0001\u0000\u0000\u0000"+
+		"\u0775\u0776\u0005\u0107\u0000\u0000\u0776\u024f\u0001\u0000\u0000\u0000"+
+		"\u0777\u0778\u0005\u0108\u0000\u0000\u0778\u0251\u0001\u0000\u0000\u0000"+
+		"\u0779\u077a\u0005\u0109\u0000\u0000\u077a\u0253\u0001\u0000\u0000\u0000"+
+		"\u077b\u077c\u0005\u010a\u0000\u0000\u077c\u0255\u0001\u0000\u0000\u0000"+
+		"\u077d\u077e\u0005\u010b\u0000\u0000\u077e\u0257\u0001\u0000\u0000\u0000"+
+		"\u077f\u0780\u0005\u010c\u0000\u0000\u0780\u0259\u0001\u0000\u0000\u0000"+
+		"\u0781\u0782\u0005\u010d\u0000\u0000\u0782\u025b\u0001\u0000\u0000\u0000"+
+		"\u0783\u0784\u0005\u010e\u0000\u0000\u0784\u025d\u0001\u0000\u0000\u0000"+
+		"\u0785\u0786\u0005\u010f\u0000\u0000\u0786\u025f\u0001\u0000\u0000\u0000"+
+		"\u0787\u0788\u0005\u0110\u0000\u0000\u0788\u0261\u0001\u0000\u0000\u0000"+
+		"\u0789\u078a\u0005\u0111\u0000\u0000\u078a\u0263\u0001\u0000\u0000\u0000"+
+		"\u078b\u078c\u0005\u0112\u0000\u0000\u078c\u0265\u0001\u0000\u0000\u0000"+
+		"\u078d\u078e\u0005\u0113\u0000\u0000\u078e\u0267\u0001\u0000\u0000\u0000"+
+		"\u078f\u0790\u0005\u0114\u0000\u0000\u0790\u0269\u0001\u0000\u0000\u0000"+
+		"\u0791\u0792\u0005\u0115\u0000\u0000\u0792\u026b\u0001\u0000\u0000\u0000"+
+		"\u0793\u0794\u0005\u00e6\u0000\u0000\u0794\u026d\u0001\u0000\u0000\u0000"+
+		"\u0795\u0796\u0005!\u0000\u0000\u0796\u026f\u0001\u0000\u0000\u0000\u0797"+
+		"\u0798\u0005\u0119\u0000\u0000\u0798\u0271\u0001\u0000\u0000\u0000\u0799"+
+		"\u079c\u0003x<\u0000\u079a\u079d\u0003\u0156\u00ab\u0000\u079b\u079d\u0003"+
+		"\u0158\u00ac\u0000\u079c\u079a\u0001\u0000\u0000\u0000\u079c\u079b\u0001"+
+		"\u0000\u0000\u0000\u079d\u079e\u0001\u0000\u0000\u0000\u079e\u079f\u0003"+
+		"d2\u0000\u079f\u07a0\u0003\u027a\u013d\u0000\u07a0\u0273\u0001\u0000\u0000"+
+		"\u0000\u07a1\u07a2\u0005\u012c\u0000\u0000\u07a2\u0275\u0001\u0000\u0000"+
+		"\u0000\u07a3\u07a4\u0003\u0274\u013a\u0000\u07a4\u07ac\u0003\u0118\u008c"+
+		"\u0000\u07a5\u07ad\u0003\u026e\u0137\u0000\u07a6\u07a7\u0003\n\u0005\u0000"+
+		"\u07a7\u07a8\u0003R)\u0000\u07a8\u07a9\u0003\u0118\u008c\u0000\u07a9\u07aa"+
+		"\u0003\u026e\u0137\u0000\u07aa\u07ab\u0003\f\u0006\u0000\u07ab\u07ad\u0001"+
+		"\u0000\u0000\u0000\u07ac\u07a5\u0001\u0000\u0000\u0000\u07ac\u07a6\u0001"+
+		"\u0000\u0000\u0000\u07ad\u0277\u0001\u0000\u0000\u0000\u07ae\u07bb\u0005"+
+		"\u0011\u0000\u0000\u07af\u07b0\u0003\n\u0005\u0000\u07b0\u07b5\u0003\u0276"+
+		"\u013b\u0000\u07b1\u07b2\u0005\u0007\u0000\u0000\u07b2\u07b4\u0003\u0276"+
+		"\u013b\u0000\u07b3\u07b1\u0001\u0000\u0000\u0000\u07b4\u07b7\u0001\u0000"+
+		"\u0000\u0000\u07b5\u07b3\u0001\u0000\u0000\u0000\u07b5\u07b6\u0001\u0000"+
+		"\u0000\u0000\u07b6\u07b8\u0001\u0000\u0000\u0000\u07b7\u07b5\u0001\u0000"+
+		"\u0000\u0000\u07b8\u07b9\u0003\f\u0006\u0000\u07b9\u07bb\u0001\u0000\u0000"+
+		"\u0000\u07ba\u07ae\u0001\u0000\u0000\u0000\u07ba\u07af\u0001\u0000\u0000"+
+		"\u0000\u07bb\u0279\u0001\u0000\u0000\u0000\u07bc\u07c1\u0003\u015a\u00ad"+
+		"\u0000\u07bd\u07be\u0003\u015c\u00ae\u0000\u07be\u07bf\u0003\u0274\u013a"+
+		"\u0000\u07bf\u07c1\u0001\u0000\u0000\u0000\u07c0\u07bc\u0001\u0000\u0000"+
+		"\u0000\u07c0\u07bd\u0001\u0000\u0000\u0000\u07c1\u07cc\u0001\u0000\u0000"+
+		"\u0000\u07c2\u07c3\u0003\u015e\u00af\u0000\u07c3\u07c4\u0003\u0274\u013a"+
+		"\u0000\u07c4\u07cc\u0001\u0000\u0000\u0000\u07c5\u07c6\u0003\u0160\u00b0"+
+		"\u0000\u07c6\u07c7\u0003\u0274\u013a\u0000\u07c7\u07cc\u0001\u0000\u0000"+
+		"\u0000\u07c8\u07c9\u0003\u0162\u00b1\u0000\u07c9\u07ca\u0003\u0274\u013a"+
+		"\u0000\u07ca\u07cc\u0001\u0000\u0000\u0000\u07cb\u07c0\u0001\u0000\u0000"+
+		"\u0000\u07cb\u07c2\u0001\u0000\u0000\u0000\u07cb\u07c5\u0001\u0000\u0000"+
+		"\u0000\u07cb\u07c8\u0001\u0000\u0000\u0000\u07cc\u027b\u0001\u0000\u0000"+
+		"\u0000\u07cd\u07ce\u0003z=\u0000\u07ce\u07cf\u0003d2\u0000\u07cf\u07d0"+
+		"\u0003\u0010\b\u0000\u07d0\u07d1\u0003\u027e\u013f\u0000\u07d1\u027d\u0001"+
+		"\u0000\u0000\u0000\u07d2\u07d3\u0003\u0164\u00b2\u0000\u07d3\u07d4\u0003"+
+		"\u0280\u0140\u0000\u07d4\u07d5\u0005\u0125\u0000\u0000\u07d5\u07dd\u0001"+
+		"\u0000\u0000\u0000\u07d6\u07d7\u0003\u0166\u00b3\u0000\u07d7\u07d8\u0005"+
+		"\u0125\u0000\u0000\u07d8\u07dd\u0001\u0000\u0000\u0000\u07d9\u07da\u0003"+
+		"\u0168\u00b4\u0000\u07da\u07db\u0003\u0282\u0141\u0000\u07db\u07dd\u0001"+
+		"\u0000\u0000\u0000\u07dc\u07d2\u0001\u0000\u0000\u0000\u07dc\u07d6\u0001"+
+		"\u0000\u0000\u0000\u07dc\u07d9\u0001\u0000\u0000\u0000\u07dd\u027f\u0001"+
+		"\u0000\u0000\u0000\u07de\u07e1\u0003\u0166\u00b3\u0000\u07df\u07e1\u0003"+
+		"\u0126\u0093\u0000\u07e0\u07de\u0001\u0000\u0000\u0000\u07e0\u07df\u0001"+
+		"\u0000\u0000\u0000\u07e1\u0281\u0001\u0000\u0000\u0000\u07e2\u07e3\u0003"+
+		"\u0120\u0090\u0000\u07e3\u07e4\u0003\"\u0011\u0000\u07e4\u07e5\u0003\u001e"+
+		"\u000f\u0000\u07e5\u07e6\u0005\u0125\u0000\u0000\u07e6\u07e7\u0003\u0284"+
+		"\u0142\u0000\u07e7\u07f1\u0001\u0000\u0000\u0000\u07e8\u07e9\u0003\u0122"+
+		"\u0091\u0000\u07e9\u07ea\u0003\"\u0011\u0000\u07ea\u07f1\u0001\u0000\u0000"+
+		"\u0000\u07eb\u07ec\u0003\u0124\u0092\u0000\u07ec\u07ed\u0003\u0166\u00b3"+
+		"\u0000\u07ed\u07ee\u0003\"\u0011\u0000\u07ee\u07ef\u0005\u0125\u0000\u0000"+
+		"\u07ef\u07f1\u0001\u0000\u0000\u0000\u07f0\u07e2\u0001\u0000\u0000\u0000"+
+		"\u07f0\u07e8\u0001\u0000\u0000\u0000\u07f0\u07eb\u0001\u0000\u0000\u0000"+
+		"\u07f1\u0283\u0001\u0000\u0000\u0000\u07f2\u07f6\u0003\u0120\u0090\u0000"+
+		"\u07f3\u07f6\u0003\u0128\u0094\u0000\u07f4\u07f6\u0003\u012a\u0095\u0000"+
+		"\u07f5\u07f2\u0001\u0000\u0000\u0000\u07f5\u07f3\u0001\u0000\u0000\u0000"+
+		"\u07f5\u07f4\u0001\u0000\u0000\u0000\u07f6\u0285\u0001\u0000\u0000\u0000"+
+		"\u07f7\u07f8\u0003|>\u0000\u07f8\u07f9\u0003\u028c\u0146\u0000\u07f9\u0287"+
+		"\u0001\u0000\u0000\u0000\u07fa\u07fb\u0005\u012f\u0000\u0000\u07fb\u0289"+
+		"\u0001\u0000\u0000\u0000\u07fc\u07fd\u0005\u012b\u0000\u0000\u07fd\u028b"+
+		"\u0001\u0000\u0000\u0000\u07fe\u07ff\u0003\u0120\u0090\u0000\u07ff\u0800"+
+		"\u0003\u028a\u0145\u0000\u0800\u0801\u0003 \u0010\u0000\u0801\u080f\u0001"+
+		"\u0000\u0000\u0000\u0802\u0803\u0003\u0166\u00b3\u0000\u0803\u0804\u0003"+
+		"\u0288\u0144\u0000\u0804\u0805\u0003\u0292\u0149\u0000\u0805\u080f\u0001"+
+		"\u0000\u0000\u0000\u0806\u080f\u0003\u00aeW\u0000\u0807\u0808\u0003\u0122"+
+		"\u0091\u0000\u0808\u0809\u0003\u0288\u0144\u0000\u0809\u080f\u0001\u0000"+
+		"\u0000\u0000\u080a\u080b\u0003\u0126\u0093\u0000\u080b\u080c\u0003\u0288"+
+		"\u0144\u0000\u080c\u080d\u0003\u0294\u014a\u0000\u080d\u080f\u0001\u0000"+
+		"\u0000\u0000\u080e\u07fe\u0001\u0000\u0000\u0000\u080e\u0802\u0001\u0000"+
+		"\u0000\u0000\u080e\u0806\u0001\u0000\u0000\u0000\u080e\u0807\u0001\u0000"+
+		"\u0000\u0000\u080e\u080a\u0001\u0000\u0000\u0000\u080f\u028d\u0001\u0000"+
+		"\u0000\u0000\u0810\u0811\u0005\u012b\u0000\u0000\u0811\u028f\u0001\u0000"+
+		"\u0000\u0000\u0812\u0813\u0005\u012b\u0000\u0000\u0813\u0291\u0001\u0000"+
+		"\u0000\u0000\u0814\u0819\u0003\u012c\u0096\u0000\u0815\u0819\u0003\u012e"+
+		"\u0097\u0000\u0816\u0819\u0003\u0124\u0092\u0000\u0817\u0819\u0003\u0130"+
+		"\u0098\u0000\u0818\u0814\u0001\u0000\u0000\u0000\u0818\u0815\u0001\u0000"+
+		"\u0000\u0000\u0818\u0816\u0001\u0000\u0000\u0000\u0818\u0817\u0001\u0000"+
+		"\u0000\u0000\u0819\u0293\u0001\u0000\u0000\u0000\u081a\u081b\u0003\u0132"+
+		"\u0099\u0000\u081b\u081c\u0003\u0290\u0148\u0000\u081c\u0830\u0001\u0000"+
+		"\u0000\u0000\u081d\u081e\u0003\u012c\u0096\u0000\u081e\u081f\u0003\u0012"+
+		"\t\u0000\u081f\u0830\u0001\u0000\u0000\u0000\u0820\u0821\u0003\u0134\u009a"+
+		"\u0000\u0821\u0822\u0003 \u0010\u0000\u0822\u0830\u0001\u0000\u0000\u0000"+
+		"\u0823\u0824\u0003\u012e\u0097\u0000\u0824\u0825\u0003d2\u0000\u0825\u0830"+
+		"\u0001\u0000\u0000\u0000\u0826\u0827\u0003\u0136\u009b\u0000\u0827\u0828"+
+		"\u0003\u028e\u0147\u0000\u0828\u0830\u0001\u0000\u0000\u0000\u0829\u082a"+
+		"\u0003\u0124\u0092\u0000\u082a\u082b\u0003\u0012\t\u0000\u082b\u0830\u0001"+
+		"\u0000\u0000\u0000\u082c\u082d\u0003\u0130\u0098\u0000\u082d\u082e\u0003"+
+		"\u001c\u000e\u0000\u082e\u0830\u0001\u0000\u0000\u0000\u082f\u081a\u0001"+
+		"\u0000\u0000\u0000\u082f\u081d\u0001\u0000\u0000\u0000\u082f\u0820\u0001"+
+		"\u0000\u0000\u0000\u082f\u0823\u0001\u0000\u0000\u0000\u082f\u0826\u0001"+
+		"\u0000\u0000\u0000\u082f\u0829\u0001\u0000\u0000\u0000\u082f\u082c\u0001"+
+		"\u0000\u0000\u0000\u0830\u0295\u0001\u0000\u0000\u0000\u0831\u0839\u0003"+
+		"~?\u0000\u0832\u0834\u0003d2\u0000\u0833\u0835\u00034\u001a\u0000\u0834"+
+		"\u0833\u0001\u0000\u0000\u0000\u0834\u0835\u0001\u0000\u0000\u0000\u0835"+
+		"\u0837\u0001\u0000\u0000\u0000\u0836\u0838\u0003\u0298\u014c\u0000\u0837"+
+		"\u0836\u0001\u0000\u0000\u0000\u0837\u0838\u0001\u0000\u0000\u0000\u0838"+
+		"\u083a\u0001\u0000\u0000\u0000\u0839\u0832\u0001\u0000\u0000\u0000\u0839"+
+		"\u083a\u0001\u0000\u0000\u0000\u083a\u0297\u0001\u0000\u0000\u0000\u083b"+
+		"\u083c\u0005\u0121\u0000\u0000\u083c\u0299\u0001\u0000\u0000\u0000\u083d"+
+		"\u083e\u0003\u0080@\u0000\u083e\u083f\u0003\u029c\u014e\u0000\u083f\u0841"+
+		"\u0003\u02a2\u0151\u0000\u0840\u0842\u0003\u02a6\u0153\u0000\u0841\u0840"+
+		"\u0001\u0000\u0000\u0000\u0841\u0842\u0001\u0000\u0000\u0000\u0842\u029b"+
+		"\u0001\u0000\u0000\u0000\u0843\u0844\u0003\u015e\u00af\u0000\u0844\u0845"+
+		"\u0003\u000e\u0007\u0000\u0845\u0847\u0001\u0000\u0000\u0000\u0846\u0843"+
+		"\u0001\u0000\u0000\u0000\u0846\u0847\u0001\u0000\u0000\u0000\u0847\u0848"+
+		"\u0001\u0000\u0000\u0000\u0848\u0849\u0003\u029e\u014f\u0000\u0849\u084a"+
+		"\u0003\u02a0\u0150\u0000\u084a\u029d\u0001\u0000\u0000\u0000\u084b\u084c"+
+		"\u0003D\"\u0000\u084c\u084d\u0003F#\u0000\u084d\u084e\u0003H$\u0000\u084e"+
+		"\u029f\u0001\u0000\u0000\u0000\u084f\u0850\u0003D\"\u0000\u0850\u0851"+
+		"\u0003F#\u0000\u0851\u0852\u0003H$\u0000\u0852\u02a1\u0001\u0000\u0000"+
+		"\u0000\u0853\u0854\u0003\u0144\u00a2\u0000\u0854\u0855\u0003\u000e\u0007"+
+		"\u0000\u0855\u0857\u0001\u0000\u0000\u0000\u0856\u0853\u0001\u0000\u0000"+
+		"\u0000\u0856\u0857\u0001\u0000\u0000\u0000\u0857\u0858\u0001\u0000\u0000"+
+		"\u0000\u0858\u0859\u0003\u02a4\u0152\u0000\u0859\u02a3\u0001\u0000\u0000"+
+		"\u0000\u085a\u085b\u0003D\"\u0000\u085b\u085c\u0003F#\u0000\u085c\u085d"+
+		"\u0003H$\u0000\u085d\u02a5\u0001\u0000\u0000\u0000\u085e\u085f\u0003\u0138"+
+		"\u009c\u0000\u085f\u0860\u00038\u001c\u0000\u0860\u0866\u0001\u0000\u0000"+
+		"\u0000\u0861\u0864\u0003\u013a\u009d\u0000\u0862\u0864\u0003\u013c\u009e"+
+		"\u0000\u0863\u0861\u0001\u0000\u0000\u0000\u0863\u0862\u0001\u0000\u0000"+
+		"\u0000\u0864\u0866\u0001\u0000\u0000\u0000\u0865\u085e\u0001\u0000\u0000"+
+		"\u0000\u0865\u0863\u0001\u0000\u0000\u0000\u0866\u0868\u0001\u0000\u0000"+
+		"\u0000\u0867\u0869\u0003\u02a8\u0154\u0000\u0868\u0867\u0001\u0000\u0000"+
+		"\u0000\u0868\u0869\u0001\u0000\u0000\u0000\u0869\u02a7\u0001\u0000\u0000"+
+		"\u0000\u086a\u086e\u0003\u013e\u009f\u0000\u086b\u086e\u0003\u0140\u00a0"+
+		"\u0000\u086c\u086e\u0003\u0142\u00a1\u0000\u086d\u086a\u0001\u0000\u0000"+
+		"\u0000\u086d\u086b\u0001\u0000\u0000\u0000\u086d\u086c\u0001\u0000\u0000"+
+		"\u0000\u086e\u02a9\u0001\u0000\u0000\u0000\u086f\u0870\u0003\u0082A\u0000"+
+		"\u0870\u0871\u0003d2\u0000\u0871\u0872\u0005\u0125\u0000\u0000\u0872\u0873"+
+		"\u0003\u02ac\u0156\u0000\u0873\u0874\u0003\u02ae\u0157\u0000\u0874\u02ab"+
+		"\u0001\u0000\u0000\u0000\u0875\u0876\u0005\u012b\u0000\u0000\u0876\u02ad"+
+		"\u0001\u0000\u0000\u0000\u0877\u0878\u0003\u0002\u0001\u0000\u0878\u0879"+
+		"\u0003J%\u0000\u0879\u0880\u0001\u0000\u0000\u0000\u087a\u087b\u0003\u0146"+
+		"\u00a3\u0000\u087b\u087c\u0003d2\u0000\u087c\u087d\u0003\u015e\u00af\u0000"+
+		"\u087d\u087e\u0003d2\u0000\u087e\u0880\u0001\u0000\u0000\u0000\u087f\u0877"+
+		"\u0001\u0000\u0000\u0000\u087f\u087a\u0001\u0000\u0000\u0000\u0880\u02af"+
+		"\u0001\u0000\u0000\u0000\u0881\u0882\u0003\u0084B\u0000\u0882\u0883\u0003"+
+		"\u02ba\u015d\u0000\u0883\u02b1\u0001\u0000\u0000\u0000\u0884\u0885\u0005"+
+		"\u0121\u0000\u0000\u0885\u02b3\u0001\u0000\u0000\u0000\u0886\u0887\u0005"+
+		"\u0121\u0000\u0000\u0887\u02b5\u0001\u0000\u0000\u0000\u0888\u088d\u0005"+
+		"\u012b\u0000\u0000\u0889\u088a\u0005\b\u0000\u0000\u088a\u088c\u0005\u012b"+
+		"\u0000\u0000\u088b\u0889\u0001\u0000\u0000\u0000\u088c\u088f\u0001\u0000"+
+		"\u0000\u0000\u088d\u088b\u0001\u0000\u0000\u0000\u088d\u088e\u0001\u0000"+
+		"\u0000\u0000\u088e\u02b7\u0001\u0000\u0000\u0000\u088f\u088d\u0001\u0000"+
+		"\u0000\u0000\u0890\u0895\u0005\u012b\u0000\u0000\u0891\u0892\u0005\b\u0000"+
+		"\u0000\u0892\u0894\u0005\u012b\u0000\u0000\u0893\u0891\u0001\u0000\u0000"+
+		"\u0000\u0894\u0897\u0001\u0000\u0000\u0000\u0895\u0893\u0001\u0000\u0000"+
+		"\u0000\u0895\u0896\u0001\u0000\u0000\u0000\u0896\u02b9\u0001\u0000\u0000"+
+		"\u0000\u0897\u0895\u0001\u0000\u0000\u0000\u0898\u0899\u0003\u0166\u00b3"+
+		"\u0000\u0899\u089a\u0003\u02bc\u015e\u0000\u089a\u08a5\u0001\u0000\u0000"+
+		"\u0000\u089b\u089c\u0003\u0148\u00a4\u0000\u089c\u089d\u0003\u02be\u015f"+
+		"\u0000\u089d\u08a5\u0001\u0000\u0000\u0000\u089e\u089f\u0003\u014a\u00a5"+
+		"\u0000\u089f\u08a0\u0003\u02c8\u0164\u0000\u08a0\u08a5\u0001\u0000\u0000"+
+		"\u0000\u08a1\u08a2\u0003\u0122\u0091\u0000\u08a2\u08a3\u0003\u02ca\u0165"+
+		"\u0000\u08a3\u08a5\u0001\u0000\u0000\u0000\u08a4\u0898\u0001\u0000\u0000"+
+		"\u0000\u08a4\u089b\u0001\u0000\u0000\u0000\u08a4\u089e\u0001\u0000\u0000"+
+		"\u0000\u08a4\u08a1\u0001\u0000\u0000\u0000\u08a5\u02bb\u0001\u0000\u0000"+
+		"\u0000\u08a6\u08a7\u0003\u014c\u00a6\u0000\u08a7\u08a8\u0003J%\u0000\u08a8"+
+		"\u08a9\u0003\u02b8\u015c\u0000\u08a9\u08aa\u0005\u0125\u0000\u0000\u08aa"+
+		"\u08b6\u0001\u0000\u0000\u0000\u08ab\u08ac\u0003\u014e\u00a7\u0000\u08ac"+
+		"\u08ad\u0003d2\u0000\u08ad\u08ae\u0003\u02b6\u015b\u0000\u08ae\u08af\u0005"+
+		"\u0125\u0000\u0000\u08af\u08b6\u0001\u0000\u0000\u0000\u08b0\u08b1\u0003"+
+		"\u0150\u00a8\u0000\u08b1\u08b2\u0003B!\u0000\u08b2\u08b3\u00030\u0018"+
+		"\u0000\u08b3\u08b4\u0005\u0125\u0000\u0000\u08b4\u08b6\u0001\u0000\u0000"+
+		"\u0000\u08b5\u08a6\u0001\u0000\u0000\u0000\u08b5\u08ab\u0001\u0000\u0000"+
+		"\u0000\u08b5\u08b0\u0001\u0000\u0000\u0000\u08b6\u02bd\u0001\u0000\u0000"+
+		"\u0000\u08b7\u08b8\u0003\u014c\u00a6\u0000\u08b8\u08b9\u0003J%\u0000\u08b9"+
+		"\u08ba\u0003:\u001d\u0000\u08ba\u08c4\u0001\u0000\u0000\u0000\u08bb\u08bc"+
+		"\u0003\u014e\u00a7\u0000\u08bc\u08bd\u0003d2\u0000\u08bd\u08be\u0003<"+
+		"\u001e\u0000\u08be\u08c4\u0001\u0000\u0000\u0000\u08bf\u08c0\u0003\u0150"+
+		"\u00a8\u0000\u08c0\u08c1\u0003@ \u0000\u08c1\u08c2\u0003 \u0010\u0000"+
+		"\u08c2\u08c4\u0001\u0000\u0000\u0000\u08c3\u08b7\u0001\u0000\u0000\u0000"+
+		"\u08c3\u08bb\u0001\u0000\u0000\u0000\u08c3\u08bf\u0001\u0000\u0000\u0000"+
+		"\u08c4\u02bf\u0001\u0000\u0000\u0000\u08c5\u08c6\u0003\u014c\u00a6\u0000"+
+		"\u08c6\u08c7\u0003J%\u0000\u08c7\u08c8\u0003\u02b8\u015c\u0000\u08c8\u08c9"+
+		"\u0003\u02b2\u0159\u0000\u08c9\u08ca\u0003\u02b4\u015a\u0000\u08ca\u08d8"+
+		"\u0001\u0000\u0000\u0000\u08cb\u08cc\u0003\u014e\u00a7\u0000\u08cc\u08cd"+
+		"\u0003d2\u0000\u08cd\u08ce\u0003\u02b6\u015b\u0000\u08ce\u08cf\u0003\u02b2"+
+		"\u0159\u0000\u08cf\u08d0\u0003\u02b4\u015a\u0000\u08d0\u08d8\u0001\u0000"+
+		"\u0000\u0000\u08d1\u08d2\u0003\u0150\u00a8\u0000\u08d2\u08d3\u0003@ \u0000"+
+		"\u08d3\u08d4\u00030\u0018\u0000\u08d4\u08d5\u0003\u02b2\u0159\u0000\u08d5"+
+		"\u08d6\u0003\u02b4\u015a\u0000\u08d6\u08d8\u0001\u0000\u0000\u0000\u08d7"+
+		"\u08c5\u0001\u0000\u0000\u0000\u08d7\u08cb\u0001\u0000\u0000\u0000\u08d7"+
+		"\u08d1\u0001\u0000\u0000\u0000\u08d8\u02c1\u0001\u0000\u0000\u0000\u08d9"+
+		"\u08da\u0003\u014c\u00a6\u0000\u08da\u08db\u0003J%\u0000\u08db\u08dc\u0003"+
+		"\u02b8\u015c\u0000\u08dc\u08e6\u0001\u0000\u0000\u0000\u08dd\u08de\u0003"+
+		"\u014e\u00a7\u0000\u08de\u08df\u0003d2\u0000\u08df\u08e0\u0003\u02b6\u015b"+
+		"\u0000\u08e0\u08e6\u0001\u0000\u0000\u0000\u08e1\u08e2\u0003\u0150\u00a8"+
+		"\u0000\u08e2\u08e3\u0003@ \u0000\u08e3\u08e4\u00030\u0018\u0000\u08e4"+
+		"\u08e6\u0001\u0000\u0000\u0000\u08e5\u08d9\u0001\u0000\u0000\u0000\u08e5"+
+		"\u08dd\u0001\u0000\u0000\u0000\u08e5\u08e1\u0001\u0000\u0000\u0000\u08e6"+
+		"\u02c3\u0001\u0000\u0000\u0000\u08e7\u08e8\u0003\u015e\u00af\u0000\u08e8"+
+		"\u08e9\u0003\u02c2\u0161\u0000\u08e9\u08f1\u0001\u0000\u0000\u0000\u08ea"+
+		"\u08eb\u0003\u0152\u00a9\u0000\u08eb\u08ec\u0003\u02c0\u0160\u0000\u08ec"+
+		"\u08f1\u0001\u0000\u0000\u0000\u08ed\u08ee\u0003\u0124\u0092\u0000\u08ee"+
+		"\u08ef\u0003 \u0010\u0000\u08ef\u08f1\u0001\u0000\u0000\u0000\u08f0\u08e7"+
+		"\u0001\u0000\u0000\u0000\u08f0\u08ea\u0001\u0000\u0000\u0000\u08f0\u08ed"+
+		"\u0001\u0000\u0000\u0000\u08f1\u02c5\u0001\u0000\u0000\u0000\u08f2\u08f3"+
+		"\u0003\u0206\u0103\u0000\u08f3\u08f4\u0003\u02c4\u0162\u0000\u08f4\u0903"+
+		"\u0001\u0000\u0000\u0000\u08f5\u08f6\u0003\u01de\u00ef\u0000\u08f6\u08f7"+
+		"\u0003\u0012\t\u0000\u08f7\u08f8\u0003\u02c4\u0162\u0000\u08f8\u0903\u0001"+
+		"\u0000\u0000\u0000\u08f9\u08fa\u0003\u0148\u00a4\u0000\u08fa\u08fb\u0003"+
+		"\u02c4\u0162\u0000\u08fb\u0903\u0001\u0000\u0000\u0000\u08fc\u08fd\u0003"+
+		"\u0230\u0118\u0000\u08fd\u08fe\u0003\u02c4\u0162\u0000\u08fe\u0903\u0001"+
+		"\u0000\u0000\u0000\u08ff\u0900\u0003\u0126\u0093\u0000\u0900\u0901\u0003"+
+		"\u02c4\u0162\u0000\u0901\u0903\u0001\u0000\u0000\u0000\u0902\u08f2\u0001"+
+		"\u0000\u0000\u0000\u0902\u08f5\u0001\u0000\u0000\u0000\u0902\u08f9\u0001"+
+		"\u0000\u0000\u0000\u0902\u08fc\u0001\u0000\u0000\u0000\u0902\u08ff\u0001"+
+		"\u0000\u0000\u0000\u0903\u02c7\u0001\u0000\u0000\u0000\u0904\u0905\u0003"+
+		"\u014c\u00a6\u0000\u0905\u0906\u0003J%\u0000\u0906\u0907\u0003\u02b8\u015c"+
+		"\u0000\u0907\u0908\u0003\u02c6\u0163\u0000\u0908\u0914\u0001\u0000\u0000"+
+		"\u0000\u0909\u090a\u0003\u014e\u00a7\u0000\u090a\u090b\u0003d2\u0000\u090b"+
+		"\u090c\u0003\u02b6\u015b\u0000\u090c\u090d\u0003\u02c6\u0163\u0000\u090d"+
+		"\u0914\u0001\u0000\u0000\u0000\u090e\u090f\u0003\u0150\u00a8\u0000\u090f"+
+		"\u0910\u0003@ \u0000\u0910\u0911\u00030\u0018\u0000\u0911\u0912\u0003"+
+		"\u02c6\u0163\u0000\u0912\u0914\u0001\u0000\u0000\u0000\u0913\u0904\u0001"+
+		"\u0000\u0000\u0000\u0913\u0909\u0001\u0000\u0000\u0000\u0913\u090e\u0001"+
+		"\u0000\u0000\u0000\u0914\u02c9\u0001\u0000\u0000\u0000\u0915\u0916\u0003"+
+		"\u014c\u00a6\u0000\u0916\u0917\u0003J%\u0000\u0917\u0918\u0003\u02b8\u015c"+
+		"\u0000\u0918\u0922\u0001\u0000\u0000\u0000\u0919\u091a\u0003\u014e\u00a7"+
+		"\u0000\u091a\u091b\u0003d2\u0000\u091b\u091c\u0003\u02b6\u015b\u0000\u091c"+
+		"\u0922\u0001\u0000\u0000\u0000\u091d\u091e\u0003\u0150\u00a8\u0000\u091e"+
+		"\u091f\u0003B!\u0000\u091f\u0920\u00030\u0018\u0000\u0920\u0922\u0001"+
+		"\u0000\u0000\u0000\u0921\u0915\u0001\u0000\u0000\u0000\u0921\u0919\u0001"+
+		"\u0000\u0000\u0000\u0921\u091d\u0001\u0000\u0000\u0000\u0922\u02cb\u0001"+
+		"\u0000\u0000\u0000\u0923\u0924\u0003\u0086C\u0000\u0924\u0925\u0003\u02d4"+
+		"\u016a\u0000\u0925\u02cd\u0001\u0000\u0000\u0000\u0926\u0929\u0003\u016a"+
+		"\u00b5\u0000\u0927\u0929\u0003\u016c\u00b6\u0000\u0928\u0926\u0001\u0000"+
+		"\u0000\u0000\u0928\u0927\u0001\u0000\u0000\u0000\u0929\u02cf\u0001\u0000"+
+		"\u0000\u0000\u092a\u092b\u0005\u012d\u0000\u0000\u092b\u02d1\u0001\u0000"+
+		"\u0000\u0000\u092c\u092d\u0003\u016e\u00b7\u0000\u092d\u092e\u0003\u02d0"+
+		"\u0168\u0000\u092e\u0935\u0001\u0000\u0000\u0000\u092f\u0930\u0003\u0170"+
+		"\u00b8\u0000\u0930\u0931\u0003\u02d0\u0168\u0000\u0931\u0935\u0001\u0000"+
+		"\u0000\u0000\u0932\u0935\u0003\u0172\u00b9\u0000\u0933\u0935\u0003\u0174"+
+		"\u00ba\u0000\u0934\u092c\u0001\u0000\u0000\u0000\u0934\u092f\u0001\u0000"+
+		"\u0000\u0000\u0934\u0932\u0001\u0000\u0000\u0000\u0934\u0933\u0001\u0000"+
+		"\u0000\u0000\u0935\u02d3\u0001\u0000\u0000\u0000\u0936\u0937\u0003\u0176"+
+		"\u00bb\u0000\u0937\u0938\u0003\u02d0\u0168\u0000\u0938\u0941\u0001\u0000"+
+		"\u0000\u0000\u0939\u093a\u0003\u016c\u00b6\u0000\u093a\u093b\u0003\u02d0"+
+		"\u0168\u0000\u093b\u093c\u0003\u02d2\u0169\u0000\u093c\u0941\u0001\u0000"+
+		"\u0000\u0000\u093d\u093e\u0003\u00aeW\u0000\u093e\u093f\u0003\u02ce\u0167"+
+		"\u0000\u093f\u0941\u0001\u0000\u0000\u0000\u0940\u0936\u0001\u0000\u0000"+
+		"\u0000\u0940\u0939\u0001\u0000\u0000\u0000\u0940\u093d\u0001\u0000\u0000"+
+		"\u0000\u0941\u02d5\u0001\u0000\u0000\u0000\u0942\u0943\u0003\u0088D\u0000"+
+		"\u0943\u0944\u0003\u02d8\u016c\u0000\u0944\u02d7\u0001\u0000\u0000\u0000"+
+		"\u0945\u0946\u0003\u009cN\u0000\u0946\u0947\u0003\u02d0\u0168\u0000\u0947"+
+		"\u094b\u0001\u0000\u0000\u0000\u0948\u094b\u0003\u0178\u00bc\u0000\u0949"+
+		"\u094b\u0003\u017a\u00bd\u0000\u094a\u0945\u0001\u0000\u0000\u0000\u094a"+
+		"\u0948\u0001\u0000\u0000\u0000\u094a\u0949\u0001\u0000\u0000\u0000\u094b"+
+		"\u02d9\u0001\u0000\u0000\u0000\u094c\u094d\u0003\u008aE\u0000\u094d\u094e"+
+		"\u0003N\'\u0000\u094e\u02db\u0001\u0000\u0000\u0000\u094f\u0950\u0003"+
+		"\u008cF\u0000\u0950\u0951\u0003\u02de\u016f\u0000\u0951\u02dd\u0001\u0000"+
+		"\u0000\u0000\u0952\u0957\u0003\u017e\u00bf\u0000\u0953\u0957\u0003\u0180"+
+		"\u00c0\u0000\u0954\u0957\u0003\u0142\u00a1\u0000\u0955\u0957\u0003\u0182"+
+		"\u00c1\u0000\u0956\u0952\u0001\u0000\u0000\u0000\u0956\u0953\u0001\u0000"+
+		"\u0000\u0000\u0956\u0954\u0001\u0000\u0000\u0000\u0956\u0955\u0001\u0000"+
+		"\u0000\u0000\u0957\u02df\u0001\u0000\u0000\u0000\u0958\u0959\u0003\u008e"+
+		"G\u0000\u0959\u095a\u0003\u02e2\u0171\u0000\u095a\u02e1\u0001\u0000\u0000"+
+		"\u0000\u095b\u0960\u0003~?\u0000\u095c\u095e\u0003d2\u0000\u095d\u095f"+
+		"\u0003\u02e4\u0172\u0000\u095e\u095d\u0001\u0000\u0000\u0000\u095e\u095f"+
+		"\u0001\u0000\u0000\u0000\u095f\u0961\u0001\u0000\u0000\u0000\u0960\u095c"+
+		"\u0001\u0000\u0000\u0000\u0960\u0961\u0001\u0000\u0000\u0000\u0961\u096e"+
+		"\u0001\u0000\u0000\u0000\u0962\u0963\u0003\u00a2Q\u0000\u0963\u0964\u0003"+
+		"d2\u0000\u0964\u0965\u0003\u02e4\u0172\u0000\u0965\u0966\u0003\u02e6\u0173"+
+		"\u0000\u0966\u096c\u0001\u0000\u0000\u0000\u0967\u0968\u0003\u017c\u00be"+
+		"\u0000\u0968\u0969\u0003\u02ea\u0175\u0000\u0969\u096a\u0003\u02ec\u0176"+
+		"\u0000\u096a\u096c\u0001\u0000\u0000\u0000\u096b\u0962\u0001\u0000\u0000"+
+		"\u0000\u096b\u0967\u0001\u0000\u0000\u0000\u096c\u096e\u0001\u0000\u0000"+
+		"\u0000\u096d\u095b\u0001\u0000\u0000\u0000\u096d\u096b\u0001\u0000\u0000"+
+		"\u0000\u096e\u02e3\u0001\u0000\u0000\u0000\u096f\u0970\u0005\u012f\u0000"+
+		"\u0000\u0970\u02e5\u0001\u0000\u0000\u0000\u0971\u0972\u0005\u0121\u0000"+
+		"\u0000\u0972\u02e7\u0001\u0000\u0000\u0000\u0973\u0974\u0005\u0121\u0000"+
+		"\u0000\u0974\u02e9\u0001\u0000\u0000\u0000\u0975\u0976\u0005\u0121\u0000"+
+		"\u0000\u0976\u02eb\u0001\u0000\u0000\u0000\u0977\u0978\u0005!\u0000\u0000"+
+		"\u0978\u02ed\u0001\u0000\u0000\u0000\u0979\u097a\u0003\u0090H\u0000\u097a"+
+		"\u097b\u0003d2\u0000\u097b\u097c\u0003\u02f2\u0179\u0000\u097c\u097d\u0003"+
+		"\u02f0\u0178\u0000\u097d\u02ef\u0001\u0000\u0000\u0000\u097e\u097f\u0005"+
+		"\u0121\u0000\u0000\u097f\u02f1\u0001\u0000\u0000\u0000\u0980\u0981\u0005"+
+		"\u012f\u0000\u0000\u0981\u02f3\u0001\u0000\u0000\u0000\u0982\u0983\u0003"+
+		"\u0092I\u0000\u0983\u0984\u0003\u0310\u0188\u0000\u0984\u02f5\u0001\u0000"+
+		"\u0000\u0000\u0985\u0988\u0003\u0184\u00c2\u0000\u0986\u0988\u0003\u0186"+
+		"\u00c3\u0000\u0987\u0985\u0001\u0000\u0000\u0000\u0987\u0986\u0001\u0000"+
+		"\u0000\u0000\u0988\u02f7\u0001\u0000\u0000\u0000\u0989\u098a\u0005%\u0000"+
+		"\u0000\u098a\u02f9\u0001\u0000\u0000\u0000\u098b\u098e\u0003\u0188\u00c4"+
+		"\u0000\u098c\u098e\u0003\u013a\u009d\u0000\u098d\u098b\u0001\u0000\u0000"+
+		"\u0000\u098d\u098c\u0001\u0000\u0000\u0000\u098e\u02fb\u0001\u0000\u0000"+
+		"\u0000\u098f\u0992\u0003\u012c\u0096\u0000\u0990\u0992\u0003\u0124\u0092"+
+		"\u0000\u0991\u098f\u0001\u0000\u0000\u0000\u0991\u0990\u0001\u0000\u0000"+
+		"\u0000\u0992\u02fd\u0001\u0000\u0000\u0000\u0993\u0994\u0003\u014c\u00a6"+
+		"\u0000\u0994\u0995\u0003J%\u0000\u0995\u0996\u00030\u0018\u0000\u0996"+
+		"\u0997\u0003\u0310\u0188\u0000\u0997\u09a3\u0001\u0000\u0000\u0000\u0998"+
+		"\u0999\u0003\u014e\u00a7\u0000\u0999\u099a\u0003d2\u0000\u099a\u099b\u0003"+
+		"0\u0018\u0000\u099b\u099c\u0003\u0310\u0188\u0000\u099c\u09a3\u0001\u0000"+
+		"\u0000\u0000\u099d\u099e\u0003\u0150\u00a8\u0000\u099e\u099f\u0003@ \u0000"+
+		"\u099f\u09a0\u00030\u0018\u0000\u09a0\u09a1\u0003\u0310\u0188\u0000\u09a1"+
+		"\u09a3\u0001\u0000\u0000\u0000\u09a2\u0993\u0001\u0000\u0000\u0000\u09a2"+
+		"\u0998\u0001\u0000\u0000\u0000\u09a2\u099d\u0001\u0000\u0000\u0000\u09a3"+
+		"\u02ff\u0001\u0000\u0000\u0000\u09a4\u09a5\u0003\u018a\u00c5\u0000\u09a5"+
+		"\u09a6\u0003J%\u0000\u09a6\u09a7\u0003\u001a\r\u0000\u09a7\u09a8\u0003"+
+		"\u0310\u0188\u0000\u09a8\u09d2\u0001\u0000\u0000\u0000\u09a9\u09aa\u0003"+
+		"\u014c\u00a6\u0000\u09aa\u09ab\u0003J%\u0000\u09ab\u09ac\u00038\u001c"+
+		"\u0000\u09ac\u09ad\u0003\u0310\u0188\u0000\u09ad\u09d2\u0001\u0000\u0000"+
+		"\u0000\u09ae\u09af\u0003\u018c\u00c6\u0000\u09af\u09b0\u0003J%\u0000\u09b0"+
+		"\u09b1\u0003J%\u0000\u09b1\u09b2\u0003J%\u0000\u09b2\u09b3\u0003\u02fa"+
+		"\u017d\u0000\u09b3\u09b4\u0003\u0310\u0188\u0000\u09b4\u09d2\u0001\u0000"+
+		"\u0000\u0000\u09b5\u09b6\u0003\u0084B\u0000\u09b6\u09b7\u0003\u02fe\u017f"+
+		"\u0000\u09b7\u09d2\u0001\u0000\u0000\u0000\u09b8\u09b9\u0003\u018e\u00c7"+
+		"\u0000\u09b9\u09ba\u0003\u000e\u0007\u0000\u09ba\u09bb\u0003\u0310\u0188"+
+		"\u0000\u09bb\u09d2\u0001\u0000\u0000\u0000\u09bc\u09bd\u0003\u014e\u00a7"+
+		"\u0000\u09bd\u09be\u0003d2\u0000\u09be\u09bf\u0003\u0310\u0188\u0000\u09bf"+
+		"\u09d2\u0001\u0000\u0000\u0000\u09c0\u09c1\u0003\u0190\u00c8\u0000\u09c1"+
+		"\u09c2\u0003J%\u0000\u09c2\u09c3\u0003\u0310\u0188\u0000\u09c3\u09d2\u0001"+
+		"\u0000\u0000\u0000\u09c4\u09c6\u0003\u0192\u00c9\u0000\u09c5\u09c7\u0003"+
+		"\u0004\u0002\u0000\u09c6\u09c5\u0001\u0000\u0000\u0000\u09c6\u09c7\u0001"+
+		"\u0000\u0000\u0000\u09c7\u09c8\u0001\u0000\u0000\u0000\u09c8\u09c9\u0003"+
+		"b1\u0000\u09c9\u09ca\u0003\u0310\u0188\u0000\u09ca\u09d2\u0001\u0000\u0000"+
+		"\u0000\u09cb\u09cc\u0003\u0194\u00ca\u0000\u09cc\u09cd\u0003d2\u0000\u09cd"+
+		"\u09ce\u0003>\u001f\u0000\u09ce\u09cf\u0003\u0302\u0181\u0000\u09cf\u09d0"+
+		"\u0003\u0310\u0188\u0000\u09d0\u09d2\u0001\u0000\u0000\u0000\u09d1\u09a4"+
+		"\u0001\u0000\u0000\u0000\u09d1\u09a9\u0001\u0000\u0000\u0000\u09d1\u09ae"+
+		"\u0001\u0000\u0000\u0000\u09d1\u09b5\u0001\u0000\u0000\u0000\u09d1\u09b8"+
+		"\u0001\u0000\u0000\u0000\u09d1\u09bc\u0001\u0000\u0000\u0000\u09d1\u09c0"+
+		"\u0001\u0000\u0000\u0000\u09d1\u09c4\u0001\u0000\u0000\u0000\u09d1\u09cb"+
+		"\u0001\u0000\u0000\u0000\u09d2\u0301\u0001\u0000\u0000\u0000\u09d3\u09d8"+
+		"\u0003\u0114\u008a\u0000\u09d4\u09d8\u0003\u0116\u008b\u0000\u09d5\u09d8"+
+		"\u0003\u0118\u008c\u0000\u09d6\u09d8\u0003\u011c\u008e\u0000\u09d7\u09d3"+
+		"\u0001\u0000\u0000\u0000\u09d7\u09d4\u0001\u0000\u0000\u0000\u09d7\u09d5"+
+		"\u0001\u0000\u0000\u0000\u09d7\u09d6\u0001\u0000\u0000\u0000\u09d8\u09d9"+
+		"\u0001\u0000\u0000\u0000\u09d9\u09da\u0003d2\u0000\u09da\u09db\u0003>"+
+		"\u001f\u0000\u09db\u09e3\u0001\u0000\u0000\u0000\u09dc\u09dd\u0003\u0196"+
+		"\u00cb\u0000\u09dd\u09de\u0003\u0012\t\u0000\u09de\u09e1\u0001\u0000\u0000"+
+		"\u0000\u09df\u09e1\u0003\u0014\n\u0000\u09e0\u09dc\u0001\u0000\u0000\u0000"+
+		"\u09e0\u09df\u0001\u0000\u0000\u0000\u09e1\u09e3\u0001\u0000\u0000\u0000"+
+		"\u09e2\u09d7\u0001\u0000\u0000\u0000\u09e2\u09e0\u0001\u0000\u0000\u0000"+
+		"\u09e3\u0303\u0001\u0000\u0000\u0000\u09e4\u09ed\u0003\u0198\u00cc\u0000"+
+		"\u09e5\u09ed\u0003\u019a\u00cd\u0000\u09e6\u09ed\u0003\u019c\u00ce\u0000"+
+		"\u09e7\u09ed\u0003\u019e\u00cf\u0000\u09e8\u09ed\u0003\u01a0\u00d0\u0000"+
+		"\u09e9\u09ed\u0003\u01a2\u00d1\u0000\u09ea\u09ed\u0003\u01a4\u00d2\u0000"+
+		"\u09eb\u09ed\u0003\u01a6\u00d3\u0000\u09ec\u09e4\u0001\u0000\u0000\u0000"+
+		"\u09ec\u09e5\u0001\u0000\u0000\u0000\u09ec\u09e6\u0001\u0000\u0000\u0000"+
+		"\u09ec\u09e7\u0001\u0000\u0000\u0000\u09ec\u09e8\u0001\u0000\u0000\u0000"+
+		"\u09ec\u09e9\u0001\u0000\u0000\u0000\u09ec\u09ea\u0001\u0000\u0000\u0000"+
+		"\u09ec\u09eb\u0001\u0000\u0000\u0000\u09ed\u0305\u0001\u0000\u0000\u0000"+
+		"\u09ee\u09f3\u0003\u01a8\u00d4\u0000\u09ef\u09f3\u0003\u01aa\u00d5\u0000"+
+		"\u09f0\u09f3\u0003\u01ac\u00d6\u0000\u09f1\u09f3\u0003\u01ae\u00d7\u0000"+
+		"\u09f2\u09ee\u0001\u0000\u0000\u0000\u09f2\u09ef\u0001\u0000\u0000\u0000"+
+		"\u09f2\u09f0\u0001\u0000\u0000\u0000\u09f2\u09f1\u0001\u0000\u0000\u0000"+
+		"\u09f3\u0307\u0001\u0000\u0000\u0000\u09f4\u09f5\u0003\u0154\u00aa\u0000"+
+		"\u09f5\u09f6\u0003d2\u0000\u09f6\u09fb\u0001\u0000\u0000\u0000\u09f7\u09f8"+
+		"\u0003\u01b0\u00d8\u0000\u09f8\u09f9\u0003\u0306\u0183\u0000\u09f9\u09fb"+
+		"\u0001\u0000\u0000\u0000\u09fa\u09f4\u0001\u0000\u0000\u0000\u09fa\u09f7"+
+		"\u0001\u0000\u0000\u0000\u09fb\u0309\u0001\u0000\u0000\u0000\u09fc\u09fd"+
+		"\u0003\u014c\u00a6\u0000\u09fd\u09fe\u0003J%\u0000\u09fe\u09ff\u00030"+
+		"\u0018\u0000\u09ff\u0a00\u00032\u0019\u0000\u0a00\u0a01\u0005\u0125\u0000"+
+		"\u0000\u0a01\u0a17\u0001\u0000\u0000\u0000\u0a02\u0a03\u0003|>\u0000\u0a03"+
+		"\u0a04\u0003\u0288\u0144\u0000\u0a04\u0a05\u0003\u02fc\u017e\u0000\u0a05"+
+		"\u0a17\u0001\u0000\u0000\u0000\u0a06\u0a07\u0003\u014e\u00a7\u0000\u0a07"+
+		"\u0a08\u0003d2\u0000\u0a08\u0a09\u00030\u0018\u0000\u0a09\u0a0a\u0003"+
+		"2\u0019\u0000\u0a0a\u0a0b\u0005\u0125\u0000\u0000\u0a0b\u0a17\u0001\u0000"+
+		"\u0000\u0000\u0a0c\u0a0d\u0003\u0194\u00ca\u0000\u0a0d\u0a0e\u0003d2\u0000"+
+		"\u0a0e\u0a0f\u0003>\u001f\u0000\u0a0f\u0a17\u0001\u0000\u0000\u0000\u0a10"+
+		"\u0a11\u0003\u0150\u00a8\u0000\u0a11\u0a12\u0003@ \u0000\u0a12\u0a13\u0003"+
+		"0\u0018\u0000\u0a13\u0a14\u00032\u0019\u0000\u0a14\u0a15\u0005\u0125\u0000"+
+		"\u0000\u0a15\u0a17\u0001\u0000\u0000\u0000\u0a16\u09fc\u0001\u0000\u0000"+
+		"\u0000\u0a16\u0a02\u0001\u0000\u0000\u0000\u0a16\u0a06\u0001\u0000\u0000"+
+		"\u0000\u0a16\u0a0c\u0001\u0000\u0000\u0000\u0a16\u0a10\u0001\u0000\u0000"+
+		"\u0000\u0a17\u030b\u0001\u0000\u0000\u0000\u0a18\u0a1b\u0003\u01b2\u00d9"+
+		"\u0000\u0a19\u0a1b\u0003\u01b4\u00da\u0000\u0a1a\u0a18\u0001\u0000\u0000"+
+		"\u0000\u0a1a\u0a19\u0001\u0000\u0000\u0000\u0a1b\u0a1c\u0001\u0000\u0000"+
+		"\u0000\u0a1c\u0a1d\u0003\u030a\u0185\u0000\u0a1d\u030d\u0001\u0000\u0000"+
+		"\u0000\u0a1e\u0a1f\u0003J%\u0000\u0a1f\u0a20\u0003\u0310\u0188\u0000\u0a20"+
+		"\u0a27\u0001\u0000\u0000\u0000\u0a21\u0a22\u0003\u014e\u00a7\u0000\u0a22"+
+		"\u0a23\u0003d2\u0000\u0a23\u0a24\u0003\u02f6\u017b\u0000\u0a24\u0a25\u0003"+
+		"\u0310\u0188\u0000\u0a25\u0a27\u0001\u0000\u0000\u0000\u0a26\u0a1e\u0001"+
+		"\u0000\u0000\u0000\u0a26\u0a21\u0001\u0000\u0000\u0000\u0a27\u030f\u0001"+
+		"\u0000\u0000\u0000\u0a28\u0a29\u0003\u01b6\u00db\u0000\u0a29\u0a2a\u0003"+
+		"\u02f8\u017c\u0000\u0a2a\u0a2b\u0003\u0310\u0188\u0000\u0a2b\u0a62\u0001"+
+		"\u0000\u0000\u0000\u0a2c\u0a2d\u0003\u01b8\u00dc\u0000\u0a2d\u0a2e\u0003"+
+		"\u02f6\u017b\u0000\u0a2e\u0a2f\u0003\u0310\u0188\u0000\u0a2f\u0a62\u0001"+
+		"\u0000\u0000\u0000\u0a30\u0a33\u0003\u0154\u00aa\u0000\u0a31\u0a33\u0003"+
+		"\u0002\u0001\u0000\u0a32\u0a30\u0001\u0000\u0000\u0000\u0a32\u0a31\u0001"+
+		"\u0000\u0000\u0000\u0a33\u0a34\u0001\u0000\u0000\u0000\u0a34\u0a35\u0003"+
+		"d2\u0000\u0a35\u0a36\u0003\u0310\u0188\u0000\u0a36\u0a62\u0001\u0000\u0000"+
+		"\u0000\u0a37\u0a38\u0003\u022e\u0117\u0000\u0a38\u0a39\u0003\u030e\u0187"+
+		"\u0000\u0a39\u0a3a\u0003\u0310\u0188\u0000\u0a3a\u0a62\u0001\u0000\u0000"+
+		"\u0000\u0a3b\u0a3e\u0003\u01ba\u00dd\u0000\u0a3c\u0a3e\u0003\u01bc\u00de"+
+		"\u0000\u0a3d\u0a3b\u0001\u0000\u0000\u0000\u0a3d\u0a3c\u0001\u0000\u0000"+
+		"\u0000\u0a3e\u0a3f\u0001\u0000\u0000\u0000\u0a3f\u0a40\u0003\u0300\u0180"+
+		"\u0000\u0a40\u0a41\u0003\u0310\u0188\u0000\u0a41\u0a62\u0001\u0000\u0000"+
+		"\u0000\u0a42\u0a43\u0003\u01be\u00df\u0000\u0a43\u0a44\u0003\u000e\u0007"+
+		"\u0000\u0a44\u0a45\u0003\u0310\u0188\u0000\u0a45\u0a62\u0001\u0000\u0000"+
+		"\u0000\u0a46\u0a47\u0003\u01c0\u00e0\u0000\u0a47\u0a48\u0003\u0304\u0182"+
+		"\u0000\u0a48\u0a49\u0003\u0310\u0188\u0000\u0a49\u0a62\u0001\u0000\u0000"+
+		"\u0000\u0a4a\u0a4d\u0003\u01c2\u00e1\u0000\u0a4b\u0a4e\u0003J%\u0000\u0a4c"+
+		"\u0a4e\u0003\u0308\u0184\u0000\u0a4d\u0a4b\u0001\u0000\u0000\u0000\u0a4d"+
+		"\u0a4c\u0001\u0000\u0000\u0000\u0a4e\u0a4f\u0001\u0000\u0000\u0000\u0a4f"+
+		"\u0a50\u0003\u0310\u0188\u0000\u0a50\u0a62\u0001\u0000\u0000\u0000\u0a51"+
+		"\u0a52\u0003\u01c4\u00e2\u0000\u0a52\u0a53\u0003\u0154\u00aa\u0000\u0a53"+
+		"\u0a54\u0003d2\u0000\u0a54\u0a55\u0003\u0310\u0188\u0000\u0a55\u0a62\u0001"+
+		"\u0000\u0000\u0000\u0a56\u0a57\u0003\u01c6\u00e3\u0000\u0a57\u0a58\u0003"+
+		"r9\u0000\u0a58\u0a62\u0001\u0000\u0000\u0000\u0a59\u0a5a\u0003\u01c8\u00e4"+
+		"\u0000\u0a5a\u0a5b\u0003\u030c\u0186\u0000\u0a5b\u0a5c\u0003\u0310\u0188"+
+		"\u0000\u0a5c\u0a62\u0001\u0000\u0000\u0000\u0a5d\u0a5e\u0003\u00dcn\u0000"+
+		"\u0a5e\u0a5f\u0003`0\u0000\u0a5f\u0a60\u0003\u0310\u0188\u0000\u0a60\u0a62"+
+		"\u0001\u0000\u0000\u0000\u0a61\u0a28\u0001\u0000\u0000\u0000\u0a61\u0a2c"+
+		"\u0001\u0000";
+	private static final String _serializedATNSegment1 =
+		"\u0000\u0000\u0a61\u0a32\u0001\u0000\u0000\u0000\u0a61\u0a37\u0001\u0000"+
+		"\u0000\u0000\u0a61\u0a3d\u0001\u0000\u0000\u0000\u0a61\u0a42\u0001\u0000"+
+		"\u0000\u0000\u0a61\u0a46\u0001\u0000\u0000\u0000\u0a61\u0a4a\u0001\u0000"+
+		"\u0000\u0000\u0a61\u0a51\u0001\u0000\u0000\u0000\u0a61\u0a56\u0001\u0000"+
+		"\u0000\u0000\u0a61\u0a59\u0001\u0000\u0000\u0000\u0a61\u0a5d\u0001\u0000"+
+		"\u0000\u0000\u0a62\u0311\u0001\u0000\u0000\u0000\u0a63\u0a64\u0003\u0094"+
+		"J\u0000\u0a64\u0a65\u0003\u0318\u018c\u0000\u0a65\u0313\u0001\u0000\u0000"+
+		"\u0000\u0a66\u0a67\u0005\u0121\u0000\u0000\u0a67\u0315\u0001\u0000\u0000"+
+		"\u0000\u0a68\u0a6b\u0003\u01cc\u00e6\u0000\u0a69\u0a6b\u0003\u01ce\u00e7"+
+		"\u0000\u0a6a\u0a68\u0001\u0000\u0000\u0000\u0a6a\u0a69\u0001\u0000\u0000"+
+		"\u0000\u0a6b\u0317\u0001\u0000\u0000\u0000\u0a6c\u0a6f\u0003\u0120\u0090"+
+		"\u0000\u0a6d\u0a6f\u0003\u0126\u0093\u0000\u0a6e\u0a6c\u0001\u0000\u0000"+
+		"\u0000\u0a6e\u0a6d\u0001\u0000\u0000\u0000\u0a6f\u0a70\u0001\u0000\u0000"+
+		"\u0000\u0a70\u0a71\u0003d2\u0000\u0a71\u0a72\u0003\u0314\u018a\u0000\u0a72"+
+		"\u0a73\u0003\u0316\u018b\u0000\u0a73\u0a79\u0001\u0000\u0000\u0000\u0a74"+
+		"\u0a75\u0003\u01ca\u00e5\u0000\u0a75\u0a76\u0003d2\u0000\u0a76\u0a77\u0003"+
+		"\u0316\u018b\u0000\u0a77\u0a79\u0001\u0000\u0000\u0000\u0a78\u0a6e\u0001"+
+		"\u0000\u0000\u0000\u0a78\u0a74\u0001\u0000\u0000\u0000\u0a79\u0319\u0001"+
+		"\u0000\u0000\u0000\u0a7a\u0a7b\u0003\u0096K\u0000\u0a7b\u0a7c\u0003J%"+
+		"\u0000\u0a7c\u0a7d\u0003J%\u0000\u0a7d\u0a7e\u00038\u001c\u0000\u0a7e"+
+		"\u0a7f\u0003\u031c\u018e\u0000\u0a7f\u031b\u0001\u0000\u0000\u0000\u0a80"+
+		"\u0a85\u0003\u01d0\u00e8\u0000\u0a81\u0a85\u0003\u01d2\u00e9\u0000\u0a82"+
+		"\u0a85\u0003\u01d4\u00ea\u0000\u0a83\u0a85\u0003\u01d6\u00eb\u0000\u0a84"+
+		"\u0a80\u0001\u0000\u0000\u0000\u0a84\u0a81\u0001\u0000\u0000\u0000\u0a84"+
+		"\u0a82\u0001\u0000\u0000\u0000\u0a84\u0a83\u0001\u0000\u0000\u0000\u0a85"+
+		"\u0a8a\u0001\u0000\u0000\u0000\u0a86\u0a87\u0003\u013c\u009e\u0000\u0a87"+
+		"\u0a88\u00038\u001c\u0000\u0a88\u0a8a\u0001\u0000\u0000\u0000\u0a89\u0a84"+
+		"\u0001\u0000\u0000\u0000\u0a89\u0a86\u0001\u0000\u0000\u0000\u0a8a\u031d"+
+		"\u0001\u0000\u0000\u0000\u0a8b\u0a8c\u0003\u0098L\u0000\u0a8c\u0a8d\u0003"+
+		"J%\u0000\u0a8d\u0a8e\u0003J%\u0000\u0a8e\u0a8f\u0003\u001a\r\u0000\u0a8f"+
+		"\u0a90\u0003\u0320\u0190\u0000\u0a90\u031f\u0001\u0000\u0000\u0000\u0a91"+
+		"\u0a92\u0003\u013c\u009e\u0000\u0a92\u0a93\u0003\u001a\r\u0000\u0a93\u0321"+
+		"\u0001\u0000\u0000\u0000\u0a94\u0a95\u0003\u009aM\u0000\u0a95\u0a96\u0003"+
+		"\u0326\u0193\u0000\u0a96\u0323\u0001\u0000\u0000\u0000\u0a97\u0a98\u0003"+
+		"L&\u0000\u0a98\u0a99\u0003L&\u0000\u0a99\u0a9c\u0001\u0000\u0000\u0000"+
+		"\u0a9a\u0a9c\u0003\u0188\u00c4\u0000\u0a9b\u0a97\u0001\u0000\u0000\u0000"+
+		"\u0a9b\u0a9a\u0001\u0000\u0000\u0000\u0a9c\u0325\u0001\u0000\u0000\u0000"+
+		"\u0a9d\u0a9e\u0003\u0120\u0090\u0000\u0a9e\u0a9f\u0003L&\u0000\u0a9f\u0aa0"+
+		"\u0003L&\u0000\u0aa0\u0aa8\u0001\u0000\u0000\u0000\u0aa1\u0aa2\u0003\u01ca"+
+		"\u00e5\u0000\u0aa2\u0aa3\u0003L&\u0000\u0aa3\u0aa8\u0001\u0000\u0000\u0000"+
+		"\u0aa4\u0aa5\u0003\u0122\u0091\u0000\u0aa5\u0aa6\u0003\u0324\u0192\u0000"+
+		"\u0aa6\u0aa8\u0001\u0000\u0000\u0000\u0aa7\u0a9d\u0001\u0000\u0000\u0000"+
+		"\u0aa7\u0aa1\u0001\u0000\u0000\u0000\u0aa7\u0aa4\u0001\u0000\u0000\u0000"+
+		"\u0aa8\u0327\u0001\u0000\u0000\u0000\u0aa9\u0aaa\u0003\u009cN\u0000\u0aaa"+
+		"\u0aab\u0003\u03ae\u01d7\u0000\u0aab\u0329\u0001\u0000\u0000\u0000\u0aac"+
+		"\u0aad\u0003\u009eO\u0000\u0aad\u0aaf\u0003N\'\u0000\u0aae\u0ab0\u0003"+
+		"d2\u0000\u0aaf\u0aae\u0001\u0000\u0000\u0000\u0aaf\u0ab0\u0001\u0000\u0000"+
+		"\u0000\u0ab0\u032b\u0001\u0000\u0000\u0000\u0ab1\u0ab2\u0003\u00a0P\u0000"+
+		"\u0ab2\u0ab3\u0003\u032e\u0197\u0000\u0ab3\u0ab4\u0003\u0330\u0198\u0000"+
+		"\u0ab4\u032d\u0001\u0000\u0000\u0000\u0ab5\u0ab6\u0005\u012b\u0000\u0000"+
+		"\u0ab6\u032f\u0001\u0000\u0000\u0000\u0ab7\u0ab8\u0007\u0006\u0000\u0000"+
+		"\u0ab8\u0331\u0001\u0000\u0000\u0000\u0ab9\u0aba\u0003\u00a2Q\u0000\u0aba"+
+		"\u0abb\u0003d2\u0000\u0abb\u0abc\u00034\u001a\u0000\u0abc\u0abd\u0003"+
+		"\u0012\t\u0000\u0abd\u0333\u0001\u0000\u0000\u0000\u0abe\u0abf\u0003\u00a4"+
+		"R\u0000\u0abf\u0ac0\u0003\u0336\u019b\u0000\u0ac0\u0335\u0001\u0000\u0000"+
+		"\u0000\u0ac1\u0ac2\u0005\u012b\u0000\u0000\u0ac2\u0337\u0001\u0000\u0000"+
+		"\u0000\u0ac3\u0ac4\u0003\u00a6S\u0000\u0ac4\u0ac5\u0003\u033e\u019f\u0000"+
+		"\u0ac5\u0339\u0001\u0000\u0000\u0000\u0ac6\u0ac7\u0005\u012f\u0000\u0000"+
+		"\u0ac7\u033b\u0001\u0000\u0000\u0000\u0ac8\u0ac9\u0005\u012f\u0000\u0000"+
+		"\u0ac9\u033d\u0001\u0000\u0000\u0000\u0aca\u0acb\u0003\u014a\u00a5\u0000"+
+		"\u0acb\u0acc\u0003\u0342\u01a1\u0000\u0acc\u0ad1\u0001\u0000\u0000\u0000"+
+		"\u0acd\u0ace\u0003\u013c\u009e\u0000\u0ace\u0acf\u0003\u0344\u01a2\u0000"+
+		"\u0acf\u0ad1\u0001\u0000\u0000\u0000\u0ad0\u0aca\u0001\u0000\u0000\u0000"+
+		"\u0ad0\u0acd\u0001\u0000\u0000\u0000\u0ad1\u033f\u0001\u0000\u0000\u0000"+
+		"\u0ad2\u0ad3\u0003\u015e\u00af\u0000\u0ad3\u0ad4\u0003\u0342\u01a1\u0000"+
+		"\u0ad4\u0ada\u0001\u0000\u0000\u0000\u0ad5\u0ad6\u0003\u0232\u0119\u0000"+
+		"\u0ad6\u0ad7\u00034\u001a\u0000\u0ad7\u0ad8\u0003\u0012\t\u0000\u0ad8"+
+		"\u0ada\u0001\u0000\u0000\u0000\u0ad9\u0ad2\u0001\u0000\u0000\u0000\u0ad9"+
+		"\u0ad5\u0001\u0000\u0000\u0000\u0ada\u0341\u0001\u0000\u0000\u0000\u0adb"+
+		"\u0adc\u0003\u014c\u00a6\u0000\u0adc\u0add\u0003J%\u0000\u0add\u0ade\u0003"+
+		"\u033a\u019d\u0000\u0ade\u0adf\u0003\u033c\u019e\u0000\u0adf\u0ae6\u0001"+
+		"\u0000\u0000\u0000\u0ae0\u0ae1\u0003\u014e\u00a7\u0000\u0ae1\u0ae2\u0003"+
+		"d2\u0000\u0ae2\u0ae3\u0003\u033a\u019d\u0000\u0ae3\u0ae4\u0003\u033c\u019e"+
+		"\u0000\u0ae4\u0ae6\u0001\u0000\u0000\u0000\u0ae5\u0adb\u0001\u0000\u0000"+
+		"\u0000\u0ae5\u0ae0\u0001\u0000\u0000\u0000\u0ae6\u0343\u0001\u0000\u0000"+
+		"\u0000\u0ae7\u0ae8\u0003\u014c\u00a6\u0000\u0ae8\u0ae9\u0003J%\u0000\u0ae9"+
+		"\u0aea\u0003\u033a\u019d\u0000\u0aea\u0aeb\u0003\u0340\u01a0\u0000\u0aeb"+
+		"\u0af2\u0001\u0000\u0000\u0000\u0aec\u0aed\u0003\u014e\u00a7\u0000\u0aed"+
+		"\u0aee\u0003d2\u0000\u0aee\u0aef\u0003\u033a\u019d\u0000\u0aef\u0af0\u0003"+
+		"\u0340\u01a0\u0000\u0af0\u0af2\u0001\u0000\u0000\u0000\u0af1\u0ae7\u0001"+
+		"\u0000\u0000\u0000\u0af1\u0aec\u0001\u0000\u0000\u0000\u0af2\u0345\u0001"+
+		"\u0000\u0000\u0000\u0af3\u0af4\u0003\u00a8T\u0000\u0af4\u0af5\u0003\u0348"+
+		"\u01a4\u0000\u0af5\u0347\u0001\u0000\u0000\u0000\u0af6\u0af9\u0003\u0178"+
+		"\u00bc\u0000\u0af7\u0af9\u0003\u017a\u00bd\u0000\u0af8\u0af6\u0001\u0000"+
+		"\u0000\u0000\u0af8\u0af7\u0001\u0000\u0000\u0000\u0af9\u0349\u0001\u0000"+
+		"\u0000\u0000\u0afa\u0afb\u0003\u00aaU\u0000\u0afb\u0afc\u0003d2\u0000"+
+		"\u0afc\u0afd\u0003\u034c\u01a6\u0000\u0afd\u034b\u0001\u0000\u0000\u0000"+
+		"\u0afe\u0aff\u0005\u0132\u0000\u0000\u0aff\u034d\u0001\u0000\u0000\u0000"+
+		"\u0b00\u0b01\u0003\u00acV\u0000\u0b01\u0b02\u0003d2\u0000\u0b02\u034f"+
+		"\u0001\u0000\u0000\u0000\u0b03\u0b04\u0003\u00aeW\u0000\u0b04\u0b05\u0003"+
+		"\u01d8\u00ec\u0000\u0b05\u0351\u0001\u0000\u0000\u0000\u0b06\u0b07\u0003"+
+		"\u00b0X\u0000\u0b07\u0b08\u0003\u0358\u01ac\u0000\u0b08\u0353\u0001\u0000"+
+		"\u0000\u0000\u0b09\u0b0a\u0005\u012b\u0000\u0000\u0b0a\u0355\u0001\u0000"+
+		"\u0000\u0000\u0b0b\u0b0c\u0005\u012b\u0000\u0000\u0b0c\u0357\u0001\u0000"+
+		"\u0000\u0000\u0b0d\u0b0e\u0003\u018a\u00c5\u0000\u0b0e\u0b0f\u0003\u001a"+
+		"\r\u0000\u0b0f\u0b17\u0001\u0000\u0000\u0000\u0b10\u0b11\u0003\u01da\u00ed"+
+		"\u0000\u0b11\u0b12\u0003\u0354\u01aa\u0000\u0b12\u0b17\u0001\u0000\u0000"+
+		"\u0000\u0b13\u0b14\u0003\u01dc\u00ee\u0000\u0b14\u0b15\u0003\u0356\u01ab"+
+		"\u0000\u0b15\u0b17\u0001\u0000\u0000\u0000\u0b16\u0b0d\u0001\u0000\u0000"+
+		"\u0000\u0b16\u0b10\u0001\u0000\u0000\u0000\u0b16\u0b13\u0001\u0000\u0000"+
+		"\u0000\u0b17\u0359\u0001\u0000\u0000\u0000\u0b18\u0b19\u0003\u00b2Y\u0000"+
+		"\u0b19\u0b1a\u0003\u0360\u01b0\u0000\u0b1a\u035b\u0001\u0000\u0000\u0000"+
+		"\u0b1b\u0b1c\u0005\u012f\u0000\u0000\u0b1c\u035d\u0001\u0000\u0000\u0000"+
+		"\u0b1d\u0b21\u0003\u0234\u011a\u0000\u0b1e\u0b21\u0003\u0236\u011b\u0000"+
+		"\u0b1f\u0b21\u0005\u012f\u0000\u0000\u0b20\u0b1d\u0001\u0000\u0000\u0000"+
+		"\u0b20\u0b1e\u0001\u0000\u0000\u0000\u0b20\u0b1f\u0001\u0000\u0000\u0000"+
+		"\u0b21\u035f\u0001\u0000\u0000\u0000\u0b22\u0b23\u0003\u00a2Q\u0000\u0b23"+
+		"\u0b24\u0003d2\u0000\u0b24\u0b25\u0003\u0364\u01b2\u0000\u0b25\u0b32\u0001"+
+		"\u0000\u0000\u0000\u0b26\u0b27\u0003\u01de\u00ef\u0000\u0b27\u0b28\u0003"+
+		"J%\u0000\u0b28\u0b29\u0003\u0364\u01b2\u0000\u0b29\u0b32\u0001\u0000\u0000"+
+		"\u0000\u0b2a\u0b2b\u0003\u013c\u009e\u0000\u0b2b\u0b2c\u0003\u0362\u01b1"+
+		"\u0000\u0b2c\u0b32\u0001\u0000\u0000\u0000\u0b2d\u0b2e\u0003\u01e0\u00f0"+
+		"\u0000\u0b2e\u0b2f\u0003J%\u0000\u0b2f\u0b30\u0003\u0364\u01b2\u0000\u0b30"+
+		"\u0b32\u0001\u0000\u0000\u0000\u0b31\u0b22\u0001\u0000\u0000\u0000\u0b31"+
+		"\u0b26\u0001\u0000\u0000\u0000\u0b31\u0b2a\u0001\u0000\u0000\u0000\u0b31"+
+		"\u0b2d\u0001\u0000\u0000\u0000\u0b32\u0361\u0001\u0000\u0000\u0000\u0b33"+
+		"\u0b34\u0003\u014c\u00a6\u0000\u0b34\u0b35\u0003J%\u0000\u0b35\u0b36\u0003"+
+		"\u033a\u019d\u0000\u0b36\u0b37\u0003\u0364\u01b2\u0000\u0b37\u0b3e\u0001"+
+		"\u0000\u0000\u0000\u0b38\u0b39\u0003\u014e\u00a7\u0000\u0b39\u0b3a\u0003"+
+		"d2\u0000\u0b3a\u0b3b\u0003\u033a\u019d\u0000\u0b3b\u0b3c\u0003\u0364\u01b2"+
+		"\u0000\u0b3c\u0b3e\u0001\u0000\u0000\u0000\u0b3d\u0b33\u0001\u0000\u0000"+
+		"\u0000\u0b3d\u0b38\u0001\u0000\u0000\u0000\u0b3e\u0363\u0001\u0000\u0000"+
+		"\u0000\u0b3f\u0b40\u0003\u01e2\u00f1\u0000\u0b40\u0b41\u0003\u035c\u01ae"+
+		"\u0000\u0b41\u0b42\u0003J%\u0000\u0b42\u0b43\u0003\u035e\u01af\u0000\u0b43"+
+		"\u0b4f\u0001\u0000\u0000\u0000\u0b44\u0b45\u0003\u00acV\u0000\u0b45\u0b46"+
+		"\u0003d2\u0000\u0b46\u0b4f\u0001\u0000\u0000\u0000\u0b47\u0b48\u0003\u00b2"+
+		"Y\u0000\u0b48\u0b49\u0003\u035c\u01ae\u0000\u0b49\u0b4f\u0001\u0000\u0000"+
+		"\u0000\u0b4a\u0b4b\u0003\u01e4\u00f2\u0000\u0b4b\u0b4c\u0003J%\u0000\u0b4c"+
+		"\u0b4d\u0003\u035e\u01af\u0000\u0b4d\u0b4f\u0001\u0000\u0000\u0000\u0b4e"+
+		"\u0b3f\u0001\u0000\u0000\u0000\u0b4e\u0b44\u0001\u0000\u0000\u0000\u0b4e"+
+		"\u0b47\u0001\u0000\u0000\u0000\u0b4e\u0b4a\u0001\u0000\u0000\u0000\u0b4f"+
+		"\u0365\u0001\u0000\u0000\u0000\u0b50\u0b51\u0003\u00b4Z\u0000\u0b51\u0b52"+
+		"\u0003\u0368\u01b4\u0000\u0b52\u0367\u0001\u0000\u0000\u0000\u0b53\u0b54"+
+		"\u0005\u0132\u0000\u0000\u0b54\u0369\u0001\u0000\u0000\u0000\u0b55\u0b56"+
+		"\u0003\u00b6[\u0000\u0b56\u0b58\u0003d2\u0000\u0b57\u0b59\u0003\u036c"+
+		"\u01b6\u0000\u0b58\u0b57\u0001\u0000\u0000\u0000\u0b58\u0b59\u0001\u0000"+
+		"\u0000\u0000\u0b59\u036b\u0001\u0000\u0000\u0000\u0b5a\u0b5b\u0005\u0132"+
+		"\u0000\u0000\u0b5b\u036d\u0001\u0000\u0000\u0000\u0b5c\u0b5d\u0003\u00b8"+
+		"\\\u0000\u0b5d\u0b5e\u0003\u0378\u01bc\u0000\u0b5e\u0b60\u0003J%\u0000"+
+		"\u0b5f\u0b61\u0003\u0374\u01ba\u0000\u0b60\u0b5f\u0001\u0000\u0000\u0000"+
+		"\u0b60\u0b61\u0001\u0000\u0000\u0000\u0b61\u0b63\u0001\u0000\u0000\u0000"+
+		"\u0b62\u0b64\u0003\u0370\u01b8\u0000\u0b63\u0b62\u0001\u0000\u0000\u0000"+
+		"\u0b63\u0b64\u0001\u0000\u0000\u0000\u0b64\u0b66\u0001\u0000\u0000\u0000"+
+		"\u0b65\u0b67\u0003\u0372\u01b9\u0000\u0b66\u0b65\u0001\u0000\u0000\u0000"+
+		"\u0b66\u0b67\u0001\u0000\u0000\u0000\u0b67\u0b69\u0001\u0000\u0000\u0000"+
+		"\u0b68\u0b6a\u0003\u0376\u01bb\u0000\u0b69\u0b68\u0001\u0000\u0000\u0000"+
+		"\u0b69\u0b6a\u0001\u0000\u0000\u0000\u0b6a\u0b6c\u0001\u0000\u0000\u0000"+
+		"\u0b6b\u0b6d\u0003d2\u0000\u0b6c\u0b6b\u0001\u0000\u0000\u0000\u0b6c\u0b6d"+
+		"\u0001\u0000\u0000\u0000\u0b6d\u036f\u0001\u0000\u0000\u0000\u0b6e\u0b6f"+
+		"\u0007\u0000\u0000\u0000\u0b6f\u0371\u0001\u0000\u0000\u0000\u0b70\u0b71"+
+		"\u0005\u0121\u0000\u0000\u0b71\u0373\u0001\u0000\u0000\u0000\u0b72\u0b73"+
+		"\u0003D\"\u0000\u0b73\u0b74\u0003F#\u0000\u0b74\u0b75\u0003H$\u0000\u0b75"+
+		"\u0375\u0001\u0000\u0000\u0000\u0b76\u0b79\u0003\u013e\u009f\u0000\u0b77"+
+		"\u0b79\u0003\u0142\u00a1\u0000\u0b78\u0b76\u0001\u0000\u0000\u0000\u0b78"+
+		"\u0b77\u0001\u0000\u0000\u0000\u0b79\u0377\u0001\u0000\u0000\u0000\u0b7a"+
+		"\u0b7d\u0003\u037a\u01bd\u0000\u0b7b\u0b7d\u0003R)\u0000\u0b7c\u0b7a\u0001"+
+		"\u0000\u0000\u0000\u0b7c\u0b7b\u0001\u0000\u0000\u0000\u0b7d\u0b7f\u0001"+
+		"\u0000\u0000\u0000\u0b7e\u0b80\u0003$\u0012\u0000\u0b7f\u0b7e\u0001\u0000"+
+		"\u0000\u0000\u0b7f\u0b80\u0001\u0000\u0000\u0000\u0b80\u0379\u0001\u0000"+
+		"\u0000\u0000\u0b81\u0b82\u0005\u012f\u0000\u0000\u0b82\u037b\u0001\u0000"+
+		"\u0000\u0000\u0b83\u0b84\u0003\u00ba]\u0000\u0b84\u0b85\u0003\u0386\u01c3"+
+		"\u0000\u0b85\u037d\u0001\u0000\u0000\u0000\u0b86\u0b87\u0005\u012b\u0000"+
+		"\u0000\u0b87\u037f\u0001\u0000\u0000\u0000\u0b88\u0b89\u0005\u012b\u0000"+
+		"\u0000\u0b89\u0381\u0001\u0000\u0000\u0000\u0b8a\u0b8b\u0005\u012f\u0000"+
+		"\u0000\u0b8b\u0383\u0001\u0000\u0000\u0000\u0b8c\u0b8d\u0005\u012f\u0000"+
+		"\u0000\u0b8d\u0385\u0001\u0000\u0000\u0000\u0b8e\u0b8f\u0003\u01e6\u00f3"+
+		"\u0000\u0b8f\u0b90\u0003\u037e\u01bf\u0000\u0b90\u0b91\u0003J%\u0000\u0b91"+
+		"\u0ba4\u0001\u0000\u0000\u0000\u0b92\u0b93\u0003\u01e8\u00f4\u0000\u0b93"+
+		"\u0b94\u0003\u0382\u01c1\u0000\u0b94\u0b95\u0003\u0380\u01c0\u0000\u0b95"+
+		"\u0b96\u0003\u0012\t\u0000\u0b96\u0b97\u0003J%\u0000\u0b97\u0ba4\u0001"+
+		"\u0000\u0000\u0000\u0b98\u0b99\u0003\u01dc\u00ee\u0000\u0b99\u0b9a\u0003"+
+		"\u0356\u01ab\u0000\u0b9a\u0b9b\u0003J%\u0000\u0b9b\u0ba4\u0001\u0000\u0000"+
+		"\u0000\u0b9c\u0b9d\u0003\u01ea\u00f5\u0000\u0b9d\u0b9e\u0003\u0384\u01c2"+
+		"\u0000\u0b9e\u0b9f\u0003J%\u0000\u0b9f\u0ba0\u0003\u038a\u01c5\u0000\u0ba0"+
+		"\u0ba1\u0005\u0125\u0000\u0000\u0ba1\u0ba2\u0003\u0012\t\u0000\u0ba2\u0ba4"+
+		"\u0001\u0000\u0000\u0000\u0ba3\u0b8e\u0001\u0000\u0000\u0000\u0ba3\u0b92"+
+		"\u0001\u0000\u0000\u0000\u0ba3\u0b98\u0001\u0000\u0000\u0000\u0ba3\u0b9c"+
+		"\u0001\u0000\u0000\u0000\u0ba4\u0387\u0001\u0000\u0000\u0000\u0ba5\u0ba9"+
+		"\u0003\u01ec\u00f6\u0000\u0ba6\u0ba9\u0003\u01ee\u00f7\u0000\u0ba7\u0ba9"+
+		"\u0003\u01f0\u00f8\u0000\u0ba8\u0ba5\u0001\u0000\u0000\u0000\u0ba8\u0ba6"+
+		"\u0001\u0000\u0000\u0000\u0ba8\u0ba7\u0001\u0000\u0000\u0000\u0ba9\u0389"+
+		"\u0001\u0000\u0000\u0000\u0baa\u0baf\u0003\u0270\u0138\u0000\u0bab\u0baf"+
+		"\u0003\u01f2\u00f9\u0000\u0bac\u0baf\u0003\u01f4\u00fa\u0000\u0bad\u0baf"+
+		"\u0003\u01f0\u00f8\u0000\u0bae\u0baa\u0001\u0000\u0000\u0000\u0bae\u0bab"+
+		"\u0001\u0000\u0000\u0000\u0bae\u0bac\u0001\u0000\u0000\u0000\u0bae\u0bad"+
+		"\u0001\u0000\u0000\u0000\u0baf\u0bb0\u0001\u0000\u0000\u0000\u0bb0\u0bb1"+
+		"\u0003\u0388\u01c4\u0000\u0bb1\u038b\u0001\u0000\u0000\u0000\u0bb2\u0bb3"+
+		"\u0003\u00bc^\u0000\u0bb3\u0bb4\u0003\u03de\u01ef\u0000\u0bb4\u0bb5\u0003"+
+		"\u0394\u01ca\u0000\u0bb5\u0bb6\u0003d2\u0000\u0bb6\u0bb7\u0003J%\u0000"+
+		"\u0bb7\u0bb8\u0003\u038e\u01c7\u0000\u0bb8\u0bb9\u0003\u0390\u01c8\u0000"+
+		"\u0bb9\u0bba\u0003\u0392\u01c9\u0000\u0bba\u038d\u0001\u0000\u0000\u0000"+
+		"\u0bbb\u0bbc\u0005\u0125\u0000\u0000\u0bbc\u038f\u0001\u0000\u0000\u0000"+
+		"\u0bbd\u0bbe\u0005\u0125\u0000\u0000\u0bbe\u0391\u0001\u0000\u0000\u0000"+
+		"\u0bbf\u0bc0\u0005\u0125\u0000\u0000\u0bc0\u0393\u0001\u0000\u0000\u0000"+
+		"\u0bc1\u0bcb\u0003\u01f6\u00fb\u0000\u0bc2\u0bcb\u0003\u01f8\u00fc\u0000"+
+		"\u0bc3\u0bcb\u0003\u01fa\u00fd\u0000\u0bc4\u0bcb\u0003\u01fc\u00fe\u0000"+
+		"\u0bc5\u0bcb\u0003\u01fe\u00ff\u0000\u0bc6\u0bcb\u0003\u0200\u0100\u0000"+
+		"\u0bc7\u0bcb\u0003\u0202\u0101\u0000\u0bc8\u0bcb\u0003\u0204\u0102\u0000"+
+		"\u0bc9\u0bcb\u0003\u00f4z\u0000\u0bca\u0bc1\u0001\u0000\u0000\u0000\u0bca"+
+		"\u0bc2\u0001\u0000\u0000\u0000\u0bca\u0bc3\u0001\u0000\u0000\u0000\u0bca"+
+		"\u0bc4\u0001\u0000\u0000\u0000\u0bca\u0bc5\u0001\u0000\u0000\u0000\u0bca"+
+		"\u0bc6\u0001\u0000\u0000\u0000\u0bca\u0bc7\u0001\u0000\u0000\u0000\u0bca"+
+		"\u0bc8\u0001\u0000\u0000\u0000\u0bca\u0bc9\u0001\u0000\u0000\u0000\u0bcb"+
+		"\u0395\u0001\u0000\u0000\u0000\u0bcc\u0bcd\u0003\u00be_\u0000\u0bcd\u0bce"+
+		"\u0003\u001c\u000e\u0000\u0bce\u0bcf\u0003N\'\u0000\u0bcf\u0bd0\u0003"+
+		"\u0398\u01cc\u0000\u0bd0\u0397\u0001\u0000\u0000\u0000\u0bd1\u0bd2\u0005"+
+		"\u0121\u0000\u0000\u0bd2\u0399\u0001\u0000\u0000\u0000\u0bd3\u0bd4\u0003"+
+		"\u00c0`\u0000\u0bd4\u0bd5\u0003\u039e\u01cf\u0000\u0bd5\u0bd6\u0003d2"+
+		"\u0000\u0bd6\u0bd7\u0003\u039c\u01ce\u0000\u0bd7\u039b\u0001\u0000\u0000"+
+		"\u0000\u0bd8\u0bd9\u0005\u012f\u0000\u0000\u0bd9\u039d\u0001\u0000\u0000"+
+		"\u0000\u0bda\u0bdd\u0003\u00a2Q\u0000\u0bdb\u0bdd\u0003\u0238\u011c\u0000"+
+		"\u0bdc\u0bda\u0001\u0000\u0000\u0000\u0bdc\u0bdb\u0001\u0000\u0000\u0000"+
+		"\u0bdd\u039f\u0001\u0000\u0000\u0000\u0bde\u0bdf\u0003\u00c2a\u0000\u0bdf"+
+		"\u03a1\u0001\u0000\u0000\u0000\u0be0\u0be1\u0003\u00c4b\u0000\u0be1\u0be2"+
+		"\u0003\u0012\t\u0000\u0be2\u03a3\u0001\u0000\u0000\u0000\u0be3\u0be4\u0003"+
+		"\u00c6c\u0000\u0be4\u0be5\u0003d2\u0000\u0be5\u0be6\u0003\u03a6\u01d3"+
+		"\u0000\u0be6\u03a5\u0001\u0000\u0000\u0000\u0be7\u0bec\u0003\u0208\u0104"+
+		"\u0000\u0be8\u0be9\u0003\u020a\u0105\u0000\u0be9\u0bea\u0003d2\u0000\u0bea"+
+		"\u0bec\u0001\u0000\u0000\u0000\u0beb\u0be7\u0001\u0000\u0000\u0000\u0beb"+
+		"\u0be8\u0001\u0000\u0000\u0000\u0bec\u03a7\u0001\u0000\u0000\u0000\u0bed"+
+		"\u0bee\u0003\u00c8d\u0000\u0bee\u0bef\u0003\u03aa\u01d5\u0000\u0bef\u03a9"+
+		"\u0001\u0000\u0000\u0000\u0bf0\u0bf1\u0005\u0132\u0000\u0000\u0bf1\u03ab"+
+		"\u0001\u0000\u0000\u0000\u0bf2\u0bf3\u0003\u00cae\u0000\u0bf3\u0bf4\u0003"+
+		"\u03b2\u01d9\u0000\u0bf4\u03ad\u0001\u0000\u0000\u0000\u0bf5\u0bf6\u0005"+
+		"\u012f\u0000\u0000\u0bf6\u03af\u0001\u0000\u0000\u0000\u0bf7\u0bfa\u0003"+
+		"\u0206\u0103\u0000\u0bf8\u0bfa\u0003\u013c\u009e\u0000\u0bf9\u0bf7\u0001"+
+		"\u0000\u0000\u0000\u0bf9\u0bf8\u0001\u0000\u0000\u0000\u0bfa\u03b1\u0001"+
+		"\u0000\u0000\u0000\u0bfb\u0bfc\u0003~?\u0000\u0bfc\u0bfd\u0003\u03ae\u01d7"+
+		"\u0000\u0bfd\u0c04\u0001\u0000\u0000\u0000\u0bfe\u0bff\u0003\u009cN\u0000"+
+		"\u0bff\u0c00\u0003\u03ae\u01d7\u0000\u0c00\u0c01\u0005\u0125\u0000\u0000"+
+		"\u0c01\u0c02\u0003\u03b0\u01d8\u0000\u0c02\u0c04\u0001\u0000\u0000\u0000"+
+		"\u0c03\u0bfb\u0001\u0000\u0000\u0000\u0c03\u0bfe\u0001\u0000\u0000\u0000"+
+		"\u0c04\u03b3\u0001\u0000\u0000\u0000\u0c05\u0c06\u0003\u00ccf\u0000\u0c06"+
+		"\u0c07\u0003\u03b6\u01db\u0000\u0c07\u03b5\u0001\u0000\u0000\u0000\u0c08"+
+		"\u0c09\u0003\u020c\u0106\u0000\u0c09\u0c0a\u0003\u03c2\u01e1\u0000\u0c0a"+
+		"\u0c0f\u0001\u0000\u0000\u0000\u0c0b\u0c0c\u0003\u012e\u0097\u0000\u0c0c"+
+		"\u0c0d\u0003\u03c4\u01e2\u0000\u0c0d\u0c0f\u0001\u0000\u0000\u0000\u0c0e"+
+		"\u0c08\u0001\u0000\u0000\u0000\u0c0e\u0c0b\u0001\u0000\u0000\u0000\u0c0f"+
+		"\u03b7\u0001\u0000\u0000\u0000\u0c10\u0c11\u0005\u012e\u0000\u0000\u0c11"+
+		"\u03b9\u0001\u0000\u0000\u0000\u0c12\u0c13\u0005\u012f\u0000\u0000\u0c13"+
+		"\u03bb\u0001\u0000\u0000\u0000\u0c14\u0c17\u0003\u020e\u0107\u0000\u0c15"+
+		"\u0c17\u0003\u0012\t\u0000\u0c16\u0c14\u0001\u0000\u0000\u0000\u0c16\u0c15"+
+		"\u0001\u0000\u0000\u0000\u0c17\u03bd\u0001\u0000\u0000\u0000\u0c18\u0c22"+
+		"\u0003\u0112\u0089\u0000\u0c19\u0c22\u0003\u010c\u0086\u0000\u0c1a\u0c22"+
+		"\u0003\u010e\u0087\u0000\u0c1b\u0c22\u0003\u0110\u0088\u0000\u0c1c\u0c22"+
+		"\u0003\u010a\u0085\u0000\u0c1d\u0c22\u0003\u0114\u008a\u0000\u0c1e\u0c22"+
+		"\u0003\u0118\u008c\u0000\u0c1f\u0c22\u0003\u011a\u008d\u0000\u0c20\u0c22"+
+		"\u0003\u011e\u008f\u0000\u0c21\u0c18\u0001\u0000\u0000\u0000\u0c21\u0c19"+
+		"\u0001\u0000\u0000\u0000\u0c21\u0c1a\u0001\u0000\u0000\u0000\u0c21\u0c1b"+
+		"\u0001\u0000\u0000\u0000\u0c21\u0c1c\u0001\u0000\u0000\u0000\u0c21\u0c1d"+
+		"\u0001\u0000\u0000\u0000\u0c21\u0c1e\u0001\u0000\u0000\u0000\u0c21\u0c1f"+
+		"\u0001\u0000\u0000\u0000\u0c21\u0c20\u0001\u0000\u0000\u0000\u0c22\u03bf"+
+		"\u0001\u0000\u0000\u0000\u0c23\u0c24\u0005\u012f\u0000\u0000\u0c24\u03c1"+
+		"\u0001\u0000\u0000\u0000\u0c25\u0c26\u0003\u0120\u0090\u0000\u0c26\u0c27"+
+		"\u0003\u03b8\u01dc\u0000\u0c27\u0c28\u0003\u03ba\u01dd\u0000\u0c28\u0c29"+
+		"\u0003 \u0010\u0000\u0c29\u0c3d\u0001\u0000\u0000\u0000\u0c2a\u0c3d\u0003"+
+		"\u00aeW\u0000\u0c2b\u0c2c\u0003\u014a\u00a5\u0000\u0c2c\u0c2d\u0003>\u001f"+
+		"\u0000\u0c2d\u0c2e\u0003\u026c\u0136\u0000\u0c2e\u0c2f\u0003 \u0010\u0000"+
+		"\u0c2f\u0c34\u0001\u0000\u0000\u0000\u0c30\u0c31\u0003\u0210\u0108\u0000"+
+		"\u0c31\u0c32\u0003\u03bc\u01de\u0000\u0c32\u0c34\u0001\u0000\u0000\u0000"+
+		"\u0c33\u0c2b\u0001\u0000\u0000\u0000\u0c33\u0c30\u0001\u0000\u0000\u0000"+
+		"\u0c34\u0c3d\u0001\u0000\u0000\u0000\u0c35\u0c36\u0003\u0122\u0091\u0000"+
+		"\u0c36\u0c37\u0003>\u001f\u0000\u0c37\u0c3d\u0001\u0000\u0000\u0000\u0c38"+
+		"\u0c39\u0003\u0212\u0109\u0000\u0c39\u0c3a\u0003\u03c0\u01e0\u0000\u0c3a"+
+		"\u0c3b\u0003>\u001f\u0000\u0c3b\u0c3d\u0001\u0000\u0000\u0000\u0c3c\u0c25"+
+		"\u0001\u0000\u0000\u0000\u0c3c\u0c2a\u0001\u0000\u0000\u0000\u0c3c\u0c33"+
+		"\u0001\u0000\u0000\u0000\u0c3c\u0c35\u0001\u0000\u0000\u0000\u0c3c\u0c38"+
+		"\u0001\u0000\u0000\u0000\u0c3d\u03c3\u0001\u0000\u0000\u0000\u0c3e\u0c3f"+
+		"\u0003\u0120\u0090\u0000\u0c3f\u0c40\u0003d2\u0000\u0c40\u0c41\u0003>"+
+		"\u001f\u0000\u0c41\u0c42\u0003\u0124\u0092\u0000\u0c42\u0c64\u0001\u0000"+
+		"\u0000\u0000\u0c43\u0c44\u0003\u016c\u00b6\u0000\u0c44\u0c45\u0003d2\u0000"+
+		"\u0c45\u0c46\u0003>\u001f\u0000\u0c46\u0c64\u0001\u0000\u0000\u0000\u0c47"+
+		"\u0c48\u0003\u0166\u00b3\u0000\u0c48\u0c49\u0003d2\u0000\u0c49\u0c4a\u0003"+
+		"\u03b8\u01dc\u0000\u0c4a\u0c64\u0001\u0000\u0000\u0000\u0c4b\u0c4c\u0003"+
+		"\u00aeW\u0000\u0c4c\u0c4d\u0003d2\u0000\u0c4d\u0c64\u0001\u0000\u0000"+
+		"\u0000\u0c4e\u0c4f\u0003\u0214\u010a\u0000\u0c4f\u0c50\u0003d2\u0000\u0c50"+
+		"\u0c51\u0003>\u001f\u0000\u0c51\u0c52\u0003\u03be\u01df\u0000\u0c52\u0c53"+
+		"\u0003d2\u0000\u0c53\u0c54\u0003>\u001f\u0000\u0c54\u0c64\u0001\u0000"+
+		"\u0000\u0000\u0c55\u0c56\u0003\u0122\u0091\u0000\u0c56\u0c57\u0003d2\u0000"+
+		"\u0c57\u0c58\u0003\u03b8\u01dc\u0000\u0c58\u0c59\u0003\u0124\u0092\u0000"+
+		"\u0c59\u0c64\u0001\u0000\u0000\u0000\u0c5a\u0c5b\u0003\u0216\u010b\u0000"+
+		"\u0c5b\u0c5c\u0003d2\u0000\u0c5c\u0c5d\u0003>\u001f\u0000\u0c5d\u0c64"+
+		"\u0001\u0000\u0000\u0000\u0c5e\u0c5f\u0003\u0126\u0093\u0000\u0c5f\u0c60"+
+		"\u0003d2\u0000\u0c60\u0c61\u0003>\u001f\u0000\u0c61\u0c62\u0003\u0124"+
+		"\u0092\u0000\u0c62\u0c64\u0001\u0000\u0000\u0000\u0c63\u0c3e\u0001\u0000"+
+		"\u0000\u0000\u0c63\u0c43\u0001\u0000\u0000\u0000\u0c63\u0c47\u0001\u0000"+
+		"\u0000\u0000\u0c63\u0c4b\u0001\u0000\u0000\u0000\u0c63\u0c4e\u0001\u0000"+
+		"\u0000\u0000\u0c63\u0c55\u0001\u0000\u0000\u0000\u0c63\u0c5a\u0001\u0000"+
+		"\u0000\u0000\u0c63\u0c5e\u0001\u0000\u0000\u0000\u0c64\u03c5\u0001\u0000"+
+		"\u0000\u0000\u0c65\u0c66\u0003\u00ceg\u0000\u0c66\u03c7\u0001\u0000\u0000"+
+		"\u0000\u0c67\u0c68\u0003\u00d0h\u0000\u0c68\u0c69\u0003J%\u0000\u0c69"+
+		"\u0c6a\u00038\u001c\u0000\u0c6a\u0c6b\u0003\u03ca\u01e5\u0000\u0c6b\u03c9"+
+		"\u0001\u0000\u0000\u0000\u0c6c\u0c70\u0003\u01d0\u00e8\u0000\u0c6d\u0c70"+
+		"\u0003\u01d4\u00ea\u0000\u0c6e\u0c70\u0003\u013c\u009e\u0000\u0c6f\u0c6c"+
+		"\u0001\u0000\u0000\u0000\u0c6f\u0c6d\u0001\u0000\u0000\u0000\u0c6f\u0c6e"+
+		"\u0001\u0000\u0000\u0000\u0c70\u03cb\u0001\u0000\u0000\u0000\u0c71\u0c72"+
+		"\u0003\u00d2i\u0000\u0c72\u0c73\u0003J%\u0000\u0c73\u0c74\u0005\u0125"+
+		"\u0000\u0000\u0c74\u03cd\u0001\u0000\u0000\u0000\u0c75\u0c76\u0003\u00d4"+
+		"j\u0000\u0c76\u0c77\u0003d2\u0000\u0c77\u0c78\u0003J%\u0000\u0c78\u0c79"+
+		"\u0005\u0125\u0000\u0000\u0c79\u03cf\u0001\u0000\u0000\u0000\u0c7a\u0c7b"+
+		"\u0003\u00d6k\u0000\u0c7b\u0c7c\u0003d2\u0000\u0c7c\u0c7d\u0003d2\u0000"+
+		"\u0c7d\u03d1\u0001\u0000\u0000\u0000\u0c7e\u0c7f\u0003\u00d8l\u0000\u0c7f"+
+		"\u0c80\u0003L&\u0000\u0c80\u0c81\u0003\u03d6\u01eb\u0000\u0c81\u0c82\u0003"+
+		"\u03d8\u01ec\u0000\u0c82\u0c83\u0003\u03d4\u01ea\u0000\u0c83\u03d3\u0001"+
+		"\u0000\u0000\u0000\u0c84\u0c85\u0003\u026e\u0137\u0000\u0c85\u0c86\u0003"+
+		"d2\u0000\u0c86\u0c8d\u0001\u0000\u0000\u0000\u0c87\u0c88\u0003\u0218\u010c"+
+		"\u0000\u0c88\u0c89\u0003\u0012\t\u0000\u0c89\u0c8a\u0003\u001c\u000e\u0000"+
+		"\u0c8a\u0c8b\u0003d2\u0000\u0c8b\u0c8d\u0001\u0000\u0000\u0000\u0c8c\u0c84"+
+		"\u0001\u0000\u0000\u0000\u0c8c\u0c87\u0001\u0000\u0000\u0000\u0c8d\u03d5"+
+		"\u0001\u0000\u0000\u0000\u0c8e\u0c8f\u0005\u0125\u0000\u0000\u0c8f\u03d7"+
+		"\u0001\u0000\u0000\u0000\u0c90\u0c91\u0005\u0125\u0000\u0000\u0c91\u03d9"+
+		"\u0001\u0000\u0000\u0000\u0c92\u0c93\u0005!\u0000\u0000\u0c93\u03db\u0001"+
+		"\u0000\u0000\u0000\u0c94\u0c95\u0003\u00dam\u0000\u0c95\u0c96\u0003d2"+
+		"\u0000\u0c96\u0c97\u0003\u03e0\u01f0\u0000\u0c97\u0c98\u0003\u03de\u01ef"+
+		"\u0000\u0c98\u03dd\u0001\u0000\u0000\u0000\u0c99\u0c9a\u0005\u012f\u0000"+
+		"\u0000\u0c9a\u03df\u0001\u0000\u0000\u0000\u0c9b\u0ca7\u0003v;\u0000\u0c9c"+
+		"\u0ca7\u0003\u01f6\u00fb\u0000\u0c9d\u0ca7\u0003\u014c\u00a6\u0000\u0c9e"+
+		"\u0ca7\u0003\u01f8\u00fc\u0000\u0c9f\u0ca7\u0003\u01fa\u00fd\u0000\u0ca0"+
+		"\u0ca7\u0003\u01fc\u00fe\u0000\u0ca1\u0ca7\u0003\u01fe\u00ff\u0000\u0ca2"+
+		"\u0ca7\u0003\u0200\u0100\u0000\u0ca3\u0ca7\u0003\u0202\u0101\u0000\u0ca4"+
+		"\u0ca7\u0003\u0204\u0102\u0000\u0ca5\u0ca7\u0003\u00f4z\u0000\u0ca6\u0c9b"+
+		"\u0001\u0000\u0000\u0000\u0ca6\u0c9c\u0001\u0000\u0000\u0000\u0ca6\u0c9d"+
+		"\u0001\u0000\u0000\u0000\u0ca6\u0c9e\u0001\u0000\u0000\u0000\u0ca6\u0c9f"+
+		"\u0001\u0000\u0000\u0000\u0ca6\u0ca0\u0001\u0000\u0000\u0000\u0ca6\u0ca1"+
+		"\u0001\u0000\u0000\u0000\u0ca6\u0ca2\u0001\u0000\u0000\u0000\u0ca6\u0ca3"+
+		"\u0001\u0000\u0000\u0000\u0ca6\u0ca4\u0001\u0000\u0000\u0000\u0ca6\u0ca5"+
+		"\u0001\u0000\u0000\u0000\u0ca7\u03e1\u0001\u0000\u0000\u0000\u0ca8\u0ca9"+
+		"\u0003\u00dcn\u0000\u0ca9\u0caa\u0003`0\u0000\u0caa\u0cab\u0003J%\u0000"+
+		"\u0cab\u0cac\u0003 \u0010\u0000\u0cac\u03e3\u0001\u0000\u0000\u0000\u0cad"+
+		"\u0cae\u0003\u00deo\u0000\u0cae\u0caf\u0003d2\u0000\u0caf\u0cb0\u0003"+
+		"\u03e6\u01f3\u0000\u0cb0\u03e5\u0001\u0000\u0000\u0000\u0cb1\u0cb6\u0003"+
+		"\u0120\u0090\u0000\u0cb2\u0cb3\u0003\u0122\u0091\u0000\u0cb3\u0cb4\u0003"+
+		"\u03e8\u01f4\u0000\u0cb4\u0cb6\u0001\u0000\u0000\u0000\u0cb5\u0cb1\u0001"+
+		"\u0000\u0000\u0000\u0cb5\u0cb2\u0001\u0000\u0000\u0000\u0cb6\u0cb9\u0001"+
+		"\u0000\u0000\u0000\u0cb7\u0cb9\u0003\u00aeW\u0000\u0cb8\u0cb5\u0001\u0000"+
+		"\u0000\u0000\u0cb8\u0cb7\u0001\u0000\u0000\u0000\u0cb9\u03e7\u0001\u0000"+
+		"\u0000\u0000\u0cba\u0cbb\u0005\u012b\u0000\u0000\u0cbb\u03e9\u0001\u0000"+
+		"\u0000\u0000\u0cbc\u0cbd\u0003\u00e0p\u0000\u0cbd\u0cbe\u0003\u03f6\u01fb"+
+		"\u0000\u0cbe\u03eb\u0001\u0000\u0000\u0000\u0cbf\u0cc0\u0005\u012b\u0000"+
+		"\u0000\u0cc0\u03ed\u0001\u0000\u0000\u0000\u0cc1\u0cc2\u0005\u012b\u0000"+
+		"\u0000\u0cc2\u03ef\u0001\u0000\u0000\u0000\u0cc3\u0cc8\u0003\u023a\u011d"+
+		"\u0000\u0cc4\u0cc8\u0003\u023c\u011e\u0000\u0cc5\u0cc8\u0003\u023e\u011f"+
+		"\u0000\u0cc6\u0cc8\u0003\u0240\u0120\u0000\u0cc7\u0cc3\u0001\u0000\u0000"+
+		"\u0000\u0cc7\u0cc4\u0001\u0000\u0000\u0000\u0cc7\u0cc5\u0001\u0000\u0000"+
+		"\u0000\u0cc7\u0cc6\u0001\u0000\u0000\u0000\u0cc8\u03f1\u0001\u0000\u0000"+
+		"\u0000\u0cc9\u0cca\u0005\u012b\u0000\u0000\u0cca\u03f3\u0001\u0000\u0000"+
+		"\u0000\u0ccb\u0cd0\u0003\u023a\u011d\u0000\u0ccc\u0cd0\u0003\u0242\u0121"+
+		"\u0000\u0ccd\u0cd0\u0003\u0244\u0122\u0000\u0cce\u0cd0\u0003\u023c\u011e"+
+		"\u0000\u0ccf\u0ccb\u0001\u0000\u0000\u0000\u0ccf\u0ccc\u0001\u0000\u0000"+
+		"\u0000\u0ccf\u0ccd\u0001\u0000\u0000\u0000\u0ccf\u0cce\u0001\u0000\u0000"+
+		"\u0000\u0cd0\u03f5\u0001\u0000\u0000\u0000\u0cd1\u0cd2\u0003\u0120\u0090"+
+		"\u0000\u0cd2\u0cd3\u0003\u03ee\u01f7\u0000\u0cd3\u0cd4\u0003 \u0010\u0000"+
+		"\u0cd4\u0ceb\u0001\u0000\u0000\u0000\u0cd5\u0cd6\u0003\u025e\u012f\u0000"+
+		"\u0cd6\u0cd7\u0003\u03ec\u01f6\u0000\u0cd7\u0ceb\u0001\u0000\u0000\u0000"+
+		"\u0cd8\u0cd9\u0003\u0260\u0130\u0000\u0cd9\u0cdb\u0003\u03ec\u01f6\u0000"+
+		"\u0cda\u0cdc\u0003d2\u0000\u0cdb\u0cda\u0001\u0000\u0000\u0000\u0cdb\u0cdc"+
+		"\u0001\u0000\u0000\u0000\u0cdc\u0ceb\u0001\u0000\u0000\u0000\u0cdd\u0cde"+
+		"\u0003\u0262\u0131\u0000\u0cde\u0cdf\u0003d2\u0000\u0cdf\u0ceb\u0001\u0000"+
+		"\u0000\u0000\u0ce0\u0ce1\u0003\u00aeW\u0000\u0ce1\u0ce2\u0003\u03ec\u01f6"+
+		"\u0000\u0ce2\u0ceb\u0001\u0000\u0000\u0000\u0ce3\u0ce4\u0003\u014a\u00a5"+
+		"\u0000\u0ce4\u0ce5\u0003\u03ec\u01f6\u0000\u0ce5\u0ce6\u0003\u03f8\u01fc"+
+		"\u0000\u0ce6\u0ceb\u0001\u0000\u0000\u0000\u0ce7\u0ce8\u0003\u0122\u0091"+
+		"\u0000\u0ce8\u0ce9\u0003\u03ec\u01f6\u0000\u0ce9\u0ceb\u0001\u0000\u0000"+
+		"\u0000\u0cea\u0cd1\u0001\u0000\u0000\u0000\u0cea\u0cd5\u0001\u0000\u0000"+
+		"\u0000\u0cea\u0cd8\u0001\u0000\u0000\u0000\u0cea\u0cdd\u0001\u0000\u0000"+
+		"\u0000\u0cea\u0ce0\u0001\u0000\u0000\u0000\u0cea\u0ce3\u0001\u0000\u0000"+
+		"\u0000\u0cea\u0ce7\u0001\u0000\u0000\u0000\u0ceb\u03f7\u0001\u0000\u0000"+
+		"\u0000\u0cec\u0ced\u0003\u0264\u0132\u0000\u0ced\u0cee\u0003\u03f0\u01f8"+
+		"\u0000\u0cee\u0d08\u0001\u0000\u0000\u0000\u0cef\u0cf0\u0003\u0132\u0099"+
+		"\u0000\u0cf0\u0cf1\u0003\u03f2\u01f9\u0000\u0cf1\u0d08\u0001\u0000\u0000"+
+		"\u0000\u0cf2\u0cf3\u0003\u0266\u0133\u0000\u0cf3\u0cf4\u0003\u03f4\u01fa"+
+		"\u0000\u0cf4\u0d08\u0001\u0000\u0000\u0000\u0cf5\u0cf6\u0003\u026c\u0136"+
+		"\u0000\u0cf6\u0cf7\u0003 \u0010\u0000\u0cf7\u0d08\u0001\u0000\u0000\u0000"+
+		"\u0cf8\u0cf9\u0003\u0246\u0123\u0000\u0cf9\u0cfa\u0003\u001c\u000e\u0000"+
+		"\u0cfa\u0d08\u0001\u0000\u0000\u0000\u0cfb\u0cfc\u0003\u0248\u0124\u0000"+
+		"\u0cfc\u0cfd\u0003\u03f4\u01fa\u0000\u0cfd\u0d08\u0001\u0000\u0000\u0000"+
+		"\u0cfe\u0d01\u0003\u0268\u0134\u0000\u0cff\u0d01\u0003\u026a\u0135\u0000"+
+		"\u0d00\u0cfe\u0001\u0000\u0000\u0000\u0d00\u0cff\u0001\u0000\u0000\u0000"+
+		"\u0d01\u0d02\u0001\u0000\u0000\u0000\u0d02\u0d03\u0003 \u0010\u0000\u0d03"+
+		"\u0d08\u0001\u0000\u0000\u0000\u0d04\u0d05\u0003\u024a\u0125\u0000\u0d05"+
+		"\u0d06\u0003\u001c\u000e\u0000\u0d06\u0d08\u0001\u0000\u0000\u0000\u0d07"+
+		"\u0cec\u0001\u0000\u0000\u0000\u0d07\u0cef\u0001\u0000\u0000\u0000\u0d07"+
+		"\u0cf2\u0001\u0000\u0000\u0000\u0d07\u0cf5\u0001\u0000\u0000\u0000\u0d07"+
+		"\u0cf8\u0001\u0000\u0000\u0000\u0d07\u0cfb\u0001\u0000\u0000\u0000\u0d07"+
+		"\u0d00\u0001\u0000\u0000\u0000\u0d07\u0d04\u0001\u0000\u0000\u0000\u0d08"+
+		"\u03f9\u0001\u0000\u0000\u0000\u0d09\u0d0a\u0003\u00e2q\u0000\u0d0a\u0d0b"+
+		"\u0003\u03fc\u01fe\u0000\u0d0b\u03fb\u0001\u0000\u0000\u0000\u0d0c\u0d0d"+
+		"\u0005\u0132\u0000\u0000\u0d0d\u03fd\u0001\u0000\u0000\u0000\u0d0e\u0d0f"+
+		"\u0003\u00e4r\u0000\u0d0f\u0d10\u0003\u0402\u0201\u0000\u0d10\u03ff\u0001"+
+		"\u0000\u0000\u0000\u0d11\u0d14\u0003\u0184\u00c2\u0000\u0d12\u0d14\u0003"+
+		"\u0186\u00c3\u0000\u0d13\u0d11\u0001\u0000\u0000\u0000\u0d13\u0d12\u0001"+
+		"\u0000\u0000\u0000\u0d14\u0401\u0001\u0000\u0000\u0000\u0d15\u0d27\u0003"+
+		"J%\u0000\u0d16\u0d24\u0003d2\u0000\u0d17\u0d25\u0003d2\u0000\u0d18\u0d19"+
+		"\u0003J%\u0000\u0d19\u0d1f\u0003\u022e\u0117\u0000\u0d1a\u0d1b\u0003\u014e"+
+		"\u00a7\u0000\u0d1b\u0d1c\u0003d2\u0000\u0d1c\u0d1d\u0003\u0400\u0200\u0000"+
+		"\u0d1d\u0d20\u0001\u0000\u0000\u0000\u0d1e\u0d20\u0003J%\u0000\u0d1f\u0d1a"+
+		"\u0001\u0000\u0000\u0000\u0d1f\u0d1e\u0001\u0000\u0000\u0000\u0d20\u0d23"+
+		"\u0001\u0000\u0000\u0000\u0d21\u0d23\u0003L&\u0000\u0d22\u0d18\u0001\u0000"+
+		"\u0000\u0000\u0d22\u0d21\u0001\u0000\u0000\u0000\u0d23\u0d25\u0001\u0000"+
+		"\u0000\u0000\u0d24\u0d17\u0001\u0000\u0000\u0000\u0d24\u0d22\u0001\u0000"+
+		"\u0000\u0000\u0d25\u0d27\u0001\u0000\u0000\u0000\u0d26\u0d15\u0001\u0000"+
+		"\u0000\u0000\u0d26\u0d16\u0001\u0000\u0000\u0000\u0d27\u0403\u0001\u0000"+
+		"\u0000\u0000\u0d28\u0d29\u0003\u00e6s\u0000\u0d29\u0d2a\u0003d2\u0000"+
+		"\u0d2a\u0d2b\u0003\u0406\u0203\u0000\u0d2b\u0405\u0001\u0000\u0000\u0000"+
+		"\u0d2c\u0d2d\u0005\u0132\u0000\u0000\u0d2d\u0407\u0001\u0000\u0000\u0000"+
+		"\u0d2e\u0d2f\u0003\u00e8t\u0000\u0d2f\u0d30\u0003d2\u0000\u0d30\u0d31"+
+		"\u0003 \u0010\u0000\u0d31\u0409\u0001\u0000\u0000\u0000\u0d32\u0d33\u0003"+
+		"\u00eau\u0000\u0d33\u0d34\u0003\u0410\u0208\u0000\u0d34\u040b\u0001\u0000"+
+		"\u0000\u0000\u0d35\u0d39\u0003\u0250\u0128\u0000\u0d36\u0d39\u0003\u0256"+
+		"\u012b\u0000\u0d37\u0d39\u0003\u025a\u012d\u0000\u0d38\u0d35\u0001\u0000"+
+		"\u0000\u0000\u0d38\u0d36\u0001\u0000\u0000\u0000\u0d38\u0d37\u0001\u0000"+
+		"\u0000\u0000\u0d39\u040d\u0001\u0000\u0000\u0000\u0d3a\u0d3f\u0003\u0250"+
+		"\u0128\u0000\u0d3b\u0d3f\u0003\u0252\u0129\u0000\u0d3c\u0d3f\u0003\u0254"+
+		"\u012a\u0000\u0d3d\u0d3f\u0003\u0258\u012c\u0000\u0d3e\u0d3a\u0001\u0000"+
+		"\u0000\u0000\u0d3e\u0d3b\u0001\u0000\u0000\u0000\u0d3e\u0d3c\u0001\u0000"+
+		"\u0000\u0000\u0d3e\u0d3d\u0001\u0000\u0000\u0000\u0d3f\u040f\u0001\u0000"+
+		"\u0000\u0000\u0d40\u0d41\u0003\u0120\u0090\u0000\u0d41\u0d42\u0003\u0018"+
+		"\f\u0000\u0d42\u0d4d\u0001\u0000\u0000\u0000\u0d43\u0d44\u0003\u01ca\u00e5"+
+		"\u0000\u0d44\u0d45\u0003\u040c\u0206\u0000\u0d45\u0d4d\u0001\u0000\u0000"+
+		"\u0000\u0d46\u0d47\u0003\u0126\u0093\u0000\u0d47\u0d48\u0003\u040e\u0207"+
+		"\u0000\u0d48\u0d4b\u0001\u0000\u0000\u0000\u0d49\u0d4b\u0003\u0018\f\u0000"+
+		"\u0d4a\u0d46\u0001\u0000\u0000\u0000\u0d4a\u0d49\u0001\u0000\u0000\u0000"+
+		"\u0d4b\u0d4d\u0001\u0000\u0000\u0000\u0d4c\u0d40\u0001\u0000\u0000\u0000"+
+		"\u0d4c\u0d43\u0001\u0000\u0000\u0000\u0d4c\u0d4a\u0001\u0000\u0000\u0000"+
+		"\u0d4d\u0411\u0001\u0000\u0000\u0000\u0d4e\u0d4f\u0003\u00ecv\u0000\u0d4f"+
+		"\u0d50\u0003d2\u0000\u0d50\u0d51\u0003\u0414\u020a\u0000\u0d51\u0413\u0001"+
+		"\u0000\u0000\u0000\u0d52\u0d56\u0003\u021a\u010d\u0000\u0d53\u0d56\u0003"+
+		"\u021c\u010e\u0000\u0d54\u0d56\u0003\u00ecv\u0000\u0d55\u0d52\u0001\u0000"+
+		"\u0000\u0000\u0d55\u0d53\u0001\u0000\u0000\u0000\u0d55\u0d54\u0001\u0000"+
+		"\u0000\u0000\u0d56\u0d57\u0001\u0000\u0000\u0000\u0d57\u0d58\u0003 \u0010"+
+		"\u0000\u0d58\u0d63\u0001\u0000\u0000\u0000\u0d59\u0d5c\u0003~?\u0000\u0d5a"+
+		"\u0d5c\u0003\u0216\u010b\u0000\u0d5b\u0d59\u0001\u0000\u0000\u0000\u0d5b"+
+		"\u0d5a\u0001\u0000\u0000\u0000\u0d5c\u0d63\u0001\u0000\u0000\u0000\u0d5d"+
+		"\u0d5e\u0003\u021e\u010f\u0000\u0d5e\u0d5f\u0003\u0220\u0110\u0000\u0d5f"+
+		"\u0d60\u0003\u0222\u0111\u0000\u0d60\u0d61\u0003\u0224\u0112\u0000\u0d61"+
+		"\u0d63\u0001\u0000\u0000\u0000\u0d62\u0d55\u0001\u0000\u0000\u0000\u0d62"+
+		"\u0d5b\u0001\u0000\u0000\u0000\u0d62\u0d5d\u0001\u0000\u0000\u0000\u0d63"+
+		"\u0415\u0001\u0000\u0000\u0000\u0d64\u0d65\u0005\u0121\u0000\u0000\u0d65"+
+		"\u0417\u0001\u0000\u0000\u0000\u0d66\u0d67\u0003\u00eew\u0000\u0d67\u0d68"+
+		"\u0003\u041a\u020d\u0000\u0d68\u0419\u0001\u0000\u0000\u0000\u0d69\u0d6a"+
+		"\u0005\u0132\u0000\u0000\u0d6a\u041b\u0001\u0000\u0000\u0000\u0d6b\u0d6c"+
+		"\u0003\u00f0x\u0000\u0d6c\u0d6d\u0003\u0402\u0201\u0000\u0d6d\u041d\u0001"+
+		"\u0000\u0000\u0000\u0d6e\u0d6f\u0003\u00f2y\u0000\u0d6f\u0d70\u0003\u0420"+
+		"\u0210\u0000\u0d70\u0d71\u0003\u0422\u0211\u0000\u0d71\u0d72\u0003\u0124"+
+		"\u0092\u0000\u0d72\u041f\u0001\u0000\u0000\u0000\u0d73\u0d74\u0005\u012b"+
+		"\u0000\u0000\u0d74\u0421\u0001\u0000\u0000\u0000\u0d75\u0d78\u0003\u0120"+
+		"\u0090\u0000\u0d76\u0d78\u0003\u0126\u0093\u0000\u0d77\u0d75\u0001\u0000"+
+		"\u0000\u0000\u0d77\u0d76\u0001\u0000\u0000\u0000\u0d78\u0423\u0001\u0000"+
+		"\u0000\u0000\u0d79\u0d7a\u0003\u00f4z\u0000\u0d7a\u0d7b\u0003\u0426\u0213"+
+		"\u0000\u0d7b\u0d7c\u0005\u0125\u0000\u0000\u0d7c\u0425\u0001\u0000\u0000"+
+		"\u0000\u0d7d\u0d81\u0003~?\u0000\u0d7e\u0d81\u0003\u024c\u0126\u0000\u0d7f"+
+		"\u0d81\u0003\u024e\u0127\u0000\u0d80\u0d7d\u0001\u0000\u0000\u0000\u0d80"+
+		"\u0d7e\u0001\u0000\u0000\u0000\u0d80\u0d7f\u0001\u0000\u0000\u0000\u0d81"+
+		"\u0427\u0001\u0000\u0000\u0000\u0d82\u0d83\u0003\u00f6{\u0000\u0d83\u0d84"+
+		"\u0003\u042a\u0215\u0000\u0d84\u0429\u0001\u0000\u0000\u0000\u0d85\u0d86"+
+		"\u0003\u0120\u0090\u0000\u0d86\u0d87\u0005\u0125\u0000\u0000\u0d87\u0d88"+
+		"\u0003\u0012\t\u0000\u0d88\u0d9a\u0001\u0000\u0000\u0000\u0d89\u0d8a\u0003"+
+		"\u0226\u0113\u0000\u0d8a\u0d8b\u0003L&\u0000\u0d8b\u0d9a\u0001\u0000\u0000"+
+		"\u0000\u0d8c\u0d8d\u0003\u0082A\u0000\u0d8d\u0d8e\u0003\u042e\u0217\u0000"+
+		"\u0d8e\u0d8f\u0005\u0125\u0000\u0000\u0d8f\u0d9a\u0001\u0000\u0000\u0000"+
+		"\u0d90\u0d9a\u0003\u0166\u00b3\u0000\u0d91\u0d92\u0003\u0126\u0093\u0000"+
+		"\u0d92\u0d93\u0005\u0125\u0000\u0000\u0d93\u0d94\u0003\u0012\t\u0000\u0d94"+
+		"\u0d9a\u0001\u0000\u0000\u0000\u0d95\u0d96\u0003\u0228\u0114\u0000\u0d96"+
+		"\u0d97\u0003\u042c\u0216\u0000\u0d97\u0d98\u0003\u0012\t\u0000\u0d98\u0d9a"+
+		"\u0001\u0000\u0000\u0000\u0d99\u0d85\u0001\u0000\u0000\u0000\u0d99\u0d89"+
+		"\u0001\u0000\u0000\u0000\u0d99\u0d8c\u0001\u0000\u0000\u0000\u0d99\u0d90"+
+		"\u0001\u0000\u0000\u0000\u0d99\u0d91\u0001\u0000\u0000\u0000\u0d99\u0d95"+
+		"\u0001\u0000\u0000\u0000\u0d9a\u042b\u0001\u0000\u0000\u0000\u0d9b\u0d9e"+
+		"\u0003\u025c\u012e\u0000\u0d9c\u0d9e\u0003\u00eau\u0000\u0d9d\u0d9b\u0001"+
+		"\u0000\u0000\u0000\u0d9d\u0d9c\u0001\u0000\u0000\u0000\u0d9e\u042d\u0001"+
+		"\u0000\u0000\u0000\u0d9f\u0da2\u0003\u022a\u0115\u0000\u0da0\u0da2\u0003"+
+		"\u022c\u0116\u0000\u0da1\u0d9f\u0001\u0000\u0000\u0000\u0da1\u0da0\u0001"+
+		"\u0000\u0000\u0000\u0da2\u042f\u0001\u0000\u0000\u0000\u0da3\u0da4\u0003"+
+		"\u00f8|\u0000\u0da4\u0da5\u0003\u0318\u018c\u0000\u0da5\u0431\u0001\u0000"+
+		"\u0000\u0000\u00a3\u045d\u0462\u046b\u0470\u047f\u0486\u0498\u04ce\u04d0"+
+		"\u04db\u04de\u04e2\u04e9\u04ed\u04f6\u04f9\u04fd\u050b\u0511\u0517\u051c"+
+		"\u052f\u0532\u0537\u053e\u0545\u054c\u054f\u0554\u0556\u0599\u079c\u07ac"+
+		"\u07b5\u07ba\u07c0\u07cb\u07dc\u07e0\u07f0\u07f5\u080e\u0818\u082f\u0834"+
+		"\u0837\u0839\u0841\u0846\u0856\u0863\u0865\u0868\u086d\u087f\u088d\u0895"+
+		"\u08a4\u08b5\u08c3\u08d7\u08e5\u08f0\u0902\u0913\u0921\u0928\u0934\u0940"+
+		"\u094a\u0956\u095e\u0960\u096b\u096d\u0987\u098d\u0991\u09a2\u09c6\u09d1"+
+		"\u09d7\u09e0\u09e2\u09ec\u09f2\u09fa\u0a16\u0a1a\u0a26\u0a32\u0a3d\u0a4d"+
+		"\u0a61\u0a6a\u0a6e\u0a78\u0a84\u0a89\u0a9b\u0aa7\u0aaf\u0ad0\u0ad9\u0ae5"+
+		"\u0af1\u0af8\u0b16\u0b20\u0b31\u0b3d\u0b4e\u0b58\u0b60\u0b63\u0b66\u0b69"+
+		"\u0b6c\u0b78\u0b7c\u0b7f\u0ba3\u0ba8\u0bae\u0bca\u0bdc\u0beb\u0bf9\u0c03"+
+		"\u0c0e\u0c16\u0c21\u0c33\u0c3c\u0c63\u0c6f\u0c8c\u0ca6\u0cb5\u0cb8\u0cc7"+
+		"\u0ccf\u0cdb\u0cea\u0d00\u0d07\u0d13\u0d1f\u0d22\u0d24\u0d26\u0d38\u0d3e"+
+		"\u0d4a\u0d4c\u0d55\u0d5b\u0d62\u0d77\u0d80\u0d99\u0d9d\u0da1";
+	public static final String _serializedATN = Utils.join(
+		new String[] {
+			_serializedATNSegment0,
+			_serializedATNSegment1
+		},
+		""
+	);
+	public static final ATN _ATN =
+		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
+	static {
+		_decisionToDFA = new DFA[_ATN.getNumberOfDecisions()];
+		for (int i = 0; i < _ATN.getNumberOfDecisions(); i++) {
+			_decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
+		}
+	}
+}

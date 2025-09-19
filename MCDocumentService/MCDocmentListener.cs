@@ -1,56 +1,56 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
-using MinecraftLanguageServer.Model;
-using static mcdocParser;
+using MinecraftLanguageServer.Model.MCDocument;
 
 namespace MinecraftLanguageServer.MCDocumentService
 {
-    public class MCDocmentListener : mcdocBaseListener
+    public class MCDocmentListener : mcdocParserBaseListener
     {
-        public MCDocmentListener(MCDocumentIntellisenseModel model)
+        #region Field
+        private MCDocumentFileModel result = new();
+
+        private string identifier = "";
+        private string stringValue = "";
+
+        #endregion
+
+        #region Method
+        public MCDocumentFileModel GetResult()
         {
-
+            return result;
         }
+        #endregion
 
+        #region Event
         public override void EnterEveryRule([NotNull] ParserRuleContext context)
         {
             string currentType = context.GetType().ToString().Replace("mcdocParser+", "").Replace("Context", "");
             string value = context.GetText();
         }
 
-        public override void EnterUseSentence([NotNull] UseSentenceContext context)
+        public override void EnterIdentifier([NotNull] mcdocParser.IdentifierContext context)
         {
-            string useSentenceValue = context.GetText();
-        }
-
-        public override void EnterStructName([NotNull] StructNameContext context)
-        {
-            string structNameValue = context.GetText();
-        }
-
-        public override void EnterSummary([NotNull] SummaryContext context)
-        {
-            string summaryValue = context.GetText();
-        }
-
-        public override void EnterSuperInvoke([NotNull] SuperInvokeContext context)
-        {
+            base.EnterIdentifier(context);
 
         }
 
-        public override void EnterStructReference([NotNull] StructReferenceContext context)
+        public override void EnterUseStatement([NotNull] mcdocParser.UseStatementContext context)
         {
-
+            base.EnterUseStatement(context);
+            string value = context.GetText();
         }
 
-        public override void EnterDocumentAttributes([NotNull] DocumentAttributesContext context)
+        public override void EnterStructKey([NotNull] mcdocParser.StructKeyContext context)
         {
-            string documentAttributesValue = context.GetText();
+            base.EnterStructKey(context);
+            string value = context.GetText();
         }
 
-        public override void EnterFields([NotNull] FieldsContext context)
+        public override void EnterTypeSentence([NotNull] mcdocParser.TypeSentenceContext context)
         {
-            string fieldValue = context.GetText();
+            base.EnterTypeSentence(context);
+            string value = context.GetText();
         }
+        #endregion
     }
 }

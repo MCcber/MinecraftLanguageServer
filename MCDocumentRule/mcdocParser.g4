@@ -1,25 +1,27 @@
-grammar mcdocParser;
+parser grammar mcdocParser;
 options {
-    language = Java;
+    language = CSharp;
+    tokenVocab = mcdocLexer;
 }
 
-import mcdocLexer;
+// import mcdocLexer;
 
 logicalOR:LogicalOR;
 path:Path;
 resourceLocation: ResourceLocation;
-at:'@';
-dot:'.';
-baseDataType:'string'|'boolean'|'byte'|'short'|'int'|'float'|'double'|'long';
+at:At;
+as:As;
+dot:Dot;
+baseDataType:StringKeyType|BooleanKeyType|ByteKeyType|ShortKeyType|IntKeyType|FloatKeyType|DoubleKeyType|LongKeyType;
 keywordType:(Any|BoolValue);
-questionMark: '?';
-structKeyType:'struct';
-inject:'inject';
-enum:'enum';
-use:'use';
-dispatch:'dispatch';
-typeKeyType:'type';
-doubleDot:'..';
+questionMark: QuestionMark;
+typeKey:TypeKey;
+structKeyType:StructKeyType;
+inject:Inject;
+enum:Enum;
+use:Use;
+dispatch:Dispatch;
+doubleDot:DoubleDot;
 
 integer:Integer;
 float:Float;
@@ -37,20 +39,20 @@ stringType:StringKeyType (at IntegerRange)?;
 
 literalType:BoolValue|TypedNumberLexer|String|Identifier;
 
-numericType:baseDataType(at integerRange)?;
+numericType:baseDataType(at (integerRange|integer))?;
 
-primitiveArrayType:(('byte'|'int'|'long') (at WS* integerRange)?SquareBrackets WS* (at WS* (integerRange|integer))?);
+primitiveArrayType:(ByteKeyType|IntKeyType|LongKeyType) (at WS* (integerRange|integer))?SquareBrackets WS* (at WS* (integerRange|integer))?;
 
-listType:LeftSquareBracket type RightSquareBracket (at integerRange)?;
+listType:LeftSquareBracket typeSentence RightSquareBracket (at (integerRange|integer))?;
 
-tupleType:(LeftSquareBracket type Comma RightSquareBracket)
-|(LeftSquareBracket type(Comma type)+Comma?RightSquareBracket);
+tupleType:(LeftSquareBracket typeSentence Comma RightSquareBracket)
+|(LeftSquareBracket typeSentence(Comma typeSentence)+Comma?RightSquareBracket);
 
-enumMemberType:'byte'|'short'|'int'|'long'|'string'|'float'|'double';
+enumMemberType:StringKeyType|ByteKeyType|ShortKeyType|IntKeyType|LongKeyType|FloatKeyType|DoubleKeyType;
 enumValue:typedNumber|string;
-enumField:prelim? attribute* identifier Equal enumValue;
+enumField:prelim* attribute* identifier Equal enumValue;
 enumBlock:CurlyBrackets|(LeftCurlyBracket enumField(Comma enumField)*Comma?RightCurlyBracket);
-enumType:prelim? enum LeftRoundBracket enumMemberType RightRoundBracket identifier?enumBlock;
+enumType:prelim? enum LeftRoundBracket enumMemberType RightRoundBracket identifier? enumBlock;
 
 prelim:(docCommentary|commentary) attribute?;
 
@@ -59,13 +61,13 @@ referenceType:Path;
 dispatcherType:resourceLocation indexBodyWithDynamic;
 
 unionType: RoundBrackets
-         | (LeftRoundBracket type (logicalOR type)* logicalOR? RightRoundBracket)
+         | (LeftRoundBracket typeSentence (logicalOR typeSentence)* logicalOR? RightRoundBracket)
          ;
 
-staticIndexKey:'%fallback' | '%none' | '%unknown'| Identifier | String | ResourceLocation;
+staticIndexKey:Fallback | None | Unknown| Identifier | String | ResourceLocation;
 
 accessor: accessorKey accessorKey*;
-accessorKey: '%parent' | '%key' | Identifier | String;
+accessorKey: Parent | Key | Identifier | String;
 dynamicIndex : LeftSquareBracket accessor RightSquareBracket;
 
 indexWithOutDynamic:staticIndexKey;
@@ -76,7 +78,7 @@ indexBodyWithDynamic:LeftSquareBracket indexWithDynamic (Comma indexWithDynamic)
 
 indexingOnAType:indexBodyWithDynamic;
 
-typeArgBlock:AngleBrackets | (LeftAngleBracket type (Comma type)* Comma? RightAngleBracket);
+typeArgBlock:AngleBrackets | (LeftAngleBracket typeSentence (Comma typeSentence)* Comma? RightAngleBracket);
 
 unAttributedType:(keywordType 
 |stringType 
@@ -93,7 +95,7 @@ unAttributedType:(keywordType
 |indexingOnAType) Comma?
 ;
 
-type:attribute* unAttributedType (indexBodyWithDynamic|typeArgBlock)*;
+typeSentence:attribute* unAttributedType (indexBodyWithDynamic|typeArgBlock)*;
 
 attributeSet:commentary* attribute* commentary* identifier* commentary*;
 
@@ -115,34 +117,34 @@ treeValue:(LeftRoundBracket treeBody? RightRoundBracket)
 |(LeftSquareBracket treeBody? RightSquareBracket)
 |(LeftCurlyBracket treeBody? RightCurlyBracket);
 
-value:type|treeValue;
+value:typeSentence|treeValue;
 
 attribute:(Sharp LeftSquareBracket identifier RightSquareBracket)
 |(Sharp LeftSquareBracket identifier Equal value RightSquareBracket)
 |(Sharp LeftSquareBracket identifier treeValue RightSquareBracket);
 
-dispatchStatement:prelim? dispatch resourceLocation indexBodyWithOutDynamic typeParamBlock? 'to' type;
+dispatchStatement:prelim? attribute* dispatch resourceLocation indexBodyWithOutDynamic typeParamBlock? To typeSentence;
 
 structInjection:structKeyType path structBlock;
-enumInjection:EnumKeyType LeftRoundBracket enumType RightRoundBracket path enumBlock;
+enumInjection:Enum LeftRoundBracket enumType RightRoundBracket path enumBlock;
 injection:inject (enumInjection | structInjection);
 
-useStatement:use path (As identifier)?;
+useStatement:use path (as identifier)?;
 
 typeParam:Identifier;
 
 typeParamBlock:AngleBrackets
 |(LeftAngleBracket typeParam (Comma typeParam)* Comma? RightAngleBracket);
 
-typeAlias:prelim? typeKeyType identifier typeParamBlock? Equal type;
+typeAlias:prelim* typeKey identifier typeParamBlock? Equal typeSentence;
 
-structKey:String|Identifier|(LeftSquareBracket type RightSquareBracket);
-structField:(prelim* attribute* structKey questionMark? ColonMark type)
-|(attribute? TripleDot?type);
+structKey:String|Identifier|(LeftSquareBracket typeSentence RightSquareBracket);
+structField:(prelim* attribute* structKey questionMark? ColonMark typeSentence)
+|(attribute* TripleDot?typeSentence);
 
 structBlock:CurlyBrackets
 |(LeftCurlyBracket structField(Comma structField)* Comma? RightCurlyBracket);
 
-struct:prelim? structKeyType identifier? structBlock;
+struct:prelim* structKeyType identifier? structBlock;
 
 file:(struct|enumType|typeAlias|useStatement|injection|dispatchStatement)*;
