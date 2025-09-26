@@ -191,6 +191,16 @@ public interface ImcdocParserListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitDoubleDot([NotNull] mcdocParser.DoubleDotContext context);
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="mcdocParser.tripleDot"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterTripleDot([NotNull] mcdocParser.TripleDotContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mcdocParser.tripleDot"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitTripleDot([NotNull] mcdocParser.TripleDotContext context);
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.integer"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -211,6 +221,16 @@ public interface ImcdocParserListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitFloat([NotNull] mcdocParser.FloatContext context);
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="mcdocParser.string"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterString([NotNull] mcdocParser.StringContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mcdocParser.string"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitString([NotNull] mcdocParser.StringContext context);
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.integerRange"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -230,6 +250,16 @@ public interface ImcdocParserListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitIdentifier([NotNull] mcdocParser.IdentifierContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="mcdocParser.boolValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterBoolValue([NotNull] mcdocParser.BoolValueContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mcdocParser.boolValue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitBoolValue([NotNull] mcdocParser.BoolValueContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.commentary"/>.
 	/// </summary>
@@ -451,45 +481,25 @@ public interface ImcdocParserListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitDynamicIndex([NotNull] mcdocParser.DynamicIndexContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexWithOutDynamic"/>.
+	/// Enter a parse tree produced by <see cref="mcdocParser.index"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterIndexWithOutDynamic([NotNull] mcdocParser.IndexWithOutDynamicContext context);
+	void EnterIndex([NotNull] mcdocParser.IndexContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexWithOutDynamic"/>.
+	/// Exit a parse tree produced by <see cref="mcdocParser.index"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitIndexWithOutDynamic([NotNull] mcdocParser.IndexWithOutDynamicContext context);
+	void ExitIndex([NotNull] mcdocParser.IndexContext context);
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexWithDynamic"/>.
+	/// Enter a parse tree produced by <see cref="mcdocParser.indexBody"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterIndexWithDynamic([NotNull] mcdocParser.IndexWithDynamicContext context);
+	void EnterIndexBody([NotNull] mcdocParser.IndexBodyContext context);
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexWithDynamic"/>.
+	/// Exit a parse tree produced by <see cref="mcdocParser.indexBody"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitIndexWithDynamic([NotNull] mcdocParser.IndexWithDynamicContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexBodyWithOutDynamic"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterIndexBodyWithOutDynamic([NotNull] mcdocParser.IndexBodyWithOutDynamicContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexBodyWithOutDynamic"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitIndexBodyWithOutDynamic([NotNull] mcdocParser.IndexBodyWithOutDynamicContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexBodyWithDynamic"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterIndexBodyWithDynamic([NotNull] mcdocParser.IndexBodyWithDynamicContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexBodyWithDynamic"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitIndexBodyWithDynamic([NotNull] mcdocParser.IndexBodyWithDynamicContext context);
+	void ExitIndexBody([NotNull] mcdocParser.IndexBodyContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.indexingOnAType"/>.
 	/// </summary>
@@ -530,36 +540,6 @@ public interface ImcdocParserListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitTypeSentence([NotNull] mcdocParser.TypeSentenceContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.attributeSet"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAttributeSet([NotNull] mcdocParser.AttributeSetContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.attributeSet"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAttributeSet([NotNull] mcdocParser.AttributeSetContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.arrayLength"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterArrayLength([NotNull] mcdocParser.ArrayLengthContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.arrayLength"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitArrayLength([NotNull] mcdocParser.ArrayLengthContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.string"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterString([NotNull] mcdocParser.StringContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.string"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitString([NotNull] mcdocParser.StringContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.positionalValues"/>.
 	/// </summary>

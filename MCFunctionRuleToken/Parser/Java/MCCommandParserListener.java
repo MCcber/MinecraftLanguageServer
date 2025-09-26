@@ -117,6 +117,16 @@ public interface MCCommandParserListener extends ParseTreeListener {
 	 */
 	void exitIntInterval(MCCommandParser.IntIntervalContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#double}.
+	 * @param ctx the parse tree
+	 */
+	void enterDouble(MCCommandParser.DoubleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#double}.
+	 * @param ctx the parse tree
+	 */
+	void exitDouble(MCCommandParser.DoubleContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link MCCommandParser#axeValue}.
 	 * @param ctx the parse tree
 	 */
@@ -227,15 +237,35 @@ public interface MCCommandParserListener extends ParseTreeListener {
 	 */
 	void exitJpair(MCCommandParser.JpairContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MCCommandParser#jsonValue}.
+	 * Enter a parse tree produced by {@link MCCommandParser#sNbt}.
 	 * @param ctx the parse tree
 	 */
-	void enterJsonValue(MCCommandParser.JsonValueContext ctx);
+	void enterSNbt(MCCommandParser.SNbtContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MCCommandParser#jsonValue}.
+	 * Exit a parse tree produced by {@link MCCommandParser#sNbt}.
 	 * @param ctx the parse tree
 	 */
-	void exitJsonValue(MCCommandParser.JsonValueContext ctx);
+	void exitSNbt(MCCommandParser.SNbtContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#jDouble}.
+	 * @param ctx the parse tree
+	 */
+	void enterJDouble(MCCommandParser.JDoubleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#jDouble}.
+	 * @param ctx the parse tree
+	 */
+	void exitJDouble(MCCommandParser.JDoubleContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#jFloat}.
+	 * @param ctx the parse tree
+	 */
+	void enterJFloat(MCCommandParser.JFloatContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#jFloat}.
+	 * @param ctx the parse tree
+	 */
+	void exitJFloat(MCCommandParser.JFloatContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MCCommandParser#jvalue}.
 	 * @param ctx the parse tree
@@ -246,6 +276,56 @@ public interface MCCommandParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitJvalue(MCCommandParser.JvalueContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#nbtPathItem}.
+	 * @param ctx the parse tree
+	 */
+	void enterNbtPathItem(MCCommandParser.NbtPathItemContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#nbtPathItem}.
+	 * @param ctx the parse tree
+	 */
+	void exitNbtPathItem(MCCommandParser.NbtPathItemContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#nbtObject}.
+	 * @param ctx the parse tree
+	 */
+	void enterNbtObject(MCCommandParser.NbtObjectContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#nbtObject}.
+	 * @param ctx the parse tree
+	 */
+	void exitNbtObject(MCCommandParser.NbtObjectContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#nbtArray}.
+	 * @param ctx the parse tree
+	 */
+	void enterNbtArray(MCCommandParser.NbtArrayContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#nbtArray}.
+	 * @param ctx the parse tree
+	 */
+	void exitNbtArray(MCCommandParser.NbtArrayContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#nbtPair}.
+	 * @param ctx the parse tree
+	 */
+	void enterNbtPair(MCCommandParser.NbtPairContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#nbtPair}.
+	 * @param ctx the parse tree
+	 */
+	void exitNbtPair(MCCommandParser.NbtPairContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MCCommandParser#nbtValue}.
+	 * @param ctx the parse tree
+	 */
+	void enterNbtValue(MCCommandParser.NbtValueContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MCCommandParser#nbtValue}.
+	 * @param ctx the parse tree
+	 */
+	void exitNbtValue(MCCommandParser.NbtValueContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MCCommandParser#nbtPath}.
 	 * @param ctx the parse tree
@@ -1317,15 +1397,15 @@ public interface MCCommandParserListener extends ParseTreeListener {
 	 */
 	void exitTypeKey(MCCommandParser.TypeKeyContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MCCommandParser#nbtKey}.
+	 * Enter a parse tree produced by {@link MCCommandParser#nbt}.
 	 * @param ctx the parse tree
 	 */
-	void enterNbtKey(MCCommandParser.NbtKeyContext ctx);
+	void enterNbt(MCCommandParser.NbtContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link MCCommandParser#nbtKey}.
+	 * Exit a parse tree produced by {@link MCCommandParser#nbt}.
 	 * @param ctx the parse tree
 	 */
-	void exitNbtKey(MCCommandParser.NbtKeyContext ctx);
+	void exitNbt(MCCommandParser.NbtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MCCommandParser#sortKey}.
 	 * @param ctx the parse tree
@@ -3476,26 +3556,6 @@ public interface MCCommandParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDataStringEnd(MCCommandParser.DataStringEndContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link MCCommandParser#entityNBTPath}.
-	 * @param ctx the parse tree
-	 */
-	void enterEntityNBTPath(MCCommandParser.EntityNBTPathContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MCCommandParser#entityNBTPath}.
-	 * @param ctx the parse tree
-	 */
-	void exitEntityNBTPath(MCCommandParser.EntityNBTPathContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link MCCommandParser#blockNBTPath}.
-	 * @param ctx the parse tree
-	 */
-	void enterBlockNBTPath(MCCommandParser.BlockNBTPathContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MCCommandParser#blockNBTPath}.
-	 * @param ctx the parse tree
-	 */
-	void exitBlockNBTPath(MCCommandParser.BlockNBTPathContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MCCommandParser#dataOptions}.
 	 * @param ctx the parse tree

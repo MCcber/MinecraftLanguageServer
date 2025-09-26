@@ -148,6 +148,18 @@ public class MCCommandParserBaseListener implements MCCommandParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDouble(MCCommandParser.DoubleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDouble(MCCommandParser.DoubleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAxeValue(MCCommandParser.AxeValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -280,13 +292,37 @@ public class MCCommandParserBaseListener implements MCCommandParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterJsonValue(MCCommandParser.JsonValueContext ctx) { }
+	@Override public void enterSNbt(MCCommandParser.SNbtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitJsonValue(MCCommandParser.JsonValueContext ctx) { }
+	@Override public void exitSNbt(MCCommandParser.SNbtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterJDouble(MCCommandParser.JDoubleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitJDouble(MCCommandParser.JDoubleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterJFloat(MCCommandParser.JFloatContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitJFloat(MCCommandParser.JFloatContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -299,6 +335,66 @@ public class MCCommandParserBaseListener implements MCCommandParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitJvalue(MCCommandParser.JvalueContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNbtPathItem(MCCommandParser.NbtPathItemContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNbtPathItem(MCCommandParser.NbtPathItemContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNbtObject(MCCommandParser.NbtObjectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNbtObject(MCCommandParser.NbtObjectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNbtArray(MCCommandParser.NbtArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNbtArray(MCCommandParser.NbtArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNbtPair(MCCommandParser.NbtPairContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNbtPair(MCCommandParser.NbtPairContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNbtValue(MCCommandParser.NbtValueContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNbtValue(MCCommandParser.NbtValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1588,13 +1684,13 @@ public class MCCommandParserBaseListener implements MCCommandParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNbtKey(MCCommandParser.NbtKeyContext ctx) { }
+	@Override public void enterNbt(MCCommandParser.NbtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNbtKey(MCCommandParser.NbtKeyContext ctx) { }
+	@Override public void exitNbt(MCCommandParser.NbtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -4175,30 +4271,6 @@ public class MCCommandParserBaseListener implements MCCommandParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDataStringEnd(MCCommandParser.DataStringEndContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterEntityNBTPath(MCCommandParser.EntityNBTPathContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitEntityNBTPath(MCCommandParser.EntityNBTPathContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterBlockNBTPath(MCCommandParser.BlockNBTPathContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBlockNBTPath(MCCommandParser.BlockNBTPathContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

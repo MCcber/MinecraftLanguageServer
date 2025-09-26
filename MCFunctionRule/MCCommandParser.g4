@@ -1,6 +1,6 @@
 parser grammar MCCommandParser;
 options {
-  language = Java;
+  language = CSharp;
   tokenVocab = MCCommandLexer;
 }
 
@@ -15,22 +15,31 @@ dimensionId:ResourceLocation;
 mobAttribute:ResourceLocation;
 integer:Integer;
 intInterval:IntInterval;
+double:Double;
 axeValue:Integer | Double;
 gameTimeValue:GameTimeValue;
 biomeId:ResourceLocation;
 bool:BooleanValue;
 stringValue:String;
-jsonComponent:jsonValue;
+jsonComponent:sNbt;
 uuid:UUID;
 
 jobject: CurlyBrackets | (LeftCurlyBracket jpair(Comma jpair)* RightCurlyBracket);
 jarray: SquareBrackets | (LeftSquareBracket jvalue (Comma jvalue)* RightSquareBracket);
 jkey:Identifier;
 jpair: jkey Colon jvalue;
-jsonValue: jobject;
-jvalue: stringValue | Double | jobject | jarray | bool;
+sNbt: jobject;
+jDouble:Double|PositiveDouble;
+jFloat:Float;
+jvalue: stringValue | integer | jFloat | jDouble | jobject | jarray | bool;
 
-nbtPath:Identifier(Dot Identifier)*;
+nbtPathItem: identifier (nbtObject | nbtArray)? | stringValue;
+nbtObject: LeftCurlyBracket nbtPair (Comma nbtPair)* RightCurlyBracket;
+nbtArray: LeftSquareBracket nbtValue (Comma nbtValue)* RightSquareBracket;
+nbtPair: identifier? Colon nbtValue;
+nbtValue: stringValue | integer | double | nbtObject | booleanValue;
+nbtPath: nbtPathItem (Dot nbtPathItem)*;
+
 dataType:ByteKey|DoubleKey|FloatKey|IntKey|LongKey|ShortKey;
 
 itemId:ResourceLocation;
@@ -38,10 +47,10 @@ itemId:ResourceLocation;
 blockState:BlockStateKey equal BlockStateValue;
 blockID:ResourceLocation | (Identifier (leftSquareBracket blockState(Comma  blockState)* rightSquareBracket)?);
 
-blockNBT:jsonValue;
-entityNBT:jsonValue;
+blockNBT:sNbt;
+entityNBT:sNbt;
 targetObjective:Identifier;
-storageId:Identifier;
+storageId:ResourceLocation;
 storageIdString:Identifier;
 
 coordinateX:Coordinate|Double|Integer;
@@ -74,17 +83,17 @@ scoresValue: CurlyBrackets | (leftCurlyBracket (scoreParameter(Comma scoreParame
 parameter:(axeKey equal axeValue)
 |(axeLengthKey equal positiveDouble)
 |(viewRotationKey equal (viewRotationValue|doubleInterval))
-|(distance equal (positiveDouble|positiveDoubleInterval))
+|(distance equal (positiveDouble|positiveDoubleInterval|integer|intInterval|double|doubleInterval))
 |(level equal (levelValue|intInterval))
 |(gamemodeKey equal exclamationMark?gamemodeValue)
 |(advancementKey equal advancementValue)
 |(scoreKey equal scoresValue)
 |(limit equal integer)
 |(teamKey equal exclamationMark?teamName?)
-|(name equal exclamationMark?nameValue)
 |(typeKey equal exclamationMark?entityType)
+|(name equal exclamationMark?nameValue)
 |(predicate equal exclamationMark?predicateValue)
-|(nbtKey equal exclamationMark?jsonValue?)
+|(nbt equal exclamationMark?sNbt?)
 |(sortKey equal sortValue?)
 ;
 
@@ -230,7 +239,7 @@ level:Level;
 scoreKey:ScoreKey;
 limit:LimitKey;
 typeKey:TypeKey;
-nbtKey:NBTKey;
+nbt:NBT;
 sortKey:SortKey;
 divisionEqual:DivisionEqual;
 multiplicationEqual:MultiplicationEqual;
@@ -415,14 +424,14 @@ booleanValue:BooleanValue;
 
 oneHundredAndEighty:OneHundredAndEighty;
 
-// 进度
+//advancement
 advancementRadical: advancementKey (grant|revoke) selector advancementModes;
 advancementCriterion:FileReference;
 advancementCriterionBlock:advancementCriterion equal (booleanValue | (leftCurlyBracket identifier equal booleanValue rightCurlyBracket));
 advancementValue:CurlyBrackets | (leftCurlyBracket advancementCriterionBlock (Comma advancementCriterionBlock)* rightCurlyBracket);
 advancementModes:(everything|(only advancementCriterion))|(from advancementCriterion)|(through advancementCriterion)|(until advancementCriterion);
 
-//属性
+//attribute
 attributeRadical: attributeKey selector mobAttribute attributeOptions;
 attributeOptions: (base baseModifier Double)|(get Double)|(modifier modifierOptions);
 baseModifier:get|set;
@@ -431,9 +440,8 @@ modifierModes:add|multiply|multiply_base;
 
 //bossbar
 bossbarRadical:bossbarKey bossbarOptions;
-bossbarID:ResourceLocation;
-bossbarIdString:Identifier;
-bossbarOptions:((add bossbarIdString jsonComponent)|(get bossbarID bossbarGetTarget)|listKey|(remove bossbarID)|(set bossbarID bossbarAttributes));
+bossbarID:Identifier;
+bossbarOptions:((add bossbarID jsonComponent)|(get bossbarID bossbarGetTarget)|listKey|(remove bossbarID)|(set bossbarID bossbarAttributes));
 bossbarStyle:Identifier;
 bossbarColor:Identifier;
 bossbarGetTarget:max|players|value|visible;
@@ -463,26 +471,24 @@ dataRadical:dataKey dataOptions;
 
 dataStringStart:Integer;
 dataStringEnd:Integer;
-entityNBTPath:Identifier(Dot Identifier)*;
-blockNBTPath:Identifier(Dot Identifier)*;
 
 dataOptions: (get dataGetTarget)|(merge dataMergeTarget)|(modify dataModifyTarget)|(remove dataRemoveTarget);
 
-dataGetTarget:(block pos3D blockNBTPath Double)|(entity selector entityNBTPath Double)|(storage storageIdString nbtPath Double);
+dataGetTarget:(block pos3D nbtPath double?)|(entity selector nbtPath double?)|(storage storageIdString nbtPath double?);
 
 dataMergeTarget:(block pos3D blockNBT)|(entity selector entityNBT)|(storage storageId jsonComponent);
 
-dataModifyStringTarget:(block pos3D blockNBTPath dataStringStart dataStringEnd)|(entity selector entityNBTPath dataStringStart dataStringEnd)|(storage storageId nbtPath dataStringStart dataStringEnd);
+dataModifyStringTarget:(block pos3D nbtPath dataStringStart dataStringEnd?)|(entity selector nbtPath dataStringStart dataStringEnd)|(storage storageId nbtPath dataStringStart dataStringEnd);
 
-dataModifyFromTarget:(block pos3D blockNBTPath)|(entity selector entityNBTPath)|(storage storageId nbtPath);
+dataModifyFromTarget:(block pos3D nbtPath)|(entity selector nbtPath)|(storage storageId nbtPath);
 
-dataModifyBehaviors:(from dataModifyFromTarget)|(stringKey dataModifyStringTarget)|(value jsonComponent);
+dataModifyBehaviors:(from dataModifyFromTarget)|(stringKey dataModifyStringTarget)|(value jvalue);
 
 dataModifyOptions:(append dataModifyBehaviors)|(insert integer dataModifyBehaviors)|(merge dataModifyBehaviors)|(prepend dataModifyBehaviors)|(set dataModifyBehaviors);
 
-dataModifyTarget:(block pos3D blockNBTPath dataModifyOptions)|(entity selector entityNBTPath dataModifyOptions)|(storage storageId nbtPath dataModifyOptions);
+dataModifyTarget:(block pos3D nbtPath dataModifyOptions)|(entity selector nbtPath dataModifyOptions)|(storage storageId nbtPath dataModifyOptions);
 
-dataRemoveTarget:(block pos3D blockNBTPath)|(entity selector entityNBTPath)|(storage storageIdString nbtPath);
+dataRemoveTarget:(block pos3D nbtPath)|(entity selector nbtPath)|(storage storageIdString nbtPath);
 
 //datapack
 datapackRadical:datapackKey datapackOptions;
@@ -523,6 +529,7 @@ executeEyesOrFeet:eyes|feet;
 axes:Axes;
 executeAllOrMasked:all|masked;
 executeMaxOrValue:max|value;
+
 executeJudgeDataOptions:
 (block pos3D nbtPath)
 |(entity selector nbtPath)
@@ -653,13 +660,13 @@ msgRadical:msgKey selector msgMessage;
 msgMessage:MessageContent;
 
 //particle
-particleRadical:particleKey particleId pos3D particleDelta? particleSpeed? particleCount? particleOptions? selector?;
+particleRadical:particleKey particleId (pos3D particleDelta particleSpeed particleCount particleOptions? selector?)?;
 particleSpeed:Double|Integer;
 particleCount:Integer;
 particleDelta:coordinateX coordinateY coordinateZ;
 particleOptions:force|normal;
-particleId:(particleIDString|identifier) jobject?;
-particleIDString:ResourceLocation;
+particleId:particleIDString jobject?;
+particleIDString:ResourceLocation|Identifier;
 
 //place
 placeRadical:placeKey placeModes;
@@ -710,7 +717,7 @@ scheduleModes:(clearKey functionId)|(functionKey functionId Double scheduleAppen
 //scoreboard
 scoreboardRadical:scoreboardKey scoreboardOptions;
 scoreboardOptions:(objectives scoreboardObjectivesBehaviors)|(players scoreboardPlayersBehaviors);
-scoreboardObjective:ScoreboardObjective;
+scoreboardObjective:Identifier;
 scoreboardType:ResourceLocation;
 scoreboardHeartsOrInteger:hearts|integer;
 scoreboardOperator:remainderEqual|multiplicationEqual|additionEqual|subtractionEqual|divisionEqual|lessThan|equal|greaterThan|greaterThanLessThan;
@@ -771,7 +778,7 @@ teamMessage:MessageContent;
 //teleport
 teleportRadical:teleportKey teleportOptions;
 teleportEyesOrFeet:eyes|feet;
-teleportOptions:pos3D|(selector (selector|(pos3D (facing ((entity selector teleportEyesOrFeet)|pos3D))|pos2D)));
+teleportOptions:pos3D|(selector (selector|(pos3D (facing ((entity selector teleportEyesOrFeet)|pos3D))?|pos2D)));
 
 //tell
 tellRadical:tellKey selector tellMessage;

@@ -4,8 +4,6 @@ options {
     tokenVocab = mcdocLexer;
 }
 
-// import mcdocLexer;
-
 logicalOR:LogicalOR;
 path:Path;
 resourceLocation: ResourceLocation;
@@ -22,22 +20,26 @@ enum:Enum;
 use:Use;
 dispatch:Dispatch;
 doubleDot:DoubleDot;
+tripleDot:TripleDot;
 
 integer:Integer;
 float:Float;
+
+string:String;
 
 integerRange:IntegerRange;
 // floatRange:(DoubleDot float) | (float DoubleDot) | (float DoubleDot float) | float;
 
 identifier:Identifier;
 
+boolValue:BoolValue;
 commentary:Commentary;
 docCommentary:DocCommentary;
 typedNumber:(integer IntTypedUnit?)|(float FloatTypedUnit?);
 
 stringType:StringKeyType (at IntegerRange)?;
 
-literalType:BoolValue|TypedNumberLexer|String|Identifier;
+literalType:boolValue|typedNumber|string|identifier;
 
 numericType:baseDataType(at (integerRange|integer))?;
 
@@ -58,7 +60,7 @@ prelim:(docCommentary|commentary) attribute?;
 
 referenceType:Path;
 
-dispatcherType:resourceLocation indexBodyWithDynamic;
+dispatcherType:resourceLocation indexBody;
 
 unionType: RoundBrackets
          | (LeftRoundBracket typeSentence (logicalOR typeSentence)* logicalOR? RightRoundBracket)
@@ -70,13 +72,14 @@ accessor: accessorKey accessorKey*;
 accessorKey: Parent | Key | Identifier | String;
 dynamicIndex : LeftSquareBracket accessor RightSquareBracket;
 
-indexWithOutDynamic:staticIndexKey;
-indexWithDynamic:staticIndexKey|dynamicIndex;
+// indexWithOutDynamic:staticIndexKey;
+index:staticIndexKey|dynamicIndex;
 
-indexBodyWithOutDynamic:LeftSquareBracket indexWithOutDynamic (Comma indexWithOutDynamic)* Comma? RightSquareBracket;
-indexBodyWithDynamic:LeftSquareBracket indexWithDynamic (Comma indexWithDynamic)* Comma? RightSquareBracket;
+// indexBodyWithOutDynamic:LeftSquareBracket indexWithOutDynamic (Comma indexWithOutDynamic)* Comma? RightSquareBracket;
+// indexBodyWithDynamic:LeftSquareBracket indexWithDynamic (Comma indexWithDynamic)* Comma? RightSquareBracket;
+indexBody:LeftSquareBracket index (Comma index)* Comma? RightSquareBracket;
 
-indexingOnAType:indexBodyWithDynamic;
+indexingOnAType:indexBody;
 
 typeArgBlock:AngleBrackets | (LeftAngleBracket typeSentence (Comma typeSentence)* Comma? RightAngleBracket);
 
@@ -95,13 +98,8 @@ unAttributedType:(keywordType
 |indexingOnAType) Comma?
 ;
 
-typeSentence:attribute* unAttributedType (indexBodyWithDynamic|typeArgBlock)*;
+typeSentence:attribute* unAttributedType (indexBody|typeArgBlock)*;
 
-attributeSet:commentary* attribute* commentary* identifier* commentary*;
-
-arrayLength:at PositiveInteger;
-
-string:String;
 positionalValues:value(Comma value)*;
 
 namedValue:((identifier|string)Equal value)
@@ -123,7 +121,7 @@ attribute:(Sharp LeftSquareBracket identifier RightSquareBracket)
 |(Sharp LeftSquareBracket identifier Equal value RightSquareBracket)
 |(Sharp LeftSquareBracket identifier treeValue RightSquareBracket);
 
-dispatchStatement:prelim? attribute* dispatch resourceLocation indexBodyWithOutDynamic typeParamBlock? To typeSentence;
+dispatchStatement:prelim? attribute* dispatch resourceLocation indexBody typeParamBlock? To typeSentence;
 
 structInjection:structKeyType path structBlock;
 enumInjection:Enum LeftRoundBracket enumType RightRoundBracket path enumBlock;
@@ -140,7 +138,7 @@ typeAlias:prelim* typeKey identifier typeParamBlock? Equal typeSentence;
 
 structKey:String|Identifier|(LeftSquareBracket typeSentence RightSquareBracket);
 structField:(prelim* attribute* structKey questionMark? ColonMark typeSentence)
-|(attribute* TripleDot?typeSentence);
+|(attribute* tripleDot?typeSentence);
 
 structBlock:CurlyBrackets
 |(LeftCurlyBracket structField(Comma structField)* Comma? RightCurlyBracket);

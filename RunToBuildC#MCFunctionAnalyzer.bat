@@ -1,0 +1,2 @@
+java -jar antlr-4.13.2-complete.jar -o .\MCFunctionRuleToken\Lexer\C# %cd%\MCFunctionRule\MCCommandLexer.g4
+java -jar antlr-4.13.2-complete.jar -lib .\MCFunctionRuleToken\Lexer\C# -o .\MCFunctionRuleToken\Parser\C# %cd%\MCFunctionRule\MCCommandParser.g4

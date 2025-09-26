@@ -2,6 +2,6 @@
 {
     public class UnionType
     {
-        public List<MCDocumentType> Type { get; set; } = [];
+        public List<MCDocumentType> TypeList { get; set; } = [];
     }
 }

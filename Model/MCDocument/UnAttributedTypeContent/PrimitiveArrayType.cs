@@ -6,6 +6,5 @@ namespace MinecraftLanguageServer.Model.MCDocument
     {
         public PrimitiveArrayDataType DataType { get; set; }
         public string? Range { get; set; }
-        public string? Count { get; set; }
     }
 }

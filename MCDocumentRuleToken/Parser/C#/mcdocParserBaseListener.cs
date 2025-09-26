@@ -228,6 +228,18 @@ public partial class mcdocParserBaseListener : ImcdocParserListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitDoubleDot([NotNull] mcdocParser.DoubleDotContext context) { }
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="mcdocParser.tripleDot"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterTripleDot([NotNull] mcdocParser.TripleDotContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mcdocParser.tripleDot"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitTripleDot([NotNull] mcdocParser.TripleDotContext context) { }
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.integer"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -252,6 +264,18 @@ public partial class mcdocParserBaseListener : ImcdocParserListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitFloat([NotNull] mcdocParser.FloatContext context) { }
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="mcdocParser.string"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterString([NotNull] mcdocParser.StringContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mcdocParser.string"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitString([NotNull] mcdocParser.StringContext context) { }
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.integerRange"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -275,6 +299,18 @@ public partial class mcdocParserBaseListener : ImcdocParserListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitIdentifier([NotNull] mcdocParser.IdentifierContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="mcdocParser.boolValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterBoolValue([NotNull] mcdocParser.BoolValueContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mcdocParser.boolValue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitBoolValue([NotNull] mcdocParser.BoolValueContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.commentary"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -540,53 +576,29 @@ public partial class mcdocParserBaseListener : ImcdocParserListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitDynamicIndex([NotNull] mcdocParser.DynamicIndexContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexWithOutDynamic"/>.
+	/// Enter a parse tree produced by <see cref="mcdocParser.index"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIndexWithOutDynamic([NotNull] mcdocParser.IndexWithOutDynamicContext context) { }
+	public virtual void EnterIndex([NotNull] mcdocParser.IndexContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexWithOutDynamic"/>.
+	/// Exit a parse tree produced by <see cref="mcdocParser.index"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIndexWithOutDynamic([NotNull] mcdocParser.IndexWithOutDynamicContext context) { }
+	public virtual void ExitIndex([NotNull] mcdocParser.IndexContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexWithDynamic"/>.
+	/// Enter a parse tree produced by <see cref="mcdocParser.indexBody"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIndexWithDynamic([NotNull] mcdocParser.IndexWithDynamicContext context) { }
+	public virtual void EnterIndexBody([NotNull] mcdocParser.IndexBodyContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexWithDynamic"/>.
+	/// Exit a parse tree produced by <see cref="mcdocParser.indexBody"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIndexWithDynamic([NotNull] mcdocParser.IndexWithDynamicContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexBodyWithOutDynamic"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIndexBodyWithOutDynamic([NotNull] mcdocParser.IndexBodyWithOutDynamicContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexBodyWithOutDynamic"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIndexBodyWithOutDynamic([NotNull] mcdocParser.IndexBodyWithOutDynamicContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.indexBodyWithDynamic"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIndexBodyWithDynamic([NotNull] mcdocParser.IndexBodyWithDynamicContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.indexBodyWithDynamic"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIndexBodyWithDynamic([NotNull] mcdocParser.IndexBodyWithDynamicContext context) { }
+	public virtual void ExitIndexBody([NotNull] mcdocParser.IndexBodyContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.indexingOnAType"/>.
 	/// <para>The default implementation does nothing.</para>
@@ -635,42 +647,6 @@ public partial class mcdocParserBaseListener : ImcdocParserListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitTypeSentence([NotNull] mcdocParser.TypeSentenceContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.attributeSet"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAttributeSet([NotNull] mcdocParser.AttributeSetContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.attributeSet"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAttributeSet([NotNull] mcdocParser.AttributeSetContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.arrayLength"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterArrayLength([NotNull] mcdocParser.ArrayLengthContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.arrayLength"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitArrayLength([NotNull] mcdocParser.ArrayLengthContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="mcdocParser.string"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterString([NotNull] mcdocParser.StringContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="mcdocParser.string"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitString([NotNull] mcdocParser.StringContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.positionalValues"/>.
 	/// <para>The default implementation does nothing.</para>

@@ -2,6 +2,6 @@
 {
     public class TypeArgBlock
     {
-        List<MCDocumentType>? TypeList { get; set; }
+        public List<MCDocumentType>? TypeList { get; set; }
     }
 }

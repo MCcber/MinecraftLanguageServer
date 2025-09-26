@@ -3,6 +3,6 @@
     public class DispatchType
     {
         public string ResourceLocation { get; set; }
-        public IndexBody IndexBody { get; set; }
+        public IndexBody DispatcherIndexBody { get; set; }
     }
 }

@@ -6,6 +6,5 @@ namespace MinecraftLanguageServer.Model.MCDocument.UnAttributedTypeContent
     {
         public BaseDataType BaseDataType { get; set; }
         public string? Range { get; set; }
-        public int? Integer { get; set; }
     }
 }

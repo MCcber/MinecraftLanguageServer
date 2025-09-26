@@ -6,7 +6,7 @@ namespace MinecraftLanguageServer
     {
         public static void Main()
         {
-            new MCFunctionIntellisenseService();
+            new MCDocumentBuildService();
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }
 

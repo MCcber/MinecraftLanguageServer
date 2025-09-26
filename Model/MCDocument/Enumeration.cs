@@ -9,5 +9,6 @@ namespace MinecraftLanguageServer.Model.MCDocument
         public EnumMemberType MemberType { get; set; }
         public string Name { get; set; }
         public List<EnumField> EnumFieldList { get; set; }
+        public bool IsTop { get; set; } = true;
     }
 }

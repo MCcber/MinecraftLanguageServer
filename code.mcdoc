@@ -1,1 +1,19 @@
-execute as @a if data entity @s Inventory[{Slot:0b}].components."minecraft: enchantments".levels."minecraft:efficiency" run tp @s 0 64 0
+use ::java::util::attribute::AttributeName
+use ::java::util::attribute::LegacyOperation
+use ::java::util::slot::EquipmentSlotGroup
+use ::java::world::block::BlockEntityData
+use ::java::world::component::DataComponentPatch
+use ::java::world::component::item::Trim
+
+// 单个物品
+struct SingleItem {
+	/// ID of the item.
+	id: (
+		#[until="1.20.5"] #[id="item"] string |
+		#[since="1.20.5"] #[id(registry="item", exclude=["air"])] string |	
+	),
+	#[since="1.20.5"]
+	components?: DataComponentPatch,
+	#[until="1.20.5"]
+	tag?: minecraft:item[[id]],
+}

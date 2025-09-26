@@ -3,6 +3,6 @@
     public class ListType
     {
         public MCDocumentType Type { get; set; }
-        public string? Count { get; set; }
+        public string? Range { get; set; }
     }
 }

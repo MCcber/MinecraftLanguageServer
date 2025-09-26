@@ -36,12 +36,12 @@ namespace MinecraftLanguageServer.DataContext
             {
                 try
                 {
-                    byte[] documentByteArray = new byte[1024];
-                    await mcdocumentPiperServerStream.WaitForConnectionAsync();
-                    await mcdocumentPiperServerStream.ReadAsync(documentByteArray, 0, documentByteArray.Length);
-                    string filePath = Encoding.UTF8.GetString(documentByteArray);
-                    filePath = filePath.TrimEnd('\0');
-                    string fileContent = File.ReadAllText(filePath);
+                    //byte[] documentByteArray = new byte[1024];
+                    //await mcdocumentPiperServerStream.WaitForConnectionAsync();
+                    //await mcdocumentPiperServerStream.ReadAsync(documentByteArray, 0, documentByteArray.Length);
+                    //string filePath = Encoding.UTF8.GetString(documentByteArray);
+                    //filePath = filePath.TrimEnd('\0');
+                    string fileContent = File.ReadAllText(@"D:\C#Project\MinecraftLanguageServer\code.mcdoc");
                     await Service(fileContent);
                 }
                 catch (Exception e)

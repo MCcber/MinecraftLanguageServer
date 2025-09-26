@@ -72,8 +72,6 @@ DocCommentary : '///' ~[\r\n]* ('\r'? '\n')?;
 Commentary : '//' ~[/] ~[\r\n]* ('\r'? '\n')?;
 DoubleQuotes:'"';
 
-TypedNumberLexer:(Integer IntTypedUnit)|(Float FloatTypedUnit);
-
 Integer: '0'|([-+]?[1-9][0-9]*);
 fragment FloatExponent:[eE]([-+])?[0-9]+;
 Float:(([-+])?[0-9]+FloatExponent?)|(([-+])?[0-9]*Dot[0-9]+FloatExponent);

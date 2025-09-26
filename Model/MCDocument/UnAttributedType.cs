@@ -1,4 +1,5 @@
 ﻿using MinecraftLanguageServer.Model.MCDocument.UnAttributedTypeContent;
+using static MinecraftLanguageServer.Model.MCDocument.MCDocumentEnum;
 
 namespace MinecraftLanguageServer.Model.MCDocument
 {
@@ -11,7 +12,7 @@ namespace MinecraftLanguageServer.Model.MCDocument
         PrimitiveArrayType? PrimitiveArrayType { get; set; }
         ListType? ListType { get; set; }
         TupleType? TupleType { get; set; }
-        EnumType? EnumType { get; set; }
+        Enumeration? EnumType { get; set; }
         Structure? Structure { get; set; }
         ReferenceType? ReferenceType { get; set; }
         DispatchType? DispatchType { get; set; }

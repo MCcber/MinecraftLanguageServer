@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from d:/C#Project/MinecraftLanguageServer/MCFunctionRule/mccommand.g4 by ANTLR 4.13.1
+// Generated from d:/C#Project/MinecraftLanguageServer/MCFunctionRule/MCCommandParser.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -32,304 +32,412 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.CLSCompliant(false)]
-public partial class mccommandParser : Parser {
+public partial class MCCommandParser : Parser {
 	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
-		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
-		T__24=25, T__25=26, T__26=27, T__27=28, T__28=29, T__29=30, T__30=31, 
-		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
-		T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, T__43=44, T__44=45, 
-		T__45=46, T__46=47, T__47=48, T__48=49, T__49=50, T__50=51, T__51=52, 
-		T__52=53, T__53=54, T__54=55, T__55=56, T__56=57, T__57=58, T__58=59, 
-		T__59=60, T__60=61, T__61=62, T__62=63, T__63=64, T__64=65, T__65=66, 
-		T__66=67, T__67=68, T__68=69, T__69=70, T__70=71, T__71=72, T__72=73, 
-		T__73=74, T__74=75, T__75=76, T__76=77, T__77=78, T__78=79, T__79=80, 
-		T__80=81, T__81=82, T__82=83, T__83=84, T__84=85, T__85=86, T__86=87, 
-		T__87=88, T__88=89, T__89=90, T__90=91, T__91=92, T__92=93, T__93=94, 
-		T__94=95, T__95=96, T__96=97, T__97=98, T__98=99, T__99=100, T__100=101, 
-		T__101=102, T__102=103, T__103=104, T__104=105, T__105=106, T__106=107, 
-		T__107=108, T__108=109, T__109=110, T__110=111, T__111=112, T__112=113, 
-		T__113=114, T__114=115, T__115=116, T__116=117, T__117=118, T__118=119, 
-		T__119=120, T__120=121, T__121=122, T__122=123, T__123=124, T__124=125, 
-		T__125=126, T__126=127, T__127=128, T__128=129, T__129=130, T__130=131, 
-		T__131=132, T__132=133, T__133=134, T__134=135, T__135=136, T__136=137, 
-		T__137=138, T__138=139, T__139=140, T__140=141, T__141=142, T__142=143, 
-		T__143=144, T__144=145, T__145=146, T__146=147, T__147=148, T__148=149, 
-		T__149=150, T__150=151, T__151=152, T__152=153, T__153=154, T__154=155, 
-		T__155=156, T__156=157, T__157=158, T__158=159, T__159=160, T__160=161, 
-		T__161=162, T__162=163, T__163=164, T__164=165, T__165=166, T__166=167, 
-		T__167=168, T__168=169, T__169=170, T__170=171, T__171=172, T__172=173, 
-		T__173=174, T__174=175, T__175=176, T__176=177, T__177=178, T__178=179, 
-		T__179=180, T__180=181, T__181=182, T__182=183, T__183=184, T__184=185, 
-		T__185=186, T__186=187, T__187=188, T__188=189, T__189=190, T__190=191, 
-		T__191=192, T__192=193, T__193=194, T__194=195, T__195=196, T__196=197, 
-		T__197=198, T__198=199, T__199=200, T__200=201, T__201=202, T__202=203, 
-		T__203=204, T__204=205, T__205=206, T__206=207, T__207=208, T__208=209, 
-		T__209=210, T__210=211, T__211=212, T__212=213, T__213=214, T__214=215, 
-		T__215=216, T__216=217, T__217=218, T__218=219, T__219=220, T__220=221, 
-		T__221=222, T__222=223, T__223=224, T__224=225, T__225=226, T__226=227, 
-		T__227=228, T__228=229, T__229=230, T__230=231, T__231=232, T__232=233, 
-		T__233=234, T__234=235, T__235=236, T__236=237, T__237=238, T__238=239, 
-		T__239=240, T__240=241, T__241=242, T__242=243, T__243=244, T__244=245, 
-		T__245=246, T__246=247, T__247=248, T__248=249, T__249=250, T__250=251, 
-		T__251=252, T__252=253, T__253=254, T__254=255, T__255=256, T__256=257, 
-		T__257=258, T__258=259, T__259=260, T__260=261, T__261=262, T__262=263, 
-		T__263=264, T__264=265, T__265=266, T__266=267, T__267=268, T__268=269, 
-		T__269=270, T__270=271, T__271=272, T__272=273, T__273=274, T__274=275, 
-		T__275=276, DimensionId=277, Any=278, MobAttribute=279, Integer=280, IntInterval=281, 
-		Number=282, PositiveNumber=283, Int=284, Double=285, PositiveDouble=286, 
-		DoubleInterval=287, PositiveDoubleInterval=288, GameTimeValue=289, IdString=290, 
-		ScoreboardSlots=291, SoundId=292, EffectId=293, BiomeID=294, Bool=295, 
-		StringValue=296, PlayerName=297, StringKey=298, Uuid=299, String=300, 
-		ScoreboardObjective=301, ScoreboardType=302, LowerString=303, FilePath=304, 
-		NbtPathParameter=305, BlockStateKey=306, BlockStateValue=307, BlockState=308, 
-		BlockId=309, EntityId=310, Coordinates=311, GamemodeValues=312, MarkValue=313, 
-		NameValue=314, FileReferrerValue=315, PredicateValue=316, OpenSquareBrackets=317, 
-		CloseSquareBrackets=318, OpenCurlyBrace=319, CloseCurlyBrace=320, Comma=321, 
-		Equal=322, NumberKey=323, PositiveNumberKey=324, PositiveDoubleIntervalKey=325, 
-		DoubleIntervalKey=326, IntIntervalKey=327, IntKey=328, JsonKey=329, TagKey=330, 
-		TeamKey=331, AdvancementPath=332, NameSpace=333, ScorePath=334, SortValue=335, 
-		JsonValue=336, Jkey=337, Jobject=338, Jpair=339, Jarray=340, Jvalue=341, 
-		AdvancementParameter=342, AdvancementValue=343, ScoreParameter=344, ScoresValue=345, 
-		SelectorParameters=346, Parameter=347, BossbarId=348, EnchantID=349, Axes=350, 
-		GameruleName=351, CommandList=352, ItemSlot=353, Gametick=354, TeamName=355;
+		WS=1, Sharp=2, Slash=3, AtChar=4, AtLetter=5, ExclamationMark=6, Comma=7, 
+		Dot=8, Colon=9, DoubleDot=10, SquareBrackets=11, LeftSquareBracket=12, 
+		RightSquareBracket=13, RoundBrackets=14, LeftRoundBracket=15, RightRoundBracket=16, 
+		CurlyBrackets=17, LeftCurlyBracket=18, RightCurlyBracket=19, AngleBrackets=20, 
+		LeftAngleBracket=21, RightAngleBracket=22, DoubleQuotes=23, Quote=24, 
+		ByteKey=25, IntKey=26, LongKey=27, StringKey=28, BooleanKey=29, ShortKey=30, 
+		FloatKey=31, DoubleKey=32, BooleanValue=33, SelectorName=34, AxeKey=35, 
+		AxeLengthKey=36, Axes=37, ViewRotationKey=38, Level=39, LimitKey=40, NBT=41, 
+		ScoreKey=42, TypeKey=43, SortKey=44, AdvancementKey=45, AttributeKey=46, 
+		BossbarKey=47, ClearKey=48, CloneKey=49, DamageKey=50, DataKey=51, DatapackKey=52, 
+		DebugKey=53, DefaultgamemodeKey=54, DifficultyKey=55, EffectKey=56, EnchantKey=57, 
+		ExecuteKey=58, ExperienceKey=59, FillKey=60, FillbiomeKey=61, ForceloadKey=62, 
+		FunctionKey=63, GamemodeKey=64, GameruleKey=65, GiveKey=66, HelpKey=67, 
+		ItemKey=68, JfrKey=69, KickKey=70, KillKey=71, ListKey=72, LocateKey=73, 
+		LootKey=74, MeKey=75, MsgKey=76, ParticleKey=77, PlaceKey=78, PlaysoundKey=79, 
+		PublishKey=80, RecipeKey=81, ReloadKey=82, ReturnKey=83, RideKey=84, SayKey=85, 
+		ScheduleKey=86, ScoreboardKey=87, SeedKey=88, SetblockKey=89, SetworldspawnKey=90, 
+		SpawnpointKey=91, SpectateKey=92, SpreadplayersKey=93, StopsoundKey=94, 
+		SummonKey=95, TagKey=96, TeamKey=97, TeammsgKey=98, TeleportKey=99, TellKey=100, 
+		TellrawKey=101, TimeKey=102, TitleKey=103, TmKey=104, TpKey=105, TriggerKey=106, 
+		WeatherKey=107, WorldborderKey=108, XpKey=109, Star=110, Add=111, Remove=112, 
+		Value=113, Set=114, Multiply=115, Multiply_Base=116, Max=117, Players=118, 
+		Visible=119, Color=120, Name=121, Style=122, Filtered=123, Masked=124, 
+		Replace=125, Force=126, Move=127, Normal=128, To=129, By=130, Merge=131, 
+		Modify=132, Block=133, Entity=134, Storage=135, As=136, Grant=137, Revoke=138, 
+		Everything=139, Only=140, From=141, Through=142, Until=143, Base=144, 
+		Get=145, Modifier=146, Available=147, Enable=148, After=149, Before=150, 
+		First=151, Last=152, Disable=153, Start=154, Stop=155, Infinite=156, Easy=157, 
+		Hard=158, Peaceful=159, Eyes=160, Feet=161, All=162, Biome=163, Blocks=164, 
+		Dimension=165, Loaded=166, Predicate=167, Score=168, Matches=169, Attacker=170, 
+		Controller=171, Leasher=172, Origin=173, Owner=174, Passengers=175, Target=176, 
+		Vehicle=177, Motion_blocking=178, Motion_blocking_no_leaves=179, Ocean_floor=180, 
+		World_surface=181, Over=182, Result=183, Success=184, Align=185, Anchored=186, 
+		If=187, Unless=188, In=189, On=190, Positioned=191, Rotated=192, Run=193, 
+		Store=194, Query=195, Levels=196, Points=197, Destroy=198, Hollow=199, 
+		Keep=200, Outline=201, Uuids=202, Poi=203, Structure=204, Insert=205, 
+		Spawn=206, Fish=207, Mine=208, Feature=209, Jigsaw=210, Template=211, 
+		Front_back=212, Left_right=213, None=214, Clockwise_90=215, Counterclockwise_90=216, 
+		Ambient=217, Hostile=218, Master=219, Music=220, Neutral=221, Player=222, 
+		Record=223, Voice=224, Append=225, Dismount=226, Mount=227, Objectives=228, 
+		Hearts=229, DisplayName=230, Rendertype=231, Setdisplay=232, Operation=233, 
+		Reset=234, Under=235, Actionbar=236, Subtitle=237, Times=238, FadeIn=239, 
+		Stay=240, FadeOut=241, Center=242, Warning=243, Amount=244, Buffer=245, 
+		Facing=246, Prepend=247, Bossbar=248, With=249, Mainhand=250, Offhand=251, 
+		Take=252, Always=253, Never=254, PushOtherTeams=255, PushOwnTeam=256, 
+		HideForOtherTeams=257, HideForOwnTeam=258, FriendlyFire=259, NametagVisibility=260, 
+		SeeFriendlyInvisibles=261, Rain=262, Thunder=263, Day=264, Midnight=265, 
+		Night=266, Daytime=267, Noon=268, Gametime=269, Distance=270, Empty=271, 
+		Join=272, Leave=273, CollisionRule=274, DeathMessageVisibility=275, Prefix=276, 
+		Suffix=277, LessThanOrEqualTo=278, Equal=279, GreaterThanOrEqualTo=280, 
+		OneHundredAndEighty=281, GreaterThanLessThan=282, DivisionEqual=283, MultiplicationEqual=284, 
+		AdditionEqual=285, SubtractionEqual=286, RemainderEqual=287, UUID=288, 
+		Integer=289, IntInterval=290, PositiveDouble=291, PositiveDoubleInterval=292, 
+		Float=293, Double=294, DoubleInterval=295, GameTimeValue=296, IntTypedUnit=297, 
+		FloatTypedUnit=298, Identifier=299, FileReference=300, String=301, ResourceLocation=302, 
+		BlockStateKey=303, BlockStateValue=304, MessageContent=305, Message=306, 
+		MESSAGE_END=307, Coordinate=308, COORDINATE_END=309;
 	public const int
-		RULE_dimensionId = 0, RULE_mobAttribute = 1, RULE_int = 2, RULE_intInterval = 3, 
-		RULE_number = 4, RULE_positiveNumber = 5, RULE_gameTimeValue = 6, RULE_biomeId = 7, 
-		RULE_bool = 8, RULE_jsonValue = 9, RULE_jobject = 10, RULE_stringValue = 11, 
-		RULE_stringKey = 12, RULE_jpair = 13, RULE_jarray = 14, RULE_jvalue = 15, 
-		RULE_jsonComponent = 16, RULE_uuid = 17, RULE_stringRule = 18, RULE_filePath = 19, 
-		RULE_nbtPath = 20, RULE_dataType = 21, RULE_itemId = 22, RULE_blockId = 23, 
-		RULE_entityId = 24, RULE_blockNBT = 25, RULE_entityNBT = 26, RULE_targetObjective = 27, 
-		RULE_storageId = 28, RULE_storageIdString = 29, RULE_pos3D = 30, RULE_pos2D = 31, 
-		RULE_gamemodeValues = 32, RULE_singleSelector = 33, RULE_selector = 34, 
-		RULE_optionalSelector = 35, RULE_commands = 36, RULE_advancementRadical = 37, 
-		RULE_grantOrRevoke = 38, RULE_advancementCriterion = 39, RULE_advancementValue = 40, 
-		RULE_advancementModes = 41, RULE_attributeRadical = 42, RULE_attributeOptions = 43, 
-		RULE_baseModifier = 44, RULE_get = 45, RULE_modifierOptions = 46, RULE_modifierModes = 47, 
-		RULE_bossbarRadical = 48, RULE_bossbarId = 49, RULE_bossbarIdString = 50, 
-		RULE_bossbarOptions = 51, RULE_bossbarStyle = 52, RULE_bossbarColor = 53, 
-		RULE_bossbarGetTarget = 54, RULE_bossbarAttributes = 55, RULE_clearRadical = 56, 
-		RULE_count = 57, RULE_cloneRadical = 58, RULE_cloneSource = 59, RULE_cloneDestination = 60, 
-		RULE_cloneMode = 61, RULE_cloneBehavior = 62, RULE_to = 63, RULE_damageRadical = 64, 
-		RULE_damageType = 65, RULE_from = 66, RULE_damageOptions = 67, RULE_dataRadical = 68, 
-		RULE_dataStringStart = 69, RULE_dataStringEnd = 70, RULE_entityNBTPath = 71, 
-		RULE_blockNBTPath = 72, RULE_dataOptions = 73, RULE_dataGetTarget = 74, 
-		RULE_dataMergeTarget = 75, RULE_dataModifyStringTarget = 76, RULE_dataModifyFromTarget = 77, 
-		RULE_dataModifyBehaviors = 78, RULE_dataModifyOptions = 79, RULE_dataModifyTarget = 80, 
-		RULE_dataRemoveTarget = 81, RULE_datapackRadical = 82, RULE_datapackState = 83, 
-		RULE_datapackId = 84, RULE_datapackBehaviors = 85, RULE_datapackOptions = 86, 
-		RULE_debugRadical = 87, RULE_debugOptions = 88, RULE_defaultgamemodeRadical = 89, 
-		RULE_difficultyRadical = 90, RULE_difficultyValues = 91, RULE_effectRadical = 92, 
-		RULE_effectOption = 93, RULE_effectID = 94, RULE_effectTime = 95, RULE_seconds = 96, 
-		RULE_amplifier = 97, RULE_hideParticles = 98, RULE_enchantRadical = 99, 
-		RULE_enchantLevel = 100, RULE_enchantID = 101, RULE_executeRadical = 102, 
-		RULE_executeEyesOrFeet = 103, RULE_axes = 104, RULE_as = 105, RULE_storage = 106, 
-		RULE_executeAllOrMasked = 107, RULE_executeMaxOrValue = 108, RULE_executeJudgeDataOptions = 109, 
-		RULE_executeJudgementOptions = 110, RULE_predicateValue = 111, RULE_executeOperations = 112, 
-		RULE_executeOn = 113, RULE_executeOver = 114, RULE_executePositioned = 115, 
-		RULE_executeStoreTarget = 116, RULE_executeStore = 117, RULE_executeFacing = 118, 
-		RULE_executeOptions = 119, RULE_experienceRadical = 120, RULE_query = 121, 
-		RULE_experienceAmount = 122, RULE_expreienceType = 123, RULE_experienceOptions = 124, 
-		RULE_fillRadical = 125, RULE_fillOptions = 126, RULE_fillbiomeRadical = 127, 
-		RULE_fillBiomeOptions = 128, RULE_forceloadRadical = 129, RULE_forceloadRemoveObjectives = 130, 
-		RULE_forceloadOptions = 131, RULE_functionRadical = 132, RULE_gamemodeRadical = 133, 
-		RULE_gameruleRadical = 134, RULE_gameruleName = 135, RULE_gameruleValue = 136, 
-		RULE_giveRadical = 137, RULE_helpRadical = 138, RULE_commandList = 139, 
-		RULE_itemRadical = 140, RULE_itemSlot = 141, RULE_itemModifierFile = 142, 
-		RULE_itemOptions = 143, RULE_itemBehaviors = 144, RULE_itemModifyTarget = 145, 
-		RULE_itemReplaceTarget = 146, RULE_jfrRadical = 147, RULE_jfrStartOrStop = 148, 
-		RULE_kickRadical = 149, RULE_reason = 150, RULE_killRadical = 151, RULE_listRadical = 152, 
-		RULE_uuids = 153, RULE_locateRadical = 154, RULE_poiId = 155, RULE_structureId = 156, 
-		RULE_locateOptions = 157, RULE_lootRadical = 158, RULE_lootFilePath = 159, 
-		RULE_lootTool = 160, RULE_block = 161, RULE_lootOptions = 162, RULE_lootReplace = 163, 
-		RULE_lootModes = 164, RULE_meRadical = 165, RULE_action = 166, RULE_msgRadical = 167, 
-		RULE_message = 168, RULE_particleRadical = 169, RULE_rgb = 170, RULE_size = 171, 
-		RULE_particleSpeedAndCount = 172, RULE_gameTick = 173, RULE_particleOptions = 174, 
-		RULE_absolutePos = 175, RULE_particleId = 176, RULE_placeRadical = 177, 
-		RULE_featureId = 178, RULE_jigsawTarget = 179, RULE_jigsawFilePath = 180, 
-		RULE_templateFilePath = 181, RULE_placeModes = 182, RULE_placeMirrorItems = 183, 
-		RULE_placeRotationModes = 184, RULE_playsoundRadical = 185, RULE_volume = 186, 
-		RULE_pitch = 187, RULE_minVolume = 188, RULE_soundTypes = 189, RULE_publishRadical = 190, 
-		RULE_port = 191, RULE_recipeRadical = 192, RULE_recipeFilePath = 193, 
-		RULE_recipeGiveOrTake = 194, RULE_reloadRadical = 195, RULE_returnRadical = 196, 
-		RULE_rideRadical = 197, RULE_rideModes = 198, RULE_sayRadical = 199, RULE_scheduleRadical = 200, 
-		RULE_functionId = 201, RULE_scheduleAppendOrReplace = 202, RULE_scheduleModes = 203, 
-		RULE_scoreboardRadical = 204, RULE_scoreboardOptions = 205, RULE_scoreboardObjective = 206, 
-		RULE_scoreboardType = 207, RULE_value = 208, RULE_scoreboardHeartsOrInteger = 209, 
-		RULE_scoreboardOperator = 210, RULE_scoreboardSlots = 211, RULE_displayname = 212, 
-		RULE_rendertype = 213, RULE_scoreboardObjectivesBehaviors = 214, RULE_scoreboardPlayersBehaviors = 215, 
-		RULE_seedRadical = 216, RULE_setblockRadical = 217, RULE_setblockModes = 218, 
-		RULE_setworldspawnRadical = 219, RULE_spawnpointRadical = 220, RULE_spectateRadical = 221, 
-		RULE_spreadplayersRadical = 222, RULE_spreadplayersOptions = 223, RULE_spreadDistance = 224, 
-		RULE_maxRange = 225, RULE_respectTeams = 226, RULE_under = 227, RULE_stopsoundRadical = 228, 
-		RULE_soundId = 229, RULE_stopsoundTypes = 230, RULE_summonRadical = 231, 
-		RULE_tagRadical = 232, RULE_tagOptions = 233, RULE_tagValue = 234, RULE_teamRadical = 235, 
-		RULE_teamId = 236, RULE_teamName = 237, RULE_teamCollisionRule = 238, 
-		RULE_teamColor = 239, RULE_teamVisibility = 240, RULE_teamOptions = 241, 
-		RULE_teamAttributes = 242, RULE_teammsgRadical = 243, RULE_teleportRadical = 244, 
-		RULE_teleportEyesOrFeet = 245, RULE_facing = 246, RULE_entity = 247, RULE_teleportOptions = 248, 
-		RULE_tellRadical = 249, RULE_tellrawRadical = 250, RULE_timeRadical = 251, 
-		RULE_timeDataTypes = 252, RULE_timeTimePoints = 253, RULE_timeOptions = 254, 
-		RULE_titleRadical = 255, RULE_titleBehaviors = 256, RULE_fadeIn = 257, 
-		RULE_stay = 258, RULE_fadeOut = 259, RULE_tmRadical = 260, RULE_tpRadical = 261, 
-		RULE_triggerRadical = 262, RULE_triggerObjective = 263, RULE_triggerBehaviors = 264, 
-		RULE_weatherRadical = 265, RULE_weatherMembers = 266, RULE_worldborderRadical = 267, 
-		RULE_worldborderOptions = 268, RULE_worldborderWarningTypes = 269, RULE_worldborderModes = 270, 
-		RULE_xpRadical = 271;
+		RULE_atChar = 0, RULE_atLetter = 1, RULE_exclamationMark = 2, RULE_leftSquareBracket = 3, 
+		RULE_rightSquareBracket = 4, RULE_leftCurlyBracket = 5, RULE_rightCurlyBracket = 6, 
+		RULE_dimensionId = 7, RULE_mobAttribute = 8, RULE_integer = 9, RULE_intInterval = 10, 
+		RULE_double = 11, RULE_axeValue = 12, RULE_gameTimeValue = 13, RULE_biomeId = 14, 
+		RULE_bool = 15, RULE_stringValue = 16, RULE_jsonComponent = 17, RULE_uuid = 18, 
+		RULE_jobject = 19, RULE_jarray = 20, RULE_jkey = 21, RULE_jpair = 22, 
+		RULE_sNbt = 23, RULE_jDouble = 24, RULE_jFloat = 25, RULE_jvalue = 26, 
+		RULE_nbtPathItem = 27, RULE_nbtObject = 28, RULE_nbtArray = 29, RULE_nbtPair = 30, 
+		RULE_nbtValue = 31, RULE_nbtPath = 32, RULE_dataType = 33, RULE_itemId = 34, 
+		RULE_blockState = 35, RULE_blockID = 36, RULE_blockNBT = 37, RULE_entityNBT = 38, 
+		RULE_targetObjective = 39, RULE_storageId = 40, RULE_storageIdString = 41, 
+		RULE_coordinateX = 42, RULE_coordinateY = 43, RULE_coordinateZ = 44, RULE_pos3D = 45, 
+		RULE_pos2D = 46, RULE_gamemodeValue = 47, RULE_sortValue = 48, RULE_identifier = 49, 
+		RULE_viewRotationValue = 50, RULE_doubleInterval = 51, RULE_positiveDouble = 52, 
+		RULE_positiveDoubleInterval = 53, RULE_levelValue = 54, RULE_nameValue = 55, 
+		RULE_entityType = 56, RULE_predicateValue = 57, RULE_selector = 58, RULE_selectorName = 59, 
+		RULE_selectorParameter = 60, RULE_scorePath = 61, RULE_scoreParameter = 62, 
+		RULE_scoresValue = 63, RULE_parameter = 64, RULE_commands = 65, RULE_axeKey = 66, 
+		RULE_star = 67, RULE_advancementKey = 68, RULE_attributeKey = 69, RULE_bossbarKey = 70, 
+		RULE_clearKey = 71, RULE_cloneKey = 72, RULE_damageKey = 73, RULE_dataKey = 74, 
+		RULE_datapackKey = 75, RULE_debugKey = 76, RULE_defaultgamemodeKey = 77, 
+		RULE_difficultyKey = 78, RULE_effectKey = 79, RULE_enchantKey = 80, RULE_executeKey = 81, 
+		RULE_experienceKey = 82, RULE_fillKey = 83, RULE_fillbiomeKey = 84, RULE_forceloadKey = 85, 
+		RULE_functionKey = 86, RULE_gamemodeKey = 87, RULE_gameruleKey = 88, RULE_giveKey = 89, 
+		RULE_helpKey = 90, RULE_itemKey = 91, RULE_jfrKey = 92, RULE_kickKey = 93, 
+		RULE_killKey = 94, RULE_listKey = 95, RULE_locateKey = 96, RULE_lootKey = 97, 
+		RULE_meKey = 98, RULE_msgKey = 99, RULE_particleKey = 100, RULE_placeKey = 101, 
+		RULE_playsoundKey = 102, RULE_publishKey = 103, RULE_recipeKey = 104, 
+		RULE_reloadKey = 105, RULE_returnKey = 106, RULE_rideKey = 107, RULE_sayKey = 108, 
+		RULE_scheduleKey = 109, RULE_scoreboardKey = 110, RULE_seedKey = 111, 
+		RULE_setblockKey = 112, RULE_setworldspawnKey = 113, RULE_spawnpointKey = 114, 
+		RULE_spectateKey = 115, RULE_spreadplayersKey = 116, RULE_stopsoundKey = 117, 
+		RULE_summonKey = 118, RULE_tagKey = 119, RULE_teamKey = 120, RULE_teammsgKey = 121, 
+		RULE_teleportKey = 122, RULE_tellKey = 123, RULE_tellrawKey = 124, RULE_timeKey = 125, 
+		RULE_titleKey = 126, RULE_tmKey = 127, RULE_tpKey = 128, RULE_triggerKey = 129, 
+		RULE_weatherKey = 130, RULE_worldborderKey = 131, RULE_xpKey = 132, RULE_axeLengthKey = 133, 
+		RULE_viewRotationKey = 134, RULE_level = 135, RULE_scoreKey = 136, RULE_limit = 137, 
+		RULE_typeKey = 138, RULE_nbt = 139, RULE_sortKey = 140, RULE_divisionEqual = 141, 
+		RULE_multiplicationEqual = 142, RULE_additionEqual = 143, RULE_subtractionEqual = 144, 
+		RULE_remainderEqual = 145, RULE_lessThan = 146, RULE_lessThanOrEqualTo = 147, 
+		RULE_equal = 148, RULE_greaterThan = 149, RULE_greaterThanOrEqualTo = 150, 
+		RULE_greaterThanLessThan = 151, RULE_add = 152, RULE_remove = 153, RULE_value = 154, 
+		RULE_set = 155, RULE_multiply = 156, RULE_multiply_base = 157, RULE_max = 158, 
+		RULE_players = 159, RULE_visible = 160, RULE_color = 161, RULE_name = 162, 
+		RULE_style = 163, RULE_filtered = 164, RULE_masked = 165, RULE_replace = 166, 
+		RULE_force = 167, RULE_move = 168, RULE_normal = 169, RULE_to = 170, RULE_by = 171, 
+		RULE_merge = 172, RULE_modify = 173, RULE_block = 174, RULE_entity = 175, 
+		RULE_storage = 176, RULE_stringKey = 177, RULE_as = 178, RULE_grant = 179, 
+		RULE_revoke = 180, RULE_everything = 181, RULE_only = 182, RULE_from = 183, 
+		RULE_through = 184, RULE_until = 185, RULE_base = 186, RULE_get = 187, 
+		RULE_modifier = 188, RULE_available = 189, RULE_enable = 190, RULE_after = 191, 
+		RULE_before = 192, RULE_first = 193, RULE_last = 194, RULE_disable = 195, 
+		RULE_start = 196, RULE_stop = 197, RULE_infinite = 198, RULE_easy = 199, 
+		RULE_hard = 200, RULE_peaceful = 201, RULE_eyes = 202, RULE_feet = 203, 
+		RULE_all = 204, RULE_biome = 205, RULE_blocks = 206, RULE_dimension = 207, 
+		RULE_loaded = 208, RULE_predicate = 209, RULE_score = 210, RULE_matches = 211, 
+		RULE_attacker = 212, RULE_controller = 213, RULE_leasher = 214, RULE_origin = 215, 
+		RULE_owner = 216, RULE_passengers = 217, RULE_target = 218, RULE_vehicle = 219, 
+		RULE_motion_blocking = 220, RULE_motion_blocking_no_leaves = 221, RULE_ocean_floor = 222, 
+		RULE_world_surface = 223, RULE_over = 224, RULE_result = 225, RULE_success = 226, 
+		RULE_align = 227, RULE_anchored = 228, RULE_if = 229, RULE_unless = 230, 
+		RULE_in = 231, RULE_on = 232, RULE_positioned = 233, RULE_rotated = 234, 
+		RULE_run = 235, RULE_store = 236, RULE_query = 237, RULE_levels = 238, 
+		RULE_points = 239, RULE_destroy = 240, RULE_hollow = 241, RULE_keep = 242, 
+		RULE_outline = 243, RULE_uuids = 244, RULE_poi = 245, RULE_structure = 246, 
+		RULE_insert = 247, RULE_spawn = 248, RULE_fish = 249, RULE_mine = 250, 
+		RULE_feature = 251, RULE_jigsaw = 252, RULE_template = 253, RULE_front_back = 254, 
+		RULE_left_right = 255, RULE_none = 256, RULE_clockwise_90 = 257, RULE_counterclockwise_90 = 258, 
+		RULE_ambient = 259, RULE_hostile = 260, RULE_master = 261, RULE_music = 262, 
+		RULE_neutral = 263, RULE_player = 264, RULE_record = 265, RULE_voice = 266, 
+		RULE_append = 267, RULE_dismount = 268, RULE_mount = 269, RULE_objectives = 270, 
+		RULE_hearts = 271, RULE_rendertype = 272, RULE_setdisplay = 273, RULE_operation = 274, 
+		RULE_reset = 275, RULE_under = 276, RULE_actionbar = 277, RULE_subtitle = 278, 
+		RULE_times = 279, RULE_fadeIn = 280, RULE_stay = 281, RULE_fadeOut = 282, 
+		RULE_center = 283, RULE_warning = 284, RULE_amount = 285, RULE_buffer = 286, 
+		RULE_facing = 287, RULE_prepend = 288, RULE_with = 289, RULE_mainhand = 290, 
+		RULE_offhand = 291, RULE_take = 292, RULE_always = 293, RULE_never = 294, 
+		RULE_pushOtherTeams = 295, RULE_pushOwnTeam = 296, RULE_hideForOtherTeams = 297, 
+		RULE_hideForOwnTeam = 298, RULE_friendlyFire = 299, RULE_nametagVisibility = 300, 
+		RULE_seeFriendlyInvisibles = 301, RULE_rain = 302, RULE_thunder = 303, 
+		RULE_day = 304, RULE_midnight = 305, RULE_night = 306, RULE_daytime = 307, 
+		RULE_noon = 308, RULE_gametime = 309, RULE_distance = 310, RULE_empty = 311, 
+		RULE_join = 312, RULE_leave = 313, RULE_collisionRule = 314, RULE_deathMessageVisibility = 315, 
+		RULE_prefix = 316, RULE_suffix = 317, RULE_displayName = 318, RULE_booleanValue = 319, 
+		RULE_oneHundredAndEighty = 320, RULE_advancementRadical = 321, RULE_advancementCriterion = 322, 
+		RULE_advancementCriterionBlock = 323, RULE_advancementValue = 324, RULE_advancementModes = 325, 
+		RULE_attributeRadical = 326, RULE_attributeOptions = 327, RULE_baseModifier = 328, 
+		RULE_modifierOptions = 329, RULE_modifierModes = 330, RULE_bossbarRadical = 331, 
+		RULE_bossbarID = 332, RULE_bossbarOptions = 333, RULE_bossbarStyle = 334, 
+		RULE_bossbarColor = 335, RULE_bossbarGetTarget = 336, RULE_bossbarAttributes = 337, 
+		RULE_clearRadical = 338, RULE_count = 339, RULE_cloneRadical = 340, RULE_cloneSource = 341, 
+		RULE_cloneBegin = 342, RULE_cloneEnd = 343, RULE_cloneDestination = 344, 
+		RULE_destinationPos = 345, RULE_cloneMode = 346, RULE_cloneBehavior = 347, 
+		RULE_damageRadical = 348, RULE_damageType = 349, RULE_damageOptions = 350, 
+		RULE_dataRadical = 351, RULE_dataStringStart = 352, RULE_dataStringEnd = 353, 
+		RULE_dataOptions = 354, RULE_dataGetTarget = 355, RULE_dataMergeTarget = 356, 
+		RULE_dataModifyStringTarget = 357, RULE_dataModifyFromTarget = 358, RULE_dataModifyBehaviors = 359, 
+		RULE_dataModifyOptions = 360, RULE_dataModifyTarget = 361, RULE_dataRemoveTarget = 362, 
+		RULE_datapackRadical = 363, RULE_datapackState = 364, RULE_datapackId = 365, 
+		RULE_datapackBehaviors = 366, RULE_datapackOptions = 367, RULE_debugRadical = 368, 
+		RULE_debugOptions = 369, RULE_defaultgamemodeRadical = 370, RULE_difficultyRadical = 371, 
+		RULE_difficultyValues = 372, RULE_effectRadical = 373, RULE_effectOption = 374, 
+		RULE_effectID = 375, RULE_effectTime = 376, RULE_seconds = 377, RULE_amplifier = 378, 
+		RULE_hideParticles = 379, RULE_enchantRadical = 380, RULE_enchantLevel = 381, 
+		RULE_enchantID = 382, RULE_executeRadical = 383, RULE_executeEyesOrFeet = 384, 
+		RULE_axes = 385, RULE_executeAllOrMasked = 386, RULE_executeMaxOrValue = 387, 
+		RULE_executeJudgeDataOptions = 388, RULE_executeJudgementOptions = 389, 
+		RULE_executeOperations = 390, RULE_executeOn = 391, RULE_executeOver = 392, 
+		RULE_executePositioned = 393, RULE_executeStoreTarget = 394, RULE_executeStore = 395, 
+		RULE_executeFacing = 396, RULE_executeOptions = 397, RULE_experienceRadical = 398, 
+		RULE_experienceAmount = 399, RULE_expreienceType = 400, RULE_experienceOptions = 401, 
+		RULE_fillRadical = 402, RULE_fillOptions = 403, RULE_fillbiomeRadical = 404, 
+		RULE_fillBiomeOptions = 405, RULE_forceloadRadical = 406, RULE_forceloadRemoveObjectives = 407, 
+		RULE_forceloadOptions = 408, RULE_functionRadical = 409, RULE_gamemodeRadical = 410, 
+		RULE_gameruleRadical = 411, RULE_gameruleName = 412, RULE_gameruleValue = 413, 
+		RULE_giveRadical = 414, RULE_helpRadical = 415, RULE_commandList = 416, 
+		RULE_itemRadical = 417, RULE_itemSlot = 418, RULE_itemModifierFile = 419, 
+		RULE_itemOptions = 420, RULE_itemBehaviors = 421, RULE_itemModifyTarget = 422, 
+		RULE_itemReplaceTarget = 423, RULE_jfrRadical = 424, RULE_jfrStartOrStop = 425, 
+		RULE_kickRadical = 426, RULE_reason = 427, RULE_killRadical = 428, RULE_listRadical = 429, 
+		RULE_locateRadical = 430, RULE_poiId = 431, RULE_structureId = 432, RULE_locateOptions = 433, 
+		RULE_lootRadical = 434, RULE_lootFilePath = 435, RULE_lootTool = 436, 
+		RULE_lootOptions = 437, RULE_lootReplace = 438, RULE_lootModes = 439, 
+		RULE_meRadical = 440, RULE_action = 441, RULE_msgRadical = 442, RULE_msgMessage = 443, 
+		RULE_particleRadical = 444, RULE_particleSpeed = 445, RULE_particleCount = 446, 
+		RULE_particleDelta = 447, RULE_particleOptions = 448, RULE_particleId = 449, 
+		RULE_particleIDString = 450, RULE_placeRadical = 451, RULE_featureId = 452, 
+		RULE_jigsawTarget = 453, RULE_jigsawFilePath = 454, RULE_templateFilePath = 455, 
+		RULE_placeModes = 456, RULE_placeMirrorItems = 457, RULE_placeRotationModes = 458, 
+		RULE_playsoundRadical = 459, RULE_volume = 460, RULE_pitch = 461, RULE_minVolume = 462, 
+		RULE_soundTypes = 463, RULE_publishRadical = 464, RULE_port = 465, RULE_recipeRadical = 466, 
+		RULE_recipeFilePath = 467, RULE_recipeGiveOrTake = 468, RULE_reloadRadical = 469, 
+		RULE_returnRadical = 470, RULE_rideRadical = 471, RULE_rideModes = 472, 
+		RULE_sayRadical = 473, RULE_sayMessage = 474, RULE_scheduleRadical = 475, 
+		RULE_functionId = 476, RULE_scheduleAppendOrReplace = 477, RULE_scheduleModes = 478, 
+		RULE_scoreboardRadical = 479, RULE_scoreboardOptions = 480, RULE_scoreboardObjective = 481, 
+		RULE_scoreboardType = 482, RULE_scoreboardHeartsOrInteger = 483, RULE_scoreboardOperator = 484, 
+		RULE_scoreboardSlots = 485, RULE_scoreboardObjectivesBehaviors = 486, 
+		RULE_scoreboardPlayersBehaviors = 487, RULE_seedRadical = 488, RULE_setblockRadical = 489, 
+		RULE_setblockModes = 490, RULE_setworldspawnRadical = 491, RULE_spawnpointRadical = 492, 
+		RULE_spectateRadical = 493, RULE_spreadplayersRadical = 494, RULE_spreadplayersOptions = 495, 
+		RULE_spreadDistance = 496, RULE_maxRange = 497, RULE_respectTeams = 498, 
+		RULE_stopsoundRadical = 499, RULE_soundId = 500, RULE_stopsoundTypes = 501, 
+		RULE_summonRadical = 502, RULE_tagRadical = 503, RULE_tagOptions = 504, 
+		RULE_tagValue = 505, RULE_teamRadical = 506, RULE_teamId = 507, RULE_teamName = 508, 
+		RULE_teamCollisionRule = 509, RULE_teamColor = 510, RULE_teamVisibility = 511, 
+		RULE_teamOptions = 512, RULE_teamAttributes = 513, RULE_teammsgRadical = 514, 
+		RULE_teamMessage = 515, RULE_teleportRadical = 516, RULE_teleportEyesOrFeet = 517, 
+		RULE_teleportOptions = 518, RULE_tellRadical = 519, RULE_tellMessage = 520, 
+		RULE_tellrawRadical = 521, RULE_timeRadical = 522, RULE_timeDataTypes = 523, 
+		RULE_timeTimePoints = 524, RULE_timeOptions = 525, RULE_titleRadical = 526, 
+		RULE_titleBehaviors = 527, RULE_faedIn = 528, RULE_tmRadical = 529, RULE_tmMessage = 530, 
+		RULE_tpRadical = 531, RULE_triggerRadical = 532, RULE_triggerObjective = 533, 
+		RULE_triggerBehaviors = 534, RULE_weatherRadical = 535, RULE_weatherMembers = 536, 
+		RULE_worldborderRadical = 537, RULE_worldborderOptions = 538, RULE_worldborderWarningTypes = 539, 
+		RULE_worldborderModes = 540, RULE_xpRadical = 541;
 	public static readonly string[] ruleNames = {
-		"dimensionId", "mobAttribute", "int", "intInterval", "number", "positiveNumber", 
-		"gameTimeValue", "biomeId", "bool", "jsonValue", "jobject", "stringValue", 
-		"stringKey", "jpair", "jarray", "jvalue", "jsonComponent", "uuid", "stringRule", 
-		"filePath", "nbtPath", "dataType", "itemId", "blockId", "entityId", "blockNBT", 
-		"entityNBT", "targetObjective", "storageId", "storageIdString", "pos3D", 
-		"pos2D", "gamemodeValues", "singleSelector", "selector", "optionalSelector", 
-		"commands", "advancementRadical", "grantOrRevoke", "advancementCriterion", 
-		"advancementValue", "advancementModes", "attributeRadical", "attributeOptions", 
-		"baseModifier", "get", "modifierOptions", "modifierModes", "bossbarRadical", 
-		"bossbarId", "bossbarIdString", "bossbarOptions", "bossbarStyle", "bossbarColor", 
-		"bossbarGetTarget", "bossbarAttributes", "clearRadical", "count", "cloneRadical", 
-		"cloneSource", "cloneDestination", "cloneMode", "cloneBehavior", "to", 
-		"damageRadical", "damageType", "from", "damageOptions", "dataRadical", 
-		"dataStringStart", "dataStringEnd", "entityNBTPath", "blockNBTPath", "dataOptions", 
-		"dataGetTarget", "dataMergeTarget", "dataModifyStringTarget", "dataModifyFromTarget", 
-		"dataModifyBehaviors", "dataModifyOptions", "dataModifyTarget", "dataRemoveTarget", 
-		"datapackRadical", "datapackState", "datapackId", "datapackBehaviors", 
-		"datapackOptions", "debugRadical", "debugOptions", "defaultgamemodeRadical", 
-		"difficultyRadical", "difficultyValues", "effectRadical", "effectOption", 
-		"effectID", "effectTime", "seconds", "amplifier", "hideParticles", "enchantRadical", 
-		"enchantLevel", "enchantID", "executeRadical", "executeEyesOrFeet", "axes", 
-		"as", "storage", "executeAllOrMasked", "executeMaxOrValue", "executeJudgeDataOptions", 
-		"executeJudgementOptions", "predicateValue", "executeOperations", "executeOn", 
-		"executeOver", "executePositioned", "executeStoreTarget", "executeStore", 
-		"executeFacing", "executeOptions", "experienceRadical", "query", "experienceAmount", 
-		"expreienceType", "experienceOptions", "fillRadical", "fillOptions", "fillbiomeRadical", 
+		"atChar", "atLetter", "exclamationMark", "leftSquareBracket", "rightSquareBracket", 
+		"leftCurlyBracket", "rightCurlyBracket", "dimensionId", "mobAttribute", 
+		"integer", "intInterval", "double", "axeValue", "gameTimeValue", "biomeId", 
+		"bool", "stringValue", "jsonComponent", "uuid", "jobject", "jarray", "jkey", 
+		"jpair", "sNbt", "jDouble", "jFloat", "jvalue", "nbtPathItem", "nbtObject", 
+		"nbtArray", "nbtPair", "nbtValue", "nbtPath", "dataType", "itemId", "blockState", 
+		"blockID", "blockNBT", "entityNBT", "targetObjective", "storageId", "storageIdString", 
+		"coordinateX", "coordinateY", "coordinateZ", "pos3D", "pos2D", "gamemodeValue", 
+		"sortValue", "identifier", "viewRotationValue", "doubleInterval", "positiveDouble", 
+		"positiveDoubleInterval", "levelValue", "nameValue", "entityType", "predicateValue", 
+		"selector", "selectorName", "selectorParameter", "scorePath", "scoreParameter", 
+		"scoresValue", "parameter", "commands", "axeKey", "star", "advancementKey", 
+		"attributeKey", "bossbarKey", "clearKey", "cloneKey", "damageKey", "dataKey", 
+		"datapackKey", "debugKey", "defaultgamemodeKey", "difficultyKey", "effectKey", 
+		"enchantKey", "executeKey", "experienceKey", "fillKey", "fillbiomeKey", 
+		"forceloadKey", "functionKey", "gamemodeKey", "gameruleKey", "giveKey", 
+		"helpKey", "itemKey", "jfrKey", "kickKey", "killKey", "listKey", "locateKey", 
+		"lootKey", "meKey", "msgKey", "particleKey", "placeKey", "playsoundKey", 
+		"publishKey", "recipeKey", "reloadKey", "returnKey", "rideKey", "sayKey", 
+		"scheduleKey", "scoreboardKey", "seedKey", "setblockKey", "setworldspawnKey", 
+		"spawnpointKey", "spectateKey", "spreadplayersKey", "stopsoundKey", "summonKey", 
+		"tagKey", "teamKey", "teammsgKey", "teleportKey", "tellKey", "tellrawKey", 
+		"timeKey", "titleKey", "tmKey", "tpKey", "triggerKey", "weatherKey", "worldborderKey", 
+		"xpKey", "axeLengthKey", "viewRotationKey", "level", "scoreKey", "limit", 
+		"typeKey", "nbt", "sortKey", "divisionEqual", "multiplicationEqual", "additionEqual", 
+		"subtractionEqual", "remainderEqual", "lessThan", "lessThanOrEqualTo", 
+		"equal", "greaterThan", "greaterThanOrEqualTo", "greaterThanLessThan", 
+		"add", "remove", "value", "set", "multiply", "multiply_base", "max", "players", 
+		"visible", "color", "name", "style", "filtered", "masked", "replace", 
+		"force", "move", "normal", "to", "by", "merge", "modify", "block", "entity", 
+		"storage", "stringKey", "as", "grant", "revoke", "everything", "only", 
+		"from", "through", "until", "base", "get", "modifier", "available", "enable", 
+		"after", "before", "first", "last", "disable", "start", "stop", "infinite", 
+		"easy", "hard", "peaceful", "eyes", "feet", "all", "biome", "blocks", 
+		"dimension", "loaded", "predicate", "score", "matches", "attacker", "controller", 
+		"leasher", "origin", "owner", "passengers", "target", "vehicle", "motion_blocking", 
+		"motion_blocking_no_leaves", "ocean_floor", "world_surface", "over", "result", 
+		"success", "align", "anchored", "if", "unless", "in", "on", "positioned", 
+		"rotated", "run", "store", "query", "levels", "points", "destroy", "hollow", 
+		"keep", "outline", "uuids", "poi", "structure", "insert", "spawn", "fish", 
+		"mine", "feature", "jigsaw", "template", "front_back", "left_right", "none", 
+		"clockwise_90", "counterclockwise_90", "ambient", "hostile", "master", 
+		"music", "neutral", "player", "record", "voice", "append", "dismount", 
+		"mount", "objectives", "hearts", "rendertype", "setdisplay", "operation", 
+		"reset", "under", "actionbar", "subtitle", "times", "fadeIn", "stay", 
+		"fadeOut", "center", "warning", "amount", "buffer", "facing", "prepend", 
+		"with", "mainhand", "offhand", "take", "always", "never", "pushOtherTeams", 
+		"pushOwnTeam", "hideForOtherTeams", "hideForOwnTeam", "friendlyFire", 
+		"nametagVisibility", "seeFriendlyInvisibles", "rain", "thunder", "day", 
+		"midnight", "night", "daytime", "noon", "gametime", "distance", "empty", 
+		"join", "leave", "collisionRule", "deathMessageVisibility", "prefix", 
+		"suffix", "displayName", "booleanValue", "oneHundredAndEighty", "advancementRadical", 
+		"advancementCriterion", "advancementCriterionBlock", "advancementValue", 
+		"advancementModes", "attributeRadical", "attributeOptions", "baseModifier", 
+		"modifierOptions", "modifierModes", "bossbarRadical", "bossbarID", "bossbarOptions", 
+		"bossbarStyle", "bossbarColor", "bossbarGetTarget", "bossbarAttributes", 
+		"clearRadical", "count", "cloneRadical", "cloneSource", "cloneBegin", 
+		"cloneEnd", "cloneDestination", "destinationPos", "cloneMode", "cloneBehavior", 
+		"damageRadical", "damageType", "damageOptions", "dataRadical", "dataStringStart", 
+		"dataStringEnd", "dataOptions", "dataGetTarget", "dataMergeTarget", "dataModifyStringTarget", 
+		"dataModifyFromTarget", "dataModifyBehaviors", "dataModifyOptions", "dataModifyTarget", 
+		"dataRemoveTarget", "datapackRadical", "datapackState", "datapackId", 
+		"datapackBehaviors", "datapackOptions", "debugRadical", "debugOptions", 
+		"defaultgamemodeRadical", "difficultyRadical", "difficultyValues", "effectRadical", 
+		"effectOption", "effectID", "effectTime", "seconds", "amplifier", "hideParticles", 
+		"enchantRadical", "enchantLevel", "enchantID", "executeRadical", "executeEyesOrFeet", 
+		"axes", "executeAllOrMasked", "executeMaxOrValue", "executeJudgeDataOptions", 
+		"executeJudgementOptions", "executeOperations", "executeOn", "executeOver", 
+		"executePositioned", "executeStoreTarget", "executeStore", "executeFacing", 
+		"executeOptions", "experienceRadical", "experienceAmount", "expreienceType", 
+		"experienceOptions", "fillRadical", "fillOptions", "fillbiomeRadical", 
 		"fillBiomeOptions", "forceloadRadical", "forceloadRemoveObjectives", "forceloadOptions", 
 		"functionRadical", "gamemodeRadical", "gameruleRadical", "gameruleName", 
 		"gameruleValue", "giveRadical", "helpRadical", "commandList", "itemRadical", 
 		"itemSlot", "itemModifierFile", "itemOptions", "itemBehaviors", "itemModifyTarget", 
 		"itemReplaceTarget", "jfrRadical", "jfrStartOrStop", "kickRadical", "reason", 
-		"killRadical", "listRadical", "uuids", "locateRadical", "poiId", "structureId", 
-		"locateOptions", "lootRadical", "lootFilePath", "lootTool", "block", "lootOptions", 
-		"lootReplace", "lootModes", "meRadical", "action", "msgRadical", "message", 
-		"particleRadical", "rgb", "size", "particleSpeedAndCount", "gameTick", 
-		"particleOptions", "absolutePos", "particleId", "placeRadical", "featureId", 
+		"killRadical", "listRadical", "locateRadical", "poiId", "structureId", 
+		"locateOptions", "lootRadical", "lootFilePath", "lootTool", "lootOptions", 
+		"lootReplace", "lootModes", "meRadical", "action", "msgRadical", "msgMessage", 
+		"particleRadical", "particleSpeed", "particleCount", "particleDelta", 
+		"particleOptions", "particleId", "particleIDString", "placeRadical", "featureId", 
 		"jigsawTarget", "jigsawFilePath", "templateFilePath", "placeModes", "placeMirrorItems", 
 		"placeRotationModes", "playsoundRadical", "volume", "pitch", "minVolume", 
 		"soundTypes", "publishRadical", "port", "recipeRadical", "recipeFilePath", 
 		"recipeGiveOrTake", "reloadRadical", "returnRadical", "rideRadical", "rideModes", 
-		"sayRadical", "scheduleRadical", "functionId", "scheduleAppendOrReplace", 
+		"sayRadical", "sayMessage", "scheduleRadical", "functionId", "scheduleAppendOrReplace", 
 		"scheduleModes", "scoreboardRadical", "scoreboardOptions", "scoreboardObjective", 
-		"scoreboardType", "value", "scoreboardHeartsOrInteger", "scoreboardOperator", 
-		"scoreboardSlots", "displayname", "rendertype", "scoreboardObjectivesBehaviors", 
-		"scoreboardPlayersBehaviors", "seedRadical", "setblockRadical", "setblockModes", 
-		"setworldspawnRadical", "spawnpointRadical", "spectateRadical", "spreadplayersRadical", 
-		"spreadplayersOptions", "spreadDistance", "maxRange", "respectTeams", 
-		"under", "stopsoundRadical", "soundId", "stopsoundTypes", "summonRadical", 
-		"tagRadical", "tagOptions", "tagValue", "teamRadical", "teamId", "teamName", 
-		"teamCollisionRule", "teamColor", "teamVisibility", "teamOptions", "teamAttributes", 
-		"teammsgRadical", "teleportRadical", "teleportEyesOrFeet", "facing", "entity", 
-		"teleportOptions", "tellRadical", "tellrawRadical", "timeRadical", "timeDataTypes", 
-		"timeTimePoints", "timeOptions", "titleRadical", "titleBehaviors", "fadeIn", 
-		"stay", "fadeOut", "tmRadical", "tpRadical", "triggerRadical", "triggerObjective", 
-		"triggerBehaviors", "weatherRadical", "weatherMembers", "worldborderRadical", 
-		"worldborderOptions", "worldborderWarningTypes", "worldborderModes", "xpRadical"
+		"scoreboardType", "scoreboardHeartsOrInteger", "scoreboardOperator", "scoreboardSlots", 
+		"scoreboardObjectivesBehaviors", "scoreboardPlayersBehaviors", "seedRadical", 
+		"setblockRadical", "setblockModes", "setworldspawnRadical", "spawnpointRadical", 
+		"spectateRadical", "spreadplayersRadical", "spreadplayersOptions", "spreadDistance", 
+		"maxRange", "respectTeams", "stopsoundRadical", "soundId", "stopsoundTypes", 
+		"summonRadical", "tagRadical", "tagOptions", "tagValue", "teamRadical", 
+		"teamId", "teamName", "teamCollisionRule", "teamColor", "teamVisibility", 
+		"teamOptions", "teamAttributes", "teammsgRadical", "teamMessage", "teleportRadical", 
+		"teleportEyesOrFeet", "teleportOptions", "tellRadical", "tellMessage", 
+		"tellrawRadical", "timeRadical", "timeDataTypes", "timeTimePoints", "timeOptions", 
+		"titleRadical", "titleBehaviors", "faedIn", "tmRadical", "tmMessage", 
+		"tpRadical", "triggerRadical", "triggerObjective", "triggerBehaviors", 
+		"weatherRadical", "weatherMembers", "worldborderRadical", "worldborderOptions", 
+		"worldborderWarningTypes", "worldborderModes", "xpRadical"
 	};
 
 	private static readonly string[] _LiteralNames = {
-		null, "'..'", "':'", "'.'", "'byte'", "'double'", "'float'", "'int'", 
-		"'long'", "'short'", "'minecraft:'", "'survival'", "'creative'", "'adventure'", 
-		"'spectator'", "'@a'", "'@a['", "' '", "'@a[]'", "'@e'", "'@e['", "'@e[]'", 
-		"'@p'", "'@p['", "'@p[]'", "'@r'", "'@r['", "'@r[]'", "'@s'", "'@s['", 
-		"'@s[]'", "'advancement'", "'grant'", "'revoke'", "'everything'", "'only'", 
-		"'from'", "'through'", "'until'", "'attribute'", "'base'", "'get'", "'modifier'", 
-		"'set'", "'add'", "'remove'", "'value'", "'multiply'", "'multiply_base'", 
-		"'bossbar'", "'list'", "'max'", "'players'", "'visible'", "'color'", "'name'", 
-		"'style'", "'clear'", "'clone'", "'filtered'", "'masked'", "'replace'", 
-		"'force'", "'move'", "'normal'", "'to'", "'damage'", "'at'", "'by'", "'data'", 
-		"'merge'", "'modify'", "'block'", "'entity'", "'storage'", "'string'", 
-		"'append'", "'insert'", "'prepend'", "'datapack'", "'available'", "'enable'", 
-		"'after'", "'before'", "'first'", "'last'", "'disable'", "'debug'", "'function'", 
-		"'start'", "'stop'", "'defaultgamemode'", "'difficulty'", "'easy'", "'hard'", 
-		"'peaceful'", "'effect'", "'give'", "'infinite'", "'enchant'", "'execute'", 
-		"'eyes'", "'feet'", "'as'", "'all'", "'biome'", "'blocks'", "'dimension'", 
-		"'loaded'", "'predicate'", "'score'", "'<'", "'<='", "'>='", "'matches'", 
-		"'attacker'", "'controller'", "'leasher'", "'origin'", "'owner'", "'passengers'", 
-		"'target'", "'vehicle'", "'motion_blocking'", "'motion_blocking_no_leaves'", 
-		"'ocean_floor'", "'world_surface'", "'over'", "'result'", "'success'", 
-		"'align'", "'anchored'", "'facing'", "'if'", "'unless'", "'in'", "'on'", 
-		"'positioned'", "'rotated'", "'run'", "'store'", "'summon'", "'experience'", 
-		"'query'", "'levels'", "'points'", "'fill'", "'destroy'", "'hollow'", 
-		"'keep'", "'outline'", "'fillbiome'", "'forceload'", "'gamemode'", "'gamerule'", 
-		"'help'", "'item'", "'with'", "'jfr'", "'kick'", "'kill'", "'uuids'", 
-		"'locate'", "'poi'", "'structure'", "'loot'", "'mainhand'", "'offhand'", 
-		"'spawn'", "'fish'", "'mine'", "'me'", "'msg'", "'particle'", "'place'", 
-		"'feature'", "'jigsaw'", "'template'", "'front_back'", "'left_right'", 
-		"'none'", "'180'", "'clockwise_90'", "'counterclockwise_90'", "'playsound'", 
-		"'ambient'", "'hostile'", "'master'", "'music'", "'neutral'", "'player'", 
-		"'record'", "'voice'", "'weather'", "'publish'", "'recipe'", "'take'", 
-		"'reload'", "'return'", "'ride'", "'dismount'", "'mount'", "'say'", "'schedule'", 
-		"'scoreboard'", "'objectives'", "'hearts'", "'integer'", "'%='", "'*='", 
-		"'+='", "'-='", "'/='", "'>'", "'><'", "'displayname'", "'rendertype'", 
-		"'setdisplay'", "'operation'", "'reset'", "'seed'", "'setblock'", "'setworldspawn'", 
-		"'spawnpoint'", "'spectate'", "'spreadplayers'", "'true'", "'false'", 
-		"'under'", "'stopsound'", "'*'", "'tag'", "'team'", "'always'", "'never'", 
-		"'pushOtherTeams'", "'pushOwnTeam'", "'hideForOtherTeams'", "'hideForOwnTeam'", 
-		"'empty'", "'join'", "'leave'", "'collisionRule'", "'deathMessageVisibility'", 
-		"'displayName'", "'friendlyFire'", "'nametagVisibility'", "'prefix'", 
-		"'suffix'", "'seeFriendlyInvisibles'", "'teammsg'", "'teleport'", "'tell'", 
-		"'tellraw'", "'time'", "'day'", "'daytime'", "'gametime'", "'midnight'", 
-		"'night'", "'noon'", "'title'", "'actionbar'", "'subtitle'", "'times'", 
-		"'tm'", "'tp'", "'trigger'", "'rain'", "'thunder'", "'worldborder'", "'center'", 
-		"'warning'", "'distance'", "'amount'", "'buffer'", "'xp'", null, null, 
+		null, null, "'#'", "'/'", "'@'", "'at'", "'!'", "','", "'.'", "':'", "'..'", 
+		"'[]'", "'['", "']'", "'()'", "'('", "')'", "'{}'", "'{'", "'}'", "'<>'", 
+		"'<'", "'>'", "'\"'", "'''", "'byte'", "'int'", "'long'", "'string'", 
+		"'boolean'", "'short'", "'float'", "'double'", null, null, null, null, 
+		null, null, "'level'", "'limit'", "'nbt'", "'scores'", null, "'sort'", 
+		"'advancements'", "'attribute'", null, null, null, null, null, "'datapack'", 
+		"'debug'", "'defaultgamemode'", "'difficulty'", "'effect'", "'enchant'", 
+		"'execute'", "'experience'", "'fill'", "'fillbiome'", "'forceload'", "'function'", 
+		"'gamemode'", "'gamerule'", "'give'", "'help'", null, "'jfr'", "'kick'", 
+		"'kill'", "'list'", "'locate'", "'loot'", "'me'", "'msg'", "'particle'", 
+		"'place'", "'playsound'", "'publish'", "'recipe'", "'reload'", "'return'", 
+		"'ride'", "'say'", "'schedule'", "'scoreboard'", "'seed'", "'setblock'", 
+		"'setworldspawn'", "'spawnpoint'", "'spectate'", "'spreadplayers'", "'stopsound'", 
+		"'summon'", "'tag'", "'team'", "'teammsg'", "'teleport'", "'tell'", "'tellraw'", 
+		"'time'", "'title'", "'tm'", "'tp'", "'trigger'", "'weather'", "'worldborder'", 
+		"'xp'", "'*'", null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, "'['", "']'", "'{'", "'}'", "','", "'='"
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, null, null, null, null, null, null, null, null, null, null, null, 
+		null, "'<='", "'='", "'>='", "'180'", "'><'", "'/='", "'*='", "'+='", 
+		"'-='", "'%='"
 	};
 	private static readonly string[] _SymbolicNames = {
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, "DimensionId", "Any", "MobAttribute", "Integer", "IntInterval", 
-		"Number", "PositiveNumber", "Int", "Double", "PositiveDouble", "DoubleInterval", 
-		"PositiveDoubleInterval", "GameTimeValue", "IdString", "ScoreboardSlots", 
-		"SoundId", "EffectId", "BiomeID", "Bool", "StringValue", "PlayerName", 
-		"StringKey", "Uuid", "String", "ScoreboardObjective", "ScoreboardType", 
-		"LowerString", "FilePath", "NbtPathParameter", "BlockStateKey", "BlockStateValue", 
-		"BlockState", "BlockId", "EntityId", "Coordinates", "GamemodeValues", 
-		"MarkValue", "NameValue", "FileReferrerValue", "PredicateValue", "OpenSquareBrackets", 
-		"CloseSquareBrackets", "OpenCurlyBrace", "CloseCurlyBrace", "Comma", "Equal", 
-		"NumberKey", "PositiveNumberKey", "PositiveDoubleIntervalKey", "DoubleIntervalKey", 
-		"IntIntervalKey", "IntKey", "JsonKey", "TagKey", "TeamKey", "AdvancementPath", 
-		"NameSpace", "ScorePath", "SortValue", "JsonValue", "Jkey", "Jobject", 
-		"Jpair", "Jarray", "Jvalue", "AdvancementParameter", "AdvancementValue", 
-		"ScoreParameter", "ScoresValue", "SelectorParameters", "Parameter", "BossbarId", 
-		"EnchantID", "Axes", "GameruleName", "CommandList", "ItemSlot", "Gametick", 
-		"TeamName"
+		null, "WS", "Sharp", "Slash", "AtChar", "AtLetter", "ExclamationMark", 
+		"Comma", "Dot", "Colon", "DoubleDot", "SquareBrackets", "LeftSquareBracket", 
+		"RightSquareBracket", "RoundBrackets", "LeftRoundBracket", "RightRoundBracket", 
+		"CurlyBrackets", "LeftCurlyBracket", "RightCurlyBracket", "AngleBrackets", 
+		"LeftAngleBracket", "RightAngleBracket", "DoubleQuotes", "Quote", "ByteKey", 
+		"IntKey", "LongKey", "StringKey", "BooleanKey", "ShortKey", "FloatKey", 
+		"DoubleKey", "BooleanValue", "SelectorName", "AxeKey", "AxeLengthKey", 
+		"Axes", "ViewRotationKey", "Level", "LimitKey", "NBT", "ScoreKey", "TypeKey", 
+		"SortKey", "AdvancementKey", "AttributeKey", "BossbarKey", "ClearKey", 
+		"CloneKey", "DamageKey", "DataKey", "DatapackKey", "DebugKey", "DefaultgamemodeKey", 
+		"DifficultyKey", "EffectKey", "EnchantKey", "ExecuteKey", "ExperienceKey", 
+		"FillKey", "FillbiomeKey", "ForceloadKey", "FunctionKey", "GamemodeKey", 
+		"GameruleKey", "GiveKey", "HelpKey", "ItemKey", "JfrKey", "KickKey", "KillKey", 
+		"ListKey", "LocateKey", "LootKey", "MeKey", "MsgKey", "ParticleKey", "PlaceKey", 
+		"PlaysoundKey", "PublishKey", "RecipeKey", "ReloadKey", "ReturnKey", "RideKey", 
+		"SayKey", "ScheduleKey", "ScoreboardKey", "SeedKey", "SetblockKey", "SetworldspawnKey", 
+		"SpawnpointKey", "SpectateKey", "SpreadplayersKey", "StopsoundKey", "SummonKey", 
+		"TagKey", "TeamKey", "TeammsgKey", "TeleportKey", "TellKey", "TellrawKey", 
+		"TimeKey", "TitleKey", "TmKey", "TpKey", "TriggerKey", "WeatherKey", "WorldborderKey", 
+		"XpKey", "Star", "Add", "Remove", "Value", "Set", "Multiply", "Multiply_Base", 
+		"Max", "Players", "Visible", "Color", "Name", "Style", "Filtered", "Masked", 
+		"Replace", "Force", "Move", "Normal", "To", "By", "Merge", "Modify", "Block", 
+		"Entity", "Storage", "As", "Grant", "Revoke", "Everything", "Only", "From", 
+		"Through", "Until", "Base", "Get", "Modifier", "Available", "Enable", 
+		"After", "Before", "First", "Last", "Disable", "Start", "Stop", "Infinite", 
+		"Easy", "Hard", "Peaceful", "Eyes", "Feet", "All", "Biome", "Blocks", 
+		"Dimension", "Loaded", "Predicate", "Score", "Matches", "Attacker", "Controller", 
+		"Leasher", "Origin", "Owner", "Passengers", "Target", "Vehicle", "Motion_blocking", 
+		"Motion_blocking_no_leaves", "Ocean_floor", "World_surface", "Over", "Result", 
+		"Success", "Align", "Anchored", "If", "Unless", "In", "On", "Positioned", 
+		"Rotated", "Run", "Store", "Query", "Levels", "Points", "Destroy", "Hollow", 
+		"Keep", "Outline", "Uuids", "Poi", "Structure", "Insert", "Spawn", "Fish", 
+		"Mine", "Feature", "Jigsaw", "Template", "Front_back", "Left_right", "None", 
+		"Clockwise_90", "Counterclockwise_90", "Ambient", "Hostile", "Master", 
+		"Music", "Neutral", "Player", "Record", "Voice", "Append", "Dismount", 
+		"Mount", "Objectives", "Hearts", "DisplayName", "Rendertype", "Setdisplay", 
+		"Operation", "Reset", "Under", "Actionbar", "Subtitle", "Times", "FadeIn", 
+		"Stay", "FadeOut", "Center", "Warning", "Amount", "Buffer", "Facing", 
+		"Prepend", "Bossbar", "With", "Mainhand", "Offhand", "Take", "Always", 
+		"Never", "PushOtherTeams", "PushOwnTeam", "HideForOtherTeams", "HideForOwnTeam", 
+		"FriendlyFire", "NametagVisibility", "SeeFriendlyInvisibles", "Rain", 
+		"Thunder", "Day", "Midnight", "Night", "Daytime", "Noon", "Gametime", 
+		"Distance", "Empty", "Join", "Leave", "CollisionRule", "DeathMessageVisibility", 
+		"Prefix", "Suffix", "LessThanOrEqualTo", "Equal", "GreaterThanOrEqualTo", 
+		"OneHundredAndEighty", "GreaterThanLessThan", "DivisionEqual", "MultiplicationEqual", 
+		"AdditionEqual", "SubtractionEqual", "RemainderEqual", "UUID", "Integer", 
+		"IntInterval", "PositiveDouble", "PositiveDoubleInterval", "Float", "Double", 
+		"DoubleInterval", "GameTimeValue", "IntTypedUnit", "FloatTypedUnit", "Identifier", 
+		"FileReference", "String", "ResourceLocation", "BlockStateKey", "BlockStateValue", 
+		"MessageContent", "Message", "MESSAGE_END", "Coordinate", "COORDINATE_END"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -342,29 +450,246 @@ public partial class mccommandParser : Parser {
 		}
 	}
 
-	public override string GrammarFileName { get { return "mccommand.g4"; } }
+	public override string GrammarFileName { get { return "MCCommandParser.g4"; } }
 
 	public override string[] RuleNames { get { return ruleNames; } }
 
 	public override int[] SerializedAtn { get { return _serializedATN; } }
 
-	static mccommandParser() {
+	static MCCommandParser() {
 		decisionToDFA = new DFA[_ATN.NumberOfDecisions];
 		for (int i = 0; i < _ATN.NumberOfDecisions; i++) {
 			decisionToDFA[i] = new DFA(_ATN.GetDecisionState(i), i);
 		}
 	}
 
-		public mccommandParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
+		public MCCommandParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
 
-		public mccommandParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
+		public MCCommandParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
 		: base(input, output, errorOutput)
 	{
 		Interpreter = new ParserATNSimulator(this, _ATN, decisionToDFA, sharedContextCache);
 	}
 
+	public partial class AtCharContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AtChar() { return GetToken(MCCommandParser.AtChar, 0); }
+		public AtCharContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_atChar; } }
+	}
+
+	[RuleVersion(0)]
+	public AtCharContext atChar() {
+		AtCharContext _localctx = new AtCharContext(Context, State);
+		EnterRule(_localctx, 0, RULE_atChar);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1084;
+			Match(AtChar);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AtLetterContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AtLetter() { return GetToken(MCCommandParser.AtLetter, 0); }
+		public AtLetterContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_atLetter; } }
+	}
+
+	[RuleVersion(0)]
+	public AtLetterContext atLetter() {
+		AtLetterContext _localctx = new AtLetterContext(Context, State);
+		EnterRule(_localctx, 2, RULE_atLetter);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1086;
+			Match(AtLetter);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ExclamationMarkContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ExclamationMark() { return GetToken(MCCommandParser.ExclamationMark, 0); }
+		public ExclamationMarkContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_exclamationMark; } }
+	}
+
+	[RuleVersion(0)]
+	public ExclamationMarkContext exclamationMark() {
+		ExclamationMarkContext _localctx = new ExclamationMarkContext(Context, State);
+		EnterRule(_localctx, 4, RULE_exclamationMark);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1088;
+			Match(ExclamationMark);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LeftSquareBracketContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftSquareBracket() { return GetToken(MCCommandParser.LeftSquareBracket, 0); }
+		public LeftSquareBracketContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_leftSquareBracket; } }
+	}
+
+	[RuleVersion(0)]
+	public LeftSquareBracketContext leftSquareBracket() {
+		LeftSquareBracketContext _localctx = new LeftSquareBracketContext(Context, State);
+		EnterRule(_localctx, 6, RULE_leftSquareBracket);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1090;
+			Match(LeftSquareBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RightSquareBracketContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightSquareBracket() { return GetToken(MCCommandParser.RightSquareBracket, 0); }
+		public RightSquareBracketContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_rightSquareBracket; } }
+	}
+
+	[RuleVersion(0)]
+	public RightSquareBracketContext rightSquareBracket() {
+		RightSquareBracketContext _localctx = new RightSquareBracketContext(Context, State);
+		EnterRule(_localctx, 8, RULE_rightSquareBracket);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1092;
+			Match(RightSquareBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LeftCurlyBracketContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftCurlyBracket() { return GetToken(MCCommandParser.LeftCurlyBracket, 0); }
+		public LeftCurlyBracketContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_leftCurlyBracket; } }
+	}
+
+	[RuleVersion(0)]
+	public LeftCurlyBracketContext leftCurlyBracket() {
+		LeftCurlyBracketContext _localctx = new LeftCurlyBracketContext(Context, State);
+		EnterRule(_localctx, 10, RULE_leftCurlyBracket);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1094;
+			Match(LeftCurlyBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RightCurlyBracketContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightCurlyBracket() { return GetToken(MCCommandParser.RightCurlyBracket, 0); }
+		public RightCurlyBracketContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_rightCurlyBracket; } }
+	}
+
+	[RuleVersion(0)]
+	public RightCurlyBracketContext rightCurlyBracket() {
+		RightCurlyBracketContext _localctx = new RightCurlyBracketContext(Context, State);
+		EnterRule(_localctx, 12, RULE_rightCurlyBracket);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1096;
+			Match(RightCurlyBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
 	public partial class DimensionIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DimensionId() { return GetToken(mccommandParser.DimensionId, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public DimensionIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -375,12 +700,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DimensionIdContext dimensionId() {
 		DimensionIdContext _localctx = new DimensionIdContext(Context, State);
-		EnterRule(_localctx, 0, RULE_dimensionId);
+		EnterRule(_localctx, 14, RULE_dimensionId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 544;
-			Match(DimensionId);
+			State = 1098;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -395,7 +720,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class MobAttributeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MobAttribute() { return GetToken(mccommandParser.MobAttribute, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public MobAttributeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -406,12 +731,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public MobAttributeContext mobAttribute() {
 		MobAttributeContext _localctx = new MobAttributeContext(Context, State);
-		EnterRule(_localctx, 2, RULE_mobAttribute);
+		EnterRule(_localctx, 16, RULE_mobAttribute);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 546;
-			Match(MobAttribute);
+			State = 1100;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -425,23 +750,23 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class IntContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
-		public IntContext(ParserRuleContext parent, int invokingState)
+	public partial class IntegerContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public IntegerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_int; } }
+		public override int RuleIndex { get { return RULE_integer; } }
 	}
 
 	[RuleVersion(0)]
-	public IntContext @int() {
-		IntContext _localctx = new IntContext(Context, State);
-		EnterRule(_localctx, 4, RULE_int);
+	public IntegerContext integer() {
+		IntegerContext _localctx = new IntegerContext(Context, State);
+		EnterRule(_localctx, 18, RULE_integer);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 548;
+			State = 1102;
 			Match(Integer);
 			}
 		}
@@ -457,10 +782,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class IntIntervalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Integer() { return GetTokens(mccommandParser.Integer); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer(int i) {
-			return GetToken(mccommandParser.Integer, i);
-		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IntInterval() { return GetToken(MCCommandParser.IntInterval, 0); }
 		public IntIntervalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -471,46 +793,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public IntIntervalContext intInterval() {
 		IntIntervalContext _localctx = new IntIntervalContext(Context, State);
-		EnterRule(_localctx, 6, RULE_intInterval);
+		EnterRule(_localctx, 20, RULE_intInterval);
 		try {
-			State = 557;
-			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,0,Context) ) {
-			case 1:
-				EnterOuterAlt(_localctx, 1);
-				{
-				{
-				State = 550;
-				Match(Integer);
-				State = 551;
-				Match(T__0);
-				}
-				}
-				break;
-			case 2:
-				EnterOuterAlt(_localctx, 2);
-				{
-				{
-				State = 552;
-				Match(T__0);
-				State = 553;
-				Match(Integer);
-				}
-				}
-				break;
-			case 3:
-				EnterOuterAlt(_localctx, 3);
-				{
-				{
-				State = 554;
-				Match(Integer);
-				State = 555;
-				Match(T__0);
-				State = 556;
-				Match(Integer);
-				}
-				}
-				break;
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1104;
+			Match(IntInterval);
 			}
 		}
 		catch (RecognitionException re) {
@@ -524,24 +812,24 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class NumberContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(mccommandParser.Number, 0); }
-		public NumberContext(ParserRuleContext parent, int invokingState)
+	public partial class DoubleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		public DoubleContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_number; } }
+		public override int RuleIndex { get { return RULE_double; } }
 	}
 
 	[RuleVersion(0)]
-	public NumberContext number() {
-		NumberContext _localctx = new NumberContext(Context, State);
-		EnterRule(_localctx, 8, RULE_number);
+	public DoubleContext @double() {
+		DoubleContext _localctx = new DoubleContext(Context, State);
+		EnterRule(_localctx, 22, RULE_double);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 559;
-			Match(Number);
+			State = 1106;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -555,24 +843,33 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class PositiveNumberContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PositiveNumber() { return GetToken(mccommandParser.PositiveNumber, 0); }
-		public PositiveNumberContext(ParserRuleContext parent, int invokingState)
+	public partial class AxeValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		public AxeValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_positiveNumber; } }
+		public override int RuleIndex { get { return RULE_axeValue; } }
 	}
 
 	[RuleVersion(0)]
-	public PositiveNumberContext positiveNumber() {
-		PositiveNumberContext _localctx = new PositiveNumberContext(Context, State);
-		EnterRule(_localctx, 10, RULE_positiveNumber);
+	public AxeValueContext axeValue() {
+		AxeValueContext _localctx = new AxeValueContext(Context, State);
+		EnterRule(_localctx, 24, RULE_axeValue);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 561;
-			Match(PositiveNumber);
+			State = 1108;
+			_la = TokenStream.LA(1);
+			if ( !(_la==Integer || _la==Double) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -587,7 +884,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class GameTimeValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GameTimeValue() { return GetToken(mccommandParser.GameTimeValue, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GameTimeValue() { return GetToken(MCCommandParser.GameTimeValue, 0); }
 		public GameTimeValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -598,11 +895,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public GameTimeValueContext gameTimeValue() {
 		GameTimeValueContext _localctx = new GameTimeValueContext(Context, State);
-		EnterRule(_localctx, 12, RULE_gameTimeValue);
+		EnterRule(_localctx, 26, RULE_gameTimeValue);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 563;
+			State = 1110;
 			Match(GameTimeValue);
 			}
 		}
@@ -618,7 +915,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BiomeIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BiomeID() { return GetToken(mccommandParser.BiomeID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public BiomeIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -629,12 +926,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BiomeIdContext biomeId() {
 		BiomeIdContext _localctx = new BiomeIdContext(Context, State);
-		EnterRule(_localctx, 14, RULE_biomeId);
+		EnterRule(_localctx, 28, RULE_biomeId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 565;
-			Match(BiomeID);
+			State = 1112;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -649,7 +946,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BoolContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Bool() { return GetToken(mccommandParser.Bool, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BooleanValue() { return GetToken(MCCommandParser.BooleanValue, 0); }
 		public BoolContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -660,12 +957,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BoolContext @bool() {
 		BoolContext _localctx = new BoolContext(Context, State);
-		EnterRule(_localctx, 16, RULE_bool);
+		EnterRule(_localctx, 30, RULE_bool);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 567;
-			Match(Bool);
+			State = 1114;
+			Match(BooleanValue);
 			}
 		}
 		catch (RecognitionException re) {
@@ -679,40 +976,165 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class JsonValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public JobjectContext jobject() {
-			return GetRuleContext<JobjectContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public JarrayContext jarray() {
-			return GetRuleContext<JarrayContext>(0);
-		}
-		public JsonValueContext(ParserRuleContext parent, int invokingState)
+	public partial class StringValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String() { return GetToken(MCCommandParser.String, 0); }
+		public StringValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_jsonValue; } }
+		public override int RuleIndex { get { return RULE_stringValue; } }
 	}
 
 	[RuleVersion(0)]
-	public JsonValueContext jsonValue() {
-		JsonValueContext _localctx = new JsonValueContext(Context, State);
-		EnterRule(_localctx, 18, RULE_jsonValue);
+	public StringValueContext stringValue() {
+		StringValueContext _localctx = new StringValueContext(Context, State);
+		EnterRule(_localctx, 32, RULE_stringValue);
 		try {
-			State = 571;
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1116;
+			Match(String);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class JsonComponentContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SNbtContext sNbt() {
+			return GetRuleContext<SNbtContext>(0);
+		}
+		public JsonComponentContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_jsonComponent; } }
+	}
+
+	[RuleVersion(0)]
+	public JsonComponentContext jsonComponent() {
+		JsonComponentContext _localctx = new JsonComponentContext(Context, State);
+		EnterRule(_localctx, 34, RULE_jsonComponent);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1118;
+			sNbt();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class UuidContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode UUID() { return GetToken(MCCommandParser.UUID, 0); }
+		public UuidContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_uuid; } }
+	}
+
+	[RuleVersion(0)]
+	public UuidContext uuid() {
+		UuidContext _localctx = new UuidContext(Context, State);
+		EnterRule(_localctx, 36, RULE_uuid);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1120;
+			Match(UUID);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class JobjectContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CurlyBrackets() { return GetToken(MCCommandParser.CurlyBrackets, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftCurlyBracket() { return GetToken(MCCommandParser.LeftCurlyBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public JpairContext[] jpair() {
+			return GetRuleContexts<JpairContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public JpairContext jpair(int i) {
+			return GetRuleContext<JpairContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightCurlyBracket() { return GetToken(MCCommandParser.RightCurlyBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(MCCommandParser.Comma, i);
+		}
+		public JobjectContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_jobject; } }
+	}
+
+	[RuleVersion(0)]
+	public JobjectContext jobject() {
+		JobjectContext _localctx = new JobjectContext(Context, State);
+		EnterRule(_localctx, 38, RULE_jobject);
+		int _la;
+		try {
+			State = 1134;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case OpenCurlyBrace:
+			case CurlyBrackets:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 569;
-				jobject();
+				State = 1122;
+				Match(CurlyBrackets);
 				}
 				break;
-			case OpenSquareBrackets:
+			case LeftCurlyBracket:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 570;
-				jarray();
+				{
+				State = 1123;
+				Match(LeftCurlyBracket);
+				State = 1124;
+				jpair();
+				State = 1129;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				while (_la==Comma) {
+					{
+					{
+					State = 1125;
+					Match(Comma);
+					State = 1126;
+					jpair();
+					}
+					}
+					State = 1131;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				}
+				State = 1132;
+				Match(RightCurlyBracket);
+				}
 				}
 				break;
 			default:
@@ -730,87 +1152,74 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class JobjectContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OpenCurlyBrace() { return GetToken(mccommandParser.OpenCurlyBrace, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public JpairContext[] jpair() {
-			return GetRuleContexts<JpairContext>();
+	public partial class JarrayContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SquareBrackets() { return GetToken(MCCommandParser.SquareBrackets, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftSquareBracket() { return GetToken(MCCommandParser.LeftSquareBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public JvalueContext[] jvalue() {
+			return GetRuleContexts<JvalueContext>();
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public JpairContext jpair(int i) {
-			return GetRuleContext<JpairContext>(i);
+		[System.Diagnostics.DebuggerNonUserCode] public JvalueContext jvalue(int i) {
+			return GetRuleContext<JvalueContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CloseCurlyBrace() { return GetToken(mccommandParser.CloseCurlyBrace, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(mccommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightSquareBracket() { return GetToken(MCCommandParser.RightSquareBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
-			return GetToken(mccommandParser.Comma, i);
+			return GetToken(MCCommandParser.Comma, i);
 		}
-		public JobjectContext(ParserRuleContext parent, int invokingState)
+		public JarrayContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_jobject; } }
+		public override int RuleIndex { get { return RULE_jarray; } }
 	}
 
 	[RuleVersion(0)]
-	public JobjectContext jobject() {
-		JobjectContext _localctx = new JobjectContext(Context, State);
-		EnterRule(_localctx, 20, RULE_jobject);
+	public JarrayContext jarray() {
+		JarrayContext _localctx = new JarrayContext(Context, State);
+		EnterRule(_localctx, 40, RULE_jarray);
 		int _la;
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 573;
-			Match(OpenCurlyBrace);
-			State = 574;
-			jpair();
-			State = 579;
+			State = 1148;
 			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			while (_la==Comma) {
+			switch (TokenStream.LA(1)) {
+			case SquareBrackets:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 1136;
+				Match(SquareBrackets);
+				}
+				break;
+			case LeftSquareBracket:
+				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 575;
-				Match(Comma);
-				State = 576;
-				jpair();
-				}
-				}
-				State = 581;
+				State = 1137;
+				Match(LeftSquareBracket);
+				State = 1138;
+				jvalue();
+				State = 1143;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-			}
-			State = 582;
-			Match(CloseCurlyBrace);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class StringValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode StringValue() { return GetToken(mccommandParser.StringValue, 0); }
-		public StringValueContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_stringValue; } }
-	}
-
-	[RuleVersion(0)]
-	public StringValueContext stringValue() {
-		StringValueContext _localctx = new StringValueContext(Context, State);
-		EnterRule(_localctx, 22, RULE_stringValue);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 584;
-			Match(StringValue);
+				while (_la==Comma) {
+					{
+					{
+					State = 1139;
+					Match(Comma);
+					State = 1140;
+					jvalue();
+					}
+					}
+					State = 1145;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				}
+				State = 1146;
+				Match(RightSquareBracket);
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -824,24 +1233,24 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class StringKeyContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode StringKey() { return GetToken(mccommandParser.StringKey, 0); }
-		public StringKeyContext(ParserRuleContext parent, int invokingState)
+	public partial class JkeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		public JkeyContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_stringKey; } }
+		public override int RuleIndex { get { return RULE_jkey; } }
 	}
 
 	[RuleVersion(0)]
-	public StringKeyContext stringKey() {
-		StringKeyContext _localctx = new StringKeyContext(Context, State);
-		EnterRule(_localctx, 24, RULE_stringKey);
+	public JkeyContext jkey() {
+		JkeyContext _localctx = new JkeyContext(Context, State);
+		EnterRule(_localctx, 42, RULE_jkey);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 586;
-			Match(StringKey);
+			State = 1150;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -856,9 +1265,10 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class JpairContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public StringKeyContext stringKey() {
-			return GetRuleContext<StringKeyContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public JkeyContext jkey() {
+			return GetRuleContext<JkeyContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Colon() { return GetToken(MCCommandParser.Colon, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public JvalueContext jvalue() {
 			return GetRuleContext<JvalueContext>(0);
 		}
@@ -872,15 +1282,15 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public JpairContext jpair() {
 		JpairContext _localctx = new JpairContext(Context, State);
-		EnterRule(_localctx, 26, RULE_jpair);
+		EnterRule(_localctx, 44, RULE_jpair);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 588;
-			stringKey();
-			State = 589;
-			Match(T__1);
-			State = 590;
+			State = 1152;
+			jkey();
+			State = 1153;
+			Match(Colon);
+			State = 1154;
 			jvalue();
 			}
 		}
@@ -895,58 +1305,97 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class JarrayContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OpenSquareBrackets() { return GetToken(mccommandParser.OpenSquareBrackets, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CloseSquareBrackets() { return GetToken(mccommandParser.CloseSquareBrackets, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public JvalueContext[] jvalue() {
-			return GetRuleContexts<JvalueContext>();
+	public partial class SNbtContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public JobjectContext jobject() {
+			return GetRuleContext<JobjectContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public JvalueContext jvalue(int i) {
-			return GetRuleContext<JvalueContext>(i);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(mccommandParser.Comma); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
-			return GetToken(mccommandParser.Comma, i);
-		}
-		public JarrayContext(ParserRuleContext parent, int invokingState)
+		public SNbtContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_jarray; } }
+		public override int RuleIndex { get { return RULE_sNbt; } }
 	}
 
 	[RuleVersion(0)]
-	public JarrayContext jarray() {
-		JarrayContext _localctx = new JarrayContext(Context, State);
-		EnterRule(_localctx, 28, RULE_jarray);
+	public SNbtContext sNbt() {
+		SNbtContext _localctx = new SNbtContext(Context, State);
+		EnterRule(_localctx, 46, RULE_sNbt);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1156;
+			jobject();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class JDoubleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PositiveDouble() { return GetToken(MCCommandParser.PositiveDouble, 0); }
+		public JDoubleContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_jDouble; } }
+	}
+
+	[RuleVersion(0)]
+	public JDoubleContext jDouble() {
+		JDoubleContext _localctx = new JDoubleContext(Context, State);
+		EnterRule(_localctx, 48, RULE_jDouble);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 592;
-			Match(OpenSquareBrackets);
-			{
-			State = 593;
-			jvalue();
-			State = 598;
-			ErrorHandler.Sync(this);
+			State = 1158;
 			_la = TokenStream.LA(1);
-			while (_la==Comma) {
-				{
-				{
-				State = 594;
-				Match(Comma);
-				State = 595;
-				jvalue();
-				}
-				}
-				State = 600;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
+			if ( !(_la==PositiveDouble || _la==Double) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
 			}
 			}
-			State = 601;
-			Match(CloseSquareBrackets);
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class JFloatContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Float() { return GetToken(MCCommandParser.Float, 0); }
+		public JFloatContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_jFloat; } }
+	}
+
+	[RuleVersion(0)]
+	public JFloatContext jFloat() {
+		JFloatContext _localctx = new JFloatContext(Context, State);
+		EnterRule(_localctx, 50, RULE_jFloat);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1160;
+			Match(Float);
 			}
 		}
 		catch (RecognitionException re) {
@@ -964,8 +1413,14 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public StringValueContext stringValue() {
 			return GetRuleContext<StringValueContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public JFloatContext jFloat() {
+			return GetRuleContext<JFloatContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public JDoubleContext jDouble() {
+			return GetRuleContext<JDoubleContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public JobjectContext jobject() {
 			return GetRuleContext<JobjectContext>(0);
@@ -986,43 +1441,60 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public JvalueContext jvalue() {
 		JvalueContext _localctx = new JvalueContext(Context, State);
-		EnterRule(_localctx, 30, RULE_jvalue);
+		EnterRule(_localctx, 52, RULE_jvalue);
 		try {
-			State = 608;
+			State = 1169;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case StringValue:
+			case String:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 603;
+				State = 1162;
 				stringValue();
 				}
 				break;
-			case Number:
+			case Integer:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 604;
-				number();
+				State = 1163;
+				integer();
 				}
 				break;
-			case OpenCurlyBrace:
+			case Float:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 605;
+				State = 1164;
+				jFloat();
+				}
+				break;
+			case PositiveDouble:
+			case Double:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 1165;
+				jDouble();
+				}
+				break;
+			case CurlyBrackets:
+			case LeftCurlyBracket:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 1166;
 				jobject();
 				}
 				break;
-			case OpenSquareBrackets:
-				EnterOuterAlt(_localctx, 4);
+			case SquareBrackets:
+			case LeftSquareBracket:
+				EnterOuterAlt(_localctx, 6);
 				{
-				State = 606;
+				State = 1167;
 				jarray();
 				}
 				break;
-			case Bool:
-				EnterOuterAlt(_localctx, 5);
+			case BooleanValue:
+				EnterOuterAlt(_localctx, 7);
 				{
-				State = 607;
+				State = 1168;
 				@bool();
 				}
 				break;
@@ -1041,24 +1513,97 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class JsonComponentContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode JsonValue() { return GetToken(mccommandParser.JsonValue, 0); }
-		public JsonComponentContext(ParserRuleContext parent, int invokingState)
+	public partial class NbtPathItemContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public IdentifierContext identifier() {
+			return GetRuleContext<IdentifierContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NbtObjectContext nbtObject() {
+			return GetRuleContext<NbtObjectContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NbtArrayContext nbtArray() {
+			return GetRuleContext<NbtArrayContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StringValueContext stringValue() {
+			return GetRuleContext<StringValueContext>(0);
+		}
+		public NbtPathItemContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_jsonComponent; } }
+		public override int RuleIndex { get { return RULE_nbtPathItem; } }
 	}
 
 	[RuleVersion(0)]
-	public JsonComponentContext jsonComponent() {
-		JsonComponentContext _localctx = new JsonComponentContext(Context, State);
-		EnterRule(_localctx, 32, RULE_jsonComponent);
+	public NbtPathItemContext nbtPathItem() {
+		NbtPathItemContext _localctx = new NbtPathItemContext(Context, State);
+		EnterRule(_localctx, 54, RULE_nbtPathItem);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 610;
-			Match(JsonValue);
+			State = 1177;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Identifier:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 1171;
+				identifier();
+				State = 1174;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case LeftCurlyBracket:
+					{
+					State = 1172;
+					nbtObject();
+					}
+					break;
+				case LeftSquareBracket:
+					{
+					State = 1173;
+					nbtArray();
+					}
+					break;
+				case AtLetter:
+				case Dot:
+				case ByteKey:
+				case IntKey:
+				case LongKey:
+				case ShortKey:
+				case FloatKey:
+				case DoubleKey:
+				case SummonKey:
+				case Set:
+				case Merge:
+				case As:
+				case Align:
+				case Anchored:
+				case If:
+				case Unless:
+				case In:
+				case On:
+				case Positioned:
+				case Rotated:
+				case Run:
+				case Store:
+				case Insert:
+				case Append:
+				case Facing:
+				case Prepend:
+				case Integer:
+				case Double:
+					break;
+				default:
+					break;
+				}
+				}
+				break;
+			case String:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 1176;
+				stringValue();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1072,24 +1617,56 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class UuidContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Uuid() { return GetToken(mccommandParser.Uuid, 0); }
-		public UuidContext(ParserRuleContext parent, int invokingState)
+	public partial class NbtObjectContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftCurlyBracket() { return GetToken(MCCommandParser.LeftCurlyBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPairContext[] nbtPair() {
+			return GetRuleContexts<NbtPairContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPairContext nbtPair(int i) {
+			return GetRuleContext<NbtPairContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightCurlyBracket() { return GetToken(MCCommandParser.RightCurlyBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(MCCommandParser.Comma, i);
+		}
+		public NbtObjectContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_uuid; } }
+		public override int RuleIndex { get { return RULE_nbtObject; } }
 	}
 
 	[RuleVersion(0)]
-	public UuidContext uuid() {
-		UuidContext _localctx = new UuidContext(Context, State);
-		EnterRule(_localctx, 34, RULE_uuid);
+	public NbtObjectContext nbtObject() {
+		NbtObjectContext _localctx = new NbtObjectContext(Context, State);
+		EnterRule(_localctx, 56, RULE_nbtObject);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 612;
-			Match(Uuid);
+			State = 1179;
+			Match(LeftCurlyBracket);
+			State = 1180;
+			nbtPair();
+			State = 1185;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while (_la==Comma) {
+				{
+				{
+				State = 1181;
+				Match(Comma);
+				State = 1182;
+				nbtPair();
+				}
+				}
+				State = 1187;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 1188;
+			Match(RightCurlyBracket);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1103,24 +1680,56 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class StringRuleContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String() { return GetToken(mccommandParser.String, 0); }
-		public StringRuleContext(ParserRuleContext parent, int invokingState)
+	public partial class NbtArrayContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftSquareBracket() { return GetToken(MCCommandParser.LeftSquareBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public NbtValueContext[] nbtValue() {
+			return GetRuleContexts<NbtValueContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NbtValueContext nbtValue(int i) {
+			return GetRuleContext<NbtValueContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightSquareBracket() { return GetToken(MCCommandParser.RightSquareBracket, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(MCCommandParser.Comma, i);
+		}
+		public NbtArrayContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_stringRule; } }
+		public override int RuleIndex { get { return RULE_nbtArray; } }
 	}
 
 	[RuleVersion(0)]
-	public StringRuleContext stringRule() {
-		StringRuleContext _localctx = new StringRuleContext(Context, State);
-		EnterRule(_localctx, 36, RULE_stringRule);
+	public NbtArrayContext nbtArray() {
+		NbtArrayContext _localctx = new NbtArrayContext(Context, State);
+		EnterRule(_localctx, 58, RULE_nbtArray);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 614;
-			Match(String);
+			State = 1190;
+			Match(LeftSquareBracket);
+			State = 1191;
+			nbtValue();
+			State = 1196;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while (_la==Comma) {
+				{
+				{
+				State = 1192;
+				Match(Comma);
+				State = 1193;
+				nbtValue();
+				}
+				}
+				State = 1198;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 1199;
+			Match(RightSquareBracket);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1134,24 +1743,124 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class FilePathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
-		public FilePathContext(ParserRuleContext parent, int invokingState)
+	public partial class NbtPairContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Colon() { return GetToken(MCCommandParser.Colon, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public NbtValueContext nbtValue() {
+			return GetRuleContext<NbtValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IdentifierContext identifier() {
+			return GetRuleContext<IdentifierContext>(0);
+		}
+		public NbtPairContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_filePath; } }
+		public override int RuleIndex { get { return RULE_nbtPair; } }
 	}
 
 	[RuleVersion(0)]
-	public FilePathContext filePath() {
-		FilePathContext _localctx = new FilePathContext(Context, State);
-		EnterRule(_localctx, 38, RULE_filePath);
+	public NbtPairContext nbtPair() {
+		NbtPairContext _localctx = new NbtPairContext(Context, State);
+		EnterRule(_localctx, 60, RULE_nbtPair);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 616;
-			Match(FilePath);
+			State = 1202;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==Identifier) {
+				{
+				State = 1201;
+				identifier();
+				}
+			}
+
+			State = 1204;
+			Match(Colon);
+			State = 1205;
+			nbtValue();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NbtValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public StringValueContext stringValue() {
+			return GetRuleContext<StringValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DoubleContext @double() {
+			return GetRuleContext<DoubleContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NbtObjectContext nbtObject() {
+			return GetRuleContext<NbtObjectContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BooleanValueContext booleanValue() {
+			return GetRuleContext<BooleanValueContext>(0);
+		}
+		public NbtValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_nbtValue; } }
+	}
+
+	[RuleVersion(0)]
+	public NbtValueContext nbtValue() {
+		NbtValueContext _localctx = new NbtValueContext(Context, State);
+		EnterRule(_localctx, 62, RULE_nbtValue);
+		try {
+			State = 1212;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case String:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 1207;
+				stringValue();
+				}
+				break;
+			case Integer:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 1208;
+				integer();
+				}
+				break;
+			case Double:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 1209;
+				@double();
+				}
+				break;
+			case LeftCurlyBracket:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 1210;
+				nbtObject();
+				}
+				break;
+			case BooleanValue:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 1211;
+				booleanValue();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1166,9 +1875,15 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class NbtPathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] NbtPathParameter() { return GetTokens(mccommandParser.NbtPathParameter); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NbtPathParameter(int i) {
-			return GetToken(mccommandParser.NbtPathParameter, i);
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPathItemContext[] nbtPathItem() {
+			return GetRuleContexts<NbtPathItemContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPathItemContext nbtPathItem(int i) {
+			return GetRuleContext<NbtPathItemContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dot() { return GetTokens(MCCommandParser.Dot); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dot(int i) {
+			return GetToken(MCCommandParser.Dot, i);
 		}
 		public NbtPathContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1180,30 +1895,28 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public NbtPathContext nbtPath() {
 		NbtPathContext _localctx = new NbtPathContext(Context, State);
-		EnterRule(_localctx, 40, RULE_nbtPath);
+		EnterRule(_localctx, 64, RULE_nbtPath);
+		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 618;
-			Match(NbtPathParameter);
-			State = 623;
+			State = 1214;
+			nbtPathItem();
+			State = 1219;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,5,Context);
-			while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1+1 ) {
-					{
-					{
-					State = 619;
-					Match(T__2);
-					State = 620;
-					Match(NbtPathParameter);
-					}
-					} 
+			_la = TokenStream.LA(1);
+			while (_la==Dot) {
+				{
+				{
+				State = 1215;
+				Match(Dot);
+				State = 1216;
+				nbtPathItem();
 				}
-				State = 625;
+				}
+				State = 1221;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,5,Context);
+				_la = TokenStream.LA(1);
 			}
 			}
 		}
@@ -1219,6 +1932,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataTypeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ByteKey() { return GetToken(MCCommandParser.ByteKey, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DoubleKey() { return GetToken(MCCommandParser.DoubleKey, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FloatKey() { return GetToken(MCCommandParser.FloatKey, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IntKey() { return GetToken(MCCommandParser.IntKey, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LongKey() { return GetToken(MCCommandParser.LongKey, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ShortKey() { return GetToken(MCCommandParser.ShortKey, 0); }
 		public DataTypeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1229,14 +1948,14 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataTypeContext dataType() {
 		DataTypeContext _localctx = new DataTypeContext(Context, State);
-		EnterRule(_localctx, 42, RULE_dataType);
+		EnterRule(_localctx, 66, RULE_dataType);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 626;
+			State = 1222;
 			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 1008L) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 7751073792L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -1257,7 +1976,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public ItemIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1268,12 +1987,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemIdContext itemId() {
 		ItemIdContext _localctx = new ItemIdContext(Context, State);
-		EnterRule(_localctx, 44, RULE_itemId);
+		EnterRule(_localctx, 68, RULE_itemId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 628;
-			Match(IdString);
+			State = 1224;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1287,40 +2006,124 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class BlockIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BlockId() { return GetToken(mccommandParser.BlockId, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
-		public BlockIdContext(ParserRuleContext parent, int invokingState)
+	public partial class BlockStateContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BlockStateKey() { return GetToken(MCCommandParser.BlockStateKey, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public EqualContext equal() {
+			return GetRuleContext<EqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BlockStateValue() { return GetToken(MCCommandParser.BlockStateValue, 0); }
+		public BlockStateContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_blockId; } }
+		public override int RuleIndex { get { return RULE_blockState; } }
 	}
 
 	[RuleVersion(0)]
-	public BlockIdContext blockId() {
-		BlockIdContext _localctx = new BlockIdContext(Context, State);
-		EnterRule(_localctx, 46, RULE_blockId);
+	public BlockStateContext blockState() {
+		BlockStateContext _localctx = new BlockStateContext(Context, State);
+		EnterRule(_localctx, 70, RULE_blockState);
 		try {
-			State = 633;
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1226;
+			Match(BlockStateKey);
+			State = 1227;
+			equal();
+			State = 1228;
+			Match(BlockStateValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BlockIDContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public LeftSquareBracketContext leftSquareBracket() {
+			return GetRuleContext<LeftSquareBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BlockStateContext[] blockState() {
+			return GetRuleContexts<BlockStateContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BlockStateContext blockState(int i) {
+			return GetRuleContext<BlockStateContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RightSquareBracketContext rightSquareBracket() {
+			return GetRuleContext<RightSquareBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(MCCommandParser.Comma, i);
+		}
+		public BlockIDContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_blockID; } }
+	}
+
+	[RuleVersion(0)]
+	public BlockIDContext blockID() {
+		BlockIDContext _localctx = new BlockIDContext(Context, State);
+		EnterRule(_localctx, 72, RULE_blockID);
+		int _la;
+		try {
+			State = 1245;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__9:
+			case ResourceLocation:
 				EnterOuterAlt(_localctx, 1);
 				{
-				{
-				State = 630;
-				Match(T__9);
-				State = 631;
-				Match(BlockId);
-				}
+				State = 1230;
+				Match(ResourceLocation);
 				}
 				break;
-			case IdString:
+			case Identifier:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 632;
-				Match(IdString);
+				{
+				State = 1231;
+				Match(Identifier);
+				State = 1243;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==LeftSquareBracket) {
+					{
+					State = 1232;
+					leftSquareBracket();
+					State = 1233;
+					blockState();
+					State = 1238;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+					while (_la==Comma) {
+						{
+						{
+						State = 1234;
+						Match(Comma);
+						State = 1235;
+						blockState();
+						}
+						}
+						State = 1240;
+						ErrorHandler.Sync(this);
+						_la = TokenStream.LA(1);
+					}
+					State = 1241;
+					rightSquareBracket();
+					}
+				}
+
+				}
 				}
 				break;
 			default:
@@ -1338,39 +2141,10 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class EntityIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode EntityId() { return GetToken(mccommandParser.EntityId, 0); }
-		public EntityIdContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_entityId; } }
-	}
-
-	[RuleVersion(0)]
-	public EntityIdContext entityId() {
-		EntityIdContext _localctx = new EntityIdContext(Context, State);
-		EnterRule(_localctx, 48, RULE_entityId);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 635;
-			Match(EntityId);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
 	public partial class BlockNBTContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode JsonValue() { return GetToken(mccommandParser.JsonValue, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public SNbtContext sNbt() {
+			return GetRuleContext<SNbtContext>(0);
+		}
 		public BlockNBTContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1381,12 +2155,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BlockNBTContext blockNBT() {
 		BlockNBTContext _localctx = new BlockNBTContext(Context, State);
-		EnterRule(_localctx, 50, RULE_blockNBT);
+		EnterRule(_localctx, 74, RULE_blockNBT);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 637;
-			Match(JsonValue);
+			State = 1247;
+			sNbt();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1401,8 +2175,8 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EntityNBTContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public JsonValueContext jsonValue() {
-			return GetRuleContext<JsonValueContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SNbtContext sNbt() {
+			return GetRuleContext<SNbtContext>(0);
 		}
 		public EntityNBTContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1414,12 +2188,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EntityNBTContext entityNBT() {
 		EntityNBTContext _localctx = new EntityNBTContext(Context, State);
-		EnterRule(_localctx, 52, RULE_entityNBT);
+		EnterRule(_localctx, 76, RULE_entityNBT);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 639;
-			jsonValue();
+			State = 1249;
+			sNbt();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1434,7 +2208,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TargetObjectiveContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public TargetObjectiveContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1445,12 +2219,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TargetObjectiveContext targetObjective() {
 		TargetObjectiveContext _localctx = new TargetObjectiveContext(Context, State);
-		EnterRule(_localctx, 54, RULE_targetObjective);
+		EnterRule(_localctx, 78, RULE_targetObjective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 641;
-			Match(IdString);
+			State = 1251;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1465,7 +2239,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class StorageIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public StorageIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1476,12 +2250,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public StorageIdContext storageId() {
 		StorageIdContext _localctx = new StorageIdContext(Context, State);
-		EnterRule(_localctx, 56, RULE_storageId);
+		EnterRule(_localctx, 80, RULE_storageId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 643;
-			Match(IdString);
+			State = 1253;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1496,7 +2270,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class StorageIdStringContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public StorageIdStringContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1507,12 +2281,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public StorageIdStringContext storageIdString() {
 		StorageIdStringContext _localctx = new StorageIdStringContext(Context, State);
-		EnterRule(_localctx, 58, RULE_storageIdString);
+		EnterRule(_localctx, 82, RULE_storageIdString);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 645;
-			Match(IdString);
+			State = 1255;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1526,92 +2300,28 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class Pos3DContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinates() { return GetToken(mccommandParser.Coordinates, 0); }
-		public Pos3DContext(ParserRuleContext parent, int invokingState)
+	public partial class CoordinateXContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinate() { return GetToken(MCCommandParser.Coordinate, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public CoordinateXContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_pos3D; } }
+		public override int RuleIndex { get { return RULE_coordinateX; } }
 	}
 
 	[RuleVersion(0)]
-	public Pos3DContext pos3D() {
-		Pos3DContext _localctx = new Pos3DContext(Context, State);
-		EnterRule(_localctx, 60, RULE_pos3D);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 647;
-			Match(Coordinates);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class Pos2DContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Coordinates() { return GetTokens(mccommandParser.Coordinates); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinates(int i) {
-			return GetToken(mccommandParser.Coordinates, i);
-		}
-		public Pos2DContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_pos2D; } }
-	}
-
-	[RuleVersion(0)]
-	public Pos2DContext pos2D() {
-		Pos2DContext _localctx = new Pos2DContext(Context, State);
-		EnterRule(_localctx, 62, RULE_pos2D);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 649;
-			Match(Coordinates);
-			State = 650;
-			Match(Coordinates);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class GamemodeValuesContext : ParserRuleContext {
-		public GamemodeValuesContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_gamemodeValues; } }
-	}
-
-	[RuleVersion(0)]
-	public GamemodeValuesContext gamemodeValues() {
-		GamemodeValuesContext _localctx = new GamemodeValuesContext(Context, State);
-		EnterRule(_localctx, 64, RULE_gamemodeValues);
+	public CoordinateXContext coordinateX() {
+		CoordinateXContext _localctx = new CoordinateXContext(Context, State);
+		EnterRule(_localctx, 84, RULE_coordinateX);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 652;
+			State = 1257;
 			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 30720L) != 0)) ) {
+			if ( !(((((_la - 289)) & ~0x3f) == 0 && ((1L << (_la - 289)) & 524321L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -1631,311 +2341,524 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class SingleSelectorContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PlayerName() { return GetToken(mccommandParser.PlayerName, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SelectorParameters() { return GetToken(mccommandParser.SelectorParameters, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CloseSquareBrackets() { return GetToken(mccommandParser.CloseSquareBrackets, 0); }
-		public SingleSelectorContext(ParserRuleContext parent, int invokingState)
+	public partial class CoordinateYContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinate() { return GetToken(MCCommandParser.Coordinate, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public CoordinateYContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_singleSelector; } }
+		public override int RuleIndex { get { return RULE_coordinateY; } }
 	}
 
 	[RuleVersion(0)]
-	public SingleSelectorContext singleSelector() {
-		SingleSelectorContext _localctx = new SingleSelectorContext(Context, State);
-		EnterRule(_localctx, 66, RULE_singleSelector);
+	public CoordinateYContext coordinateY() {
+		CoordinateYContext _localctx = new CoordinateYContext(Context, State);
+		EnterRule(_localctx, 86, RULE_coordinateY);
 		int _la;
 		try {
-			int _alt;
-			State = 720;
-			ErrorHandler.Sync(this);
-			switch (TokenStream.LA(1)) {
-			case PlayerName:
-				EnterOuterAlt(_localctx, 1);
-				{
-				State = 654;
-				Match(PlayerName);
-				}
-				break;
-			case T__14:
-				EnterOuterAlt(_localctx, 2);
-				{
-				{
-				State = 655;
-				Match(T__14);
-				State = 657;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 656;
-					Match(SelectorParameters);
-					}
-				}
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1259;
+			_la = TokenStream.LA(1);
+			if ( !(((((_la - 289)) & ~0x3f) == 0 && ((1L << (_la - 289)) & 524321L) != 0)) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
 
-				}
-				}
-				break;
-			case T__15:
-				EnterOuterAlt(_localctx, 3);
-				{
-				{
-				State = 659;
-				Match(T__15);
-				State = 663;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,8,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 660;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 665;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,8,Context);
-				}
-				State = 666;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__17:
-				EnterOuterAlt(_localctx, 4);
-				{
-				{
-				State = 667;
-				Match(T__17);
-				}
-				}
-				break;
-			case T__18:
-				EnterOuterAlt(_localctx, 5);
-				{
-				{
-				State = 668;
-				Match(T__18);
-				State = 670;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 669;
-					Match(SelectorParameters);
-					}
-				}
+	public partial class CoordinateZContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinate() { return GetToken(MCCommandParser.Coordinate, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public CoordinateZContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_coordinateZ; } }
+	}
 
-				}
-				}
-				break;
-			case T__19:
-				EnterOuterAlt(_localctx, 6);
-				{
-				{
-				State = 672;
-				Match(T__19);
-				State = 676;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,10,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 673;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 678;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,10,Context);
-				}
-				State = 679;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__20:
-				EnterOuterAlt(_localctx, 7);
-				{
-				{
-				State = 680;
-				Match(T__20);
-				}
-				}
-				break;
-			case T__21:
-				EnterOuterAlt(_localctx, 8);
-				{
-				{
-				State = 681;
-				Match(T__21);
-				State = 683;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 682;
-					Match(SelectorParameters);
-					}
-				}
+	[RuleVersion(0)]
+	public CoordinateZContext coordinateZ() {
+		CoordinateZContext _localctx = new CoordinateZContext(Context, State);
+		EnterRule(_localctx, 88, RULE_coordinateZ);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1261;
+			_la = TokenStream.LA(1);
+			if ( !(((((_la - 289)) & ~0x3f) == 0 && ((1L << (_la - 289)) & 524321L) != 0)) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
 
-				}
-				}
-				break;
-			case T__22:
-				EnterOuterAlt(_localctx, 9);
-				{
-				{
-				State = 685;
-				Match(T__22);
-				State = 689;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,12,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 686;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 691;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,12,Context);
-				}
-				State = 692;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__23:
-				EnterOuterAlt(_localctx, 10);
-				{
-				{
-				State = 693;
-				Match(T__23);
-				}
-				}
-				break;
-			case T__24:
-				EnterOuterAlt(_localctx, 11);
-				{
-				{
-				State = 694;
-				Match(T__24);
-				State = 696;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 695;
-					Match(SelectorParameters);
-					}
-				}
+	public partial class Pos3DContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateXContext coordinateX() {
+			return GetRuleContext<CoordinateXContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateYContext coordinateY() {
+			return GetRuleContext<CoordinateYContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateZContext coordinateZ() {
+			return GetRuleContext<CoordinateZContext>(0);
+		}
+		public Pos3DContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_pos3D; } }
+	}
 
-				}
-				}
-				break;
-			case T__25:
-				EnterOuterAlt(_localctx, 12);
-				{
-				{
-				State = 698;
-				Match(T__25);
-				State = 702;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,14,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 699;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 704;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,14,Context);
-				}
-				State = 705;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__26:
-				EnterOuterAlt(_localctx, 13);
-				{
-				{
-				State = 706;
-				Match(T__26);
-				}
-				}
-				break;
-			case T__27:
-				EnterOuterAlt(_localctx, 14);
-				{
-				{
-				State = 707;
-				Match(T__27);
-				State = 709;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 708;
-					Match(SelectorParameters);
-					}
-				}
+	[RuleVersion(0)]
+	public Pos3DContext pos3D() {
+		Pos3DContext _localctx = new Pos3DContext(Context, State);
+		EnterRule(_localctx, 90, RULE_pos3D);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1263;
+			coordinateX();
+			State = 1264;
+			coordinateY();
+			State = 1265;
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
 
-				}
-				}
-				break;
-			case T__28:
-				EnterOuterAlt(_localctx, 15);
-				{
-				{
-				State = 711;
-				Match(T__28);
-				State = 715;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,16,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 712;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 717;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,16,Context);
-				}
-				State = 718;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__29:
-				EnterOuterAlt(_localctx, 16);
-				{
-				{
-				State = 719;
-				Match(T__29);
-				}
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
+	public partial class Pos2DContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateXContext coordinateX() {
+			return GetRuleContext<CoordinateXContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateZContext coordinateZ() {
+			return GetRuleContext<CoordinateZContext>(0);
+		}
+		public Pos2DContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_pos2D; } }
+	}
+
+	[RuleVersion(0)]
+	public Pos2DContext pos2D() {
+		Pos2DContext _localctx = new Pos2DContext(Context, State);
+		EnterRule(_localctx, 92, RULE_pos2D);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1267;
+			coordinateX();
+			State = 1268;
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GamemodeValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		public GamemodeValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_gamemodeValue; } }
+	}
+
+	[RuleVersion(0)]
+	public GamemodeValueContext gamemodeValue() {
+		GamemodeValueContext _localctx = new GamemodeValueContext(Context, State);
+		EnterRule(_localctx, 94, RULE_gamemodeValue);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1270;
+			Match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SortValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		public SortValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_sortValue; } }
+	}
+
+	[RuleVersion(0)]
+	public SortValueContext sortValue() {
+		SortValueContext _localctx = new SortValueContext(Context, State);
+		EnterRule(_localctx, 96, RULE_sortValue);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1272;
+			Match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class IdentifierContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		public IdentifierContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_identifier; } }
+	}
+
+	[RuleVersion(0)]
+	public IdentifierContext identifier() {
+		IdentifierContext _localctx = new IdentifierContext(Context, State);
+		EnterRule(_localctx, 98, RULE_identifier);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1274;
+			Match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ViewRotationValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PositiveDouble() { return GetToken(MCCommandParser.PositiveDouble, 0); }
+		public ViewRotationValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_viewRotationValue; } }
+	}
+
+	[RuleVersion(0)]
+	public ViewRotationValueContext viewRotationValue() {
+		ViewRotationValueContext _localctx = new ViewRotationValueContext(Context, State);
+		EnterRule(_localctx, 100, RULE_viewRotationValue);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1276;
+			_la = TokenStream.LA(1);
+			if ( !(_la==PositiveDouble || _la==Double) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DoubleIntervalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DoubleInterval() { return GetToken(MCCommandParser.DoubleInterval, 0); }
+		public DoubleIntervalContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_doubleInterval; } }
+	}
+
+	[RuleVersion(0)]
+	public DoubleIntervalContext doubleInterval() {
+		DoubleIntervalContext _localctx = new DoubleIntervalContext(Context, State);
+		EnterRule(_localctx, 102, RULE_doubleInterval);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1278;
+			Match(DoubleInterval);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PositiveDoubleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PositiveDouble() { return GetToken(MCCommandParser.PositiveDouble, 0); }
+		public PositiveDoubleContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_positiveDouble; } }
+	}
+
+	[RuleVersion(0)]
+	public PositiveDoubleContext positiveDouble() {
+		PositiveDoubleContext _localctx = new PositiveDoubleContext(Context, State);
+		EnterRule(_localctx, 104, RULE_positiveDouble);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1280;
+			Match(PositiveDouble);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PositiveDoubleIntervalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PositiveDoubleInterval() { return GetToken(MCCommandParser.PositiveDoubleInterval, 0); }
+		public PositiveDoubleIntervalContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_positiveDoubleInterval; } }
+	}
+
+	[RuleVersion(0)]
+	public PositiveDoubleIntervalContext positiveDoubleInterval() {
+		PositiveDoubleIntervalContext _localctx = new PositiveDoubleIntervalContext(Context, State);
+		EnterRule(_localctx, 106, RULE_positiveDoubleInterval);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1282;
+			Match(PositiveDoubleInterval);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LevelValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public LevelValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_levelValue; } }
+	}
+
+	[RuleVersion(0)]
+	public LevelValueContext levelValue() {
+		LevelValueContext _localctx = new LevelValueContext(Context, State);
+		EnterRule(_localctx, 108, RULE_levelValue);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1284;
+			Match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NameValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String() { return GetToken(MCCommandParser.String, 0); }
+		public NameValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_nameValue; } }
+	}
+
+	[RuleVersion(0)]
+	public NameValueContext nameValue() {
+		NameValueContext _localctx = new NameValueContext(Context, State);
+		EnterRule(_localctx, 110, RULE_nameValue);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1286;
+			_la = TokenStream.LA(1);
+			if ( !(_la==Identifier || _la==String) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EntityTypeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
+		public EntityTypeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_entityType; } }
+	}
+
+	[RuleVersion(0)]
+	public EntityTypeContext entityType() {
+		EntityTypeContext _localctx = new EntityTypeContext(Context, State);
+		EnterRule(_localctx, 112, RULE_entityType);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1288;
+			_la = TokenStream.LA(1);
+			if ( !(_la==Identifier || _la==ResourceLocation) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PredicateValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
+		public PredicateValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_predicateValue; } }
+	}
+
+	[RuleVersion(0)]
+	public PredicateValueContext predicateValue() {
+		PredicateValueContext _localctx = new PredicateValueContext(Context, State);
+		EnterRule(_localctx, 114, RULE_predicateValue);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1290;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1950,9 +2873,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SelectorContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PlayerName() { return GetToken(mccommandParser.PlayerName, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SelectorParameters() { return GetToken(mccommandParser.SelectorParameters, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CloseSquareBrackets() { return GetToken(mccommandParser.CloseSquareBrackets, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public IdentifierContext identifier() {
+			return GetRuleContext<IdentifierContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AtCharContext atChar() {
+			return GetRuleContext<AtCharContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorNameContext selectorName() {
+			return GetRuleContext<SelectorNameContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorParameterContext selectorParameter() {
+			return GetRuleContext<SelectorParameterContext>(0);
+		}
 		public SelectorContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1963,247 +2895,37 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SelectorContext selector() {
 		SelectorContext _localctx = new SelectorContext(Context, State);
-		EnterRule(_localctx, 68, RULE_selector);
+		EnterRule(_localctx, 116, RULE_selector);
 		int _la;
 		try {
-			int _alt;
-			State = 783;
+			State = 1298;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case PlayerName:
+			case Identifier:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 722;
-				Match(PlayerName);
+				State = 1292;
+				identifier();
 				}
 				break;
-			case T__14:
+			case AtChar:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 723;
-				Match(T__14);
-				State = 725;
+				State = 1293;
+				atChar();
+				State = 1294;
+				selectorName();
+				State = 1296;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
+				if (_la==SquareBrackets || _la==LeftSquareBracket) {
 					{
-					State = 724;
-					Match(SelectorParameters);
+					State = 1295;
+					selectorParameter();
 					}
 				}
 
-				}
-				}
-				break;
-			case T__15:
-				EnterOuterAlt(_localctx, 3);
-				{
-				{
-				State = 727;
-				Match(T__15);
-				State = 731;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,19,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 728;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 733;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,19,Context);
-				}
-				State = 734;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__18:
-				EnterOuterAlt(_localctx, 4);
-				{
-				{
-				State = 735;
-				Match(T__18);
-				State = 737;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 736;
-					Match(SelectorParameters);
-					}
-				}
-
-				}
-				}
-				break;
-			case T__19:
-				EnterOuterAlt(_localctx, 5);
-				{
-				{
-				State = 739;
-				Match(T__19);
-				State = 743;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,21,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 740;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 745;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,21,Context);
-				}
-				State = 746;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__21:
-				EnterOuterAlt(_localctx, 6);
-				{
-				{
-				State = 747;
-				Match(T__21);
-				State = 749;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 748;
-					Match(SelectorParameters);
-					}
-				}
-
-				}
-				}
-				break;
-			case T__22:
-				EnterOuterAlt(_localctx, 7);
-				{
-				{
-				State = 751;
-				Match(T__22);
-				State = 755;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,23,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 752;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 757;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,23,Context);
-				}
-				State = 758;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__24:
-				EnterOuterAlt(_localctx, 8);
-				{
-				{
-				State = 759;
-				Match(T__24);
-				State = 761;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 760;
-					Match(SelectorParameters);
-					}
-				}
-
-				}
-				}
-				break;
-			case T__25:
-				EnterOuterAlt(_localctx, 9);
-				{
-				{
-				State = 763;
-				Match(T__25);
-				State = 767;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,25,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 764;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 769;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,25,Context);
-				}
-				State = 770;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__27:
-				EnterOuterAlt(_localctx, 10);
-				{
-				{
-				State = 771;
-				Match(T__27);
-				State = 773;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 772;
-					Match(SelectorParameters);
-					}
-				}
-
-				}
-				}
-				break;
-			case T__28:
-				EnterOuterAlt(_localctx, 11);
-				{
-				{
-				State = 775;
-				Match(T__28);
-				State = 779;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,27,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 776;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 781;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,27,Context);
-				}
-				State = 782;
-				Match(CloseSquareBrackets);
 				}
 				}
 				break;
@@ -2222,306 +2944,801 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class OptionalSelectorContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PlayerName() { return GetToken(mccommandParser.PlayerName, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SelectorParameters() { return GetToken(mccommandParser.SelectorParameters, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CloseSquareBrackets() { return GetToken(mccommandParser.CloseSquareBrackets, 0); }
-		public OptionalSelectorContext(ParserRuleContext parent, int invokingState)
+	public partial class SelectorNameContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SelectorName() { return GetToken(MCCommandParser.SelectorName, 0); }
+		public SelectorNameContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_optionalSelector; } }
+		public override int RuleIndex { get { return RULE_selectorName; } }
 	}
 
 	[RuleVersion(0)]
-	public OptionalSelectorContext optionalSelector() {
-		OptionalSelectorContext _localctx = new OptionalSelectorContext(Context, State);
-		EnterRule(_localctx, 70, RULE_optionalSelector);
+	public SelectorNameContext selectorName() {
+		SelectorNameContext _localctx = new SelectorNameContext(Context, State);
+		EnterRule(_localctx, 118, RULE_selectorName);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1300;
+			Match(SelectorName);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SelectorParameterContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SquareBrackets() { return GetToken(MCCommandParser.SquareBrackets, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public LeftSquareBracketContext leftSquareBracket() {
+			return GetRuleContext<LeftSquareBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RightSquareBracketContext rightSquareBracket() {
+			return GetRuleContext<RightSquareBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ParameterContext[] parameter() {
+			return GetRuleContexts<ParameterContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ParameterContext parameter(int i) {
+			return GetRuleContext<ParameterContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(MCCommandParser.Comma, i);
+		}
+		public SelectorParameterContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_selectorParameter; } }
+	}
+
+	[RuleVersion(0)]
+	public SelectorParameterContext selectorParameter() {
+		SelectorParameterContext _localctx = new SelectorParameterContext(Context, State);
+		EnterRule(_localctx, 120, RULE_selectorParameter);
 		int _la;
 		try {
-			int _alt;
-			State = 851;
+			State = 1316;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case PlayerName:
+			case SquareBrackets:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 785;
-				Match(PlayerName);
+				State = 1302;
+				Match(SquareBrackets);
 				}
 				break;
-			case T__14:
+			case LeftSquareBracket:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 786;
-				Match(T__14);
-				State = 788;
+				State = 1303;
+				leftSquareBracket();
+				State = 1312;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
+				if (((((_la - 35)) & ~0x3f) == 0 && ((1L << (_la - 35)) & 4611686018964260859L) != 0) || _la==Name || _la==Predicate || _la==Distance) {
 					{
-					State = 787;
-					Match(SelectorParameters);
+					State = 1304;
+					parameter();
+					State = 1309;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+					while (_la==Comma) {
+						{
+						{
+						State = 1305;
+						Match(Comma);
+						State = 1306;
+						parameter();
+						}
+						}
+						State = 1311;
+						ErrorHandler.Sync(this);
+						_la = TokenStream.LA(1);
+					}
 					}
 				}
 
+				State = 1314;
+				rightSquareBracket();
 				}
 				}
 				break;
-			case T__15:
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ScorePathContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		public ScorePathContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_scorePath; } }
+	}
+
+	[RuleVersion(0)]
+	public ScorePathContext scorePath() {
+		ScorePathContext _localctx = new ScorePathContext(Context, State);
+		EnterRule(_localctx, 122, RULE_scorePath);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1318;
+			Match(Identifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ScoreParameterContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ScorePathContext scorePath() {
+			return GetRuleContext<ScorePathContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EqualContext equal() {
+			return GetRuleContext<EqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntIntervalContext intInterval() {
+			return GetRuleContext<IntIntervalContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ExclamationMarkContext exclamationMark() {
+			return GetRuleContext<ExclamationMarkContext>(0);
+		}
+		public ScoreParameterContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_scoreParameter; } }
+	}
+
+	[RuleVersion(0)]
+	public ScoreParameterContext scoreParameter() {
+		ScoreParameterContext _localctx = new ScoreParameterContext(Context, State);
+		EnterRule(_localctx, 124, RULE_scoreParameter);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1320;
+			scorePath();
+			State = 1321;
+			equal();
+			State = 1323;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==ExclamationMark) {
+				{
+				State = 1322;
+				exclamationMark();
+				}
+			}
+
+			State = 1327;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Integer:
+				{
+				State = 1325;
+				integer();
+				}
+				break;
+			case IntInterval:
+				{
+				State = 1326;
+				intInterval();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ScoresValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CurlyBrackets() { return GetToken(MCCommandParser.CurlyBrackets, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public LeftCurlyBracketContext leftCurlyBracket() {
+			return GetRuleContext<LeftCurlyBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RightCurlyBracketContext rightCurlyBracket() {
+			return GetRuleContext<RightCurlyBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ScoreParameterContext[] scoreParameter() {
+			return GetRuleContexts<ScoreParameterContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ScoreParameterContext scoreParameter(int i) {
+			return GetRuleContext<ScoreParameterContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(MCCommandParser.Comma, i);
+		}
+		public ScoresValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_scoresValue; } }
+	}
+
+	[RuleVersion(0)]
+	public ScoresValueContext scoresValue() {
+		ScoresValueContext _localctx = new ScoresValueContext(Context, State);
+		EnterRule(_localctx, 126, RULE_scoresValue);
+		int _la;
+		try {
+			State = 1343;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case CurlyBrackets:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 1329;
+				Match(CurlyBrackets);
+				}
+				break;
+			case LeftCurlyBracket:
+				EnterOuterAlt(_localctx, 2);
+				{
+				{
+				State = 1330;
+				leftCurlyBracket();
+				State = 1339;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Identifier) {
+					{
+					State = 1331;
+					scoreParameter();
+					State = 1336;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+					while (_la==Comma) {
+						{
+						{
+						State = 1332;
+						Match(Comma);
+						State = 1333;
+						scoreParameter();
+						}
+						}
+						State = 1338;
+						ErrorHandler.Sync(this);
+						_la = TokenStream.LA(1);
+					}
+					}
+				}
+
+				State = 1341;
+				rightCurlyBracket();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ParameterContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AxeKeyContext axeKey() {
+			return GetRuleContext<AxeKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EqualContext equal() {
+			return GetRuleContext<EqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AxeValueContext axeValue() {
+			return GetRuleContext<AxeValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AxeLengthKeyContext axeLengthKey() {
+			return GetRuleContext<AxeLengthKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PositiveDoubleContext positiveDouble() {
+			return GetRuleContext<PositiveDoubleContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ViewRotationKeyContext viewRotationKey() {
+			return GetRuleContext<ViewRotationKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ViewRotationValueContext viewRotationValue() {
+			return GetRuleContext<ViewRotationValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DoubleIntervalContext doubleInterval() {
+			return GetRuleContext<DoubleIntervalContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DistanceContext distance() {
+			return GetRuleContext<DistanceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PositiveDoubleIntervalContext positiveDoubleInterval() {
+			return GetRuleContext<PositiveDoubleIntervalContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntIntervalContext intInterval() {
+			return GetRuleContext<IntIntervalContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DoubleContext @double() {
+			return GetRuleContext<DoubleContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LevelContext level() {
+			return GetRuleContext<LevelContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LevelValueContext levelValue() {
+			return GetRuleContext<LevelValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GamemodeKeyContext gamemodeKey() {
+			return GetRuleContext<GamemodeKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GamemodeValueContext gamemodeValue() {
+			return GetRuleContext<GamemodeValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ExclamationMarkContext exclamationMark() {
+			return GetRuleContext<ExclamationMarkContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AdvancementKeyContext advancementKey() {
+			return GetRuleContext<AdvancementKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AdvancementValueContext advancementValue() {
+			return GetRuleContext<AdvancementValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ScoreKeyContext scoreKey() {
+			return GetRuleContext<ScoreKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ScoresValueContext scoresValue() {
+			return GetRuleContext<ScoresValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LimitContext limit() {
+			return GetRuleContext<LimitContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TeamKeyContext teamKey() {
+			return GetRuleContext<TeamKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TeamNameContext teamName() {
+			return GetRuleContext<TeamNameContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TypeKeyContext typeKey() {
+			return GetRuleContext<TypeKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityTypeContext entityType() {
+			return GetRuleContext<EntityTypeContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NameContext name() {
+			return GetRuleContext<NameContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NameValueContext nameValue() {
+			return GetRuleContext<NameValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PredicateContext predicate() {
+			return GetRuleContext<PredicateContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PredicateValueContext predicateValue() {
+			return GetRuleContext<PredicateValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NbtContext nbt() {
+			return GetRuleContext<NbtContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SNbtContext sNbt() {
+			return GetRuleContext<SNbtContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SortKeyContext sortKey() {
+			return GetRuleContext<SortKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SortValueContext sortValue() {
+			return GetRuleContext<SortValueContext>(0);
+		}
+		public ParameterContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_parameter; } }
+	}
+
+	[RuleVersion(0)]
+	public ParameterContext parameter() {
+		ParameterContext _localctx = new ParameterContext(Context, State);
+		EnterRule(_localctx, 128, RULE_parameter);
+		int _la;
+		try {
+			State = 1436;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case AxeKey:
+				EnterOuterAlt(_localctx, 1);
+				{
+				{
+				State = 1345;
+				axeKey();
+				State = 1346;
+				equal();
+				State = 1347;
+				axeValue();
+				}
+				}
+				break;
+			case AxeLengthKey:
+				EnterOuterAlt(_localctx, 2);
+				{
+				{
+				State = 1349;
+				axeLengthKey();
+				State = 1350;
+				equal();
+				State = 1351;
+				positiveDouble();
+				}
+				}
+				break;
+			case ViewRotationKey:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 790;
-				Match(T__15);
-				State = 794;
+				State = 1353;
+				viewRotationKey();
+				State = 1354;
+				equal();
+				State = 1357;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,30,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 791;
-						Match(T__16);
-						}
-						} 
+				switch (TokenStream.LA(1)) {
+				case PositiveDouble:
+				case Double:
+					{
+					State = 1355;
+					viewRotationValue();
 					}
-					State = 796;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,30,Context);
+					break;
+				case DoubleInterval:
+					{
+					State = 1356;
+					doubleInterval();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				State = 797;
-				Match(CloseSquareBrackets);
 				}
 				}
 				break;
-			case T__17:
+			case Distance:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 798;
-				Match(T__17);
+				State = 1359;
+				distance();
+				State = 1360;
+				equal();
+				State = 1367;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case PositiveDouble:
+					{
+					State = 1361;
+					positiveDouble();
+					}
+					break;
+				case PositiveDoubleInterval:
+					{
+					State = 1362;
+					positiveDoubleInterval();
+					}
+					break;
+				case Integer:
+					{
+					State = 1363;
+					integer();
+					}
+					break;
+				case IntInterval:
+					{
+					State = 1364;
+					intInterval();
+					}
+					break;
+				case Double:
+					{
+					State = 1365;
+					@double();
+					}
+					break;
+				case DoubleInterval:
+					{
+					State = 1366;
+					doubleInterval();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
 				}
 				}
 				break;
-			case T__18:
+			case Level:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 799;
-				Match(T__18);
-				State = 801;
+				State = 1369;
+				level();
+				State = 1370;
+				equal();
+				State = 1373;
 				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
+				switch (TokenStream.LA(1)) {
+				case Integer:
 					{
-					State = 800;
-					Match(SelectorParameters);
+					State = 1371;
+					levelValue();
 					}
+					break;
+				case IntInterval:
+					{
+					State = 1372;
+					intInterval();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-
 				}
 				}
 				break;
-			case T__19:
+			case GamemodeKey:
 				EnterOuterAlt(_localctx, 6);
 				{
 				{
-				State = 803;
-				Match(T__19);
-				State = 807;
+				State = 1375;
+				gamemodeKey();
+				State = 1376;
+				equal();
+				State = 1378;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,32,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 804;
-						Match(T__16);
-						}
-						} 
+				_la = TokenStream.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					State = 1377;
+					exclamationMark();
 					}
-					State = 809;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,32,Context);
 				}
-				State = 810;
-				Match(CloseSquareBrackets);
+
+				State = 1380;
+				gamemodeValue();
 				}
 				}
 				break;
-			case T__20:
+			case AdvancementKey:
 				EnterOuterAlt(_localctx, 7);
 				{
 				{
-				State = 811;
-				Match(T__20);
+				State = 1382;
+				advancementKey();
+				State = 1383;
+				equal();
+				State = 1384;
+				advancementValue();
 				}
 				}
 				break;
-			case T__21:
+			case ScoreKey:
 				EnterOuterAlt(_localctx, 8);
 				{
 				{
-				State = 812;
-				Match(T__21);
-				State = 814;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
-					{
-					State = 813;
-					Match(SelectorParameters);
-					}
-				}
-
+				State = 1386;
+				scoreKey();
+				State = 1387;
+				equal();
+				State = 1388;
+				scoresValue();
 				}
 				}
 				break;
-			case T__22:
+			case LimitKey:
 				EnterOuterAlt(_localctx, 9);
 				{
 				{
-				State = 816;
-				Match(T__22);
-				State = 820;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,34,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 817;
-						Match(T__16);
-						}
-						} 
-					}
-					State = 822;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,34,Context);
-				}
-				State = 823;
-				Match(CloseSquareBrackets);
+				State = 1390;
+				limit();
+				State = 1391;
+				equal();
+				State = 1392;
+				integer();
 				}
 				}
 				break;
-			case T__23:
+			case TeamKey:
 				EnterOuterAlt(_localctx, 10);
 				{
 				{
-				State = 824;
-				Match(T__23);
+				State = 1394;
+				teamKey();
+				State = 1395;
+				equal();
+				State = 1397;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					State = 1396;
+					exclamationMark();
+					}
+				}
+
+				State = 1400;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Identifier) {
+					{
+					State = 1399;
+					teamName();
+					}
+				}
+
 				}
 				}
 				break;
-			case T__24:
+			case TypeKey:
 				EnterOuterAlt(_localctx, 11);
 				{
 				{
-				State = 825;
-				Match(T__24);
-				State = 827;
+				State = 1402;
+				typeKey();
+				State = 1403;
+				equal();
+				State = 1405;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
+				if (_la==ExclamationMark) {
 					{
-					State = 826;
-					Match(SelectorParameters);
+					State = 1404;
+					exclamationMark();
 					}
 				}
 
+				State = 1407;
+				entityType();
 				}
 				}
 				break;
-			case T__25:
+			case Name:
 				EnterOuterAlt(_localctx, 12);
 				{
 				{
-				State = 829;
-				Match(T__25);
-				State = 833;
+				State = 1409;
+				name();
+				State = 1410;
+				equal();
+				State = 1412;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,36,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 830;
-						Match(T__16);
-						}
-						} 
+				_la = TokenStream.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					State = 1411;
+					exclamationMark();
 					}
-					State = 835;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,36,Context);
 				}
-				State = 836;
-				Match(CloseSquareBrackets);
+
+				State = 1414;
+				nameValue();
 				}
 				}
 				break;
-			case T__26:
+			case Predicate:
 				EnterOuterAlt(_localctx, 13);
 				{
 				{
-				State = 837;
-				Match(T__26);
+				State = 1416;
+				predicate();
+				State = 1417;
+				equal();
+				State = 1419;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					State = 1418;
+					exclamationMark();
+					}
+				}
+
+				State = 1421;
+				predicateValue();
 				}
 				}
 				break;
-			case T__27:
+			case NBT:
 				EnterOuterAlt(_localctx, 14);
 				{
 				{
-				State = 838;
-				Match(T__27);
-				State = 840;
+				State = 1423;
+				nbt();
+				State = 1424;
+				equal();
+				State = 1426;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==SelectorParameters) {
+				if (_la==ExclamationMark) {
 					{
-					State = 839;
-					Match(SelectorParameters);
+					State = 1425;
+					exclamationMark();
+					}
+				}
+
+				State = 1429;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==CurlyBrackets || _la==LeftCurlyBracket) {
+					{
+					State = 1428;
+					sNbt();
 					}
 				}
 
 				}
 				}
 				break;
-			case T__28:
+			case SortKey:
 				EnterOuterAlt(_localctx, 15);
 				{
 				{
-				State = 842;
-				Match(T__28);
-				State = 846;
+				State = 1431;
+				sortKey();
+				State = 1432;
+				equal();
+				State = 1434;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,38,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 843;
-						Match(T__16);
-						}
-						} 
+				_la = TokenStream.LA(1);
+				if (_la==Identifier) {
+					{
+					State = 1433;
+					sortValue();
 					}
-					State = 848;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,38,Context);
 				}
-				State = 849;
-				Match(CloseSquareBrackets);
-				}
-				}
-				break;
-			case T__29:
-				EnterOuterAlt(_localctx, 16);
-				{
-				{
-				State = 850;
-				Match(T__29);
+
 				}
 				}
 				break;
@@ -2746,463 +3963,463 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CommandsContext commands() {
 		CommandsContext _localctx = new CommandsContext(Context, State);
-		EnterRule(_localctx, 72, RULE_commands);
+		EnterRule(_localctx, 130, RULE_commands);
 		try {
-			State = 918;
+			State = 1503;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__30:
+			case AdvancementKey:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 853;
+				State = 1438;
 				advancementRadical();
 				}
 				break;
-			case T__38:
+			case AttributeKey:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 854;
+				State = 1439;
 				attributeRadical();
 				}
 				break;
-			case T__48:
+			case BossbarKey:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 855;
+				State = 1440;
 				bossbarRadical();
 				}
 				break;
-			case T__56:
+			case ClearKey:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 856;
+				State = 1441;
 				clearRadical();
 				}
 				break;
-			case T__57:
+			case CloneKey:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 857;
+				State = 1442;
 				cloneRadical();
 				}
 				break;
-			case T__65:
+			case DamageKey:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 858;
+				State = 1443;
 				damageRadical();
 				}
 				break;
-			case T__68:
+			case DataKey:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 859;
+				State = 1444;
 				dataRadical();
 				}
 				break;
-			case T__78:
+			case DatapackKey:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 860;
+				State = 1445;
 				datapackRadical();
 				}
 				break;
-			case T__86:
+			case DebugKey:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 861;
+				State = 1446;
 				debugRadical();
 				}
 				break;
-			case T__90:
+			case DefaultgamemodeKey:
 				EnterOuterAlt(_localctx, 10);
 				{
-				State = 862;
+				State = 1447;
 				defaultgamemodeRadical();
 				}
 				break;
-			case T__91:
+			case DifficultyKey:
 				EnterOuterAlt(_localctx, 11);
 				{
-				State = 863;
+				State = 1448;
 				difficultyRadical();
 				}
 				break;
-			case T__95:
+			case EffectKey:
 				EnterOuterAlt(_localctx, 12);
 				{
-				State = 864;
+				State = 1449;
 				effectRadical();
 				}
 				break;
-			case T__98:
+			case EnchantKey:
 				EnterOuterAlt(_localctx, 13);
 				{
-				State = 865;
+				State = 1450;
 				enchantRadical();
 				}
 				break;
-			case T__99:
+			case ExecuteKey:
 				EnterOuterAlt(_localctx, 14);
 				{
-				State = 866;
+				State = 1451;
 				executeRadical();
 				}
 				break;
-			case T__141:
+			case ExperienceKey:
 				EnterOuterAlt(_localctx, 15);
 				{
-				State = 867;
+				State = 1452;
 				experienceRadical();
 				}
 				break;
-			case T__145:
+			case FillKey:
 				EnterOuterAlt(_localctx, 16);
 				{
-				State = 868;
+				State = 1453;
 				fillRadical();
 				}
 				break;
-			case T__150:
+			case FillbiomeKey:
 				EnterOuterAlt(_localctx, 17);
 				{
-				State = 869;
+				State = 1454;
 				fillbiomeRadical();
 				}
 				break;
-			case T__151:
+			case ForceloadKey:
 				EnterOuterAlt(_localctx, 18);
 				{
-				State = 870;
+				State = 1455;
 				forceloadRadical();
 				}
 				break;
-			case T__87:
+			case FunctionKey:
 				EnterOuterAlt(_localctx, 19);
 				{
-				State = 871;
+				State = 1456;
 				functionRadical();
 				}
 				break;
-			case T__152:
+			case GamemodeKey:
 				EnterOuterAlt(_localctx, 20);
 				{
-				State = 872;
+				State = 1457;
 				gamemodeRadical();
 				}
 				break;
-			case T__153:
+			case GameruleKey:
 				EnterOuterAlt(_localctx, 21);
 				{
-				State = 873;
+				State = 1458;
 				gameruleRadical();
 				}
 				break;
-			case T__96:
+			case GiveKey:
 				EnterOuterAlt(_localctx, 22);
 				{
-				State = 874;
+				State = 1459;
 				giveRadical();
 				}
 				break;
-			case T__154:
+			case HelpKey:
 				EnterOuterAlt(_localctx, 23);
 				{
-				State = 875;
+				State = 1460;
 				helpRadical();
 				}
 				break;
-			case T__155:
+			case ItemKey:
 				EnterOuterAlt(_localctx, 24);
 				{
-				State = 876;
+				State = 1461;
 				itemRadical();
 				}
 				break;
-			case T__157:
+			case JfrKey:
 				EnterOuterAlt(_localctx, 25);
 				{
-				State = 877;
+				State = 1462;
 				jfrRadical();
 				}
 				break;
-			case T__158:
+			case KickKey:
 				EnterOuterAlt(_localctx, 26);
 				{
-				State = 878;
+				State = 1463;
 				kickRadical();
 				}
 				break;
-			case T__159:
+			case KillKey:
 				EnterOuterAlt(_localctx, 27);
 				{
-				State = 879;
+				State = 1464;
 				killRadical();
 				}
 				break;
-			case T__49:
+			case ListKey:
 				EnterOuterAlt(_localctx, 28);
 				{
-				State = 880;
+				State = 1465;
 				listRadical();
 				}
 				break;
-			case T__161:
+			case LocateKey:
 				EnterOuterAlt(_localctx, 29);
 				{
-				State = 881;
+				State = 1466;
 				locateRadical();
 				}
 				break;
-			case T__164:
+			case LootKey:
 				EnterOuterAlt(_localctx, 30);
 				{
-				State = 882;
+				State = 1467;
 				lootRadical();
 				}
 				break;
-			case T__170:
+			case MeKey:
 				EnterOuterAlt(_localctx, 31);
 				{
-				State = 883;
+				State = 1468;
 				meRadical();
 				}
 				break;
-			case T__171:
+			case MsgKey:
 				EnterOuterAlt(_localctx, 32);
 				{
-				State = 884;
+				State = 1469;
 				msgRadical();
 				}
 				break;
-			case T__172:
+			case ParticleKey:
 				EnterOuterAlt(_localctx, 33);
 				{
-				State = 885;
+				State = 1470;
 				particleRadical();
 				}
 				break;
-			case T__173:
+			case PlaceKey:
 				EnterOuterAlt(_localctx, 34);
 				{
-				State = 886;
+				State = 1471;
 				placeRadical();
 				}
 				break;
-			case T__183:
+			case PlaysoundKey:
 				EnterOuterAlt(_localctx, 35);
 				{
-				State = 887;
+				State = 1472;
 				playsoundRadical();
 				}
 				break;
-			case T__193:
+			case PublishKey:
 				EnterOuterAlt(_localctx, 36);
 				{
-				State = 888;
+				State = 1473;
 				publishRadical();
 				}
 				break;
-			case T__194:
+			case RecipeKey:
 				EnterOuterAlt(_localctx, 37);
 				{
-				State = 889;
+				State = 1474;
 				recipeRadical();
 				}
 				break;
-			case T__196:
+			case ReloadKey:
 				EnterOuterAlt(_localctx, 38);
 				{
-				State = 890;
+				State = 1475;
 				reloadRadical();
 				}
 				break;
-			case T__197:
+			case ReturnKey:
 				EnterOuterAlt(_localctx, 39);
 				{
-				State = 891;
+				State = 1476;
 				returnRadical();
 				}
 				break;
-			case T__198:
+			case RideKey:
 				EnterOuterAlt(_localctx, 40);
 				{
-				State = 892;
+				State = 1477;
 				rideRadical();
 				}
 				break;
-			case T__201:
+			case SayKey:
 				EnterOuterAlt(_localctx, 41);
 				{
-				State = 893;
+				State = 1478;
 				sayRadical();
 				}
 				break;
-			case T__202:
+			case ScheduleKey:
 				EnterOuterAlt(_localctx, 42);
 				{
-				State = 894;
+				State = 1479;
 				scheduleRadical();
 				}
 				break;
-			case T__203:
+			case ScoreboardKey:
 				EnterOuterAlt(_localctx, 43);
 				{
-				State = 895;
+				State = 1480;
 				scoreboardRadical();
 				}
 				break;
-			case T__219:
+			case SeedKey:
 				EnterOuterAlt(_localctx, 44);
 				{
-				State = 896;
+				State = 1481;
 				seedRadical();
 				}
 				break;
-			case T__220:
+			case SetblockKey:
 				EnterOuterAlt(_localctx, 45);
 				{
-				State = 897;
+				State = 1482;
 				setblockRadical();
 				}
 				break;
-			case T__221:
+			case SetworldspawnKey:
 				EnterOuterAlt(_localctx, 46);
 				{
-				State = 898;
+				State = 1483;
 				setworldspawnRadical();
 				}
 				break;
-			case T__222:
+			case SpawnpointKey:
 				EnterOuterAlt(_localctx, 47);
 				{
-				State = 899;
+				State = 1484;
 				spawnpointRadical();
 				}
 				break;
-			case T__223:
+			case SpectateKey:
 				EnterOuterAlt(_localctx, 48);
 				{
-				State = 900;
+				State = 1485;
 				spectateRadical();
 				}
 				break;
-			case T__224:
+			case SpreadplayersKey:
 				EnterOuterAlt(_localctx, 49);
 				{
-				State = 901;
+				State = 1486;
 				spreadplayersRadical();
 				}
 				break;
-			case T__228:
+			case StopsoundKey:
 				EnterOuterAlt(_localctx, 50);
 				{
-				State = 902;
+				State = 1487;
 				stopsoundRadical();
 				}
 				break;
-			case T__140:
+			case SummonKey:
 				EnterOuterAlt(_localctx, 51);
 				{
-				State = 903;
+				State = 1488;
 				summonRadical();
 				}
 				break;
-			case T__230:
+			case TagKey:
 				EnterOuterAlt(_localctx, 52);
 				{
-				State = 904;
+				State = 1489;
 				tagRadical();
 				}
 				break;
-			case T__231:
+			case TeamKey:
 				EnterOuterAlt(_localctx, 53);
 				{
-				State = 905;
+				State = 1490;
 				teamRadical();
 				}
 				break;
-			case T__249:
+			case TeammsgKey:
 				EnterOuterAlt(_localctx, 54);
 				{
-				State = 906;
+				State = 1491;
 				teammsgRadical();
 				}
 				break;
-			case T__250:
+			case TeleportKey:
 				EnterOuterAlt(_localctx, 55);
 				{
-				State = 907;
+				State = 1492;
 				teleportRadical();
 				}
 				break;
-			case T__251:
+			case TellKey:
 				EnterOuterAlt(_localctx, 56);
 				{
-				State = 908;
+				State = 1493;
 				tellRadical();
 				}
 				break;
-			case T__252:
+			case TellrawKey:
 				EnterOuterAlt(_localctx, 57);
 				{
-				State = 909;
+				State = 1494;
 				tellrawRadical();
 				}
 				break;
-			case T__253:
+			case TimeKey:
 				EnterOuterAlt(_localctx, 58);
 				{
-				State = 910;
+				State = 1495;
 				timeRadical();
 				}
 				break;
-			case T__260:
+			case TitleKey:
 				EnterOuterAlt(_localctx, 59);
 				{
-				State = 911;
+				State = 1496;
 				titleRadical();
 				}
 				break;
-			case T__264:
+			case TmKey:
 				EnterOuterAlt(_localctx, 60);
 				{
-				State = 912;
+				State = 1497;
 				tmRadical();
 				}
 				break;
-			case T__265:
+			case TpKey:
 				EnterOuterAlt(_localctx, 61);
 				{
-				State = 913;
+				State = 1498;
 				tpRadical();
 				}
 				break;
-			case T__266:
+			case TriggerKey:
 				EnterOuterAlt(_localctx, 62);
 				{
-				State = 914;
+				State = 1499;
 				triggerRadical();
 				}
 				break;
-			case T__192:
+			case WeatherKey:
 				EnterOuterAlt(_localctx, 63);
 				{
-				State = 915;
+				State = 1500;
 				weatherRadical();
 				}
 				break;
-			case T__269:
+			case WorldborderKey:
 				EnterOuterAlt(_localctx, 64);
 				{
-				State = 916;
+				State = 1501;
 				worldborderRadical();
 				}
 				break;
-			case T__275:
+			case XpKey:
 				EnterOuterAlt(_localctx, 65);
 				{
-				State = 917;
+				State = 1502;
 				xpRadical();
 				}
 				break;
@@ -3221,15 +4438,7926 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
+	public partial class AxeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AxeKey() { return GetToken(MCCommandParser.AxeKey, 0); }
+		public AxeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_axeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public AxeKeyContext axeKey() {
+		AxeKeyContext _localctx = new AxeKeyContext(Context, State);
+		EnterRule(_localctx, 132, RULE_axeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1505;
+			Match(AxeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StarContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Star() { return GetToken(MCCommandParser.Star, 0); }
+		public StarContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_star; } }
+	}
+
+	[RuleVersion(0)]
+	public StarContext star() {
+		StarContext _localctx = new StarContext(Context, State);
+		EnterRule(_localctx, 134, RULE_star);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1507;
+			Match(Star);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AdvancementKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AdvancementKey() { return GetToken(MCCommandParser.AdvancementKey, 0); }
+		public AdvancementKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_advancementKey; } }
+	}
+
+	[RuleVersion(0)]
+	public AdvancementKeyContext advancementKey() {
+		AdvancementKeyContext _localctx = new AdvancementKeyContext(Context, State);
+		EnterRule(_localctx, 136, RULE_advancementKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1509;
+			Match(AdvancementKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AttributeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AttributeKey() { return GetToken(MCCommandParser.AttributeKey, 0); }
+		public AttributeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_attributeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public AttributeKeyContext attributeKey() {
+		AttributeKeyContext _localctx = new AttributeKeyContext(Context, State);
+		EnterRule(_localctx, 138, RULE_attributeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1511;
+			Match(AttributeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BossbarKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BossbarKey() { return GetToken(MCCommandParser.BossbarKey, 0); }
+		public BossbarKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_bossbarKey; } }
+	}
+
+	[RuleVersion(0)]
+	public BossbarKeyContext bossbarKey() {
+		BossbarKeyContext _localctx = new BossbarKeyContext(Context, State);
+		EnterRule(_localctx, 140, RULE_bossbarKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1513;
+			Match(BossbarKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ClearKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ClearKey() { return GetToken(MCCommandParser.ClearKey, 0); }
+		public ClearKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_clearKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ClearKeyContext clearKey() {
+		ClearKeyContext _localctx = new ClearKeyContext(Context, State);
+		EnterRule(_localctx, 142, RULE_clearKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1515;
+			Match(ClearKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class CloneKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CloneKey() { return GetToken(MCCommandParser.CloneKey, 0); }
+		public CloneKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_cloneKey; } }
+	}
+
+	[RuleVersion(0)]
+	public CloneKeyContext cloneKey() {
+		CloneKeyContext _localctx = new CloneKeyContext(Context, State);
+		EnterRule(_localctx, 144, RULE_cloneKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1517;
+			Match(CloneKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DamageKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DamageKey() { return GetToken(MCCommandParser.DamageKey, 0); }
+		public DamageKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_damageKey; } }
+	}
+
+	[RuleVersion(0)]
+	public DamageKeyContext damageKey() {
+		DamageKeyContext _localctx = new DamageKeyContext(Context, State);
+		EnterRule(_localctx, 146, RULE_damageKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1519;
+			Match(DamageKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DataKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DataKey() { return GetToken(MCCommandParser.DataKey, 0); }
+		public DataKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_dataKey; } }
+	}
+
+	[RuleVersion(0)]
+	public DataKeyContext dataKey() {
+		DataKeyContext _localctx = new DataKeyContext(Context, State);
+		EnterRule(_localctx, 148, RULE_dataKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1521;
+			Match(DataKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DatapackKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DatapackKey() { return GetToken(MCCommandParser.DatapackKey, 0); }
+		public DatapackKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_datapackKey; } }
+	}
+
+	[RuleVersion(0)]
+	public DatapackKeyContext datapackKey() {
+		DatapackKeyContext _localctx = new DatapackKeyContext(Context, State);
+		EnterRule(_localctx, 150, RULE_datapackKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1523;
+			Match(DatapackKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DebugKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DebugKey() { return GetToken(MCCommandParser.DebugKey, 0); }
+		public DebugKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_debugKey; } }
+	}
+
+	[RuleVersion(0)]
+	public DebugKeyContext debugKey() {
+		DebugKeyContext _localctx = new DebugKeyContext(Context, State);
+		EnterRule(_localctx, 152, RULE_debugKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1525;
+			Match(DebugKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DefaultgamemodeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DefaultgamemodeKey() { return GetToken(MCCommandParser.DefaultgamemodeKey, 0); }
+		public DefaultgamemodeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_defaultgamemodeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public DefaultgamemodeKeyContext defaultgamemodeKey() {
+		DefaultgamemodeKeyContext _localctx = new DefaultgamemodeKeyContext(Context, State);
+		EnterRule(_localctx, 154, RULE_defaultgamemodeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1527;
+			Match(DefaultgamemodeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DifficultyKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DifficultyKey() { return GetToken(MCCommandParser.DifficultyKey, 0); }
+		public DifficultyKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_difficultyKey; } }
+	}
+
+	[RuleVersion(0)]
+	public DifficultyKeyContext difficultyKey() {
+		DifficultyKeyContext _localctx = new DifficultyKeyContext(Context, State);
+		EnterRule(_localctx, 156, RULE_difficultyKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1529;
+			Match(DifficultyKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EffectKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode EffectKey() { return GetToken(MCCommandParser.EffectKey, 0); }
+		public EffectKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_effectKey; } }
+	}
+
+	[RuleVersion(0)]
+	public EffectKeyContext effectKey() {
+		EffectKeyContext _localctx = new EffectKeyContext(Context, State);
+		EnterRule(_localctx, 158, RULE_effectKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1531;
+			Match(EffectKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EnchantKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode EnchantKey() { return GetToken(MCCommandParser.EnchantKey, 0); }
+		public EnchantKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_enchantKey; } }
+	}
+
+	[RuleVersion(0)]
+	public EnchantKeyContext enchantKey() {
+		EnchantKeyContext _localctx = new EnchantKeyContext(Context, State);
+		EnterRule(_localctx, 160, RULE_enchantKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1533;
+			Match(EnchantKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ExecuteKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ExecuteKey() { return GetToken(MCCommandParser.ExecuteKey, 0); }
+		public ExecuteKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_executeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ExecuteKeyContext executeKey() {
+		ExecuteKeyContext _localctx = new ExecuteKeyContext(Context, State);
+		EnterRule(_localctx, 162, RULE_executeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1535;
+			Match(ExecuteKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ExperienceKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ExperienceKey() { return GetToken(MCCommandParser.ExperienceKey, 0); }
+		public ExperienceKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_experienceKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ExperienceKeyContext experienceKey() {
+		ExperienceKeyContext _localctx = new ExperienceKeyContext(Context, State);
+		EnterRule(_localctx, 164, RULE_experienceKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1537;
+			Match(ExperienceKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FillKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FillKey() { return GetToken(MCCommandParser.FillKey, 0); }
+		public FillKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_fillKey; } }
+	}
+
+	[RuleVersion(0)]
+	public FillKeyContext fillKey() {
+		FillKeyContext _localctx = new FillKeyContext(Context, State);
+		EnterRule(_localctx, 166, RULE_fillKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1539;
+			Match(FillKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FillbiomeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FillbiomeKey() { return GetToken(MCCommandParser.FillbiomeKey, 0); }
+		public FillbiomeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_fillbiomeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public FillbiomeKeyContext fillbiomeKey() {
+		FillbiomeKeyContext _localctx = new FillbiomeKeyContext(Context, State);
+		EnterRule(_localctx, 168, RULE_fillbiomeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1541;
+			Match(FillbiomeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ForceloadKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ForceloadKey() { return GetToken(MCCommandParser.ForceloadKey, 0); }
+		public ForceloadKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_forceloadKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ForceloadKeyContext forceloadKey() {
+		ForceloadKeyContext _localctx = new ForceloadKeyContext(Context, State);
+		EnterRule(_localctx, 170, RULE_forceloadKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1543;
+			Match(ForceloadKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FunctionKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FunctionKey() { return GetToken(MCCommandParser.FunctionKey, 0); }
+		public FunctionKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_functionKey; } }
+	}
+
+	[RuleVersion(0)]
+	public FunctionKeyContext functionKey() {
+		FunctionKeyContext _localctx = new FunctionKeyContext(Context, State);
+		EnterRule(_localctx, 172, RULE_functionKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1545;
+			Match(FunctionKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GamemodeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GamemodeKey() { return GetToken(MCCommandParser.GamemodeKey, 0); }
+		public GamemodeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_gamemodeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public GamemodeKeyContext gamemodeKey() {
+		GamemodeKeyContext _localctx = new GamemodeKeyContext(Context, State);
+		EnterRule(_localctx, 174, RULE_gamemodeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1547;
+			Match(GamemodeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GameruleKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GameruleKey() { return GetToken(MCCommandParser.GameruleKey, 0); }
+		public GameruleKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_gameruleKey; } }
+	}
+
+	[RuleVersion(0)]
+	public GameruleKeyContext gameruleKey() {
+		GameruleKeyContext _localctx = new GameruleKeyContext(Context, State);
+		EnterRule(_localctx, 176, RULE_gameruleKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1549;
+			Match(GameruleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GiveKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GiveKey() { return GetToken(MCCommandParser.GiveKey, 0); }
+		public GiveKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_giveKey; } }
+	}
+
+	[RuleVersion(0)]
+	public GiveKeyContext giveKey() {
+		GiveKeyContext _localctx = new GiveKeyContext(Context, State);
+		EnterRule(_localctx, 178, RULE_giveKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1551;
+			Match(GiveKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class HelpKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode HelpKey() { return GetToken(MCCommandParser.HelpKey, 0); }
+		public HelpKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_helpKey; } }
+	}
+
+	[RuleVersion(0)]
+	public HelpKeyContext helpKey() {
+		HelpKeyContext _localctx = new HelpKeyContext(Context, State);
+		EnterRule(_localctx, 180, RULE_helpKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1553;
+			Match(HelpKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ItemKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ItemKey() { return GetToken(MCCommandParser.ItemKey, 0); }
+		public ItemKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_itemKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ItemKeyContext itemKey() {
+		ItemKeyContext _localctx = new ItemKeyContext(Context, State);
+		EnterRule(_localctx, 182, RULE_itemKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1555;
+			Match(ItemKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class JfrKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode JfrKey() { return GetToken(MCCommandParser.JfrKey, 0); }
+		public JfrKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_jfrKey; } }
+	}
+
+	[RuleVersion(0)]
+	public JfrKeyContext jfrKey() {
+		JfrKeyContext _localctx = new JfrKeyContext(Context, State);
+		EnterRule(_localctx, 184, RULE_jfrKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1557;
+			Match(JfrKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class KickKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode KickKey() { return GetToken(MCCommandParser.KickKey, 0); }
+		public KickKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_kickKey; } }
+	}
+
+	[RuleVersion(0)]
+	public KickKeyContext kickKey() {
+		KickKeyContext _localctx = new KickKeyContext(Context, State);
+		EnterRule(_localctx, 186, RULE_kickKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1559;
+			Match(KickKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class KillKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode KillKey() { return GetToken(MCCommandParser.KillKey, 0); }
+		public KillKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_killKey; } }
+	}
+
+	[RuleVersion(0)]
+	public KillKeyContext killKey() {
+		KillKeyContext _localctx = new KillKeyContext(Context, State);
+		EnterRule(_localctx, 188, RULE_killKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1561;
+			Match(KillKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ListKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ListKey() { return GetToken(MCCommandParser.ListKey, 0); }
+		public ListKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_listKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ListKeyContext listKey() {
+		ListKeyContext _localctx = new ListKeyContext(Context, State);
+		EnterRule(_localctx, 190, RULE_listKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1563;
+			Match(ListKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LocateKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LocateKey() { return GetToken(MCCommandParser.LocateKey, 0); }
+		public LocateKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_locateKey; } }
+	}
+
+	[RuleVersion(0)]
+	public LocateKeyContext locateKey() {
+		LocateKeyContext _localctx = new LocateKeyContext(Context, State);
+		EnterRule(_localctx, 192, RULE_locateKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1565;
+			Match(LocateKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LootKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LootKey() { return GetToken(MCCommandParser.LootKey, 0); }
+		public LootKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_lootKey; } }
+	}
+
+	[RuleVersion(0)]
+	public LootKeyContext lootKey() {
+		LootKeyContext _localctx = new LootKeyContext(Context, State);
+		EnterRule(_localctx, 194, RULE_lootKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1567;
+			Match(LootKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MeKey() { return GetToken(MCCommandParser.MeKey, 0); }
+		public MeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_meKey; } }
+	}
+
+	[RuleVersion(0)]
+	public MeKeyContext meKey() {
+		MeKeyContext _localctx = new MeKeyContext(Context, State);
+		EnterRule(_localctx, 196, RULE_meKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1569;
+			Match(MeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MsgKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MsgKey() { return GetToken(MCCommandParser.MsgKey, 0); }
+		public MsgKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_msgKey; } }
+	}
+
+	[RuleVersion(0)]
+	public MsgKeyContext msgKey() {
+		MsgKeyContext _localctx = new MsgKeyContext(Context, State);
+		EnterRule(_localctx, 198, RULE_msgKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1571;
+			Match(MsgKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ParticleKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ParticleKey() { return GetToken(MCCommandParser.ParticleKey, 0); }
+		public ParticleKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_particleKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ParticleKeyContext particleKey() {
+		ParticleKeyContext _localctx = new ParticleKeyContext(Context, State);
+		EnterRule(_localctx, 200, RULE_particleKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1573;
+			Match(ParticleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PlaceKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PlaceKey() { return GetToken(MCCommandParser.PlaceKey, 0); }
+		public PlaceKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_placeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public PlaceKeyContext placeKey() {
+		PlaceKeyContext _localctx = new PlaceKeyContext(Context, State);
+		EnterRule(_localctx, 202, RULE_placeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1575;
+			Match(PlaceKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PlaysoundKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PlaysoundKey() { return GetToken(MCCommandParser.PlaysoundKey, 0); }
+		public PlaysoundKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_playsoundKey; } }
+	}
+
+	[RuleVersion(0)]
+	public PlaysoundKeyContext playsoundKey() {
+		PlaysoundKeyContext _localctx = new PlaysoundKeyContext(Context, State);
+		EnterRule(_localctx, 204, RULE_playsoundKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1577;
+			Match(PlaysoundKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PublishKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PublishKey() { return GetToken(MCCommandParser.PublishKey, 0); }
+		public PublishKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_publishKey; } }
+	}
+
+	[RuleVersion(0)]
+	public PublishKeyContext publishKey() {
+		PublishKeyContext _localctx = new PublishKeyContext(Context, State);
+		EnterRule(_localctx, 206, RULE_publishKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1579;
+			Match(PublishKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RecipeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RecipeKey() { return GetToken(MCCommandParser.RecipeKey, 0); }
+		public RecipeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_recipeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public RecipeKeyContext recipeKey() {
+		RecipeKeyContext _localctx = new RecipeKeyContext(Context, State);
+		EnterRule(_localctx, 208, RULE_recipeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1581;
+			Match(RecipeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ReloadKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ReloadKey() { return GetToken(MCCommandParser.ReloadKey, 0); }
+		public ReloadKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_reloadKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ReloadKeyContext reloadKey() {
+		ReloadKeyContext _localctx = new ReloadKeyContext(Context, State);
+		EnterRule(_localctx, 210, RULE_reloadKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1583;
+			Match(ReloadKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ReturnKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ReturnKey() { return GetToken(MCCommandParser.ReturnKey, 0); }
+		public ReturnKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_returnKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ReturnKeyContext returnKey() {
+		ReturnKeyContext _localctx = new ReturnKeyContext(Context, State);
+		EnterRule(_localctx, 212, RULE_returnKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1585;
+			Match(ReturnKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RideKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RideKey() { return GetToken(MCCommandParser.RideKey, 0); }
+		public RideKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_rideKey; } }
+	}
+
+	[RuleVersion(0)]
+	public RideKeyContext rideKey() {
+		RideKeyContext _localctx = new RideKeyContext(Context, State);
+		EnterRule(_localctx, 214, RULE_rideKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1587;
+			Match(RideKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SayKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SayKey() { return GetToken(MCCommandParser.SayKey, 0); }
+		public SayKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_sayKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SayKeyContext sayKey() {
+		SayKeyContext _localctx = new SayKeyContext(Context, State);
+		EnterRule(_localctx, 216, RULE_sayKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1589;
+			Match(SayKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ScheduleKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ScheduleKey() { return GetToken(MCCommandParser.ScheduleKey, 0); }
+		public ScheduleKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_scheduleKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ScheduleKeyContext scheduleKey() {
+		ScheduleKeyContext _localctx = new ScheduleKeyContext(Context, State);
+		EnterRule(_localctx, 218, RULE_scheduleKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1591;
+			Match(ScheduleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ScoreboardKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ScoreboardKey() { return GetToken(MCCommandParser.ScoreboardKey, 0); }
+		public ScoreboardKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_scoreboardKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ScoreboardKeyContext scoreboardKey() {
+		ScoreboardKeyContext _localctx = new ScoreboardKeyContext(Context, State);
+		EnterRule(_localctx, 220, RULE_scoreboardKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1593;
+			Match(ScoreboardKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SeedKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeedKey() { return GetToken(MCCommandParser.SeedKey, 0); }
+		public SeedKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_seedKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SeedKeyContext seedKey() {
+		SeedKeyContext _localctx = new SeedKeyContext(Context, State);
+		EnterRule(_localctx, 222, RULE_seedKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1595;
+			Match(SeedKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SetblockKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SetblockKey() { return GetToken(MCCommandParser.SetblockKey, 0); }
+		public SetblockKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_setblockKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SetblockKeyContext setblockKey() {
+		SetblockKeyContext _localctx = new SetblockKeyContext(Context, State);
+		EnterRule(_localctx, 224, RULE_setblockKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1597;
+			Match(SetblockKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SetworldspawnKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SetworldspawnKey() { return GetToken(MCCommandParser.SetworldspawnKey, 0); }
+		public SetworldspawnKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_setworldspawnKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SetworldspawnKeyContext setworldspawnKey() {
+		SetworldspawnKeyContext _localctx = new SetworldspawnKeyContext(Context, State);
+		EnterRule(_localctx, 226, RULE_setworldspawnKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1599;
+			Match(SetworldspawnKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SpawnpointKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SpawnpointKey() { return GetToken(MCCommandParser.SpawnpointKey, 0); }
+		public SpawnpointKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_spawnpointKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SpawnpointKeyContext spawnpointKey() {
+		SpawnpointKeyContext _localctx = new SpawnpointKeyContext(Context, State);
+		EnterRule(_localctx, 228, RULE_spawnpointKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1601;
+			Match(SpawnpointKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SpectateKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SpectateKey() { return GetToken(MCCommandParser.SpectateKey, 0); }
+		public SpectateKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_spectateKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SpectateKeyContext spectateKey() {
+		SpectateKeyContext _localctx = new SpectateKeyContext(Context, State);
+		EnterRule(_localctx, 230, RULE_spectateKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1603;
+			Match(SpectateKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SpreadplayersKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SpreadplayersKey() { return GetToken(MCCommandParser.SpreadplayersKey, 0); }
+		public SpreadplayersKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_spreadplayersKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SpreadplayersKeyContext spreadplayersKey() {
+		SpreadplayersKeyContext _localctx = new SpreadplayersKeyContext(Context, State);
+		EnterRule(_localctx, 232, RULE_spreadplayersKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1605;
+			Match(SpreadplayersKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StopsoundKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode StopsoundKey() { return GetToken(MCCommandParser.StopsoundKey, 0); }
+		public StopsoundKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_stopsoundKey; } }
+	}
+
+	[RuleVersion(0)]
+	public StopsoundKeyContext stopsoundKey() {
+		StopsoundKeyContext _localctx = new StopsoundKeyContext(Context, State);
+		EnterRule(_localctx, 234, RULE_stopsoundKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1607;
+			Match(StopsoundKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SummonKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SummonKey() { return GetToken(MCCommandParser.SummonKey, 0); }
+		public SummonKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_summonKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SummonKeyContext summonKey() {
+		SummonKeyContext _localctx = new SummonKeyContext(Context, State);
+		EnterRule(_localctx, 236, RULE_summonKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1609;
+			Match(SummonKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TagKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TagKey() { return GetToken(MCCommandParser.TagKey, 0); }
+		public TagKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_tagKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TagKeyContext tagKey() {
+		TagKeyContext _localctx = new TagKeyContext(Context, State);
+		EnterRule(_localctx, 238, RULE_tagKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1611;
+			Match(TagKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TeamKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TeamKey() { return GetToken(MCCommandParser.TeamKey, 0); }
+		public TeamKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_teamKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TeamKeyContext teamKey() {
+		TeamKeyContext _localctx = new TeamKeyContext(Context, State);
+		EnterRule(_localctx, 240, RULE_teamKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1613;
+			Match(TeamKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TeammsgKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TeammsgKey() { return GetToken(MCCommandParser.TeammsgKey, 0); }
+		public TeammsgKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_teammsgKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TeammsgKeyContext teammsgKey() {
+		TeammsgKeyContext _localctx = new TeammsgKeyContext(Context, State);
+		EnterRule(_localctx, 242, RULE_teammsgKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1615;
+			Match(TeammsgKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TeleportKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TeleportKey() { return GetToken(MCCommandParser.TeleportKey, 0); }
+		public TeleportKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_teleportKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TeleportKeyContext teleportKey() {
+		TeleportKeyContext _localctx = new TeleportKeyContext(Context, State);
+		EnterRule(_localctx, 244, RULE_teleportKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1617;
+			Match(TeleportKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TellKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TellKey() { return GetToken(MCCommandParser.TellKey, 0); }
+		public TellKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_tellKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TellKeyContext tellKey() {
+		TellKeyContext _localctx = new TellKeyContext(Context, State);
+		EnterRule(_localctx, 246, RULE_tellKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1619;
+			Match(TellKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TellrawKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TellrawKey() { return GetToken(MCCommandParser.TellrawKey, 0); }
+		public TellrawKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_tellrawKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TellrawKeyContext tellrawKey() {
+		TellrawKeyContext _localctx = new TellrawKeyContext(Context, State);
+		EnterRule(_localctx, 248, RULE_tellrawKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1621;
+			Match(TellrawKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TimeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TimeKey() { return GetToken(MCCommandParser.TimeKey, 0); }
+		public TimeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_timeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TimeKeyContext timeKey() {
+		TimeKeyContext _localctx = new TimeKeyContext(Context, State);
+		EnterRule(_localctx, 250, RULE_timeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1623;
+			Match(TimeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TitleKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TitleKey() { return GetToken(MCCommandParser.TitleKey, 0); }
+		public TitleKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_titleKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TitleKeyContext titleKey() {
+		TitleKeyContext _localctx = new TitleKeyContext(Context, State);
+		EnterRule(_localctx, 252, RULE_titleKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1625;
+			Match(TitleKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TmKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TmKey() { return GetToken(MCCommandParser.TmKey, 0); }
+		public TmKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_tmKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TmKeyContext tmKey() {
+		TmKeyContext _localctx = new TmKeyContext(Context, State);
+		EnterRule(_localctx, 254, RULE_tmKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1627;
+			Match(TmKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TpKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TpKey() { return GetToken(MCCommandParser.TpKey, 0); }
+		public TpKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_tpKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TpKeyContext tpKey() {
+		TpKeyContext _localctx = new TpKeyContext(Context, State);
+		EnterRule(_localctx, 256, RULE_tpKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1629;
+			Match(TpKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TriggerKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TriggerKey() { return GetToken(MCCommandParser.TriggerKey, 0); }
+		public TriggerKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_triggerKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TriggerKeyContext triggerKey() {
+		TriggerKeyContext _localctx = new TriggerKeyContext(Context, State);
+		EnterRule(_localctx, 258, RULE_triggerKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1631;
+			Match(TriggerKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class WeatherKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode WeatherKey() { return GetToken(MCCommandParser.WeatherKey, 0); }
+		public WeatherKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_weatherKey; } }
+	}
+
+	[RuleVersion(0)]
+	public WeatherKeyContext weatherKey() {
+		WeatherKeyContext _localctx = new WeatherKeyContext(Context, State);
+		EnterRule(_localctx, 260, RULE_weatherKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1633;
+			Match(WeatherKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class WorldborderKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode WorldborderKey() { return GetToken(MCCommandParser.WorldborderKey, 0); }
+		public WorldborderKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_worldborderKey; } }
+	}
+
+	[RuleVersion(0)]
+	public WorldborderKeyContext worldborderKey() {
+		WorldborderKeyContext _localctx = new WorldborderKeyContext(Context, State);
+		EnterRule(_localctx, 262, RULE_worldborderKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1635;
+			Match(WorldborderKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class XpKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode XpKey() { return GetToken(MCCommandParser.XpKey, 0); }
+		public XpKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_xpKey; } }
+	}
+
+	[RuleVersion(0)]
+	public XpKeyContext xpKey() {
+		XpKeyContext _localctx = new XpKeyContext(Context, State);
+		EnterRule(_localctx, 264, RULE_xpKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1637;
+			Match(XpKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AxeLengthKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AxeLengthKey() { return GetToken(MCCommandParser.AxeLengthKey, 0); }
+		public AxeLengthKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_axeLengthKey; } }
+	}
+
+	[RuleVersion(0)]
+	public AxeLengthKeyContext axeLengthKey() {
+		AxeLengthKeyContext _localctx = new AxeLengthKeyContext(Context, State);
+		EnterRule(_localctx, 266, RULE_axeLengthKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1639;
+			Match(AxeLengthKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ViewRotationKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ViewRotationKey() { return GetToken(MCCommandParser.ViewRotationKey, 0); }
+		public ViewRotationKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_viewRotationKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ViewRotationKeyContext viewRotationKey() {
+		ViewRotationKeyContext _localctx = new ViewRotationKeyContext(Context, State);
+		EnterRule(_localctx, 268, RULE_viewRotationKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1641;
+			Match(ViewRotationKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LevelContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Level() { return GetToken(MCCommandParser.Level, 0); }
+		public LevelContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_level; } }
+	}
+
+	[RuleVersion(0)]
+	public LevelContext level() {
+		LevelContext _localctx = new LevelContext(Context, State);
+		EnterRule(_localctx, 270, RULE_level);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1643;
+			Match(Level);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ScoreKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ScoreKey() { return GetToken(MCCommandParser.ScoreKey, 0); }
+		public ScoreKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_scoreKey; } }
+	}
+
+	[RuleVersion(0)]
+	public ScoreKeyContext scoreKey() {
+		ScoreKeyContext _localctx = new ScoreKeyContext(Context, State);
+		EnterRule(_localctx, 272, RULE_scoreKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1645;
+			Match(ScoreKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LimitContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LimitKey() { return GetToken(MCCommandParser.LimitKey, 0); }
+		public LimitContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_limit; } }
+	}
+
+	[RuleVersion(0)]
+	public LimitContext limit() {
+		LimitContext _localctx = new LimitContext(Context, State);
+		EnterRule(_localctx, 274, RULE_limit);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1647;
+			Match(LimitKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TypeKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TypeKey() { return GetToken(MCCommandParser.TypeKey, 0); }
+		public TypeKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_typeKey; } }
+	}
+
+	[RuleVersion(0)]
+	public TypeKeyContext typeKey() {
+		TypeKeyContext _localctx = new TypeKeyContext(Context, State);
+		EnterRule(_localctx, 276, RULE_typeKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1649;
+			Match(TypeKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NbtContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NBT() { return GetToken(MCCommandParser.NBT, 0); }
+		public NbtContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_nbt; } }
+	}
+
+	[RuleVersion(0)]
+	public NbtContext nbt() {
+		NbtContext _localctx = new NbtContext(Context, State);
+		EnterRule(_localctx, 278, RULE_nbt);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1651;
+			Match(NBT);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SortKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SortKey() { return GetToken(MCCommandParser.SortKey, 0); }
+		public SortKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_sortKey; } }
+	}
+
+	[RuleVersion(0)]
+	public SortKeyContext sortKey() {
+		SortKeyContext _localctx = new SortKeyContext(Context, State);
+		EnterRule(_localctx, 280, RULE_sortKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1653;
+			Match(SortKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DivisionEqualContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DivisionEqual() { return GetToken(MCCommandParser.DivisionEqual, 0); }
+		public DivisionEqualContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_divisionEqual; } }
+	}
+
+	[RuleVersion(0)]
+	public DivisionEqualContext divisionEqual() {
+		DivisionEqualContext _localctx = new DivisionEqualContext(Context, State);
+		EnterRule(_localctx, 282, RULE_divisionEqual);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1655;
+			Match(DivisionEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MultiplicationEqualContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MultiplicationEqual() { return GetToken(MCCommandParser.MultiplicationEqual, 0); }
+		public MultiplicationEqualContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_multiplicationEqual; } }
+	}
+
+	[RuleVersion(0)]
+	public MultiplicationEqualContext multiplicationEqual() {
+		MultiplicationEqualContext _localctx = new MultiplicationEqualContext(Context, State);
+		EnterRule(_localctx, 284, RULE_multiplicationEqual);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1657;
+			Match(MultiplicationEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AdditionEqualContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AdditionEqual() { return GetToken(MCCommandParser.AdditionEqual, 0); }
+		public AdditionEqualContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_additionEqual; } }
+	}
+
+	[RuleVersion(0)]
+	public AdditionEqualContext additionEqual() {
+		AdditionEqualContext _localctx = new AdditionEqualContext(Context, State);
+		EnterRule(_localctx, 286, RULE_additionEqual);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1659;
+			Match(AdditionEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SubtractionEqualContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SubtractionEqual() { return GetToken(MCCommandParser.SubtractionEqual, 0); }
+		public SubtractionEqualContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_subtractionEqual; } }
+	}
+
+	[RuleVersion(0)]
+	public SubtractionEqualContext subtractionEqual() {
+		SubtractionEqualContext _localctx = new SubtractionEqualContext(Context, State);
+		EnterRule(_localctx, 288, RULE_subtractionEqual);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1661;
+			Match(SubtractionEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RemainderEqualContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RemainderEqual() { return GetToken(MCCommandParser.RemainderEqual, 0); }
+		public RemainderEqualContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_remainderEqual; } }
+	}
+
+	[RuleVersion(0)]
+	public RemainderEqualContext remainderEqual() {
+		RemainderEqualContext _localctx = new RemainderEqualContext(Context, State);
+		EnterRule(_localctx, 290, RULE_remainderEqual);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1663;
+			Match(RemainderEqual);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LessThanContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftAngleBracket() { return GetToken(MCCommandParser.LeftAngleBracket, 0); }
+		public LessThanContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_lessThan; } }
+	}
+
+	[RuleVersion(0)]
+	public LessThanContext lessThan() {
+		LessThanContext _localctx = new LessThanContext(Context, State);
+		EnterRule(_localctx, 292, RULE_lessThan);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1665;
+			Match(LeftAngleBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LessThanOrEqualToContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LessThanOrEqualTo() { return GetToken(MCCommandParser.LessThanOrEqualTo, 0); }
+		public LessThanOrEqualToContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_lessThanOrEqualTo; } }
+	}
+
+	[RuleVersion(0)]
+	public LessThanOrEqualToContext lessThanOrEqualTo() {
+		LessThanOrEqualToContext _localctx = new LessThanOrEqualToContext(Context, State);
+		EnterRule(_localctx, 294, RULE_lessThanOrEqualTo);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1667;
+			Match(LessThanOrEqualTo);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EqualContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Equal() { return GetToken(MCCommandParser.Equal, 0); }
+		public EqualContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_equal; } }
+	}
+
+	[RuleVersion(0)]
+	public EqualContext equal() {
+		EqualContext _localctx = new EqualContext(Context, State);
+		EnterRule(_localctx, 296, RULE_equal);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1669;
+			Match(Equal);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GreaterThanContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightAngleBracket() { return GetToken(MCCommandParser.RightAngleBracket, 0); }
+		public GreaterThanContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_greaterThan; } }
+	}
+
+	[RuleVersion(0)]
+	public GreaterThanContext greaterThan() {
+		GreaterThanContext _localctx = new GreaterThanContext(Context, State);
+		EnterRule(_localctx, 298, RULE_greaterThan);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1671;
+			Match(RightAngleBracket);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GreaterThanOrEqualToContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GreaterThanOrEqualTo() { return GetToken(MCCommandParser.GreaterThanOrEqualTo, 0); }
+		public GreaterThanOrEqualToContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_greaterThanOrEqualTo; } }
+	}
+
+	[RuleVersion(0)]
+	public GreaterThanOrEqualToContext greaterThanOrEqualTo() {
+		GreaterThanOrEqualToContext _localctx = new GreaterThanOrEqualToContext(Context, State);
+		EnterRule(_localctx, 300, RULE_greaterThanOrEqualTo);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1673;
+			Match(GreaterThanOrEqualTo);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GreaterThanLessThanContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GreaterThanLessThan() { return GetToken(MCCommandParser.GreaterThanLessThan, 0); }
+		public GreaterThanLessThanContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_greaterThanLessThan; } }
+	}
+
+	[RuleVersion(0)]
+	public GreaterThanLessThanContext greaterThanLessThan() {
+		GreaterThanLessThanContext _localctx = new GreaterThanLessThanContext(Context, State);
+		EnterRule(_localctx, 302, RULE_greaterThanLessThan);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1675;
+			Match(GreaterThanLessThan);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AddContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Add() { return GetToken(MCCommandParser.Add, 0); }
+		public AddContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_add; } }
+	}
+
+	[RuleVersion(0)]
+	public AddContext add() {
+		AddContext _localctx = new AddContext(Context, State);
+		EnterRule(_localctx, 304, RULE_add);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1677;
+			Match(Add);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RemoveContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Remove() { return GetToken(MCCommandParser.Remove, 0); }
+		public RemoveContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_remove; } }
+	}
+
+	[RuleVersion(0)]
+	public RemoveContext remove() {
+		RemoveContext _localctx = new RemoveContext(Context, State);
+		EnterRule(_localctx, 306, RULE_remove);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1679;
+			Match(Remove);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Value() { return GetToken(MCCommandParser.Value, 0); }
+		public ValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_value; } }
+	}
+
+	[RuleVersion(0)]
+	public ValueContext value() {
+		ValueContext _localctx = new ValueContext(Context, State);
+		EnterRule(_localctx, 308, RULE_value);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1681;
+			Match(Value);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Set() { return GetToken(MCCommandParser.Set, 0); }
+		public SetContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_set; } }
+	}
+
+	[RuleVersion(0)]
+	public SetContext set() {
+		SetContext _localctx = new SetContext(Context, State);
+		EnterRule(_localctx, 310, RULE_set);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1683;
+			Match(Set);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MultiplyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Multiply() { return GetToken(MCCommandParser.Multiply, 0); }
+		public MultiplyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_multiply; } }
+	}
+
+	[RuleVersion(0)]
+	public MultiplyContext multiply() {
+		MultiplyContext _localctx = new MultiplyContext(Context, State);
+		EnterRule(_localctx, 312, RULE_multiply);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1685;
+			Match(Multiply);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Multiply_baseContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Multiply_Base() { return GetToken(MCCommandParser.Multiply_Base, 0); }
+		public Multiply_baseContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_multiply_base; } }
+	}
+
+	[RuleVersion(0)]
+	public Multiply_baseContext multiply_base() {
+		Multiply_baseContext _localctx = new Multiply_baseContext(Context, State);
+		EnterRule(_localctx, 314, RULE_multiply_base);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1687;
+			Match(Multiply_Base);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MaxContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Max() { return GetToken(MCCommandParser.Max, 0); }
+		public MaxContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_max; } }
+	}
+
+	[RuleVersion(0)]
+	public MaxContext max() {
+		MaxContext _localctx = new MaxContext(Context, State);
+		EnterRule(_localctx, 316, RULE_max);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1689;
+			Match(Max);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PlayersContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Players() { return GetToken(MCCommandParser.Players, 0); }
+		public PlayersContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_players; } }
+	}
+
+	[RuleVersion(0)]
+	public PlayersContext players() {
+		PlayersContext _localctx = new PlayersContext(Context, State);
+		EnterRule(_localctx, 318, RULE_players);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1691;
+			Match(Players);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class VisibleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Visible() { return GetToken(MCCommandParser.Visible, 0); }
+		public VisibleContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_visible; } }
+	}
+
+	[RuleVersion(0)]
+	public VisibleContext visible() {
+		VisibleContext _localctx = new VisibleContext(Context, State);
+		EnterRule(_localctx, 320, RULE_visible);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1693;
+			Match(Visible);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ColorContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Color() { return GetToken(MCCommandParser.Color, 0); }
+		public ColorContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_color; } }
+	}
+
+	[RuleVersion(0)]
+	public ColorContext color() {
+		ColorContext _localctx = new ColorContext(Context, State);
+		EnterRule(_localctx, 322, RULE_color);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1695;
+			Match(Color);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NameContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Name() { return GetToken(MCCommandParser.Name, 0); }
+		public NameContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_name; } }
+	}
+
+	[RuleVersion(0)]
+	public NameContext name() {
+		NameContext _localctx = new NameContext(Context, State);
+		EnterRule(_localctx, 324, RULE_name);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1697;
+			Match(Name);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StyleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Style() { return GetToken(MCCommandParser.Style, 0); }
+		public StyleContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_style; } }
+	}
+
+	[RuleVersion(0)]
+	public StyleContext style() {
+		StyleContext _localctx = new StyleContext(Context, State);
+		EnterRule(_localctx, 326, RULE_style);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1699;
+			Match(Style);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FilteredContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Filtered() { return GetToken(MCCommandParser.Filtered, 0); }
+		public FilteredContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_filtered; } }
+	}
+
+	[RuleVersion(0)]
+	public FilteredContext filtered() {
+		FilteredContext _localctx = new FilteredContext(Context, State);
+		EnterRule(_localctx, 328, RULE_filtered);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1701;
+			Match(Filtered);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MaskedContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Masked() { return GetToken(MCCommandParser.Masked, 0); }
+		public MaskedContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_masked; } }
+	}
+
+	[RuleVersion(0)]
+	public MaskedContext masked() {
+		MaskedContext _localctx = new MaskedContext(Context, State);
+		EnterRule(_localctx, 330, RULE_masked);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1703;
+			Match(Masked);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ReplaceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Replace() { return GetToken(MCCommandParser.Replace, 0); }
+		public ReplaceContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_replace; } }
+	}
+
+	[RuleVersion(0)]
+	public ReplaceContext replace() {
+		ReplaceContext _localctx = new ReplaceContext(Context, State);
+		EnterRule(_localctx, 332, RULE_replace);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1705;
+			Match(Replace);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ForceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Force() { return GetToken(MCCommandParser.Force, 0); }
+		public ForceContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_force; } }
+	}
+
+	[RuleVersion(0)]
+	public ForceContext force() {
+		ForceContext _localctx = new ForceContext(Context, State);
+		EnterRule(_localctx, 334, RULE_force);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1707;
+			Match(Force);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MoveContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Move() { return GetToken(MCCommandParser.Move, 0); }
+		public MoveContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_move; } }
+	}
+
+	[RuleVersion(0)]
+	public MoveContext move() {
+		MoveContext _localctx = new MoveContext(Context, State);
+		EnterRule(_localctx, 336, RULE_move);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1709;
+			Match(Move);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NormalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Normal() { return GetToken(MCCommandParser.Normal, 0); }
+		public NormalContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_normal; } }
+	}
+
+	[RuleVersion(0)]
+	public NormalContext normal() {
+		NormalContext _localctx = new NormalContext(Context, State);
+		EnterRule(_localctx, 338, RULE_normal);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1711;
+			Match(Normal);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ToContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode To() { return GetToken(MCCommandParser.To, 0); }
+		public ToContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_to; } }
+	}
+
+	[RuleVersion(0)]
+	public ToContext to() {
+		ToContext _localctx = new ToContext(Context, State);
+		EnterRule(_localctx, 340, RULE_to);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1713;
+			Match(To);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ByContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode By() { return GetToken(MCCommandParser.By, 0); }
+		public ByContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_by; } }
+	}
+
+	[RuleVersion(0)]
+	public ByContext by() {
+		ByContext _localctx = new ByContext(Context, State);
+		EnterRule(_localctx, 342, RULE_by);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1715;
+			Match(By);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MergeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Merge() { return GetToken(MCCommandParser.Merge, 0); }
+		public MergeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_merge; } }
+	}
+
+	[RuleVersion(0)]
+	public MergeContext merge() {
+		MergeContext _localctx = new MergeContext(Context, State);
+		EnterRule(_localctx, 344, RULE_merge);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1717;
+			Match(Merge);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ModifyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Modify() { return GetToken(MCCommandParser.Modify, 0); }
+		public ModifyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_modify; } }
+	}
+
+	[RuleVersion(0)]
+	public ModifyContext modify() {
+		ModifyContext _localctx = new ModifyContext(Context, State);
+		EnterRule(_localctx, 346, RULE_modify);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1719;
+			Match(Modify);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BlockContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Block() { return GetToken(MCCommandParser.Block, 0); }
+		public BlockContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_block; } }
+	}
+
+	[RuleVersion(0)]
+	public BlockContext block() {
+		BlockContext _localctx = new BlockContext(Context, State);
+		EnterRule(_localctx, 348, RULE_block);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1721;
+			Match(Block);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EntityContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Entity() { return GetToken(MCCommandParser.Entity, 0); }
+		public EntityContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_entity; } }
+	}
+
+	[RuleVersion(0)]
+	public EntityContext entity() {
+		EntityContext _localctx = new EntityContext(Context, State);
+		EnterRule(_localctx, 350, RULE_entity);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1723;
+			Match(Entity);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StorageContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Storage() { return GetToken(MCCommandParser.Storage, 0); }
+		public StorageContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_storage; } }
+	}
+
+	[RuleVersion(0)]
+	public StorageContext storage() {
+		StorageContext _localctx = new StorageContext(Context, State);
+		EnterRule(_localctx, 352, RULE_storage);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1725;
+			Match(Storage);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StringKeyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode StringKey() { return GetToken(MCCommandParser.StringKey, 0); }
+		public StringKeyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_stringKey; } }
+	}
+
+	[RuleVersion(0)]
+	public StringKeyContext stringKey() {
+		StringKeyContext _localctx = new StringKeyContext(Context, State);
+		EnterRule(_localctx, 354, RULE_stringKey);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1727;
+			Match(StringKey);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode As() { return GetToken(MCCommandParser.As, 0); }
+		public AsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_as; } }
+	}
+
+	[RuleVersion(0)]
+	public AsContext @as() {
+		AsContext _localctx = new AsContext(Context, State);
+		EnterRule(_localctx, 356, RULE_as);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1729;
+			Match(As);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GrantContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Grant() { return GetToken(MCCommandParser.Grant, 0); }
+		public GrantContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_grant; } }
+	}
+
+	[RuleVersion(0)]
+	public GrantContext grant() {
+		GrantContext _localctx = new GrantContext(Context, State);
+		EnterRule(_localctx, 358, RULE_grant);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1731;
+			Match(Grant);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RevokeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Revoke() { return GetToken(MCCommandParser.Revoke, 0); }
+		public RevokeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_revoke; } }
+	}
+
+	[RuleVersion(0)]
+	public RevokeContext revoke() {
+		RevokeContext _localctx = new RevokeContext(Context, State);
+		EnterRule(_localctx, 360, RULE_revoke);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1733;
+			Match(Revoke);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EverythingContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Everything() { return GetToken(MCCommandParser.Everything, 0); }
+		public EverythingContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_everything; } }
+	}
+
+	[RuleVersion(0)]
+	public EverythingContext everything() {
+		EverythingContext _localctx = new EverythingContext(Context, State);
+		EnterRule(_localctx, 362, RULE_everything);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1735;
+			Match(Everything);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OnlyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Only() { return GetToken(MCCommandParser.Only, 0); }
+		public OnlyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_only; } }
+	}
+
+	[RuleVersion(0)]
+	public OnlyContext only() {
+		OnlyContext _localctx = new OnlyContext(Context, State);
+		EnterRule(_localctx, 364, RULE_only);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1737;
+			Match(Only);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FromContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode From() { return GetToken(MCCommandParser.From, 0); }
+		public FromContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_from; } }
+	}
+
+	[RuleVersion(0)]
+	public FromContext from() {
+		FromContext _localctx = new FromContext(Context, State);
+		EnterRule(_localctx, 366, RULE_from);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1739;
+			Match(From);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ThroughContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Through() { return GetToken(MCCommandParser.Through, 0); }
+		public ThroughContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_through; } }
+	}
+
+	[RuleVersion(0)]
+	public ThroughContext through() {
+		ThroughContext _localctx = new ThroughContext(Context, State);
+		EnterRule(_localctx, 368, RULE_through);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1741;
+			Match(Through);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class UntilContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Until() { return GetToken(MCCommandParser.Until, 0); }
+		public UntilContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_until; } }
+	}
+
+	[RuleVersion(0)]
+	public UntilContext until() {
+		UntilContext _localctx = new UntilContext(Context, State);
+		EnterRule(_localctx, 370, RULE_until);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1743;
+			Match(Until);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BaseContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Base() { return GetToken(MCCommandParser.Base, 0); }
+		public BaseContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_base; } }
+	}
+
+	[RuleVersion(0)]
+	public BaseContext @base() {
+		BaseContext _localctx = new BaseContext(Context, State);
+		EnterRule(_localctx, 372, RULE_base);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1745;
+			Match(Base);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Get() { return GetToken(MCCommandParser.Get, 0); }
+		public GetContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_get; } }
+	}
+
+	[RuleVersion(0)]
+	public GetContext get() {
+		GetContext _localctx = new GetContext(Context, State);
+		EnterRule(_localctx, 374, RULE_get);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1747;
+			Match(Get);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ModifierContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Modifier() { return GetToken(MCCommandParser.Modifier, 0); }
+		public ModifierContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_modifier; } }
+	}
+
+	[RuleVersion(0)]
+	public ModifierContext modifier() {
+		ModifierContext _localctx = new ModifierContext(Context, State);
+		EnterRule(_localctx, 376, RULE_modifier);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1749;
+			Match(Modifier);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AvailableContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Available() { return GetToken(MCCommandParser.Available, 0); }
+		public AvailableContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_available; } }
+	}
+
+	[RuleVersion(0)]
+	public AvailableContext available() {
+		AvailableContext _localctx = new AvailableContext(Context, State);
+		EnterRule(_localctx, 378, RULE_available);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1751;
+			Match(Available);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EnableContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Enable() { return GetToken(MCCommandParser.Enable, 0); }
+		public EnableContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_enable; } }
+	}
+
+	[RuleVersion(0)]
+	public EnableContext enable() {
+		EnableContext _localctx = new EnableContext(Context, State);
+		EnterRule(_localctx, 380, RULE_enable);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1753;
+			Match(Enable);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AfterContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode After() { return GetToken(MCCommandParser.After, 0); }
+		public AfterContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_after; } }
+	}
+
+	[RuleVersion(0)]
+	public AfterContext after() {
+		AfterContext _localctx = new AfterContext(Context, State);
+		EnterRule(_localctx, 382, RULE_after);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1755;
+			Match(After);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BeforeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Before() { return GetToken(MCCommandParser.Before, 0); }
+		public BeforeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_before; } }
+	}
+
+	[RuleVersion(0)]
+	public BeforeContext before() {
+		BeforeContext _localctx = new BeforeContext(Context, State);
+		EnterRule(_localctx, 384, RULE_before);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1757;
+			Match(Before);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FirstContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode First() { return GetToken(MCCommandParser.First, 0); }
+		public FirstContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_first; } }
+	}
+
+	[RuleVersion(0)]
+	public FirstContext first() {
+		FirstContext _localctx = new FirstContext(Context, State);
+		EnterRule(_localctx, 386, RULE_first);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1759;
+			Match(First);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LastContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Last() { return GetToken(MCCommandParser.Last, 0); }
+		public LastContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_last; } }
+	}
+
+	[RuleVersion(0)]
+	public LastContext last() {
+		LastContext _localctx = new LastContext(Context, State);
+		EnterRule(_localctx, 388, RULE_last);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1761;
+			Match(Last);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DisableContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Disable() { return GetToken(MCCommandParser.Disable, 0); }
+		public DisableContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_disable; } }
+	}
+
+	[RuleVersion(0)]
+	public DisableContext disable() {
+		DisableContext _localctx = new DisableContext(Context, State);
+		EnterRule(_localctx, 390, RULE_disable);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1763;
+			Match(Disable);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StartContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Start() { return GetToken(MCCommandParser.Start, 0); }
+		public StartContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_start; } }
+	}
+
+	[RuleVersion(0)]
+	public StartContext start() {
+		StartContext _localctx = new StartContext(Context, State);
+		EnterRule(_localctx, 392, RULE_start);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1765;
+			Match(Start);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StopContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Stop() { return GetToken(MCCommandParser.Stop, 0); }
+		public StopContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_stop; } }
+	}
+
+	[RuleVersion(0)]
+	public StopContext stop() {
+		StopContext _localctx = new StopContext(Context, State);
+		EnterRule(_localctx, 394, RULE_stop);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1767;
+			Match(Stop);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class InfiniteContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Infinite() { return GetToken(MCCommandParser.Infinite, 0); }
+		public InfiniteContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_infinite; } }
+	}
+
+	[RuleVersion(0)]
+	public InfiniteContext infinite() {
+		InfiniteContext _localctx = new InfiniteContext(Context, State);
+		EnterRule(_localctx, 396, RULE_infinite);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1769;
+			Match(Infinite);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EasyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Easy() { return GetToken(MCCommandParser.Easy, 0); }
+		public EasyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_easy; } }
+	}
+
+	[RuleVersion(0)]
+	public EasyContext easy() {
+		EasyContext _localctx = new EasyContext(Context, State);
+		EnterRule(_localctx, 398, RULE_easy);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1771;
+			Match(Easy);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class HardContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Hard() { return GetToken(MCCommandParser.Hard, 0); }
+		public HardContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_hard; } }
+	}
+
+	[RuleVersion(0)]
+	public HardContext hard() {
+		HardContext _localctx = new HardContext(Context, State);
+		EnterRule(_localctx, 400, RULE_hard);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1773;
+			Match(Hard);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PeacefulContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Peaceful() { return GetToken(MCCommandParser.Peaceful, 0); }
+		public PeacefulContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_peaceful; } }
+	}
+
+	[RuleVersion(0)]
+	public PeacefulContext peaceful() {
+		PeacefulContext _localctx = new PeacefulContext(Context, State);
+		EnterRule(_localctx, 402, RULE_peaceful);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1775;
+			Match(Peaceful);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EyesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Eyes() { return GetToken(MCCommandParser.Eyes, 0); }
+		public EyesContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_eyes; } }
+	}
+
+	[RuleVersion(0)]
+	public EyesContext eyes() {
+		EyesContext _localctx = new EyesContext(Context, State);
+		EnterRule(_localctx, 404, RULE_eyes);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1777;
+			Match(Eyes);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FeetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Feet() { return GetToken(MCCommandParser.Feet, 0); }
+		public FeetContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_feet; } }
+	}
+
+	[RuleVersion(0)]
+	public FeetContext feet() {
+		FeetContext _localctx = new FeetContext(Context, State);
+		EnterRule(_localctx, 406, RULE_feet);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1779;
+			Match(Feet);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AllContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode All() { return GetToken(MCCommandParser.All, 0); }
+		public AllContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_all; } }
+	}
+
+	[RuleVersion(0)]
+	public AllContext all() {
+		AllContext _localctx = new AllContext(Context, State);
+		EnterRule(_localctx, 408, RULE_all);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1781;
+			Match(All);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BiomeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Biome() { return GetToken(MCCommandParser.Biome, 0); }
+		public BiomeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_biome; } }
+	}
+
+	[RuleVersion(0)]
+	public BiomeContext biome() {
+		BiomeContext _localctx = new BiomeContext(Context, State);
+		EnterRule(_localctx, 410, RULE_biome);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1783;
+			Match(Biome);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BlocksContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Blocks() { return GetToken(MCCommandParser.Blocks, 0); }
+		public BlocksContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_blocks; } }
+	}
+
+	[RuleVersion(0)]
+	public BlocksContext blocks() {
+		BlocksContext _localctx = new BlocksContext(Context, State);
+		EnterRule(_localctx, 412, RULE_blocks);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1785;
+			Match(Blocks);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DimensionContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dimension() { return GetToken(MCCommandParser.Dimension, 0); }
+		public DimensionContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_dimension; } }
+	}
+
+	[RuleVersion(0)]
+	public DimensionContext dimension() {
+		DimensionContext _localctx = new DimensionContext(Context, State);
+		EnterRule(_localctx, 414, RULE_dimension);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1787;
+			Match(Dimension);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LoadedContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Loaded() { return GetToken(MCCommandParser.Loaded, 0); }
+		public LoadedContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_loaded; } }
+	}
+
+	[RuleVersion(0)]
+	public LoadedContext loaded() {
+		LoadedContext _localctx = new LoadedContext(Context, State);
+		EnterRule(_localctx, 416, RULE_loaded);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1789;
+			Match(Loaded);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PredicateContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Predicate() { return GetToken(MCCommandParser.Predicate, 0); }
+		public PredicateContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_predicate; } }
+	}
+
+	[RuleVersion(0)]
+	public PredicateContext predicate() {
+		PredicateContext _localctx = new PredicateContext(Context, State);
+		EnterRule(_localctx, 418, RULE_predicate);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1791;
+			Match(Predicate);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ScoreContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Score() { return GetToken(MCCommandParser.Score, 0); }
+		public ScoreContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_score; } }
+	}
+
+	[RuleVersion(0)]
+	public ScoreContext score() {
+		ScoreContext _localctx = new ScoreContext(Context, State);
+		EnterRule(_localctx, 420, RULE_score);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1793;
+			Match(Score);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MatchesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Matches() { return GetToken(MCCommandParser.Matches, 0); }
+		public MatchesContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_matches; } }
+	}
+
+	[RuleVersion(0)]
+	public MatchesContext matches() {
+		MatchesContext _localctx = new MatchesContext(Context, State);
+		EnterRule(_localctx, 422, RULE_matches);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1795;
+			Match(Matches);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AttackerContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Attacker() { return GetToken(MCCommandParser.Attacker, 0); }
+		public AttackerContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_attacker; } }
+	}
+
+	[RuleVersion(0)]
+	public AttackerContext attacker() {
+		AttackerContext _localctx = new AttackerContext(Context, State);
+		EnterRule(_localctx, 424, RULE_attacker);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1797;
+			Match(Attacker);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ControllerContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Controller() { return GetToken(MCCommandParser.Controller, 0); }
+		public ControllerContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_controller; } }
+	}
+
+	[RuleVersion(0)]
+	public ControllerContext controller() {
+		ControllerContext _localctx = new ControllerContext(Context, State);
+		EnterRule(_localctx, 426, RULE_controller);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1799;
+			Match(Controller);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LeasherContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Leasher() { return GetToken(MCCommandParser.Leasher, 0); }
+		public LeasherContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_leasher; } }
+	}
+
+	[RuleVersion(0)]
+	public LeasherContext leasher() {
+		LeasherContext _localctx = new LeasherContext(Context, State);
+		EnterRule(_localctx, 428, RULE_leasher);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1801;
+			Match(Leasher);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OriginContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Origin() { return GetToken(MCCommandParser.Origin, 0); }
+		public OriginContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_origin; } }
+	}
+
+	[RuleVersion(0)]
+	public OriginContext origin() {
+		OriginContext _localctx = new OriginContext(Context, State);
+		EnterRule(_localctx, 430, RULE_origin);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1803;
+			Match(Origin);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OwnerContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Owner() { return GetToken(MCCommandParser.Owner, 0); }
+		public OwnerContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_owner; } }
+	}
+
+	[RuleVersion(0)]
+	public OwnerContext owner() {
+		OwnerContext _localctx = new OwnerContext(Context, State);
+		EnterRule(_localctx, 432, RULE_owner);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1805;
+			Match(Owner);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PassengersContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Passengers() { return GetToken(MCCommandParser.Passengers, 0); }
+		public PassengersContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_passengers; } }
+	}
+
+	[RuleVersion(0)]
+	public PassengersContext passengers() {
+		PassengersContext _localctx = new PassengersContext(Context, State);
+		EnterRule(_localctx, 434, RULE_passengers);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1807;
+			Match(Passengers);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Target() { return GetToken(MCCommandParser.Target, 0); }
+		public TargetContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_target; } }
+	}
+
+	[RuleVersion(0)]
+	public TargetContext target() {
+		TargetContext _localctx = new TargetContext(Context, State);
+		EnterRule(_localctx, 436, RULE_target);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1809;
+			Match(Target);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class VehicleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Vehicle() { return GetToken(MCCommandParser.Vehicle, 0); }
+		public VehicleContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_vehicle; } }
+	}
+
+	[RuleVersion(0)]
+	public VehicleContext vehicle() {
+		VehicleContext _localctx = new VehicleContext(Context, State);
+		EnterRule(_localctx, 438, RULE_vehicle);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1811;
+			Match(Vehicle);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Motion_blockingContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Motion_blocking() { return GetToken(MCCommandParser.Motion_blocking, 0); }
+		public Motion_blockingContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_motion_blocking; } }
+	}
+
+	[RuleVersion(0)]
+	public Motion_blockingContext motion_blocking() {
+		Motion_blockingContext _localctx = new Motion_blockingContext(Context, State);
+		EnterRule(_localctx, 440, RULE_motion_blocking);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1813;
+			Match(Motion_blocking);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Motion_blocking_no_leavesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Motion_blocking_no_leaves() { return GetToken(MCCommandParser.Motion_blocking_no_leaves, 0); }
+		public Motion_blocking_no_leavesContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_motion_blocking_no_leaves; } }
+	}
+
+	[RuleVersion(0)]
+	public Motion_blocking_no_leavesContext motion_blocking_no_leaves() {
+		Motion_blocking_no_leavesContext _localctx = new Motion_blocking_no_leavesContext(Context, State);
+		EnterRule(_localctx, 442, RULE_motion_blocking_no_leaves);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1815;
+			Match(Motion_blocking_no_leaves);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Ocean_floorContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Ocean_floor() { return GetToken(MCCommandParser.Ocean_floor, 0); }
+		public Ocean_floorContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_ocean_floor; } }
+	}
+
+	[RuleVersion(0)]
+	public Ocean_floorContext ocean_floor() {
+		Ocean_floorContext _localctx = new Ocean_floorContext(Context, State);
+		EnterRule(_localctx, 444, RULE_ocean_floor);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1817;
+			Match(Ocean_floor);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class World_surfaceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode World_surface() { return GetToken(MCCommandParser.World_surface, 0); }
+		public World_surfaceContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_world_surface; } }
+	}
+
+	[RuleVersion(0)]
+	public World_surfaceContext world_surface() {
+		World_surfaceContext _localctx = new World_surfaceContext(Context, State);
+		EnterRule(_localctx, 446, RULE_world_surface);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1819;
+			Match(World_surface);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OverContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Over() { return GetToken(MCCommandParser.Over, 0); }
+		public OverContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_over; } }
+	}
+
+	[RuleVersion(0)]
+	public OverContext over() {
+		OverContext _localctx = new OverContext(Context, State);
+		EnterRule(_localctx, 448, RULE_over);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1821;
+			Match(Over);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ResultContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Result() { return GetToken(MCCommandParser.Result, 0); }
+		public ResultContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_result; } }
+	}
+
+	[RuleVersion(0)]
+	public ResultContext result() {
+		ResultContext _localctx = new ResultContext(Context, State);
+		EnterRule(_localctx, 450, RULE_result);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1823;
+			Match(Result);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SuccessContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Success() { return GetToken(MCCommandParser.Success, 0); }
+		public SuccessContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_success; } }
+	}
+
+	[RuleVersion(0)]
+	public SuccessContext success() {
+		SuccessContext _localctx = new SuccessContext(Context, State);
+		EnterRule(_localctx, 452, RULE_success);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1825;
+			Match(Success);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AlignContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Align() { return GetToken(MCCommandParser.Align, 0); }
+		public AlignContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_align; } }
+	}
+
+	[RuleVersion(0)]
+	public AlignContext align() {
+		AlignContext _localctx = new AlignContext(Context, State);
+		EnterRule(_localctx, 454, RULE_align);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1827;
+			Match(Align);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AnchoredContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Anchored() { return GetToken(MCCommandParser.Anchored, 0); }
+		public AnchoredContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_anchored; } }
+	}
+
+	[RuleVersion(0)]
+	public AnchoredContext anchored() {
+		AnchoredContext _localctx = new AnchoredContext(Context, State);
+		EnterRule(_localctx, 456, RULE_anchored);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1829;
+			Match(Anchored);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class IfContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode If() { return GetToken(MCCommandParser.If, 0); }
+		public IfContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_if; } }
+	}
+
+	[RuleVersion(0)]
+	public IfContext @if() {
+		IfContext _localctx = new IfContext(Context, State);
+		EnterRule(_localctx, 458, RULE_if);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1831;
+			Match(If);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class UnlessContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Unless() { return GetToken(MCCommandParser.Unless, 0); }
+		public UnlessContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_unless; } }
+	}
+
+	[RuleVersion(0)]
+	public UnlessContext unless() {
+		UnlessContext _localctx = new UnlessContext(Context, State);
+		EnterRule(_localctx, 460, RULE_unless);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1833;
+			Match(Unless);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class InContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode In() { return GetToken(MCCommandParser.In, 0); }
+		public InContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_in; } }
+	}
+
+	[RuleVersion(0)]
+	public InContext @in() {
+		InContext _localctx = new InContext(Context, State);
+		EnterRule(_localctx, 462, RULE_in);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1835;
+			Match(In);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OnContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode On() { return GetToken(MCCommandParser.On, 0); }
+		public OnContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_on; } }
+	}
+
+	[RuleVersion(0)]
+	public OnContext on() {
+		OnContext _localctx = new OnContext(Context, State);
+		EnterRule(_localctx, 464, RULE_on);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1837;
+			Match(On);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PositionedContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Positioned() { return GetToken(MCCommandParser.Positioned, 0); }
+		public PositionedContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_positioned; } }
+	}
+
+	[RuleVersion(0)]
+	public PositionedContext positioned() {
+		PositionedContext _localctx = new PositionedContext(Context, State);
+		EnterRule(_localctx, 466, RULE_positioned);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1839;
+			Match(Positioned);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RotatedContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Rotated() { return GetToken(MCCommandParser.Rotated, 0); }
+		public RotatedContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_rotated; } }
+	}
+
+	[RuleVersion(0)]
+	public RotatedContext rotated() {
+		RotatedContext _localctx = new RotatedContext(Context, State);
+		EnterRule(_localctx, 468, RULE_rotated);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1841;
+			Match(Rotated);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RunContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Run() { return GetToken(MCCommandParser.Run, 0); }
+		public RunContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_run; } }
+	}
+
+	[RuleVersion(0)]
+	public RunContext run() {
+		RunContext _localctx = new RunContext(Context, State);
+		EnterRule(_localctx, 470, RULE_run);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1843;
+			Match(Run);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StoreContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Store() { return GetToken(MCCommandParser.Store, 0); }
+		public StoreContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_store; } }
+	}
+
+	[RuleVersion(0)]
+	public StoreContext store() {
+		StoreContext _localctx = new StoreContext(Context, State);
+		EnterRule(_localctx, 472, RULE_store);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1845;
+			Match(Store);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class QueryContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Query() { return GetToken(MCCommandParser.Query, 0); }
+		public QueryContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_query; } }
+	}
+
+	[RuleVersion(0)]
+	public QueryContext query() {
+		QueryContext _localctx = new QueryContext(Context, State);
+		EnterRule(_localctx, 474, RULE_query);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1847;
+			Match(Query);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LevelsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Levels() { return GetToken(MCCommandParser.Levels, 0); }
+		public LevelsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_levels; } }
+	}
+
+	[RuleVersion(0)]
+	public LevelsContext levels() {
+		LevelsContext _localctx = new LevelsContext(Context, State);
+		EnterRule(_localctx, 476, RULE_levels);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1849;
+			Match(Levels);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PointsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Points() { return GetToken(MCCommandParser.Points, 0); }
+		public PointsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_points; } }
+	}
+
+	[RuleVersion(0)]
+	public PointsContext points() {
+		PointsContext _localctx = new PointsContext(Context, State);
+		EnterRule(_localctx, 478, RULE_points);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1851;
+			Match(Points);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DestroyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Destroy() { return GetToken(MCCommandParser.Destroy, 0); }
+		public DestroyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_destroy; } }
+	}
+
+	[RuleVersion(0)]
+	public DestroyContext destroy() {
+		DestroyContext _localctx = new DestroyContext(Context, State);
+		EnterRule(_localctx, 480, RULE_destroy);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1853;
+			Match(Destroy);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class HollowContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Hollow() { return GetToken(MCCommandParser.Hollow, 0); }
+		public HollowContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_hollow; } }
+	}
+
+	[RuleVersion(0)]
+	public HollowContext hollow() {
+		HollowContext _localctx = new HollowContext(Context, State);
+		EnterRule(_localctx, 482, RULE_hollow);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1855;
+			Match(Hollow);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class KeepContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Keep() { return GetToken(MCCommandParser.Keep, 0); }
+		public KeepContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_keep; } }
+	}
+
+	[RuleVersion(0)]
+	public KeepContext keep() {
+		KeepContext _localctx = new KeepContext(Context, State);
+		EnterRule(_localctx, 484, RULE_keep);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1857;
+			Match(Keep);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OutlineContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Outline() { return GetToken(MCCommandParser.Outline, 0); }
+		public OutlineContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_outline; } }
+	}
+
+	[RuleVersion(0)]
+	public OutlineContext outline() {
+		OutlineContext _localctx = new OutlineContext(Context, State);
+		EnterRule(_localctx, 486, RULE_outline);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1859;
+			Match(Outline);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class UuidsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Uuids() { return GetToken(MCCommandParser.Uuids, 0); }
+		public UuidsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_uuids; } }
+	}
+
+	[RuleVersion(0)]
+	public UuidsContext uuids() {
+		UuidsContext _localctx = new UuidsContext(Context, State);
+		EnterRule(_localctx, 488, RULE_uuids);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1861;
+			Match(Uuids);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PoiContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Poi() { return GetToken(MCCommandParser.Poi, 0); }
+		public PoiContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_poi; } }
+	}
+
+	[RuleVersion(0)]
+	public PoiContext poi() {
+		PoiContext _localctx = new PoiContext(Context, State);
+		EnterRule(_localctx, 490, RULE_poi);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1863;
+			Match(Poi);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StructureContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Structure() { return GetToken(MCCommandParser.Structure, 0); }
+		public StructureContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_structure; } }
+	}
+
+	[RuleVersion(0)]
+	public StructureContext structure() {
+		StructureContext _localctx = new StructureContext(Context, State);
+		EnterRule(_localctx, 492, RULE_structure);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1865;
+			Match(Structure);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class InsertContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Insert() { return GetToken(MCCommandParser.Insert, 0); }
+		public InsertContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_insert; } }
+	}
+
+	[RuleVersion(0)]
+	public InsertContext insert() {
+		InsertContext _localctx = new InsertContext(Context, State);
+		EnterRule(_localctx, 494, RULE_insert);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1867;
+			Match(Insert);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SpawnContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Spawn() { return GetToken(MCCommandParser.Spawn, 0); }
+		public SpawnContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_spawn; } }
+	}
+
+	[RuleVersion(0)]
+	public SpawnContext spawn() {
+		SpawnContext _localctx = new SpawnContext(Context, State);
+		EnterRule(_localctx, 496, RULE_spawn);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1869;
+			Match(Spawn);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FishContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Fish() { return GetToken(MCCommandParser.Fish, 0); }
+		public FishContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_fish; } }
+	}
+
+	[RuleVersion(0)]
+	public FishContext fish() {
+		FishContext _localctx = new FishContext(Context, State);
+		EnterRule(_localctx, 498, RULE_fish);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1871;
+			Match(Fish);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MineContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Mine() { return GetToken(MCCommandParser.Mine, 0); }
+		public MineContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_mine; } }
+	}
+
+	[RuleVersion(0)]
+	public MineContext mine() {
+		MineContext _localctx = new MineContext(Context, State);
+		EnterRule(_localctx, 500, RULE_mine);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1873;
+			Match(Mine);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FeatureContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Feature() { return GetToken(MCCommandParser.Feature, 0); }
+		public FeatureContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_feature; } }
+	}
+
+	[RuleVersion(0)]
+	public FeatureContext feature() {
+		FeatureContext _localctx = new FeatureContext(Context, State);
+		EnterRule(_localctx, 502, RULE_feature);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1875;
+			Match(Feature);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class JigsawContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Jigsaw() { return GetToken(MCCommandParser.Jigsaw, 0); }
+		public JigsawContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_jigsaw; } }
+	}
+
+	[RuleVersion(0)]
+	public JigsawContext jigsaw() {
+		JigsawContext _localctx = new JigsawContext(Context, State);
+		EnterRule(_localctx, 504, RULE_jigsaw);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1877;
+			Match(Jigsaw);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TemplateContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Template() { return GetToken(MCCommandParser.Template, 0); }
+		public TemplateContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_template; } }
+	}
+
+	[RuleVersion(0)]
+	public TemplateContext template() {
+		TemplateContext _localctx = new TemplateContext(Context, State);
+		EnterRule(_localctx, 506, RULE_template);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1879;
+			Match(Template);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Front_backContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Front_back() { return GetToken(MCCommandParser.Front_back, 0); }
+		public Front_backContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_front_back; } }
+	}
+
+	[RuleVersion(0)]
+	public Front_backContext front_back() {
+		Front_backContext _localctx = new Front_backContext(Context, State);
+		EnterRule(_localctx, 508, RULE_front_back);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1881;
+			Match(Front_back);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Left_rightContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Left_right() { return GetToken(MCCommandParser.Left_right, 0); }
+		public Left_rightContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_left_right; } }
+	}
+
+	[RuleVersion(0)]
+	public Left_rightContext left_right() {
+		Left_rightContext _localctx = new Left_rightContext(Context, State);
+		EnterRule(_localctx, 510, RULE_left_right);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1883;
+			Match(Left_right);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NoneContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode None() { return GetToken(MCCommandParser.None, 0); }
+		public NoneContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_none; } }
+	}
+
+	[RuleVersion(0)]
+	public NoneContext none() {
+		NoneContext _localctx = new NoneContext(Context, State);
+		EnterRule(_localctx, 512, RULE_none);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1885;
+			Match(None);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Clockwise_90Context : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Clockwise_90() { return GetToken(MCCommandParser.Clockwise_90, 0); }
+		public Clockwise_90Context(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_clockwise_90; } }
+	}
+
+	[RuleVersion(0)]
+	public Clockwise_90Context clockwise_90() {
+		Clockwise_90Context _localctx = new Clockwise_90Context(Context, State);
+		EnterRule(_localctx, 514, RULE_clockwise_90);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1887;
+			Match(Clockwise_90);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Counterclockwise_90Context : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Counterclockwise_90() { return GetToken(MCCommandParser.Counterclockwise_90, 0); }
+		public Counterclockwise_90Context(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_counterclockwise_90; } }
+	}
+
+	[RuleVersion(0)]
+	public Counterclockwise_90Context counterclockwise_90() {
+		Counterclockwise_90Context _localctx = new Counterclockwise_90Context(Context, State);
+		EnterRule(_localctx, 516, RULE_counterclockwise_90);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1889;
+			Match(Counterclockwise_90);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AmbientContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Ambient() { return GetToken(MCCommandParser.Ambient, 0); }
+		public AmbientContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_ambient; } }
+	}
+
+	[RuleVersion(0)]
+	public AmbientContext ambient() {
+		AmbientContext _localctx = new AmbientContext(Context, State);
+		EnterRule(_localctx, 518, RULE_ambient);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1891;
+			Match(Ambient);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class HostileContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Hostile() { return GetToken(MCCommandParser.Hostile, 0); }
+		public HostileContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_hostile; } }
+	}
+
+	[RuleVersion(0)]
+	public HostileContext hostile() {
+		HostileContext _localctx = new HostileContext(Context, State);
+		EnterRule(_localctx, 520, RULE_hostile);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1893;
+			Match(Hostile);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MasterContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Master() { return GetToken(MCCommandParser.Master, 0); }
+		public MasterContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_master; } }
+	}
+
+	[RuleVersion(0)]
+	public MasterContext master() {
+		MasterContext _localctx = new MasterContext(Context, State);
+		EnterRule(_localctx, 522, RULE_master);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1895;
+			Match(Master);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MusicContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Music() { return GetToken(MCCommandParser.Music, 0); }
+		public MusicContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_music; } }
+	}
+
+	[RuleVersion(0)]
+	public MusicContext music() {
+		MusicContext _localctx = new MusicContext(Context, State);
+		EnterRule(_localctx, 524, RULE_music);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1897;
+			Match(Music);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NeutralContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Neutral() { return GetToken(MCCommandParser.Neutral, 0); }
+		public NeutralContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_neutral; } }
+	}
+
+	[RuleVersion(0)]
+	public NeutralContext neutral() {
+		NeutralContext _localctx = new NeutralContext(Context, State);
+		EnterRule(_localctx, 526, RULE_neutral);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1899;
+			Match(Neutral);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PlayerContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Player() { return GetToken(MCCommandParser.Player, 0); }
+		public PlayerContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_player; } }
+	}
+
+	[RuleVersion(0)]
+	public PlayerContext player() {
+		PlayerContext _localctx = new PlayerContext(Context, State);
+		EnterRule(_localctx, 528, RULE_player);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1901;
+			Match(Player);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RecordContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Record() { return GetToken(MCCommandParser.Record, 0); }
+		public RecordContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_record; } }
+	}
+
+	[RuleVersion(0)]
+	public RecordContext record() {
+		RecordContext _localctx = new RecordContext(Context, State);
+		EnterRule(_localctx, 530, RULE_record);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1903;
+			Match(Record);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class VoiceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Voice() { return GetToken(MCCommandParser.Voice, 0); }
+		public VoiceContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_voice; } }
+	}
+
+	[RuleVersion(0)]
+	public VoiceContext voice() {
+		VoiceContext _localctx = new VoiceContext(Context, State);
+		EnterRule(_localctx, 532, RULE_voice);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1905;
+			Match(Voice);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AppendContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Append() { return GetToken(MCCommandParser.Append, 0); }
+		public AppendContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_append; } }
+	}
+
+	[RuleVersion(0)]
+	public AppendContext append() {
+		AppendContext _localctx = new AppendContext(Context, State);
+		EnterRule(_localctx, 534, RULE_append);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1907;
+			Match(Append);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DismountContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dismount() { return GetToken(MCCommandParser.Dismount, 0); }
+		public DismountContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_dismount; } }
+	}
+
+	[RuleVersion(0)]
+	public DismountContext dismount() {
+		DismountContext _localctx = new DismountContext(Context, State);
+		EnterRule(_localctx, 536, RULE_dismount);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1909;
+			Match(Dismount);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MountContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Mount() { return GetToken(MCCommandParser.Mount, 0); }
+		public MountContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_mount; } }
+	}
+
+	[RuleVersion(0)]
+	public MountContext mount() {
+		MountContext _localctx = new MountContext(Context, State);
+		EnterRule(_localctx, 538, RULE_mount);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1911;
+			Match(Mount);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ObjectivesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Objectives() { return GetToken(MCCommandParser.Objectives, 0); }
+		public ObjectivesContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_objectives; } }
+	}
+
+	[RuleVersion(0)]
+	public ObjectivesContext objectives() {
+		ObjectivesContext _localctx = new ObjectivesContext(Context, State);
+		EnterRule(_localctx, 540, RULE_objectives);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1913;
+			Match(Objectives);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class HeartsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Hearts() { return GetToken(MCCommandParser.Hearts, 0); }
+		public HeartsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_hearts; } }
+	}
+
+	[RuleVersion(0)]
+	public HeartsContext hearts() {
+		HeartsContext _localctx = new HeartsContext(Context, State);
+		EnterRule(_localctx, 542, RULE_hearts);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1915;
+			Match(Hearts);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RendertypeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Rendertype() { return GetToken(MCCommandParser.Rendertype, 0); }
+		public RendertypeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_rendertype; } }
+	}
+
+	[RuleVersion(0)]
+	public RendertypeContext rendertype() {
+		RendertypeContext _localctx = new RendertypeContext(Context, State);
+		EnterRule(_localctx, 544, RULE_rendertype);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1917;
+			Match(Rendertype);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SetdisplayContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Setdisplay() { return GetToken(MCCommandParser.Setdisplay, 0); }
+		public SetdisplayContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_setdisplay; } }
+	}
+
+	[RuleVersion(0)]
+	public SetdisplayContext setdisplay() {
+		SetdisplayContext _localctx = new SetdisplayContext(Context, State);
+		EnterRule(_localctx, 546, RULE_setdisplay);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1919;
+			Match(Setdisplay);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OperationContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Operation() { return GetToken(MCCommandParser.Operation, 0); }
+		public OperationContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_operation; } }
+	}
+
+	[RuleVersion(0)]
+	public OperationContext operation() {
+		OperationContext _localctx = new OperationContext(Context, State);
+		EnterRule(_localctx, 548, RULE_operation);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1921;
+			Match(Operation);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ResetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Reset() { return GetToken(MCCommandParser.Reset, 0); }
+		public ResetContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_reset; } }
+	}
+
+	[RuleVersion(0)]
+	public ResetContext reset() {
+		ResetContext _localctx = new ResetContext(Context, State);
+		EnterRule(_localctx, 550, RULE_reset);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1923;
+			Match(Reset);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class UnderContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Under() { return GetToken(MCCommandParser.Under, 0); }
+		public UnderContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_under; } }
+	}
+
+	[RuleVersion(0)]
+	public UnderContext under() {
+		UnderContext _localctx = new UnderContext(Context, State);
+		EnterRule(_localctx, 552, RULE_under);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1925;
+			Match(Under);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ActionbarContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Actionbar() { return GetToken(MCCommandParser.Actionbar, 0); }
+		public ActionbarContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_actionbar; } }
+	}
+
+	[RuleVersion(0)]
+	public ActionbarContext actionbar() {
+		ActionbarContext _localctx = new ActionbarContext(Context, State);
+		EnterRule(_localctx, 554, RULE_actionbar);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1927;
+			Match(Actionbar);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SubtitleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Subtitle() { return GetToken(MCCommandParser.Subtitle, 0); }
+		public SubtitleContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_subtitle; } }
+	}
+
+	[RuleVersion(0)]
+	public SubtitleContext subtitle() {
+		SubtitleContext _localctx = new SubtitleContext(Context, State);
+		EnterRule(_localctx, 556, RULE_subtitle);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1929;
+			Match(Subtitle);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TimesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Times() { return GetToken(MCCommandParser.Times, 0); }
+		public TimesContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_times; } }
+	}
+
+	[RuleVersion(0)]
+	public TimesContext times() {
+		TimesContext _localctx = new TimesContext(Context, State);
+		EnterRule(_localctx, 558, RULE_times);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1931;
+			Match(Times);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FadeInContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FadeIn() { return GetToken(MCCommandParser.FadeIn, 0); }
+		public FadeInContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_fadeIn; } }
+	}
+
+	[RuleVersion(0)]
+	public FadeInContext fadeIn() {
+		FadeInContext _localctx = new FadeInContext(Context, State);
+		EnterRule(_localctx, 560, RULE_fadeIn);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1933;
+			Match(FadeIn);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StayContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Stay() { return GetToken(MCCommandParser.Stay, 0); }
+		public StayContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_stay; } }
+	}
+
+	[RuleVersion(0)]
+	public StayContext stay() {
+		StayContext _localctx = new StayContext(Context, State);
+		EnterRule(_localctx, 562, RULE_stay);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1935;
+			Match(Stay);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FadeOutContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FadeOut() { return GetToken(MCCommandParser.FadeOut, 0); }
+		public FadeOutContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_fadeOut; } }
+	}
+
+	[RuleVersion(0)]
+	public FadeOutContext fadeOut() {
+		FadeOutContext _localctx = new FadeOutContext(Context, State);
+		EnterRule(_localctx, 564, RULE_fadeOut);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1937;
+			Match(FadeOut);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class CenterContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Center() { return GetToken(MCCommandParser.Center, 0); }
+		public CenterContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_center; } }
+	}
+
+	[RuleVersion(0)]
+	public CenterContext center() {
+		CenterContext _localctx = new CenterContext(Context, State);
+		EnterRule(_localctx, 566, RULE_center);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1939;
+			Match(Center);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class WarningContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Warning() { return GetToken(MCCommandParser.Warning, 0); }
+		public WarningContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_warning; } }
+	}
+
+	[RuleVersion(0)]
+	public WarningContext warning() {
+		WarningContext _localctx = new WarningContext(Context, State);
+		EnterRule(_localctx, 568, RULE_warning);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1941;
+			Match(Warning);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AmountContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Amount() { return GetToken(MCCommandParser.Amount, 0); }
+		public AmountContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_amount; } }
+	}
+
+	[RuleVersion(0)]
+	public AmountContext amount() {
+		AmountContext _localctx = new AmountContext(Context, State);
+		EnterRule(_localctx, 570, RULE_amount);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1943;
+			Match(Amount);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BufferContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Buffer() { return GetToken(MCCommandParser.Buffer, 0); }
+		public BufferContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_buffer; } }
+	}
+
+	[RuleVersion(0)]
+	public BufferContext buffer() {
+		BufferContext _localctx = new BufferContext(Context, State);
+		EnterRule(_localctx, 572, RULE_buffer);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1945;
+			Match(Buffer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FacingContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Facing() { return GetToken(MCCommandParser.Facing, 0); }
+		public FacingContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_facing; } }
+	}
+
+	[RuleVersion(0)]
+	public FacingContext facing() {
+		FacingContext _localctx = new FacingContext(Context, State);
+		EnterRule(_localctx, 574, RULE_facing);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1947;
+			Match(Facing);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PrependContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Prepend() { return GetToken(MCCommandParser.Prepend, 0); }
+		public PrependContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_prepend; } }
+	}
+
+	[RuleVersion(0)]
+	public PrependContext prepend() {
+		PrependContext _localctx = new PrependContext(Context, State);
+		EnterRule(_localctx, 576, RULE_prepend);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1949;
+			Match(Prepend);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class WithContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode With() { return GetToken(MCCommandParser.With, 0); }
+		public WithContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_with; } }
+	}
+
+	[RuleVersion(0)]
+	public WithContext with() {
+		WithContext _localctx = new WithContext(Context, State);
+		EnterRule(_localctx, 578, RULE_with);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1951;
+			Match(With);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MainhandContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Mainhand() { return GetToken(MCCommandParser.Mainhand, 0); }
+		public MainhandContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_mainhand; } }
+	}
+
+	[RuleVersion(0)]
+	public MainhandContext mainhand() {
+		MainhandContext _localctx = new MainhandContext(Context, State);
+		EnterRule(_localctx, 580, RULE_mainhand);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1953;
+			Match(Mainhand);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OffhandContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Offhand() { return GetToken(MCCommandParser.Offhand, 0); }
+		public OffhandContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_offhand; } }
+	}
+
+	[RuleVersion(0)]
+	public OffhandContext offhand() {
+		OffhandContext _localctx = new OffhandContext(Context, State);
+		EnterRule(_localctx, 582, RULE_offhand);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1955;
+			Match(Offhand);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TakeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Take() { return GetToken(MCCommandParser.Take, 0); }
+		public TakeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_take; } }
+	}
+
+	[RuleVersion(0)]
+	public TakeContext take() {
+		TakeContext _localctx = new TakeContext(Context, State);
+		EnterRule(_localctx, 584, RULE_take);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1957;
+			Match(Take);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class AlwaysContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Always() { return GetToken(MCCommandParser.Always, 0); }
+		public AlwaysContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_always; } }
+	}
+
+	[RuleVersion(0)]
+	public AlwaysContext always() {
+		AlwaysContext _localctx = new AlwaysContext(Context, State);
+		EnterRule(_localctx, 586, RULE_always);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1959;
+			Match(Always);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NeverContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Never() { return GetToken(MCCommandParser.Never, 0); }
+		public NeverContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_never; } }
+	}
+
+	[RuleVersion(0)]
+	public NeverContext never() {
+		NeverContext _localctx = new NeverContext(Context, State);
+		EnterRule(_localctx, 588, RULE_never);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1961;
+			Match(Never);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PushOtherTeamsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PushOtherTeams() { return GetToken(MCCommandParser.PushOtherTeams, 0); }
+		public PushOtherTeamsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_pushOtherTeams; } }
+	}
+
+	[RuleVersion(0)]
+	public PushOtherTeamsContext pushOtherTeams() {
+		PushOtherTeamsContext _localctx = new PushOtherTeamsContext(Context, State);
+		EnterRule(_localctx, 590, RULE_pushOtherTeams);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1963;
+			Match(PushOtherTeams);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PushOwnTeamContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PushOwnTeam() { return GetToken(MCCommandParser.PushOwnTeam, 0); }
+		public PushOwnTeamContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_pushOwnTeam; } }
+	}
+
+	[RuleVersion(0)]
+	public PushOwnTeamContext pushOwnTeam() {
+		PushOwnTeamContext _localctx = new PushOwnTeamContext(Context, State);
+		EnterRule(_localctx, 592, RULE_pushOwnTeam);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1965;
+			Match(PushOwnTeam);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class HideForOtherTeamsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode HideForOtherTeams() { return GetToken(MCCommandParser.HideForOtherTeams, 0); }
+		public HideForOtherTeamsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_hideForOtherTeams; } }
+	}
+
+	[RuleVersion(0)]
+	public HideForOtherTeamsContext hideForOtherTeams() {
+		HideForOtherTeamsContext _localctx = new HideForOtherTeamsContext(Context, State);
+		EnterRule(_localctx, 594, RULE_hideForOtherTeams);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1967;
+			Match(HideForOtherTeams);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class HideForOwnTeamContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode HideForOwnTeam() { return GetToken(MCCommandParser.HideForOwnTeam, 0); }
+		public HideForOwnTeamContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_hideForOwnTeam; } }
+	}
+
+	[RuleVersion(0)]
+	public HideForOwnTeamContext hideForOwnTeam() {
+		HideForOwnTeamContext _localctx = new HideForOwnTeamContext(Context, State);
+		EnterRule(_localctx, 596, RULE_hideForOwnTeam);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1969;
+			Match(HideForOwnTeam);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FriendlyFireContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FriendlyFire() { return GetToken(MCCommandParser.FriendlyFire, 0); }
+		public FriendlyFireContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_friendlyFire; } }
+	}
+
+	[RuleVersion(0)]
+	public FriendlyFireContext friendlyFire() {
+		FriendlyFireContext _localctx = new FriendlyFireContext(Context, State);
+		EnterRule(_localctx, 598, RULE_friendlyFire);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1971;
+			Match(FriendlyFire);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NametagVisibilityContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NametagVisibility() { return GetToken(MCCommandParser.NametagVisibility, 0); }
+		public NametagVisibilityContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_nametagVisibility; } }
+	}
+
+	[RuleVersion(0)]
+	public NametagVisibilityContext nametagVisibility() {
+		NametagVisibilityContext _localctx = new NametagVisibilityContext(Context, State);
+		EnterRule(_localctx, 600, RULE_nametagVisibility);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1973;
+			Match(NametagVisibility);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SeeFriendlyInvisiblesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeeFriendlyInvisibles() { return GetToken(MCCommandParser.SeeFriendlyInvisibles, 0); }
+		public SeeFriendlyInvisiblesContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_seeFriendlyInvisibles; } }
+	}
+
+	[RuleVersion(0)]
+	public SeeFriendlyInvisiblesContext seeFriendlyInvisibles() {
+		SeeFriendlyInvisiblesContext _localctx = new SeeFriendlyInvisiblesContext(Context, State);
+		EnterRule(_localctx, 602, RULE_seeFriendlyInvisibles);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1975;
+			Match(SeeFriendlyInvisibles);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class RainContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Rain() { return GetToken(MCCommandParser.Rain, 0); }
+		public RainContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_rain; } }
+	}
+
+	[RuleVersion(0)]
+	public RainContext rain() {
+		RainContext _localctx = new RainContext(Context, State);
+		EnterRule(_localctx, 604, RULE_rain);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1977;
+			Match(Rain);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ThunderContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Thunder() { return GetToken(MCCommandParser.Thunder, 0); }
+		public ThunderContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_thunder; } }
+	}
+
+	[RuleVersion(0)]
+	public ThunderContext thunder() {
+		ThunderContext _localctx = new ThunderContext(Context, State);
+		EnterRule(_localctx, 606, RULE_thunder);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1979;
+			Match(Thunder);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DayContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Day() { return GetToken(MCCommandParser.Day, 0); }
+		public DayContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_day; } }
+	}
+
+	[RuleVersion(0)]
+	public DayContext day() {
+		DayContext _localctx = new DayContext(Context, State);
+		EnterRule(_localctx, 608, RULE_day);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1981;
+			Match(Day);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class MidnightContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Midnight() { return GetToken(MCCommandParser.Midnight, 0); }
+		public MidnightContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_midnight; } }
+	}
+
+	[RuleVersion(0)]
+	public MidnightContext midnight() {
+		MidnightContext _localctx = new MidnightContext(Context, State);
+		EnterRule(_localctx, 610, RULE_midnight);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1983;
+			Match(Midnight);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NightContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Night() { return GetToken(MCCommandParser.Night, 0); }
+		public NightContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_night; } }
+	}
+
+	[RuleVersion(0)]
+	public NightContext night() {
+		NightContext _localctx = new NightContext(Context, State);
+		EnterRule(_localctx, 612, RULE_night);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1985;
+			Match(Night);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DaytimeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Daytime() { return GetToken(MCCommandParser.Daytime, 0); }
+		public DaytimeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_daytime; } }
+	}
+
+	[RuleVersion(0)]
+	public DaytimeContext daytime() {
+		DaytimeContext _localctx = new DaytimeContext(Context, State);
+		EnterRule(_localctx, 614, RULE_daytime);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1987;
+			Match(Daytime);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class NoonContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Noon() { return GetToken(MCCommandParser.Noon, 0); }
+		public NoonContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_noon; } }
+	}
+
+	[RuleVersion(0)]
+	public NoonContext noon() {
+		NoonContext _localctx = new NoonContext(Context, State);
+		EnterRule(_localctx, 616, RULE_noon);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1989;
+			Match(Noon);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class GametimeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Gametime() { return GetToken(MCCommandParser.Gametime, 0); }
+		public GametimeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_gametime; } }
+	}
+
+	[RuleVersion(0)]
+	public GametimeContext gametime() {
+		GametimeContext _localctx = new GametimeContext(Context, State);
+		EnterRule(_localctx, 618, RULE_gametime);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1991;
+			Match(Gametime);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DistanceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Distance() { return GetToken(MCCommandParser.Distance, 0); }
+		public DistanceContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_distance; } }
+	}
+
+	[RuleVersion(0)]
+	public DistanceContext distance() {
+		DistanceContext _localctx = new DistanceContext(Context, State);
+		EnterRule(_localctx, 620, RULE_distance);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1993;
+			Match(Distance);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class EmptyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Empty() { return GetToken(MCCommandParser.Empty, 0); }
+		public EmptyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_empty; } }
+	}
+
+	[RuleVersion(0)]
+	public EmptyContext empty() {
+		EmptyContext _localctx = new EmptyContext(Context, State);
+		EnterRule(_localctx, 622, RULE_empty);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1995;
+			Match(Empty);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class JoinContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Join() { return GetToken(MCCommandParser.Join, 0); }
+		public JoinContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_join; } }
+	}
+
+	[RuleVersion(0)]
+	public JoinContext join() {
+		JoinContext _localctx = new JoinContext(Context, State);
+		EnterRule(_localctx, 624, RULE_join);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1997;
+			Match(Join);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LeaveContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Leave() { return GetToken(MCCommandParser.Leave, 0); }
+		public LeaveContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_leave; } }
+	}
+
+	[RuleVersion(0)]
+	public LeaveContext leave() {
+		LeaveContext _localctx = new LeaveContext(Context, State);
+		EnterRule(_localctx, 626, RULE_leave);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 1999;
+			Match(Leave);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class CollisionRuleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CollisionRule() { return GetToken(MCCommandParser.CollisionRule, 0); }
+		public CollisionRuleContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_collisionRule; } }
+	}
+
+	[RuleVersion(0)]
+	public CollisionRuleContext collisionRule() {
+		CollisionRuleContext _localctx = new CollisionRuleContext(Context, State);
+		EnterRule(_localctx, 628, RULE_collisionRule);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2001;
+			Match(CollisionRule);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DeathMessageVisibilityContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DeathMessageVisibility() { return GetToken(MCCommandParser.DeathMessageVisibility, 0); }
+		public DeathMessageVisibilityContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_deathMessageVisibility; } }
+	}
+
+	[RuleVersion(0)]
+	public DeathMessageVisibilityContext deathMessageVisibility() {
+		DeathMessageVisibilityContext _localctx = new DeathMessageVisibilityContext(Context, State);
+		EnterRule(_localctx, 630, RULE_deathMessageVisibility);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2003;
+			Match(DeathMessageVisibility);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class PrefixContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Prefix() { return GetToken(MCCommandParser.Prefix, 0); }
+		public PrefixContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_prefix; } }
+	}
+
+	[RuleVersion(0)]
+	public PrefixContext prefix() {
+		PrefixContext _localctx = new PrefixContext(Context, State);
+		EnterRule(_localctx, 632, RULE_prefix);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2005;
+			Match(Prefix);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SuffixContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Suffix() { return GetToken(MCCommandParser.Suffix, 0); }
+		public SuffixContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_suffix; } }
+	}
+
+	[RuleVersion(0)]
+	public SuffixContext suffix() {
+		SuffixContext _localctx = new SuffixContext(Context, State);
+		EnterRule(_localctx, 634, RULE_suffix);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2007;
+			Match(Suffix);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DisplayNameContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode DisplayName() { return GetToken(MCCommandParser.DisplayName, 0); }
+		public DisplayNameContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_displayName; } }
+	}
+
+	[RuleVersion(0)]
+	public DisplayNameContext displayName() {
+		DisplayNameContext _localctx = new DisplayNameContext(Context, State);
+		EnterRule(_localctx, 636, RULE_displayName);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2009;
+			Match(DisplayName);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class BooleanValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BooleanValue() { return GetToken(MCCommandParser.BooleanValue, 0); }
+		public BooleanValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_booleanValue; } }
+	}
+
+	[RuleVersion(0)]
+	public BooleanValueContext booleanValue() {
+		BooleanValueContext _localctx = new BooleanValueContext(Context, State);
+		EnterRule(_localctx, 638, RULE_booleanValue);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2011;
+			Match(BooleanValue);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OneHundredAndEightyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode OneHundredAndEighty() { return GetToken(MCCommandParser.OneHundredAndEighty, 0); }
+		public OneHundredAndEightyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_oneHundredAndEighty; } }
+	}
+
+	[RuleVersion(0)]
+	public OneHundredAndEightyContext oneHundredAndEighty() {
+		OneHundredAndEightyContext _localctx = new OneHundredAndEightyContext(Context, State);
+		EnterRule(_localctx, 640, RULE_oneHundredAndEighty);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2013;
+			Match(OneHundredAndEighty);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
 	public partial class AdvancementRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public GrantOrRevokeContext grantOrRevoke() {
-			return GetRuleContext<GrantOrRevokeContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public AdvancementKeyContext advancementKey() {
+			return GetRuleContext<AdvancementKeyContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public AdvancementModesContext advancementModes() {
 			return GetRuleContext<AdvancementModesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GrantContext grant() {
+			return GetRuleContext<GrantContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RevokeContext revoke() {
+			return GetRuleContext<RevokeContext>(0);
 		}
 		public AdvancementRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3241,17 +12369,33 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public AdvancementRadicalContext advancementRadical() {
 		AdvancementRadicalContext _localctx = new AdvancementRadicalContext(Context, State);
-		EnterRule(_localctx, 74, RULE_advancementRadical);
+		EnterRule(_localctx, 642, RULE_advancementRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 920;
-			Match(T__30);
-			State = 921;
-			grantOrRevoke();
-			State = 922;
+			State = 2015;
+			advancementKey();
+			State = 2018;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Grant:
+				{
+				State = 2016;
+				grant();
+				}
+				break;
+			case Revoke:
+				{
+				State = 2017;
+				revoke();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+			State = 2020;
 			selector();
-			State = 923;
+			State = 2021;
 			advancementModes();
 			}
 		}
@@ -3266,31 +12410,24 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class GrantOrRevokeContext : ParserRuleContext {
-		public GrantOrRevokeContext(ParserRuleContext parent, int invokingState)
+	public partial class AdvancementCriterionContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FileReference() { return GetToken(MCCommandParser.FileReference, 0); }
+		public AdvancementCriterionContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_grantOrRevoke; } }
+		public override int RuleIndex { get { return RULE_advancementCriterion; } }
 	}
 
 	[RuleVersion(0)]
-	public GrantOrRevokeContext grantOrRevoke() {
-		GrantOrRevokeContext _localctx = new GrantOrRevokeContext(Context, State);
-		EnterRule(_localctx, 76, RULE_grantOrRevoke);
-		int _la;
+	public AdvancementCriterionContext advancementCriterion() {
+		AdvancementCriterionContext _localctx = new AdvancementCriterionContext(Context, State);
+		EnterRule(_localctx, 644, RULE_advancementCriterion);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 925;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__31 || _la==T__32) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2023;
+			Match(FileReference);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3304,24 +12441,74 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class AdvancementCriterionContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
-		public AdvancementCriterionContext(ParserRuleContext parent, int invokingState)
+	public partial class AdvancementCriterionBlockContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AdvancementCriterionContext advancementCriterion() {
+			return GetRuleContext<AdvancementCriterionContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EqualContext[] equal() {
+			return GetRuleContexts<EqualContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EqualContext equal(int i) {
+			return GetRuleContext<EqualContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BooleanValueContext booleanValue() {
+			return GetRuleContext<BooleanValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LeftCurlyBracketContext leftCurlyBracket() {
+			return GetRuleContext<LeftCurlyBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IdentifierContext identifier() {
+			return GetRuleContext<IdentifierContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RightCurlyBracketContext rightCurlyBracket() {
+			return GetRuleContext<RightCurlyBracketContext>(0);
+		}
+		public AdvancementCriterionBlockContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_advancementCriterion; } }
+		public override int RuleIndex { get { return RULE_advancementCriterionBlock; } }
 	}
 
 	[RuleVersion(0)]
-	public AdvancementCriterionContext advancementCriterion() {
-		AdvancementCriterionContext _localctx = new AdvancementCriterionContext(Context, State);
-		EnterRule(_localctx, 78, RULE_advancementCriterion);
+	public AdvancementCriterionBlockContext advancementCriterionBlock() {
+		AdvancementCriterionBlockContext _localctx = new AdvancementCriterionBlockContext(Context, State);
+		EnterRule(_localctx, 646, RULE_advancementCriterionBlock);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 927;
-			Match(IdString);
+			State = 2025;
+			advancementCriterion();
+			State = 2026;
+			equal();
+			State = 2034;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case BooleanValue:
+				{
+				State = 2027;
+				booleanValue();
+				}
+				break;
+			case LeftCurlyBracket:
+				{
+				{
+				State = 2028;
+				leftCurlyBracket();
+				State = 2029;
+				identifier();
+				State = 2030;
+				equal();
+				State = 2031;
+				booleanValue();
+				State = 2032;
+				rightCurlyBracket();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -3336,7 +12523,23 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class AdvancementValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CurlyBrackets() { return GetToken(MCCommandParser.CurlyBrackets, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public LeftCurlyBracketContext leftCurlyBracket() {
+			return GetRuleContext<LeftCurlyBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AdvancementCriterionBlockContext[] advancementCriterionBlock() {
+			return GetRuleContexts<AdvancementCriterionBlockContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AdvancementCriterionBlockContext advancementCriterionBlock(int i) {
+			return GetRuleContext<AdvancementCriterionBlockContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RightCurlyBracketContext rightCurlyBracket() {
+			return GetRuleContext<RightCurlyBracketContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(MCCommandParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(MCCommandParser.Comma, i);
+		}
 		public AdvancementValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -3347,12 +12550,50 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public AdvancementValueContext advancementValue() {
 		AdvancementValueContext _localctx = new AdvancementValueContext(Context, State);
-		EnterRule(_localctx, 80, RULE_advancementValue);
+		EnterRule(_localctx, 648, RULE_advancementValue);
+		int _la;
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 929;
-			Match(FilePath);
+			State = 2048;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case CurlyBrackets:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2036;
+				Match(CurlyBrackets);
+				}
+				break;
+			case LeftCurlyBracket:
+				EnterOuterAlt(_localctx, 2);
+				{
+				{
+				State = 2037;
+				leftCurlyBracket();
+				State = 2038;
+				advancementCriterionBlock();
+				State = 2043;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				while (_la==Comma) {
+					{
+					{
+					State = 2039;
+					Match(Comma);
+					State = 2040;
+					advancementCriterionBlock();
+					}
+					}
+					State = 2045;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				}
+				State = 2046;
+				rightCurlyBracket();
+				}
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3367,11 +12608,23 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class AdvancementModesContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public AdvancementValueContext advancementValue() {
-			return GetRuleContext<AdvancementValueContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EverythingContext everything() {
+			return GetRuleContext<EverythingContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OnlyContext only() {
+			return GetRuleContext<OnlyContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public AdvancementCriterionContext advancementCriterion() {
 			return GetRuleContext<AdvancementCriterionContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public FromContext from() {
+			return GetRuleContext<FromContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ThroughContext through() {
+			return GetRuleContext<ThroughContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public UntilContext until() {
+			return GetRuleContext<UntilContext>(0);
 		}
 		public AdvancementModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3383,32 +12636,30 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public AdvancementModesContext advancementModes() {
 		AdvancementModesContext _localctx = new AdvancementModesContext(Context, State);
-		EnterRule(_localctx, 82, RULE_advancementModes);
+		EnterRule(_localctx, 650, RULE_advancementModes);
 		try {
-			State = 944;
+			State = 2065;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__33:
-			case T__34:
+			case Everything:
+			case Only:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 936;
+				State = 2054;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case T__33:
+				case Everything:
 					{
-					State = 931;
-					Match(T__33);
+					State = 2050;
+					everything();
 					}
 					break;
-				case T__34:
+				case Only:
 					{
 					{
-					State = 932;
-					Match(T__34);
-					State = 933;
-					advancementValue();
-					State = 934;
+					State = 2051;
+					only();
+					State = 2052;
 					advancementCriterion();
 					}
 					}
@@ -3418,36 +12669,36 @@ public partial class mccommandParser : Parser {
 				}
 				}
 				break;
-			case T__35:
+			case From:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 938;
-				Match(T__35);
-				State = 939;
-				advancementValue();
+				State = 2056;
+				from();
+				State = 2057;
+				advancementCriterion();
 				}
 				}
 				break;
-			case T__36:
+			case Through:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 940;
-				Match(T__36);
-				State = 941;
-				advancementValue();
+				State = 2059;
+				through();
+				State = 2060;
+				advancementCriterion();
 				}
 				}
 				break;
-			case T__37:
+			case Until:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 942;
-				Match(T__37);
-				State = 943;
-				advancementValue();
+				State = 2062;
+				until();
+				State = 2063;
+				advancementCriterion();
 				}
 				}
 				break;
@@ -3467,6 +12718,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class AttributeRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AttributeKeyContext attributeKey() {
+			return GetRuleContext<AttributeKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -3486,17 +12740,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public AttributeRadicalContext attributeRadical() {
 		AttributeRadicalContext _localctx = new AttributeRadicalContext(Context, State);
-		EnterRule(_localctx, 84, RULE_attributeRadical);
+		EnterRule(_localctx, 652, RULE_attributeRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 946;
-			Match(T__38);
-			State = 947;
+			State = 2067;
+			attributeKey();
+			State = 2068;
 			selector();
-			State = 948;
+			State = 2069;
 			mobAttribute();
-			State = 949;
+			State = 2070;
 			attributeOptions();
 			}
 		}
@@ -3512,11 +12766,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class AttributeOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BaseContext @base() {
+			return GetRuleContext<BaseContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BaseModifierContext baseModifier() {
 			return GetRuleContext<BaseModifierContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public GetContext get() {
+			return GetRuleContext<GetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ModifierContext modifier() {
+			return GetRuleContext<ModifierContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ModifierOptionsContext modifierOptions() {
 			return GetRuleContext<ModifierOptionsContext>(0);
@@ -3531,42 +12792,42 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public AttributeOptionsContext attributeOptions() {
 		AttributeOptionsContext _localctx = new AttributeOptionsContext(Context, State);
-		EnterRule(_localctx, 86, RULE_attributeOptions);
+		EnterRule(_localctx, 654, RULE_attributeOptions);
 		try {
-			State = 959;
+			State = 2082;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__39:
+			case Base:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 951;
-				Match(T__39);
-				State = 952;
+				State = 2072;
+				@base();
+				State = 2073;
 				baseModifier();
-				State = 953;
-				number();
+				State = 2074;
+				Match(Double);
 				}
 				}
 				break;
-			case T__40:
+			case Get:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 955;
-				Match(T__40);
-				State = 956;
-				number();
+				State = 2076;
+				get();
+				State = 2077;
+				Match(Double);
 				}
 				}
 				break;
-			case T__41:
+			case Modifier:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 957;
-				Match(T__41);
-				State = 958;
+				State = 2079;
+				modifier();
+				State = 2080;
 				modifierOptions();
 				}
 				}
@@ -3587,6 +12848,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BaseModifierContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public GetContext get() {
+			return GetRuleContext<GetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
+		}
 		public BaseModifierContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -3597,50 +12864,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BaseModifierContext baseModifier() {
 		BaseModifierContext _localctx = new BaseModifierContext(Context, State);
-		EnterRule(_localctx, 88, RULE_baseModifier);
-		int _la;
+		EnterRule(_localctx, 656, RULE_baseModifier);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 961;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__40 || _la==T__42) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class GetContext : ParserRuleContext {
-		public GetContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_get; } }
-	}
-
-	[RuleVersion(0)]
-	public GetContext get() {
-		GetContext _localctx = new GetContext(Context, State);
-		EnterRule(_localctx, 90, RULE_get);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 963;
-			Match(T__40);
+			State = 2086;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Get:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2084;
+				get();
+				}
+				break;
+			case Set:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2085;
+				set();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3655,17 +12899,24 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ModifierOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public UuidContext uuid() {
 			return GetRuleContext<UuidContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public StringRuleContext stringRule() {
-			return GetRuleContext<StringRuleContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public StringValueContext stringValue() {
+			return GetRuleContext<StringValueContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
-		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ModifierModesContext modifierModes() {
 			return GetRuleContext<ModifierModesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value() {
+			return GetRuleContext<ValueContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public GetContext get() {
 			return GetRuleContext<GetContext>(0);
@@ -3680,55 +12931,51 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ModifierOptionsContext modifierOptions() {
 		ModifierOptionsContext _localctx = new ModifierOptionsContext(Context, State);
-		EnterRule(_localctx, 92, RULE_modifierOptions);
+		EnterRule(_localctx, 658, RULE_modifierOptions);
 		try {
-			State = 980;
+			State = 2102;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 965;
-				Match(T__43);
-				State = 966;
+				State = 2088;
+				add();
+				State = 2089;
 				uuid();
-				State = 967;
-				Match(T__16);
-				State = 968;
-				stringRule();
-				State = 969;
-				Match(T__16);
-				State = 970;
-				number();
-				State = 971;
+				State = 2090;
+				stringValue();
+				State = 2091;
+				Match(Double);
+				State = 2092;
 				modifierModes();
 				}
 				}
 				break;
-			case T__44:
+			case Remove:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 973;
-				Match(T__44);
-				State = 974;
+				State = 2094;
+				remove();
+				State = 2095;
 				uuid();
 				}
 				}
 				break;
-			case T__45:
+			case Value:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 975;
-				Match(T__45);
-				State = 976;
+				State = 2097;
+				value();
+				State = 2098;
 				get();
-				State = 977;
+				State = 2099;
 				uuid();
-				State = 978;
-				number();
+				State = 2100;
+				Match(Double);
 				}
 				}
 				break;
@@ -3748,6 +12995,15 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ModifierModesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MultiplyContext multiply() {
+			return GetRuleContext<MultiplyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public Multiply_baseContext multiply_base() {
+			return GetRuleContext<Multiply_baseContext>(0);
+		}
 		public ModifierModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -3758,20 +13014,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ModifierModesContext modifierModes() {
 		ModifierModesContext _localctx = new ModifierModesContext(Context, State);
-		EnterRule(_localctx, 94, RULE_modifierModes);
-		int _la;
+		EnterRule(_localctx, 660, RULE_modifierModes);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 982;
-			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 439804651110400L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2107;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Add:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2104;
+				add();
+				}
+				break;
+			case Multiply:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2105;
+				multiply();
+				}
+				break;
+			case Multiply_Base:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 2106;
+				multiply_base();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3786,6 +13056,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BossbarRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BossbarKeyContext bossbarKey() {
+			return GetRuleContext<BossbarKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BossbarOptionsContext bossbarOptions() {
 			return GetRuleContext<BossbarOptionsContext>(0);
 		}
@@ -3799,13 +13072,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BossbarRadicalContext bossbarRadical() {
 		BossbarRadicalContext _localctx = new BossbarRadicalContext(Context, State);
-		EnterRule(_localctx, 96, RULE_bossbarRadical);
+		EnterRule(_localctx, 662, RULE_bossbarRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 984;
-			Match(T__48);
-			State = 985;
+			State = 2109;
+			bossbarKey();
+			State = 2110;
 			bossbarOptions();
 			}
 		}
@@ -3820,55 +13093,24 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class BossbarIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BossbarId() { return GetToken(mccommandParser.BossbarId, 0); }
-		public BossbarIdContext(ParserRuleContext parent, int invokingState)
+	public partial class BossbarIDContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		public BossbarIDContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_bossbarId; } }
+		public override int RuleIndex { get { return RULE_bossbarID; } }
 	}
 
 	[RuleVersion(0)]
-	public BossbarIdContext bossbarId() {
-		BossbarIdContext _localctx = new BossbarIdContext(Context, State);
-		EnterRule(_localctx, 98, RULE_bossbarId);
+	public BossbarIDContext bossbarID() {
+		BossbarIDContext _localctx = new BossbarIDContext(Context, State);
+		EnterRule(_localctx, 664, RULE_bossbarID);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 987;
-			Match(BossbarId);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class BossbarIdStringContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BossbarId() { return GetToken(mccommandParser.BossbarId, 0); }
-		public BossbarIdStringContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_bossbarIdString; } }
-	}
-
-	[RuleVersion(0)]
-	public BossbarIdStringContext bossbarIdString() {
-		BossbarIdStringContext _localctx = new BossbarIdStringContext(Context, State);
-		EnterRule(_localctx, 100, RULE_bossbarIdString);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 989;
-			Match(BossbarId);
+			State = 2112;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3883,17 +13125,29 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BossbarOptionsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public BossbarIdStringContext bossbarIdString() {
-			return GetRuleContext<BossbarIdStringContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ListKeyContext listKey() {
+			return GetRuleContext<ListKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BossbarIDContext bossbarID() {
+			return GetRuleContext<BossbarIDContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public JsonComponentContext jsonComponent() {
 			return GetRuleContext<JsonComponentContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BossbarIdContext bossbarId() {
-			return GetRuleContext<BossbarIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public GetContext get() {
+			return GetRuleContext<GetContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public BossbarGetTargetContext bossbarGetTarget() {
 			return GetRuleContext<BossbarGetTargetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public BossbarAttributesContext bossbarAttributes() {
 			return GetRuleContext<BossbarAttributesContext>(0);
@@ -3908,61 +13162,61 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BossbarOptionsContext bossbarOptions() {
 		BossbarOptionsContext _localctx = new BossbarOptionsContext(Context, State);
-		EnterRule(_localctx, 102, RULE_bossbarOptions);
+		EnterRule(_localctx, 666, RULE_bossbarOptions);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1006;
+			State = 2130;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				{
 				{
-				State = 991;
-				Match(T__43);
-				State = 992;
-				bossbarIdString();
-				State = 993;
+				State = 2114;
+				add();
+				State = 2115;
+				bossbarID();
+				State = 2116;
 				jsonComponent();
 				}
 				}
 				break;
-			case T__40:
+			case Get:
 				{
 				{
-				State = 995;
-				Match(T__40);
-				State = 996;
-				bossbarId();
-				State = 997;
+				State = 2118;
+				get();
+				State = 2119;
+				bossbarID();
+				State = 2120;
 				bossbarGetTarget();
 				}
 				}
 				break;
-			case T__49:
+			case ListKey:
 				{
-				State = 999;
-				Match(T__49);
+				State = 2122;
+				listKey();
 				}
 				break;
-			case T__44:
+			case Remove:
 				{
 				{
-				State = 1000;
-				Match(T__44);
-				State = 1001;
-				bossbarId();
+				State = 2123;
+				remove();
+				State = 2124;
+				bossbarID();
 				}
 				}
 				break;
-			case T__42:
+			case Set:
 				{
 				{
-				State = 1002;
-				Match(T__42);
-				State = 1003;
-				bossbarId();
-				State = 1004;
+				State = 2126;
+				set();
+				State = 2127;
+				bossbarID();
+				State = 2128;
 				bossbarAttributes();
 				}
 				}
@@ -3984,7 +13238,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BossbarStyleContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public BossbarStyleContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -3995,12 +13249,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BossbarStyleContext bossbarStyle() {
 		BossbarStyleContext _localctx = new BossbarStyleContext(Context, State);
-		EnterRule(_localctx, 104, RULE_bossbarStyle);
+		EnterRule(_localctx, 668, RULE_bossbarStyle);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1008;
-			Match(IdString);
+			State = 2132;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4015,7 +13269,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BossbarColorContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public BossbarColorContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4026,12 +13280,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BossbarColorContext bossbarColor() {
 		BossbarColorContext _localctx = new BossbarColorContext(Context, State);
-		EnterRule(_localctx, 106, RULE_bossbarColor);
+		EnterRule(_localctx, 670, RULE_bossbarColor);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1010;
-			Match(IdString);
+			State = 2134;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4046,6 +13300,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BossbarGetTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public MaxContext max() {
+			return GetRuleContext<MaxContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PlayersContext players() {
+			return GetRuleContext<PlayersContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value() {
+			return GetRuleContext<ValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public VisibleContext visible() {
+			return GetRuleContext<VisibleContext>(0);
+		}
 		public BossbarGetTargetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4056,20 +13322,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BossbarGetTargetContext bossbarGetTarget() {
 		BossbarGetTargetContext _localctx = new BossbarGetTargetContext(Context, State);
-		EnterRule(_localctx, 108, RULE_bossbarGetTarget);
-		int _la;
+		EnterRule(_localctx, 672, RULE_bossbarGetTarget);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1012;
-			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 15832967439974400L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2140;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Max:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2136;
+				max();
+				}
+				break;
+			case Players:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2137;
+				players();
+				}
+				break;
+			case Value:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 2138;
+				value();
+				}
+				break;
+			case Visible:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 2139;
+				visible();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4084,20 +13371,41 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class BossbarAttributesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ColorContext color() {
+			return GetRuleContext<ColorContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BossbarColorContext bossbarColor() {
 			return GetRuleContext<BossbarColorContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public MaxContext max() {
+			return GetRuleContext<MaxContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NameContext name() {
+			return GetRuleContext<NameContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public JsonComponentContext jsonComponent() {
 			return GetRuleContext<JsonComponentContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public PlayersContext players() {
+			return GetRuleContext<PlayersContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public StyleContext style() {
+			return GetRuleContext<StyleContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BossbarStyleContext bossbarStyle() {
 			return GetRuleContext<BossbarStyleContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value() {
+			return GetRuleContext<ValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public VisibleContext visible() {
+			return GetRuleContext<VisibleContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public BoolContext @bool() {
 			return GetRuleContext<BoolContext>(0);
@@ -4112,84 +13420,84 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public BossbarAttributesContext bossbarAttributes() {
 		BossbarAttributesContext _localctx = new BossbarAttributesContext(Context, State);
-		EnterRule(_localctx, 110, RULE_bossbarAttributes);
+		EnterRule(_localctx, 674, RULE_bossbarAttributes);
 		try {
-			State = 1028;
+			State = 2163;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__53:
+			case Color:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1014;
-				Match(T__53);
-				State = 1015;
+				State = 2142;
+				color();
+				State = 2143;
 				bossbarColor();
 				}
 				}
 				break;
-			case T__50:
+			case Max:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1016;
-				Match(T__50);
-				State = 1017;
-				@int();
+				State = 2145;
+				max();
+				State = 2146;
+				integer();
 				}
 				}
 				break;
-			case T__54:
+			case Name:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1018;
-				Match(T__54);
-				State = 1019;
+				State = 2148;
+				name();
+				State = 2149;
 				jsonComponent();
 				}
 				}
 				break;
-			case T__51:
+			case Players:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1020;
-				Match(T__51);
-				State = 1021;
+				State = 2151;
+				players();
+				State = 2152;
 				selector();
 				}
 				}
 				break;
-			case T__55:
+			case Style:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 1022;
-				Match(T__55);
-				State = 1023;
+				State = 2154;
+				style();
+				State = 2155;
 				bossbarStyle();
 				}
 				}
 				break;
-			case T__45:
+			case Value:
 				EnterOuterAlt(_localctx, 6);
 				{
 				{
-				State = 1024;
-				Match(T__45);
-				State = 1025;
-				@int();
+				State = 2157;
+				value();
+				State = 2158;
+				integer();
 				}
 				}
 				break;
-			case T__52:
+			case Visible:
 				EnterOuterAlt(_localctx, 7);
 				{
 				{
-				State = 1026;
-				Match(T__52);
-				State = 1027;
+				State = 2160;
+				visible();
+				State = 2161;
 				@bool();
 				}
 				}
@@ -4210,8 +13518,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ClearRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public OptionalSelectorContext optionalSelector() {
-			return GetRuleContext<OptionalSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ClearKeyContext clearKey() {
+			return GetRuleContext<ClearKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemIdContext itemId() {
 			return GetRuleContext<ItemIdContext>(0);
@@ -4229,18 +13540,43 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ClearRadicalContext clearRadical() {
 		ClearRadicalContext _localctx = new ClearRadicalContext(Context, State);
-		EnterRule(_localctx, 112, RULE_clearRadical);
+		EnterRule(_localctx, 676, RULE_clearRadical);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1030;
-			Match(T__56);
-			State = 1031;
-			optionalSelector();
-			State = 1032;
-			itemId();
-			State = 1033;
-			count();
+			State = 2165;
+			clearKey();
+			State = 2173;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==AtChar || _la==Identifier) {
+				{
+				State = 2166;
+				selector();
+				State = 2168;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==ResourceLocation) {
+					{
+					State = 2167;
+					itemId();
+					}
+				}
+
+				State = 2171;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Integer) {
+					{
+					State = 2170;
+					count();
+					}
+				}
+
+				}
+			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -4255,7 +13591,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class CountContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public CountContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4266,11 +13602,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CountContext count() {
 		CountContext _localctx = new CountContext(Context, State);
-		EnterRule(_localctx, 114, RULE_count);
+		EnterRule(_localctx, 678, RULE_count);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1035;
+			State = 2175;
 			Match(Integer);
 			}
 		}
@@ -4286,6 +13622,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class CloneRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CloneKeyContext cloneKey() {
+			return GetRuleContext<CloneKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public CloneSourceContext cloneSource() {
 			return GetRuleContext<CloneSourceContext>(0);
 		}
@@ -4305,23 +13644,23 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CloneRadicalContext cloneRadical() {
 		CloneRadicalContext _localctx = new CloneRadicalContext(Context, State);
-		EnterRule(_localctx, 116, RULE_cloneRadical);
+		EnterRule(_localctx, 680, RULE_cloneRadical);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1037;
-			Match(T__57);
-			State = 1038;
+			State = 2177;
+			cloneKey();
+			State = 2178;
 			cloneSource();
-			State = 1039;
+			State = 2179;
 			cloneDestination();
-			State = 1041;
+			State = 2181;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4035225266123964416L) != 0)) {
+			if (((((_la - 123)) & ~0x3f) == 0 && ((1L << (_la - 123)) & 7L) != 0)) {
 				{
-				State = 1040;
+				State = 2180;
 				cloneMode();
 				}
 			}
@@ -4340,8 +13679,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class CloneSourceContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
-			return GetRuleContext<Pos3DContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public CloneBeginContext cloneBegin() {
+			return GetRuleContext<CloneBeginContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CloneEndContext cloneEnd() {
+			return GetRuleContext<CloneEndContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public FromContext from() {
 			return GetRuleContext<FromContext>(0);
@@ -4359,25 +13701,113 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CloneSourceContext cloneSource() {
 		CloneSourceContext _localctx = new CloneSourceContext(Context, State);
-		EnterRule(_localctx, 118, RULE_cloneSource);
+		EnterRule(_localctx, 682, RULE_cloneSource);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1046;
+			State = 2186;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if (_la==T__35) {
+			if (_la==From) {
 				{
-				State = 1043;
+				State = 2183;
 				from();
-				State = 1044;
+				State = 2184;
 				dimensionId();
 				}
 			}
 
-			State = 1048;
-			pos3D();
+			State = 2188;
+			cloneBegin();
+			State = 2189;
+			cloneEnd();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class CloneBeginContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateXContext coordinateX() {
+			return GetRuleContext<CoordinateXContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateYContext coordinateY() {
+			return GetRuleContext<CoordinateYContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateZContext coordinateZ() {
+			return GetRuleContext<CoordinateZContext>(0);
+		}
+		public CloneBeginContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_cloneBegin; } }
+	}
+
+	[RuleVersion(0)]
+	public CloneBeginContext cloneBegin() {
+		CloneBeginContext _localctx = new CloneBeginContext(Context, State);
+		EnterRule(_localctx, 684, RULE_cloneBegin);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2191;
+			coordinateX();
+			State = 2192;
+			coordinateY();
+			State = 2193;
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class CloneEndContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateXContext coordinateX() {
+			return GetRuleContext<CoordinateXContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateYContext coordinateY() {
+			return GetRuleContext<CoordinateYContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateZContext coordinateZ() {
+			return GetRuleContext<CoordinateZContext>(0);
+		}
+		public CloneEndContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_cloneEnd; } }
+	}
+
+	[RuleVersion(0)]
+	public CloneEndContext cloneEnd() {
+		CloneEndContext _localctx = new CloneEndContext(Context, State);
+		EnterRule(_localctx, 686, RULE_cloneEnd);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2195;
+			coordinateX();
+			State = 2196;
+			coordinateY();
+			State = 2197;
+			coordinateZ();
 			}
 		}
 		catch (RecognitionException re) {
@@ -4392,8 +13822,8 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class CloneDestinationContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
-			return GetRuleContext<Pos3DContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public DestinationPosContext destinationPos() {
+			return GetRuleContext<DestinationPosContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ToContext to() {
 			return GetRuleContext<ToContext>(0);
@@ -4411,25 +13841,68 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CloneDestinationContext cloneDestination() {
 		CloneDestinationContext _localctx = new CloneDestinationContext(Context, State);
-		EnterRule(_localctx, 120, RULE_cloneDestination);
+		EnterRule(_localctx, 688, RULE_cloneDestination);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1053;
+			State = 2202;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if (_la==T__64) {
+			if (_la==To) {
 				{
-				State = 1050;
+				State = 2199;
 				to();
-				State = 1051;
+				State = 2200;
 				dimensionId();
 				}
 			}
 
-			State = 1055;
-			pos3D();
+			State = 2204;
+			destinationPos();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class DestinationPosContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateXContext coordinateX() {
+			return GetRuleContext<CoordinateXContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateYContext coordinateY() {
+			return GetRuleContext<CoordinateYContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateZContext coordinateZ() {
+			return GetRuleContext<CoordinateZContext>(0);
+		}
+		public DestinationPosContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_destinationPos; } }
+	}
+
+	[RuleVersion(0)]
+	public DestinationPosContext destinationPos() {
+		DestinationPosContext _localctx = new DestinationPosContext(Context, State);
+		EnterRule(_localctx, 690, RULE_destinationPos);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2206;
+			coordinateX();
+			State = 2207;
+			coordinateY();
+			State = 2208;
+			coordinateZ();
 			}
 		}
 		catch (RecognitionException re) {
@@ -4447,8 +13920,17 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public CloneBehaviorContext cloneBehavior() {
 			return GetRuleContext<CloneBehaviorContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockIdContext blockId() {
-			return GetRuleContext<BlockIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public FilteredContext filtered() {
+			return GetRuleContext<FilteredContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BlockIDContext blockID() {
+			return GetRuleContext<BlockIDContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MaskedContext masked() {
+			return GetRuleContext<MaskedContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ReplaceContext replace() {
+			return GetRuleContext<ReplaceContext>(0);
 		}
 		public CloneModeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -4460,47 +13942,56 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CloneModeContext cloneMode() {
 		CloneModeContext _localctx = new CloneModeContext(Context, State);
-		EnterRule(_localctx, 122, RULE_cloneMode);
+		EnterRule(_localctx, 692, RULE_cloneMode);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1060;
+			State = 2217;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__58:
+			case Filtered:
 				{
 				{
-				State = 1057;
-				Match(T__58);
-				State = 1058;
-				blockId();
+				State = 2210;
+				filtered();
+				State = 2211;
+				blockID();
 				}
 				}
 				break;
-			case T__59:
-			case T__60:
+			case Masked:
+			case Replace:
 				{
-				State = 1059;
-				_la = TokenStream.LA(1);
-				if ( !(_la==T__59 || _la==T__60) ) {
-				ErrorHandler.RecoverInline(this);
-				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
+				State = 2215;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case Masked:
+					{
+					State = 2213;
+					masked();
+					}
+					break;
+				case Replace:
+					{
+					State = 2214;
+					replace();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			State = 1063;
+			State = 2220;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if (((((_la - 62)) & ~0x3f) == 0 && ((1L << (_la - 62)) & 7L) != 0)) {
+			if (((((_la - 126)) & ~0x3f) == 0 && ((1L << (_la - 126)) & 7L) != 0)) {
 				{
-				State = 1062;
+				State = 2219;
 				cloneBehavior();
 				}
 			}
@@ -4519,6 +14010,15 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class CloneBehaviorContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ForceContext force() {
+			return GetRuleContext<ForceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MoveContext move() {
+			return GetRuleContext<MoveContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NormalContext normal() {
+			return GetRuleContext<NormalContext>(0);
+		}
 		public CloneBehaviorContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4529,50 +14029,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CloneBehaviorContext cloneBehavior() {
 		CloneBehaviorContext _localctx = new CloneBehaviorContext(Context, State);
-		EnterRule(_localctx, 124, RULE_cloneBehavior);
-		int _la;
+		EnterRule(_localctx, 694, RULE_cloneBehavior);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1065;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 62)) & ~0x3f) == 0 && ((1L << (_la - 62)) & 7L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class ToContext : ParserRuleContext {
-		public ToContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_to; } }
-	}
-
-	[RuleVersion(0)]
-	public ToContext to() {
-		ToContext _localctx = new ToContext(Context, State);
-		EnterRule(_localctx, 126, RULE_to);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1067;
-			Match(T__64);
+			State = 2225;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Force:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2222;
+				force();
+				}
+				break;
+			case Move:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2223;
+				move();
+				}
+				break;
+			case Normal:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 2224;
+				normal();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4587,12 +14071,13 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DamageRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public DamageKeyContext damageKey() {
+			return GetRuleContext<DamageKeyContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public DamageTypeContext damageType() {
 			return GetRuleContext<DamageTypeContext>(0);
 		}
@@ -4609,21 +14094,19 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DamageRadicalContext damageRadical() {
 		DamageRadicalContext _localctx = new DamageRadicalContext(Context, State);
-		EnterRule(_localctx, 128, RULE_damageRadical);
+		EnterRule(_localctx, 696, RULE_damageRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1069;
-			Match(T__65);
-			State = 1070;
-			singleSelector();
-			State = 1071;
-			number();
-			State = 1072;
-			Match(T__16);
-			State = 1073;
+			State = 2227;
+			damageKey();
+			State = 2228;
+			selector();
+			State = 2229;
+			Match(Double);
+			State = 2230;
 			damageType();
-			State = 1074;
+			State = 2231;
 			damageOptions();
 			}
 		}
@@ -4639,7 +14122,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DamageTypeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public DamageTypeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4650,42 +14133,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DamageTypeContext damageType() {
 		DamageTypeContext _localctx = new DamageTypeContext(Context, State);
-		EnterRule(_localctx, 130, RULE_damageType);
+		EnterRule(_localctx, 698, RULE_damageType);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1076;
-			Match(IdString);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class FromContext : ParserRuleContext {
-		public FromContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_from; } }
-	}
-
-	[RuleVersion(0)]
-	public FromContext from() {
-		FromContext _localctx = new FromContext(Context, State);
-		EnterRule(_localctx, 132, RULE_from);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1078;
-			Match(T__35);
+			State = 2233;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -4700,14 +14153,20 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DamageOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AtLetterContext atLetter() {
+			return GetRuleContext<AtLetterContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext[] singleSelector() {
-			return GetRuleContexts<SingleSelectorContext>();
+		[System.Diagnostics.DebuggerNonUserCode] public ByContext by() {
+			return GetRuleContext<ByContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector(int i) {
-			return GetRuleContext<SingleSelectorContext>(i);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext[] selector() {
+			return GetRuleContexts<SelectorContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector(int i) {
+			return GetRuleContext<SelectorContext>(i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public FromContext from() {
 			return GetRuleContext<FromContext>(0);
@@ -4722,34 +14181,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DamageOptionsContext damageOptions() {
 		DamageOptionsContext _localctx = new DamageOptionsContext(Context, State);
-		EnterRule(_localctx, 134, RULE_damageOptions);
+		EnterRule(_localctx, 700, RULE_damageOptions);
 		try {
-			State = 1087;
+			State = 2243;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__66:
+			case AtLetter:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1080;
-				Match(T__66);
-				State = 1081;
+				State = 2235;
+				atLetter();
+				State = 2236;
 				pos3D();
 				}
 				}
 				break;
-			case T__67:
+			case By:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1082;
-				Match(T__67);
-				State = 1083;
-				singleSelector();
-				State = 1084;
+				State = 2238;
+				by();
+				State = 2239;
+				selector();
+				State = 2240;
 				from();
-				State = 1085;
-				singleSelector();
+				State = 2241;
+				selector();
 				}
 				}
 				break;
@@ -4769,6 +14228,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DataKeyContext dataKey() {
+			return GetRuleContext<DataKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataOptionsContext dataOptions() {
 			return GetRuleContext<DataOptionsContext>(0);
 		}
@@ -4782,13 +14244,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataRadicalContext dataRadical() {
 		DataRadicalContext _localctx = new DataRadicalContext(Context, State);
-		EnterRule(_localctx, 136, RULE_dataRadical);
+		EnterRule(_localctx, 702, RULE_dataRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1089;
-			Match(T__68);
-			State = 1090;
+			State = 2245;
+			dataKey();
+			State = 2246;
 			dataOptions();
 			}
 		}
@@ -4804,7 +14266,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataStringStartContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public DataStringStartContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4815,11 +14277,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataStringStartContext dataStringStart() {
 		DataStringStartContext _localctx = new DataStringStartContext(Context, State);
-		EnterRule(_localctx, 138, RULE_dataStringStart);
+		EnterRule(_localctx, 704, RULE_dataStringStart);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1092;
+			State = 2248;
 			Match(Integer);
 			}
 		}
@@ -4835,7 +14297,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataStringEndContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public DataStringEndContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4846,11 +14308,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataStringEndContext dataStringEnd() {
 		DataStringEndContext _localctx = new DataStringEndContext(Context, State);
-		EnterRule(_localctx, 140, RULE_dataStringEnd);
+		EnterRule(_localctx, 706, RULE_dataStringEnd);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1094;
+			State = 2250;
 			Match(Integer);
 			}
 		}
@@ -4865,121 +14327,27 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class EntityNBTPathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] NbtPathParameter() { return GetTokens(mccommandParser.NbtPathParameter); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NbtPathParameter(int i) {
-			return GetToken(mccommandParser.NbtPathParameter, i);
-		}
-		public EntityNBTPathContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_entityNBTPath; } }
-	}
-
-	[RuleVersion(0)]
-	public EntityNBTPathContext entityNBTPath() {
-		EntityNBTPathContext _localctx = new EntityNBTPathContext(Context, State);
-		EnterRule(_localctx, 142, RULE_entityNBTPath);
-		try {
-			int _alt;
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1096;
-			Match(NbtPathParameter);
-			State = 1101;
-			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,53,Context);
-			while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1+1 ) {
-					{
-					{
-					State = 1097;
-					Match(T__2);
-					State = 1098;
-					Match(NbtPathParameter);
-					}
-					} 
-				}
-				State = 1103;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,53,Context);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class BlockNBTPathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] NbtPathParameter() { return GetTokens(mccommandParser.NbtPathParameter); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NbtPathParameter(int i) {
-			return GetToken(mccommandParser.NbtPathParameter, i);
-		}
-		public BlockNBTPathContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_blockNBTPath; } }
-	}
-
-	[RuleVersion(0)]
-	public BlockNBTPathContext blockNBTPath() {
-		BlockNBTPathContext _localctx = new BlockNBTPathContext(Context, State);
-		EnterRule(_localctx, 144, RULE_blockNBTPath);
-		try {
-			int _alt;
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1104;
-			Match(NbtPathParameter);
-			State = 1109;
-			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,54,Context);
-			while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1+1 ) {
-					{
-					{
-					State = 1105;
-					Match(T__2);
-					State = 1106;
-					Match(NbtPathParameter);
-					}
-					} 
-				}
-				State = 1111;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,54,Context);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
 	public partial class DataOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public GetContext get() {
+			return GetRuleContext<GetContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataGetTargetContext dataGetTarget() {
 			return GetRuleContext<DataGetTargetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MergeContext merge() {
+			return GetRuleContext<MergeContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataMergeTargetContext dataMergeTarget() {
 			return GetRuleContext<DataMergeTargetContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ModifyContext modify() {
+			return GetRuleContext<ModifyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataModifyTargetContext dataModifyTarget() {
 			return GetRuleContext<DataModifyTargetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataRemoveTargetContext dataRemoveTarget() {
 			return GetRuleContext<DataRemoveTargetContext>(0);
@@ -4994,51 +14362,51 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataOptionsContext dataOptions() {
 		DataOptionsContext _localctx = new DataOptionsContext(Context, State);
-		EnterRule(_localctx, 146, RULE_dataOptions);
+		EnterRule(_localctx, 708, RULE_dataOptions);
 		try {
-			State = 1120;
+			State = 2264;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__40:
+			case Get:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1112;
-				Match(T__40);
-				State = 1113;
+				State = 2252;
+				get();
+				State = 2253;
 				dataGetTarget();
 				}
 				}
 				break;
-			case T__69:
+			case Merge:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1114;
-				Match(T__69);
-				State = 1115;
+				State = 2255;
+				merge();
+				State = 2256;
 				dataMergeTarget();
 				}
 				}
 				break;
-			case T__70:
+			case Modify:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1116;
-				Match(T__70);
-				State = 1117;
+				State = 2258;
+				modify();
+				State = 2259;
 				dataModifyTarget();
 				}
 				}
 				break;
-			case T__44:
+			case Remove:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1118;
-				Match(T__44);
-				State = 1119;
+				State = 2261;
+				remove();
+				State = 2262;
 				dataRemoveTarget();
 				}
 				}
@@ -5059,26 +14427,29 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataGetTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockNBTPathContext blockNBTPath() {
-			return GetRuleContext<BlockNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
+			return GetRuleContext<NbtPathContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public DoubleContext @double() {
+			return GetRuleContext<DoubleContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public EntityNBTPathContext entityNBTPath() {
-			return GetRuleContext<EntityNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdStringContext storageIdString() {
 			return GetRuleContext<StorageIdStringContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
-			return GetRuleContext<NbtPathContext>(0);
 		}
 		public DataGetTargetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5090,53 +14461,78 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataGetTargetContext dataGetTarget() {
 		DataGetTargetContext _localctx = new DataGetTargetContext(Context, State);
-		EnterRule(_localctx, 148, RULE_dataGetTarget);
+		EnterRule(_localctx, 710, RULE_dataGetTarget);
+		int _la;
 		try {
-			State = 1137;
+			State = 2284;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1122;
-				Match(T__71);
-				State = 1123;
+				State = 2266;
+				block();
+				State = 2267;
 				pos3D();
-				State = 1124;
-				blockNBTPath();
-				State = 1125;
-				number();
+				State = 2268;
+				nbtPath();
+				State = 2270;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Double) {
+					{
+					State = 2269;
+					@double();
+					}
+				}
+
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1127;
-				Match(T__72);
-				State = 1128;
-				singleSelector();
-				State = 1129;
-				entityNBTPath();
-				State = 1130;
-				number();
+				State = 2272;
+				entity();
+				State = 2273;
+				selector();
+				State = 2274;
+				nbtPath();
+				State = 2276;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Double) {
+					{
+					State = 2275;
+					@double();
+					}
+				}
+
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1132;
-				Match(T__73);
-				State = 1133;
+				State = 2278;
+				storage();
+				State = 2279;
 				storageIdString();
-				State = 1134;
+				State = 2280;
 				nbtPath();
-				State = 1135;
-				number();
+				State = 2282;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Double) {
+					{
+					State = 2281;
+					@double();
+					}
+				}
+
 				}
 				}
 				break;
@@ -5156,17 +14552,26 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataMergeTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public BlockNBTContext blockNBT() {
 			return GetRuleContext<BlockNBTContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public EntityNBTContext entityNBT() {
 			return GetRuleContext<EntityNBTContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdContext storageId() {
 			return GetRuleContext<StorageIdContext>(0);
@@ -5184,46 +14589,46 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataMergeTargetContext dataMergeTarget() {
 		DataMergeTargetContext _localctx = new DataMergeTargetContext(Context, State);
-		EnterRule(_localctx, 150, RULE_dataMergeTarget);
+		EnterRule(_localctx, 712, RULE_dataMergeTarget);
 		try {
-			State = 1151;
+			State = 2298;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1139;
-				Match(T__71);
-				State = 1140;
+				State = 2286;
+				block();
+				State = 2287;
 				pos3D();
-				State = 1141;
+				State = 2288;
 				blockNBT();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1143;
-				Match(T__72);
-				State = 1144;
-				singleSelector();
-				State = 1145;
+				State = 2290;
+				entity();
+				State = 2291;
+				selector();
+				State = 2292;
 				entityNBT();
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1147;
-				Match(T__73);
-				State = 1148;
+				State = 2294;
+				storage();
+				State = 2295;
 				storageId();
-				State = 1149;
+				State = 2296;
 				jsonComponent();
 				}
 				}
@@ -5244,11 +14649,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataModifyStringTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockNBTPathContext blockNBTPath() {
-			return GetRuleContext<BlockNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
+			return GetRuleContext<NbtPathContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataStringStartContext dataStringStart() {
 			return GetRuleContext<DataStringStartContext>(0);
@@ -5256,17 +14664,17 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public DataStringEndContext dataStringEnd() {
 			return GetRuleContext<DataStringEndContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public EntityNBTPathContext entityNBTPath() {
-			return GetRuleContext<EntityNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdContext storageId() {
 			return GetRuleContext<StorageIdContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
-			return GetRuleContext<NbtPathContext>(0);
 		}
 		public DataModifyStringTargetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5278,58 +14686,67 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataModifyStringTargetContext dataModifyStringTarget() {
 		DataModifyStringTargetContext _localctx = new DataModifyStringTargetContext(Context, State);
-		EnterRule(_localctx, 152, RULE_dataModifyStringTarget);
+		EnterRule(_localctx, 714, RULE_dataModifyStringTarget);
+		int _la;
 		try {
-			State = 1171;
+			State = 2319;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1153;
-				Match(T__71);
-				State = 1154;
+				State = 2300;
+				block();
+				State = 2301;
 				pos3D();
-				State = 1155;
-				blockNBTPath();
-				State = 1156;
+				State = 2302;
+				nbtPath();
+				State = 2303;
 				dataStringStart();
-				State = 1157;
-				dataStringEnd();
+				State = 2305;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Integer) {
+					{
+					State = 2304;
+					dataStringEnd();
+					}
+				}
+
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1159;
-				Match(T__72);
-				State = 1160;
-				singleSelector();
-				State = 1161;
-				entityNBTPath();
-				State = 1162;
+				State = 2307;
+				entity();
+				State = 2308;
+				selector();
+				State = 2309;
+				nbtPath();
+				State = 2310;
 				dataStringStart();
-				State = 1163;
+				State = 2311;
 				dataStringEnd();
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1165;
-				Match(T__73);
-				State = 1166;
+				State = 2313;
+				storage();
+				State = 2314;
 				storageId();
-				State = 1167;
+				State = 2315;
 				nbtPath();
-				State = 1168;
+				State = 2316;
 				dataStringStart();
-				State = 1169;
+				State = 2317;
 				dataStringEnd();
 				}
 				}
@@ -5350,23 +14767,26 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataModifyFromTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockNBTPathContext blockNBTPath() {
-			return GetRuleContext<BlockNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
+			return GetRuleContext<NbtPathContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public EntityNBTPathContext entityNBTPath() {
-			return GetRuleContext<EntityNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdContext storageId() {
 			return GetRuleContext<StorageIdContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
-			return GetRuleContext<NbtPathContext>(0);
 		}
 		public DataModifyFromTargetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5378,46 +14798,46 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataModifyFromTargetContext dataModifyFromTarget() {
 		DataModifyFromTargetContext _localctx = new DataModifyFromTargetContext(Context, State);
-		EnterRule(_localctx, 154, RULE_dataModifyFromTarget);
+		EnterRule(_localctx, 716, RULE_dataModifyFromTarget);
 		try {
-			State = 1185;
+			State = 2333;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1173;
-				Match(T__71);
-				State = 1174;
+				State = 2321;
+				block();
+				State = 2322;
 				pos3D();
-				State = 1175;
-				blockNBTPath();
+				State = 2323;
+				nbtPath();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1177;
-				Match(T__72);
-				State = 1178;
-				singleSelector();
-				State = 1179;
-				entityNBTPath();
+				State = 2325;
+				entity();
+				State = 2326;
+				selector();
+				State = 2327;
+				nbtPath();
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1181;
-				Match(T__73);
-				State = 1182;
+				State = 2329;
+				storage();
+				State = 2330;
 				storageId();
-				State = 1183;
+				State = 2331;
 				nbtPath();
 				}
 				}
@@ -5438,14 +14858,23 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataModifyBehaviorsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FromContext from() {
+			return GetRuleContext<FromContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataModifyFromTargetContext dataModifyFromTarget() {
 			return GetRuleContext<DataModifyFromTargetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StringKeyContext stringKey() {
+			return GetRuleContext<StringKeyContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataModifyStringTargetContext dataModifyStringTarget() {
 			return GetRuleContext<DataModifyStringTargetContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public JsonComponentContext jsonComponent() {
-			return GetRuleContext<JsonComponentContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value() {
+			return GetRuleContext<ValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public JvalueContext jvalue() {
+			return GetRuleContext<JvalueContext>(0);
 		}
 		public DataModifyBehaviorsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5457,41 +14886,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataModifyBehaviorsContext dataModifyBehaviors() {
 		DataModifyBehaviorsContext _localctx = new DataModifyBehaviorsContext(Context, State);
-		EnterRule(_localctx, 156, RULE_dataModifyBehaviors);
+		EnterRule(_localctx, 718, RULE_dataModifyBehaviors);
 		try {
-			State = 1193;
+			State = 2344;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__35:
+			case From:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1187;
-				Match(T__35);
-				State = 1188;
+				State = 2335;
+				from();
+				State = 2336;
 				dataModifyFromTarget();
 				}
 				}
 				break;
-			case T__74:
+			case StringKey:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1189;
-				Match(T__74);
-				State = 1190;
+				State = 2338;
+				stringKey();
+				State = 2339;
 				dataModifyStringTarget();
 				}
 				}
 				break;
-			case T__45:
+			case Value:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1191;
-				Match(T__45);
-				State = 1192;
-				jsonComponent();
+				State = 2341;
+				value();
+				State = 2342;
+				jvalue();
 				}
 				}
 				break;
@@ -5511,11 +14940,26 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataModifyOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AppendContext append() {
+			return GetRuleContext<AppendContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataModifyBehaviorsContext dataModifyBehaviors() {
 			return GetRuleContext<DataModifyBehaviorsContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public InsertContext insert() {
+			return GetRuleContext<InsertContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MergeContext merge() {
+			return GetRuleContext<MergeContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PrependContext prepend() {
+			return GetRuleContext<PrependContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
 		}
 		public DataModifyOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5527,64 +14971,64 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataModifyOptionsContext dataModifyOptions() {
 		DataModifyOptionsContext _localctx = new DataModifyOptionsContext(Context, State);
-		EnterRule(_localctx, 158, RULE_dataModifyOptions);
+		EnterRule(_localctx, 720, RULE_dataModifyOptions);
 		try {
-			State = 1207;
+			State = 2362;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__75:
+			case Append:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1195;
-				Match(T__75);
-				State = 1196;
+				State = 2346;
+				append();
+				State = 2347;
 				dataModifyBehaviors();
 				}
 				}
 				break;
-			case T__76:
+			case Insert:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1197;
-				Match(T__76);
-				State = 1198;
-				@int();
-				State = 1199;
+				State = 2349;
+				insert();
+				State = 2350;
+				integer();
+				State = 2351;
 				dataModifyBehaviors();
 				}
 				}
 				break;
-			case T__69:
+			case Merge:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1201;
-				Match(T__69);
-				State = 1202;
+				State = 2353;
+				merge();
+				State = 2354;
 				dataModifyBehaviors();
 				}
 				}
 				break;
-			case T__77:
+			case Prepend:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1203;
-				Match(T__77);
-				State = 1204;
+				State = 2356;
+				prepend();
+				State = 2357;
 				dataModifyBehaviors();
 				}
 				}
 				break;
-			case T__42:
+			case Set:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 1205;
-				Match(T__42);
-				State = 1206;
+				State = 2359;
+				set();
+				State = 2360;
 				dataModifyBehaviors();
 				}
 				}
@@ -5605,26 +15049,29 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataModifyTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockNBTPathContext blockNBTPath() {
-			return GetRuleContext<BlockNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
+			return GetRuleContext<NbtPathContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public DataModifyOptionsContext dataModifyOptions() {
 			return GetRuleContext<DataModifyOptionsContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public EntityNBTPathContext entityNBTPath() {
-			return GetRuleContext<EntityNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdContext storageId() {
 			return GetRuleContext<StorageIdContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
-			return GetRuleContext<NbtPathContext>(0);
 		}
 		public DataModifyTargetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5636,52 +15083,52 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataModifyTargetContext dataModifyTarget() {
 		DataModifyTargetContext _localctx = new DataModifyTargetContext(Context, State);
-		EnterRule(_localctx, 160, RULE_dataModifyTarget);
+		EnterRule(_localctx, 722, RULE_dataModifyTarget);
 		try {
-			State = 1224;
+			State = 2379;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1209;
-				Match(T__71);
-				State = 1210;
+				State = 2364;
+				block();
+				State = 2365;
 				pos3D();
-				State = 1211;
-				blockNBTPath();
-				State = 1212;
+				State = 2366;
+				nbtPath();
+				State = 2367;
 				dataModifyOptions();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1214;
-				Match(T__72);
-				State = 1215;
-				singleSelector();
-				State = 1216;
-				entityNBTPath();
-				State = 1217;
+				State = 2369;
+				entity();
+				State = 2370;
+				selector();
+				State = 2371;
+				nbtPath();
+				State = 2372;
 				dataModifyOptions();
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1219;
-				Match(T__73);
-				State = 1220;
+				State = 2374;
+				storage();
+				State = 2375;
 				storageId();
-				State = 1221;
+				State = 2376;
 				nbtPath();
-				State = 1222;
+				State = 2377;
 				dataModifyOptions();
 				}
 				}
@@ -5702,23 +15149,26 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DataRemoveTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockNBTPathContext blockNBTPath() {
-			return GetRuleContext<BlockNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
+			return GetRuleContext<NbtPathContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public EntityNBTPathContext entityNBTPath() {
-			return GetRuleContext<EntityNBTPathContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdStringContext storageIdString() {
 			return GetRuleContext<StorageIdStringContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
-			return GetRuleContext<NbtPathContext>(0);
 		}
 		public DataRemoveTargetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5730,46 +15180,46 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DataRemoveTargetContext dataRemoveTarget() {
 		DataRemoveTargetContext _localctx = new DataRemoveTargetContext(Context, State);
-		EnterRule(_localctx, 162, RULE_dataRemoveTarget);
+		EnterRule(_localctx, 724, RULE_dataRemoveTarget);
 		try {
-			State = 1238;
+			State = 2393;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1226;
-				Match(T__71);
-				State = 1227;
+				State = 2381;
+				block();
+				State = 2382;
 				pos3D();
-				State = 1228;
-				blockNBTPath();
+				State = 2383;
+				nbtPath();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1230;
-				Match(T__72);
-				State = 1231;
-				singleSelector();
-				State = 1232;
-				entityNBTPath();
+				State = 2385;
+				entity();
+				State = 2386;
+				selector();
+				State = 2387;
+				nbtPath();
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1234;
-				Match(T__73);
-				State = 1235;
+				State = 2389;
+				storage();
+				State = 2390;
 				storageIdString();
-				State = 1236;
+				State = 2391;
 				nbtPath();
 				}
 				}
@@ -5790,6 +15240,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DatapackRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DatapackKeyContext datapackKey() {
+			return GetRuleContext<DatapackKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DatapackOptionsContext datapackOptions() {
 			return GetRuleContext<DatapackOptionsContext>(0);
 		}
@@ -5803,13 +15256,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DatapackRadicalContext datapackRadical() {
 		DatapackRadicalContext _localctx = new DatapackRadicalContext(Context, State);
-		EnterRule(_localctx, 164, RULE_datapackRadical);
+		EnterRule(_localctx, 726, RULE_datapackRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1240;
-			Match(T__78);
-			State = 1241;
+			State = 2395;
+			datapackKey();
+			State = 2396;
 			datapackOptions();
 			}
 		}
@@ -5825,6 +15278,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DatapackStateContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AvailableContext available() {
+			return GetRuleContext<AvailableContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EnableContext enable() {
+			return GetRuleContext<EnableContext>(0);
+		}
 		public DatapackStateContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -5835,20 +15294,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DatapackStateContext datapackState() {
 		DatapackStateContext _localctx = new DatapackStateContext(Context, State);
-		EnterRule(_localctx, 166, RULE_datapackState);
-		int _la;
+		EnterRule(_localctx, 728, RULE_datapackState);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1243;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__79 || _la==T__80) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2400;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Available:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2398;
+				available();
+				}
+				break;
+			case Enable:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2399;
+				enable();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -5863,7 +15329,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DatapackIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String() { return GetToken(mccommandParser.String, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode String() { return GetToken(MCCommandParser.String, 0); }
 		public DatapackIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -5874,11 +15340,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DatapackIdContext datapackId() {
 		DatapackIdContext _localctx = new DatapackIdContext(Context, State);
-		EnterRule(_localctx, 168, RULE_datapackId);
+		EnterRule(_localctx, 730, RULE_datapackId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1245;
+			State = 2402;
 			Match(String);
 			}
 		}
@@ -5894,8 +15360,20 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DatapackBehaviorsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AfterContext after() {
+			return GetRuleContext<AfterContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DatapackIdContext datapackId() {
 			return GetRuleContext<DatapackIdContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BeforeContext before() {
+			return GetRuleContext<BeforeContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public FirstContext first() {
+			return GetRuleContext<FirstContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LastContext last() {
+			return GetRuleContext<LastContext>(0);
 		}
 		public DatapackBehaviorsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -5907,45 +15385,45 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DatapackBehaviorsContext datapackBehaviors() {
 		DatapackBehaviorsContext _localctx = new DatapackBehaviorsContext(Context, State);
-		EnterRule(_localctx, 170, RULE_datapackBehaviors);
+		EnterRule(_localctx, 732, RULE_datapackBehaviors);
 		try {
-			State = 1253;
+			State = 2412;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__81:
+			case After:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1247;
-				Match(T__81);
-				State = 1248;
+				State = 2404;
+				after();
+				State = 2405;
 				datapackId();
 				}
 				}
 				break;
-			case T__82:
+			case Before:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1249;
-				Match(T__82);
-				State = 1250;
+				State = 2407;
+				before();
+				State = 2408;
 				datapackId();
 				}
 				}
 				break;
-			case T__83:
+			case First:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 1251;
-				Match(T__83);
+				State = 2410;
+				first();
 				}
 				break;
-			case T__84:
+			case Last:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 1252;
-				Match(T__84);
+				State = 2411;
+				last();
 				}
 				break;
 			default:
@@ -5964,11 +15442,20 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DatapackOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DisableContext disable() {
+			return GetRuleContext<DisableContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DatapackIdContext datapackId() {
 			return GetRuleContext<DatapackIdContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public EnableContext enable() {
+			return GetRuleContext<EnableContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DatapackBehaviorsContext datapackBehaviors() {
 			return GetRuleContext<DatapackBehaviorsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ListKeyContext listKey() {
+			return GetRuleContext<ListKeyContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public DatapackStateContext datapackState() {
 			return GetRuleContext<DatapackStateContext>(0);
@@ -5983,42 +15470,42 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DatapackOptionsContext datapackOptions() {
 		DatapackOptionsContext _localctx = new DatapackOptionsContext(Context, State);
-		EnterRule(_localctx, 172, RULE_datapackOptions);
+		EnterRule(_localctx, 734, RULE_datapackOptions);
 		try {
-			State = 1263;
+			State = 2424;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__85:
+			case Disable:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1255;
-				Match(T__85);
-				State = 1256;
+				State = 2414;
+				disable();
+				State = 2415;
 				datapackId();
 				}
 				}
 				break;
-			case T__80:
+			case Enable:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1257;
-				Match(T__80);
-				State = 1258;
+				State = 2417;
+				enable();
+				State = 2418;
 				datapackId();
-				State = 1259;
+				State = 2419;
 				datapackBehaviors();
 				}
 				}
 				break;
-			case T__49:
+			case ListKey:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1261;
-				Match(T__49);
-				State = 1262;
+				State = 2421;
+				listKey();
+				State = 2422;
 				datapackState();
 				}
 				}
@@ -6039,6 +15526,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DebugRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DebugKeyContext debugKey() {
+			return GetRuleContext<DebugKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DebugOptionsContext debugOptions() {
 			return GetRuleContext<DebugOptionsContext>(0);
 		}
@@ -6052,13 +15542,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DebugRadicalContext debugRadical() {
 		DebugRadicalContext _localctx = new DebugRadicalContext(Context, State);
-		EnterRule(_localctx, 174, RULE_debugRadical);
+		EnterRule(_localctx, 736, RULE_debugRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1265;
-			Match(T__86);
-			State = 1266;
+			State = 2426;
+			debugKey();
+			State = 2427;
 			debugOptions();
 			}
 		}
@@ -6074,8 +15564,17 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DebugOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FunctionKeyContext functionKey() {
+			return GetRuleContext<FunctionKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DatapackIdContext datapackId() {
 			return GetRuleContext<DatapackIdContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StartContext start() {
+			return GetRuleContext<StartContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StopContext stop() {
+			return GetRuleContext<StopContext>(0);
 		}
 		public DebugOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -6087,34 +15586,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DebugOptionsContext debugOptions() {
 		DebugOptionsContext _localctx = new DebugOptionsContext(Context, State);
-		EnterRule(_localctx, 176, RULE_debugOptions);
+		EnterRule(_localctx, 738, RULE_debugOptions);
 		try {
-			State = 1272;
+			State = 2434;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__87:
+			case FunctionKey:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1268;
-				Match(T__87);
-				State = 1269;
+				State = 2429;
+				functionKey();
+				State = 2430;
 				datapackId();
 				}
 				}
 				break;
-			case T__88:
+			case Start:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 1270;
-				Match(T__88);
+				State = 2432;
+				start();
 				}
 				break;
-			case T__89:
+			case Stop:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 1271;
-				Match(T__89);
+				State = 2433;
+				stop();
 				}
 				break;
 			default:
@@ -6133,8 +15632,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DefaultgamemodeRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public GamemodeValuesContext gamemodeValues() {
-			return GetRuleContext<GamemodeValuesContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public DefaultgamemodeKeyContext defaultgamemodeKey() {
+			return GetRuleContext<DefaultgamemodeKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GamemodeValueContext gamemodeValue() {
+			return GetRuleContext<GamemodeValueContext>(0);
 		}
 		public DefaultgamemodeRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -6146,14 +15648,14 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DefaultgamemodeRadicalContext defaultgamemodeRadical() {
 		DefaultgamemodeRadicalContext _localctx = new DefaultgamemodeRadicalContext(Context, State);
-		EnterRule(_localctx, 178, RULE_defaultgamemodeRadical);
+		EnterRule(_localctx, 740, RULE_defaultgamemodeRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1274;
-			Match(T__90);
-			State = 1275;
-			gamemodeValues();
+			State = 2436;
+			defaultgamemodeKey();
+			State = 2437;
+			gamemodeValue();
 			}
 		}
 		catch (RecognitionException re) {
@@ -6168,6 +15670,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DifficultyRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DifficultyKeyContext difficultyKey() {
+			return GetRuleContext<DifficultyKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DifficultyValuesContext difficultyValues() {
 			return GetRuleContext<DifficultyValuesContext>(0);
 		}
@@ -6181,13 +15686,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DifficultyRadicalContext difficultyRadical() {
 		DifficultyRadicalContext _localctx = new DifficultyRadicalContext(Context, State);
-		EnterRule(_localctx, 180, RULE_difficultyRadical);
+		EnterRule(_localctx, 742, RULE_difficultyRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1277;
-			Match(T__91);
-			State = 1278;
+			State = 2439;
+			difficultyKey();
+			State = 2440;
 			difficultyValues();
 			}
 		}
@@ -6203,6 +15708,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class DifficultyValuesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public EasyContext easy() {
+			return GetRuleContext<EasyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public HardContext hard() {
+			return GetRuleContext<HardContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NormalContext normal() {
+			return GetRuleContext<NormalContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PeacefulContext peaceful() {
+			return GetRuleContext<PeacefulContext>(0);
+		}
 		public DifficultyValuesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6213,20 +15730,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public DifficultyValuesContext difficultyValues() {
 		DifficultyValuesContext _localctx = new DifficultyValuesContext(Context, State);
-		EnterRule(_localctx, 182, RULE_difficultyValues);
-		int _la;
+		EnterRule(_localctx, 744, RULE_difficultyValues);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1280;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 3758096385L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2446;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Easy:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2442;
+				easy();
+				}
+				break;
+			case Hard:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2443;
+				hard();
+				}
+				break;
+			case Normal:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 2444;
+				normal();
+				}
+				break;
+			case Peaceful:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 2445;
+				peaceful();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6241,6 +15779,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EffectRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public EffectKeyContext effectKey() {
+			return GetRuleContext<EffectKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public EffectOptionContext effectOption() {
 			return GetRuleContext<EffectOptionContext>(0);
 		}
@@ -6254,13 +15795,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EffectRadicalContext effectRadical() {
 		EffectRadicalContext _localctx = new EffectRadicalContext(Context, State);
-		EnterRule(_localctx, 184, RULE_effectRadical);
+		EnterRule(_localctx, 746, RULE_effectRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1282;
-			Match(T__95);
-			State = 1283;
+			State = 2448;
+			effectKey();
+			State = 2449;
 			effectOption();
 			}
 		}
@@ -6276,17 +15817,23 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EffectOptionContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public OptionalSelectorContext optionalSelector() {
-			return GetRuleContext<OptionalSelectorContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public EffectIDContext effectID() {
-			return GetRuleContext<EffectIDContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ClearKeyContext clearKey() {
+			return GetRuleContext<ClearKeyContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public EffectIDContext effectID() {
+			return GetRuleContext<EffectIDContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GiveKeyContext giveKey() {
+			return GetRuleContext<GiveKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public EffectTimeContext effectTime() {
 			return GetRuleContext<EffectTimeContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public InfiniteContext infinite() {
+			return GetRuleContext<InfiniteContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public AmplifierContext amplifier() {
 			return GetRuleContext<AmplifierContext>(0);
@@ -6304,52 +15851,67 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EffectOptionContext effectOption() {
 		EffectOptionContext _localctx = new EffectOptionContext(Context, State);
-		EnterRule(_localctx, 186, RULE_effectOption);
+		EnterRule(_localctx, 748, RULE_effectOption);
+		int _la;
 		try {
-			State = 1301;
+			State = 2469;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__56:
+			case ClearKey:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1285;
-				Match(T__56);
-				State = 1286;
-				optionalSelector();
-				State = 1287;
-				effectID();
+				State = 2451;
+				clearKey();
+				State = 2456;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==AtChar || _la==Identifier) {
+					{
+					State = 2452;
+					selector();
+					State = 2454;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+					if (_la==ResourceLocation) {
+						{
+						State = 2453;
+						effectID();
+						}
+					}
+
+					}
+				}
+
 				}
 				}
 				break;
-			case T__96:
-			case T__97:
+			case GiveKey:
+			case Infinite:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 1299;
+				State = 2467;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case T__96:
+				case GiveKey:
 					{
-					State = 1289;
-					Match(T__96);
-					State = 1290;
+					State = 2458;
+					giveKey();
+					State = 2459;
 					selector();
-					State = 1291;
+					State = 2460;
 					effectID();
-					State = 1292;
+					State = 2461;
 					effectTime();
 					}
 					break;
-				case T__97:
+				case Infinite:
 					{
-					State = 1294;
-					Match(T__97);
-					State = 1295;
-					Match(T__16);
-					State = 1296;
+					State = 2463;
+					infinite();
+					State = 2464;
 					amplifier();
-					State = 1297;
+					State = 2465;
 					hideParticles();
 					}
 					break;
@@ -6374,7 +15936,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EffectIDContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode EffectId() { return GetToken(mccommandParser.EffectId, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public EffectIDContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6385,12 +15947,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EffectIDContext effectID() {
 		EffectIDContext _localctx = new EffectIDContext(Context, State);
-		EnterRule(_localctx, 188, RULE_effectID);
+		EnterRule(_localctx, 750, RULE_effectID);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1303;
-			Match(EffectId);
+			State = 2471;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6405,7 +15967,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EffectTimeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public EffectTimeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6416,11 +15978,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EffectTimeContext effectTime() {
 		EffectTimeContext _localctx = new EffectTimeContext(Context, State);
-		EnterRule(_localctx, 190, RULE_effectTime);
+		EnterRule(_localctx, 752, RULE_effectTime);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1305;
+			State = 2473;
 			Match(Integer);
 			}
 		}
@@ -6436,7 +15998,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SecondsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public SecondsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6447,11 +16009,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SecondsContext seconds() {
 		SecondsContext _localctx = new SecondsContext(Context, State);
-		EnterRule(_localctx, 192, RULE_seconds);
+		EnterRule(_localctx, 754, RULE_seconds);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1307;
+			State = 2475;
 			Match(Integer);
 			}
 		}
@@ -6467,7 +16029,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class AmplifierContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public AmplifierContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6478,11 +16040,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public AmplifierContext amplifier() {
 		AmplifierContext _localctx = new AmplifierContext(Context, State);
-		EnterRule(_localctx, 194, RULE_amplifier);
+		EnterRule(_localctx, 756, RULE_amplifier);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1309;
+			State = 2477;
 			Match(Integer);
 			}
 		}
@@ -6498,7 +16060,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class HideParticlesContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Bool() { return GetToken(mccommandParser.Bool, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BooleanValue() { return GetToken(MCCommandParser.BooleanValue, 0); }
 		public HideParticlesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6509,12 +16071,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public HideParticlesContext hideParticles() {
 		HideParticlesContext _localctx = new HideParticlesContext(Context, State);
-		EnterRule(_localctx, 196, RULE_hideParticles);
+		EnterRule(_localctx, 758, RULE_hideParticles);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1311;
-			Match(Bool);
+			State = 2479;
+			Match(BooleanValue);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6529,6 +16091,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EnchantRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public EnchantKeyContext enchantKey() {
+			return GetRuleContext<EnchantKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -6548,17 +16113,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EnchantRadicalContext enchantRadical() {
 		EnchantRadicalContext _localctx = new EnchantRadicalContext(Context, State);
-		EnterRule(_localctx, 198, RULE_enchantRadical);
+		EnterRule(_localctx, 760, RULE_enchantRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1313;
-			Match(T__98);
-			State = 1314;
+			State = 2481;
+			enchantKey();
+			State = 2482;
 			selector();
-			State = 1315;
+			State = 2483;
 			enchantID();
-			State = 1316;
+			State = 2484;
 			enchantLevel();
 			}
 		}
@@ -6574,7 +16139,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EnchantLevelContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public EnchantLevelContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6585,11 +16150,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EnchantLevelContext enchantLevel() {
 		EnchantLevelContext _localctx = new EnchantLevelContext(Context, State);
-		EnterRule(_localctx, 200, RULE_enchantLevel);
+		EnterRule(_localctx, 762, RULE_enchantLevel);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1318;
+			State = 2486;
 			Match(Integer);
 			}
 		}
@@ -6605,7 +16170,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class EnchantIDContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode EnchantID() { return GetToken(mccommandParser.EnchantID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public EnchantIDContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6616,12 +16181,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public EnchantIDContext enchantID() {
 		EnchantIDContext _localctx = new EnchantIDContext(Context, State);
-		EnterRule(_localctx, 202, RULE_enchantID);
+		EnterRule(_localctx, 764, RULE_enchantID);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1320;
-			Match(EnchantID);
+			State = 2488;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6636,6 +16201,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ExecuteKeyContext executeKey() {
+			return GetRuleContext<ExecuteKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteOptionsContext executeOptions() {
 			return GetRuleContext<ExecuteOptionsContext>(0);
 		}
@@ -6649,13 +16217,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteRadicalContext executeRadical() {
 		ExecuteRadicalContext _localctx = new ExecuteRadicalContext(Context, State);
-		EnterRule(_localctx, 204, RULE_executeRadical);
+		EnterRule(_localctx, 766, RULE_executeRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1322;
-			Match(T__99);
-			State = 1323;
+			State = 2490;
+			executeKey();
+			State = 2491;
 			executeOptions();
 			}
 		}
@@ -6671,6 +16239,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteEyesOrFeetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public EyesContext eyes() {
+			return GetRuleContext<EyesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public FeetContext feet() {
+			return GetRuleContext<FeetContext>(0);
+		}
 		public ExecuteEyesOrFeetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6681,20 +16255,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteEyesOrFeetContext executeEyesOrFeet() {
 		ExecuteEyesOrFeetContext _localctx = new ExecuteEyesOrFeetContext(Context, State);
-		EnterRule(_localctx, 206, RULE_executeEyesOrFeet);
-		int _la;
+		EnterRule(_localctx, 768, RULE_executeEyesOrFeet);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1325;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__100 || _la==T__101) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2495;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Eyes:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2493;
+				eyes();
+				}
+				break;
+			case Feet:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2494;
+				feet();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6709,7 +16290,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class AxesContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Axes() { return GetToken(mccommandParser.Axes, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Axes() { return GetToken(MCCommandParser.Axes, 0); }
 		public AxesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6720,11 +16301,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public AxesContext axes() {
 		AxesContext _localctx = new AxesContext(Context, State);
-		EnterRule(_localctx, 208, RULE_axes);
+		EnterRule(_localctx, 770, RULE_axes);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1327;
+			State = 2497;
 			Match(Axes);
 			}
 		}
@@ -6739,67 +16320,13 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class AsContext : ParserRuleContext {
-		public AsContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_as; } }
-	}
-
-	[RuleVersion(0)]
-	public AsContext @as() {
-		AsContext _localctx = new AsContext(Context, State);
-		EnterRule(_localctx, 210, RULE_as);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1329;
-			Match(T__102);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class StorageContext : ParserRuleContext {
-		public StorageContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_storage; } }
-	}
-
-	[RuleVersion(0)]
-	public StorageContext storage() {
-		StorageContext _localctx = new StorageContext(Context, State);
-		EnterRule(_localctx, 212, RULE_storage);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1331;
-			Match(T__73);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
 	public partial class ExecuteAllOrMaskedContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AllContext all() {
+			return GetRuleContext<AllContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MaskedContext masked() {
+			return GetRuleContext<MaskedContext>(0);
+		}
 		public ExecuteAllOrMaskedContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6810,20 +16337,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteAllOrMaskedContext executeAllOrMasked() {
 		ExecuteAllOrMaskedContext _localctx = new ExecuteAllOrMaskedContext(Context, State);
-		EnterRule(_localctx, 214, RULE_executeAllOrMasked);
-		int _la;
+		EnterRule(_localctx, 772, RULE_executeAllOrMasked);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1333;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__59 || _la==T__103) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2501;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case All:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2499;
+				all();
+				}
+				break;
+			case Masked:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2500;
+				masked();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6838,6 +16372,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteMaxOrValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public MaxContext max() {
+			return GetRuleContext<MaxContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value() {
+			return GetRuleContext<ValueContext>(0);
+		}
 		public ExecuteMaxOrValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -6848,20 +16388,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteMaxOrValueContext executeMaxOrValue() {
 		ExecuteMaxOrValueContext _localctx = new ExecuteMaxOrValueContext(Context, State);
-		EnterRule(_localctx, 216, RULE_executeMaxOrValue);
-		int _la;
+		EnterRule(_localctx, 774, RULE_executeMaxOrValue);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1335;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__45 || _la==T__50) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2505;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Max:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2503;
+				max();
+				}
+				break;
+			case Value:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2504;
+				value();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -6876,17 +16423,23 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteJudgeDataOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public NbtPathContext nbtPath() {
 			return GetRuleContext<NbtPathContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ExecuteOptionsContext executeOptions() {
-			return GetRuleContext<ExecuteOptionsContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdContext storageId() {
 			return GetRuleContext<StorageIdContext>(0);
@@ -6901,55 +16454,47 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteJudgeDataOptionsContext executeJudgeDataOptions() {
 		ExecuteJudgeDataOptionsContext _localctx = new ExecuteJudgeDataOptionsContext(Context, State);
-		EnterRule(_localctx, 218, RULE_executeJudgeDataOptions);
+		EnterRule(_localctx, 776, RULE_executeJudgeDataOptions);
 		try {
-			State = 1353;
+			State = 2519;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1337;
-				Match(T__71);
-				State = 1338;
+				State = 2507;
+				block();
+				State = 2508;
 				pos3D();
-				State = 1339;
+				State = 2509;
 				nbtPath();
-				State = 1340;
-				executeOptions();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1342;
-				Match(T__72);
-				State = 1343;
-				singleSelector();
-				State = 1344;
+				State = 2511;
+				entity();
+				State = 2512;
+				selector();
+				State = 2513;
 				nbtPath();
-				State = 1345;
-				executeOptions();
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1347;
-				Match(T__73);
-				State = 1348;
+				State = 2515;
+				storage();
+				State = 2516;
 				storageId();
-				State = 1349;
-				Match(T__16);
-				State = 1350;
+				State = 2517;
 				nbtPath();
-				State = 1351;
-				executeOptions();
 				}
 				}
 				break;
@@ -6969,6 +16514,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteJudgementOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BiomeContext biome() {
+			return GetRuleContext<BiomeContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext[] pos3D() {
 			return GetRuleContexts<Pos3DContext>();
 		}
@@ -6978,26 +16526,44 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public BiomeIdContext biomeId() {
 			return GetRuleContext<BiomeIdContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ExecuteOptionsContext executeOptions() {
-			return GetRuleContext<ExecuteOptionsContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockIdContext blockId() {
-			return GetRuleContext<BlockIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public BlockIDContext blockID() {
+			return GetRuleContext<BlockIDContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BlocksContext blocks() {
+			return GetRuleContext<BlocksContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DataKeyContext dataKey() {
+			return GetRuleContext<DataKeyContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteJudgeDataOptionsContext executeJudgeDataOptions() {
 			return GetRuleContext<ExecuteJudgeDataOptionsContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public DimensionContext dimension() {
+			return GetRuleContext<DimensionContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DimensionIdContext dimensionId() {
 			return GetRuleContext<DimensionIdContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public LoadedContext loaded() {
+			return GetRuleContext<LoadedContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PredicateContext predicate() {
+			return GetRuleContext<PredicateContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public PredicateValueContext predicateValue() {
 			return GetRuleContext<PredicateValueContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ScoreContext score() {
+			return GetRuleContext<ScoreContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public TargetObjectiveContext targetObjective() {
 			return GetRuleContext<TargetObjectiveContext>(0);
@@ -7007,6 +16573,9 @@ public partial class mccommandParser : Parser {
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteAllOrMaskedContext executeAllOrMasked() {
 			return GetRuleContext<ExecuteAllOrMaskedContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ExclamationMarkContext exclamationMark() {
+			return GetRuleContext<ExclamationMarkContext>(0);
 		}
 		public ExecuteJudgementOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -7018,132 +16587,127 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteJudgementOptionsContext executeJudgementOptions() {
 		ExecuteJudgementOptionsContext _localctx = new ExecuteJudgementOptionsContext(Context, State);
-		EnterRule(_localctx, 220, RULE_executeJudgementOptions);
+		EnterRule(_localctx, 778, RULE_executeJudgementOptions);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1396;
+			State = 2558;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__104:
+			case Biome:
 				{
 				{
-				State = 1355;
-				Match(T__104);
-				State = 1356;
+				State = 2521;
+				biome();
+				State = 2522;
 				pos3D();
-				State = 1357;
+				State = 2523;
 				biomeId();
-				State = 1358;
-				executeOptions();
 				}
 				}
 				break;
-			case T__71:
+			case Block:
 				{
 				{
-				State = 1360;
-				Match(T__71);
-				State = 1361;
+				State = 2525;
+				block();
+				State = 2526;
 				pos3D();
-				State = 1362;
-				blockId();
-				State = 1363;
-				executeOptions();
+				State = 2527;
+				blockID();
 				}
 				}
 				break;
-			case T__105:
+			case Blocks:
 				{
 				{
-				State = 1365;
-				Match(T__105);
-				State = 1366;
+				State = 2529;
+				blocks();
+				State = 2530;
 				pos3D();
-				State = 1367;
+				State = 2531;
 				pos3D();
-				State = 1368;
+				State = 2532;
 				pos3D();
 				{
-				State = 1369;
+				State = 2533;
 				executeAllOrMasked();
-				State = 1370;
-				executeOptions();
 				}
 				}
 				}
 				break;
-			case T__68:
+			case DataKey:
 				{
 				{
-				State = 1372;
-				Match(T__68);
-				State = 1373;
+				State = 2535;
+				dataKey();
+				State = 2536;
 				executeJudgeDataOptions();
 				}
 				}
 				break;
-			case T__106:
+			case Dimension:
 				{
 				{
-				State = 1374;
-				Match(T__106);
-				State = 1375;
+				State = 2538;
+				dimension();
+				State = 2539;
 				dimensionId();
-				State = 1376;
-				executeOptions();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				{
 				{
-				State = 1378;
-				Match(T__72);
-				State = 1379;
+				State = 2541;
+				entity();
+				State = 2542;
 				selector();
-				State = 1380;
-				executeOptions();
 				}
 				}
 				break;
-			case T__107:
+			case Loaded:
 				{
 				{
-				State = 1382;
-				Match(T__107);
-				State = 1383;
+				State = 2544;
+				loaded();
+				State = 2545;
 				pos3D();
-				State = 1384;
-				executeOptions();
 				}
 				}
 				break;
-			case T__108:
+			case Predicate:
 				{
 				{
-				State = 1386;
-				Match(T__108);
-				State = 1387;
+				State = 2547;
+				predicate();
+				State = 2549;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==ExclamationMark) {
+					{
+					State = 2548;
+					exclamationMark();
+					}
+				}
+
+				State = 2551;
 				predicateValue();
-				State = 1388;
-				executeOptions();
 				}
 				}
 				break;
-			case T__109:
+			case Score:
 				{
 				{
-				State = 1390;
-				Match(T__109);
-				State = 1391;
-				singleSelector();
-				State = 1392;
+				State = 2553;
+				score();
+				State = 2554;
+				selector();
+				State = 2555;
 				targetObjective();
-				State = 1393;
+				State = 2556;
 				executeOperations();
-				State = 1394;
-				executeOptions();
 				}
 				}
 				break;
@@ -7163,47 +16727,30 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class PredicateValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FileReferrerValue() { return GetToken(mccommandParser.FileReferrerValue, 0); }
-		public PredicateValueContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_predicateValue; } }
-	}
-
-	[RuleVersion(0)]
-	public PredicateValueContext predicateValue() {
-		PredicateValueContext _localctx = new PredicateValueContext(Context, State);
-		EnterRule(_localctx, 222, RULE_predicateValue);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1398;
-			Match(FileReferrerValue);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
 	public partial class ExecuteOperationsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public TargetObjectiveContext targetObjective() {
 			return GetRuleContext<TargetObjectiveContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Equal() { return GetToken(mccommandParser.Equal, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public LessThanContext lessThan() {
+			return GetRuleContext<LessThanContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LessThanOrEqualToContext lessThanOrEqualTo() {
+			return GetRuleContext<LessThanOrEqualToContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EqualContext equal() {
+			return GetRuleContext<EqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GreaterThanOrEqualToContext greaterThanOrEqualTo() {
+			return GetRuleContext<GreaterThanOrEqualToContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MatchesContext matches() {
+			return GetRuleContext<MatchesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public IntIntervalContext intInterval() {
 			return GetRuleContext<IntIntervalContext>(0);
@@ -7218,55 +16765,73 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteOperationsContext executeOperations() {
 		ExecuteOperationsContext _localctx = new ExecuteOperationsContext(Context, State);
-		EnterRule(_localctx, 224, RULE_executeOperations);
-		int _la;
+		EnterRule(_localctx, 780, RULE_executeOperations);
 		try {
-			State = 1409;
+			State = 2575;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__110:
-			case T__111:
-			case T__112:
+			case LeftAngleBracket:
+			case LessThanOrEqualTo:
 			case Equal:
+			case GreaterThanOrEqualTo:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1400;
-				_la = TokenStream.LA(1);
-				if ( !(((((_la - 111)) & ~0x3f) == 0 && ((1L << (_la - 111)) & 7L) != 0) || _la==Equal) ) {
-				ErrorHandler.RecoverInline(this);
+				State = 2564;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case LeftAngleBracket:
+					{
+					State = 2560;
+					lessThan();
+					}
+					break;
+				case LessThanOrEqualTo:
+					{
+					State = 2561;
+					lessThanOrEqualTo();
+					}
+					break;
+				case Equal:
+					{
+					State = 2562;
+					equal();
+					}
+					break;
+				case GreaterThanOrEqualTo:
+					{
+					State = 2563;
+					greaterThanOrEqualTo();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
-				}
-				State = 1401;
-				singleSelector();
-				State = 1402;
+				State = 2566;
+				selector();
+				State = 2567;
 				targetObjective();
 				}
 				}
 				break;
-			case T__0:
-			case T__113:
-			case Integer:
+			case Matches:
+			case IntInterval:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 1407;
+				State = 2573;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case T__113:
+				case Matches:
 					{
-					State = 1404;
-					Match(T__113);
-					State = 1405;
-					@int();
+					State = 2569;
+					matches();
+					State = 2570;
+					integer();
 					}
 					break;
-				case T__0:
-				case Integer:
+				case IntInterval:
 					{
-					State = 1406;
+					State = 2572;
 					intInterval();
 					}
 					break;
@@ -7291,6 +16856,30 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteOnContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AttackerContext attacker() {
+			return GetRuleContext<AttackerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ControllerContext controller() {
+			return GetRuleContext<ControllerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LeasherContext leasher() {
+			return GetRuleContext<LeasherContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OriginContext origin() {
+			return GetRuleContext<OriginContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OwnerContext owner() {
+			return GetRuleContext<OwnerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PassengersContext passengers() {
+			return GetRuleContext<PassengersContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TargetContext target() {
+			return GetRuleContext<TargetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public VehicleContext vehicle() {
+			return GetRuleContext<VehicleContext>(0);
+		}
 		public ExecuteOnContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -7301,20 +16890,69 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteOnContext executeOn() {
 		ExecuteOnContext _localctx = new ExecuteOnContext(Context, State);
-		EnterRule(_localctx, 226, RULE_executeOn);
-		int _la;
+		EnterRule(_localctx, 782, RULE_executeOn);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1411;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 115)) & ~0x3f) == 0 && ((1L << (_la - 115)) & 255L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2585;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Attacker:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2577;
+				attacker();
+				}
+				break;
+			case Controller:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2578;
+				controller();
+				}
+				break;
+			case Leasher:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 2579;
+				leasher();
+				}
+				break;
+			case Origin:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 2580;
+				origin();
+				}
+				break;
+			case Owner:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 2581;
+				owner();
+				}
+				break;
+			case Passengers:
+				EnterOuterAlt(_localctx, 6);
+				{
+				State = 2582;
+				passengers();
+				}
+				break;
+			case Target:
+				EnterOuterAlt(_localctx, 7);
+				{
+				State = 2583;
+				target();
+				}
+				break;
+			case Vehicle:
+				EnterOuterAlt(_localctx, 8);
+				{
+				State = 2584;
+				vehicle();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -7329,6 +16967,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteOverContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public Motion_blockingContext motion_blocking() {
+			return GetRuleContext<Motion_blockingContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public Motion_blocking_no_leavesContext motion_blocking_no_leaves() {
+			return GetRuleContext<Motion_blocking_no_leavesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public Ocean_floorContext ocean_floor() {
+			return GetRuleContext<Ocean_floorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public World_surfaceContext world_surface() {
+			return GetRuleContext<World_surfaceContext>(0);
+		}
 		public ExecuteOverContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -7339,20 +16989,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteOverContext executeOver() {
 		ExecuteOverContext _localctx = new ExecuteOverContext(Context, State);
-		EnterRule(_localctx, 228, RULE_executeOver);
-		int _la;
+		EnterRule(_localctx, 784, RULE_executeOver);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1413;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 123)) & ~0x3f) == 0 && ((1L << (_la - 123)) & 15L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2591;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Motion_blocking:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2587;
+				motion_blocking();
+				}
+				break;
+			case Motion_blocking_no_leaves:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2588;
+				motion_blocking_no_leaves();
+				}
+				break;
+			case Ocean_floor:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 2589;
+				ocean_floor();
+				}
+				break;
+			case World_surface:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 2590;
+				world_surface();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -7367,8 +17038,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecutePositionedContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AsContext @as() {
+			return GetRuleContext<AsContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OverContext over() {
+			return GetRuleContext<OverContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteOverContext executeOver() {
 			return GetRuleContext<ExecuteOverContext>(0);
@@ -7383,29 +17060,29 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecutePositionedContext executePositioned() {
 		ExecutePositionedContext _localctx = new ExecutePositionedContext(Context, State);
-		EnterRule(_localctx, 230, RULE_executePositioned);
+		EnterRule(_localctx, 786, RULE_executePositioned);
 		try {
-			State = 1419;
+			State = 2599;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__102:
+			case As:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1415;
-				Match(T__102);
-				State = 1416;
+				State = 2593;
+				@as();
+				State = 2594;
 				selector();
 				}
 				}
 				break;
-			case T__126:
+			case Over:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1417;
-				Match(T__126);
-				State = 1418;
+				State = 2596;
+				over();
+				State = 2597;
 				executeOver();
 				}
 				}
@@ -7426,6 +17103,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteStoreTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
@@ -7435,23 +17115,30 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public DataTypeContext dataType() {
 			return GetRuleContext<DataTypeContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public BossbarKeyContext bossbarKey() {
+			return GetRuleContext<BossbarKeyContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BossbarIdContext bossbarId() {
-			return GetRuleContext<BossbarIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public BossbarIDContext bossbarID() {
+			return GetRuleContext<BossbarIDContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteMaxOrValueContext executeMaxOrValue() {
 			return GetRuleContext<ExecuteMaxOrValueContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ScoreContext score() {
+			return GetRuleContext<ScoreContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TargetObjectiveContext targetObjective() {
 			return GetRuleContext<TargetObjectiveContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StorageContext storage() {
+			return GetRuleContext<StorageContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StorageIdContext storageId() {
 			return GetRuleContext<StorageIdContext>(0);
@@ -7466,87 +17153,85 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteStoreTargetContext executeStoreTarget() {
 		ExecuteStoreTargetContext _localctx = new ExecuteStoreTargetContext(Context, State);
-		EnterRule(_localctx, 232, RULE_executeStoreTarget);
+		EnterRule(_localctx, 788, RULE_executeStoreTarget);
 		try {
-			State = 1448;
+			State = 2627;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1421;
-				Match(T__71);
-				State = 1422;
+				State = 2601;
+				block();
+				State = 2602;
 				pos3D();
-				State = 1423;
+				State = 2603;
 				nbtPath();
-				State = 1424;
+				State = 2604;
 				dataType();
-				State = 1425;
-				number();
+				State = 2605;
+				Match(Double);
 				}
 				}
 				break;
-			case T__48:
+			case BossbarKey:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1427;
-				Match(T__48);
-				State = 1428;
-				bossbarId();
-				State = 1429;
+				State = 2607;
+				bossbarKey();
+				State = 2608;
+				bossbarID();
+				State = 2609;
 				executeMaxOrValue();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1431;
-				Match(T__72);
-				State = 1432;
-				singleSelector();
-				State = 1433;
+				State = 2611;
+				entity();
+				State = 2612;
+				selector();
+				State = 2613;
 				nbtPath();
-				State = 1434;
+				State = 2614;
 				dataType();
-				State = 1435;
-				number();
+				State = 2615;
+				Match(Double);
 				}
 				}
 				break;
-			case T__109:
+			case Score:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1437;
-				Match(T__109);
-				State = 1438;
+				State = 2617;
+				score();
+				State = 2618;
 				selector();
-				State = 1439;
+				State = 2619;
 				targetObjective();
 				}
 				}
 				break;
-			case T__73:
+			case Storage:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 1441;
-				Match(T__73);
-				State = 1442;
+				State = 2621;
+				storage();
+				State = 2622;
 				storageId();
-				State = 1443;
-				Match(T__16);
-				State = 1444;
+				State = 2623;
 				nbtPath();
-				State = 1445;
+				State = 2624;
 				dataType();
-				State = 1446;
-				number();
+				State = 2625;
+				Match(Double);
 				}
 				}
 				break;
@@ -7569,6 +17254,12 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteStoreTargetContext executeStoreTarget() {
 			return GetRuleContext<ExecuteStoreTargetContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ResultContext result() {
+			return GetRuleContext<ResultContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SuccessContext success() {
+			return GetRuleContext<SuccessContext>(0);
+		}
 		public ExecuteStoreContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -7579,21 +17270,29 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteStoreContext executeStore() {
 		ExecuteStoreContext _localctx = new ExecuteStoreContext(Context, State);
-		EnterRule(_localctx, 234, RULE_executeStore);
-		int _la;
+		EnterRule(_localctx, 790, RULE_executeStore);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1450;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__127 || _la==T__128) ) {
-			ErrorHandler.RecoverInline(this);
+			State = 2631;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Result:
+				{
+				State = 2629;
+				result();
+				}
+				break;
+			case Success:
+				{
+				State = 2630;
+				success();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
-			State = 1451;
+			State = 2633;
 			executeStoreTarget();
 			}
 		}
@@ -7615,6 +17314,9 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteOptionsContext executeOptions() {
 			return GetRuleContext<ExecuteOptionsContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -7631,33 +17333,35 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteFacingContext executeFacing() {
 		ExecuteFacingContext _localctx = new ExecuteFacingContext(Context, State);
-		EnterRule(_localctx, 236, RULE_executeFacing);
+		EnterRule(_localctx, 792, RULE_executeFacing);
 		try {
-			State = 1461;
+			State = 2643;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case Coordinates:
+			case Integer:
+			case Double:
+			case Coordinate:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1453;
+				State = 2635;
 				pos3D();
-				State = 1454;
+				State = 2636;
 				executeOptions();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1456;
-				Match(T__72);
-				State = 1457;
+				State = 2638;
+				entity();
+				State = 2639;
 				selector();
-				State = 1458;
+				State = 2640;
 				executeEyesOrFeet();
-				State = 1459;
+				State = 2641;
 				executeOptions();
 				}
 				}
@@ -7678,11 +17382,17 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExecuteOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AlignContext align() {
+			return GetRuleContext<AlignContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public AxesContext axes() {
 			return GetRuleContext<AxesContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteOptionsContext executeOptions() {
 			return GetRuleContext<ExecuteOptionsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AnchoredContext anchored() {
+			return GetRuleContext<AnchoredContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteEyesOrFeetContext executeEyesOrFeet() {
 			return GetRuleContext<ExecuteEyesOrFeetContext>(0);
@@ -7690,17 +17400,41 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public AsContext @as() {
+			return GetRuleContext<AsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AtLetterContext atLetter() {
+			return GetRuleContext<AtLetterContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public FacingContext facing() {
+			return GetRuleContext<FacingContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteFacingContext executeFacing() {
 			return GetRuleContext<ExecuteFacingContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteJudgementOptionsContext executeJudgementOptions() {
 			return GetRuleContext<ExecuteJudgementOptionsContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public IfContext @if() {
+			return GetRuleContext<IfContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public UnlessContext unless() {
+			return GetRuleContext<UnlessContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public InContext @in() {
+			return GetRuleContext<InContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public DimensionIdContext dimensionId() {
 			return GetRuleContext<DimensionIdContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public OnContext on() {
+			return GetRuleContext<OnContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteOnContext executeOn() {
 			return GetRuleContext<ExecuteOnContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PositionedContext positioned() {
+			return GetRuleContext<PositionedContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
@@ -7708,17 +17442,26 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExecutePositionedContext executePositioned() {
 			return GetRuleContext<ExecutePositionedContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public AsContext @as() {
-			return GetRuleContext<AsContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public RotatedContext rotated() {
+			return GetRuleContext<RotatedContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RunContext run() {
+			return GetRuleContext<RunContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public CommandsContext commands() {
 			return GetRuleContext<CommandsContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public StoreContext store() {
+			return GetRuleContext<StoreContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExecuteStoreContext executeStore() {
 			return GetRuleContext<ExecuteStoreContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public EntityIdContext entityId() {
-			return GetRuleContext<EntityIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SummonKeyContext summonKey() {
+			return GetRuleContext<SummonKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityTypeContext entityType() {
+			return GetRuleContext<EntityTypeContext>(0);
 		}
 		public ExecuteOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -7730,197 +17473,216 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExecuteOptionsContext executeOptions() {
 		ExecuteOptionsContext _localctx = new ExecuteOptionsContext(Context, State);
-		EnterRule(_localctx, 238, RULE_executeOptions);
-		int _la;
+		EnterRule(_localctx, 794, RULE_executeOptions);
 		try {
-			State = 1513;
+			State = 2702;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__129:
+			case Align:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1463;
-				Match(T__129);
-				State = 1464;
+				State = 2645;
+				align();
+				State = 2646;
 				axes();
-				State = 1465;
+				State = 2647;
 				executeOptions();
 				}
 				}
 				break;
-			case T__130:
+			case Anchored:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1467;
-				Match(T__130);
-				State = 1468;
+				State = 2649;
+				anchored();
+				State = 2650;
 				executeEyesOrFeet();
-				State = 1469;
+				State = 2651;
 				executeOptions();
 				}
 				}
 				break;
-			case T__66:
-			case T__102:
+			case AtLetter:
+			case As:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1471;
-				_la = TokenStream.LA(1);
-				if ( !(_la==T__66 || _la==T__102) ) {
-				ErrorHandler.RecoverInline(this);
+				State = 2655;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case As:
+					{
+					State = 2653;
+					@as();
+					}
+					break;
+				case AtLetter:
+					{
+					State = 2654;
+					atLetter();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
-				}
-				State = 1472;
+				State = 2657;
 				selector();
-				State = 1473;
+				State = 2658;
 				executeOptions();
 				}
 				}
 				break;
-			case T__131:
+			case Facing:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1475;
-				Match(T__131);
-				State = 1476;
+				State = 2660;
+				facing();
+				State = 2661;
 				executeFacing();
-				State = 1477;
+				State = 2662;
 				executeOptions();
 				}
 				}
 				break;
-			case T__132:
-			case T__133:
+			case If:
+			case Unless:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 1479;
-				_la = TokenStream.LA(1);
-				if ( !(_la==T__132 || _la==T__133) ) {
-				ErrorHandler.RecoverInline(this);
+				State = 2666;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case If:
+					{
+					State = 2664;
+					@if();
+					}
+					break;
+				case Unless:
+					{
+					State = 2665;
+					unless();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
-				}
-				State = 1480;
+				State = 2668;
 				executeJudgementOptions();
-				State = 1481;
+				State = 2669;
 				executeOptions();
 				}
 				}
 				break;
-			case T__134:
+			case In:
 				EnterOuterAlt(_localctx, 6);
 				{
 				{
-				State = 1483;
-				Match(T__134);
-				State = 1484;
+				State = 2671;
+				@in();
+				State = 2672;
 				dimensionId();
-				State = 1485;
+				State = 2673;
 				executeOptions();
 				}
 				}
 				break;
-			case T__135:
+			case On:
 				EnterOuterAlt(_localctx, 7);
 				{
 				{
-				State = 1487;
-				Match(T__135);
-				State = 1488;
+				State = 2675;
+				on();
+				State = 2676;
 				executeOn();
-				State = 1489;
+				State = 2677;
 				executeOptions();
 				}
 				}
 				break;
-			case T__136:
+			case Positioned:
 				EnterOuterAlt(_localctx, 8);
 				{
 				{
-				State = 1491;
-				Match(T__136);
-				State = 1494;
+				State = 2679;
+				positioned();
+				State = 2682;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case Coordinates:
+				case Integer:
+				case Double:
+				case Coordinate:
 					{
-					State = 1492;
+					State = 2680;
 					pos3D();
 					}
 					break;
-				case T__102:
-				case T__126:
+				case As:
+				case Over:
 					{
-					State = 1493;
+					State = 2681;
 					executePositioned();
 					}
 					break;
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 1496;
+				State = 2684;
 				executeOptions();
 				}
 				}
 				break;
-			case T__137:
+			case Rotated:
 				EnterOuterAlt(_localctx, 9);
 				{
 				{
-				State = 1498;
-				Match(T__137);
-				State = 1499;
+				State = 2686;
+				rotated();
+				State = 2687;
 				@as();
-				State = 1500;
+				State = 2688;
 				selector();
-				State = 1501;
+				State = 2689;
 				executeOptions();
 				}
 				}
 				break;
-			case T__138:
+			case Run:
 				EnterOuterAlt(_localctx, 10);
 				{
 				{
-				State = 1503;
-				Match(T__138);
-				State = 1504;
+				State = 2691;
+				run();
+				State = 2692;
 				commands();
 				}
 				}
 				break;
-			case T__139:
+			case Store:
 				EnterOuterAlt(_localctx, 11);
 				{
 				{
-				State = 1505;
-				Match(T__139);
-				State = 1506;
+				State = 2694;
+				store();
+				State = 2695;
 				executeStore();
-				State = 1507;
+				State = 2696;
 				executeOptions();
 				}
 				}
 				break;
-			case T__140:
+			case SummonKey:
 				EnterOuterAlt(_localctx, 12);
 				{
 				{
-				State = 1509;
-				Match(T__140);
-				State = 1510;
-				entityId();
-				State = 1511;
+				State = 2698;
+				summonKey();
+				State = 2699;
+				entityType();
+				State = 2700;
 				executeOptions();
 				}
 				}
@@ -7941,6 +17703,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExperienceRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ExperienceKeyContext experienceKey() {
+			return GetRuleContext<ExperienceKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExperienceOptionsContext experienceOptions() {
 			return GetRuleContext<ExperienceOptionsContext>(0);
 		}
@@ -7954,13 +17719,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExperienceRadicalContext experienceRadical() {
 		ExperienceRadicalContext _localctx = new ExperienceRadicalContext(Context, State);
-		EnterRule(_localctx, 240, RULE_experienceRadical);
+		EnterRule(_localctx, 796, RULE_experienceRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1515;
-			Match(T__141);
-			State = 1516;
+			State = 2704;
+			experienceKey();
+			State = 2705;
 			experienceOptions();
 			}
 		}
@@ -7975,38 +17740,8 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class QueryContext : ParserRuleContext {
-		public QueryContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_query; } }
-	}
-
-	[RuleVersion(0)]
-	public QueryContext query() {
-		QueryContext _localctx = new QueryContext(Context, State);
-		EnterRule(_localctx, 242, RULE_query);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1518;
-			Match(T__142);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
 	public partial class ExperienceAmountContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public ExperienceAmountContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8017,11 +17752,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExperienceAmountContext experienceAmount() {
 		ExperienceAmountContext _localctx = new ExperienceAmountContext(Context, State);
-		EnterRule(_localctx, 244, RULE_experienceAmount);
+		EnterRule(_localctx, 798, RULE_experienceAmount);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1520;
+			State = 2707;
 			Match(Integer);
 			}
 		}
@@ -8037,6 +17772,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ExpreienceTypeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public LevelsContext levels() {
+			return GetRuleContext<LevelsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PointsContext points() {
+			return GetRuleContext<PointsContext>(0);
+		}
 		public ExpreienceTypeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8047,20 +17788,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExpreienceTypeContext expreienceType() {
 		ExpreienceTypeContext _localctx = new ExpreienceTypeContext(Context, State);
-		EnterRule(_localctx, 246, RULE_expreienceType);
-		int _la;
+		EnterRule(_localctx, 800, RULE_expreienceType);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1522;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__143 || _la==T__144) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2711;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Levels:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2709;
+				levels();
+				}
+				break;
+			case Points:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2710;
+				points();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -8084,8 +17832,14 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ExpreienceTypeContext expreienceType() {
 			return GetRuleContext<ExpreienceTypeContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public QueryContext query() {
+			return GetRuleContext<QueryContext>(0);
 		}
 		public ExperienceOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -8097,46 +17851,52 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ExperienceOptionsContext experienceOptions() {
 		ExperienceOptionsContext _localctx = new ExperienceOptionsContext(Context, State);
-		EnterRule(_localctx, 248, RULE_experienceOptions);
-		int _la;
+		EnterRule(_localctx, 802, RULE_experienceOptions);
 		try {
-			State = 1534;
+			State = 2725;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__42:
-			case T__43:
+			case Add:
+			case Set:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1524;
-				_la = TokenStream.LA(1);
-				if ( !(_la==T__42 || _la==T__43) ) {
-				ErrorHandler.RecoverInline(this);
+				State = 2715;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case Add:
+					{
+					State = 2713;
+					add();
+					}
+					break;
+				case Set:
+					{
+					State = 2714;
+					set();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
-				}
-				State = 1525;
+				State = 2717;
 				selector();
-				State = 1526;
+				State = 2718;
 				experienceAmount();
-				State = 1527;
-				Match(T__16);
-				State = 1528;
+				State = 2719;
 				expreienceType();
 				}
 				}
 				break;
-			case T__142:
+			case Query:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1530;
-				Match(T__142);
-				State = 1531;
-				singleSelector();
-				State = 1532;
+				State = 2721;
+				query();
+				State = 2722;
+				selector();
+				State = 2723;
 				expreienceType();
 				}
 				}
@@ -8157,14 +17917,17 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class FillRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FillKeyContext fillKey() {
+			return GetRuleContext<FillKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext[] pos3D() {
 			return GetRuleContexts<Pos3DContext>();
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D(int i) {
 			return GetRuleContext<Pos3DContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockIdContext blockId() {
-			return GetRuleContext<BlockIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public BlockIDContext blockID() {
+			return GetRuleContext<BlockIDContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public FillOptionsContext fillOptions() {
 			return GetRuleContext<FillOptionsContext>(0);
@@ -8179,19 +17942,19 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public FillRadicalContext fillRadical() {
 		FillRadicalContext _localctx = new FillRadicalContext(Context, State);
-		EnterRule(_localctx, 250, RULE_fillRadical);
+		EnterRule(_localctx, 804, RULE_fillRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1536;
-			Match(T__145);
-			State = 1537;
+			State = 2727;
+			fillKey();
+			State = 2728;
 			pos3D();
-			State = 1538;
+			State = 2729;
 			pos3D();
-			State = 1539;
-			blockId();
-			State = 1540;
+			State = 2730;
+			blockID();
+			State = 2731;
 			fillOptions();
 			}
 		}
@@ -8207,8 +17970,23 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class FillOptionsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public BlockIdContext blockId() {
-			return GetRuleContext<BlockIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public DestroyContext destroy() {
+			return GetRuleContext<DestroyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public HollowContext hollow() {
+			return GetRuleContext<HollowContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public KeepContext keep() {
+			return GetRuleContext<KeepContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OutlineContext outline() {
+			return GetRuleContext<OutlineContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ReplaceContext replace() {
+			return GetRuleContext<ReplaceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BlockIDContext blockID() {
+			return GetRuleContext<BlockIDContext>(0);
 		}
 		public FillOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -8220,37 +17998,57 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public FillOptionsContext fillOptions() {
 		FillOptionsContext _localctx = new FillOptionsContext(Context, State);
-		EnterRule(_localctx, 252, RULE_fillOptions);
-		int _la;
+		EnterRule(_localctx, 806, RULE_fillOptions);
 		try {
-			State = 1545;
+			State = 2742;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__146:
-			case T__147:
-			case T__148:
-			case T__149:
+			case Destroy:
+			case Hollow:
+			case Keep:
+			case Outline:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 1542;
-				_la = TokenStream.LA(1);
-				if ( !(((((_la - 147)) & ~0x3f) == 0 && ((1L << (_la - 147)) & 15L) != 0)) ) {
-				ErrorHandler.RecoverInline(this);
-				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
+				State = 2737;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case Destroy:
+					{
+					State = 2733;
+					destroy();
+					}
+					break;
+				case Hollow:
+					{
+					State = 2734;
+					hollow();
+					}
+					break;
+				case Keep:
+					{
+					State = 2735;
+					keep();
+					}
+					break;
+				case Outline:
+					{
+					State = 2736;
+					outline();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
 				}
 				break;
-			case T__60:
+			case Replace:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1543;
-				Match(T__60);
-				State = 1544;
-				blockId();
+				State = 2739;
+				replace();
+				State = 2740;
+				blockID();
 				}
 				}
 				break;
@@ -8270,6 +18068,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class FillbiomeRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FillbiomeKeyContext fillbiomeKey() {
+			return GetRuleContext<FillbiomeKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext[] pos3D() {
 			return GetRuleContexts<Pos3DContext>();
 		}
@@ -8292,19 +18093,19 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public FillbiomeRadicalContext fillbiomeRadical() {
 		FillbiomeRadicalContext _localctx = new FillbiomeRadicalContext(Context, State);
-		EnterRule(_localctx, 254, RULE_fillbiomeRadical);
+		EnterRule(_localctx, 808, RULE_fillbiomeRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1547;
-			Match(T__150);
-			State = 1548;
+			State = 2744;
+			fillbiomeKey();
+			State = 2745;
 			pos3D();
-			State = 1549;
+			State = 2746;
 			pos3D();
-			State = 1550;
+			State = 2747;
 			biomeId();
-			State = 1551;
+			State = 2748;
 			fillBiomeOptions();
 			}
 		}
@@ -8320,6 +18121,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class FillBiomeOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ReplaceContext replace() {
+			return GetRuleContext<ReplaceContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BiomeIdContext biomeId() {
 			return GetRuleContext<BiomeIdContext>(0);
 		}
@@ -8333,13 +18137,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public FillBiomeOptionsContext fillBiomeOptions() {
 		FillBiomeOptionsContext _localctx = new FillBiomeOptionsContext(Context, State);
-		EnterRule(_localctx, 256, RULE_fillBiomeOptions);
+		EnterRule(_localctx, 810, RULE_fillBiomeOptions);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1553;
-			Match(T__60);
-			State = 1554;
+			State = 2750;
+			replace();
+			State = 2751;
 			biomeId();
 			}
 		}
@@ -8355,6 +18159,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ForceloadRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ForceloadKeyContext forceloadKey() {
+			return GetRuleContext<ForceloadKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ForceloadOptionsContext forceloadOptions() {
 			return GetRuleContext<ForceloadOptionsContext>(0);
 		}
@@ -8368,13 +18175,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ForceloadRadicalContext forceloadRadical() {
 		ForceloadRadicalContext _localctx = new ForceloadRadicalContext(Context, State);
-		EnterRule(_localctx, 258, RULE_forceloadRadical);
+		EnterRule(_localctx, 812, RULE_forceloadRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1556;
-			Match(T__151);
-			State = 1557;
+			State = 2753;
+			forceloadKey();
+			State = 2754;
 			forceloadOptions();
 			}
 		}
@@ -8396,6 +18203,9 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public Pos2DContext pos2D(int i) {
 			return GetRuleContext<Pos2DContext>(i);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public AllContext all() {
+			return GetRuleContext<AllContext>(0);
+		}
 		public ForceloadRemoveObjectivesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8406,27 +18216,29 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ForceloadRemoveObjectivesContext forceloadRemoveObjectives() {
 		ForceloadRemoveObjectivesContext _localctx = new ForceloadRemoveObjectivesContext(Context, State);
-		EnterRule(_localctx, 260, RULE_forceloadRemoveObjectives);
+		EnterRule(_localctx, 814, RULE_forceloadRemoveObjectives);
 		try {
-			State = 1563;
+			State = 2760;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case Coordinates:
+			case Integer:
+			case Double:
+			case Coordinate:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1559;
+				State = 2756;
 				pos2D();
-				State = 1560;
+				State = 2757;
 				pos2D();
 				}
 				}
 				break;
-			case T__103:
+			case All:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 1562;
-				Match(T__103);
+				State = 2759;
+				all();
 				}
 				break;
 			default:
@@ -8445,11 +18257,20 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ForceloadOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos2DContext[] pos2D() {
 			return GetRuleContexts<Pos2DContext>();
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos2DContext pos2D(int i) {
 			return GetRuleContext<Pos2DContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public QueryContext query() {
+			return GetRuleContext<QueryContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ForceloadRemoveObjectivesContext forceloadRemoveObjectives() {
 			return GetRuleContext<ForceloadRemoveObjectivesContext>(0);
@@ -8464,42 +18285,42 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ForceloadOptionsContext forceloadOptions() {
 		ForceloadOptionsContext _localctx = new ForceloadOptionsContext(Context, State);
-		EnterRule(_localctx, 262, RULE_forceloadOptions);
+		EnterRule(_localctx, 816, RULE_forceloadOptions);
 		try {
-			State = 1573;
+			State = 2772;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1565;
-				Match(T__43);
-				State = 1566;
+				State = 2762;
+				add();
+				State = 2763;
 				pos2D();
-				State = 1567;
+				State = 2764;
 				pos2D();
 				}
 				}
 				break;
-			case T__142:
+			case Query:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1569;
-				Match(T__142);
-				State = 1570;
+				State = 2766;
+				query();
+				State = 2767;
 				pos2D();
 				}
 				}
 				break;
-			case T__44:
+			case Remove:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1571;
-				Match(T__44);
-				State = 1572;
+				State = 2769;
+				remove();
+				State = 2770;
 				forceloadRemoveObjectives();
 				}
 				}
@@ -8520,6 +18341,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class FunctionRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FunctionKeyContext functionKey() {
+			return GetRuleContext<FunctionKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public FunctionIdContext functionId() {
 			return GetRuleContext<FunctionIdContext>(0);
 		}
@@ -8533,13 +18357,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public FunctionRadicalContext functionRadical() {
 		FunctionRadicalContext _localctx = new FunctionRadicalContext(Context, State);
-		EnterRule(_localctx, 264, RULE_functionRadical);
+		EnterRule(_localctx, 818, RULE_functionRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1575;
-			Match(T__87);
-			State = 1576;
+			State = 2774;
+			functionKey();
+			State = 2775;
 			functionId();
 			}
 		}
@@ -8555,11 +18379,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class GamemodeRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public GamemodeValuesContext gamemodeValues() {
-			return GetRuleContext<GamemodeValuesContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public GamemodeKeyContext gamemodeKey() {
+			return GetRuleContext<GamemodeKeyContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public OptionalSelectorContext optionalSelector() {
-			return GetRuleContext<OptionalSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public GamemodeValueContext gamemodeValue() {
+			return GetRuleContext<GamemodeValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
 		public GamemodeRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -8571,16 +18398,25 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public GamemodeRadicalContext gamemodeRadical() {
 		GamemodeRadicalContext _localctx = new GamemodeRadicalContext(Context, State);
-		EnterRule(_localctx, 266, RULE_gamemodeRadical);
+		EnterRule(_localctx, 820, RULE_gamemodeRadical);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1578;
-			Match(T__152);
-			State = 1579;
-			gamemodeValues();
-			State = 1580;
-			optionalSelector();
+			State = 2777;
+			gamemodeKey();
+			State = 2778;
+			gamemodeValue();
+			State = 2780;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==AtChar || _la==Identifier) {
+				{
+				State = 2779;
+				selector();
+				}
+			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -8595,6 +18431,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class GameruleRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public GameruleKeyContext gameruleKey() {
+			return GetRuleContext<GameruleKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public GameruleNameContext gameruleName() {
 			return GetRuleContext<GameruleNameContext>(0);
 		}
@@ -8611,15 +18450,15 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public GameruleRadicalContext gameruleRadical() {
 		GameruleRadicalContext _localctx = new GameruleRadicalContext(Context, State);
-		EnterRule(_localctx, 268, RULE_gameruleRadical);
+		EnterRule(_localctx, 822, RULE_gameruleRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1582;
-			Match(T__153);
-			State = 1583;
+			State = 2782;
+			gameruleKey();
+			State = 2783;
 			gameruleName();
-			State = 1584;
+			State = 2784;
 			gameruleValue();
 			}
 		}
@@ -8635,7 +18474,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class GameruleNameContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GameruleName() { return GetToken(mccommandParser.GameruleName, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public GameruleNameContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8646,12 +18485,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public GameruleNameContext gameruleName() {
 		GameruleNameContext _localctx = new GameruleNameContext(Context, State);
-		EnterRule(_localctx, 270, RULE_gameruleName);
+		EnterRule(_localctx, 824, RULE_gameruleName);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1586;
-			Match(GameruleName);
+			State = 2786;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -8666,8 +18505,8 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class GameruleValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Bool() { return GetToken(mccommandParser.Bool, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BooleanValue() { return GetToken(MCCommandParser.BooleanValue, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public GameruleValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8678,14 +18517,14 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public GameruleValueContext gameruleValue() {
 		GameruleValueContext _localctx = new GameruleValueContext(Context, State);
-		EnterRule(_localctx, 272, RULE_gameruleValue);
+		EnterRule(_localctx, 826, RULE_gameruleValue);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1588;
+			State = 2788;
 			_la = TokenStream.LA(1);
-			if ( !(_la==Integer || _la==Bool) ) {
+			if ( !(_la==BooleanValue || _la==Integer) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -8706,14 +18545,17 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class GiveRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public GiveKeyContext giveKey() {
+			return GetRuleContext<GiveKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemIdContext itemId() {
 			return GetRuleContext<ItemIdContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
 		}
 		public GiveRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -8725,18 +18567,18 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public GiveRadicalContext giveRadical() {
 		GiveRadicalContext _localctx = new GiveRadicalContext(Context, State);
-		EnterRule(_localctx, 274, RULE_giveRadical);
+		EnterRule(_localctx, 828, RULE_giveRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1590;
-			Match(T__96);
-			State = 1591;
+			State = 2790;
+			giveKey();
+			State = 2791;
 			selector();
-			State = 1592;
+			State = 2792;
 			itemId();
-			State = 1593;
-			@int();
+			State = 2793;
+			integer();
 			}
 		}
 		catch (RecognitionException re) {
@@ -8751,6 +18593,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class HelpRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public HelpKeyContext helpKey() {
+			return GetRuleContext<HelpKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public CommandListContext commandList() {
 			return GetRuleContext<CommandListContext>(0);
 		}
@@ -8764,14 +18609,14 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public HelpRadicalContext helpRadical() {
 		HelpRadicalContext _localctx = new HelpRadicalContext(Context, State);
-		EnterRule(_localctx, 276, RULE_helpRadical);
+		EnterRule(_localctx, 830, RULE_helpRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1595;
-			Match(T__154);
+			State = 2795;
+			helpKey();
 			{
-			State = 1596;
+			State = 2796;
 			commandList();
 			}
 			}
@@ -8788,7 +18633,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class CommandListContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode CommandList() { return GetToken(mccommandParser.CommandList, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public CommandListContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8799,12 +18644,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public CommandListContext commandList() {
 		CommandListContext _localctx = new CommandListContext(Context, State);
-		EnterRule(_localctx, 278, RULE_commandList);
+		EnterRule(_localctx, 832, RULE_commandList);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1598;
-			Match(CommandList);
+			State = 2798;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -8819,6 +18664,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ItemKeyContext itemKey() {
+			return GetRuleContext<ItemKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemOptionsContext itemOptions() {
 			return GetRuleContext<ItemOptionsContext>(0);
 		}
@@ -8832,15 +18680,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemRadicalContext itemRadical() {
 		ItemRadicalContext _localctx = new ItemRadicalContext(Context, State);
-		EnterRule(_localctx, 280, RULE_itemRadical);
+		EnterRule(_localctx, 834, RULE_itemRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1600;
-			Match(T__155);
-			State = 1601;
-			Match(T__16);
-			State = 1602;
+			State = 2800;
+			itemKey();
+			State = 2801;
 			itemOptions();
 			}
 		}
@@ -8856,7 +18702,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemSlotContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ItemSlot() { return GetToken(mccommandParser.ItemSlot, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public ItemSlotContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8867,12 +18713,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemSlotContext itemSlot() {
 		ItemSlotContext _localctx = new ItemSlotContext(Context, State);
-		EnterRule(_localctx, 282, RULE_itemSlot);
+		EnterRule(_localctx, 836, RULE_itemSlot);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1604;
-			Match(ItemSlot);
+			State = 2803;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -8887,7 +18733,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemModifierFileContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public ItemModifierFileContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -8898,12 +18744,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemModifierFileContext itemModifierFile() {
 		ItemModifierFileContext _localctx = new ItemModifierFileContext(Context, State);
-		EnterRule(_localctx, 284, RULE_itemModifierFile);
+		EnterRule(_localctx, 838, RULE_itemModifierFile);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1606;
-			Match(FilePath);
+			State = 2805;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -8918,8 +18764,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ModifyContext modify() {
+			return GetRuleContext<ModifyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemModifyTargetContext itemModifyTarget() {
 			return GetRuleContext<ItemModifyTargetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ReplaceContext replace() {
+			return GetRuleContext<ReplaceContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemReplaceTargetContext itemReplaceTarget() {
 			return GetRuleContext<ItemReplaceTargetContext>(0);
@@ -8934,29 +18786,29 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemOptionsContext itemOptions() {
 		ItemOptionsContext _localctx = new ItemOptionsContext(Context, State);
-		EnterRule(_localctx, 286, RULE_itemOptions);
+		EnterRule(_localctx, 840, RULE_itemOptions);
 		try {
-			State = 1612;
+			State = 2813;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__70:
+			case Modify:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1608;
-				Match(T__70);
-				State = 1609;
+				State = 2807;
+				modify();
+				State = 2808;
 				itemModifyTarget();
 				}
 				}
 				break;
-			case T__60:
+			case Replace:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1610;
-				Match(T__60);
-				State = 1611;
+				State = 2810;
+				replace();
+				State = 2811;
 				itemReplaceTarget();
 				}
 				}
@@ -8977,14 +18829,20 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemBehaviorsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FromContext from() {
+			return GetRuleContext<FromContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemModifyTargetContext itemModifyTarget() {
 			return GetRuleContext<ItemModifyTargetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public WithContext with() {
+			return GetRuleContext<WithContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemIdContext itemId() {
 			return GetRuleContext<ItemIdContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
 		}
 		public ItemBehaviorsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -8996,32 +18854,32 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemBehaviorsContext itemBehaviors() {
 		ItemBehaviorsContext _localctx = new ItemBehaviorsContext(Context, State);
-		EnterRule(_localctx, 288, RULE_itemBehaviors);
+		EnterRule(_localctx, 842, RULE_itemBehaviors);
 		try {
-			State = 1620;
+			State = 2822;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__35:
+			case From:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1614;
-				Match(T__35);
-				State = 1615;
+				State = 2815;
+				from();
+				State = 2816;
 				itemModifyTarget();
 				}
 				}
 				break;
-			case T__156:
+			case With:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1616;
-				Match(T__156);
-				State = 1617;
+				State = 2818;
+				with();
+				State = 2819;
 				itemId();
-				State = 1618;
-				@int();
+				State = 2820;
+				integer();
 				}
 				}
 				break;
@@ -9041,6 +18899,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemModifyTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
@@ -9049,6 +18910,9 @@ public partial class mccommandParser : Parser {
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemModifierFileContext itemModifierFile() {
 			return GetRuleContext<ItemModifierFileContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
@@ -9063,37 +18927,37 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemModifyTargetContext itemModifyTarget() {
 		ItemModifyTargetContext _localctx = new ItemModifyTargetContext(Context, State);
-		EnterRule(_localctx, 290, RULE_itemModifyTarget);
+		EnterRule(_localctx, 844, RULE_itemModifyTarget);
 		try {
-			State = 1632;
+			State = 2834;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1622;
-				Match(T__71);
-				State = 1623;
+				State = 2824;
+				block();
+				State = 2825;
 				pos3D();
-				State = 1624;
+				State = 2826;
 				itemSlot();
-				State = 1625;
+				State = 2827;
 				itemModifierFile();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1627;
-				Match(T__72);
-				State = 1628;
+				State = 2829;
+				entity();
+				State = 2830;
 				selector();
-				State = 1629;
+				State = 2831;
 				itemSlot();
-				State = 1630;
+				State = 2832;
 				itemModifierFile();
 				}
 				}
@@ -9114,6 +18978,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ItemReplaceTargetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
@@ -9122,6 +18989,9 @@ public partial class mccommandParser : Parser {
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ItemBehaviorsContext itemBehaviors() {
 			return GetRuleContext<ItemBehaviorsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
@@ -9136,37 +19006,37 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ItemReplaceTargetContext itemReplaceTarget() {
 		ItemReplaceTargetContext _localctx = new ItemReplaceTargetContext(Context, State);
-		EnterRule(_localctx, 292, RULE_itemReplaceTarget);
+		EnterRule(_localctx, 846, RULE_itemReplaceTarget);
 		try {
-			State = 1644;
+			State = 2846;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1634;
-				Match(T__71);
-				State = 1635;
+				State = 2836;
+				block();
+				State = 2837;
 				pos3D();
-				State = 1636;
+				State = 2838;
 				itemSlot();
-				State = 1637;
+				State = 2839;
 				itemBehaviors();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1639;
-				Match(T__72);
-				State = 1640;
+				State = 2841;
+				entity();
+				State = 2842;
 				selector();
-				State = 1641;
+				State = 2843;
 				itemSlot();
-				State = 1642;
+				State = 2844;
 				itemBehaviors();
 				}
 				}
@@ -9187,6 +19057,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class JfrRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public JfrKeyContext jfrKey() {
+			return GetRuleContext<JfrKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public JfrStartOrStopContext jfrStartOrStop() {
 			return GetRuleContext<JfrStartOrStopContext>(0);
 		}
@@ -9200,13 +19073,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public JfrRadicalContext jfrRadical() {
 		JfrRadicalContext _localctx = new JfrRadicalContext(Context, State);
-		EnterRule(_localctx, 294, RULE_jfrRadical);
+		EnterRule(_localctx, 848, RULE_jfrRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1646;
-			Match(T__157);
-			State = 1647;
+			State = 2848;
+			jfrKey();
+			State = 2849;
 			jfrStartOrStop();
 			}
 		}
@@ -9222,6 +19095,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class JfrStartOrStopContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public StartContext start() {
+			return GetRuleContext<StartContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StopContext stop() {
+			return GetRuleContext<StopContext>(0);
+		}
 		public JfrStartOrStopContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -9232,20 +19111,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public JfrStartOrStopContext jfrStartOrStop() {
 		JfrStartOrStopContext _localctx = new JfrStartOrStopContext(Context, State);
-		EnterRule(_localctx, 296, RULE_jfrStartOrStop);
-		int _la;
+		EnterRule(_localctx, 850, RULE_jfrStartOrStop);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1649;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__88 || _la==T__89) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 2853;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Start:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2851;
+				start();
+				}
+				break;
+			case Stop:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2852;
+				stop();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -9260,6 +19146,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class KickRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public KickKeyContext kickKey() {
+			return GetRuleContext<KickKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -9276,15 +19165,15 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public KickRadicalContext kickRadical() {
 		KickRadicalContext _localctx = new KickRadicalContext(Context, State);
-		EnterRule(_localctx, 298, RULE_kickRadical);
+		EnterRule(_localctx, 852, RULE_kickRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1651;
-			Match(T__158);
-			State = 1652;
+			State = 2855;
+			kickKey();
+			State = 2856;
 			selector();
-			State = 1653;
+			State = 2857;
 			reason();
 			}
 		}
@@ -9300,10 +19189,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ReasonContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Any() { return GetTokens(mccommandParser.Any); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Any(int i) {
-			return GetToken(mccommandParser.Any, i);
-		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MessageContent() { return GetToken(MCCommandParser.MessageContent, 0); }
 		public ReasonContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -9314,25 +19200,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ReasonContext reason() {
 		ReasonContext _localctx = new ReasonContext(Context, State);
-		EnterRule(_localctx, 300, RULE_reason);
-		int _la;
+		EnterRule(_localctx, 854, RULE_reason);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1656;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			do {
-				{
-				{
-				State = 1655;
-				Match(Any);
-				}
-				}
-				State = 1658;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-			} while ( _la==Any );
+			State = 2859;
+			Match(MessageContent);
 			}
 		}
 		catch (RecognitionException re) {
@@ -9347,6 +19220,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class KillRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public KillKeyContext killKey() {
+			return GetRuleContext<KillKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -9360,13 +19236,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public KillRadicalContext killRadical() {
 		KillRadicalContext _localctx = new KillRadicalContext(Context, State);
-		EnterRule(_localctx, 302, RULE_killRadical);
+		EnterRule(_localctx, 856, RULE_killRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1660;
-			Match(T__159);
-			State = 1661;
+			State = 2861;
+			killKey();
+			State = 2862;
 			selector();
 			}
 		}
@@ -9382,6 +19258,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ListRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ListKeyContext listKey() {
+			return GetRuleContext<ListKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public UuidsContext uuids() {
 			return GetRuleContext<UuidsContext>(0);
 		}
@@ -9395,13 +19274,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ListRadicalContext listRadical() {
 		ListRadicalContext _localctx = new ListRadicalContext(Context, State);
-		EnterRule(_localctx, 304, RULE_listRadical);
+		EnterRule(_localctx, 858, RULE_listRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1663;
-			Match(T__49);
-			State = 1664;
+			State = 2864;
+			listKey();
+			State = 2865;
 			uuids();
 			}
 		}
@@ -9416,37 +19295,10 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class UuidsContext : ParserRuleContext {
-		public UuidsContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_uuids; } }
-	}
-
-	[RuleVersion(0)]
-	public UuidsContext uuids() {
-		UuidsContext _localctx = new UuidsContext(Context, State);
-		EnterRule(_localctx, 306, RULE_uuids);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1666;
-			Match(T__160);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
 	public partial class LocateRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public LocateKeyContext locateKey() {
+			return GetRuleContext<LocateKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public LocateOptionsContext locateOptions() {
 			return GetRuleContext<LocateOptionsContext>(0);
 		}
@@ -9460,13 +19312,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LocateRadicalContext locateRadical() {
 		LocateRadicalContext _localctx = new LocateRadicalContext(Context, State);
-		EnterRule(_localctx, 308, RULE_locateRadical);
+		EnterRule(_localctx, 860, RULE_locateRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1668;
-			Match(T__161);
-			State = 1669;
+			State = 2867;
+			locateKey();
+			State = 2868;
 			locateOptions();
 			}
 		}
@@ -9482,7 +19334,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PoiIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public PoiIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -9493,12 +19345,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PoiIdContext poiId() {
 		PoiIdContext _localctx = new PoiIdContext(Context, State);
-		EnterRule(_localctx, 310, RULE_poiId);
+		EnterRule(_localctx, 862, RULE_poiId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1671;
-			Match(IdString);
+			State = 2870;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -9513,7 +19365,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class StructureIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public StructureIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -9524,12 +19376,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public StructureIdContext structureId() {
 		StructureIdContext _localctx = new StructureIdContext(Context, State);
-		EnterRule(_localctx, 312, RULE_structureId);
+		EnterRule(_localctx, 864, RULE_structureId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1673;
-			Match(IdString);
+			State = 2872;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -9544,11 +19396,20 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class LocateOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BiomeContext biome() {
+			return GetRuleContext<BiomeContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BiomeIdContext biomeId() {
 			return GetRuleContext<BiomeIdContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public PoiContext poi() {
+			return GetRuleContext<PoiContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public PoiIdContext poiId() {
 			return GetRuleContext<PoiIdContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StructureContext structure() {
+			return GetRuleContext<StructureContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StructureIdContext structureId() {
 			return GetRuleContext<StructureIdContext>(0);
@@ -9563,40 +19424,40 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LocateOptionsContext locateOptions() {
 		LocateOptionsContext _localctx = new LocateOptionsContext(Context, State);
-		EnterRule(_localctx, 314, RULE_locateOptions);
+		EnterRule(_localctx, 866, RULE_locateOptions);
 		try {
-			State = 1681;
+			State = 2883;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__104:
+			case Biome:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1675;
-				Match(T__104);
-				State = 1676;
+				State = 2874;
+				biome();
+				State = 2875;
 				biomeId();
 				}
 				}
 				break;
-			case T__162:
+			case Poi:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1677;
-				Match(T__162);
-				State = 1678;
+				State = 2877;
+				poi();
+				State = 2878;
 				poiId();
 				}
 				}
 				break;
-			case T__163:
+			case Structure:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1679;
-				Match(T__163);
-				State = 1680;
+				State = 2880;
+				structure();
+				State = 2881;
 				structureId();
 				}
 				}
@@ -9617,6 +19478,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class LootRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public LootKeyContext lootKey() {
+			return GetRuleContext<LootKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public LootOptionsContext lootOptions() {
 			return GetRuleContext<LootOptionsContext>(0);
 		}
@@ -9630,13 +19494,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LootRadicalContext lootRadical() {
 		LootRadicalContext _localctx = new LootRadicalContext(Context, State);
-		EnterRule(_localctx, 316, RULE_lootRadical);
+		EnterRule(_localctx, 868, RULE_lootRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1683;
-			Match(T__164);
-			State = 1684;
+			State = 2885;
+			lootKey();
+			State = 2886;
 			lootOptions();
 			}
 		}
@@ -9652,7 +19516,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class LootFilePathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public LootFilePathContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -9663,12 +19527,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LootFilePathContext lootFilePath() {
 		LootFilePathContext _localctx = new LootFilePathContext(Context, State);
-		EnterRule(_localctx, 318, RULE_lootFilePath);
+		EnterRule(_localctx, 870, RULE_lootFilePath);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1686;
-			Match(FilePath);
+			State = 2888;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -9683,7 +19547,13 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class LootToolContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public MainhandContext mainhand() {
+			return GetRuleContext<MainhandContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OffhandContext offhand() {
+			return GetRuleContext<OffhandContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public LootToolContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -9694,44 +19564,30 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LootToolContext lootTool() {
 		LootToolContext _localctx = new LootToolContext(Context, State);
-		EnterRule(_localctx, 320, RULE_lootTool);
-		int _la;
+		EnterRule(_localctx, 872, RULE_lootTool);
 		try {
-			State = 1694;
+			State = 2893;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__165:
+			case Mainhand:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 1688;
-				Match(T__165);
+				State = 2890;
+				mainhand();
 				}
 				break;
-			case T__166:
+			case Offhand:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 1689;
-				Match(T__166);
+				State = 2891;
+				offhand();
 				}
 				break;
-			case T__9:
-			case IdString:
+			case ResourceLocation:
 				EnterOuterAlt(_localctx, 3);
 				{
-				{
-				State = 1691;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if (_la==T__9) {
-					{
-					State = 1690;
-					Match(T__9);
-					}
-				}
-
-				State = 1693;
-				Match(IdString);
-				}
+				State = 2892;
+				Match(ResourceLocation);
 				}
 				break;
 			default:
@@ -9749,48 +19605,30 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class BlockContext : ParserRuleContext {
-		public BlockContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_block; } }
-	}
-
-	[RuleVersion(0)]
-	public BlockContext block() {
-		BlockContext _localctx = new BlockContext(Context, State);
-		EnterRule(_localctx, 322, RULE_block);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1696;
-			Match(T__71);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
 	public partial class LootOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public GiveKeyContext giveKey() {
+			return GetRuleContext<GiveKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public LootModesContext lootModes() {
 			return GetRuleContext<LootModesContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public InsertContext insert() {
+			return GetRuleContext<InsertContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ReplaceContext replace() {
+			return GetRuleContext<ReplaceContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public LootReplaceContext lootReplace() {
 			return GetRuleContext<LootReplaceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SpawnContext spawn() {
+			return GetRuleContext<SpawnContext>(0);
 		}
 		public LootOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -9802,57 +19640,57 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LootOptionsContext lootOptions() {
 		LootOptionsContext _localctx = new LootOptionsContext(Context, State);
-		EnterRule(_localctx, 324, RULE_lootOptions);
+		EnterRule(_localctx, 874, RULE_lootOptions);
 		try {
-			State = 1712;
+			State = 2910;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__96:
+			case GiveKey:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1698;
-				Match(T__96);
-				State = 1699;
+				State = 2895;
+				giveKey();
+				State = 2896;
 				selector();
-				State = 1700;
+				State = 2897;
 				lootModes();
 				}
 				}
 				break;
-			case T__76:
+			case Insert:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1702;
-				Match(T__76);
-				State = 1703;
+				State = 2899;
+				insert();
+				State = 2900;
 				pos3D();
-				State = 1704;
+				State = 2901;
 				lootModes();
 				}
 				}
 				break;
-			case T__60:
+			case Replace:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1706;
-				Match(T__60);
-				State = 1707;
+				State = 2903;
+				replace();
+				State = 2904;
 				lootReplace();
 				}
 				}
 				break;
-			case T__167:
+			case Spawn:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1708;
-				Match(T__167);
-				State = 1709;
+				State = 2906;
+				spawn();
+				State = 2907;
 				pos3D();
-				State = 1710;
+				State = 2908;
 				lootModes();
 				}
 				}
@@ -9873,6 +19711,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class LootReplaceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
@@ -9881,6 +19722,9 @@ public partial class mccommandParser : Parser {
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public LootModesContext lootModes() {
 			return GetRuleContext<LootModesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityContext entity() {
+			return GetRuleContext<EntityContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
@@ -9895,37 +19739,37 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LootReplaceContext lootReplace() {
 		LootReplaceContext _localctx = new LootReplaceContext(Context, State);
-		EnterRule(_localctx, 326, RULE_lootReplace);
+		EnterRule(_localctx, 876, RULE_lootReplace);
 		try {
-			State = 1724;
+			State = 2922;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__71:
+			case Block:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1714;
-				Match(T__71);
-				State = 1715;
+				State = 2912;
+				block();
+				State = 2913;
 				pos3D();
-				State = 1716;
+				State = 2914;
 				itemSlot();
-				State = 1717;
+				State = 2915;
 				lootModes();
 				}
 				}
 				break;
-			case T__72:
+			case Entity:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1719;
-				Match(T__72);
-				State = 1720;
+				State = 2917;
+				entity();
+				State = 2918;
 				selector();
-				State = 1721;
+				State = 2919;
 				itemSlot();
-				State = 1722;
+				State = 2920;
 				lootModes();
 				}
 				}
@@ -9946,6 +19790,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class LootModesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FishContext fish() {
+			return GetRuleContext<FishContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public LootFilePathContext lootFilePath() {
 			return GetRuleContext<LootFilePathContext>(0);
 		}
@@ -9955,8 +19802,17 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public LootToolContext lootTool() {
 			return GetRuleContext<LootToolContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public KillKeyContext killKey() {
+			return GetRuleContext<KillKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LootKeyContext lootKey() {
+			return GetRuleContext<LootKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MineContext mine() {
+			return GetRuleContext<MineContext>(0);
 		}
 		public LootModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -9968,57 +19824,57 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public LootModesContext lootModes() {
 		LootModesContext _localctx = new LootModesContext(Context, State);
-		EnterRule(_localctx, 328, RULE_lootModes);
+		EnterRule(_localctx, 878, RULE_lootModes);
 		try {
-			State = 1739;
+			State = 2939;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__168:
+			case Fish:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1726;
-				Match(T__168);
-				State = 1727;
+				State = 2924;
+				fish();
+				State = 2925;
 				lootFilePath();
-				State = 1728;
+				State = 2926;
 				pos3D();
-				State = 1729;
+				State = 2927;
 				lootTool();
 				}
 				}
 				break;
-			case T__159:
+			case KillKey:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1731;
-				Match(T__159);
-				State = 1732;
-				singleSelector();
+				State = 2929;
+				killKey();
+				State = 2930;
+				selector();
 				}
 				}
 				break;
-			case T__164:
+			case LootKey:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1733;
-				Match(T__164);
-				State = 1734;
+				State = 2932;
+				lootKey();
+				State = 2933;
 				lootFilePath();
 				}
 				}
 				break;
-			case T__169:
+			case Mine:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1735;
-				Match(T__169);
-				State = 1736;
+				State = 2935;
+				mine();
+				State = 2936;
 				pos3D();
-				State = 1737;
+				State = 2937;
 				lootTool();
 				}
 				}
@@ -10039,6 +19895,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class MeRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public MeKeyContext meKey() {
+			return GetRuleContext<MeKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ActionContext action() {
 			return GetRuleContext<ActionContext>(0);
 		}
@@ -10052,13 +19911,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public MeRadicalContext meRadical() {
 		MeRadicalContext _localctx = new MeRadicalContext(Context, State);
-		EnterRule(_localctx, 330, RULE_meRadical);
+		EnterRule(_localctx, 880, RULE_meRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1741;
-			Match(T__170);
-			State = 1742;
+			State = 2941;
+			meKey();
+			State = 2942;
 			action();
 			}
 		}
@@ -10074,7 +19933,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ActionContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Any() { return GetToken(mccommandParser.Any, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MessageContent() { return GetToken(MCCommandParser.MessageContent, 0); }
 		public ActionContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10085,12 +19944,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ActionContext action() {
 		ActionContext _localctx = new ActionContext(Context, State);
-		EnterRule(_localctx, 332, RULE_action);
+		EnterRule(_localctx, 882, RULE_action);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1744;
-			Match(Any);
+			State = 2944;
+			Match(MessageContent);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10105,11 +19964,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class MsgRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public MsgKeyContext msgKey() {
+			return GetRuleContext<MsgKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public MessageContext message() {
-			return GetRuleContext<MessageContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public MsgMessageContext msgMessage() {
+			return GetRuleContext<MsgMessageContext>(0);
 		}
 		public MsgRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -10121,16 +19983,16 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public MsgRadicalContext msgRadical() {
 		MsgRadicalContext _localctx = new MsgRadicalContext(Context, State);
-		EnterRule(_localctx, 334, RULE_msgRadical);
+		EnterRule(_localctx, 884, RULE_msgRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1746;
-			Match(T__171);
-			State = 1747;
+			State = 2946;
+			msgKey();
+			State = 2947;
 			selector();
-			State = 1748;
-			message();
+			State = 2948;
+			msgMessage();
 			}
 		}
 		catch (RecognitionException re) {
@@ -10144,40 +20006,24 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class MessageContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Any() { return GetTokens(mccommandParser.Any); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Any(int i) {
-			return GetToken(mccommandParser.Any, i);
-		}
-		public MessageContext(ParserRuleContext parent, int invokingState)
+	public partial class MsgMessageContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MessageContent() { return GetToken(MCCommandParser.MessageContent, 0); }
+		public MsgMessageContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_message; } }
+		public override int RuleIndex { get { return RULE_msgMessage; } }
 	}
 
 	[RuleVersion(0)]
-	public MessageContext message() {
-		MessageContext _localctx = new MessageContext(Context, State);
-		EnterRule(_localctx, 336, RULE_message);
-		int _la;
+	public MsgMessageContext msgMessage() {
+		MsgMessageContext _localctx = new MsgMessageContext(Context, State);
+		EnterRule(_localctx, 886, RULE_msgMessage);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1751;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			do {
-				{
-				{
-				State = 1750;
-				Match(Any);
-				}
-				}
-				State = 1753;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-			} while ( _la==Any );
+			State = 2950;
+			Match(MessageContent);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10192,23 +20038,29 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ParticleRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ParticleKeyContext particleKey() {
+			return GetRuleContext<ParticleKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ParticleIdContext particleId() {
 			return GetRuleContext<ParticleIdContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext[] pos3D() {
-			return GetRuleContexts<Pos3DContext>();
+		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
+			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D(int i) {
-			return GetRuleContext<Pos3DContext>(i);
+		[System.Diagnostics.DebuggerNonUserCode] public ParticleDeltaContext particleDelta() {
+			return GetRuleContext<ParticleDeltaContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ParticleSpeedAndCountContext particleSpeedAndCount() {
-			return GetRuleContext<ParticleSpeedAndCountContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ParticleSpeedContext particleSpeed() {
+			return GetRuleContext<ParticleSpeedContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ParticleCountContext particleCount() {
+			return GetRuleContext<ParticleCountContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ParticleOptionsContext particleOptions() {
 			return GetRuleContext<ParticleOptionsContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public OptionalSelectorContext optionalSelector() {
-			return GetRuleContext<OptionalSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
 		public ParticleRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -10220,193 +20072,85 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ParticleRadicalContext particleRadical() {
 		ParticleRadicalContext _localctx = new ParticleRadicalContext(Context, State);
-		EnterRule(_localctx, 338, RULE_particleRadical);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1755;
-			Match(T__172);
-			State = 1756;
-			particleId();
-			State = 1757;
-			pos3D();
-			State = 1758;
-			Match(T__16);
-			State = 1759;
-			pos3D();
-			State = 1760;
-			Match(T__16);
-			State = 1761;
-			particleSpeedAndCount();
-			State = 1762;
-			particleOptions();
-			State = 1763;
-			optionalSelector();
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class RgbContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PositiveNumber() { return GetToken(mccommandParser.PositiveNumber, 0); }
-		public RgbContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_rgb; } }
-	}
-
-	[RuleVersion(0)]
-	public RgbContext rgb() {
-		RgbContext _localctx = new RgbContext(Context, State);
-		EnterRule(_localctx, 340, RULE_rgb);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1765;
-			Match(PositiveNumber);
-			State = 1766;
-			Match(T__16);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class SizeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode PositiveNumber() { return GetToken(mccommandParser.PositiveNumber, 0); }
-		public SizeContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_size; } }
-	}
-
-	[RuleVersion(0)]
-	public SizeContext size() {
-		SizeContext _localctx = new SizeContext(Context, State);
-		EnterRule(_localctx, 342, RULE_size);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1768;
-			Match(PositiveNumber);
-			State = 1769;
-			Match(T__16);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class ParticleSpeedAndCountContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(mccommandParser.Number, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(mccommandParser.Int, 0); }
-		public ParticleSpeedAndCountContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_particleSpeedAndCount; } }
-	}
-
-	[RuleVersion(0)]
-	public ParticleSpeedAndCountContext particleSpeedAndCount() {
-		ParticleSpeedAndCountContext _localctx = new ParticleSpeedAndCountContext(Context, State);
-		EnterRule(_localctx, 344, RULE_particleSpeedAndCount);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1771;
-			Match(Number);
-			State = 1772;
-			Match(Int);
-			State = 1773;
-			Match(T__16);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class GameTickContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Gametick() { return GetToken(mccommandParser.Gametick, 0); }
-		public GameTickContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_gameTick; } }
-	}
-
-	[RuleVersion(0)]
-	public GameTickContext gameTick() {
-		GameTickContext _localctx = new GameTickContext(Context, State);
-		EnterRule(_localctx, 346, RULE_gameTick);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1775;
-			Match(Gametick);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class ParticleOptionsContext : ParserRuleContext {
-		public ParticleOptionsContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_particleOptions; } }
-	}
-
-	[RuleVersion(0)]
-	public ParticleOptionsContext particleOptions() {
-		ParticleOptionsContext _localctx = new ParticleOptionsContext(Context, State);
-		EnterRule(_localctx, 348, RULE_particleOptions);
+		EnterRule(_localctx, 888, RULE_particleRadical);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1777;
+			State = 2952;
+			particleKey();
+			State = 2953;
+			particleId();
+			State = 2964;
+			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if ( !(_la==T__61 || _la==T__63) ) {
+			if (((((_la - 289)) & ~0x3f) == 0 && ((1L << (_la - 289)) & 524321L) != 0)) {
+				{
+				State = 2954;
+				pos3D();
+				State = 2955;
+				particleDelta();
+				State = 2956;
+				particleSpeed();
+				State = 2957;
+				particleCount();
+				State = 2959;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==Force || _la==Normal) {
+					{
+					State = 2958;
+					particleOptions();
+					}
+				}
+
+				State = 2962;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==AtChar || _la==Identifier) {
+					{
+					State = 2961;
+					selector();
+					}
+				}
+
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ParticleSpeedContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public ParticleSpeedContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_particleSpeed; } }
+	}
+
+	[RuleVersion(0)]
+	public ParticleSpeedContext particleSpeed() {
+		ParticleSpeedContext _localctx = new ParticleSpeedContext(Context, State);
+		EnterRule(_localctx, 890, RULE_particleSpeed);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2966;
+			_la = TokenStream.LA(1);
+			if ( !(_la==Integer || _la==Double) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -10426,35 +20170,118 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class AbsolutePosContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Number() { return GetTokens(mccommandParser.Number); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number(int i) {
-			return GetToken(mccommandParser.Number, i);
-		}
-		public AbsolutePosContext(ParserRuleContext parent, int invokingState)
+	public partial class ParticleCountContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public ParticleCountContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_absolutePos; } }
+		public override int RuleIndex { get { return RULE_particleCount; } }
 	}
 
 	[RuleVersion(0)]
-	public AbsolutePosContext absolutePos() {
-		AbsolutePosContext _localctx = new AbsolutePosContext(Context, State);
-		EnterRule(_localctx, 350, RULE_absolutePos);
+	public ParticleCountContext particleCount() {
+		ParticleCountContext _localctx = new ParticleCountContext(Context, State);
+		EnterRule(_localctx, 892, RULE_particleCount);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1779;
-			Match(Number);
-			State = 1780;
-			Match(T__16);
-			State = 1781;
-			Match(Number);
-			State = 1782;
-			Match(T__16);
-			State = 1783;
-			Match(Number);
+			State = 2968;
+			Match(Integer);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ParticleDeltaContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateXContext coordinateX() {
+			return GetRuleContext<CoordinateXContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateYContext coordinateY() {
+			return GetRuleContext<CoordinateYContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CoordinateZContext coordinateZ() {
+			return GetRuleContext<CoordinateZContext>(0);
+		}
+		public ParticleDeltaContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_particleDelta; } }
+	}
+
+	[RuleVersion(0)]
+	public ParticleDeltaContext particleDelta() {
+		ParticleDeltaContext _localctx = new ParticleDeltaContext(Context, State);
+		EnterRule(_localctx, 894, RULE_particleDelta);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2970;
+			coordinateX();
+			State = 2971;
+			coordinateY();
+			State = 2972;
+			coordinateZ();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ParticleOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ForceContext force() {
+			return GetRuleContext<ForceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NormalContext normal() {
+			return GetRuleContext<NormalContext>(0);
+		}
+		public ParticleOptionsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_particleOptions; } }
+	}
+
+	[RuleVersion(0)]
+	public ParticleOptionsContext particleOptions() {
+		ParticleOptionsContext _localctx = new ParticleOptionsContext(Context, State);
+		EnterRule(_localctx, 896, RULE_particleOptions);
+		try {
+			State = 2976;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Force:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 2974;
+				force();
+				}
+				break;
+			case Normal:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 2975;
+				normal();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10469,7 +20296,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ParticleIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ParticleIDStringContext particleIDString() {
+			return GetRuleContext<ParticleIDStringContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public JobjectContext jobject() {
+			return GetRuleContext<JobjectContext>(0);
+		}
 		public ParticleIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10480,12 +20312,63 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ParticleIdContext particleId() {
 		ParticleIdContext _localctx = new ParticleIdContext(Context, State);
-		EnterRule(_localctx, 352, RULE_particleId);
+		EnterRule(_localctx, 898, RULE_particleId);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1785;
-			Match(IdString);
+			State = 2978;
+			particleIDString();
+			State = 2980;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==CurlyBrackets || _la==LeftCurlyBracket) {
+				{
+				State = 2979;
+				jobject();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ParticleIDStringContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
+		public ParticleIDStringContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_particleIDString; } }
+	}
+
+	[RuleVersion(0)]
+	public ParticleIDStringContext particleIDString() {
+		ParticleIDStringContext _localctx = new ParticleIDStringContext(Context, State);
+		EnterRule(_localctx, 900, RULE_particleIDString);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 2982;
+			_la = TokenStream.LA(1);
+			if ( !(_la==Identifier || _la==ResourceLocation) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -10500,6 +20383,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PlaceRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public PlaceKeyContext placeKey() {
+			return GetRuleContext<PlaceKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public PlaceModesContext placeModes() {
 			return GetRuleContext<PlaceModesContext>(0);
 		}
@@ -10513,13 +20399,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PlaceRadicalContext placeRadical() {
 		PlaceRadicalContext _localctx = new PlaceRadicalContext(Context, State);
-		EnterRule(_localctx, 354, RULE_placeRadical);
+		EnterRule(_localctx, 902, RULE_placeRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1787;
-			Match(T__173);
-			State = 1788;
+			State = 2984;
+			placeKey();
+			State = 2985;
 			placeModes();
 			}
 		}
@@ -10535,7 +20421,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class FeatureIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public FeatureIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10546,12 +20432,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public FeatureIdContext featureId() {
 		FeatureIdContext _localctx = new FeatureIdContext(Context, State);
-		EnterRule(_localctx, 356, RULE_featureId);
+		EnterRule(_localctx, 904, RULE_featureId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1790;
-			Match(IdString);
+			State = 2987;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10566,7 +20452,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class JigsawTargetContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public JigsawTargetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10577,12 +20463,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public JigsawTargetContext jigsawTarget() {
 		JigsawTargetContext _localctx = new JigsawTargetContext(Context, State);
-		EnterRule(_localctx, 358, RULE_jigsawTarget);
+		EnterRule(_localctx, 906, RULE_jigsawTarget);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1792;
-			Match(IdString);
+			State = 2989;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10597,7 +20483,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class JigsawFilePathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public JigsawFilePathContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10608,12 +20494,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public JigsawFilePathContext jigsawFilePath() {
 		JigsawFilePathContext _localctx = new JigsawFilePathContext(Context, State);
-		EnterRule(_localctx, 360, RULE_jigsawFilePath);
+		EnterRule(_localctx, 908, RULE_jigsawFilePath);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1794;
-			Match(FilePath);
+			State = 2991;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10628,7 +20514,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TemplateFilePathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public TemplateFilePathContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10639,12 +20525,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TemplateFilePathContext templateFilePath() {
 		TemplateFilePathContext _localctx = new TemplateFilePathContext(Context, State);
-		EnterRule(_localctx, 362, RULE_templateFilePath);
+		EnterRule(_localctx, 910, RULE_templateFilePath);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1796;
-			Match(FilePath);
+			State = 2993;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10659,11 +20545,17 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PlaceModesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public FeatureContext feature() {
+			return GetRuleContext<FeatureContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public FeatureIdContext featureId() {
 			return GetRuleContext<FeatureIdContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public JigsawContext jigsaw() {
+			return GetRuleContext<JigsawContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public JigsawFilePathContext jigsawFilePath() {
 			return GetRuleContext<JigsawFilePathContext>(0);
@@ -10671,11 +20563,17 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public JigsawTargetContext jigsawTarget() {
 			return GetRuleContext<JigsawTargetContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public StructureContext structure() {
+			return GetRuleContext<StructureContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public StructureIdContext structureId() {
 			return GetRuleContext<StructureIdContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TemplateContext template() {
+			return GetRuleContext<TemplateContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public TemplateFilePathContext templateFilePath() {
 			return GetRuleContext<TemplateFilePathContext>(0);
@@ -10683,9 +20581,7 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public PlaceRotationModesContext placeRotationModes() {
 			return GetRuleContext<PlaceRotationModesContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
-		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public PlaceModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10696,74 +20592,70 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PlaceModesContext placeModes() {
 		PlaceModesContext _localctx = new PlaceModesContext(Context, State);
-		EnterRule(_localctx, 364, RULE_placeModes);
+		EnterRule(_localctx, 912, RULE_placeModes);
 		try {
-			State = 1821;
+			State = 3016;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__174:
+			case Feature:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1798;
-				Match(T__174);
-				State = 1799;
+				State = 2995;
+				feature();
+				State = 2996;
 				featureId();
-				State = 1800;
+				State = 2997;
 				pos3D();
 				}
 				}
 				break;
-			case T__175:
+			case Jigsaw:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1802;
-				Match(T__175);
-				State = 1803;
+				State = 2999;
+				jigsaw();
+				State = 3000;
 				jigsawFilePath();
-				State = 1804;
+				State = 3001;
 				jigsawTarget();
-				State = 1805;
-				@int();
-				State = 1806;
-				Match(T__16);
-				State = 1807;
+				State = 3002;
+				integer();
+				State = 3003;
 				pos3D();
 				}
 				}
 				break;
-			case T__163:
+			case Structure:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1809;
-				Match(T__163);
-				State = 1810;
+				State = 3005;
+				structure();
+				State = 3006;
 				structureId();
-				State = 1811;
+				State = 3007;
 				pos3D();
 				}
 				}
 				break;
-			case T__176:
+			case Template:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1813;
-				Match(T__176);
-				State = 1814;
+				State = 3009;
+				template();
+				State = 3010;
 				templateFilePath();
-				State = 1815;
+				State = 3011;
 				pos3D();
-				State = 1816;
+				State = 3012;
 				placeRotationModes();
-				State = 1817;
-				number();
-				State = 1818;
-				Match(T__16);
-				State = 1819;
-				@int();
+				State = 3013;
+				Match(Double);
+				State = 3014;
+				integer();
 				}
 				}
 				break;
@@ -10783,6 +20675,15 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PlaceMirrorItemsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public Front_backContext front_back() {
+			return GetRuleContext<Front_backContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public Left_rightContext left_right() {
+			return GetRuleContext<Left_rightContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NoneContext none() {
+			return GetRuleContext<NoneContext>(0);
+		}
 		public PlaceMirrorItemsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10793,20 +20694,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PlaceMirrorItemsContext placeMirrorItems() {
 		PlaceMirrorItemsContext _localctx = new PlaceMirrorItemsContext(Context, State);
-		EnterRule(_localctx, 366, RULE_placeMirrorItems);
-		int _la;
+		EnterRule(_localctx, 914, RULE_placeMirrorItems);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1823;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 178)) & ~0x3f) == 0 && ((1L << (_la - 178)) & 7L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3021;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Front_back:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3018;
+				front_back();
+				}
+				break;
+			case Left_right:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3019;
+				left_right();
+				}
+				break;
+			case None:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3020;
+				none();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10824,6 +20739,18 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public PlaceMirrorItemsContext placeMirrorItems() {
 			return GetRuleContext<PlaceMirrorItemsContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public OneHundredAndEightyContext oneHundredAndEighty() {
+			return GetRuleContext<OneHundredAndEightyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public Clockwise_90Context clockwise_90() {
+			return GetRuleContext<Clockwise_90Context>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public Counterclockwise_90Context counterclockwise_90() {
+			return GetRuleContext<Counterclockwise_90Context>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NoneContext none() {
+			return GetRuleContext<NoneContext>(0);
+		}
 		public PlaceRotationModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10834,21 +20761,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PlaceRotationModesContext placeRotationModes() {
 		PlaceRotationModesContext _localctx = new PlaceRotationModesContext(Context, State);
-		EnterRule(_localctx, 368, RULE_placeRotationModes);
-		int _la;
+		EnterRule(_localctx, 916, RULE_placeRotationModes);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1825;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 180)) & ~0x3f) == 0 && ((1L << (_la - 180)) & 15L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
+			State = 3027;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case OneHundredAndEighty:
+				{
+				State = 3023;
+				oneHundredAndEighty();
+				}
+				break;
+			case Clockwise_90:
+				{
+				State = 3024;
+				clockwise_90();
+				}
+				break;
+			case Counterclockwise_90:
+				{
+				State = 3025;
+				counterclockwise_90();
+				}
+				break;
+			case None:
+				{
+				State = 3026;
+				none();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
-			State = 1826;
+			State = 3029;
 			placeMirrorItems();
 			}
 		}
@@ -10864,6 +20811,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PlaysoundRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public PlaysoundKeyContext playsoundKey() {
+			return GetRuleContext<PlaysoundKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SoundIdContext soundId() {
 			return GetRuleContext<SoundIdContext>(0);
 		}
@@ -10895,25 +20845,25 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PlaysoundRadicalContext playsoundRadical() {
 		PlaysoundRadicalContext _localctx = new PlaysoundRadicalContext(Context, State);
-		EnterRule(_localctx, 370, RULE_playsoundRadical);
+		EnterRule(_localctx, 918, RULE_playsoundRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1828;
-			Match(T__183);
-			State = 1829;
+			State = 3031;
+			playsoundKey();
+			State = 3032;
 			soundId();
-			State = 1830;
+			State = 3033;
 			soundTypes();
-			State = 1831;
+			State = 3034;
 			selector();
-			State = 1832;
+			State = 3035;
 			pos3D();
-			State = 1833;
+			State = 3036;
 			volume();
-			State = 1834;
+			State = 3037;
 			pitch();
-			State = 1835;
+			State = 3038;
 			minVolume();
 			}
 		}
@@ -10929,7 +20879,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class VolumeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(mccommandParser.Number, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public VolumeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10940,12 +20890,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public VolumeContext volume() {
 		VolumeContext _localctx = new VolumeContext(Context, State);
-		EnterRule(_localctx, 372, RULE_volume);
+		EnterRule(_localctx, 920, RULE_volume);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1837;
-			Match(Number);
+			State = 3040;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10960,7 +20910,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PitchContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(mccommandParser.Number, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public PitchContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -10971,12 +20921,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PitchContext pitch() {
 		PitchContext _localctx = new PitchContext(Context, State);
-		EnterRule(_localctx, 374, RULE_pitch);
+		EnterRule(_localctx, 922, RULE_pitch);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1839;
-			Match(Number);
+			State = 3042;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -10991,7 +20941,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class MinVolumeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(mccommandParser.Number, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public MinVolumeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11002,12 +20952,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public MinVolumeContext minVolume() {
 		MinVolumeContext _localctx = new MinVolumeContext(Context, State);
-		EnterRule(_localctx, 376, RULE_minVolume);
+		EnterRule(_localctx, 924, RULE_minVolume);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1841;
-			Match(Number);
+			State = 3044;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11022,6 +20972,33 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SoundTypesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AmbientContext ambient() {
+			return GetRuleContext<AmbientContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public HostileContext hostile() {
+			return GetRuleContext<HostileContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MasterContext master() {
+			return GetRuleContext<MasterContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MusicContext music() {
+			return GetRuleContext<MusicContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NeutralContext neutral() {
+			return GetRuleContext<NeutralContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PlayerContext player() {
+			return GetRuleContext<PlayerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RecordContext record() {
+			return GetRuleContext<RecordContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public VoiceContext voice() {
+			return GetRuleContext<VoiceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public WeatherKeyContext weatherKey() {
+			return GetRuleContext<WeatherKeyContext>(0);
+		}
 		public SoundTypesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11032,20 +21009,76 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SoundTypesContext soundTypes() {
 		SoundTypesContext _localctx = new SoundTypesContext(Context, State);
-		EnterRule(_localctx, 378, RULE_soundTypes);
-		int _la;
+		EnterRule(_localctx, 926, RULE_soundTypes);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1843;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 185)) & ~0x3f) == 0 && ((1L << (_la - 185)) & 511L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3055;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Ambient:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3046;
+				ambient();
+				}
+				break;
+			case Hostile:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3047;
+				hostile();
+				}
+				break;
+			case Master:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3048;
+				master();
+				}
+				break;
+			case Music:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 3049;
+				music();
+				}
+				break;
+			case Neutral:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 3050;
+				neutral();
+				}
+				break;
+			case Player:
+				EnterOuterAlt(_localctx, 6);
+				{
+				State = 3051;
+				player();
+				}
+				break;
+			case Record:
+				EnterOuterAlt(_localctx, 7);
+				{
+				State = 3052;
+				record();
+				}
+				break;
+			case Voice:
+				EnterOuterAlt(_localctx, 8);
+				{
+				State = 3053;
+				voice();
+				}
+				break;
+			case WeatherKey:
+				EnterOuterAlt(_localctx, 9);
+				{
+				State = 3054;
+				weatherKey();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11060,11 +21093,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PublishRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public PublishKeyContext publishKey() {
+			return GetRuleContext<PublishKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BoolContext @bool() {
 			return GetRuleContext<BoolContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public GamemodeValuesContext gamemodeValues() {
-			return GetRuleContext<GamemodeValuesContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public GamemodeValueContext gamemodeValue() {
+			return GetRuleContext<GamemodeValueContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public PortContext port() {
 			return GetRuleContext<PortContext>(0);
@@ -11079,17 +21115,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PublishRadicalContext publishRadical() {
 		PublishRadicalContext _localctx = new PublishRadicalContext(Context, State);
-		EnterRule(_localctx, 380, RULE_publishRadical);
+		EnterRule(_localctx, 928, RULE_publishRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1845;
-			Match(T__193);
-			State = 1846;
+			State = 3057;
+			publishKey();
+			State = 3058;
 			@bool();
-			State = 1847;
-			gamemodeValues();
-			State = 1848;
+			State = 3059;
+			gamemodeValue();
+			State = 3060;
 			port();
 			}
 		}
@@ -11105,7 +21141,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class PortContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
 		public PortContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11116,11 +21152,11 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public PortContext port() {
 		PortContext _localctx = new PortContext(Context, State);
-		EnterRule(_localctx, 382, RULE_port);
+		EnterRule(_localctx, 930, RULE_port);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1850;
+			State = 3062;
 			Match(Integer);
 			}
 		}
@@ -11136,6 +21172,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class RecipeRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public RecipeKeyContext recipeKey() {
+			return GetRuleContext<RecipeKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public RecipeGiveOrTakeContext recipeGiveOrTake() {
 			return GetRuleContext<RecipeGiveOrTakeContext>(0);
 		}
@@ -11155,17 +21194,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public RecipeRadicalContext recipeRadical() {
 		RecipeRadicalContext _localctx = new RecipeRadicalContext(Context, State);
-		EnterRule(_localctx, 384, RULE_recipeRadical);
+		EnterRule(_localctx, 932, RULE_recipeRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1852;
-			Match(T__194);
-			State = 1853;
+			State = 3064;
+			recipeKey();
+			State = 3065;
 			recipeGiveOrTake();
-			State = 1854;
+			State = 3066;
 			selector();
-			State = 1855;
+			State = 3067;
 			recipeFilePath();
 			}
 		}
@@ -11181,7 +21220,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class RecipeFilePathContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public RecipeFilePathContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11192,12 +21231,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public RecipeFilePathContext recipeFilePath() {
 		RecipeFilePathContext _localctx = new RecipeFilePathContext(Context, State);
-		EnterRule(_localctx, 386, RULE_recipeFilePath);
+		EnterRule(_localctx, 934, RULE_recipeFilePath);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1857;
-			Match(FilePath);
+			State = 3069;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11212,6 +21251,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class RecipeGiveOrTakeContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public GiveKeyContext giveKey() {
+			return GetRuleContext<GiveKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TakeContext take() {
+			return GetRuleContext<TakeContext>(0);
+		}
 		public RecipeGiveOrTakeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11222,20 +21267,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public RecipeGiveOrTakeContext recipeGiveOrTake() {
 		RecipeGiveOrTakeContext _localctx = new RecipeGiveOrTakeContext(Context, State);
-		EnterRule(_localctx, 388, RULE_recipeGiveOrTake);
-		int _la;
+		EnterRule(_localctx, 936, RULE_recipeGiveOrTake);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1859;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__96 || _la==T__195) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3073;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case GiveKey:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3071;
+				giveKey();
+				}
+				break;
+			case Take:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3072;
+				take();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11250,6 +21302,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ReloadRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ReloadKeyContext reloadKey() {
+			return GetRuleContext<ReloadKeyContext>(0);
+		}
 		public ReloadRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11260,12 +21315,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ReloadRadicalContext reloadRadical() {
 		ReloadRadicalContext _localctx = new ReloadRadicalContext(Context, State);
-		EnterRule(_localctx, 390, RULE_reloadRadical);
+		EnterRule(_localctx, 938, RULE_reloadRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1861;
-			Match(T__196);
+			State = 3075;
+			reloadKey();
 			}
 		}
 		catch (RecognitionException re) {
@@ -11280,8 +21335,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ReturnRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ReturnKeyContext returnKey() {
+			return GetRuleContext<ReturnKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
 		}
 		public ReturnRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11293,14 +21351,14 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ReturnRadicalContext returnRadical() {
 		ReturnRadicalContext _localctx = new ReturnRadicalContext(Context, State);
-		EnterRule(_localctx, 392, RULE_returnRadical);
+		EnterRule(_localctx, 940, RULE_returnRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1863;
-			Match(T__197);
-			State = 1864;
-			@int();
+			State = 3077;
+			returnKey();
+			State = 3078;
+			integer();
 			}
 		}
 		catch (RecognitionException re) {
@@ -11315,8 +21373,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class RideRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public RideKeyContext rideKey() {
+			return GetRuleContext<RideKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public RideModesContext rideModes() {
 			return GetRuleContext<RideModesContext>(0);
@@ -11331,15 +21392,15 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public RideRadicalContext rideRadical() {
 		RideRadicalContext _localctx = new RideRadicalContext(Context, State);
-		EnterRule(_localctx, 394, RULE_rideRadical);
+		EnterRule(_localctx, 942, RULE_rideRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1866;
-			Match(T__198);
-			State = 1867;
-			singleSelector();
-			State = 1868;
+			State = 3080;
+			rideKey();
+			State = 3081;
+			selector();
+			State = 3082;
 			rideModes();
 			}
 		}
@@ -11355,8 +21416,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class RideModesContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public DismountContext dismount() {
+			return GetRuleContext<DismountContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MountContext mount() {
+			return GetRuleContext<MountContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
+			return GetRuleContext<SelectorContext>(0);
 		}
 		public RideModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11368,26 +21435,26 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public RideModesContext rideModes() {
 		RideModesContext _localctx = new RideModesContext(Context, State);
-		EnterRule(_localctx, 396, RULE_rideModes);
+		EnterRule(_localctx, 944, RULE_rideModes);
 		try {
-			State = 1873;
+			State = 3088;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__199:
+			case Dismount:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 1870;
-				Match(T__199);
+				State = 3084;
+				dismount();
 				}
 				break;
-			case T__200:
+			case Mount:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1871;
-				Match(T__200);
-				State = 1872;
-				singleSelector();
+				State = 3085;
+				mount();
+				State = 3086;
+				selector();
 				}
 				}
 				break;
@@ -11407,8 +21474,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SayRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public MessageContext message() {
-			return GetRuleContext<MessageContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SayKeyContext sayKey() {
+			return GetRuleContext<SayKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SayMessageContext sayMessage() {
+			return GetRuleContext<SayMessageContext>(0);
 		}
 		public SayRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11420,14 +21490,45 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SayRadicalContext sayRadical() {
 		SayRadicalContext _localctx = new SayRadicalContext(Context, State);
-		EnterRule(_localctx, 398, RULE_sayRadical);
+		EnterRule(_localctx, 946, RULE_sayRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1875;
-			Match(T__201);
-			State = 1876;
-			message();
+			State = 3090;
+			sayKey();
+			State = 3091;
+			sayMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SayMessageContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MessageContent() { return GetToken(MCCommandParser.MessageContent, 0); }
+		public SayMessageContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_sayMessage; } }
+	}
+
+	[RuleVersion(0)]
+	public SayMessageContext sayMessage() {
+		SayMessageContext _localctx = new SayMessageContext(Context, State);
+		EnterRule(_localctx, 948, RULE_sayMessage);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 3093;
+			Match(MessageContent);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11442,6 +21543,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScheduleRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ScheduleKeyContext scheduleKey() {
+			return GetRuleContext<ScheduleKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScheduleModesContext scheduleModes() {
 			return GetRuleContext<ScheduleModesContext>(0);
 		}
@@ -11455,13 +21559,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScheduleRadicalContext scheduleRadical() {
 		ScheduleRadicalContext _localctx = new ScheduleRadicalContext(Context, State);
-		EnterRule(_localctx, 400, RULE_scheduleRadical);
+		EnterRule(_localctx, 950, RULE_scheduleRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1878;
-			Match(T__202);
-			State = 1879;
+			State = 3095;
+			scheduleKey();
+			State = 3096;
 			scheduleModes();
 			}
 		}
@@ -11477,7 +21581,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class FunctionIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode FilePath() { return GetToken(mccommandParser.FilePath, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public FunctionIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11488,12 +21592,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public FunctionIdContext functionId() {
 		FunctionIdContext _localctx = new FunctionIdContext(Context, State);
-		EnterRule(_localctx, 402, RULE_functionId);
+		EnterRule(_localctx, 952, RULE_functionId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1881;
-			Match(FilePath);
+			State = 3098;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11508,6 +21612,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScheduleAppendOrReplaceContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AppendContext append() {
+			return GetRuleContext<AppendContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ReplaceContext replace() {
+			return GetRuleContext<ReplaceContext>(0);
+		}
 		public ScheduleAppendOrReplaceContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11518,20 +21628,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScheduleAppendOrReplaceContext scheduleAppendOrReplace() {
 		ScheduleAppendOrReplaceContext _localctx = new ScheduleAppendOrReplaceContext(Context, State);
-		EnterRule(_localctx, 404, RULE_scheduleAppendOrReplace);
-		int _la;
+		EnterRule(_localctx, 954, RULE_scheduleAppendOrReplace);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1883;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__60 || _la==T__75) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3102;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Append:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3100;
+				append();
+				}
+				break;
+			case Replace:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3101;
+				replace();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11546,12 +21663,16 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScheduleModesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ClearKeyContext clearKey() {
+			return GetRuleContext<ClearKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public FunctionIdContext functionId() {
 			return GetRuleContext<FunctionIdContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public FunctionKeyContext functionKey() {
+			return GetRuleContext<FunctionKeyContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ScheduleAppendOrReplaceContext scheduleAppendOrReplace() {
 			return GetRuleContext<ScheduleAppendOrReplaceContext>(0);
 		}
@@ -11565,33 +21686,33 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScheduleModesContext scheduleModes() {
 		ScheduleModesContext _localctx = new ScheduleModesContext(Context, State);
-		EnterRule(_localctx, 406, RULE_scheduleModes);
+		EnterRule(_localctx, 956, RULE_scheduleModes);
 		try {
-			State = 1892;
+			State = 3112;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__56:
+			case ClearKey:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1885;
-				Match(T__56);
-				State = 1886;
+				State = 3104;
+				clearKey();
+				State = 3105;
 				functionId();
 				}
 				}
 				break;
-			case T__87:
+			case FunctionKey:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1887;
-				Match(T__87);
-				State = 1888;
+				State = 3107;
+				functionKey();
+				State = 3108;
 				functionId();
-				State = 1889;
-				number();
-				State = 1890;
+				State = 3109;
+				Match(Double);
+				State = 3110;
 				scheduleAppendOrReplace();
 				}
 				}
@@ -11612,6 +21733,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardKeyContext scoreboardKey() {
+			return GetRuleContext<ScoreboardKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardOptionsContext scoreboardOptions() {
 			return GetRuleContext<ScoreboardOptionsContext>(0);
 		}
@@ -11625,13 +21749,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardRadicalContext scoreboardRadical() {
 		ScoreboardRadicalContext _localctx = new ScoreboardRadicalContext(Context, State);
-		EnterRule(_localctx, 408, RULE_scoreboardRadical);
+		EnterRule(_localctx, 958, RULE_scoreboardRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1894;
-			Match(T__203);
-			State = 1895;
+			State = 3114;
+			scoreboardKey();
+			State = 3115;
 			scoreboardOptions();
 			}
 		}
@@ -11647,8 +21771,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ObjectivesContext objectives() {
+			return GetRuleContext<ObjectivesContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardObjectivesBehaviorsContext scoreboardObjectivesBehaviors() {
 			return GetRuleContext<ScoreboardObjectivesBehaviorsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PlayersContext players() {
+			return GetRuleContext<PlayersContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardPlayersBehaviorsContext scoreboardPlayersBehaviors() {
 			return GetRuleContext<ScoreboardPlayersBehaviorsContext>(0);
@@ -11663,29 +21793,29 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardOptionsContext scoreboardOptions() {
 		ScoreboardOptionsContext _localctx = new ScoreboardOptionsContext(Context, State);
-		EnterRule(_localctx, 410, RULE_scoreboardOptions);
+		EnterRule(_localctx, 960, RULE_scoreboardOptions);
 		try {
-			State = 1901;
+			State = 3123;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__204:
+			case Objectives:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1897;
-				Match(T__204);
-				State = 1898;
+				State = 3117;
+				objectives();
+				State = 3118;
 				scoreboardObjectivesBehaviors();
 				}
 				}
 				break;
-			case T__51:
+			case Players:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1899;
-				Match(T__51);
-				State = 1900;
+				State = 3120;
+				players();
+				State = 3121;
 				scoreboardPlayersBehaviors();
 				}
 				}
@@ -11706,7 +21836,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardObjectiveContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ScoreboardObjective() { return GetToken(mccommandParser.ScoreboardObjective, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public ScoreboardObjectiveContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11717,12 +21847,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardObjectiveContext scoreboardObjective() {
 		ScoreboardObjectiveContext _localctx = new ScoreboardObjectiveContext(Context, State);
-		EnterRule(_localctx, 412, RULE_scoreboardObjective);
+		EnterRule(_localctx, 962, RULE_scoreboardObjective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1903;
-			Match(ScoreboardObjective);
+			State = 3125;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11737,7 +21867,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardTypeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ScoreboardType() { return GetToken(mccommandParser.ScoreboardType, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public ScoreboardTypeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11748,43 +21878,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardTypeContext scoreboardType() {
 		ScoreboardTypeContext _localctx = new ScoreboardTypeContext(Context, State);
-		EnterRule(_localctx, 414, RULE_scoreboardType);
+		EnterRule(_localctx, 964, RULE_scoreboardType);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1905;
-			Match(ScoreboardType);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class ValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
-		public ValueContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_value; } }
-	}
-
-	[RuleVersion(0)]
-	public ValueContext value() {
-		ValueContext _localctx = new ValueContext(Context, State);
-		EnterRule(_localctx, 416, RULE_value);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1907;
-			Match(Integer);
+			State = 3127;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11799,6 +21898,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardHeartsOrIntegerContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public HeartsContext hearts() {
+			return GetRuleContext<HeartsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
 		public ScoreboardHeartsOrIntegerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11809,20 +21914,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardHeartsOrIntegerContext scoreboardHeartsOrInteger() {
 		ScoreboardHeartsOrIntegerContext _localctx = new ScoreboardHeartsOrIntegerContext(Context, State);
-		EnterRule(_localctx, 418, RULE_scoreboardHeartsOrInteger);
-		int _la;
+		EnterRule(_localctx, 966, RULE_scoreboardHeartsOrInteger);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1909;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__205 || _la==T__206) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3131;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Hearts:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3129;
+				hearts();
+				}
+				break;
+			case Integer:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3130;
+				integer();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11837,7 +21949,33 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardOperatorContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Equal() { return GetToken(mccommandParser.Equal, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public RemainderEqualContext remainderEqual() {
+			return GetRuleContext<RemainderEqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MultiplicationEqualContext multiplicationEqual() {
+			return GetRuleContext<MultiplicationEqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AdditionEqualContext additionEqual() {
+			return GetRuleContext<AdditionEqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SubtractionEqualContext subtractionEqual() {
+			return GetRuleContext<SubtractionEqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DivisionEqualContext divisionEqual() {
+			return GetRuleContext<DivisionEqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public LessThanContext lessThan() {
+			return GetRuleContext<LessThanContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EqualContext equal() {
+			return GetRuleContext<EqualContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GreaterThanContext greaterThan() {
+			return GetRuleContext<GreaterThanContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GreaterThanLessThanContext greaterThanLessThan() {
+			return GetRuleContext<GreaterThanLessThanContext>(0);
+		}
 		public ScoreboardOperatorContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11848,20 +21986,76 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardOperatorContext scoreboardOperator() {
 		ScoreboardOperatorContext _localctx = new ScoreboardOperatorContext(Context, State);
-		EnterRule(_localctx, 420, RULE_scoreboardOperator);
-		int _la;
+		EnterRule(_localctx, 968, RULE_scoreboardOperator);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1911;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__110 || ((((_la - 208)) & ~0x3f) == 0 && ((1L << (_la - 208)) & 127L) != 0) || _la==Equal) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3142;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case RemainderEqual:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3133;
+				remainderEqual();
+				}
+				break;
+			case MultiplicationEqual:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3134;
+				multiplicationEqual();
+				}
+				break;
+			case AdditionEqual:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3135;
+				additionEqual();
+				}
+				break;
+			case SubtractionEqual:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 3136;
+				subtractionEqual();
+				}
+				break;
+			case DivisionEqual:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 3137;
+				divisionEqual();
+				}
+				break;
+			case LeftAngleBracket:
+				EnterOuterAlt(_localctx, 6);
+				{
+				State = 3138;
+				lessThan();
+				}
+				break;
+			case Equal:
+				EnterOuterAlt(_localctx, 7);
+				{
+				State = 3139;
+				equal();
+				}
+				break;
+			case RightAngleBracket:
+				EnterOuterAlt(_localctx, 8);
+				{
+				State = 3140;
+				greaterThan();
+				}
+				break;
+			case GreaterThanLessThan:
+				EnterOuterAlt(_localctx, 9);
+				{
+				State = 3141;
+				greaterThanLessThan();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11876,7 +22070,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardSlotsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ScoreboardSlots() { return GetToken(mccommandParser.ScoreboardSlots, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public ScoreboardSlotsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11887,72 +22081,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardSlotsContext scoreboardSlots() {
 		ScoreboardSlotsContext _localctx = new ScoreboardSlotsContext(Context, State);
-		EnterRule(_localctx, 422, RULE_scoreboardSlots);
+		EnterRule(_localctx, 970, RULE_scoreboardSlots);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1913;
-			Match(ScoreboardSlots);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class DisplaynameContext : ParserRuleContext {
-		public DisplaynameContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_displayname; } }
-	}
-
-	[RuleVersion(0)]
-	public DisplaynameContext displayname() {
-		DisplaynameContext _localctx = new DisplaynameContext(Context, State);
-		EnterRule(_localctx, 424, RULE_displayname);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1915;
-			Match(T__214);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class RendertypeContext : ParserRuleContext {
-		public RendertypeContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_rendertype; } }
-	}
-
-	[RuleVersion(0)]
-	public RendertypeContext rendertype() {
-		RendertypeContext _localctx = new RendertypeContext(Context, State);
-		EnterRule(_localctx, 426, RULE_rendertype);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1917;
-			Match(T__215);
+			State = 3144;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -11967,6 +22101,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardObjectivesBehaviorsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardObjectiveContext scoreboardObjective() {
 			return GetRuleContext<ScoreboardObjectiveContext>(0);
 		}
@@ -11976,17 +22113,29 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public JsonComponentContext jsonComponent() {
 			return GetRuleContext<JsonComponentContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ListKeyContext listKey() {
+			return GetRuleContext<ListKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ModifyContext modify() {
+			return GetRuleContext<ModifyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TargetObjectiveContext targetObjective() {
 			return GetRuleContext<TargetObjectiveContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public DisplaynameContext displayname() {
-			return GetRuleContext<DisplaynameContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public DisplayNameContext displayName() {
+			return GetRuleContext<DisplayNameContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public RendertypeContext rendertype() {
 			return GetRuleContext<RendertypeContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardHeartsOrIntegerContext scoreboardHeartsOrInteger() {
 			return GetRuleContext<ScoreboardHeartsOrIntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetdisplayContext setdisplay() {
+			return GetRuleContext<SetdisplayContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardSlotsContext scoreboardSlots() {
 			return GetRuleContext<ScoreboardSlotsContext>(0);
@@ -12001,60 +22150,60 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardObjectivesBehaviorsContext scoreboardObjectivesBehaviors() {
 		ScoreboardObjectivesBehaviorsContext _localctx = new ScoreboardObjectivesBehaviorsContext(Context, State);
-		EnterRule(_localctx, 428, RULE_scoreboardObjectivesBehaviors);
+		EnterRule(_localctx, 972, RULE_scoreboardObjectivesBehaviors);
 		try {
-			State = 1941;
+			State = 3169;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1919;
-				Match(T__43);
-				State = 1920;
+				State = 3146;
+				add();
+				State = 3147;
 				scoreboardObjective();
-				State = 1921;
+				State = 3148;
 				scoreboardType();
-				State = 1922;
+				State = 3149;
 				jsonComponent();
 				}
 				}
 				break;
-			case T__49:
+			case ListKey:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 1924;
-				Match(T__49);
+				State = 3151;
+				listKey();
 				}
 				break;
-			case T__70:
-			case T__215:
+			case Modify:
+			case Rendertype:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 1933;
+				State = 3160;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case T__70:
+				case Modify:
 					{
-					State = 1925;
-					Match(T__70);
-					State = 1926;
+					State = 3152;
+					modify();
+					State = 3153;
 					targetObjective();
 					{
-					State = 1927;
-					displayname();
-					State = 1928;
+					State = 3154;
+					displayName();
+					State = 3155;
 					jsonComponent();
 					}
 					}
 					break;
-				case T__215:
+				case Rendertype:
 					{
 					{
-					State = 1930;
+					State = 3157;
 					rendertype();
-					State = 1931;
+					State = 3158;
 					scoreboardHeartsOrInteger();
 					}
 					}
@@ -12064,26 +22213,26 @@ public partial class mccommandParser : Parser {
 				}
 				}
 				break;
-			case T__44:
+			case Remove:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1935;
-				Match(T__44);
-				State = 1936;
+				State = 3162;
+				remove();
+				State = 3163;
 				targetObjective();
 				}
 				}
 				break;
-			case T__216:
+			case Setdisplay:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 1937;
-				Match(T__216);
-				State = 1938;
+				State = 3165;
+				setdisplay();
+				State = 3166;
 				scoreboardSlots();
-				State = 1939;
+				State = 3167;
 				targetObjective();
 				}
 				}
@@ -12104,6 +22253,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class ScoreboardPlayersBehaviorsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext[] selector() {
 			return GetRuleContexts<SelectorContext>();
 		}
@@ -12119,14 +22271,32 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value() {
 			return GetRuleContext<ValueContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public EnableContext enable() {
+			return GetRuleContext<EnableContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GetContext get() {
+			return GetRuleContext<GetContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardObjectiveContext scoreboardObjective() {
 			return GetRuleContext<ScoreboardObjectiveContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ListKeyContext listKey() {
+			return GetRuleContext<ListKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OperationContext operation() {
+			return GetRuleContext<OperationContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ScoreboardOperatorContext scoreboardOperator() {
 			return GetRuleContext<ScoreboardOperatorContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ResetContext reset() {
+			return GetRuleContext<ResetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
 		}
 		public ScoreboardPlayersBehaviorsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -12138,121 +22308,121 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public ScoreboardPlayersBehaviorsContext scoreboardPlayersBehaviors() {
 		ScoreboardPlayersBehaviorsContext _localctx = new ScoreboardPlayersBehaviorsContext(Context, State);
-		EnterRule(_localctx, 430, RULE_scoreboardPlayersBehaviors);
+		EnterRule(_localctx, 974, RULE_scoreboardPlayersBehaviors);
 		try {
-			State = 1979;
+			State = 3208;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 1943;
-				Match(T__43);
-				State = 1944;
+				State = 3171;
+				add();
+				State = 3172;
 				selector();
-				State = 1945;
+				State = 3173;
 				targetObjective();
-				State = 1946;
+				State = 3174;
 				value();
 				}
 				}
 				break;
-			case T__80:
+			case Enable:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 1948;
-				Match(T__80);
-				State = 1949;
+				State = 3176;
+				enable();
+				State = 3177;
 				selector();
-				State = 1950;
+				State = 3178;
 				targetObjective();
 				}
 				}
 				break;
-			case T__40:
+			case Get:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 1952;
-				Match(T__40);
-				State = 1953;
-				singleSelector();
-				State = 1954;
+				State = 3180;
+				get();
+				State = 3181;
+				selector();
+				State = 3182;
 				scoreboardObjective();
 				}
 				}
 				break;
-			case T__49:
+			case ListKey:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 1956;
-				Match(T__49);
-				State = 1957;
-				singleSelector();
+				State = 3184;
+				listKey();
+				State = 3185;
+				selector();
 				}
 				}
 				break;
-			case T__217:
+			case Operation:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 1958;
-				Match(T__217);
-				State = 1959;
+				State = 3187;
+				operation();
+				State = 3188;
 				selector();
-				State = 1960;
+				State = 3189;
 				targetObjective();
-				State = 1961;
+				State = 3190;
 				scoreboardOperator();
-				State = 1962;
+				State = 3191;
 				selector();
-				State = 1963;
+				State = 3192;
 				targetObjective();
 				}
 				}
 				break;
-			case T__44:
+			case Remove:
 				EnterOuterAlt(_localctx, 6);
 				{
 				{
-				State = 1965;
-				Match(T__44);
-				State = 1966;
+				State = 3194;
+				remove();
+				State = 3195;
 				selector();
-				State = 1967;
+				State = 3196;
 				scoreboardObjective();
-				State = 1968;
+				State = 3197;
 				value();
 				}
 				}
 				break;
-			case T__218:
+			case Reset:
 				EnterOuterAlt(_localctx, 7);
 				{
 				{
-				State = 1970;
-				Match(T__218);
-				State = 1971;
+				State = 3199;
+				reset();
+				State = 3200;
 				selector();
-				State = 1972;
+				State = 3201;
 				targetObjective();
 				}
 				}
 				break;
-			case T__42:
+			case Set:
 				EnterOuterAlt(_localctx, 8);
 				{
 				{
-				State = 1974;
-				Match(T__42);
-				State = 1975;
+				State = 3203;
+				set();
+				State = 3204;
 				selector();
-				State = 1976;
+				State = 3205;
 				targetObjective();
-				State = 1977;
+				State = 3206;
 				value();
 				}
 				}
@@ -12273,6 +22443,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SeedRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SeedKeyContext seedKey() {
+			return GetRuleContext<SeedKeyContext>(0);
+		}
 		public SeedRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12283,12 +22456,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SeedRadicalContext seedRadical() {
 		SeedRadicalContext _localctx = new SeedRadicalContext(Context, State);
-		EnterRule(_localctx, 432, RULE_seedRadical);
+		EnterRule(_localctx, 976, RULE_seedRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1981;
-			Match(T__219);
+			State = 3210;
+			seedKey();
 			}
 		}
 		catch (RecognitionException re) {
@@ -12303,11 +22476,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SetblockRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SetblockKeyContext setblockKey() {
+			return GetRuleContext<SetblockKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public BlockIdContext blockId() {
-			return GetRuleContext<BlockIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public BlockIDContext blockID() {
+			return GetRuleContext<BlockIDContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SetblockModesContext setblockModes() {
 			return GetRuleContext<SetblockModesContext>(0);
@@ -12322,17 +22498,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SetblockRadicalContext setblockRadical() {
 		SetblockRadicalContext _localctx = new SetblockRadicalContext(Context, State);
-		EnterRule(_localctx, 434, RULE_setblockRadical);
+		EnterRule(_localctx, 978, RULE_setblockRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1983;
-			Match(T__220);
-			State = 1984;
+			State = 3212;
+			setblockKey();
+			State = 3213;
 			pos3D();
-			State = 1985;
-			blockId();
-			State = 1986;
+			State = 3214;
+			blockID();
+			State = 3215;
 			setblockModes();
 			}
 		}
@@ -12348,6 +22524,15 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SetblockModesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DestroyContext destroy() {
+			return GetRuleContext<DestroyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public KeepContext keep() {
+			return GetRuleContext<KeepContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ReplaceContext replace() {
+			return GetRuleContext<ReplaceContext>(0);
+		}
 		public SetblockModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12358,20 +22543,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SetblockModesContext setblockModes() {
 		SetblockModesContext _localctx = new SetblockModesContext(Context, State);
-		EnterRule(_localctx, 436, RULE_setblockModes);
-		int _la;
+		EnterRule(_localctx, 980, RULE_setblockModes);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 1988;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__60 || _la==T__146 || _la==T__148) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3220;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Destroy:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3217;
+				destroy();
+				}
+				break;
+			case Keep:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3218;
+				keep();
+				}
+				break;
+			case Replace:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3219;
+				replace();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12386,12 +22585,13 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SetworldspawnRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SetworldspawnKeyContext setworldspawnKey() {
+			return GetRuleContext<SetworldspawnKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
-		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public SetworldspawnRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12402,16 +22602,16 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SetworldspawnRadicalContext setworldspawnRadical() {
 		SetworldspawnRadicalContext _localctx = new SetworldspawnRadicalContext(Context, State);
-		EnterRule(_localctx, 438, RULE_setworldspawnRadical);
+		EnterRule(_localctx, 982, RULE_setworldspawnRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1990;
-			Match(T__221);
-			State = 1991;
+			State = 3222;
+			setworldspawnKey();
+			State = 3223;
 			pos3D();
-			State = 1992;
-			number();
+			State = 3224;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12426,15 +22626,16 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SpawnpointRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SpawnpointKeyContext spawnpointKey() {
+			return GetRuleContext<SpawnpointKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
-		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public SpawnpointRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12445,18 +22646,18 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SpawnpointRadicalContext spawnpointRadical() {
 		SpawnpointRadicalContext _localctx = new SpawnpointRadicalContext(Context, State);
-		EnterRule(_localctx, 440, RULE_spawnpointRadical);
+		EnterRule(_localctx, 984, RULE_spawnpointRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1994;
-			Match(T__222);
-			State = 1995;
+			State = 3226;
+			spawnpointKey();
+			State = 3227;
 			selector();
-			State = 1996;
+			State = 3228;
 			pos3D();
-			State = 1997;
-			number();
+			State = 3229;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12471,11 +22672,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SpectateRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext[] singleSelector() {
-			return GetRuleContexts<SingleSelectorContext>();
+		[System.Diagnostics.DebuggerNonUserCode] public SpectateKeyContext spectateKey() {
+			return GetRuleContext<SpectateKeyContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector(int i) {
-			return GetRuleContext<SingleSelectorContext>(i);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext[] selector() {
+			return GetRuleContexts<SelectorContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector(int i) {
+			return GetRuleContext<SelectorContext>(i);
 		}
 		public SpectateRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -12487,16 +22691,16 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SpectateRadicalContext spectateRadical() {
 		SpectateRadicalContext _localctx = new SpectateRadicalContext(Context, State);
-		EnterRule(_localctx, 442, RULE_spectateRadical);
+		EnterRule(_localctx, 986, RULE_spectateRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 1999;
-			Match(T__223);
-			State = 2000;
-			singleSelector();
-			State = 2001;
-			singleSelector();
+			State = 3231;
+			spectateKey();
+			State = 3232;
+			selector();
+			State = 3233;
+			selector();
 			}
 		}
 		catch (RecognitionException re) {
@@ -12511,6 +22715,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SpreadplayersRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SpreadplayersKeyContext spreadplayersKey() {
+			return GetRuleContext<SpreadplayersKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos2DContext pos2D() {
 			return GetRuleContext<Pos2DContext>(0);
 		}
@@ -12533,21 +22740,19 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SpreadplayersRadicalContext spreadplayersRadical() {
 		SpreadplayersRadicalContext _localctx = new SpreadplayersRadicalContext(Context, State);
-		EnterRule(_localctx, 444, RULE_spreadplayersRadical);
+		EnterRule(_localctx, 988, RULE_spreadplayersRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2003;
-			Match(T__224);
-			State = 2004;
+			State = 3235;
+			spreadplayersKey();
+			State = 3236;
 			pos2D();
-			State = 2005;
+			State = 3237;
 			spreadDistance();
-			State = 2006;
-			Match(T__16);
-			State = 2007;
+			State = 3238;
 			maxRange();
-			State = 2008;
+			State = 3239;
 			spreadplayersOptions();
 			}
 		}
@@ -12563,11 +22768,17 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SpreadplayersOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public BooleanValueContext booleanValue() {
+			return GetRuleContext<BooleanValueContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public UnderContext under() {
+			return GetRuleContext<UnderContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public BoolContext @bool() {
 			return GetRuleContext<BoolContext>(0);
@@ -12582,48 +22793,33 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SpreadplayersOptionsContext spreadplayersOptions() {
 		SpreadplayersOptionsContext _localctx = new SpreadplayersOptionsContext(Context, State);
-		EnterRule(_localctx, 446, RULE_spreadplayersOptions);
+		EnterRule(_localctx, 990, RULE_spreadplayersOptions);
 		try {
-			State = 2020;
+			State = 3249;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__225:
-			case T__226:
+			case BooleanValue:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 2013;
-				ErrorHandler.Sync(this);
-				switch (TokenStream.LA(1)) {
-				case T__225:
-					{
-					State = 2010;
-					Match(T__225);
-					}
-					break;
-				case T__226:
-					{
-					State = 2011;
-					Match(T__226);
-					State = 2012;
-					selector();
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				State = 3241;
+				booleanValue();
+				State = 3242;
+				selector();
 				}
 				}
 				break;
-			case T__227:
+			case Under:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 2015;
-				Match(T__227);
-				State = 2016;
-				@int();
-				State = 2017;
+				State = 3244;
+				under();
+				State = 3245;
+				integer();
+				State = 3246;
 				@bool();
-				State = 2018;
+				State = 3247;
 				selector();
 				}
 				}
@@ -12644,7 +22840,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SpreadDistanceContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(mccommandParser.Number, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public SpreadDistanceContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12655,12 +22851,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SpreadDistanceContext spreadDistance() {
 		SpreadDistanceContext _localctx = new SpreadDistanceContext(Context, State);
-		EnterRule(_localctx, 448, RULE_spreadDistance);
+		EnterRule(_localctx, 992, RULE_spreadDistance);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2022;
-			Match(Number);
+			State = 3251;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12675,7 +22871,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class MaxRangeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Number() { return GetToken(mccommandParser.Number, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public MaxRangeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12686,12 +22882,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public MaxRangeContext maxRange() {
 		MaxRangeContext _localctx = new MaxRangeContext(Context, State);
-		EnterRule(_localctx, 450, RULE_maxRange);
+		EnterRule(_localctx, 994, RULE_maxRange);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2024;
-			Match(Number);
+			State = 3253;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12706,7 +22902,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class RespectTeamsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Bool() { return GetToken(mccommandParser.Bool, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BooleanValue() { return GetToken(MCCommandParser.BooleanValue, 0); }
 		public RespectTeamsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12717,42 +22913,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public RespectTeamsContext respectTeams() {
 		RespectTeamsContext _localctx = new RespectTeamsContext(Context, State);
-		EnterRule(_localctx, 452, RULE_respectTeams);
+		EnterRule(_localctx, 996, RULE_respectTeams);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2026;
-			Match(Bool);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class UnderContext : ParserRuleContext {
-		public UnderContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_under; } }
-	}
-
-	[RuleVersion(0)]
-	public UnderContext under() {
-		UnderContext _localctx = new UnderContext(Context, State);
-		EnterRule(_localctx, 454, RULE_under);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2028;
-			Match(T__227);
+			State = 3255;
+			Match(BooleanValue);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12767,6 +22933,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class StopsoundRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public StopsoundKeyContext stopsoundKey() {
+			return GetRuleContext<StopsoundKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -12786,17 +22955,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public StopsoundRadicalContext stopsoundRadical() {
 		StopsoundRadicalContext _localctx = new StopsoundRadicalContext(Context, State);
-		EnterRule(_localctx, 456, RULE_stopsoundRadical);
+		EnterRule(_localctx, 998, RULE_stopsoundRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2030;
-			Match(T__228);
-			State = 2031;
+			State = 3257;
+			stopsoundKey();
+			State = 3258;
 			selector();
-			State = 2032;
+			State = 3259;
 			stopsoundTypes();
-			State = 2033;
+			State = 3260;
 			soundId();
 			}
 		}
@@ -12812,7 +22981,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SoundIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SoundId() { return GetToken(mccommandParser.SoundId, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ResourceLocation() { return GetToken(MCCommandParser.ResourceLocation, 0); }
 		public SoundIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12823,12 +22992,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SoundIdContext soundId() {
 		SoundIdContext _localctx = new SoundIdContext(Context, State);
-		EnterRule(_localctx, 458, RULE_soundId);
+		EnterRule(_localctx, 1000, RULE_soundId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2035;
-			Match(SoundId);
+			State = 3262;
+			Match(ResourceLocation);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12843,6 +23012,39 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class StopsoundTypesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public StarContext star() {
+			return GetRuleContext<StarContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public AmbientContext ambient() {
+			return GetRuleContext<AmbientContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BlockContext block() {
+			return GetRuleContext<BlockContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public HostileContext hostile() {
+			return GetRuleContext<HostileContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MasterContext master() {
+			return GetRuleContext<MasterContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MusicContext music() {
+			return GetRuleContext<MusicContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NeutralContext neutral() {
+			return GetRuleContext<NeutralContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PlayerContext player() {
+			return GetRuleContext<PlayerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RecordContext record() {
+			return GetRuleContext<RecordContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public VoiceContext voice() {
+			return GetRuleContext<VoiceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public WeatherKeyContext weatherKey() {
+			return GetRuleContext<WeatherKeyContext>(0);
+		}
 		public StopsoundTypesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -12853,20 +23055,90 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public StopsoundTypesContext stopsoundTypes() {
 		StopsoundTypesContext _localctx = new StopsoundTypesContext(Context, State);
-		EnterRule(_localctx, 460, RULE_stopsoundTypes);
-		int _la;
+		EnterRule(_localctx, 1002, RULE_stopsoundTypes);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2037;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__71 || ((((_la - 185)) & ~0x3f) == 0 && ((1L << (_la - 185)) & 35184372089343L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3275;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Star:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3264;
+				star();
+				}
+				break;
+			case Ambient:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3265;
+				ambient();
+				}
+				break;
+			case Block:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3266;
+				block();
+				}
+				break;
+			case Hostile:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 3267;
+				hostile();
+				}
+				break;
+			case Master:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 3268;
+				master();
+				}
+				break;
+			case Music:
+				EnterOuterAlt(_localctx, 6);
+				{
+				State = 3269;
+				music();
+				}
+				break;
+			case Neutral:
+				EnterOuterAlt(_localctx, 7);
+				{
+				State = 3270;
+				neutral();
+				}
+				break;
+			case Player:
+				EnterOuterAlt(_localctx, 8);
+				{
+				State = 3271;
+				player();
+				}
+				break;
+			case Record:
+				EnterOuterAlt(_localctx, 9);
+				{
+				State = 3272;
+				record();
+				}
+				break;
+			case Voice:
+				EnterOuterAlt(_localctx, 10);
+				{
+				State = 3273;
+				voice();
+				}
+				break;
+			case WeatherKey:
+				EnterOuterAlt(_localctx, 11);
+				{
+				State = 3274;
+				weatherKey();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -12881,8 +23153,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class SummonRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public EntityIdContext entityId() {
-			return GetRuleContext<EntityIdContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SummonKeyContext summonKey() {
+			return GetRuleContext<SummonKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public EntityTypeContext entityType() {
+			return GetRuleContext<EntityTypeContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D() {
 			return GetRuleContext<Pos3DContext>(0);
@@ -12900,17 +23175,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public SummonRadicalContext summonRadical() {
 		SummonRadicalContext _localctx = new SummonRadicalContext(Context, State);
-		EnterRule(_localctx, 462, RULE_summonRadical);
+		EnterRule(_localctx, 1004, RULE_summonRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2039;
-			Match(T__140);
-			State = 2040;
-			entityId();
-			State = 2041;
+			State = 3277;
+			summonKey();
+			State = 3278;
+			entityType();
+			State = 3279;
 			pos3D();
-			State = 2042;
+			State = 3280;
 			jsonComponent();
 			}
 		}
@@ -12926,6 +23201,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TagRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TagKeyContext tagKey() {
+			return GetRuleContext<TagKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -12942,15 +23220,15 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TagRadicalContext tagRadical() {
 		TagRadicalContext _localctx = new TagRadicalContext(Context, State);
-		EnterRule(_localctx, 464, RULE_tagRadical);
+		EnterRule(_localctx, 1006, RULE_tagRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2044;
-			Match(T__230);
-			State = 2045;
+			State = 3282;
+			tagKey();
+			State = 3283;
 			selector();
-			State = 2046;
+			State = 3284;
 			tagOptions();
 			}
 		}
@@ -12966,8 +23244,17 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TagOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TagValueContext tagValue() {
 			return GetRuleContext<TagValueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ListKeyContext listKey() {
+			return GetRuleContext<ListKeyContext>(0);
 		}
 		public TagOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -12979,29 +23266,29 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TagOptionsContext tagOptions() {
 		TagOptionsContext _localctx = new TagOptionsContext(Context, State);
-		EnterRule(_localctx, 466, RULE_tagOptions);
+		EnterRule(_localctx, 1008, RULE_tagOptions);
 		try {
-			State = 2054;
+			State = 3293;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
-			case T__44:
+			case Add:
+			case Remove:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 2051;
+				State = 3290;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case T__43:
+				case Add:
 					{
-					State = 2048;
-					Match(T__43);
+					State = 3286;
+					add();
 					}
 					break;
-				case T__44:
+				case Remove:
 					{
-					State = 2049;
-					Match(T__44);
-					State = 2050;
+					State = 3287;
+					remove();
+					State = 3288;
 					tagValue();
 					}
 					break;
@@ -13010,11 +23297,11 @@ public partial class mccommandParser : Parser {
 				}
 				}
 				break;
-			case T__49:
+			case ListKey:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 2053;
-				Match(T__49);
+				State = 3292;
+				listKey();
 				}
 				break;
 			default:
@@ -13033,7 +23320,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TagValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public TagValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13044,12 +23331,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TagValueContext tagValue() {
 		TagValueContext _localctx = new TagValueContext(Context, State);
-		EnterRule(_localctx, 468, RULE_tagValue);
+		EnterRule(_localctx, 1010, RULE_tagValue);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2056;
-			Match(IdString);
+			State = 3295;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13064,6 +23351,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TeamKeyContext teamKey() {
+			return GetRuleContext<TeamKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeamOptionsContext teamOptions() {
 			return GetRuleContext<TeamOptionsContext>(0);
 		}
@@ -13077,13 +23367,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamRadicalContext teamRadical() {
 		TeamRadicalContext _localctx = new TeamRadicalContext(Context, State);
-		EnterRule(_localctx, 470, RULE_teamRadical);
+		EnterRule(_localctx, 1012, RULE_teamRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2058;
-			Match(T__231);
-			State = 2059;
+			State = 3297;
+			teamKey();
+			State = 3298;
 			teamOptions();
 			}
 		}
@@ -13099,7 +23389,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamIdContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TeamName() { return GetToken(mccommandParser.TeamName, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public TeamIdContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13110,12 +23400,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamIdContext teamId() {
 		TeamIdContext _localctx = new TeamIdContext(Context, State);
-		EnterRule(_localctx, 472, RULE_teamId);
+		EnterRule(_localctx, 1014, RULE_teamId);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2061;
-			Match(TeamName);
+			State = 3300;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13130,7 +23420,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamNameContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode TeamName() { return GetToken(mccommandParser.TeamName, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public TeamNameContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13141,12 +23431,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamNameContext teamName() {
 		TeamNameContext _localctx = new TeamNameContext(Context, State);
-		EnterRule(_localctx, 474, RULE_teamName);
+		EnterRule(_localctx, 1016, RULE_teamName);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2063;
-			Match(TeamName);
+			State = 3302;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13161,6 +23451,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamCollisionRuleContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AlwaysContext always() {
+			return GetRuleContext<AlwaysContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NeverContext never() {
+			return GetRuleContext<NeverContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PushOtherTeamsContext pushOtherTeams() {
+			return GetRuleContext<PushOtherTeamsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PushOwnTeamContext pushOwnTeam() {
+			return GetRuleContext<PushOwnTeamContext>(0);
+		}
 		public TeamCollisionRuleContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13171,20 +23473,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamCollisionRuleContext teamCollisionRule() {
 		TeamCollisionRuleContext _localctx = new TeamCollisionRuleContext(Context, State);
-		EnterRule(_localctx, 476, RULE_teamCollisionRule);
-		int _la;
+		EnterRule(_localctx, 1018, RULE_teamCollisionRule);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2065;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 233)) & ~0x3f) == 0 && ((1L << (_la - 233)) & 15L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3308;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Always:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3304;
+				always();
+				}
+				break;
+			case Never:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3305;
+				never();
+				}
+				break;
+			case PushOtherTeams:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3306;
+				pushOtherTeams();
+				}
+				break;
+			case PushOwnTeam:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 3307;
+				pushOwnTeam();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13199,7 +23522,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamColorContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public TeamColorContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13210,12 +23533,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamColorContext teamColor() {
 		TeamColorContext _localctx = new TeamColorContext(Context, State);
-		EnterRule(_localctx, 478, RULE_teamColor);
+		EnterRule(_localctx, 1020, RULE_teamColor);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2067;
-			Match(IdString);
+			State = 3310;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13230,6 +23553,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamVisibilityContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AlwaysContext always() {
+			return GetRuleContext<AlwaysContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public HideForOtherTeamsContext hideForOtherTeams() {
+			return GetRuleContext<HideForOtherTeamsContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public HideForOwnTeamContext hideForOwnTeam() {
+			return GetRuleContext<HideForOwnTeamContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NeverContext never() {
+			return GetRuleContext<NeverContext>(0);
+		}
 		public TeamVisibilityContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13240,20 +23575,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamVisibilityContext teamVisibility() {
 		TeamVisibilityContext _localctx = new TeamVisibilityContext(Context, State);
-		EnterRule(_localctx, 480, RULE_teamVisibility);
-		int _la;
+		EnterRule(_localctx, 1022, RULE_teamVisibility);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2069;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 233)) & ~0x3f) == 0 && ((1L << (_la - 233)) & 51L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3316;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Always:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3312;
+				always();
+				}
+				break;
+			case HideForOtherTeams:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3313;
+				hideForOtherTeams();
+				}
+				break;
+			case HideForOwnTeam:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3314;
+				hideForOwnTeam();
+				}
+				break;
+			case Never:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 3315;
+				never();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13268,23 +23624,41 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeamNameContext teamName() {
 			return GetRuleContext<TeamNameContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public JsonComponentContext jsonComponent() {
 			return GetRuleContext<JsonComponentContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public EmptyContext empty() {
+			return GetRuleContext<EmptyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeamIdContext teamId() {
 			return GetRuleContext<TeamIdContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public OptionalSelectorContext optionalSelector() {
-			return GetRuleContext<OptionalSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public JoinContext join() {
+			return GetRuleContext<JoinContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public LeaveContext leave() {
+			return GetRuleContext<LeaveContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ListKeyContext listKey() {
+			return GetRuleContext<ListKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ModifyContext modify() {
+			return GetRuleContext<ModifyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeamAttributesContext teamAttributes() {
 			return GetRuleContext<TeamAttributesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RemoveContext remove() {
+			return GetRuleContext<RemoveContext>(0);
 		}
 		public TeamOptionsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -13296,90 +23670,99 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamOptionsContext teamOptions() {
 		TeamOptionsContext _localctx = new TeamOptionsContext(Context, State);
-		EnterRule(_localctx, 482, RULE_teamOptions);
+		EnterRule(_localctx, 1024, RULE_teamOptions);
+		int _la;
 		try {
-			State = 2091;
+			State = 3343;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 2071;
-				Match(T__43);
-				State = 2072;
+				State = 3318;
+				add();
+				State = 3319;
 				teamName();
-				State = 2073;
+				State = 3320;
 				jsonComponent();
 				}
 				}
 				break;
-			case T__238:
+			case Empty:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 2075;
-				Match(T__238);
-				State = 2076;
+				State = 3322;
+				empty();
+				State = 3323;
 				teamId();
 				}
 				}
 				break;
-			case T__239:
+			case Join:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 2077;
-				Match(T__239);
-				State = 2078;
+				State = 3325;
+				join();
+				State = 3326;
 				teamId();
-				State = 2079;
-				optionalSelector();
+				State = 3328;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==AtChar || _la==Identifier) {
+					{
+					State = 3327;
+					selector();
+					}
+				}
+
 				}
 				}
 				break;
-			case T__240:
+			case Leave:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 2081;
-				Match(T__240);
-				State = 2082;
+				State = 3330;
+				leave();
+				State = 3331;
 				selector();
 				}
 				}
 				break;
-			case T__49:
+			case ListKey:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 2083;
-				Match(T__49);
-				State = 2084;
+				State = 3333;
+				listKey();
+				State = 3334;
 				teamId();
 				}
 				}
 				break;
-			case T__70:
+			case Modify:
 				EnterOuterAlt(_localctx, 6);
 				{
 				{
-				State = 2085;
-				Match(T__70);
-				State = 2086;
+				State = 3336;
+				modify();
+				State = 3337;
 				teamId();
-				State = 2087;
+				State = 3338;
 				teamAttributes();
 				}
 				}
 				break;
-			case T__44:
+			case Remove:
 				EnterOuterAlt(_localctx, 7);
 				{
 				{
-				State = 2089;
-				Match(T__44);
-				State = 2090;
+				State = 3340;
+				remove();
+				State = 3341;
 				teamId();
 				}
 				}
@@ -13400,20 +23783,47 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeamAttributesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CollisionRuleContext collisionRule() {
+			return GetRuleContext<CollisionRuleContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeamCollisionRuleContext teamCollisionRule() {
 			return GetRuleContext<TeamCollisionRuleContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ColorContext color() {
+			return GetRuleContext<ColorContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeamColorContext teamColor() {
 			return GetRuleContext<TeamColorContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public DeathMessageVisibilityContext deathMessageVisibility() {
+			return GetRuleContext<DeathMessageVisibilityContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeamVisibilityContext teamVisibility() {
 			return GetRuleContext<TeamVisibilityContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DisplayNameContext displayName() {
+			return GetRuleContext<DisplayNameContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public JsonComponentContext jsonComponent() {
 			return GetRuleContext<JsonComponentContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public FriendlyFireContext friendlyFire() {
+			return GetRuleContext<FriendlyFireContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public BoolContext @bool() {
 			return GetRuleContext<BoolContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NametagVisibilityContext nametagVisibility() {
+			return GetRuleContext<NametagVisibilityContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public PrefixContext prefix() {
+			return GetRuleContext<PrefixContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SuffixContext suffix() {
+			return GetRuleContext<SuffixContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SeeFriendlyInvisiblesContext seeFriendlyInvisibles() {
+			return GetRuleContext<SeeFriendlyInvisiblesContext>(0);
 		}
 		public TeamAttributesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -13425,104 +23835,112 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeamAttributesContext teamAttributes() {
 		TeamAttributesContext _localctx = new TeamAttributesContext(Context, State);
-		EnterRule(_localctx, 484, RULE_teamAttributes);
-		int _la;
+		EnterRule(_localctx, 1026, RULE_teamAttributes);
 		try {
-			State = 2109;
+			State = 3372;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__241:
+			case CollisionRule:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 2093;
-				Match(T__241);
-				State = 2094;
+				State = 3345;
+				collisionRule();
+				State = 3346;
 				teamCollisionRule();
 				}
 				}
 				break;
-			case T__53:
+			case Color:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 2095;
-				Match(T__53);
-				State = 2096;
+				State = 3348;
+				color();
+				State = 3349;
 				teamColor();
 				}
 				}
 				break;
-			case T__242:
+			case DeathMessageVisibility:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 2097;
-				Match(T__242);
-				State = 2098;
+				State = 3351;
+				deathMessageVisibility();
+				State = 3352;
 				teamVisibility();
 				}
 				}
 				break;
-			case T__243:
+			case DisplayName:
 				EnterOuterAlt(_localctx, 4);
 				{
 				{
-				State = 2099;
-				Match(T__243);
-				State = 2100;
+				State = 3354;
+				displayName();
+				State = 3355;
 				jsonComponent();
 				}
 				}
 				break;
-			case T__244:
+			case FriendlyFire:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 2101;
-				Match(T__244);
-				State = 2102;
+				State = 3357;
+				friendlyFire();
+				State = 3358;
 				@bool();
 				}
 				}
 				break;
-			case T__245:
+			case NametagVisibility:
 				EnterOuterAlt(_localctx, 6);
 				{
 				{
-				State = 2103;
-				Match(T__245);
-				State = 2104;
+				State = 3360;
+				nametagVisibility();
+				State = 3361;
 				teamVisibility();
 				}
 				}
 				break;
-			case T__246:
-			case T__247:
+			case Prefix:
+			case Suffix:
 				EnterOuterAlt(_localctx, 7);
 				{
 				{
-				State = 2105;
-				_la = TokenStream.LA(1);
-				if ( !(_la==T__246 || _la==T__247) ) {
-				ErrorHandler.RecoverInline(this);
+				State = 3365;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case Prefix:
+					{
+					State = 3363;
+					prefix();
+					}
+					break;
+				case Suffix:
+					{
+					State = 3364;
+					suffix();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
-				}
-				State = 2106;
+				State = 3367;
 				jsonComponent();
 				}
 				}
 				break;
-			case T__248:
+			case SeeFriendlyInvisibles:
 				EnterOuterAlt(_localctx, 8);
 				{
 				{
-				State = 2107;
-				Match(T__248);
-				State = 2108;
+				State = 3369;
+				seeFriendlyInvisibles();
+				State = 3370;
 				@bool();
 				}
 				}
@@ -13543,8 +23961,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeammsgRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public MessageContext message() {
-			return GetRuleContext<MessageContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public TeammsgKeyContext teammsgKey() {
+			return GetRuleContext<TeammsgKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TeamMessageContext teamMessage() {
+			return GetRuleContext<TeamMessageContext>(0);
 		}
 		public TeammsgRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -13556,14 +23977,45 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeammsgRadicalContext teammsgRadical() {
 		TeammsgRadicalContext _localctx = new TeammsgRadicalContext(Context, State);
-		EnterRule(_localctx, 486, RULE_teammsgRadical);
+		EnterRule(_localctx, 1028, RULE_teammsgRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2111;
-			Match(T__249);
-			State = 2112;
-			message();
+			State = 3374;
+			teammsgKey();
+			State = 3375;
+			teamMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TeamMessageContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MessageContent() { return GetToken(MCCommandParser.MessageContent, 0); }
+		public TeamMessageContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_teamMessage; } }
+	}
+
+	[RuleVersion(0)]
+	public TeamMessageContext teamMessage() {
+		TeamMessageContext _localctx = new TeamMessageContext(Context, State);
+		EnterRule(_localctx, 1030, RULE_teamMessage);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 3377;
+			Match(MessageContent);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13578,6 +24030,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeleportRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TeleportKeyContext teleportKey() {
+			return GetRuleContext<TeleportKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeleportOptionsContext teleportOptions() {
 			return GetRuleContext<TeleportOptionsContext>(0);
 		}
@@ -13591,13 +24046,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeleportRadicalContext teleportRadical() {
 		TeleportRadicalContext _localctx = new TeleportRadicalContext(Context, State);
-		EnterRule(_localctx, 488, RULE_teleportRadical);
+		EnterRule(_localctx, 1032, RULE_teleportRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2114;
-			Match(T__250);
-			State = 2115;
+			State = 3379;
+			teleportKey();
+			State = 3380;
 			teleportOptions();
 			}
 		}
@@ -13613,6 +24068,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TeleportEyesOrFeetContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public EyesContext eyes() {
+			return GetRuleContext<EyesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public FeetContext feet() {
+			return GetRuleContext<FeetContext>(0);
+		}
 		public TeleportEyesOrFeetContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13623,80 +24084,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeleportEyesOrFeetContext teleportEyesOrFeet() {
 		TeleportEyesOrFeetContext _localctx = new TeleportEyesOrFeetContext(Context, State);
-		EnterRule(_localctx, 490, RULE_teleportEyesOrFeet);
-		int _la;
+		EnterRule(_localctx, 1034, RULE_teleportEyesOrFeet);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2117;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__100 || _la==T__101) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class FacingContext : ParserRuleContext {
-		public FacingContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_facing; } }
-	}
-
-	[RuleVersion(0)]
-	public FacingContext facing() {
-		FacingContext _localctx = new FacingContext(Context, State);
-		EnterRule(_localctx, 492, RULE_facing);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2119;
-			Match(T__131);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class EntityContext : ParserRuleContext {
-		public EntityContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_entity; } }
-	}
-
-	[RuleVersion(0)]
-	public EntityContext entity() {
-		EntityContext _localctx = new EntityContext(Context, State);
-		EnterRule(_localctx, 494, RULE_entity);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2121;
-			Match(T__72);
+			State = 3384;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Eyes:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3382;
+				eyes();
+				}
+				break;
+			case Feet:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3383;
+				feet();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13717,11 +24125,11 @@ public partial class mccommandParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public Pos3DContext pos3D(int i) {
 			return GetRuleContext<Pos3DContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
-			return GetRuleContext<SelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext[] selector() {
+			return GetRuleContexts<SelectorContext>();
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public SingleSelectorContext singleSelector() {
-			return GetRuleContext<SingleSelectorContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector(int i) {
+			return GetRuleContext<SelectorContext>(i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos2DContext pos2D() {
 			return GetRuleContext<Pos2DContext>(0);
@@ -13745,100 +24153,89 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TeleportOptionsContext teleportOptions() {
 		TeleportOptionsContext _localctx = new TeleportOptionsContext(Context, State);
-		EnterRule(_localctx, 496, RULE_teleportOptions);
+		EnterRule(_localctx, 1036, RULE_teleportOptions);
 		try {
-			State = 2140;
+			State = 3405;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case Coordinates:
+			case Integer:
+			case Double:
+			case Coordinate:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 2123;
+				State = 3386;
 				pos3D();
 				}
 				break;
-			case T__14:
-			case T__15:
-			case T__18:
-			case T__19:
-			case T__21:
-			case T__22:
-			case T__24:
-			case T__25:
-			case T__27:
-			case T__28:
-			case PlayerName:
+			case AtChar:
+			case Identifier:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 2124;
+				State = 3387;
 				selector();
-				State = 2138;
+				State = 3403;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case T__14:
-				case T__15:
-				case T__17:
-				case T__18:
-				case T__19:
-				case T__20:
-				case T__21:
-				case T__22:
-				case T__23:
-				case T__24:
-				case T__25:
-				case T__26:
-				case T__27:
-				case T__28:
-				case T__29:
-				case PlayerName:
+				case AtChar:
+				case Identifier:
 					{
-					State = 2125;
-					singleSelector();
+					State = 3388;
+					selector();
 					}
 					break;
-				case Coordinates:
+				case Integer:
+				case Double:
+				case Coordinate:
 					{
-					State = 2136;
+					State = 3401;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,108,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,155,Context) ) {
 					case 1:
 						{
-						State = 2126;
+						State = 3389;
 						pos3D();
-						{
-						State = 2127;
-						facing();
-						State = 2133;
+						State = 3398;
 						ErrorHandler.Sync(this);
-						switch (TokenStream.LA(1)) {
-						case T__72:
+						switch ( Interpreter.AdaptivePredict(TokenStream,154,Context) ) {
+						case 1:
 							{
-							{
-							State = 2128;
-							entity();
-							State = 2129;
-							singleSelector();
-							State = 2130;
-							teleportEyesOrFeet();
+							State = 3390;
+							facing();
+							State = 3396;
+							ErrorHandler.Sync(this);
+							switch (TokenStream.LA(1)) {
+							case Entity:
+								{
+								{
+								State = 3391;
+								entity();
+								State = 3392;
+								selector();
+								State = 3393;
+								teleportEyesOrFeet();
+								}
+								}
+								break;
+							case Integer:
+							case Double:
+							case Coordinate:
+								{
+								State = 3395;
+								pos3D();
+								}
+								break;
+							default:
+								throw new NoViableAltException(this);
 							}
 							}
 							break;
-						case Coordinates:
-							{
-							State = 2132;
-							pos3D();
-							}
-							break;
-						default:
-							throw new NoViableAltException(this);
-						}
 						}
 						}
 						break;
 					case 2:
 						{
-						State = 2135;
+						State = 3400;
 						pos2D();
 						}
 						break;
@@ -13867,11 +24264,14 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TellRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TellKeyContext tellKey() {
+			return GetRuleContext<TellKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public MessageContext message() {
-			return GetRuleContext<MessageContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public TellMessageContext tellMessage() {
+			return GetRuleContext<TellMessageContext>(0);
 		}
 		public TellRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -13883,16 +24283,47 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TellRadicalContext tellRadical() {
 		TellRadicalContext _localctx = new TellRadicalContext(Context, State);
-		EnterRule(_localctx, 498, RULE_tellRadical);
+		EnterRule(_localctx, 1038, RULE_tellRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2142;
-			Match(T__251);
-			State = 2143;
+			State = 3407;
+			tellKey();
+			State = 3408;
 			selector();
-			State = 2144;
-			message();
+			State = 3409;
+			tellMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TellMessageContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MessageContent() { return GetToken(MCCommandParser.MessageContent, 0); }
+		public TellMessageContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_tellMessage; } }
+	}
+
+	[RuleVersion(0)]
+	public TellMessageContext tellMessage() {
+		TellMessageContext _localctx = new TellMessageContext(Context, State);
+		EnterRule(_localctx, 1040, RULE_tellMessage);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 3411;
+			Match(MessageContent);
 			}
 		}
 		catch (RecognitionException re) {
@@ -13907,6 +24338,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TellrawRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TellrawKeyContext tellrawKey() {
+			return GetRuleContext<TellrawKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -13923,15 +24357,15 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TellrawRadicalContext tellrawRadical() {
 		TellrawRadicalContext _localctx = new TellrawRadicalContext(Context, State);
-		EnterRule(_localctx, 500, RULE_tellrawRadical);
+		EnterRule(_localctx, 1042, RULE_tellrawRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2146;
-			Match(T__252);
-			State = 2147;
+			State = 3413;
+			tellrawKey();
+			State = 3414;
 			selector();
-			State = 2148;
+			State = 3415;
 			jsonComponent();
 			}
 		}
@@ -13947,6 +24381,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TimeRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TimeKeyContext timeKey() {
+			return GetRuleContext<TimeKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TimeOptionsContext timeOptions() {
 			return GetRuleContext<TimeOptionsContext>(0);
 		}
@@ -13960,13 +24397,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TimeRadicalContext timeRadical() {
 		TimeRadicalContext _localctx = new TimeRadicalContext(Context, State);
-		EnterRule(_localctx, 502, RULE_timeRadical);
+		EnterRule(_localctx, 1044, RULE_timeRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2150;
-			Match(T__253);
-			State = 2151;
+			State = 3417;
+			timeKey();
+			State = 3418;
 			timeOptions();
 			}
 		}
@@ -13982,6 +24419,15 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TimeDataTypesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DayContext day() {
+			return GetRuleContext<DayContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public DaytimeContext daytime() {
+			return GetRuleContext<DaytimeContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GametimeContext gametime() {
+			return GetRuleContext<GametimeContext>(0);
+		}
 		public TimeDataTypesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -13992,20 +24438,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TimeDataTypesContext timeDataTypes() {
 		TimeDataTypesContext _localctx = new TimeDataTypesContext(Context, State);
-		EnterRule(_localctx, 504, RULE_timeDataTypes);
-		int _la;
+		EnterRule(_localctx, 1046, RULE_timeDataTypes);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2153;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 255)) & ~0x3f) == 0 && ((1L << (_la - 255)) & 7L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3423;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Day:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3420;
+				day();
+				}
+				break;
+			case Daytime:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3421;
+				daytime();
+				}
+				break;
+			case Gametime:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3422;
+				gametime();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14020,6 +24480,18 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TimeTimePointsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DayContext day() {
+			return GetRuleContext<DayContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public MidnightContext midnight() {
+			return GetRuleContext<MidnightContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NightContext night() {
+			return GetRuleContext<NightContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public NoonContext noon() {
+			return GetRuleContext<NoonContext>(0);
+		}
 		public TimeTimePointsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -14030,20 +24502,41 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TimeTimePointsContext timeTimePoints() {
 		TimeTimePointsContext _localctx = new TimeTimePointsContext(Context, State);
-		EnterRule(_localctx, 506, RULE_timeTimePoints);
-		int _la;
+		EnterRule(_localctx, 1048, RULE_timeTimePoints);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2155;
-			_la = TokenStream.LA(1);
-			if ( !(((((_la - 255)) & ~0x3f) == 0 && ((1L << (_la - 255)) & 57L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3429;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Day:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3425;
+				day();
+				}
+				break;
+			case Midnight:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3426;
+				midnight();
+				}
+				break;
+			case Night:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3427;
+				night();
+				}
+				break;
+			case Noon:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 3428;
+				noon();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14058,11 +24551,20 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TimeOptionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public GameTimeValueContext gameTimeValue() {
 			return GetRuleContext<GameTimeValueContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public QueryContext query() {
+			return GetRuleContext<QueryContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TimeDataTypesContext timeDataTypes() {
 			return GetRuleContext<TimeDataTypesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public TimeTimePointsContext timeTimePoints() {
 			return GetRuleContext<TimeTimePointsContext>(0);
@@ -14077,51 +24579,51 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TimeOptionsContext timeOptions() {
 		TimeOptionsContext _localctx = new TimeOptionsContext(Context, State);
-		EnterRule(_localctx, 508, RULE_timeOptions);
+		EnterRule(_localctx, 1050, RULE_timeOptions);
 		try {
-			State = 2166;
+			State = 3443;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 2157;
-				Match(T__43);
-				State = 2158;
+				State = 3431;
+				add();
+				State = 3432;
 				gameTimeValue();
 				}
 				}
 				break;
-			case T__142:
+			case Query:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 2159;
-				Match(T__142);
-				State = 2160;
+				State = 3434;
+				query();
+				State = 3435;
 				timeDataTypes();
 				}
 				}
 				break;
-			case T__42:
+			case Set:
 			case GameTimeValue:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 2164;
+				State = 3441;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case T__42:
+				case Set:
 					{
-					State = 2161;
-					Match(T__42);
-					State = 2162;
+					State = 3437;
+					set();
+					State = 3438;
 					timeTimePoints();
 					}
 					break;
 				case GameTimeValue:
 					{
-					State = 2163;
+					State = 3440;
 					gameTimeValue();
 					}
 					break;
@@ -14146,6 +24648,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TitleRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TitleKeyContext titleKey() {
+			return GetRuleContext<TitleKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public SelectorContext selector() {
 			return GetRuleContext<SelectorContext>(0);
 		}
@@ -14162,15 +24667,15 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TitleRadicalContext titleRadical() {
 		TitleRadicalContext _localctx = new TitleRadicalContext(Context, State);
-		EnterRule(_localctx, 510, RULE_titleRadical);
+		EnterRule(_localctx, 1052, RULE_titleRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2168;
-			Match(T__260);
-			State = 2169;
+			State = 3445;
+			titleKey();
+			State = 3446;
 			selector();
-			State = 2170;
+			State = 3447;
 			titleBehaviors();
 			}
 		}
@@ -14188,6 +24693,24 @@ public partial class mccommandParser : Parser {
 	public partial class TitleBehaviorsContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public JsonComponentContext jsonComponent() {
 			return GetRuleContext<JsonComponentContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ActionbarContext actionbar() {
+			return GetRuleContext<ActionbarContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SubtitleContext subtitle() {
+			return GetRuleContext<SubtitleContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TitleKeyContext titleKey() {
+			return GetRuleContext<TitleKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ClearKeyContext clearKey() {
+			return GetRuleContext<ClearKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ResetContext reset() {
+			return GetRuleContext<ResetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TimesContext times() {
+			return GetRuleContext<TimesContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public FadeInContext fadeIn() {
 			return GetRuleContext<FadeInContext>(0);
@@ -14208,58 +24731,81 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TitleBehaviorsContext titleBehaviors() {
 		TitleBehaviorsContext _localctx = new TitleBehaviorsContext(Context, State);
-		EnterRule(_localctx, 512, RULE_titleBehaviors);
-		int _la;
+		EnterRule(_localctx, 1054, RULE_titleBehaviors);
 		try {
-			State = 2180;
+			State = 3465;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__260:
-			case T__261:
-			case T__262:
+			case TitleKey:
+			case Actionbar:
+			case Subtitle:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 2172;
-				_la = TokenStream.LA(1);
-				if ( !(((((_la - 261)) & ~0x3f) == 0 && ((1L << (_la - 261)) & 7L) != 0)) ) {
-				ErrorHandler.RecoverInline(this);
+				State = 3452;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case Actionbar:
+					{
+					State = 3449;
+					actionbar();
+					}
+					break;
+				case Subtitle:
+					{
+					State = 3450;
+					subtitle();
+					}
+					break;
+				case TitleKey:
+					{
+					State = 3451;
+					titleKey();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
-				}
-				State = 2173;
+				State = 3454;
 				jsonComponent();
 				}
 				}
 				break;
-			case T__56:
-			case T__218:
+			case ClearKey:
+			case Reset:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 2174;
-				_la = TokenStream.LA(1);
-				if ( !(_la==T__56 || _la==T__218) ) {
-				ErrorHandler.RecoverInline(this);
-				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
+				State = 3458;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case ClearKey:
+					{
+					State = 3456;
+					clearKey();
+					}
+					break;
+				case Reset:
+					{
+					State = 3457;
+					reset();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
 				}
 				break;
-			case T__263:
+			case Times:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 2175;
-				Match(T__263);
-				State = 2176;
+				State = 3460;
+				times();
+				State = 3461;
 				fadeIn();
-				State = 2177;
+				State = 3462;
 				stay();
-				State = 2178;
+				State = 3463;
 				fadeOut();
 				}
 				}
@@ -14279,85 +24825,23 @@ public partial class mccommandParser : Parser {
 		return _localctx;
 	}
 
-	public partial class FadeInContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
-		public FadeInContext(ParserRuleContext parent, int invokingState)
+	public partial class FaedInContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		public FaedInContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_fadeIn; } }
+		public override int RuleIndex { get { return RULE_faedIn; } }
 	}
 
 	[RuleVersion(0)]
-	public FadeInContext fadeIn() {
-		FadeInContext _localctx = new FadeInContext(Context, State);
-		EnterRule(_localctx, 514, RULE_fadeIn);
+	public FaedInContext faedIn() {
+		FaedInContext _localctx = new FaedInContext(Context, State);
+		EnterRule(_localctx, 1056, RULE_faedIn);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2182;
-			Match(Integer);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class StayContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
-		public StayContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_stay; } }
-	}
-
-	[RuleVersion(0)]
-	public StayContext stay() {
-		StayContext _localctx = new StayContext(Context, State);
-		EnterRule(_localctx, 516, RULE_stay);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2184;
-			Match(Integer);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class FadeOutContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(mccommandParser.Integer, 0); }
-		public FadeOutContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_fadeOut; } }
-	}
-
-	[RuleVersion(0)]
-	public FadeOutContext fadeOut() {
-		FadeOutContext _localctx = new FadeOutContext(Context, State);
-		EnterRule(_localctx, 518, RULE_fadeOut);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2186;
+			State = 3467;
 			Match(Integer);
 			}
 		}
@@ -14373,8 +24857,11 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TmRadicalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public MessageContext message() {
-			return GetRuleContext<MessageContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public TmKeyContext tmKey() {
+			return GetRuleContext<TmKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TmMessageContext tmMessage() {
+			return GetRuleContext<TmMessageContext>(0);
 		}
 		public TmRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -14386,14 +24873,45 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TmRadicalContext tmRadical() {
 		TmRadicalContext _localctx = new TmRadicalContext(Context, State);
-		EnterRule(_localctx, 520, RULE_tmRadical);
+		EnterRule(_localctx, 1058, RULE_tmRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2188;
-			Match(T__264);
-			State = 2189;
-			message();
+			State = 3469;
+			tmKey();
+			State = 3470;
+			tmMessage();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class TmMessageContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode MessageContent() { return GetToken(MCCommandParser.MessageContent, 0); }
+		public TmMessageContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_tmMessage; } }
+	}
+
+	[RuleVersion(0)]
+	public TmMessageContext tmMessage() {
+		TmMessageContext _localctx = new TmMessageContext(Context, State);
+		EnterRule(_localctx, 1060, RULE_tmMessage);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 3472;
+			Match(MessageContent);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14408,6 +24926,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TpRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TpKeyContext tpKey() {
+			return GetRuleContext<TpKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TeleportOptionsContext teleportOptions() {
 			return GetRuleContext<TeleportOptionsContext>(0);
 		}
@@ -14421,13 +24942,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TpRadicalContext tpRadical() {
 		TpRadicalContext _localctx = new TpRadicalContext(Context, State);
-		EnterRule(_localctx, 522, RULE_tpRadical);
+		EnterRule(_localctx, 1062, RULE_tpRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2191;
-			Match(T__265);
-			State = 2192;
+			State = 3474;
+			tpKey();
+			State = 3475;
 			teleportOptions();
 			}
 		}
@@ -14443,6 +24964,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TriggerRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public TriggerKeyContext triggerKey() {
+			return GetRuleContext<TriggerKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public TriggerObjectiveContext triggerObjective() {
 			return GetRuleContext<TriggerObjectiveContext>(0);
 		}
@@ -14462,17 +24986,17 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TriggerRadicalContext triggerRadical() {
 		TriggerRadicalContext _localctx = new TriggerRadicalContext(Context, State);
-		EnterRule(_localctx, 524, RULE_triggerRadical);
+		EnterRule(_localctx, 1064, RULE_triggerRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2194;
-			Match(T__266);
-			State = 2195;
+			State = 3477;
+			triggerKey();
+			State = 3478;
 			triggerObjective();
-			State = 2196;
+			State = 3479;
 			triggerBehaviors();
-			State = 2197;
+			State = 3480;
 			value();
 			}
 		}
@@ -14488,7 +25012,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TriggerObjectiveContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IdString() { return GetToken(mccommandParser.IdString, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(MCCommandParser.Identifier, 0); }
 		public TriggerObjectiveContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -14499,12 +25023,12 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TriggerObjectiveContext triggerObjective() {
 		TriggerObjectiveContext _localctx = new TriggerObjectiveContext(Context, State);
-		EnterRule(_localctx, 526, RULE_triggerObjective);
+		EnterRule(_localctx, 1066, RULE_triggerObjective);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2199;
-			Match(IdString);
+			State = 3482;
+			Match(Identifier);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14519,6 +25043,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class TriggerBehaviorsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
+		}
 		public TriggerBehaviorsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -14529,20 +25059,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public TriggerBehaviorsContext triggerBehaviors() {
 		TriggerBehaviorsContext _localctx = new TriggerBehaviorsContext(Context, State);
-		EnterRule(_localctx, 528, RULE_triggerBehaviors);
-		int _la;
+		EnterRule(_localctx, 1068, RULE_triggerBehaviors);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2201;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__42 || _la==T__43) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3486;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Add:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3484;
+				add();
+				}
+				break;
+			case Set:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3485;
+				set();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14557,12 +25094,13 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class WeatherRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public WeatherKeyContext weatherKey() {
+			return GetRuleContext<WeatherKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public WeatherMembersContext weatherMembers() {
 			return GetRuleContext<WeatherMembersContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
-		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public WeatherRadicalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -14573,16 +25111,16 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public WeatherRadicalContext weatherRadical() {
 		WeatherRadicalContext _localctx = new WeatherRadicalContext(Context, State);
-		EnterRule(_localctx, 530, RULE_weatherRadical);
+		EnterRule(_localctx, 1070, RULE_weatherRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2203;
-			Match(T__192);
-			State = 2204;
+			State = 3488;
+			weatherKey();
+			State = 3489;
 			weatherMembers();
-			State = 2205;
-			number();
+			State = 3490;
+			Match(Double);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14597,6 +25135,15 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class WeatherMembersContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ClearKeyContext clearKey() {
+			return GetRuleContext<ClearKeyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public RainContext rain() {
+			return GetRuleContext<RainContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ThunderContext thunder() {
+			return GetRuleContext<ThunderContext>(0);
+		}
 		public WeatherMembersContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -14607,20 +25154,34 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public WeatherMembersContext weatherMembers() {
 		WeatherMembersContext _localctx = new WeatherMembersContext(Context, State);
-		EnterRule(_localctx, 532, RULE_weatherMembers);
-		int _la;
+		EnterRule(_localctx, 1072, RULE_weatherMembers);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2207;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__56 || _la==T__267 || _la==T__268) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3495;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case ClearKey:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3492;
+				clearKey();
+				}
+				break;
+			case Rain:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3493;
+				rain();
+				}
+				break;
+			case Thunder:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 3494;
+				thunder();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14635,6 +25196,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class WorldborderRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public WorldborderKeyContext worldborderKey() {
+			return GetRuleContext<WorldborderKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public WorldborderOptionsContext worldborderOptions() {
 			return GetRuleContext<WorldborderOptionsContext>(0);
 		}
@@ -14648,13 +25212,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public WorldborderRadicalContext worldborderRadical() {
 		WorldborderRadicalContext _localctx = new WorldborderRadicalContext(Context, State);
-		EnterRule(_localctx, 534, RULE_worldborderRadical);
+		EnterRule(_localctx, 1074, RULE_worldborderRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2209;
-			Match(T__269);
-			State = 2210;
+			State = 3497;
+			worldborderKey();
+			State = 3498;
 			worldborderOptions();
 			}
 		}
@@ -14670,17 +25234,33 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class WorldborderOptionsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public NumberContext number() {
-			return GetRuleContext<NumberContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public AddContext add() {
+			return GetRuleContext<AddContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public IntContext @int() {
-			return GetRuleContext<IntContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public IntegerContext integer() {
+			return GetRuleContext<IntegerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CenterContext center() {
+			return GetRuleContext<CenterContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public Pos2DContext pos2D() {
 			return GetRuleContext<Pos2DContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public DamageKeyContext damageKey() {
+			return GetRuleContext<DamageKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public WorldborderModesContext worldborderModes() {
 			return GetRuleContext<WorldborderModesContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public GetContext get() {
+			return GetRuleContext<GetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetContext set() {
+			return GetRuleContext<SetContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public WarningContext warning() {
+			return GetRuleContext<WarningContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public WorldborderWarningTypesContext worldborderWarningTypes() {
 			return GetRuleContext<WorldborderWarningTypesContext>(0);
@@ -14695,78 +25275,78 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public WorldborderOptionsContext worldborderOptions() {
 		WorldborderOptionsContext _localctx = new WorldborderOptionsContext(Context, State);
-		EnterRule(_localctx, 536, RULE_worldborderOptions);
+		EnterRule(_localctx, 1076, RULE_worldborderOptions);
 		try {
-			State = 2231;
+			State = 3520;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__43:
+			case Add:
 				EnterOuterAlt(_localctx, 1);
 				{
 				{
-				State = 2212;
-				Match(T__43);
-				State = 2213;
-				number();
-				State = 2214;
-				@int();
+				State = 3500;
+				add();
+				State = 3501;
+				Match(Double);
+				State = 3502;
+				integer();
 				}
 				}
 				break;
-			case T__270:
+			case Center:
 				EnterOuterAlt(_localctx, 2);
 				{
 				{
-				State = 2216;
-				Match(T__270);
-				State = 2217;
+				State = 3504;
+				center();
+				State = 3505;
 				pos2D();
 				}
 				}
 				break;
-			case T__65:
+			case DamageKey:
 				EnterOuterAlt(_localctx, 3);
 				{
 				{
-				State = 2218;
-				Match(T__65);
-				State = 2219;
+				State = 3507;
+				damageKey();
+				State = 3508;
 				worldborderModes();
-				State = 2220;
-				number();
+				State = 3509;
+				Match(Double);
 				}
 				}
 				break;
-			case T__40:
+			case Get:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 2222;
-				Match(T__40);
+				State = 3511;
+				get();
 				}
 				break;
-			case T__42:
+			case Set:
 				EnterOuterAlt(_localctx, 5);
 				{
 				{
-				State = 2223;
-				Match(T__42);
-				State = 2224;
-				number();
-				State = 2225;
-				@int();
+				State = 3512;
+				set();
+				State = 3513;
+				Match(Double);
+				State = 3514;
+				integer();
 				}
 				}
 				break;
-			case T__271:
+			case Warning:
 				EnterOuterAlt(_localctx, 6);
 				{
 				{
-				State = 2227;
-				Match(T__271);
-				State = 2228;
+				State = 3516;
+				warning();
+				State = 3517;
 				worldborderWarningTypes();
-				State = 2229;
-				@int();
+				State = 3518;
+				integer();
 				}
 				}
 				break;
@@ -14786,6 +25366,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class WorldborderWarningTypesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public DistanceContext distance() {
+			return GetRuleContext<DistanceContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public TimeKeyContext timeKey() {
+			return GetRuleContext<TimeKeyContext>(0);
+		}
 		public WorldborderWarningTypesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -14796,20 +25382,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public WorldborderWarningTypesContext worldborderWarningTypes() {
 		WorldborderWarningTypesContext _localctx = new WorldborderWarningTypesContext(Context, State);
-		EnterRule(_localctx, 538, RULE_worldborderWarningTypes);
-		int _la;
+		EnterRule(_localctx, 1078, RULE_worldborderWarningTypes);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2233;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__253 || _la==T__272) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3524;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Distance:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3522;
+				distance();
+				}
+				break;
+			case TimeKey:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3523;
+				timeKey();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14824,6 +25417,12 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class WorldborderModesContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AmountContext amount() {
+			return GetRuleContext<AmountContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public BufferContext buffer() {
+			return GetRuleContext<BufferContext>(0);
+		}
 		public WorldborderModesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -14834,20 +25433,27 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public WorldborderModesContext worldborderModes() {
 		WorldborderModesContext _localctx = new WorldborderModesContext(Context, State);
-		EnterRule(_localctx, 540, RULE_worldborderModes);
-		int _la;
+		EnterRule(_localctx, 1080, RULE_worldborderModes);
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 2235;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__273 || _la==T__274) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 3528;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case Amount:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 3526;
+				amount();
+				}
+				break;
+			case Buffer:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 3527;
+				buffer();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -14862,6 +25468,9 @@ public partial class mccommandParser : Parser {
 	}
 
 	public partial class XpRadicalContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public XpKeyContext xpKey() {
+			return GetRuleContext<XpKeyContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExperienceOptionsContext experienceOptions() {
 			return GetRuleContext<ExperienceOptionsContext>(0);
 		}
@@ -14875,13 +25484,13 @@ public partial class mccommandParser : Parser {
 	[RuleVersion(0)]
 	public XpRadicalContext xpRadical() {
 		XpRadicalContext _localctx = new XpRadicalContext(Context, State);
-		EnterRule(_localctx, 542, RULE_xpRadical);
+		EnterRule(_localctx, 1082, RULE_xpRadical);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 2237;
-			Match(T__275);
-			State = 2238;
+			State = 3530;
+			xpKey();
+			State = 3531;
 			experienceOptions();
 			}
 		}
@@ -14897,7 +25506,7 @@ public partial class mccommandParser : Parser {
 	}
 
 	private static int[] _serializedATN = {
-		4,1,355,2241,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
+		4,1,309,3534,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
 		7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,
 		2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,21,
 		2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,7,27,2,28,7,28,
@@ -14939,761 +25548,1203 @@ public partial class mccommandParser : Parser {
 		2,249,7,249,2,250,7,250,2,251,7,251,2,252,7,252,2,253,7,253,2,254,7,254,
 		2,255,7,255,2,256,7,256,2,257,7,257,2,258,7,258,2,259,7,259,2,260,7,260,
 		2,261,7,261,2,262,7,262,2,263,7,263,2,264,7,264,2,265,7,265,2,266,7,266,
-		2,267,7,267,2,268,7,268,2,269,7,269,2,270,7,270,2,271,7,271,1,0,1,0,1,
-		1,1,1,1,2,1,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,3,3,558,8,3,1,4,1,4,1,5,1,5,
-		1,6,1,6,1,7,1,7,1,8,1,8,1,9,1,9,3,9,572,8,9,1,10,1,10,1,10,1,10,5,10,578,
-		8,10,10,10,12,10,581,9,10,1,10,1,10,1,11,1,11,1,12,1,12,1,13,1,13,1,13,
-		1,13,1,14,1,14,1,14,1,14,5,14,597,8,14,10,14,12,14,600,9,14,1,14,1,14,
-		1,15,1,15,1,15,1,15,1,15,3,15,609,8,15,1,16,1,16,1,17,1,17,1,18,1,18,1,
-		19,1,19,1,20,1,20,1,20,5,20,622,8,20,10,20,12,20,625,9,20,1,21,1,21,1,
-		22,1,22,1,23,1,23,1,23,3,23,634,8,23,1,24,1,24,1,25,1,25,1,26,1,26,1,27,
-		1,27,1,28,1,28,1,29,1,29,1,30,1,30,1,31,1,31,1,31,1,32,1,32,1,33,1,33,
-		1,33,3,33,658,8,33,1,33,1,33,5,33,662,8,33,10,33,12,33,665,9,33,1,33,1,
-		33,1,33,1,33,3,33,671,8,33,1,33,1,33,5,33,675,8,33,10,33,12,33,678,9,33,
-		1,33,1,33,1,33,1,33,3,33,684,8,33,1,33,1,33,5,33,688,8,33,10,33,12,33,
-		691,9,33,1,33,1,33,1,33,1,33,3,33,697,8,33,1,33,1,33,5,33,701,8,33,10,
-		33,12,33,704,9,33,1,33,1,33,1,33,1,33,3,33,710,8,33,1,33,1,33,5,33,714,
-		8,33,10,33,12,33,717,9,33,1,33,1,33,3,33,721,8,33,1,34,1,34,1,34,3,34,
-		726,8,34,1,34,1,34,5,34,730,8,34,10,34,12,34,733,9,34,1,34,1,34,1,34,3,
-		34,738,8,34,1,34,1,34,5,34,742,8,34,10,34,12,34,745,9,34,1,34,1,34,1,34,
-		3,34,750,8,34,1,34,1,34,5,34,754,8,34,10,34,12,34,757,9,34,1,34,1,34,1,
-		34,3,34,762,8,34,1,34,1,34,5,34,766,8,34,10,34,12,34,769,9,34,1,34,1,34,
-		1,34,3,34,774,8,34,1,34,1,34,5,34,778,8,34,10,34,12,34,781,9,34,1,34,3,
-		34,784,8,34,1,35,1,35,1,35,3,35,789,8,35,1,35,1,35,5,35,793,8,35,10,35,
-		12,35,796,9,35,1,35,1,35,1,35,1,35,3,35,802,8,35,1,35,1,35,5,35,806,8,
-		35,10,35,12,35,809,9,35,1,35,1,35,1,35,1,35,3,35,815,8,35,1,35,1,35,5,
-		35,819,8,35,10,35,12,35,822,9,35,1,35,1,35,1,35,1,35,3,35,828,8,35,1,35,
-		1,35,5,35,832,8,35,10,35,12,35,835,9,35,1,35,1,35,1,35,1,35,3,35,841,8,
-		35,1,35,1,35,5,35,845,8,35,10,35,12,35,848,9,35,1,35,1,35,3,35,852,8,35,
-		1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,
-		1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,
-		1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,
-		1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,
-		1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,1,36,3,36,919,8,36,1,37,1,37,1,
-		37,1,37,1,37,1,38,1,38,1,39,1,39,1,40,1,40,1,41,1,41,1,41,1,41,1,41,3,
-		41,937,8,41,1,41,1,41,1,41,1,41,1,41,1,41,3,41,945,8,41,1,42,1,42,1,42,
-		1,42,1,42,1,43,1,43,1,43,1,43,1,43,1,43,1,43,1,43,3,43,960,8,43,1,44,1,
-		44,1,45,1,45,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,46,1,
-		46,1,46,1,46,1,46,3,46,981,8,46,1,47,1,47,1,48,1,48,1,48,1,49,1,49,1,50,
-		1,50,1,51,1,51,1,51,1,51,1,51,1,51,1,51,1,51,1,51,1,51,1,51,1,51,1,51,
-		1,51,1,51,3,51,1007,8,51,1,52,1,52,1,53,1,53,1,54,1,54,1,55,1,55,1,55,
-		1,55,1,55,1,55,1,55,1,55,1,55,1,55,1,55,1,55,1,55,1,55,3,55,1029,8,55,
-		1,56,1,56,1,56,1,56,1,56,1,57,1,57,1,58,1,58,1,58,1,58,3,58,1042,8,58,
-		1,59,1,59,1,59,3,59,1047,8,59,1,59,1,59,1,60,1,60,1,60,3,60,1054,8,60,
-		1,60,1,60,1,61,1,61,1,61,3,61,1061,8,61,1,61,3,61,1064,8,61,1,62,1,62,
-		1,63,1,63,1,64,1,64,1,64,1,64,1,64,1,64,1,64,1,65,1,65,1,66,1,66,1,67,
-		1,67,1,67,1,67,1,67,1,67,1,67,3,67,1088,8,67,1,68,1,68,1,68,1,69,1,69,
-		1,70,1,70,1,71,1,71,1,71,5,71,1100,8,71,10,71,12,71,1103,9,71,1,72,1,72,
-		1,72,5,72,1108,8,72,10,72,12,72,1111,9,72,1,73,1,73,1,73,1,73,1,73,1,73,
-		1,73,1,73,3,73,1121,8,73,1,74,1,74,1,74,1,74,1,74,1,74,1,74,1,74,1,74,
-		1,74,1,74,1,74,1,74,1,74,1,74,3,74,1138,8,74,1,75,1,75,1,75,1,75,1,75,
-		1,75,1,75,1,75,1,75,1,75,1,75,1,75,3,75,1152,8,75,1,76,1,76,1,76,1,76,
-		1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,1,76,
-		3,76,1172,8,76,1,77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,1,77,
-		1,77,3,77,1186,8,77,1,78,1,78,1,78,1,78,1,78,1,78,3,78,1194,8,78,1,79,
-		1,79,1,79,1,79,1,79,1,79,1,79,1,79,1,79,1,79,1,79,1,79,3,79,1208,8,79,
-		1,80,1,80,1,80,1,80,1,80,1,80,1,80,1,80,1,80,1,80,1,80,1,80,1,80,1,80,
-		1,80,3,80,1225,8,80,1,81,1,81,1,81,1,81,1,81,1,81,1,81,1,81,1,81,1,81,
-		1,81,1,81,3,81,1239,8,81,1,82,1,82,1,82,1,83,1,83,1,84,1,84,1,85,1,85,
-		1,85,1,85,1,85,1,85,3,85,1254,8,85,1,86,1,86,1,86,1,86,1,86,1,86,1,86,
-		1,86,3,86,1264,8,86,1,87,1,87,1,87,1,88,1,88,1,88,1,88,3,88,1273,8,88,
-		1,89,1,89,1,89,1,90,1,90,1,90,1,91,1,91,1,92,1,92,1,92,1,93,1,93,1,93,
-		1,93,1,93,1,93,1,93,1,93,1,93,1,93,1,93,1,93,1,93,1,93,3,93,1300,8,93,
-		3,93,1302,8,93,1,94,1,94,1,95,1,95,1,96,1,96,1,97,1,97,1,98,1,98,1,99,
-		1,99,1,99,1,99,1,99,1,100,1,100,1,101,1,101,1,102,1,102,1,102,1,103,1,
-		103,1,104,1,104,1,105,1,105,1,106,1,106,1,107,1,107,1,108,1,108,1,109,
-		1,109,1,109,1,109,1,109,1,109,1,109,1,109,1,109,1,109,1,109,1,109,1,109,
-		1,109,1,109,1,109,3,109,1354,8,109,1,110,1,110,1,110,1,110,1,110,1,110,
-		1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,
-		1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,
-		1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,1,110,3,110,
-		1397,8,110,1,111,1,111,1,112,1,112,1,112,1,112,1,112,1,112,1,112,3,112,
-		1408,8,112,3,112,1410,8,112,1,113,1,113,1,114,1,114,1,115,1,115,1,115,
-		1,115,3,115,1420,8,115,1,116,1,116,1,116,1,116,1,116,1,116,1,116,1,116,
-		1,116,1,116,1,116,1,116,1,116,1,116,1,116,1,116,1,116,1,116,1,116,1,116,
-		1,116,1,116,1,116,1,116,1,116,1,116,1,116,3,116,1449,8,116,1,117,1,117,
-		1,117,1,118,1,118,1,118,1,118,1,118,1,118,1,118,1,118,3,118,1462,8,118,
-		1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,
-		1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,
-		1,119,1,119,1,119,1,119,1,119,1,119,1,119,3,119,1495,8,119,1,119,1,119,
-		1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,1,119,
-		1,119,1,119,1,119,3,119,1514,8,119,1,120,1,120,1,120,1,121,1,121,1,122,
-		1,122,1,123,1,123,1,124,1,124,1,124,1,124,1,124,1,124,1,124,1,124,1,124,
-		1,124,3,124,1535,8,124,1,125,1,125,1,125,1,125,1,125,1,125,1,126,1,126,
-		1,126,3,126,1546,8,126,1,127,1,127,1,127,1,127,1,127,1,127,1,128,1,128,
-		1,128,1,129,1,129,1,129,1,130,1,130,1,130,1,130,3,130,1564,8,130,1,131,
-		1,131,1,131,1,131,1,131,1,131,1,131,1,131,3,131,1574,8,131,1,132,1,132,
-		1,132,1,133,1,133,1,133,1,133,1,134,1,134,1,134,1,134,1,135,1,135,1,136,
-		1,136,1,137,1,137,1,137,1,137,1,137,1,138,1,138,1,138,1,139,1,139,1,140,
-		1,140,1,140,1,140,1,141,1,141,1,142,1,142,1,143,1,143,1,143,1,143,3,143,
-		1613,8,143,1,144,1,144,1,144,1,144,1,144,1,144,3,144,1621,8,144,1,145,
-		1,145,1,145,1,145,1,145,1,145,1,145,1,145,1,145,1,145,3,145,1633,8,145,
-		1,146,1,146,1,146,1,146,1,146,1,146,1,146,1,146,1,146,1,146,3,146,1645,
-		8,146,1,147,1,147,1,147,1,148,1,148,1,149,1,149,1,149,1,149,1,150,4,150,
-		1657,8,150,11,150,12,150,1658,1,151,1,151,1,151,1,152,1,152,1,152,1,153,
-		1,153,1,154,1,154,1,154,1,155,1,155,1,156,1,156,1,157,1,157,1,157,1,157,
-		1,157,1,157,3,157,1682,8,157,1,158,1,158,1,158,1,159,1,159,1,160,1,160,
-		1,160,3,160,1692,8,160,1,160,3,160,1695,8,160,1,161,1,161,1,162,1,162,
-		1,162,1,162,1,162,1,162,1,162,1,162,1,162,1,162,1,162,1,162,1,162,1,162,
-		3,162,1713,8,162,1,163,1,163,1,163,1,163,1,163,1,163,1,163,1,163,1,163,
-		1,163,3,163,1725,8,163,1,164,1,164,1,164,1,164,1,164,1,164,1,164,1,164,
-		1,164,1,164,1,164,1,164,1,164,3,164,1740,8,164,1,165,1,165,1,165,1,166,
-		1,166,1,167,1,167,1,167,1,167,1,168,4,168,1752,8,168,11,168,12,168,1753,
-		1,169,1,169,1,169,1,169,1,169,1,169,1,169,1,169,1,169,1,169,1,170,1,170,
-		1,170,1,171,1,171,1,171,1,172,1,172,1,172,1,172,1,173,1,173,1,174,1,174,
-		1,175,1,175,1,175,1,175,1,175,1,175,1,176,1,176,1,177,1,177,1,177,1,178,
-		1,178,1,179,1,179,1,180,1,180,1,181,1,181,1,182,1,182,1,182,1,182,1,182,
-		1,182,1,182,1,182,1,182,1,182,1,182,1,182,1,182,1,182,1,182,1,182,1,182,
-		1,182,1,182,1,182,1,182,1,182,1,182,3,182,1822,8,182,1,183,1,183,1,184,
-		1,184,1,184,1,185,1,185,1,185,1,185,1,185,1,185,1,185,1,185,1,185,1,186,
-		1,186,1,187,1,187,1,188,1,188,1,189,1,189,1,190,1,190,1,190,1,190,1,190,
-		1,191,1,191,1,192,1,192,1,192,1,192,1,192,1,193,1,193,1,194,1,194,1,195,
-		1,195,1,196,1,196,1,196,1,197,1,197,1,197,1,197,1,198,1,198,1,198,3,198,
-		1874,8,198,1,199,1,199,1,199,1,200,1,200,1,200,1,201,1,201,1,202,1,202,
-		1,203,1,203,1,203,1,203,1,203,1,203,1,203,3,203,1893,8,203,1,204,1,204,
-		1,204,1,205,1,205,1,205,1,205,3,205,1902,8,205,1,206,1,206,1,207,1,207,
-		1,208,1,208,1,209,1,209,1,210,1,210,1,211,1,211,1,212,1,212,1,213,1,213,
-		1,214,1,214,1,214,1,214,1,214,1,214,1,214,1,214,1,214,1,214,1,214,1,214,
-		1,214,1,214,3,214,1934,8,214,1,214,1,214,1,214,1,214,1,214,1,214,3,214,
-		1942,8,214,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,
-		1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,
-		1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,1,215,
-		1,215,1,215,3,215,1980,8,215,1,216,1,216,1,217,1,217,1,217,1,217,1,217,
-		1,218,1,218,1,219,1,219,1,219,1,219,1,220,1,220,1,220,1,220,1,220,1,221,
-		1,221,1,221,1,221,1,222,1,222,1,222,1,222,1,222,1,222,1,222,1,223,1,223,
-		1,223,3,223,2014,8,223,1,223,1,223,1,223,1,223,1,223,3,223,2021,8,223,
-		1,224,1,224,1,225,1,225,1,226,1,226,1,227,1,227,1,228,1,228,1,228,1,228,
-		1,228,1,229,1,229,1,230,1,230,1,231,1,231,1,231,1,231,1,231,1,232,1,232,
-		1,232,1,232,1,233,1,233,1,233,3,233,2052,8,233,1,233,3,233,2055,8,233,
-		1,234,1,234,1,235,1,235,1,235,1,236,1,236,1,237,1,237,1,238,1,238,1,239,
-		1,239,1,240,1,240,1,241,1,241,1,241,1,241,1,241,1,241,1,241,1,241,1,241,
-		1,241,1,241,1,241,1,241,1,241,1,241,1,241,1,241,1,241,1,241,1,241,3,241,
-		2092,8,241,1,242,1,242,1,242,1,242,1,242,1,242,1,242,1,242,1,242,1,242,
-		1,242,1,242,1,242,1,242,1,242,1,242,3,242,2110,8,242,1,243,1,243,1,243,
-		1,244,1,244,1,244,1,245,1,245,1,246,1,246,1,247,1,247,1,248,1,248,1,248,
-		1,248,1,248,1,248,1,248,1,248,1,248,1,248,3,248,2134,8,248,1,248,3,248,
-		2137,8,248,3,248,2139,8,248,3,248,2141,8,248,1,249,1,249,1,249,1,249,1,
-		250,1,250,1,250,1,250,1,251,1,251,1,251,1,252,1,252,1,253,1,253,1,254,
-		1,254,1,254,1,254,1,254,1,254,1,254,3,254,2165,8,254,3,254,2167,8,254,
-		1,255,1,255,1,255,1,255,1,256,1,256,1,256,1,256,1,256,1,256,1,256,1,256,
-		3,256,2181,8,256,1,257,1,257,1,258,1,258,1,259,1,259,1,260,1,260,1,260,
-		1,261,1,261,1,261,1,262,1,262,1,262,1,262,1,262,1,263,1,263,1,264,1,264,
-		1,265,1,265,1,265,1,265,1,266,1,266,1,267,1,267,1,267,1,268,1,268,1,268,
-		1,268,1,268,1,268,1,268,1,268,1,268,1,268,1,268,1,268,1,268,1,268,1,268,
-		1,268,1,268,1,268,1,268,3,268,2232,8,268,1,269,1,269,1,270,1,270,1,271,
-		1,271,1,271,1,271,18,623,663,676,689,702,715,731,743,755,767,779,794,807,
-		820,833,846,1101,1109,0,272,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,
-		32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,
-		80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,112,114,116,118,
-		120,122,124,126,128,130,132,134,136,138,140,142,144,146,148,150,152,154,
-		156,158,160,162,164,166,168,170,172,174,176,178,180,182,184,186,188,190,
-		192,194,196,198,200,202,204,206,208,210,212,214,216,218,220,222,224,226,
-		228,230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,262,
-		264,266,268,270,272,274,276,278,280,282,284,286,288,290,292,294,296,298,
-		300,302,304,306,308,310,312,314,316,318,320,322,324,326,328,330,332,334,
-		336,338,340,342,344,346,348,350,352,354,356,358,360,362,364,366,368,370,
-		372,374,376,378,380,382,384,386,388,390,392,394,396,398,400,402,404,406,
-		408,410,412,414,416,418,420,422,424,426,428,430,432,434,436,438,440,442,
-		444,446,448,450,452,454,456,458,460,462,464,466,468,470,472,474,476,478,
-		480,482,484,486,488,490,492,494,496,498,500,502,504,506,508,510,512,514,
-		516,518,520,522,524,526,528,530,532,534,536,538,540,542,0,44,1,0,4,9,1,
-		0,11,14,1,0,32,33,2,0,41,41,43,43,2,0,44,44,47,48,2,0,46,46,51,53,1,0,
-		60,61,1,0,62,64,1,0,80,81,2,0,64,64,93,95,1,0,101,102,2,0,60,60,104,104,
-		2,0,46,46,51,51,2,0,111,113,322,322,1,0,115,122,1,0,123,126,1,0,128,129,
-		2,0,67,67,103,103,1,0,133,134,1,0,144,145,1,0,43,44,1,0,147,150,2,0,280,
-		280,295,295,1,0,89,90,2,0,62,62,64,64,1,0,178,180,1,0,180,183,1,0,185,
-		193,2,0,97,97,196,196,2,0,61,61,76,76,1,0,206,207,3,0,111,111,208,214,
-		322,322,3,0,61,61,147,147,149,149,3,0,72,72,185,193,230,230,1,0,233,236,
-		2,0,233,234,237,238,1,0,247,248,1,0,255,257,2,0,255,255,258,260,1,0,261,
-		263,2,0,57,57,219,219,2,0,57,57,268,269,2,0,254,254,273,273,1,0,274,275,
-		2271,0,544,1,0,0,0,2,546,1,0,0,0,4,548,1,0,0,0,6,557,1,0,0,0,8,559,1,0,
-		0,0,10,561,1,0,0,0,12,563,1,0,0,0,14,565,1,0,0,0,16,567,1,0,0,0,18,571,
-		1,0,0,0,20,573,1,0,0,0,22,584,1,0,0,0,24,586,1,0,0,0,26,588,1,0,0,0,28,
-		592,1,0,0,0,30,608,1,0,0,0,32,610,1,0,0,0,34,612,1,0,0,0,36,614,1,0,0,
-		0,38,616,1,0,0,0,40,618,1,0,0,0,42,626,1,0,0,0,44,628,1,0,0,0,46,633,1,
-		0,0,0,48,635,1,0,0,0,50,637,1,0,0,0,52,639,1,0,0,0,54,641,1,0,0,0,56,643,
-		1,0,0,0,58,645,1,0,0,0,60,647,1,0,0,0,62,649,1,0,0,0,64,652,1,0,0,0,66,
-		720,1,0,0,0,68,783,1,0,0,0,70,851,1,0,0,0,72,918,1,0,0,0,74,920,1,0,0,
-		0,76,925,1,0,0,0,78,927,1,0,0,0,80,929,1,0,0,0,82,944,1,0,0,0,84,946,1,
-		0,0,0,86,959,1,0,0,0,88,961,1,0,0,0,90,963,1,0,0,0,92,980,1,0,0,0,94,982,
-		1,0,0,0,96,984,1,0,0,0,98,987,1,0,0,0,100,989,1,0,0,0,102,1006,1,0,0,0,
-		104,1008,1,0,0,0,106,1010,1,0,0,0,108,1012,1,0,0,0,110,1028,1,0,0,0,112,
-		1030,1,0,0,0,114,1035,1,0,0,0,116,1037,1,0,0,0,118,1046,1,0,0,0,120,1053,
-		1,0,0,0,122,1060,1,0,0,0,124,1065,1,0,0,0,126,1067,1,0,0,0,128,1069,1,
-		0,0,0,130,1076,1,0,0,0,132,1078,1,0,0,0,134,1087,1,0,0,0,136,1089,1,0,
-		0,0,138,1092,1,0,0,0,140,1094,1,0,0,0,142,1096,1,0,0,0,144,1104,1,0,0,
-		0,146,1120,1,0,0,0,148,1137,1,0,0,0,150,1151,1,0,0,0,152,1171,1,0,0,0,
-		154,1185,1,0,0,0,156,1193,1,0,0,0,158,1207,1,0,0,0,160,1224,1,0,0,0,162,
-		1238,1,0,0,0,164,1240,1,0,0,0,166,1243,1,0,0,0,168,1245,1,0,0,0,170,1253,
-		1,0,0,0,172,1263,1,0,0,0,174,1265,1,0,0,0,176,1272,1,0,0,0,178,1274,1,
-		0,0,0,180,1277,1,0,0,0,182,1280,1,0,0,0,184,1282,1,0,0,0,186,1301,1,0,
-		0,0,188,1303,1,0,0,0,190,1305,1,0,0,0,192,1307,1,0,0,0,194,1309,1,0,0,
-		0,196,1311,1,0,0,0,198,1313,1,0,0,0,200,1318,1,0,0,0,202,1320,1,0,0,0,
-		204,1322,1,0,0,0,206,1325,1,0,0,0,208,1327,1,0,0,0,210,1329,1,0,0,0,212,
-		1331,1,0,0,0,214,1333,1,0,0,0,216,1335,1,0,0,0,218,1353,1,0,0,0,220,1396,
-		1,0,0,0,222,1398,1,0,0,0,224,1409,1,0,0,0,226,1411,1,0,0,0,228,1413,1,
-		0,0,0,230,1419,1,0,0,0,232,1448,1,0,0,0,234,1450,1,0,0,0,236,1461,1,0,
-		0,0,238,1513,1,0,0,0,240,1515,1,0,0,0,242,1518,1,0,0,0,244,1520,1,0,0,
-		0,246,1522,1,0,0,0,248,1534,1,0,0,0,250,1536,1,0,0,0,252,1545,1,0,0,0,
-		254,1547,1,0,0,0,256,1553,1,0,0,0,258,1556,1,0,0,0,260,1563,1,0,0,0,262,
-		1573,1,0,0,0,264,1575,1,0,0,0,266,1578,1,0,0,0,268,1582,1,0,0,0,270,1586,
-		1,0,0,0,272,1588,1,0,0,0,274,1590,1,0,0,0,276,1595,1,0,0,0,278,1598,1,
-		0,0,0,280,1600,1,0,0,0,282,1604,1,0,0,0,284,1606,1,0,0,0,286,1612,1,0,
-		0,0,288,1620,1,0,0,0,290,1632,1,0,0,0,292,1644,1,0,0,0,294,1646,1,0,0,
-		0,296,1649,1,0,0,0,298,1651,1,0,0,0,300,1656,1,0,0,0,302,1660,1,0,0,0,
-		304,1663,1,0,0,0,306,1666,1,0,0,0,308,1668,1,0,0,0,310,1671,1,0,0,0,312,
-		1673,1,0,0,0,314,1681,1,0,0,0,316,1683,1,0,0,0,318,1686,1,0,0,0,320,1694,
-		1,0,0,0,322,1696,1,0,0,0,324,1712,1,0,0,0,326,1724,1,0,0,0,328,1739,1,
-		0,0,0,330,1741,1,0,0,0,332,1744,1,0,0,0,334,1746,1,0,0,0,336,1751,1,0,
-		0,0,338,1755,1,0,0,0,340,1765,1,0,0,0,342,1768,1,0,0,0,344,1771,1,0,0,
-		0,346,1775,1,0,0,0,348,1777,1,0,0,0,350,1779,1,0,0,0,352,1785,1,0,0,0,
-		354,1787,1,0,0,0,356,1790,1,0,0,0,358,1792,1,0,0,0,360,1794,1,0,0,0,362,
-		1796,1,0,0,0,364,1821,1,0,0,0,366,1823,1,0,0,0,368,1825,1,0,0,0,370,1828,
-		1,0,0,0,372,1837,1,0,0,0,374,1839,1,0,0,0,376,1841,1,0,0,0,378,1843,1,
-		0,0,0,380,1845,1,0,0,0,382,1850,1,0,0,0,384,1852,1,0,0,0,386,1857,1,0,
-		0,0,388,1859,1,0,0,0,390,1861,1,0,0,0,392,1863,1,0,0,0,394,1866,1,0,0,
-		0,396,1873,1,0,0,0,398,1875,1,0,0,0,400,1878,1,0,0,0,402,1881,1,0,0,0,
-		404,1883,1,0,0,0,406,1892,1,0,0,0,408,1894,1,0,0,0,410,1901,1,0,0,0,412,
-		1903,1,0,0,0,414,1905,1,0,0,0,416,1907,1,0,0,0,418,1909,1,0,0,0,420,1911,
-		1,0,0,0,422,1913,1,0,0,0,424,1915,1,0,0,0,426,1917,1,0,0,0,428,1941,1,
-		0,0,0,430,1979,1,0,0,0,432,1981,1,0,0,0,434,1983,1,0,0,0,436,1988,1,0,
-		0,0,438,1990,1,0,0,0,440,1994,1,0,0,0,442,1999,1,0,0,0,444,2003,1,0,0,
-		0,446,2020,1,0,0,0,448,2022,1,0,0,0,450,2024,1,0,0,0,452,2026,1,0,0,0,
-		454,2028,1,0,0,0,456,2030,1,0,0,0,458,2035,1,0,0,0,460,2037,1,0,0,0,462,
-		2039,1,0,0,0,464,2044,1,0,0,0,466,2054,1,0,0,0,468,2056,1,0,0,0,470,2058,
-		1,0,0,0,472,2061,1,0,0,0,474,2063,1,0,0,0,476,2065,1,0,0,0,478,2067,1,
-		0,0,0,480,2069,1,0,0,0,482,2091,1,0,0,0,484,2109,1,0,0,0,486,2111,1,0,
-		0,0,488,2114,1,0,0,0,490,2117,1,0,0,0,492,2119,1,0,0,0,494,2121,1,0,0,
-		0,496,2140,1,0,0,0,498,2142,1,0,0,0,500,2146,1,0,0,0,502,2150,1,0,0,0,
-		504,2153,1,0,0,0,506,2155,1,0,0,0,508,2166,1,0,0,0,510,2168,1,0,0,0,512,
-		2180,1,0,0,0,514,2182,1,0,0,0,516,2184,1,0,0,0,518,2186,1,0,0,0,520,2188,
-		1,0,0,0,522,2191,1,0,0,0,524,2194,1,0,0,0,526,2199,1,0,0,0,528,2201,1,
-		0,0,0,530,2203,1,0,0,0,532,2207,1,0,0,0,534,2209,1,0,0,0,536,2231,1,0,
-		0,0,538,2233,1,0,0,0,540,2235,1,0,0,0,542,2237,1,0,0,0,544,545,5,277,0,
-		0,545,1,1,0,0,0,546,547,5,279,0,0,547,3,1,0,0,0,548,549,5,280,0,0,549,
-		5,1,0,0,0,550,551,5,280,0,0,551,558,5,1,0,0,552,553,5,1,0,0,553,558,5,
-		280,0,0,554,555,5,280,0,0,555,556,5,1,0,0,556,558,5,280,0,0,557,550,1,
-		0,0,0,557,552,1,0,0,0,557,554,1,0,0,0,558,7,1,0,0,0,559,560,5,282,0,0,
-		560,9,1,0,0,0,561,562,5,283,0,0,562,11,1,0,0,0,563,564,5,289,0,0,564,13,
-		1,0,0,0,565,566,5,294,0,0,566,15,1,0,0,0,567,568,5,295,0,0,568,17,1,0,
-		0,0,569,572,3,20,10,0,570,572,3,28,14,0,571,569,1,0,0,0,571,570,1,0,0,
-		0,572,19,1,0,0,0,573,574,5,319,0,0,574,579,3,26,13,0,575,576,5,321,0,0,
-		576,578,3,26,13,0,577,575,1,0,0,0,578,581,1,0,0,0,579,577,1,0,0,0,579,
-		580,1,0,0,0,580,582,1,0,0,0,581,579,1,0,0,0,582,583,5,320,0,0,583,21,1,
-		0,0,0,584,585,5,296,0,0,585,23,1,0,0,0,586,587,5,298,0,0,587,25,1,0,0,
-		0,588,589,3,24,12,0,589,590,5,2,0,0,590,591,3,30,15,0,591,27,1,0,0,0,592,
-		593,5,317,0,0,593,598,3,30,15,0,594,595,5,321,0,0,595,597,3,30,15,0,596,
-		594,1,0,0,0,597,600,1,0,0,0,598,596,1,0,0,0,598,599,1,0,0,0,599,601,1,
-		0,0,0,600,598,1,0,0,0,601,602,5,318,0,0,602,29,1,0,0,0,603,609,3,22,11,
-		0,604,609,3,8,4,0,605,609,3,20,10,0,606,609,3,28,14,0,607,609,3,16,8,0,
-		608,603,1,0,0,0,608,604,1,0,0,0,608,605,1,0,0,0,608,606,1,0,0,0,608,607,
-		1,0,0,0,609,31,1,0,0,0,610,611,5,336,0,0,611,33,1,0,0,0,612,613,5,299,
-		0,0,613,35,1,0,0,0,614,615,5,300,0,0,615,37,1,0,0,0,616,617,5,304,0,0,
-		617,39,1,0,0,0,618,623,5,305,0,0,619,620,5,3,0,0,620,622,5,305,0,0,621,
-		619,1,0,0,0,622,625,1,0,0,0,623,624,1,0,0,0,623,621,1,0,0,0,624,41,1,0,
-		0,0,625,623,1,0,0,0,626,627,7,0,0,0,627,43,1,0,0,0,628,629,5,290,0,0,629,
-		45,1,0,0,0,630,631,5,10,0,0,631,634,5,309,0,0,632,634,5,290,0,0,633,630,
-		1,0,0,0,633,632,1,0,0,0,634,47,1,0,0,0,635,636,5,310,0,0,636,49,1,0,0,
-		0,637,638,5,336,0,0,638,51,1,0,0,0,639,640,3,18,9,0,640,53,1,0,0,0,641,
-		642,5,290,0,0,642,55,1,0,0,0,643,644,5,290,0,0,644,57,1,0,0,0,645,646,
-		5,290,0,0,646,59,1,0,0,0,647,648,5,311,0,0,648,61,1,0,0,0,649,650,5,311,
-		0,0,650,651,5,311,0,0,651,63,1,0,0,0,652,653,7,1,0,0,653,65,1,0,0,0,654,
-		721,5,297,0,0,655,657,5,15,0,0,656,658,5,346,0,0,657,656,1,0,0,0,657,658,
-		1,0,0,0,658,721,1,0,0,0,659,663,5,16,0,0,660,662,5,17,0,0,661,660,1,0,
-		0,0,662,665,1,0,0,0,663,664,1,0,0,0,663,661,1,0,0,0,664,666,1,0,0,0,665,
-		663,1,0,0,0,666,721,5,318,0,0,667,721,5,18,0,0,668,670,5,19,0,0,669,671,
-		5,346,0,0,670,669,1,0,0,0,670,671,1,0,0,0,671,721,1,0,0,0,672,676,5,20,
-		0,0,673,675,5,17,0,0,674,673,1,0,0,0,675,678,1,0,0,0,676,677,1,0,0,0,676,
-		674,1,0,0,0,677,679,1,0,0,0,678,676,1,0,0,0,679,721,5,318,0,0,680,721,
-		5,21,0,0,681,683,5,22,0,0,682,684,5,346,0,0,683,682,1,0,0,0,683,684,1,
-		0,0,0,684,721,1,0,0,0,685,689,5,23,0,0,686,688,5,17,0,0,687,686,1,0,0,
-		0,688,691,1,0,0,0,689,690,1,0,0,0,689,687,1,0,0,0,690,692,1,0,0,0,691,
-		689,1,0,0,0,692,721,5,318,0,0,693,721,5,24,0,0,694,696,5,25,0,0,695,697,
-		5,346,0,0,696,695,1,0,0,0,696,697,1,0,0,0,697,721,1,0,0,0,698,702,5,26,
-		0,0,699,701,5,17,0,0,700,699,1,0,0,0,701,704,1,0,0,0,702,703,1,0,0,0,702,
-		700,1,0,0,0,703,705,1,0,0,0,704,702,1,0,0,0,705,721,5,318,0,0,706,721,
-		5,27,0,0,707,709,5,28,0,0,708,710,5,346,0,0,709,708,1,0,0,0,709,710,1,
-		0,0,0,710,721,1,0,0,0,711,715,5,29,0,0,712,714,5,17,0,0,713,712,1,0,0,
-		0,714,717,1,0,0,0,715,716,1,0,0,0,715,713,1,0,0,0,716,718,1,0,0,0,717,
-		715,1,0,0,0,718,721,5,318,0,0,719,721,5,30,0,0,720,654,1,0,0,0,720,655,
-		1,0,0,0,720,659,1,0,0,0,720,667,1,0,0,0,720,668,1,0,0,0,720,672,1,0,0,
-		0,720,680,1,0,0,0,720,681,1,0,0,0,720,685,1,0,0,0,720,693,1,0,0,0,720,
-		694,1,0,0,0,720,698,1,0,0,0,720,706,1,0,0,0,720,707,1,0,0,0,720,711,1,
-		0,0,0,720,719,1,0,0,0,721,67,1,0,0,0,722,784,5,297,0,0,723,725,5,15,0,
-		0,724,726,5,346,0,0,725,724,1,0,0,0,725,726,1,0,0,0,726,784,1,0,0,0,727,
-		731,5,16,0,0,728,730,5,17,0,0,729,728,1,0,0,0,730,733,1,0,0,0,731,732,
-		1,0,0,0,731,729,1,0,0,0,732,734,1,0,0,0,733,731,1,0,0,0,734,784,5,318,
-		0,0,735,737,5,19,0,0,736,738,5,346,0,0,737,736,1,0,0,0,737,738,1,0,0,0,
-		738,784,1,0,0,0,739,743,5,20,0,0,740,742,5,17,0,0,741,740,1,0,0,0,742,
-		745,1,0,0,0,743,744,1,0,0,0,743,741,1,0,0,0,744,746,1,0,0,0,745,743,1,
-		0,0,0,746,784,5,318,0,0,747,749,5,22,0,0,748,750,5,346,0,0,749,748,1,0,
-		0,0,749,750,1,0,0,0,750,784,1,0,0,0,751,755,5,23,0,0,752,754,5,17,0,0,
-		753,752,1,0,0,0,754,757,1,0,0,0,755,756,1,0,0,0,755,753,1,0,0,0,756,758,
-		1,0,0,0,757,755,1,0,0,0,758,784,5,318,0,0,759,761,5,25,0,0,760,762,5,346,
-		0,0,761,760,1,0,0,0,761,762,1,0,0,0,762,784,1,0,0,0,763,767,5,26,0,0,764,
-		766,5,17,0,0,765,764,1,0,0,0,766,769,1,0,0,0,767,768,1,0,0,0,767,765,1,
-		0,0,0,768,770,1,0,0,0,769,767,1,0,0,0,770,784,5,318,0,0,771,773,5,28,0,
-		0,772,774,5,346,0,0,773,772,1,0,0,0,773,774,1,0,0,0,774,784,1,0,0,0,775,
-		779,5,29,0,0,776,778,5,17,0,0,777,776,1,0,0,0,778,781,1,0,0,0,779,780,
-		1,0,0,0,779,777,1,0,0,0,780,782,1,0,0,0,781,779,1,0,0,0,782,784,5,318,
-		0,0,783,722,1,0,0,0,783,723,1,0,0,0,783,727,1,0,0,0,783,735,1,0,0,0,783,
-		739,1,0,0,0,783,747,1,0,0,0,783,751,1,0,0,0,783,759,1,0,0,0,783,763,1,
-		0,0,0,783,771,1,0,0,0,783,775,1,0,0,0,784,69,1,0,0,0,785,852,5,297,0,0,
-		786,788,5,15,0,0,787,789,5,346,0,0,788,787,1,0,0,0,788,789,1,0,0,0,789,
-		852,1,0,0,0,790,794,5,16,0,0,791,793,5,17,0,0,792,791,1,0,0,0,793,796,
-		1,0,0,0,794,795,1,0,0,0,794,792,1,0,0,0,795,797,1,0,0,0,796,794,1,0,0,
-		0,797,852,5,318,0,0,798,852,5,18,0,0,799,801,5,19,0,0,800,802,5,346,0,
-		0,801,800,1,0,0,0,801,802,1,0,0,0,802,852,1,0,0,0,803,807,5,20,0,0,804,
-		806,5,17,0,0,805,804,1,0,0,0,806,809,1,0,0,0,807,808,1,0,0,0,807,805,1,
-		0,0,0,808,810,1,0,0,0,809,807,1,0,0,0,810,852,5,318,0,0,811,852,5,21,0,
-		0,812,814,5,22,0,0,813,815,5,346,0,0,814,813,1,0,0,0,814,815,1,0,0,0,815,
-		852,1,0,0,0,816,820,5,23,0,0,817,819,5,17,0,0,818,817,1,0,0,0,819,822,
-		1,0,0,0,820,821,1,0,0,0,820,818,1,0,0,0,821,823,1,0,0,0,822,820,1,0,0,
-		0,823,852,5,318,0,0,824,852,5,24,0,0,825,827,5,25,0,0,826,828,5,346,0,
-		0,827,826,1,0,0,0,827,828,1,0,0,0,828,852,1,0,0,0,829,833,5,26,0,0,830,
-		832,5,17,0,0,831,830,1,0,0,0,832,835,1,0,0,0,833,834,1,0,0,0,833,831,1,
-		0,0,0,834,836,1,0,0,0,835,833,1,0,0,0,836,852,5,318,0,0,837,852,5,27,0,
-		0,838,840,5,28,0,0,839,841,5,346,0,0,840,839,1,0,0,0,840,841,1,0,0,0,841,
-		852,1,0,0,0,842,846,5,29,0,0,843,845,5,17,0,0,844,843,1,0,0,0,845,848,
-		1,0,0,0,846,847,1,0,0,0,846,844,1,0,0,0,847,849,1,0,0,0,848,846,1,0,0,
-		0,849,852,5,318,0,0,850,852,5,30,0,0,851,785,1,0,0,0,851,786,1,0,0,0,851,
-		790,1,0,0,0,851,798,1,0,0,0,851,799,1,0,0,0,851,803,1,0,0,0,851,811,1,
-		0,0,0,851,812,1,0,0,0,851,816,1,0,0,0,851,824,1,0,0,0,851,825,1,0,0,0,
-		851,829,1,0,0,0,851,837,1,0,0,0,851,838,1,0,0,0,851,842,1,0,0,0,851,850,
-		1,0,0,0,852,71,1,0,0,0,853,919,3,74,37,0,854,919,3,84,42,0,855,919,3,96,
-		48,0,856,919,3,112,56,0,857,919,3,116,58,0,858,919,3,128,64,0,859,919,
-		3,136,68,0,860,919,3,164,82,0,861,919,3,174,87,0,862,919,3,178,89,0,863,
-		919,3,180,90,0,864,919,3,184,92,0,865,919,3,198,99,0,866,919,3,204,102,
-		0,867,919,3,240,120,0,868,919,3,250,125,0,869,919,3,254,127,0,870,919,
-		3,258,129,0,871,919,3,264,132,0,872,919,3,266,133,0,873,919,3,268,134,
-		0,874,919,3,274,137,0,875,919,3,276,138,0,876,919,3,280,140,0,877,919,
-		3,294,147,0,878,919,3,298,149,0,879,919,3,302,151,0,880,919,3,304,152,
-		0,881,919,3,308,154,0,882,919,3,316,158,0,883,919,3,330,165,0,884,919,
-		3,334,167,0,885,919,3,338,169,0,886,919,3,354,177,0,887,919,3,370,185,
-		0,888,919,3,380,190,0,889,919,3,384,192,0,890,919,3,390,195,0,891,919,
-		3,392,196,0,892,919,3,394,197,0,893,919,3,398,199,0,894,919,3,400,200,
-		0,895,919,3,408,204,0,896,919,3,432,216,0,897,919,3,434,217,0,898,919,
-		3,438,219,0,899,919,3,440,220,0,900,919,3,442,221,0,901,919,3,444,222,
-		0,902,919,3,456,228,0,903,919,3,462,231,0,904,919,3,464,232,0,905,919,
-		3,470,235,0,906,919,3,486,243,0,907,919,3,488,244,0,908,919,3,498,249,
-		0,909,919,3,500,250,0,910,919,3,502,251,0,911,919,3,510,255,0,912,919,
-		3,520,260,0,913,919,3,522,261,0,914,919,3,524,262,0,915,919,3,530,265,
-		0,916,919,3,534,267,0,917,919,3,542,271,0,918,853,1,0,0,0,918,854,1,0,
-		0,0,918,855,1,0,0,0,918,856,1,0,0,0,918,857,1,0,0,0,918,858,1,0,0,0,918,
-		859,1,0,0,0,918,860,1,0,0,0,918,861,1,0,0,0,918,862,1,0,0,0,918,863,1,
-		0,0,0,918,864,1,0,0,0,918,865,1,0,0,0,918,866,1,0,0,0,918,867,1,0,0,0,
-		918,868,1,0,0,0,918,869,1,0,0,0,918,870,1,0,0,0,918,871,1,0,0,0,918,872,
-		1,0,0,0,918,873,1,0,0,0,918,874,1,0,0,0,918,875,1,0,0,0,918,876,1,0,0,
-		0,918,877,1,0,0,0,918,878,1,0,0,0,918,879,1,0,0,0,918,880,1,0,0,0,918,
-		881,1,0,0,0,918,882,1,0,0,0,918,883,1,0,0,0,918,884,1,0,0,0,918,885,1,
-		0,0,0,918,886,1,0,0,0,918,887,1,0,0,0,918,888,1,0,0,0,918,889,1,0,0,0,
-		918,890,1,0,0,0,918,891,1,0,0,0,918,892,1,0,0,0,918,893,1,0,0,0,918,894,
-		1,0,0,0,918,895,1,0,0,0,918,896,1,0,0,0,918,897,1,0,0,0,918,898,1,0,0,
-		0,918,899,1,0,0,0,918,900,1,0,0,0,918,901,1,0,0,0,918,902,1,0,0,0,918,
-		903,1,0,0,0,918,904,1,0,0,0,918,905,1,0,0,0,918,906,1,0,0,0,918,907,1,
-		0,0,0,918,908,1,0,0,0,918,909,1,0,0,0,918,910,1,0,0,0,918,911,1,0,0,0,
-		918,912,1,0,0,0,918,913,1,0,0,0,918,914,1,0,0,0,918,915,1,0,0,0,918,916,
-		1,0,0,0,918,917,1,0,0,0,919,73,1,0,0,0,920,921,5,31,0,0,921,922,3,76,38,
-		0,922,923,3,68,34,0,923,924,3,82,41,0,924,75,1,0,0,0,925,926,7,2,0,0,926,
-		77,1,0,0,0,927,928,5,290,0,0,928,79,1,0,0,0,929,930,5,304,0,0,930,81,1,
-		0,0,0,931,937,5,34,0,0,932,933,5,35,0,0,933,934,3,80,40,0,934,935,3,78,
-		39,0,935,937,1,0,0,0,936,931,1,0,0,0,936,932,1,0,0,0,937,945,1,0,0,0,938,
-		939,5,36,0,0,939,945,3,80,40,0,940,941,5,37,0,0,941,945,3,80,40,0,942,
-		943,5,38,0,0,943,945,3,80,40,0,944,936,1,0,0,0,944,938,1,0,0,0,944,940,
-		1,0,0,0,944,942,1,0,0,0,945,83,1,0,0,0,946,947,5,39,0,0,947,948,3,68,34,
-		0,948,949,3,2,1,0,949,950,3,86,43,0,950,85,1,0,0,0,951,952,5,40,0,0,952,
-		953,3,88,44,0,953,954,3,8,4,0,954,960,1,0,0,0,955,956,5,41,0,0,956,960,
-		3,8,4,0,957,958,5,42,0,0,958,960,3,92,46,0,959,951,1,0,0,0,959,955,1,0,
-		0,0,959,957,1,0,0,0,960,87,1,0,0,0,961,962,7,3,0,0,962,89,1,0,0,0,963,
-		964,5,41,0,0,964,91,1,0,0,0,965,966,5,44,0,0,966,967,3,34,17,0,967,968,
-		5,17,0,0,968,969,3,36,18,0,969,970,5,17,0,0,970,971,3,8,4,0,971,972,3,
-		94,47,0,972,981,1,0,0,0,973,974,5,45,0,0,974,981,3,34,17,0,975,976,5,46,
-		0,0,976,977,3,90,45,0,977,978,3,34,17,0,978,979,3,8,4,0,979,981,1,0,0,
-		0,980,965,1,0,0,0,980,973,1,0,0,0,980,975,1,0,0,0,981,93,1,0,0,0,982,983,
-		7,4,0,0,983,95,1,0,0,0,984,985,5,49,0,0,985,986,3,102,51,0,986,97,1,0,
-		0,0,987,988,5,348,0,0,988,99,1,0,0,0,989,990,5,348,0,0,990,101,1,0,0,0,
-		991,992,5,44,0,0,992,993,3,100,50,0,993,994,3,32,16,0,994,1007,1,0,0,0,
-		995,996,5,41,0,0,996,997,3,98,49,0,997,998,3,108,54,0,998,1007,1,0,0,0,
-		999,1007,5,50,0,0,1000,1001,5,45,0,0,1001,1007,3,98,49,0,1002,1003,5,43,
-		0,0,1003,1004,3,98,49,0,1004,1005,3,110,55,0,1005,1007,1,0,0,0,1006,991,
-		1,0,0,0,1006,995,1,0,0,0,1006,999,1,0,0,0,1006,1000,1,0,0,0,1006,1002,
-		1,0,0,0,1007,103,1,0,0,0,1008,1009,5,290,0,0,1009,105,1,0,0,0,1010,1011,
-		5,290,0,0,1011,107,1,0,0,0,1012,1013,7,5,0,0,1013,109,1,0,0,0,1014,1015,
-		5,54,0,0,1015,1029,3,106,53,0,1016,1017,5,51,0,0,1017,1029,3,4,2,0,1018,
-		1019,5,55,0,0,1019,1029,3,32,16,0,1020,1021,5,52,0,0,1021,1029,3,68,34,
-		0,1022,1023,5,56,0,0,1023,1029,3,104,52,0,1024,1025,5,46,0,0,1025,1029,
-		3,4,2,0,1026,1027,5,53,0,0,1027,1029,3,16,8,0,1028,1014,1,0,0,0,1028,1016,
-		1,0,0,0,1028,1018,1,0,0,0,1028,1020,1,0,0,0,1028,1022,1,0,0,0,1028,1024,
-		1,0,0,0,1028,1026,1,0,0,0,1029,111,1,0,0,0,1030,1031,5,57,0,0,1031,1032,
-		3,70,35,0,1032,1033,3,44,22,0,1033,1034,3,114,57,0,1034,113,1,0,0,0,1035,
-		1036,5,280,0,0,1036,115,1,0,0,0,1037,1038,5,58,0,0,1038,1039,3,118,59,
-		0,1039,1041,3,120,60,0,1040,1042,3,122,61,0,1041,1040,1,0,0,0,1041,1042,
-		1,0,0,0,1042,117,1,0,0,0,1043,1044,3,132,66,0,1044,1045,3,0,0,0,1045,1047,
-		1,0,0,0,1046,1043,1,0,0,0,1046,1047,1,0,0,0,1047,1048,1,0,0,0,1048,1049,
-		3,60,30,0,1049,119,1,0,0,0,1050,1051,3,126,63,0,1051,1052,3,0,0,0,1052,
-		1054,1,0,0,0,1053,1050,1,0,0,0,1053,1054,1,0,0,0,1054,1055,1,0,0,0,1055,
-		1056,3,60,30,0,1056,121,1,0,0,0,1057,1058,5,59,0,0,1058,1061,3,46,23,0,
-		1059,1061,7,6,0,0,1060,1057,1,0,0,0,1060,1059,1,0,0,0,1061,1063,1,0,0,
-		0,1062,1064,3,124,62,0,1063,1062,1,0,0,0,1063,1064,1,0,0,0,1064,123,1,
-		0,0,0,1065,1066,7,7,0,0,1066,125,1,0,0,0,1067,1068,5,65,0,0,1068,127,1,
-		0,0,0,1069,1070,5,66,0,0,1070,1071,3,66,33,0,1071,1072,3,8,4,0,1072,1073,
-		5,17,0,0,1073,1074,3,130,65,0,1074,1075,3,134,67,0,1075,129,1,0,0,0,1076,
-		1077,5,290,0,0,1077,131,1,0,0,0,1078,1079,5,36,0,0,1079,133,1,0,0,0,1080,
-		1081,5,67,0,0,1081,1088,3,60,30,0,1082,1083,5,68,0,0,1083,1084,3,66,33,
-		0,1084,1085,3,132,66,0,1085,1086,3,66,33,0,1086,1088,1,0,0,0,1087,1080,
-		1,0,0,0,1087,1082,1,0,0,0,1088,135,1,0,0,0,1089,1090,5,69,0,0,1090,1091,
-		3,146,73,0,1091,137,1,0,0,0,1092,1093,5,280,0,0,1093,139,1,0,0,0,1094,
-		1095,5,280,0,0,1095,141,1,0,0,0,1096,1101,5,305,0,0,1097,1098,5,3,0,0,
-		1098,1100,5,305,0,0,1099,1097,1,0,0,0,1100,1103,1,0,0,0,1101,1102,1,0,
-		0,0,1101,1099,1,0,0,0,1102,143,1,0,0,0,1103,1101,1,0,0,0,1104,1109,5,305,
-		0,0,1105,1106,5,3,0,0,1106,1108,5,305,0,0,1107,1105,1,0,0,0,1108,1111,
-		1,0,0,0,1109,1110,1,0,0,0,1109,1107,1,0,0,0,1110,145,1,0,0,0,1111,1109,
-		1,0,0,0,1112,1113,5,41,0,0,1113,1121,3,148,74,0,1114,1115,5,70,0,0,1115,
-		1121,3,150,75,0,1116,1117,5,71,0,0,1117,1121,3,160,80,0,1118,1119,5,45,
-		0,0,1119,1121,3,162,81,0,1120,1112,1,0,0,0,1120,1114,1,0,0,0,1120,1116,
-		1,0,0,0,1120,1118,1,0,0,0,1121,147,1,0,0,0,1122,1123,5,72,0,0,1123,1124,
-		3,60,30,0,1124,1125,3,144,72,0,1125,1126,3,8,4,0,1126,1138,1,0,0,0,1127,
-		1128,5,73,0,0,1128,1129,3,66,33,0,1129,1130,3,142,71,0,1130,1131,3,8,4,
-		0,1131,1138,1,0,0,0,1132,1133,5,74,0,0,1133,1134,3,58,29,0,1134,1135,3,
-		40,20,0,1135,1136,3,8,4,0,1136,1138,1,0,0,0,1137,1122,1,0,0,0,1137,1127,
-		1,0,0,0,1137,1132,1,0,0,0,1138,149,1,0,0,0,1139,1140,5,72,0,0,1140,1141,
-		3,60,30,0,1141,1142,3,50,25,0,1142,1152,1,0,0,0,1143,1144,5,73,0,0,1144,
-		1145,3,66,33,0,1145,1146,3,52,26,0,1146,1152,1,0,0,0,1147,1148,5,74,0,
-		0,1148,1149,3,56,28,0,1149,1150,3,32,16,0,1150,1152,1,0,0,0,1151,1139,
-		1,0,0,0,1151,1143,1,0,0,0,1151,1147,1,0,0,0,1152,151,1,0,0,0,1153,1154,
-		5,72,0,0,1154,1155,3,60,30,0,1155,1156,3,144,72,0,1156,1157,3,138,69,0,
-		1157,1158,3,140,70,0,1158,1172,1,0,0,0,1159,1160,5,73,0,0,1160,1161,3,
-		66,33,0,1161,1162,3,142,71,0,1162,1163,3,138,69,0,1163,1164,3,140,70,0,
-		1164,1172,1,0,0,0,1165,1166,5,74,0,0,1166,1167,3,56,28,0,1167,1168,3,40,
-		20,0,1168,1169,3,138,69,0,1169,1170,3,140,70,0,1170,1172,1,0,0,0,1171,
-		1153,1,0,0,0,1171,1159,1,0,0,0,1171,1165,1,0,0,0,1172,153,1,0,0,0,1173,
-		1174,5,72,0,0,1174,1175,3,60,30,0,1175,1176,3,144,72,0,1176,1186,1,0,0,
-		0,1177,1178,5,73,0,0,1178,1179,3,66,33,0,1179,1180,3,142,71,0,1180,1186,
-		1,0,0,0,1181,1182,5,74,0,0,1182,1183,3,56,28,0,1183,1184,3,40,20,0,1184,
-		1186,1,0,0,0,1185,1173,1,0,0,0,1185,1177,1,0,0,0,1185,1181,1,0,0,0,1186,
-		155,1,0,0,0,1187,1188,5,36,0,0,1188,1194,3,154,77,0,1189,1190,5,75,0,0,
-		1190,1194,3,152,76,0,1191,1192,5,46,0,0,1192,1194,3,32,16,0,1193,1187,
-		1,0,0,0,1193,1189,1,0,0,0,1193,1191,1,0,0,0,1194,157,1,0,0,0,1195,1196,
-		5,76,0,0,1196,1208,3,156,78,0,1197,1198,5,77,0,0,1198,1199,3,4,2,0,1199,
-		1200,3,156,78,0,1200,1208,1,0,0,0,1201,1202,5,70,0,0,1202,1208,3,156,78,
-		0,1203,1204,5,78,0,0,1204,1208,3,156,78,0,1205,1206,5,43,0,0,1206,1208,
-		3,156,78,0,1207,1195,1,0,0,0,1207,1197,1,0,0,0,1207,1201,1,0,0,0,1207,
-		1203,1,0,0,0,1207,1205,1,0,0,0,1208,159,1,0,0,0,1209,1210,5,72,0,0,1210,
-		1211,3,60,30,0,1211,1212,3,144,72,0,1212,1213,3,158,79,0,1213,1225,1,0,
-		0,0,1214,1215,5,73,0,0,1215,1216,3,66,33,0,1216,1217,3,142,71,0,1217,1218,
-		3,158,79,0,1218,1225,1,0,0,0,1219,1220,5,74,0,0,1220,1221,3,56,28,0,1221,
-		1222,3,40,20,0,1222,1223,3,158,79,0,1223,1225,1,0,0,0,1224,1209,1,0,0,
-		0,1224,1214,1,0,0,0,1224,1219,1,0,0,0,1225,161,1,0,0,0,1226,1227,5,72,
-		0,0,1227,1228,3,60,30,0,1228,1229,3,144,72,0,1229,1239,1,0,0,0,1230,1231,
-		5,73,0,0,1231,1232,3,66,33,0,1232,1233,3,142,71,0,1233,1239,1,0,0,0,1234,
-		1235,5,74,0,0,1235,1236,3,58,29,0,1236,1237,3,40,20,0,1237,1239,1,0,0,
-		0,1238,1226,1,0,0,0,1238,1230,1,0,0,0,1238,1234,1,0,0,0,1239,163,1,0,0,
-		0,1240,1241,5,79,0,0,1241,1242,3,172,86,0,1242,165,1,0,0,0,1243,1244,7,
-		8,0,0,1244,167,1,0,0,0,1245,1246,5,300,0,0,1246,169,1,0,0,0,1247,1248,
-		5,82,0,0,1248,1254,3,168,84,0,1249,1250,5,83,0,0,1250,1254,3,168,84,0,
-		1251,1254,5,84,0,0,1252,1254,5,85,0,0,1253,1247,1,0,0,0,1253,1249,1,0,
-		0,0,1253,1251,1,0,0,0,1253,1252,1,0,0,0,1254,171,1,0,0,0,1255,1256,5,86,
-		0,0,1256,1264,3,168,84,0,1257,1258,5,81,0,0,1258,1259,3,168,84,0,1259,
-		1260,3,170,85,0,1260,1264,1,0,0,0,1261,1262,5,50,0,0,1262,1264,3,166,83,
-		0,1263,1255,1,0,0,0,1263,1257,1,0,0,0,1263,1261,1,0,0,0,1264,173,1,0,0,
-		0,1265,1266,5,87,0,0,1266,1267,3,176,88,0,1267,175,1,0,0,0,1268,1269,5,
-		88,0,0,1269,1273,3,168,84,0,1270,1273,5,89,0,0,1271,1273,5,90,0,0,1272,
-		1268,1,0,0,0,1272,1270,1,0,0,0,1272,1271,1,0,0,0,1273,177,1,0,0,0,1274,
-		1275,5,91,0,0,1275,1276,3,64,32,0,1276,179,1,0,0,0,1277,1278,5,92,0,0,
-		1278,1279,3,182,91,0,1279,181,1,0,0,0,1280,1281,7,9,0,0,1281,183,1,0,0,
-		0,1282,1283,5,96,0,0,1283,1284,3,186,93,0,1284,185,1,0,0,0,1285,1286,5,
-		57,0,0,1286,1287,3,70,35,0,1287,1288,3,188,94,0,1288,1302,1,0,0,0,1289,
-		1290,5,97,0,0,1290,1291,3,68,34,0,1291,1292,3,188,94,0,1292,1293,3,190,
-		95,0,1293,1300,1,0,0,0,1294,1295,5,98,0,0,1295,1296,5,17,0,0,1296,1297,
-		3,194,97,0,1297,1298,3,196,98,0,1298,1300,1,0,0,0,1299,1289,1,0,0,0,1299,
-		1294,1,0,0,0,1300,1302,1,0,0,0,1301,1285,1,0,0,0,1301,1299,1,0,0,0,1302,
-		187,1,0,0,0,1303,1304,5,293,0,0,1304,189,1,0,0,0,1305,1306,5,280,0,0,1306,
-		191,1,0,0,0,1307,1308,5,280,0,0,1308,193,1,0,0,0,1309,1310,5,280,0,0,1310,
-		195,1,0,0,0,1311,1312,5,295,0,0,1312,197,1,0,0,0,1313,1314,5,99,0,0,1314,
-		1315,3,68,34,0,1315,1316,3,202,101,0,1316,1317,3,200,100,0,1317,199,1,
-		0,0,0,1318,1319,5,280,0,0,1319,201,1,0,0,0,1320,1321,5,349,0,0,1321,203,
-		1,0,0,0,1322,1323,5,100,0,0,1323,1324,3,238,119,0,1324,205,1,0,0,0,1325,
-		1326,7,10,0,0,1326,207,1,0,0,0,1327,1328,5,350,0,0,1328,209,1,0,0,0,1329,
-		1330,5,103,0,0,1330,211,1,0,0,0,1331,1332,5,74,0,0,1332,213,1,0,0,0,1333,
-		1334,7,11,0,0,1334,215,1,0,0,0,1335,1336,7,12,0,0,1336,217,1,0,0,0,1337,
-		1338,5,72,0,0,1338,1339,3,60,30,0,1339,1340,3,40,20,0,1340,1341,3,238,
-		119,0,1341,1354,1,0,0,0,1342,1343,5,73,0,0,1343,1344,3,66,33,0,1344,1345,
-		3,40,20,0,1345,1346,3,238,119,0,1346,1354,1,0,0,0,1347,1348,5,74,0,0,1348,
-		1349,3,56,28,0,1349,1350,5,17,0,0,1350,1351,3,40,20,0,1351,1352,3,238,
-		119,0,1352,1354,1,0,0,0,1353,1337,1,0,0,0,1353,1342,1,0,0,0,1353,1347,
-		1,0,0,0,1354,219,1,0,0,0,1355,1356,5,105,0,0,1356,1357,3,60,30,0,1357,
-		1358,3,14,7,0,1358,1359,3,238,119,0,1359,1397,1,0,0,0,1360,1361,5,72,0,
-		0,1361,1362,3,60,30,0,1362,1363,3,46,23,0,1363,1364,3,238,119,0,1364,1397,
-		1,0,0,0,1365,1366,5,106,0,0,1366,1367,3,60,30,0,1367,1368,3,60,30,0,1368,
-		1369,3,60,30,0,1369,1370,3,214,107,0,1370,1371,3,238,119,0,1371,1397,1,
-		0,0,0,1372,1373,5,69,0,0,1373,1397,3,218,109,0,1374,1375,5,107,0,0,1375,
-		1376,3,0,0,0,1376,1377,3,238,119,0,1377,1397,1,0,0,0,1378,1379,5,73,0,
-		0,1379,1380,3,68,34,0,1380,1381,3,238,119,0,1381,1397,1,0,0,0,1382,1383,
-		5,108,0,0,1383,1384,3,60,30,0,1384,1385,3,238,119,0,1385,1397,1,0,0,0,
-		1386,1387,5,109,0,0,1387,1388,3,222,111,0,1388,1389,3,238,119,0,1389,1397,
-		1,0,0,0,1390,1391,5,110,0,0,1391,1392,3,66,33,0,1392,1393,3,54,27,0,1393,
-		1394,3,224,112,0,1394,1395,3,238,119,0,1395,1397,1,0,0,0,1396,1355,1,0,
-		0,0,1396,1360,1,0,0,0,1396,1365,1,0,0,0,1396,1372,1,0,0,0,1396,1374,1,
-		0,0,0,1396,1378,1,0,0,0,1396,1382,1,0,0,0,1396,1386,1,0,0,0,1396,1390,
-		1,0,0,0,1397,221,1,0,0,0,1398,1399,5,315,0,0,1399,223,1,0,0,0,1400,1401,
-		7,13,0,0,1401,1402,3,66,33,0,1402,1403,3,54,27,0,1403,1410,1,0,0,0,1404,
-		1405,5,114,0,0,1405,1408,3,4,2,0,1406,1408,3,6,3,0,1407,1404,1,0,0,0,1407,
-		1406,1,0,0,0,1408,1410,1,0,0,0,1409,1400,1,0,0,0,1409,1407,1,0,0,0,1410,
-		225,1,0,0,0,1411,1412,7,14,0,0,1412,227,1,0,0,0,1413,1414,7,15,0,0,1414,
-		229,1,0,0,0,1415,1416,5,103,0,0,1416,1420,3,68,34,0,1417,1418,5,127,0,
-		0,1418,1420,3,228,114,0,1419,1415,1,0,0,0,1419,1417,1,0,0,0,1420,231,1,
-		0,0,0,1421,1422,5,72,0,0,1422,1423,3,60,30,0,1423,1424,3,40,20,0,1424,
-		1425,3,42,21,0,1425,1426,3,8,4,0,1426,1449,1,0,0,0,1427,1428,5,49,0,0,
-		1428,1429,3,98,49,0,1429,1430,3,216,108,0,1430,1449,1,0,0,0,1431,1432,
-		5,73,0,0,1432,1433,3,66,33,0,1433,1434,3,40,20,0,1434,1435,3,42,21,0,1435,
-		1436,3,8,4,0,1436,1449,1,0,0,0,1437,1438,5,110,0,0,1438,1439,3,68,34,0,
-		1439,1440,3,54,27,0,1440,1449,1,0,0,0,1441,1442,5,74,0,0,1442,1443,3,56,
-		28,0,1443,1444,5,17,0,0,1444,1445,3,40,20,0,1445,1446,3,42,21,0,1446,1447,
-		3,8,4,0,1447,1449,1,0,0,0,1448,1421,1,0,0,0,1448,1427,1,0,0,0,1448,1431,
-		1,0,0,0,1448,1437,1,0,0,0,1448,1441,1,0,0,0,1449,233,1,0,0,0,1450,1451,
-		7,16,0,0,1451,1452,3,232,116,0,1452,235,1,0,0,0,1453,1454,3,60,30,0,1454,
-		1455,3,238,119,0,1455,1462,1,0,0,0,1456,1457,5,73,0,0,1457,1458,3,68,34,
-		0,1458,1459,3,206,103,0,1459,1460,3,238,119,0,1460,1462,1,0,0,0,1461,1453,
-		1,0,0,0,1461,1456,1,0,0,0,1462,237,1,0,0,0,1463,1464,5,130,0,0,1464,1465,
-		3,208,104,0,1465,1466,3,238,119,0,1466,1514,1,0,0,0,1467,1468,5,131,0,
-		0,1468,1469,3,206,103,0,1469,1470,3,238,119,0,1470,1514,1,0,0,0,1471,1472,
-		7,17,0,0,1472,1473,3,68,34,0,1473,1474,3,238,119,0,1474,1514,1,0,0,0,1475,
-		1476,5,132,0,0,1476,1477,3,236,118,0,1477,1478,3,238,119,0,1478,1514,1,
-		0,0,0,1479,1480,7,18,0,0,1480,1481,3,220,110,0,1481,1482,3,238,119,0,1482,
-		1514,1,0,0,0,1483,1484,5,135,0,0,1484,1485,3,0,0,0,1485,1486,3,238,119,
-		0,1486,1514,1,0,0,0,1487,1488,5,136,0,0,1488,1489,3,226,113,0,1489,1490,
-		3,238,119,0,1490,1514,1,0,0,0,1491,1494,5,137,0,0,1492,1495,3,60,30,0,
-		1493,1495,3,230,115,0,1494,1492,1,0,0,0,1494,1493,1,0,0,0,1495,1496,1,
-		0,0,0,1496,1497,3,238,119,0,1497,1514,1,0,0,0,1498,1499,5,138,0,0,1499,
-		1500,3,210,105,0,1500,1501,3,68,34,0,1501,1502,3,238,119,0,1502,1514,1,
-		0,0,0,1503,1504,5,139,0,0,1504,1514,3,72,36,0,1505,1506,5,140,0,0,1506,
-		1507,3,234,117,0,1507,1508,3,238,119,0,1508,1514,1,0,0,0,1509,1510,5,141,
-		0,0,1510,1511,3,48,24,0,1511,1512,3,238,119,0,1512,1514,1,0,0,0,1513,1463,
-		1,0,0,0,1513,1467,1,0,0,0,1513,1471,1,0,0,0,1513,1475,1,0,0,0,1513,1479,
-		1,0,0,0,1513,1483,1,0,0,0,1513,1487,1,0,0,0,1513,1491,1,0,0,0,1513,1498,
-		1,0,0,0,1513,1503,1,0,0,0,1513,1505,1,0,0,0,1513,1509,1,0,0,0,1514,239,
-		1,0,0,0,1515,1516,5,142,0,0,1516,1517,3,248,124,0,1517,241,1,0,0,0,1518,
-		1519,5,143,0,0,1519,243,1,0,0,0,1520,1521,5,280,0,0,1521,245,1,0,0,0,1522,
-		1523,7,19,0,0,1523,247,1,0,0,0,1524,1525,7,20,0,0,1525,1526,3,68,34,0,
-		1526,1527,3,244,122,0,1527,1528,5,17,0,0,1528,1529,3,246,123,0,1529,1535,
-		1,0,0,0,1530,1531,5,143,0,0,1531,1532,3,66,33,0,1532,1533,3,246,123,0,
-		1533,1535,1,0,0,0,1534,1524,1,0,0,0,1534,1530,1,0,0,0,1535,249,1,0,0,0,
-		1536,1537,5,146,0,0,1537,1538,3,60,30,0,1538,1539,3,60,30,0,1539,1540,
-		3,46,23,0,1540,1541,3,252,126,0,1541,251,1,0,0,0,1542,1546,7,21,0,0,1543,
-		1544,5,61,0,0,1544,1546,3,46,23,0,1545,1542,1,0,0,0,1545,1543,1,0,0,0,
-		1546,253,1,0,0,0,1547,1548,5,151,0,0,1548,1549,3,60,30,0,1549,1550,3,60,
-		30,0,1550,1551,3,14,7,0,1551,1552,3,256,128,0,1552,255,1,0,0,0,1553,1554,
-		5,61,0,0,1554,1555,3,14,7,0,1555,257,1,0,0,0,1556,1557,5,152,0,0,1557,
-		1558,3,262,131,0,1558,259,1,0,0,0,1559,1560,3,62,31,0,1560,1561,3,62,31,
-		0,1561,1564,1,0,0,0,1562,1564,5,104,0,0,1563,1559,1,0,0,0,1563,1562,1,
-		0,0,0,1564,261,1,0,0,0,1565,1566,5,44,0,0,1566,1567,3,62,31,0,1567,1568,
-		3,62,31,0,1568,1574,1,0,0,0,1569,1570,5,143,0,0,1570,1574,3,62,31,0,1571,
-		1572,5,45,0,0,1572,1574,3,260,130,0,1573,1565,1,0,0,0,1573,1569,1,0,0,
-		0,1573,1571,1,0,0,0,1574,263,1,0,0,0,1575,1576,5,88,0,0,1576,1577,3,402,
-		201,0,1577,265,1,0,0,0,1578,1579,5,153,0,0,1579,1580,3,64,32,0,1580,1581,
-		3,70,35,0,1581,267,1,0,0,0,1582,1583,5,154,0,0,1583,1584,3,270,135,0,1584,
-		1585,3,272,136,0,1585,269,1,0,0,0,1586,1587,5,351,0,0,1587,271,1,0,0,0,
-		1588,1589,7,22,0,0,1589,273,1,0,0,0,1590,1591,5,97,0,0,1591,1592,3,68,
-		34,0,1592,1593,3,44,22,0,1593,1594,3,4,2,0,1594,275,1,0,0,0,1595,1596,
-		5,155,0,0,1596,1597,3,278,139,0,1597,277,1,0,0,0,1598,1599,5,352,0,0,1599,
-		279,1,0,0,0,1600,1601,5,156,0,0,1601,1602,5,17,0,0,1602,1603,3,286,143,
-		0,1603,281,1,0,0,0,1604,1605,5,353,0,0,1605,283,1,0,0,0,1606,1607,5,304,
-		0,0,1607,285,1,0,0,0,1608,1609,5,71,0,0,1609,1613,3,290,145,0,1610,1611,
-		5,61,0,0,1611,1613,3,292,146,0,1612,1608,1,0,0,0,1612,1610,1,0,0,0,1613,
-		287,1,0,0,0,1614,1615,5,36,0,0,1615,1621,3,290,145,0,1616,1617,5,157,0,
-		0,1617,1618,3,44,22,0,1618,1619,3,4,2,0,1619,1621,1,0,0,0,1620,1614,1,
-		0,0,0,1620,1616,1,0,0,0,1621,289,1,0,0,0,1622,1623,5,72,0,0,1623,1624,
-		3,60,30,0,1624,1625,3,282,141,0,1625,1626,3,284,142,0,1626,1633,1,0,0,
-		0,1627,1628,5,73,0,0,1628,1629,3,68,34,0,1629,1630,3,282,141,0,1630,1631,
-		3,284,142,0,1631,1633,1,0,0,0,1632,1622,1,0,0,0,1632,1627,1,0,0,0,1633,
-		291,1,0,0,0,1634,1635,5,72,0,0,1635,1636,3,60,30,0,1636,1637,3,282,141,
-		0,1637,1638,3,288,144,0,1638,1645,1,0,0,0,1639,1640,5,73,0,0,1640,1641,
-		3,68,34,0,1641,1642,3,282,141,0,1642,1643,3,288,144,0,1643,1645,1,0,0,
-		0,1644,1634,1,0,0,0,1644,1639,1,0,0,0,1645,293,1,0,0,0,1646,1647,5,158,
-		0,0,1647,1648,3,296,148,0,1648,295,1,0,0,0,1649,1650,7,23,0,0,1650,297,
-		1,0,0,0,1651,1652,5,159,0,0,1652,1653,3,68,34,0,1653,1654,3,300,150,0,
-		1654,299,1,0,0,0,1655,1657,5,278,0,0,1656,1655,1,0,0,0,1657,1658,1,0,0,
-		0,1658,1656,1,0,0,0,1658,1659,1,0,0,0,1659,301,1,0,0,0,1660,1661,5,160,
-		0,0,1661,1662,3,68,34,0,1662,303,1,0,0,0,1663,1664,5,50,0,0,1664,1665,
-		3,306,153,0,1665,305,1,0,0,0,1666,1667,5,161,0,0,1667,307,1,0,0,0,1668,
-		1669,5,162,0,0,1669,1670,3,314,157,0,1670,309,1,0,0,0,1671,1672,5,290,
-		0,0,1672,311,1,0,0,0,1673,1674,5,290,0,0,1674,313,1,0,0,0,1675,1676,5,
-		105,0,0,1676,1682,3,14,7,0,1677,1678,5,163,0,0,1678,1682,3,310,155,0,1679,
-		1680,5,164,0,0,1680,1682,3,312,156,0,1681,1675,1,0,0,0,1681,1677,1,0,0,
-		0,1681,1679,1,0,0,0,1682,315,1,0,0,0,1683,1684,5,165,0,0,1684,1685,3,324,
-		162,0,1685,317,1,0,0,0,1686,1687,5,304,0,0,1687,319,1,0,0,0,1688,1695,
-		5,166,0,0,1689,1695,5,167,0,0,1690,1692,5,10,0,0,1691,1690,1,0,0,0,1691,
-		1692,1,0,0,0,1692,1693,1,0,0,0,1693,1695,5,290,0,0,1694,1688,1,0,0,0,1694,
-		1689,1,0,0,0,1694,1691,1,0,0,0,1695,321,1,0,0,0,1696,1697,5,72,0,0,1697,
-		323,1,0,0,0,1698,1699,5,97,0,0,1699,1700,3,68,34,0,1700,1701,3,328,164,
-		0,1701,1713,1,0,0,0,1702,1703,5,77,0,0,1703,1704,3,60,30,0,1704,1705,3,
-		328,164,0,1705,1713,1,0,0,0,1706,1707,5,61,0,0,1707,1713,3,326,163,0,1708,
-		1709,5,168,0,0,1709,1710,3,60,30,0,1710,1711,3,328,164,0,1711,1713,1,0,
-		0,0,1712,1698,1,0,0,0,1712,1702,1,0,0,0,1712,1706,1,0,0,0,1712,1708,1,
-		0,0,0,1713,325,1,0,0,0,1714,1715,5,72,0,0,1715,1716,3,60,30,0,1716,1717,
-		3,282,141,0,1717,1718,3,328,164,0,1718,1725,1,0,0,0,1719,1720,5,73,0,0,
-		1720,1721,3,68,34,0,1721,1722,3,282,141,0,1722,1723,3,328,164,0,1723,1725,
-		1,0,0,0,1724,1714,1,0,0,0,1724,1719,1,0,0,0,1725,327,1,0,0,0,1726,1727,
-		5,169,0,0,1727,1728,3,318,159,0,1728,1729,3,60,30,0,1729,1730,3,320,160,
-		0,1730,1740,1,0,0,0,1731,1732,5,160,0,0,1732,1740,3,66,33,0,1733,1734,
-		5,165,0,0,1734,1740,3,318,159,0,1735,1736,5,170,0,0,1736,1737,3,60,30,
-		0,1737,1738,3,320,160,0,1738,1740,1,0,0,0,1739,1726,1,0,0,0,1739,1731,
-		1,0,0,0,1739,1733,1,0,0,0,1739,1735,1,0,0,0,1740,329,1,0,0,0,1741,1742,
-		5,171,0,0,1742,1743,3,332,166,0,1743,331,1,0,0,0,1744,1745,5,278,0,0,1745,
-		333,1,0,0,0,1746,1747,5,172,0,0,1747,1748,3,68,34,0,1748,1749,3,336,168,
-		0,1749,335,1,0,0,0,1750,1752,5,278,0,0,1751,1750,1,0,0,0,1752,1753,1,0,
-		0,0,1753,1751,1,0,0,0,1753,1754,1,0,0,0,1754,337,1,0,0,0,1755,1756,5,173,
-		0,0,1756,1757,3,352,176,0,1757,1758,3,60,30,0,1758,1759,5,17,0,0,1759,
-		1760,3,60,30,0,1760,1761,5,17,0,0,1761,1762,3,344,172,0,1762,1763,3,348,
-		174,0,1763,1764,3,70,35,0,1764,339,1,0,0,0,1765,1766,5,283,0,0,1766,1767,
-		5,17,0,0,1767,341,1,0,0,0,1768,1769,5,283,0,0,1769,1770,5,17,0,0,1770,
-		343,1,0,0,0,1771,1772,5,282,0,0,1772,1773,5,284,0,0,1773,1774,5,17,0,0,
-		1774,345,1,0,0,0,1775,1776,5,354,0,0,1776,347,1,0,0,0,1777,1778,7,24,0,
-		0,1778,349,1,0,0,0,1779,1780,5,282,0,0,1780,1781,5,17,0,0,1781,1782,5,
-		282,0,0,1782,1783,5,17,0,0,1783,1784,5,282,0,0,1784,351,1,0,0,0,1785,1786,
-		5,290,0,0,1786,353,1,0,0,0,1787,1788,5,174,0,0,1788,1789,3,364,182,0,1789,
-		355,1,0,0,0,1790,1791,5,290,0,0,1791,357,1,0,0,0,1792,1793,5,290,0,0,1793,
-		359,1,0,0,0,1794,1795,5,304,0,0,1795,361,1,0,0,0,1796,1797,5,304,0,0,1797,
-		363,1,0,0,0,1798,1799,5,175,0,0,1799,1800,3,356,178,0,1800,1801,3,60,30,
-		0,1801,1822,1,0,0,0,1802,1803,5,176,0,0,1803,1804,3,360,180,0,1804,1805,
-		3,358,179,0,1805,1806,3,4,2,0,1806,1807,5,17,0,0,1807,1808,3,60,30,0,1808,
-		1822,1,0,0,0,1809,1810,5,164,0,0,1810,1811,3,312,156,0,1811,1812,3,60,
-		30,0,1812,1822,1,0,0,0,1813,1814,5,177,0,0,1814,1815,3,362,181,0,1815,
-		1816,3,60,30,0,1816,1817,3,368,184,0,1817,1818,3,8,4,0,1818,1819,5,17,
-		0,0,1819,1820,3,4,2,0,1820,1822,1,0,0,0,1821,1798,1,0,0,0,1821,1802,1,
-		0,0,0,1821,1809,1,0,0,0,1821,1813,1,0,0,0,1822,365,1,0,0,0,1823,1824,7,
-		25,0,0,1824,367,1,0,0,0,1825,1826,7,26,0,0,1826,1827,3,366,183,0,1827,
-		369,1,0,0,0,1828,1829,5,184,0,0,1829,1830,3,458,229,0,1830,1831,3,378,
-		189,0,1831,1832,3,68,34,0,1832,1833,3,60,30,0,1833,1834,3,372,186,0,1834,
-		1835,3,374,187,0,1835,1836,3,376,188,0,1836,371,1,0,0,0,1837,1838,5,282,
-		0,0,1838,373,1,0,0,0,1839,1840,5,282,0,0,1840,375,1,0,0,0,1841,1842,5,
-		282,0,0,1842,377,1,0,0,0,1843,1844,7,27,0,0,1844,379,1,0,0,0,1845,1846,
-		5,194,0,0,1846,1847,3,16,8,0,1847,1848,3,64,32,0,1848,1849,3,382,191,0,
-		1849,381,1,0,0,0,1850,1851,5,280,0,0,1851,383,1,0,0,0,1852,1853,5,195,
-		0,0,1853,1854,3,388,194,0,1854,1855,3,68,34,0,1855,1856,3,386,193,0,1856,
-		385,1,0,0,0,1857,1858,5,304,0,0,1858,387,1,0,0,0,1859,1860,7,28,0,0,1860,
-		389,1,0,0,0,1861,1862,5,197,0,0,1862,391,1,0,0,0,1863,1864,5,198,0,0,1864,
-		1865,3,4,2,0,1865,393,1,0,0,0,1866,1867,5,199,0,0,1867,1868,3,66,33,0,
-		1868,1869,3,396,198,0,1869,395,1,0,0,0,1870,1874,5,200,0,0,1871,1872,5,
-		201,0,0,1872,1874,3,66,33,0,1873,1870,1,0,0,0,1873,1871,1,0,0,0,1874,397,
-		1,0,0,0,1875,1876,5,202,0,0,1876,1877,3,336,168,0,1877,399,1,0,0,0,1878,
-		1879,5,203,0,0,1879,1880,3,406,203,0,1880,401,1,0,0,0,1881,1882,5,304,
-		0,0,1882,403,1,0,0,0,1883,1884,7,29,0,0,1884,405,1,0,0,0,1885,1886,5,57,
-		0,0,1886,1893,3,402,201,0,1887,1888,5,88,0,0,1888,1889,3,402,201,0,1889,
-		1890,3,8,4,0,1890,1891,3,404,202,0,1891,1893,1,0,0,0,1892,1885,1,0,0,0,
-		1892,1887,1,0,0,0,1893,407,1,0,0,0,1894,1895,5,204,0,0,1895,1896,3,410,
-		205,0,1896,409,1,0,0,0,1897,1898,5,205,0,0,1898,1902,3,428,214,0,1899,
-		1900,5,52,0,0,1900,1902,3,430,215,0,1901,1897,1,0,0,0,1901,1899,1,0,0,
-		0,1902,411,1,0,0,0,1903,1904,5,301,0,0,1904,413,1,0,0,0,1905,1906,5,302,
-		0,0,1906,415,1,0,0,0,1907,1908,5,280,0,0,1908,417,1,0,0,0,1909,1910,7,
-		30,0,0,1910,419,1,0,0,0,1911,1912,7,31,0,0,1912,421,1,0,0,0,1913,1914,
-		5,291,0,0,1914,423,1,0,0,0,1915,1916,5,215,0,0,1916,425,1,0,0,0,1917,1918,
-		5,216,0,0,1918,427,1,0,0,0,1919,1920,5,44,0,0,1920,1921,3,412,206,0,1921,
-		1922,3,414,207,0,1922,1923,3,32,16,0,1923,1942,1,0,0,0,1924,1942,5,50,
-		0,0,1925,1926,5,71,0,0,1926,1927,3,54,27,0,1927,1928,3,424,212,0,1928,
-		1929,3,32,16,0,1929,1934,1,0,0,0,1930,1931,3,426,213,0,1931,1932,3,418,
-		209,0,1932,1934,1,0,0,0,1933,1925,1,0,0,0,1933,1930,1,0,0,0,1934,1942,
-		1,0,0,0,1935,1936,5,45,0,0,1936,1942,3,54,27,0,1937,1938,5,217,0,0,1938,
-		1939,3,422,211,0,1939,1940,3,54,27,0,1940,1942,1,0,0,0,1941,1919,1,0,0,
-		0,1941,1924,1,0,0,0,1941,1933,1,0,0,0,1941,1935,1,0,0,0,1941,1937,1,0,
-		0,0,1942,429,1,0,0,0,1943,1944,5,44,0,0,1944,1945,3,68,34,0,1945,1946,
-		3,54,27,0,1946,1947,3,416,208,0,1947,1980,1,0,0,0,1948,1949,5,81,0,0,1949,
-		1950,3,68,34,0,1950,1951,3,54,27,0,1951,1980,1,0,0,0,1952,1953,5,41,0,
-		0,1953,1954,3,66,33,0,1954,1955,3,412,206,0,1955,1980,1,0,0,0,1956,1957,
-		5,50,0,0,1957,1980,3,66,33,0,1958,1959,5,218,0,0,1959,1960,3,68,34,0,1960,
-		1961,3,54,27,0,1961,1962,3,420,210,0,1962,1963,3,68,34,0,1963,1964,3,54,
-		27,0,1964,1980,1,0,0,0,1965,1966,5,45,0,0,1966,1967,3,68,34,0,1967,1968,
-		3,412,206,0,1968,1969,3,416,208,0,1969,1980,1,0,0,0,1970,1971,5,219,0,
-		0,1971,1972,3,68,34,0,1972,1973,3,54,27,0,1973,1980,1,0,0,0,1974,1975,
-		5,43,0,0,1975,1976,3,68,34,0,1976,1977,3,54,27,0,1977,1978,3,416,208,0,
-		1978,1980,1,0,0,0,1979,1943,1,0,0,0,1979,1948,1,0,0,0,1979,1952,1,0,0,
-		0,1979,1956,1,0,0,0,1979,1958,1,0,0,0,1979,1965,1,0,0,0,1979,1970,1,0,
-		0,0,1979,1974,1,0,0,0,1980,431,1,0,0,0,1981,1982,5,220,0,0,1982,433,1,
-		0,0,0,1983,1984,5,221,0,0,1984,1985,3,60,30,0,1985,1986,3,46,23,0,1986,
-		1987,3,436,218,0,1987,435,1,0,0,0,1988,1989,7,32,0,0,1989,437,1,0,0,0,
-		1990,1991,5,222,0,0,1991,1992,3,60,30,0,1992,1993,3,8,4,0,1993,439,1,0,
-		0,0,1994,1995,5,223,0,0,1995,1996,3,68,34,0,1996,1997,3,60,30,0,1997,1998,
-		3,8,4,0,1998,441,1,0,0,0,1999,2000,5,224,0,0,2000,2001,3,66,33,0,2001,
-		2002,3,66,33,0,2002,443,1,0,0,0,2003,2004,5,225,0,0,2004,2005,3,62,31,
-		0,2005,2006,3,448,224,0,2006,2007,5,17,0,0,2007,2008,3,450,225,0,2008,
-		2009,3,446,223,0,2009,445,1,0,0,0,2010,2014,5,226,0,0,2011,2012,5,227,
-		0,0,2012,2014,3,68,34,0,2013,2010,1,0,0,0,2013,2011,1,0,0,0,2014,2021,
-		1,0,0,0,2015,2016,5,228,0,0,2016,2017,3,4,2,0,2017,2018,3,16,8,0,2018,
-		2019,3,68,34,0,2019,2021,1,0,0,0,2020,2013,1,0,0,0,2020,2015,1,0,0,0,2021,
-		447,1,0,0,0,2022,2023,5,282,0,0,2023,449,1,0,0,0,2024,2025,5,282,0,0,2025,
-		451,1,0,0,0,2026,2027,5,295,0,0,2027,453,1,0,0,0,2028,2029,5,228,0,0,2029,
-		455,1,0,0,0,2030,2031,5,229,0,0,2031,2032,3,68,34,0,2032,2033,3,460,230,
-		0,2033,2034,3,458,229,0,2034,457,1,0,0,0,2035,2036,5,292,0,0,2036,459,
-		1,0,0,0,2037,2038,7,33,0,0,2038,461,1,0,0,0,2039,2040,5,141,0,0,2040,2041,
-		3,48,24,0,2041,2042,3,60,30,0,2042,2043,3,32,16,0,2043,463,1,0,0,0,2044,
-		2045,5,231,0,0,2045,2046,3,68,34,0,2046,2047,3,466,233,0,2047,465,1,0,
-		0,0,2048,2052,5,44,0,0,2049,2050,5,45,0,0,2050,2052,3,468,234,0,2051,2048,
-		1,0,0,0,2051,2049,1,0,0,0,2052,2055,1,0,0,0,2053,2055,5,50,0,0,2054,2051,
-		1,0,0,0,2054,2053,1,0,0,0,2055,467,1,0,0,0,2056,2057,5,290,0,0,2057,469,
-		1,0,0,0,2058,2059,5,232,0,0,2059,2060,3,482,241,0,2060,471,1,0,0,0,2061,
-		2062,5,355,0,0,2062,473,1,0,0,0,2063,2064,5,355,0,0,2064,475,1,0,0,0,2065,
-		2066,7,34,0,0,2066,477,1,0,0,0,2067,2068,5,290,0,0,2068,479,1,0,0,0,2069,
-		2070,7,35,0,0,2070,481,1,0,0,0,2071,2072,5,44,0,0,2072,2073,3,474,237,
-		0,2073,2074,3,32,16,0,2074,2092,1,0,0,0,2075,2076,5,239,0,0,2076,2092,
-		3,472,236,0,2077,2078,5,240,0,0,2078,2079,3,472,236,0,2079,2080,3,70,35,
-		0,2080,2092,1,0,0,0,2081,2082,5,241,0,0,2082,2092,3,68,34,0,2083,2084,
-		5,50,0,0,2084,2092,3,472,236,0,2085,2086,5,71,0,0,2086,2087,3,472,236,
-		0,2087,2088,3,484,242,0,2088,2092,1,0,0,0,2089,2090,5,45,0,0,2090,2092,
-		3,472,236,0,2091,2071,1,0,0,0,2091,2075,1,0,0,0,2091,2077,1,0,0,0,2091,
-		2081,1,0,0,0,2091,2083,1,0,0,0,2091,2085,1,0,0,0,2091,2089,1,0,0,0,2092,
-		483,1,0,0,0,2093,2094,5,242,0,0,2094,2110,3,476,238,0,2095,2096,5,54,0,
-		0,2096,2110,3,478,239,0,2097,2098,5,243,0,0,2098,2110,3,480,240,0,2099,
-		2100,5,244,0,0,2100,2110,3,32,16,0,2101,2102,5,245,0,0,2102,2110,3,16,
-		8,0,2103,2104,5,246,0,0,2104,2110,3,480,240,0,2105,2106,7,36,0,0,2106,
-		2110,3,32,16,0,2107,2108,5,249,0,0,2108,2110,3,16,8,0,2109,2093,1,0,0,
-		0,2109,2095,1,0,0,0,2109,2097,1,0,0,0,2109,2099,1,0,0,0,2109,2101,1,0,
-		0,0,2109,2103,1,0,0,0,2109,2105,1,0,0,0,2109,2107,1,0,0,0,2110,485,1,0,
-		0,0,2111,2112,5,250,0,0,2112,2113,3,336,168,0,2113,487,1,0,0,0,2114,2115,
-		5,251,0,0,2115,2116,3,496,248,0,2116,489,1,0,0,0,2117,2118,7,10,0,0,2118,
-		491,1,0,0,0,2119,2120,5,132,0,0,2120,493,1,0,0,0,2121,2122,5,73,0,0,2122,
-		495,1,0,0,0,2123,2141,3,60,30,0,2124,2138,3,68,34,0,2125,2139,3,66,33,
-		0,2126,2127,3,60,30,0,2127,2133,3,492,246,0,2128,2129,3,494,247,0,2129,
-		2130,3,66,33,0,2130,2131,3,490,245,0,2131,2134,1,0,0,0,2132,2134,3,60,
-		30,0,2133,2128,1,0,0,0,2133,2132,1,0,0,0,2134,2137,1,0,0,0,2135,2137,3,
-		62,31,0,2136,2126,1,0,0,0,2136,2135,1,0,0,0,2137,2139,1,0,0,0,2138,2125,
-		1,0,0,0,2138,2136,1,0,0,0,2139,2141,1,0,0,0,2140,2123,1,0,0,0,2140,2124,
-		1,0,0,0,2141,497,1,0,0,0,2142,2143,5,252,0,0,2143,2144,3,68,34,0,2144,
-		2145,3,336,168,0,2145,499,1,0,0,0,2146,2147,5,253,0,0,2147,2148,3,68,34,
-		0,2148,2149,3,32,16,0,2149,501,1,0,0,0,2150,2151,5,254,0,0,2151,2152,3,
-		508,254,0,2152,503,1,0,0,0,2153,2154,7,37,0,0,2154,505,1,0,0,0,2155,2156,
-		7,38,0,0,2156,507,1,0,0,0,2157,2158,5,44,0,0,2158,2167,3,12,6,0,2159,2160,
-		5,143,0,0,2160,2167,3,504,252,0,2161,2162,5,43,0,0,2162,2165,3,506,253,
-		0,2163,2165,3,12,6,0,2164,2161,1,0,0,0,2164,2163,1,0,0,0,2165,2167,1,0,
-		0,0,2166,2157,1,0,0,0,2166,2159,1,0,0,0,2166,2164,1,0,0,0,2167,509,1,0,
-		0,0,2168,2169,5,261,0,0,2169,2170,3,68,34,0,2170,2171,3,512,256,0,2171,
-		511,1,0,0,0,2172,2173,7,39,0,0,2173,2181,3,32,16,0,2174,2181,7,40,0,0,
-		2175,2176,5,264,0,0,2176,2177,3,514,257,0,2177,2178,3,516,258,0,2178,2179,
-		3,518,259,0,2179,2181,1,0,0,0,2180,2172,1,0,0,0,2180,2174,1,0,0,0,2180,
-		2175,1,0,0,0,2181,513,1,0,0,0,2182,2183,5,280,0,0,2183,515,1,0,0,0,2184,
-		2185,5,280,0,0,2185,517,1,0,0,0,2186,2187,5,280,0,0,2187,519,1,0,0,0,2188,
-		2189,5,265,0,0,2189,2190,3,336,168,0,2190,521,1,0,0,0,2191,2192,5,266,
-		0,0,2192,2193,3,496,248,0,2193,523,1,0,0,0,2194,2195,5,267,0,0,2195,2196,
-		3,526,263,0,2196,2197,3,528,264,0,2197,2198,3,416,208,0,2198,525,1,0,0,
-		0,2199,2200,5,290,0,0,2200,527,1,0,0,0,2201,2202,7,20,0,0,2202,529,1,0,
-		0,0,2203,2204,5,193,0,0,2204,2205,3,532,266,0,2205,2206,3,8,4,0,2206,531,
-		1,0,0,0,2207,2208,7,41,0,0,2208,533,1,0,0,0,2209,2210,5,270,0,0,2210,2211,
-		3,536,268,0,2211,535,1,0,0,0,2212,2213,5,44,0,0,2213,2214,3,8,4,0,2214,
-		2215,3,4,2,0,2215,2232,1,0,0,0,2216,2217,5,271,0,0,2217,2232,3,62,31,0,
-		2218,2219,5,66,0,0,2219,2220,3,540,270,0,2220,2221,3,8,4,0,2221,2232,1,
-		0,0,0,2222,2232,5,41,0,0,2223,2224,5,43,0,0,2224,2225,3,8,4,0,2225,2226,
-		3,4,2,0,2226,2232,1,0,0,0,2227,2228,5,272,0,0,2228,2229,3,538,269,0,2229,
-		2230,3,4,2,0,2230,2232,1,0,0,0,2231,2212,1,0,0,0,2231,2216,1,0,0,0,2231,
-		2218,1,0,0,0,2231,2222,1,0,0,0,2231,2223,1,0,0,0,2231,2227,1,0,0,0,2232,
-		537,1,0,0,0,2233,2234,7,42,0,0,2234,539,1,0,0,0,2235,2236,7,43,0,0,2236,
-		541,1,0,0,0,2237,2238,5,276,0,0,2238,2239,3,248,124,0,2239,543,1,0,0,0,
-		115,557,571,579,598,608,623,633,657,663,670,676,683,689,696,702,709,715,
-		720,725,731,737,743,749,755,761,767,773,779,783,788,794,801,807,814,820,
-		827,833,840,846,851,918,936,944,959,980,1006,1028,1041,1046,1053,1060,
-		1063,1087,1101,1109,1120,1137,1151,1171,1185,1193,1207,1224,1238,1253,
-		1263,1272,1299,1301,1353,1396,1407,1409,1419,1448,1461,1494,1513,1534,
-		1545,1563,1573,1612,1620,1632,1644,1658,1681,1691,1694,1712,1724,1739,
-		1753,1821,1873,1892,1901,1933,1941,1979,2013,2020,2051,2054,2091,2109,
-		2133,2136,2138,2140,2164,2166,2180,2231
+		2,267,7,267,2,268,7,268,2,269,7,269,2,270,7,270,2,271,7,271,2,272,7,272,
+		2,273,7,273,2,274,7,274,2,275,7,275,2,276,7,276,2,277,7,277,2,278,7,278,
+		2,279,7,279,2,280,7,280,2,281,7,281,2,282,7,282,2,283,7,283,2,284,7,284,
+		2,285,7,285,2,286,7,286,2,287,7,287,2,288,7,288,2,289,7,289,2,290,7,290,
+		2,291,7,291,2,292,7,292,2,293,7,293,2,294,7,294,2,295,7,295,2,296,7,296,
+		2,297,7,297,2,298,7,298,2,299,7,299,2,300,7,300,2,301,7,301,2,302,7,302,
+		2,303,7,303,2,304,7,304,2,305,7,305,2,306,7,306,2,307,7,307,2,308,7,308,
+		2,309,7,309,2,310,7,310,2,311,7,311,2,312,7,312,2,313,7,313,2,314,7,314,
+		2,315,7,315,2,316,7,316,2,317,7,317,2,318,7,318,2,319,7,319,2,320,7,320,
+		2,321,7,321,2,322,7,322,2,323,7,323,2,324,7,324,2,325,7,325,2,326,7,326,
+		2,327,7,327,2,328,7,328,2,329,7,329,2,330,7,330,2,331,7,331,2,332,7,332,
+		2,333,7,333,2,334,7,334,2,335,7,335,2,336,7,336,2,337,7,337,2,338,7,338,
+		2,339,7,339,2,340,7,340,2,341,7,341,2,342,7,342,2,343,7,343,2,344,7,344,
+		2,345,7,345,2,346,7,346,2,347,7,347,2,348,7,348,2,349,7,349,2,350,7,350,
+		2,351,7,351,2,352,7,352,2,353,7,353,2,354,7,354,2,355,7,355,2,356,7,356,
+		2,357,7,357,2,358,7,358,2,359,7,359,2,360,7,360,2,361,7,361,2,362,7,362,
+		2,363,7,363,2,364,7,364,2,365,7,365,2,366,7,366,2,367,7,367,2,368,7,368,
+		2,369,7,369,2,370,7,370,2,371,7,371,2,372,7,372,2,373,7,373,2,374,7,374,
+		2,375,7,375,2,376,7,376,2,377,7,377,2,378,7,378,2,379,7,379,2,380,7,380,
+		2,381,7,381,2,382,7,382,2,383,7,383,2,384,7,384,2,385,7,385,2,386,7,386,
+		2,387,7,387,2,388,7,388,2,389,7,389,2,390,7,390,2,391,7,391,2,392,7,392,
+		2,393,7,393,2,394,7,394,2,395,7,395,2,396,7,396,2,397,7,397,2,398,7,398,
+		2,399,7,399,2,400,7,400,2,401,7,401,2,402,7,402,2,403,7,403,2,404,7,404,
+		2,405,7,405,2,406,7,406,2,407,7,407,2,408,7,408,2,409,7,409,2,410,7,410,
+		2,411,7,411,2,412,7,412,2,413,7,413,2,414,7,414,2,415,7,415,2,416,7,416,
+		2,417,7,417,2,418,7,418,2,419,7,419,2,420,7,420,2,421,7,421,2,422,7,422,
+		2,423,7,423,2,424,7,424,2,425,7,425,2,426,7,426,2,427,7,427,2,428,7,428,
+		2,429,7,429,2,430,7,430,2,431,7,431,2,432,7,432,2,433,7,433,2,434,7,434,
+		2,435,7,435,2,436,7,436,2,437,7,437,2,438,7,438,2,439,7,439,2,440,7,440,
+		2,441,7,441,2,442,7,442,2,443,7,443,2,444,7,444,2,445,7,445,2,446,7,446,
+		2,447,7,447,2,448,7,448,2,449,7,449,2,450,7,450,2,451,7,451,2,452,7,452,
+		2,453,7,453,2,454,7,454,2,455,7,455,2,456,7,456,2,457,7,457,2,458,7,458,
+		2,459,7,459,2,460,7,460,2,461,7,461,2,462,7,462,2,463,7,463,2,464,7,464,
+		2,465,7,465,2,466,7,466,2,467,7,467,2,468,7,468,2,469,7,469,2,470,7,470,
+		2,471,7,471,2,472,7,472,2,473,7,473,2,474,7,474,2,475,7,475,2,476,7,476,
+		2,477,7,477,2,478,7,478,2,479,7,479,2,480,7,480,2,481,7,481,2,482,7,482,
+		2,483,7,483,2,484,7,484,2,485,7,485,2,486,7,486,2,487,7,487,2,488,7,488,
+		2,489,7,489,2,490,7,490,2,491,7,491,2,492,7,492,2,493,7,493,2,494,7,494,
+		2,495,7,495,2,496,7,496,2,497,7,497,2,498,7,498,2,499,7,499,2,500,7,500,
+		2,501,7,501,2,502,7,502,2,503,7,503,2,504,7,504,2,505,7,505,2,506,7,506,
+		2,507,7,507,2,508,7,508,2,509,7,509,2,510,7,510,2,511,7,511,2,512,7,512,
+		2,513,7,513,2,514,7,514,2,515,7,515,2,516,7,516,2,517,7,517,2,518,7,518,
+		2,519,7,519,2,520,7,520,2,521,7,521,2,522,7,522,2,523,7,523,2,524,7,524,
+		2,525,7,525,2,526,7,526,2,527,7,527,2,528,7,528,2,529,7,529,2,530,7,530,
+		2,531,7,531,2,532,7,532,2,533,7,533,2,534,7,534,2,535,7,535,2,536,7,536,
+		2,537,7,537,2,538,7,538,2,539,7,539,2,540,7,540,2,541,7,541,1,0,1,0,1,
+		1,1,1,1,2,1,2,1,3,1,3,1,4,1,4,1,5,1,5,1,6,1,6,1,7,1,7,1,8,1,8,1,9,1,9,
+		1,10,1,10,1,11,1,11,1,12,1,12,1,13,1,13,1,14,1,14,1,15,1,15,1,16,1,16,
+		1,17,1,17,1,18,1,18,1,19,1,19,1,19,1,19,1,19,5,19,1128,8,19,10,19,12,19,
+		1131,9,19,1,19,1,19,3,19,1135,8,19,1,20,1,20,1,20,1,20,1,20,5,20,1142,
+		8,20,10,20,12,20,1145,9,20,1,20,1,20,3,20,1149,8,20,1,21,1,21,1,22,1,22,
+		1,22,1,22,1,23,1,23,1,24,1,24,1,25,1,25,1,26,1,26,1,26,1,26,1,26,1,26,
+		1,26,3,26,1170,8,26,1,27,1,27,1,27,3,27,1175,8,27,1,27,3,27,1178,8,27,
+		1,28,1,28,1,28,1,28,5,28,1184,8,28,10,28,12,28,1187,9,28,1,28,1,28,1,29,
+		1,29,1,29,1,29,5,29,1195,8,29,10,29,12,29,1198,9,29,1,29,1,29,1,30,3,30,
+		1203,8,30,1,30,1,30,1,30,1,31,1,31,1,31,1,31,1,31,3,31,1213,8,31,1,32,
+		1,32,1,32,5,32,1218,8,32,10,32,12,32,1221,9,32,1,33,1,33,1,34,1,34,1,35,
+		1,35,1,35,1,35,1,36,1,36,1,36,1,36,1,36,1,36,5,36,1237,8,36,10,36,12,36,
+		1240,9,36,1,36,1,36,3,36,1244,8,36,3,36,1246,8,36,1,37,1,37,1,38,1,38,
+		1,39,1,39,1,40,1,40,1,41,1,41,1,42,1,42,1,43,1,43,1,44,1,44,1,45,1,45,
+		1,45,1,45,1,46,1,46,1,46,1,47,1,47,1,48,1,48,1,49,1,49,1,50,1,50,1,51,
+		1,51,1,52,1,52,1,53,1,53,1,54,1,54,1,55,1,55,1,56,1,56,1,57,1,57,1,58,
+		1,58,1,58,1,58,3,58,1297,8,58,3,58,1299,8,58,1,59,1,59,1,60,1,60,1,60,
+		1,60,1,60,5,60,1308,8,60,10,60,12,60,1311,9,60,3,60,1313,8,60,1,60,1,60,
+		3,60,1317,8,60,1,61,1,61,1,62,1,62,1,62,3,62,1324,8,62,1,62,1,62,3,62,
+		1328,8,62,1,63,1,63,1,63,1,63,1,63,5,63,1335,8,63,10,63,12,63,1338,9,63,
+		3,63,1340,8,63,1,63,1,63,3,63,1344,8,63,1,64,1,64,1,64,1,64,1,64,1,64,
+		1,64,1,64,1,64,1,64,1,64,1,64,3,64,1358,8,64,1,64,1,64,1,64,1,64,1,64,
+		1,64,1,64,1,64,3,64,1368,8,64,1,64,1,64,1,64,1,64,3,64,1374,8,64,1,64,
+		1,64,1,64,3,64,1379,8,64,1,64,1,64,1,64,1,64,1,64,1,64,1,64,1,64,1,64,
+		1,64,1,64,1,64,1,64,1,64,1,64,1,64,1,64,3,64,1398,8,64,1,64,3,64,1401,
+		8,64,1,64,1,64,1,64,3,64,1406,8,64,1,64,1,64,1,64,1,64,1,64,3,64,1413,
+		8,64,1,64,1,64,1,64,1,64,1,64,3,64,1420,8,64,1,64,1,64,1,64,1,64,1,64,
+		3,64,1427,8,64,1,64,3,64,1430,8,64,1,64,1,64,1,64,3,64,1435,8,64,3,64,
+		1437,8,64,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,
+		1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,
+		1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,
+		1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,
+		1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,1,65,3,65,1504,8,65,
+		1,66,1,66,1,67,1,67,1,68,1,68,1,69,1,69,1,70,1,70,1,71,1,71,1,72,1,72,
+		1,73,1,73,1,74,1,74,1,75,1,75,1,76,1,76,1,77,1,77,1,78,1,78,1,79,1,79,
+		1,80,1,80,1,81,1,81,1,82,1,82,1,83,1,83,1,84,1,84,1,85,1,85,1,86,1,86,
+		1,87,1,87,1,88,1,88,1,89,1,89,1,90,1,90,1,91,1,91,1,92,1,92,1,93,1,93,
+		1,94,1,94,1,95,1,95,1,96,1,96,1,97,1,97,1,98,1,98,1,99,1,99,1,100,1,100,
+		1,101,1,101,1,102,1,102,1,103,1,103,1,104,1,104,1,105,1,105,1,106,1,106,
+		1,107,1,107,1,108,1,108,1,109,1,109,1,110,1,110,1,111,1,111,1,112,1,112,
+		1,113,1,113,1,114,1,114,1,115,1,115,1,116,1,116,1,117,1,117,1,118,1,118,
+		1,119,1,119,1,120,1,120,1,121,1,121,1,122,1,122,1,123,1,123,1,124,1,124,
+		1,125,1,125,1,126,1,126,1,127,1,127,1,128,1,128,1,129,1,129,1,130,1,130,
+		1,131,1,131,1,132,1,132,1,133,1,133,1,134,1,134,1,135,1,135,1,136,1,136,
+		1,137,1,137,1,138,1,138,1,139,1,139,1,140,1,140,1,141,1,141,1,142,1,142,
+		1,143,1,143,1,144,1,144,1,145,1,145,1,146,1,146,1,147,1,147,1,148,1,148,
+		1,149,1,149,1,150,1,150,1,151,1,151,1,152,1,152,1,153,1,153,1,154,1,154,
+		1,155,1,155,1,156,1,156,1,157,1,157,1,158,1,158,1,159,1,159,1,160,1,160,
+		1,161,1,161,1,162,1,162,1,163,1,163,1,164,1,164,1,165,1,165,1,166,1,166,
+		1,167,1,167,1,168,1,168,1,169,1,169,1,170,1,170,1,171,1,171,1,172,1,172,
+		1,173,1,173,1,174,1,174,1,175,1,175,1,176,1,176,1,177,1,177,1,178,1,178,
+		1,179,1,179,1,180,1,180,1,181,1,181,1,182,1,182,1,183,1,183,1,184,1,184,
+		1,185,1,185,1,186,1,186,1,187,1,187,1,188,1,188,1,189,1,189,1,190,1,190,
+		1,191,1,191,1,192,1,192,1,193,1,193,1,194,1,194,1,195,1,195,1,196,1,196,
+		1,197,1,197,1,198,1,198,1,199,1,199,1,200,1,200,1,201,1,201,1,202,1,202,
+		1,203,1,203,1,204,1,204,1,205,1,205,1,206,1,206,1,207,1,207,1,208,1,208,
+		1,209,1,209,1,210,1,210,1,211,1,211,1,212,1,212,1,213,1,213,1,214,1,214,
+		1,215,1,215,1,216,1,216,1,217,1,217,1,218,1,218,1,219,1,219,1,220,1,220,
+		1,221,1,221,1,222,1,222,1,223,1,223,1,224,1,224,1,225,1,225,1,226,1,226,
+		1,227,1,227,1,228,1,228,1,229,1,229,1,230,1,230,1,231,1,231,1,232,1,232,
+		1,233,1,233,1,234,1,234,1,235,1,235,1,236,1,236,1,237,1,237,1,238,1,238,
+		1,239,1,239,1,240,1,240,1,241,1,241,1,242,1,242,1,243,1,243,1,244,1,244,
+		1,245,1,245,1,246,1,246,1,247,1,247,1,248,1,248,1,249,1,249,1,250,1,250,
+		1,251,1,251,1,252,1,252,1,253,1,253,1,254,1,254,1,255,1,255,1,256,1,256,
+		1,257,1,257,1,258,1,258,1,259,1,259,1,260,1,260,1,261,1,261,1,262,1,262,
+		1,263,1,263,1,264,1,264,1,265,1,265,1,266,1,266,1,267,1,267,1,268,1,268,
+		1,269,1,269,1,270,1,270,1,271,1,271,1,272,1,272,1,273,1,273,1,274,1,274,
+		1,275,1,275,1,276,1,276,1,277,1,277,1,278,1,278,1,279,1,279,1,280,1,280,
+		1,281,1,281,1,282,1,282,1,283,1,283,1,284,1,284,1,285,1,285,1,286,1,286,
+		1,287,1,287,1,288,1,288,1,289,1,289,1,290,1,290,1,291,1,291,1,292,1,292,
+		1,293,1,293,1,294,1,294,1,295,1,295,1,296,1,296,1,297,1,297,1,298,1,298,
+		1,299,1,299,1,300,1,300,1,301,1,301,1,302,1,302,1,303,1,303,1,304,1,304,
+		1,305,1,305,1,306,1,306,1,307,1,307,1,308,1,308,1,309,1,309,1,310,1,310,
+		1,311,1,311,1,312,1,312,1,313,1,313,1,314,1,314,1,315,1,315,1,316,1,316,
+		1,317,1,317,1,318,1,318,1,319,1,319,1,320,1,320,1,321,1,321,1,321,3,321,
+		2019,8,321,1,321,1,321,1,321,1,322,1,322,1,323,1,323,1,323,1,323,1,323,
+		1,323,1,323,1,323,1,323,3,323,2035,8,323,1,324,1,324,1,324,1,324,1,324,
+		5,324,2042,8,324,10,324,12,324,2045,9,324,1,324,1,324,3,324,2049,8,324,
+		1,325,1,325,1,325,1,325,3,325,2055,8,325,1,325,1,325,1,325,1,325,1,325,
+		1,325,1,325,1,325,1,325,3,325,2066,8,325,1,326,1,326,1,326,1,326,1,326,
+		1,327,1,327,1,327,1,327,1,327,1,327,1,327,1,327,1,327,1,327,3,327,2083,
+		8,327,1,328,1,328,3,328,2087,8,328,1,329,1,329,1,329,1,329,1,329,1,329,
+		1,329,1,329,1,329,1,329,1,329,1,329,1,329,1,329,3,329,2103,8,329,1,330,
+		1,330,1,330,3,330,2108,8,330,1,331,1,331,1,331,1,332,1,332,1,333,1,333,
+		1,333,1,333,1,333,1,333,1,333,1,333,1,333,1,333,1,333,1,333,1,333,1,333,
+		1,333,1,333,3,333,2131,8,333,1,334,1,334,1,335,1,335,1,336,1,336,1,336,
+		1,336,3,336,2141,8,336,1,337,1,337,1,337,1,337,1,337,1,337,1,337,1,337,
+		1,337,1,337,1,337,1,337,1,337,1,337,1,337,1,337,1,337,1,337,1,337,1,337,
+		1,337,3,337,2164,8,337,1,338,1,338,1,338,3,338,2169,8,338,1,338,3,338,
+		2172,8,338,3,338,2174,8,338,1,339,1,339,1,340,1,340,1,340,1,340,3,340,
+		2182,8,340,1,341,1,341,1,341,3,341,2187,8,341,1,341,1,341,1,341,1,342,
+		1,342,1,342,1,342,1,343,1,343,1,343,1,343,1,344,1,344,1,344,3,344,2203,
+		8,344,1,344,1,344,1,345,1,345,1,345,1,345,1,346,1,346,1,346,1,346,1,346,
+		3,346,2216,8,346,3,346,2218,8,346,1,346,3,346,2221,8,346,1,347,1,347,1,
+		347,3,347,2226,8,347,1,348,1,348,1,348,1,348,1,348,1,348,1,349,1,349,1,
+		350,1,350,1,350,1,350,1,350,1,350,1,350,1,350,3,350,2244,8,350,1,351,1,
+		351,1,351,1,352,1,352,1,353,1,353,1,354,1,354,1,354,1,354,1,354,1,354,
+		1,354,1,354,1,354,1,354,1,354,1,354,3,354,2265,8,354,1,355,1,355,1,355,
+		1,355,3,355,2271,8,355,1,355,1,355,1,355,1,355,3,355,2277,8,355,1,355,
+		1,355,1,355,1,355,3,355,2283,8,355,3,355,2285,8,355,1,356,1,356,1,356,
+		1,356,1,356,1,356,1,356,1,356,1,356,1,356,1,356,1,356,3,356,2299,8,356,
+		1,357,1,357,1,357,1,357,1,357,3,357,2306,8,357,1,357,1,357,1,357,1,357,
+		1,357,1,357,1,357,1,357,1,357,1,357,1,357,1,357,3,357,2320,8,357,1,358,
+		1,358,1,358,1,358,1,358,1,358,1,358,1,358,1,358,1,358,1,358,1,358,3,358,
+		2334,8,358,1,359,1,359,1,359,1,359,1,359,1,359,1,359,1,359,1,359,3,359,
+		2345,8,359,1,360,1,360,1,360,1,360,1,360,1,360,1,360,1,360,1,360,1,360,
+		1,360,1,360,1,360,1,360,1,360,1,360,3,360,2363,8,360,1,361,1,361,1,361,
+		1,361,1,361,1,361,1,361,1,361,1,361,1,361,1,361,1,361,1,361,1,361,1,361,
+		3,361,2380,8,361,1,362,1,362,1,362,1,362,1,362,1,362,1,362,1,362,1,362,
+		1,362,1,362,1,362,3,362,2394,8,362,1,363,1,363,1,363,1,364,1,364,3,364,
+		2401,8,364,1,365,1,365,1,366,1,366,1,366,1,366,1,366,1,366,1,366,1,366,
+		3,366,2413,8,366,1,367,1,367,1,367,1,367,1,367,1,367,1,367,1,367,1,367,
+		1,367,3,367,2425,8,367,1,368,1,368,1,368,1,369,1,369,1,369,1,369,1,369,
+		3,369,2435,8,369,1,370,1,370,1,370,1,371,1,371,1,371,1,372,1,372,1,372,
+		1,372,3,372,2447,8,372,1,373,1,373,1,373,1,374,1,374,1,374,3,374,2455,
+		8,374,3,374,2457,8,374,1,374,1,374,1,374,1,374,1,374,1,374,1,374,1,374,
+		1,374,3,374,2468,8,374,3,374,2470,8,374,1,375,1,375,1,376,1,376,1,377,
+		1,377,1,378,1,378,1,379,1,379,1,380,1,380,1,380,1,380,1,380,1,381,1,381,
+		1,382,1,382,1,383,1,383,1,383,1,384,1,384,3,384,2496,8,384,1,385,1,385,
+		1,386,1,386,3,386,2502,8,386,1,387,1,387,3,387,2506,8,387,1,388,1,388,
+		1,388,1,388,1,388,1,388,1,388,1,388,1,388,1,388,1,388,1,388,3,388,2520,
+		8,388,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,
+		1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,1,389,
+		1,389,1,389,1,389,1,389,1,389,3,389,2550,8,389,1,389,1,389,1,389,1,389,
+		1,389,1,389,1,389,3,389,2559,8,389,1,390,1,390,1,390,1,390,3,390,2565,
+		8,390,1,390,1,390,1,390,1,390,1,390,1,390,1,390,3,390,2574,8,390,3,390,
+		2576,8,390,1,391,1,391,1,391,1,391,1,391,1,391,1,391,1,391,3,391,2586,
+		8,391,1,392,1,392,1,392,1,392,3,392,2592,8,392,1,393,1,393,1,393,1,393,
+		1,393,1,393,3,393,2600,8,393,1,394,1,394,1,394,1,394,1,394,1,394,1,394,
+		1,394,1,394,1,394,1,394,1,394,1,394,1,394,1,394,1,394,1,394,1,394,1,394,
+		1,394,1,394,1,394,1,394,1,394,1,394,1,394,3,394,2628,8,394,1,395,1,395,
+		3,395,2632,8,395,1,395,1,395,1,396,1,396,1,396,1,396,1,396,1,396,1,396,
+		1,396,3,396,2644,8,396,1,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,
+		1,397,1,397,3,397,2656,8,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,
+		1,397,1,397,3,397,2667,8,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,
+		1,397,1,397,1,397,1,397,1,397,1,397,1,397,3,397,2683,8,397,1,397,1,397,
+		1,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,1,397,
+		1,397,1,397,1,397,1,397,3,397,2703,8,397,1,398,1,398,1,398,1,399,1,399,
+		1,400,1,400,3,400,2712,8,400,1,401,1,401,3,401,2716,8,401,1,401,1,401,
+		1,401,1,401,1,401,1,401,1,401,1,401,3,401,2726,8,401,1,402,1,402,1,402,
+		1,402,1,402,1,402,1,403,1,403,1,403,1,403,3,403,2738,8,403,1,403,1,403,
+		1,403,3,403,2743,8,403,1,404,1,404,1,404,1,404,1,404,1,404,1,405,1,405,
+		1,405,1,406,1,406,1,406,1,407,1,407,1,407,1,407,3,407,2761,8,407,1,408,
+		1,408,1,408,1,408,1,408,1,408,1,408,1,408,1,408,1,408,3,408,2773,8,408,
+		1,409,1,409,1,409,1,410,1,410,1,410,3,410,2781,8,410,1,411,1,411,1,411,
+		1,411,1,412,1,412,1,413,1,413,1,414,1,414,1,414,1,414,1,414,1,415,1,415,
+		1,415,1,416,1,416,1,417,1,417,1,417,1,418,1,418,1,419,1,419,1,420,1,420,
+		1,420,1,420,1,420,1,420,3,420,2814,8,420,1,421,1,421,1,421,1,421,1,421,
+		1,421,1,421,3,421,2823,8,421,1,422,1,422,1,422,1,422,1,422,1,422,1,422,
+		1,422,1,422,1,422,3,422,2835,8,422,1,423,1,423,1,423,1,423,1,423,1,423,
+		1,423,1,423,1,423,1,423,3,423,2847,8,423,1,424,1,424,1,424,1,425,1,425,
+		3,425,2854,8,425,1,426,1,426,1,426,1,426,1,427,1,427,1,428,1,428,1,428,
+		1,429,1,429,1,429,1,430,1,430,1,430,1,431,1,431,1,432,1,432,1,433,1,433,
+		1,433,1,433,1,433,1,433,1,433,1,433,1,433,3,433,2884,8,433,1,434,1,434,
+		1,434,1,435,1,435,1,436,1,436,1,436,3,436,2894,8,436,1,437,1,437,1,437,
+		1,437,1,437,1,437,1,437,1,437,1,437,1,437,1,437,1,437,1,437,1,437,1,437,
+		3,437,2911,8,437,1,438,1,438,1,438,1,438,1,438,1,438,1,438,1,438,1,438,
+		1,438,3,438,2923,8,438,1,439,1,439,1,439,1,439,1,439,1,439,1,439,1,439,
+		1,439,1,439,1,439,1,439,1,439,1,439,1,439,3,439,2940,8,439,1,440,1,440,
+		1,440,1,441,1,441,1,442,1,442,1,442,1,442,1,443,1,443,1,444,1,444,1,444,
+		1,444,1,444,1,444,1,444,3,444,2960,8,444,1,444,3,444,2963,8,444,3,444,
+		2965,8,444,1,445,1,445,1,446,1,446,1,447,1,447,1,447,1,447,1,448,1,448,
+		3,448,2977,8,448,1,449,1,449,3,449,2981,8,449,1,450,1,450,1,451,1,451,
+		1,451,1,452,1,452,1,453,1,453,1,454,1,454,1,455,1,455,1,456,1,456,1,456,
+		1,456,1,456,1,456,1,456,1,456,1,456,1,456,1,456,1,456,1,456,1,456,1,456,
+		1,456,1,456,1,456,1,456,1,456,1,456,3,456,3017,8,456,1,457,1,457,1,457,
+		3,457,3022,8,457,1,458,1,458,1,458,1,458,3,458,3028,8,458,1,458,1,458,
+		1,459,1,459,1,459,1,459,1,459,1,459,1,459,1,459,1,459,1,460,1,460,1,461,
+		1,461,1,462,1,462,1,463,1,463,1,463,1,463,1,463,1,463,1,463,1,463,1,463,
+		3,463,3056,8,463,1,464,1,464,1,464,1,464,1,464,1,465,1,465,1,466,1,466,
+		1,466,1,466,1,466,1,467,1,467,1,468,1,468,3,468,3074,8,468,1,469,1,469,
+		1,470,1,470,1,470,1,471,1,471,1,471,1,471,1,472,1,472,1,472,1,472,3,472,
+		3089,8,472,1,473,1,473,1,473,1,474,1,474,1,475,1,475,1,475,1,476,1,476,
+		1,477,1,477,3,477,3103,8,477,1,478,1,478,1,478,1,478,1,478,1,478,1,478,
+		1,478,3,478,3113,8,478,1,479,1,479,1,479,1,480,1,480,1,480,1,480,1,480,
+		1,480,3,480,3124,8,480,1,481,1,481,1,482,1,482,1,483,1,483,3,483,3132,
+		8,483,1,484,1,484,1,484,1,484,1,484,1,484,1,484,1,484,1,484,3,484,3143,
+		8,484,1,485,1,485,1,486,1,486,1,486,1,486,1,486,1,486,1,486,1,486,1,486,
+		1,486,1,486,1,486,1,486,1,486,3,486,3161,8,486,1,486,1,486,1,486,1,486,
+		1,486,1,486,1,486,3,486,3170,8,486,1,487,1,487,1,487,1,487,1,487,1,487,
+		1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,
+		1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,1,487,
+		1,487,1,487,1,487,1,487,1,487,1,487,1,487,3,487,3209,8,487,1,488,1,488,
+		1,489,1,489,1,489,1,489,1,489,1,490,1,490,1,490,3,490,3221,8,490,1,491,
+		1,491,1,491,1,491,1,492,1,492,1,492,1,492,1,492,1,493,1,493,1,493,1,493,
+		1,494,1,494,1,494,1,494,1,494,1,494,1,495,1,495,1,495,1,495,1,495,1,495,
+		1,495,1,495,3,495,3250,8,495,1,496,1,496,1,497,1,497,1,498,1,498,1,499,
+		1,499,1,499,1,499,1,499,1,500,1,500,1,501,1,501,1,501,1,501,1,501,1,501,
+		1,501,1,501,1,501,1,501,1,501,3,501,3276,8,501,1,502,1,502,1,502,1,502,
+		1,502,1,503,1,503,1,503,1,503,1,504,1,504,1,504,1,504,3,504,3291,8,504,
+		1,504,3,504,3294,8,504,1,505,1,505,1,506,1,506,1,506,1,507,1,507,1,508,
+		1,508,1,509,1,509,1,509,1,509,3,509,3309,8,509,1,510,1,510,1,511,1,511,
+		1,511,1,511,3,511,3317,8,511,1,512,1,512,1,512,1,512,1,512,1,512,1,512,
+		1,512,1,512,1,512,3,512,3329,8,512,1,512,1,512,1,512,1,512,1,512,1,512,
+		1,512,1,512,1,512,1,512,1,512,1,512,1,512,3,512,3344,8,512,1,513,1,513,
+		1,513,1,513,1,513,1,513,1,513,1,513,1,513,1,513,1,513,1,513,1,513,1,513,
+		1,513,1,513,1,513,1,513,1,513,1,513,3,513,3366,8,513,1,513,1,513,1,513,
+		1,513,1,513,3,513,3373,8,513,1,514,1,514,1,514,1,515,1,515,1,516,1,516,
+		1,516,1,517,1,517,3,517,3385,8,517,1,518,1,518,1,518,1,518,1,518,1,518,
+		1,518,1,518,1,518,1,518,3,518,3397,8,518,3,518,3399,8,518,1,518,3,518,
+		3402,8,518,3,518,3404,8,518,3,518,3406,8,518,1,519,1,519,1,519,1,519,1,
+		520,1,520,1,521,1,521,1,521,1,521,1,522,1,522,1,522,1,523,1,523,1,523,
+		3,523,3424,8,523,1,524,1,524,1,524,1,524,3,524,3430,8,524,1,525,1,525,
+		1,525,1,525,1,525,1,525,1,525,1,525,1,525,1,525,3,525,3442,8,525,3,525,
+		3444,8,525,1,526,1,526,1,526,1,526,1,527,1,527,1,527,3,527,3453,8,527,
+		1,527,1,527,1,527,1,527,3,527,3459,8,527,1,527,1,527,1,527,1,527,1,527,
+		3,527,3466,8,527,1,528,1,528,1,529,1,529,1,529,1,530,1,530,1,531,1,531,
+		1,531,1,532,1,532,1,532,1,532,1,532,1,533,1,533,1,534,1,534,3,534,3487,
+		8,534,1,535,1,535,1,535,1,535,1,536,1,536,1,536,3,536,3496,8,536,1,537,
+		1,537,1,537,1,538,1,538,1,538,1,538,1,538,1,538,1,538,1,538,1,538,1,538,
+		1,538,1,538,1,538,1,538,1,538,1,538,1,538,1,538,1,538,1,538,3,538,3521,
+		8,538,1,539,1,539,3,539,3525,8,539,1,540,1,540,3,540,3529,8,540,1,541,
+		1,541,1,541,1,541,0,0,542,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,
+		34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,
+		82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,112,114,116,118,120,
+		122,124,126,128,130,132,134,136,138,140,142,144,146,148,150,152,154,156,
+		158,160,162,164,166,168,170,172,174,176,178,180,182,184,186,188,190,192,
+		194,196,198,200,202,204,206,208,210,212,214,216,218,220,222,224,226,228,
+		230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,262,264,
+		266,268,270,272,274,276,278,280,282,284,286,288,290,292,294,296,298,300,
+		302,304,306,308,310,312,314,316,318,320,322,324,326,328,330,332,334,336,
+		338,340,342,344,346,348,350,352,354,356,358,360,362,364,366,368,370,372,
+		374,376,378,380,382,384,386,388,390,392,394,396,398,400,402,404,406,408,
+		410,412,414,416,418,420,422,424,426,428,430,432,434,436,438,440,442,444,
+		446,448,450,452,454,456,458,460,462,464,466,468,470,472,474,476,478,480,
+		482,484,486,488,490,492,494,496,498,500,502,504,506,508,510,512,514,516,
+		518,520,522,524,526,528,530,532,534,536,538,540,542,544,546,548,550,552,
+		554,556,558,560,562,564,566,568,570,572,574,576,578,580,582,584,586,588,
+		590,592,594,596,598,600,602,604,606,608,610,612,614,616,618,620,622,624,
+		626,628,630,632,634,636,638,640,642,644,646,648,650,652,654,656,658,660,
+		662,664,666,668,670,672,674,676,678,680,682,684,686,688,690,692,694,696,
+		698,700,702,704,706,708,710,712,714,716,718,720,722,724,726,728,730,732,
+		734,736,738,740,742,744,746,748,750,752,754,756,758,760,762,764,766,768,
+		770,772,774,776,778,780,782,784,786,788,790,792,794,796,798,800,802,804,
+		806,808,810,812,814,816,818,820,822,824,826,828,830,832,834,836,838,840,
+		842,844,846,848,850,852,854,856,858,860,862,864,866,868,870,872,874,876,
+		878,880,882,884,886,888,890,892,894,896,898,900,902,904,906,908,910,912,
+		914,916,918,920,922,924,926,928,930,932,934,936,938,940,942,944,946,948,
+		950,952,954,956,958,960,962,964,966,968,970,972,974,976,978,980,982,984,
+		986,988,990,992,994,996,998,1000,1002,1004,1006,1008,1010,1012,1014,1016,
+		1018,1020,1022,1024,1026,1028,1030,1032,1034,1036,1038,1040,1042,1044,
+		1046,1048,1050,1052,1054,1056,1058,1060,1062,1064,1066,1068,1070,1072,
+		1074,1076,1078,1080,1082,0,7,2,0,289,289,294,294,2,0,291,291,294,294,2,
+		0,25,27,30,32,3,0,289,289,294,294,308,308,2,0,299,299,301,301,2,0,299,
+		299,302,302,2,0,33,33,289,289,3388,0,1084,1,0,0,0,2,1086,1,0,0,0,4,1088,
+		1,0,0,0,6,1090,1,0,0,0,8,1092,1,0,0,0,10,1094,1,0,0,0,12,1096,1,0,0,0,
+		14,1098,1,0,0,0,16,1100,1,0,0,0,18,1102,1,0,0,0,20,1104,1,0,0,0,22,1106,
+		1,0,0,0,24,1108,1,0,0,0,26,1110,1,0,0,0,28,1112,1,0,0,0,30,1114,1,0,0,
+		0,32,1116,1,0,0,0,34,1118,1,0,0,0,36,1120,1,0,0,0,38,1134,1,0,0,0,40,1148,
+		1,0,0,0,42,1150,1,0,0,0,44,1152,1,0,0,0,46,1156,1,0,0,0,48,1158,1,0,0,
+		0,50,1160,1,0,0,0,52,1169,1,0,0,0,54,1177,1,0,0,0,56,1179,1,0,0,0,58,1190,
+		1,0,0,0,60,1202,1,0,0,0,62,1212,1,0,0,0,64,1214,1,0,0,0,66,1222,1,0,0,
+		0,68,1224,1,0,0,0,70,1226,1,0,0,0,72,1245,1,0,0,0,74,1247,1,0,0,0,76,1249,
+		1,0,0,0,78,1251,1,0,0,0,80,1253,1,0,0,0,82,1255,1,0,0,0,84,1257,1,0,0,
+		0,86,1259,1,0,0,0,88,1261,1,0,0,0,90,1263,1,0,0,0,92,1267,1,0,0,0,94,1270,
+		1,0,0,0,96,1272,1,0,0,0,98,1274,1,0,0,0,100,1276,1,0,0,0,102,1278,1,0,
+		0,0,104,1280,1,0,0,0,106,1282,1,0,0,0,108,1284,1,0,0,0,110,1286,1,0,0,
+		0,112,1288,1,0,0,0,114,1290,1,0,0,0,116,1298,1,0,0,0,118,1300,1,0,0,0,
+		120,1316,1,0,0,0,122,1318,1,0,0,0,124,1320,1,0,0,0,126,1343,1,0,0,0,128,
+		1436,1,0,0,0,130,1503,1,0,0,0,132,1505,1,0,0,0,134,1507,1,0,0,0,136,1509,
+		1,0,0,0,138,1511,1,0,0,0,140,1513,1,0,0,0,142,1515,1,0,0,0,144,1517,1,
+		0,0,0,146,1519,1,0,0,0,148,1521,1,0,0,0,150,1523,1,0,0,0,152,1525,1,0,
+		0,0,154,1527,1,0,0,0,156,1529,1,0,0,0,158,1531,1,0,0,0,160,1533,1,0,0,
+		0,162,1535,1,0,0,0,164,1537,1,0,0,0,166,1539,1,0,0,0,168,1541,1,0,0,0,
+		170,1543,1,0,0,0,172,1545,1,0,0,0,174,1547,1,0,0,0,176,1549,1,0,0,0,178,
+		1551,1,0,0,0,180,1553,1,0,0,0,182,1555,1,0,0,0,184,1557,1,0,0,0,186,1559,
+		1,0,0,0,188,1561,1,0,0,0,190,1563,1,0,0,0,192,1565,1,0,0,0,194,1567,1,
+		0,0,0,196,1569,1,0,0,0,198,1571,1,0,0,0,200,1573,1,0,0,0,202,1575,1,0,
+		0,0,204,1577,1,0,0,0,206,1579,1,0,0,0,208,1581,1,0,0,0,210,1583,1,0,0,
+		0,212,1585,1,0,0,0,214,1587,1,0,0,0,216,1589,1,0,0,0,218,1591,1,0,0,0,
+		220,1593,1,0,0,0,222,1595,1,0,0,0,224,1597,1,0,0,0,226,1599,1,0,0,0,228,
+		1601,1,0,0,0,230,1603,1,0,0,0,232,1605,1,0,0,0,234,1607,1,0,0,0,236,1609,
+		1,0,0,0,238,1611,1,0,0,0,240,1613,1,0,0,0,242,1615,1,0,0,0,244,1617,1,
+		0,0,0,246,1619,1,0,0,0,248,1621,1,0,0,0,250,1623,1,0,0,0,252,1625,1,0,
+		0,0,254,1627,1,0,0,0,256,1629,1,0,0,0,258,1631,1,0,0,0,260,1633,1,0,0,
+		0,262,1635,1,0,0,0,264,1637,1,0,0,0,266,1639,1,0,0,0,268,1641,1,0,0,0,
+		270,1643,1,0,0,0,272,1645,1,0,0,0,274,1647,1,0,0,0,276,1649,1,0,0,0,278,
+		1651,1,0,0,0,280,1653,1,0,0,0,282,1655,1,0,0,0,284,1657,1,0,0,0,286,1659,
+		1,0,0,0,288,1661,1,0,0,0,290,1663,1,0,0,0,292,1665,1,0,0,0,294,1667,1,
+		0,0,0,296,1669,1,0,0,0,298,1671,1,0,0,0,300,1673,1,0,0,0,302,1675,1,0,
+		0,0,304,1677,1,0,0,0,306,1679,1,0,0,0,308,1681,1,0,0,0,310,1683,1,0,0,
+		0,312,1685,1,0,0,0,314,1687,1,0,0,0,316,1689,1,0,0,0,318,1691,1,0,0,0,
+		320,1693,1,0,0,0,322,1695,1,0,0,0,324,1697,1,0,0,0,326,1699,1,0,0,0,328,
+		1701,1,0,0,0,330,1703,1,0,0,0,332,1705,1,0,0,0,334,1707,1,0,0,0,336,1709,
+		1,0,0,0,338,1711,1,0,0,0,340,1713,1,0,0,0,342,1715,1,0,0,0,344,1717,1,
+		0,0,0,346,1719,1,0,0,0,348,1721,1,0,0,0,350,1723,1,0,0,0,352,1725,1,0,
+		0,0,354,1727,1,0,0,0,356,1729,1,0,0,0,358,1731,1,0,0,0,360,1733,1,0,0,
+		0,362,1735,1,0,0,0,364,1737,1,0,0,0,366,1739,1,0,0,0,368,1741,1,0,0,0,
+		370,1743,1,0,0,0,372,1745,1,0,0,0,374,1747,1,0,0,0,376,1749,1,0,0,0,378,
+		1751,1,0,0,0,380,1753,1,0,0,0,382,1755,1,0,0,0,384,1757,1,0,0,0,386,1759,
+		1,0,0,0,388,1761,1,0,0,0,390,1763,1,0,0,0,392,1765,1,0,0,0,394,1767,1,
+		0,0,0,396,1769,1,0,0,0,398,1771,1,0,0,0,400,1773,1,0,0,0,402,1775,1,0,
+		0,0,404,1777,1,0,0,0,406,1779,1,0,0,0,408,1781,1,0,0,0,410,1783,1,0,0,
+		0,412,1785,1,0,0,0,414,1787,1,0,0,0,416,1789,1,0,0,0,418,1791,1,0,0,0,
+		420,1793,1,0,0,0,422,1795,1,0,0,0,424,1797,1,0,0,0,426,1799,1,0,0,0,428,
+		1801,1,0,0,0,430,1803,1,0,0,0,432,1805,1,0,0,0,434,1807,1,0,0,0,436,1809,
+		1,0,0,0,438,1811,1,0,0,0,440,1813,1,0,0,0,442,1815,1,0,0,0,444,1817,1,
+		0,0,0,446,1819,1,0,0,0,448,1821,1,0,0,0,450,1823,1,0,0,0,452,1825,1,0,
+		0,0,454,1827,1,0,0,0,456,1829,1,0,0,0,458,1831,1,0,0,0,460,1833,1,0,0,
+		0,462,1835,1,0,0,0,464,1837,1,0,0,0,466,1839,1,0,0,0,468,1841,1,0,0,0,
+		470,1843,1,0,0,0,472,1845,1,0,0,0,474,1847,1,0,0,0,476,1849,1,0,0,0,478,
+		1851,1,0,0,0,480,1853,1,0,0,0,482,1855,1,0,0,0,484,1857,1,0,0,0,486,1859,
+		1,0,0,0,488,1861,1,0,0,0,490,1863,1,0,0,0,492,1865,1,0,0,0,494,1867,1,
+		0,0,0,496,1869,1,0,0,0,498,1871,1,0,0,0,500,1873,1,0,0,0,502,1875,1,0,
+		0,0,504,1877,1,0,0,0,506,1879,1,0,0,0,508,1881,1,0,0,0,510,1883,1,0,0,
+		0,512,1885,1,0,0,0,514,1887,1,0,0,0,516,1889,1,0,0,0,518,1891,1,0,0,0,
+		520,1893,1,0,0,0,522,1895,1,0,0,0,524,1897,1,0,0,0,526,1899,1,0,0,0,528,
+		1901,1,0,0,0,530,1903,1,0,0,0,532,1905,1,0,0,0,534,1907,1,0,0,0,536,1909,
+		1,0,0,0,538,1911,1,0,0,0,540,1913,1,0,0,0,542,1915,1,0,0,0,544,1917,1,
+		0,0,0,546,1919,1,0,0,0,548,1921,1,0,0,0,550,1923,1,0,0,0,552,1925,1,0,
+		0,0,554,1927,1,0,0,0,556,1929,1,0,0,0,558,1931,1,0,0,0,560,1933,1,0,0,
+		0,562,1935,1,0,0,0,564,1937,1,0,0,0,566,1939,1,0,0,0,568,1941,1,0,0,0,
+		570,1943,1,0,0,0,572,1945,1,0,0,0,574,1947,1,0,0,0,576,1949,1,0,0,0,578,
+		1951,1,0,0,0,580,1953,1,0,0,0,582,1955,1,0,0,0,584,1957,1,0,0,0,586,1959,
+		1,0,0,0,588,1961,1,0,0,0,590,1963,1,0,0,0,592,1965,1,0,0,0,594,1967,1,
+		0,0,0,596,1969,1,0,0,0,598,1971,1,0,0,0,600,1973,1,0,0,0,602,1975,1,0,
+		0,0,604,1977,1,0,0,0,606,1979,1,0,0,0,608,1981,1,0,0,0,610,1983,1,0,0,
+		0,612,1985,1,0,0,0,614,1987,1,0,0,0,616,1989,1,0,0,0,618,1991,1,0,0,0,
+		620,1993,1,0,0,0,622,1995,1,0,0,0,624,1997,1,0,0,0,626,1999,1,0,0,0,628,
+		2001,1,0,0,0,630,2003,1,0,0,0,632,2005,1,0,0,0,634,2007,1,0,0,0,636,2009,
+		1,0,0,0,638,2011,1,0,0,0,640,2013,1,0,0,0,642,2015,1,0,0,0,644,2023,1,
+		0,0,0,646,2025,1,0,0,0,648,2048,1,0,0,0,650,2065,1,0,0,0,652,2067,1,0,
+		0,0,654,2082,1,0,0,0,656,2086,1,0,0,0,658,2102,1,0,0,0,660,2107,1,0,0,
+		0,662,2109,1,0,0,0,664,2112,1,0,0,0,666,2130,1,0,0,0,668,2132,1,0,0,0,
+		670,2134,1,0,0,0,672,2140,1,0,0,0,674,2163,1,0,0,0,676,2165,1,0,0,0,678,
+		2175,1,0,0,0,680,2177,1,0,0,0,682,2186,1,0,0,0,684,2191,1,0,0,0,686,2195,
+		1,0,0,0,688,2202,1,0,0,0,690,2206,1,0,0,0,692,2217,1,0,0,0,694,2225,1,
+		0,0,0,696,2227,1,0,0,0,698,2233,1,0,0,0,700,2243,1,0,0,0,702,2245,1,0,
+		0,0,704,2248,1,0,0,0,706,2250,1,0,0,0,708,2264,1,0,0,0,710,2284,1,0,0,
+		0,712,2298,1,0,0,0,714,2319,1,0,0,0,716,2333,1,0,0,0,718,2344,1,0,0,0,
+		720,2362,1,0,0,0,722,2379,1,0,0,0,724,2393,1,0,0,0,726,2395,1,0,0,0,728,
+		2400,1,0,0,0,730,2402,1,0,0,0,732,2412,1,0,0,0,734,2424,1,0,0,0,736,2426,
+		1,0,0,0,738,2434,1,0,0,0,740,2436,1,0,0,0,742,2439,1,0,0,0,744,2446,1,
+		0,0,0,746,2448,1,0,0,0,748,2469,1,0,0,0,750,2471,1,0,0,0,752,2473,1,0,
+		0,0,754,2475,1,0,0,0,756,2477,1,0,0,0,758,2479,1,0,0,0,760,2481,1,0,0,
+		0,762,2486,1,0,0,0,764,2488,1,0,0,0,766,2490,1,0,0,0,768,2495,1,0,0,0,
+		770,2497,1,0,0,0,772,2501,1,0,0,0,774,2505,1,0,0,0,776,2519,1,0,0,0,778,
+		2558,1,0,0,0,780,2575,1,0,0,0,782,2585,1,0,0,0,784,2591,1,0,0,0,786,2599,
+		1,0,0,0,788,2627,1,0,0,0,790,2631,1,0,0,0,792,2643,1,0,0,0,794,2702,1,
+		0,0,0,796,2704,1,0,0,0,798,2707,1,0,0,0,800,2711,1,0,0,0,802,2725,1,0,
+		0,0,804,2727,1,0,0,0,806,2742,1,0,0,0,808,2744,1,0,0,0,810,2750,1,0,0,
+		0,812,2753,1,0,0,0,814,2760,1,0,0,0,816,2772,1,0,0,0,818,2774,1,0,0,0,
+		820,2777,1,0,0,0,822,2782,1,0,0,0,824,2786,1,0,0,0,826,2788,1,0,0,0,828,
+		2790,1,0,0,0,830,2795,1,0,0,0,832,2798,1,0,0,0,834,2800,1,0,0,0,836,2803,
+		1,0,0,0,838,2805,1,0,0,0,840,2813,1,0,0,0,842,2822,1,0,0,0,844,2834,1,
+		0,0,0,846,2846,1,0,0,0,848,2848,1,0,0,0,850,2853,1,0,0,0,852,2855,1,0,
+		0,0,854,2859,1,0,0,0,856,2861,1,0,0,0,858,2864,1,0,0,0,860,2867,1,0,0,
+		0,862,2870,1,0,0,0,864,2872,1,0,0,0,866,2883,1,0,0,0,868,2885,1,0,0,0,
+		870,2888,1,0,0,0,872,2893,1,0,0,0,874,2910,1,0,0,0,876,2922,1,0,0,0,878,
+		2939,1,0,0,0,880,2941,1,0,0,0,882,2944,1,0,0,0,884,2946,1,0,0,0,886,2950,
+		1,0,0,0,888,2952,1,0,0,0,890,2966,1,0,0,0,892,2968,1,0,0,0,894,2970,1,
+		0,0,0,896,2976,1,0,0,0,898,2978,1,0,0,0,900,2982,1,0,0,0,902,2984,1,0,
+		0,0,904,2987,1,0,0,0,906,2989,1,0,0,0,908,2991,1,0,0,0,910,2993,1,0,0,
+		0,912,3016,1,0,0,0,914,3021,1,0,0,0,916,3027,1,0,0,0,918,3031,1,0,0,0,
+		920,3040,1,0,0,0,922,3042,1,0,0,0,924,3044,1,0,0,0,926,3055,1,0,0,0,928,
+		3057,1,0,0,0,930,3062,1,0,0,0,932,3064,1,0,0,0,934,3069,1,0,0,0,936,3073,
+		1,0,0,0,938,3075,1,0,0,0,940,3077,1,0,0,0,942,3080,1,0,0,0,944,3088,1,
+		0,0,0,946,3090,1,0,0,0,948,3093,1,0,0,0,950,3095,1,0,0,0,952,3098,1,0,
+		0,0,954,3102,1,0,0,0,956,3112,1,0,0,0,958,3114,1,0,0,0,960,3123,1,0,0,
+		0,962,3125,1,0,0,0,964,3127,1,0,0,0,966,3131,1,0,0,0,968,3142,1,0,0,0,
+		970,3144,1,0,0,0,972,3169,1,0,0,0,974,3208,1,0,0,0,976,3210,1,0,0,0,978,
+		3212,1,0,0,0,980,3220,1,0,0,0,982,3222,1,0,0,0,984,3226,1,0,0,0,986,3231,
+		1,0,0,0,988,3235,1,0,0,0,990,3249,1,0,0,0,992,3251,1,0,0,0,994,3253,1,
+		0,0,0,996,3255,1,0,0,0,998,3257,1,0,0,0,1000,3262,1,0,0,0,1002,3275,1,
+		0,0,0,1004,3277,1,0,0,0,1006,3282,1,0,0,0,1008,3293,1,0,0,0,1010,3295,
+		1,0,0,0,1012,3297,1,0,0,0,1014,3300,1,0,0,0,1016,3302,1,0,0,0,1018,3308,
+		1,0,0,0,1020,3310,1,0,0,0,1022,3316,1,0,0,0,1024,3343,1,0,0,0,1026,3372,
+		1,0,0,0,1028,3374,1,0,0,0,1030,3377,1,0,0,0,1032,3379,1,0,0,0,1034,3384,
+		1,0,0,0,1036,3405,1,0,0,0,1038,3407,1,0,0,0,1040,3411,1,0,0,0,1042,3413,
+		1,0,0,0,1044,3417,1,0,0,0,1046,3423,1,0,0,0,1048,3429,1,0,0,0,1050,3443,
+		1,0,0,0,1052,3445,1,0,0,0,1054,3465,1,0,0,0,1056,3467,1,0,0,0,1058,3469,
+		1,0,0,0,1060,3472,1,0,0,0,1062,3474,1,0,0,0,1064,3477,1,0,0,0,1066,3482,
+		1,0,0,0,1068,3486,1,0,0,0,1070,3488,1,0,0,0,1072,3495,1,0,0,0,1074,3497,
+		1,0,0,0,1076,3520,1,0,0,0,1078,3524,1,0,0,0,1080,3528,1,0,0,0,1082,3530,
+		1,0,0,0,1084,1085,5,4,0,0,1085,1,1,0,0,0,1086,1087,5,5,0,0,1087,3,1,0,
+		0,0,1088,1089,5,6,0,0,1089,5,1,0,0,0,1090,1091,5,12,0,0,1091,7,1,0,0,0,
+		1092,1093,5,13,0,0,1093,9,1,0,0,0,1094,1095,5,18,0,0,1095,11,1,0,0,0,1096,
+		1097,5,19,0,0,1097,13,1,0,0,0,1098,1099,5,302,0,0,1099,15,1,0,0,0,1100,
+		1101,5,302,0,0,1101,17,1,0,0,0,1102,1103,5,289,0,0,1103,19,1,0,0,0,1104,
+		1105,5,290,0,0,1105,21,1,0,0,0,1106,1107,5,294,0,0,1107,23,1,0,0,0,1108,
+		1109,7,0,0,0,1109,25,1,0,0,0,1110,1111,5,296,0,0,1111,27,1,0,0,0,1112,
+		1113,5,302,0,0,1113,29,1,0,0,0,1114,1115,5,33,0,0,1115,31,1,0,0,0,1116,
+		1117,5,301,0,0,1117,33,1,0,0,0,1118,1119,3,46,23,0,1119,35,1,0,0,0,1120,
+		1121,5,288,0,0,1121,37,1,0,0,0,1122,1135,5,17,0,0,1123,1124,5,18,0,0,1124,
+		1129,3,44,22,0,1125,1126,5,7,0,0,1126,1128,3,44,22,0,1127,1125,1,0,0,0,
+		1128,1131,1,0,0,0,1129,1127,1,0,0,0,1129,1130,1,0,0,0,1130,1132,1,0,0,
+		0,1131,1129,1,0,0,0,1132,1133,5,19,0,0,1133,1135,1,0,0,0,1134,1122,1,0,
+		0,0,1134,1123,1,0,0,0,1135,39,1,0,0,0,1136,1149,5,11,0,0,1137,1138,5,12,
+		0,0,1138,1143,3,52,26,0,1139,1140,5,7,0,0,1140,1142,3,52,26,0,1141,1139,
+		1,0,0,0,1142,1145,1,0,0,0,1143,1141,1,0,0,0,1143,1144,1,0,0,0,1144,1146,
+		1,0,0,0,1145,1143,1,0,0,0,1146,1147,5,13,0,0,1147,1149,1,0,0,0,1148,1136,
+		1,0,0,0,1148,1137,1,0,0,0,1149,41,1,0,0,0,1150,1151,5,299,0,0,1151,43,
+		1,0,0,0,1152,1153,3,42,21,0,1153,1154,5,9,0,0,1154,1155,3,52,26,0,1155,
+		45,1,0,0,0,1156,1157,3,38,19,0,1157,47,1,0,0,0,1158,1159,7,1,0,0,1159,
+		49,1,0,0,0,1160,1161,5,293,0,0,1161,51,1,0,0,0,1162,1170,3,32,16,0,1163,
+		1170,3,18,9,0,1164,1170,3,50,25,0,1165,1170,3,48,24,0,1166,1170,3,38,19,
+		0,1167,1170,3,40,20,0,1168,1170,3,30,15,0,1169,1162,1,0,0,0,1169,1163,
+		1,0,0,0,1169,1164,1,0,0,0,1169,1165,1,0,0,0,1169,1166,1,0,0,0,1169,1167,
+		1,0,0,0,1169,1168,1,0,0,0,1170,53,1,0,0,0,1171,1174,3,98,49,0,1172,1175,
+		3,56,28,0,1173,1175,3,58,29,0,1174,1172,1,0,0,0,1174,1173,1,0,0,0,1174,
+		1175,1,0,0,0,1175,1178,1,0,0,0,1176,1178,3,32,16,0,1177,1171,1,0,0,0,1177,
+		1176,1,0,0,0,1178,55,1,0,0,0,1179,1180,5,18,0,0,1180,1185,3,60,30,0,1181,
+		1182,5,7,0,0,1182,1184,3,60,30,0,1183,1181,1,0,0,0,1184,1187,1,0,0,0,1185,
+		1183,1,0,0,0,1185,1186,1,0,0,0,1186,1188,1,0,0,0,1187,1185,1,0,0,0,1188,
+		1189,5,19,0,0,1189,57,1,0,0,0,1190,1191,5,12,0,0,1191,1196,3,62,31,0,1192,
+		1193,5,7,0,0,1193,1195,3,62,31,0,1194,1192,1,0,0,0,1195,1198,1,0,0,0,1196,
+		1194,1,0,0,0,1196,1197,1,0,0,0,1197,1199,1,0,0,0,1198,1196,1,0,0,0,1199,
+		1200,5,13,0,0,1200,59,1,0,0,0,1201,1203,3,98,49,0,1202,1201,1,0,0,0,1202,
+		1203,1,0,0,0,1203,1204,1,0,0,0,1204,1205,5,9,0,0,1205,1206,3,62,31,0,1206,
+		61,1,0,0,0,1207,1213,3,32,16,0,1208,1213,3,18,9,0,1209,1213,3,22,11,0,
+		1210,1213,3,56,28,0,1211,1213,3,638,319,0,1212,1207,1,0,0,0,1212,1208,
+		1,0,0,0,1212,1209,1,0,0,0,1212,1210,1,0,0,0,1212,1211,1,0,0,0,1213,63,
+		1,0,0,0,1214,1219,3,54,27,0,1215,1216,5,8,0,0,1216,1218,3,54,27,0,1217,
+		1215,1,0,0,0,1218,1221,1,0,0,0,1219,1217,1,0,0,0,1219,1220,1,0,0,0,1220,
+		65,1,0,0,0,1221,1219,1,0,0,0,1222,1223,7,2,0,0,1223,67,1,0,0,0,1224,1225,
+		5,302,0,0,1225,69,1,0,0,0,1226,1227,5,303,0,0,1227,1228,3,296,148,0,1228,
+		1229,5,304,0,0,1229,71,1,0,0,0,1230,1246,5,302,0,0,1231,1243,5,299,0,0,
+		1232,1233,3,6,3,0,1233,1238,3,70,35,0,1234,1235,5,7,0,0,1235,1237,3,70,
+		35,0,1236,1234,1,0,0,0,1237,1240,1,0,0,0,1238,1236,1,0,0,0,1238,1239,1,
+		0,0,0,1239,1241,1,0,0,0,1240,1238,1,0,0,0,1241,1242,3,8,4,0,1242,1244,
+		1,0,0,0,1243,1232,1,0,0,0,1243,1244,1,0,0,0,1244,1246,1,0,0,0,1245,1230,
+		1,0,0,0,1245,1231,1,0,0,0,1246,73,1,0,0,0,1247,1248,3,46,23,0,1248,75,
+		1,0,0,0,1249,1250,3,46,23,0,1250,77,1,0,0,0,1251,1252,5,299,0,0,1252,79,
+		1,0,0,0,1253,1254,5,302,0,0,1254,81,1,0,0,0,1255,1256,5,299,0,0,1256,83,
+		1,0,0,0,1257,1258,7,3,0,0,1258,85,1,0,0,0,1259,1260,7,3,0,0,1260,87,1,
+		0,0,0,1261,1262,7,3,0,0,1262,89,1,0,0,0,1263,1264,3,84,42,0,1264,1265,
+		3,86,43,0,1265,1266,3,88,44,0,1266,91,1,0,0,0,1267,1268,3,84,42,0,1268,
+		1269,3,88,44,0,1269,93,1,0,0,0,1270,1271,5,299,0,0,1271,95,1,0,0,0,1272,
+		1273,5,299,0,0,1273,97,1,0,0,0,1274,1275,5,299,0,0,1275,99,1,0,0,0,1276,
+		1277,7,1,0,0,1277,101,1,0,0,0,1278,1279,5,295,0,0,1279,103,1,0,0,0,1280,
+		1281,5,291,0,0,1281,105,1,0,0,0,1282,1283,5,292,0,0,1283,107,1,0,0,0,1284,
+		1285,5,289,0,0,1285,109,1,0,0,0,1286,1287,7,4,0,0,1287,111,1,0,0,0,1288,
+		1289,7,5,0,0,1289,113,1,0,0,0,1290,1291,5,302,0,0,1291,115,1,0,0,0,1292,
+		1299,3,98,49,0,1293,1294,3,0,0,0,1294,1296,3,118,59,0,1295,1297,3,120,
+		60,0,1296,1295,1,0,0,0,1296,1297,1,0,0,0,1297,1299,1,0,0,0,1298,1292,1,
+		0,0,0,1298,1293,1,0,0,0,1299,117,1,0,0,0,1300,1301,5,34,0,0,1301,119,1,
+		0,0,0,1302,1317,5,11,0,0,1303,1312,3,6,3,0,1304,1309,3,128,64,0,1305,1306,
+		5,7,0,0,1306,1308,3,128,64,0,1307,1305,1,0,0,0,1308,1311,1,0,0,0,1309,
+		1307,1,0,0,0,1309,1310,1,0,0,0,1310,1313,1,0,0,0,1311,1309,1,0,0,0,1312,
+		1304,1,0,0,0,1312,1313,1,0,0,0,1313,1314,1,0,0,0,1314,1315,3,8,4,0,1315,
+		1317,1,0,0,0,1316,1302,1,0,0,0,1316,1303,1,0,0,0,1317,121,1,0,0,0,1318,
+		1319,5,299,0,0,1319,123,1,0,0,0,1320,1321,3,122,61,0,1321,1323,3,296,148,
+		0,1322,1324,3,4,2,0,1323,1322,1,0,0,0,1323,1324,1,0,0,0,1324,1327,1,0,
+		0,0,1325,1328,3,18,9,0,1326,1328,3,20,10,0,1327,1325,1,0,0,0,1327,1326,
+		1,0,0,0,1328,125,1,0,0,0,1329,1344,5,17,0,0,1330,1339,3,10,5,0,1331,1336,
+		3,124,62,0,1332,1333,5,7,0,0,1333,1335,3,124,62,0,1334,1332,1,0,0,0,1335,
+		1338,1,0,0,0,1336,1334,1,0,0,0,1336,1337,1,0,0,0,1337,1340,1,0,0,0,1338,
+		1336,1,0,0,0,1339,1331,1,0,0,0,1339,1340,1,0,0,0,1340,1341,1,0,0,0,1341,
+		1342,3,12,6,0,1342,1344,1,0,0,0,1343,1329,1,0,0,0,1343,1330,1,0,0,0,1344,
+		127,1,0,0,0,1345,1346,3,132,66,0,1346,1347,3,296,148,0,1347,1348,3,24,
+		12,0,1348,1437,1,0,0,0,1349,1350,3,266,133,0,1350,1351,3,296,148,0,1351,
+		1352,3,104,52,0,1352,1437,1,0,0,0,1353,1354,3,268,134,0,1354,1357,3,296,
+		148,0,1355,1358,3,100,50,0,1356,1358,3,102,51,0,1357,1355,1,0,0,0,1357,
+		1356,1,0,0,0,1358,1437,1,0,0,0,1359,1360,3,620,310,0,1360,1367,3,296,148,
+		0,1361,1368,3,104,52,0,1362,1368,3,106,53,0,1363,1368,3,18,9,0,1364,1368,
+		3,20,10,0,1365,1368,3,22,11,0,1366,1368,3,102,51,0,1367,1361,1,0,0,0,1367,
+		1362,1,0,0,0,1367,1363,1,0,0,0,1367,1364,1,0,0,0,1367,1365,1,0,0,0,1367,
+		1366,1,0,0,0,1368,1437,1,0,0,0,1369,1370,3,270,135,0,1370,1373,3,296,148,
+		0,1371,1374,3,108,54,0,1372,1374,3,20,10,0,1373,1371,1,0,0,0,1373,1372,
+		1,0,0,0,1374,1437,1,0,0,0,1375,1376,3,174,87,0,1376,1378,3,296,148,0,1377,
+		1379,3,4,2,0,1378,1377,1,0,0,0,1378,1379,1,0,0,0,1379,1380,1,0,0,0,1380,
+		1381,3,94,47,0,1381,1437,1,0,0,0,1382,1383,3,136,68,0,1383,1384,3,296,
+		148,0,1384,1385,3,648,324,0,1385,1437,1,0,0,0,1386,1387,3,272,136,0,1387,
+		1388,3,296,148,0,1388,1389,3,126,63,0,1389,1437,1,0,0,0,1390,1391,3,274,
+		137,0,1391,1392,3,296,148,0,1392,1393,3,18,9,0,1393,1437,1,0,0,0,1394,
+		1395,3,240,120,0,1395,1397,3,296,148,0,1396,1398,3,4,2,0,1397,1396,1,0,
+		0,0,1397,1398,1,0,0,0,1398,1400,1,0,0,0,1399,1401,3,1016,508,0,1400,1399,
+		1,0,0,0,1400,1401,1,0,0,0,1401,1437,1,0,0,0,1402,1403,3,276,138,0,1403,
+		1405,3,296,148,0,1404,1406,3,4,2,0,1405,1404,1,0,0,0,1405,1406,1,0,0,0,
+		1406,1407,1,0,0,0,1407,1408,3,112,56,0,1408,1437,1,0,0,0,1409,1410,3,324,
+		162,0,1410,1412,3,296,148,0,1411,1413,3,4,2,0,1412,1411,1,0,0,0,1412,1413,
+		1,0,0,0,1413,1414,1,0,0,0,1414,1415,3,110,55,0,1415,1437,1,0,0,0,1416,
+		1417,3,418,209,0,1417,1419,3,296,148,0,1418,1420,3,4,2,0,1419,1418,1,0,
+		0,0,1419,1420,1,0,0,0,1420,1421,1,0,0,0,1421,1422,3,114,57,0,1422,1437,
+		1,0,0,0,1423,1424,3,278,139,0,1424,1426,3,296,148,0,1425,1427,3,4,2,0,
+		1426,1425,1,0,0,0,1426,1427,1,0,0,0,1427,1429,1,0,0,0,1428,1430,3,46,23,
+		0,1429,1428,1,0,0,0,1429,1430,1,0,0,0,1430,1437,1,0,0,0,1431,1432,3,280,
+		140,0,1432,1434,3,296,148,0,1433,1435,3,96,48,0,1434,1433,1,0,0,0,1434,
+		1435,1,0,0,0,1435,1437,1,0,0,0,1436,1345,1,0,0,0,1436,1349,1,0,0,0,1436,
+		1353,1,0,0,0,1436,1359,1,0,0,0,1436,1369,1,0,0,0,1436,1375,1,0,0,0,1436,
+		1382,1,0,0,0,1436,1386,1,0,0,0,1436,1390,1,0,0,0,1436,1394,1,0,0,0,1436,
+		1402,1,0,0,0,1436,1409,1,0,0,0,1436,1416,1,0,0,0,1436,1423,1,0,0,0,1436,
+		1431,1,0,0,0,1437,129,1,0,0,0,1438,1504,3,642,321,0,1439,1504,3,652,326,
+		0,1440,1504,3,662,331,0,1441,1504,3,676,338,0,1442,1504,3,680,340,0,1443,
+		1504,3,696,348,0,1444,1504,3,702,351,0,1445,1504,3,726,363,0,1446,1504,
+		3,736,368,0,1447,1504,3,740,370,0,1448,1504,3,742,371,0,1449,1504,3,746,
+		373,0,1450,1504,3,760,380,0,1451,1504,3,766,383,0,1452,1504,3,796,398,
+		0,1453,1504,3,804,402,0,1454,1504,3,808,404,0,1455,1504,3,812,406,0,1456,
+		1504,3,818,409,0,1457,1504,3,820,410,0,1458,1504,3,822,411,0,1459,1504,
+		3,828,414,0,1460,1504,3,830,415,0,1461,1504,3,834,417,0,1462,1504,3,848,
+		424,0,1463,1504,3,852,426,0,1464,1504,3,856,428,0,1465,1504,3,858,429,
+		0,1466,1504,3,860,430,0,1467,1504,3,868,434,0,1468,1504,3,880,440,0,1469,
+		1504,3,884,442,0,1470,1504,3,888,444,0,1471,1504,3,902,451,0,1472,1504,
+		3,918,459,0,1473,1504,3,928,464,0,1474,1504,3,932,466,0,1475,1504,3,938,
+		469,0,1476,1504,3,940,470,0,1477,1504,3,942,471,0,1478,1504,3,946,473,
+		0,1479,1504,3,950,475,0,1480,1504,3,958,479,0,1481,1504,3,976,488,0,1482,
+		1504,3,978,489,0,1483,1504,3,982,491,0,1484,1504,3,984,492,0,1485,1504,
+		3,986,493,0,1486,1504,3,988,494,0,1487,1504,3,998,499,0,1488,1504,3,1004,
+		502,0,1489,1504,3,1006,503,0,1490,1504,3,1012,506,0,1491,1504,3,1028,514,
+		0,1492,1504,3,1032,516,0,1493,1504,3,1038,519,0,1494,1504,3,1042,521,0,
+		1495,1504,3,1044,522,0,1496,1504,3,1052,526,0,1497,1504,3,1058,529,0,1498,
+		1504,3,1062,531,0,1499,1504,3,1064,532,0,1500,1504,3,1070,535,0,1501,1504,
+		3,1074,537,0,1502,1504,3,1082,541,0,1503,1438,1,0,0,0,1503,1439,1,0,0,
+		0,1503,1440,1,0,0,0,1503,1441,1,0,0,0,1503,1442,1,0,0,0,1503,1443,1,0,
+		0,0,1503,1444,1,0,0,0,1503,1445,1,0,0,0,1503,1446,1,0,0,0,1503,1447,1,
+		0,0,0,1503,1448,1,0,0,0,1503,1449,1,0,0,0,1503,1450,1,0,0,0,1503,1451,
+		1,0,0,0,1503,1452,1,0,0,0,1503,1453,1,0,0,0,1503,1454,1,0,0,0,1503,1455,
+		1,0,0,0,1503,1456,1,0,0,0,1503,1457,1,0,0,0,1503,1458,1,0,0,0,1503,1459,
+		1,0,0,0,1503,1460,1,0,0,0,1503,1461,1,0,0,0,1503,1462,1,0,0,0,1503,1463,
+		1,0,0,0,1503,1464,1,0,0,0,1503,1465,1,0,0,0,1503,1466,1,0,0,0,1503,1467,
+		1,0,0,0,1503,1468,1,0,0,0,1503,1469,1,0,0,0,1503,1470,1,0,0,0,1503,1471,
+		1,0,0,0,1503,1472,1,0,0,0,1503,1473,1,0,0,0,1503,1474,1,0,0,0,1503,1475,
+		1,0,0,0,1503,1476,1,0,0,0,1503,1477,1,0,0,0,1503,1478,1,0,0,0,1503,1479,
+		1,0,0,0,1503,1480,1,0,0,0,1503,1481,1,0,0,0,1503,1482,1,0,0,0,1503,1483,
+		1,0,0,0,1503,1484,1,0,0,0,1503,1485,1,0,0,0,1503,1486,1,0,0,0,1503,1487,
+		1,0,0,0,1503,1488,1,0,0,0,1503,1489,1,0,0,0,1503,1490,1,0,0,0,1503,1491,
+		1,0,0,0,1503,1492,1,0,0,0,1503,1493,1,0,0,0,1503,1494,1,0,0,0,1503,1495,
+		1,0,0,0,1503,1496,1,0,0,0,1503,1497,1,0,0,0,1503,1498,1,0,0,0,1503,1499,
+		1,0,0,0,1503,1500,1,0,0,0,1503,1501,1,0,0,0,1503,1502,1,0,0,0,1504,131,
+		1,0,0,0,1505,1506,5,35,0,0,1506,133,1,0,0,0,1507,1508,5,110,0,0,1508,135,
+		1,0,0,0,1509,1510,5,45,0,0,1510,137,1,0,0,0,1511,1512,5,46,0,0,1512,139,
+		1,0,0,0,1513,1514,5,47,0,0,1514,141,1,0,0,0,1515,1516,5,48,0,0,1516,143,
+		1,0,0,0,1517,1518,5,49,0,0,1518,145,1,0,0,0,1519,1520,5,50,0,0,1520,147,
+		1,0,0,0,1521,1522,5,51,0,0,1522,149,1,0,0,0,1523,1524,5,52,0,0,1524,151,
+		1,0,0,0,1525,1526,5,53,0,0,1526,153,1,0,0,0,1527,1528,5,54,0,0,1528,155,
+		1,0,0,0,1529,1530,5,55,0,0,1530,157,1,0,0,0,1531,1532,5,56,0,0,1532,159,
+		1,0,0,0,1533,1534,5,57,0,0,1534,161,1,0,0,0,1535,1536,5,58,0,0,1536,163,
+		1,0,0,0,1537,1538,5,59,0,0,1538,165,1,0,0,0,1539,1540,5,60,0,0,1540,167,
+		1,0,0,0,1541,1542,5,61,0,0,1542,169,1,0,0,0,1543,1544,5,62,0,0,1544,171,
+		1,0,0,0,1545,1546,5,63,0,0,1546,173,1,0,0,0,1547,1548,5,64,0,0,1548,175,
+		1,0,0,0,1549,1550,5,65,0,0,1550,177,1,0,0,0,1551,1552,5,66,0,0,1552,179,
+		1,0,0,0,1553,1554,5,67,0,0,1554,181,1,0,0,0,1555,1556,5,68,0,0,1556,183,
+		1,0,0,0,1557,1558,5,69,0,0,1558,185,1,0,0,0,1559,1560,5,70,0,0,1560,187,
+		1,0,0,0,1561,1562,5,71,0,0,1562,189,1,0,0,0,1563,1564,5,72,0,0,1564,191,
+		1,0,0,0,1565,1566,5,73,0,0,1566,193,1,0,0,0,1567,1568,5,74,0,0,1568,195,
+		1,0,0,0,1569,1570,5,75,0,0,1570,197,1,0,0,0,1571,1572,5,76,0,0,1572,199,
+		1,0,0,0,1573,1574,5,77,0,0,1574,201,1,0,0,0,1575,1576,5,78,0,0,1576,203,
+		1,0,0,0,1577,1578,5,79,0,0,1578,205,1,0,0,0,1579,1580,5,80,0,0,1580,207,
+		1,0,0,0,1581,1582,5,81,0,0,1582,209,1,0,0,0,1583,1584,5,82,0,0,1584,211,
+		1,0,0,0,1585,1586,5,83,0,0,1586,213,1,0,0,0,1587,1588,5,84,0,0,1588,215,
+		1,0,0,0,1589,1590,5,85,0,0,1590,217,1,0,0,0,1591,1592,5,86,0,0,1592,219,
+		1,0,0,0,1593,1594,5,87,0,0,1594,221,1,0,0,0,1595,1596,5,88,0,0,1596,223,
+		1,0,0,0,1597,1598,5,89,0,0,1598,225,1,0,0,0,1599,1600,5,90,0,0,1600,227,
+		1,0,0,0,1601,1602,5,91,0,0,1602,229,1,0,0,0,1603,1604,5,92,0,0,1604,231,
+		1,0,0,0,1605,1606,5,93,0,0,1606,233,1,0,0,0,1607,1608,5,94,0,0,1608,235,
+		1,0,0,0,1609,1610,5,95,0,0,1610,237,1,0,0,0,1611,1612,5,96,0,0,1612,239,
+		1,0,0,0,1613,1614,5,97,0,0,1614,241,1,0,0,0,1615,1616,5,98,0,0,1616,243,
+		1,0,0,0,1617,1618,5,99,0,0,1618,245,1,0,0,0,1619,1620,5,100,0,0,1620,247,
+		1,0,0,0,1621,1622,5,101,0,0,1622,249,1,0,0,0,1623,1624,5,102,0,0,1624,
+		251,1,0,0,0,1625,1626,5,103,0,0,1626,253,1,0,0,0,1627,1628,5,104,0,0,1628,
+		255,1,0,0,0,1629,1630,5,105,0,0,1630,257,1,0,0,0,1631,1632,5,106,0,0,1632,
+		259,1,0,0,0,1633,1634,5,107,0,0,1634,261,1,0,0,0,1635,1636,5,108,0,0,1636,
+		263,1,0,0,0,1637,1638,5,109,0,0,1638,265,1,0,0,0,1639,1640,5,36,0,0,1640,
+		267,1,0,0,0,1641,1642,5,38,0,0,1642,269,1,0,0,0,1643,1644,5,39,0,0,1644,
+		271,1,0,0,0,1645,1646,5,42,0,0,1646,273,1,0,0,0,1647,1648,5,40,0,0,1648,
+		275,1,0,0,0,1649,1650,5,43,0,0,1650,277,1,0,0,0,1651,1652,5,41,0,0,1652,
+		279,1,0,0,0,1653,1654,5,44,0,0,1654,281,1,0,0,0,1655,1656,5,283,0,0,1656,
+		283,1,0,0,0,1657,1658,5,284,0,0,1658,285,1,0,0,0,1659,1660,5,285,0,0,1660,
+		287,1,0,0,0,1661,1662,5,286,0,0,1662,289,1,0,0,0,1663,1664,5,287,0,0,1664,
+		291,1,0,0,0,1665,1666,5,21,0,0,1666,293,1,0,0,0,1667,1668,5,278,0,0,1668,
+		295,1,0,0,0,1669,1670,5,279,0,0,1670,297,1,0,0,0,1671,1672,5,22,0,0,1672,
+		299,1,0,0,0,1673,1674,5,280,0,0,1674,301,1,0,0,0,1675,1676,5,282,0,0,1676,
+		303,1,0,0,0,1677,1678,5,111,0,0,1678,305,1,0,0,0,1679,1680,5,112,0,0,1680,
+		307,1,0,0,0,1681,1682,5,113,0,0,1682,309,1,0,0,0,1683,1684,5,114,0,0,1684,
+		311,1,0,0,0,1685,1686,5,115,0,0,1686,313,1,0,0,0,1687,1688,5,116,0,0,1688,
+		315,1,0,0,0,1689,1690,5,117,0,0,1690,317,1,0,0,0,1691,1692,5,118,0,0,1692,
+		319,1,0,0,0,1693,1694,5,119,0,0,1694,321,1,0,0,0,1695,1696,5,120,0,0,1696,
+		323,1,0,0,0,1697,1698,5,121,0,0,1698,325,1,0,0,0,1699,1700,5,122,0,0,1700,
+		327,1,0,0,0,1701,1702,5,123,0,0,1702,329,1,0,0,0,1703,1704,5,124,0,0,1704,
+		331,1,0,0,0,1705,1706,5,125,0,0,1706,333,1,0,0,0,1707,1708,5,126,0,0,1708,
+		335,1,0,0,0,1709,1710,5,127,0,0,1710,337,1,0,0,0,1711,1712,5,128,0,0,1712,
+		339,1,0,0,0,1713,1714,5,129,0,0,1714,341,1,0,0,0,1715,1716,5,130,0,0,1716,
+		343,1,0,0,0,1717,1718,5,131,0,0,1718,345,1,0,0,0,1719,1720,5,132,0,0,1720,
+		347,1,0,0,0,1721,1722,5,133,0,0,1722,349,1,0,0,0,1723,1724,5,134,0,0,1724,
+		351,1,0,0,0,1725,1726,5,135,0,0,1726,353,1,0,0,0,1727,1728,5,28,0,0,1728,
+		355,1,0,0,0,1729,1730,5,136,0,0,1730,357,1,0,0,0,1731,1732,5,137,0,0,1732,
+		359,1,0,0,0,1733,1734,5,138,0,0,1734,361,1,0,0,0,1735,1736,5,139,0,0,1736,
+		363,1,0,0,0,1737,1738,5,140,0,0,1738,365,1,0,0,0,1739,1740,5,141,0,0,1740,
+		367,1,0,0,0,1741,1742,5,142,0,0,1742,369,1,0,0,0,1743,1744,5,143,0,0,1744,
+		371,1,0,0,0,1745,1746,5,144,0,0,1746,373,1,0,0,0,1747,1748,5,145,0,0,1748,
+		375,1,0,0,0,1749,1750,5,146,0,0,1750,377,1,0,0,0,1751,1752,5,147,0,0,1752,
+		379,1,0,0,0,1753,1754,5,148,0,0,1754,381,1,0,0,0,1755,1756,5,149,0,0,1756,
+		383,1,0,0,0,1757,1758,5,150,0,0,1758,385,1,0,0,0,1759,1760,5,151,0,0,1760,
+		387,1,0,0,0,1761,1762,5,152,0,0,1762,389,1,0,0,0,1763,1764,5,153,0,0,1764,
+		391,1,0,0,0,1765,1766,5,154,0,0,1766,393,1,0,0,0,1767,1768,5,155,0,0,1768,
+		395,1,0,0,0,1769,1770,5,156,0,0,1770,397,1,0,0,0,1771,1772,5,157,0,0,1772,
+		399,1,0,0,0,1773,1774,5,158,0,0,1774,401,1,0,0,0,1775,1776,5,159,0,0,1776,
+		403,1,0,0,0,1777,1778,5,160,0,0,1778,405,1,0,0,0,1779,1780,5,161,0,0,1780,
+		407,1,0,0,0,1781,1782,5,162,0,0,1782,409,1,0,0,0,1783,1784,5,163,0,0,1784,
+		411,1,0,0,0,1785,1786,5,164,0,0,1786,413,1,0,0,0,1787,1788,5,165,0,0,1788,
+		415,1,0,0,0,1789,1790,5,166,0,0,1790,417,1,0,0,0,1791,1792,5,167,0,0,1792,
+		419,1,0,0,0,1793,1794,5,168,0,0,1794,421,1,0,0,0,1795,1796,5,169,0,0,1796,
+		423,1,0,0,0,1797,1798,5,170,0,0,1798,425,1,0,0,0,1799,1800,5,171,0,0,1800,
+		427,1,0,0,0,1801,1802,5,172,0,0,1802,429,1,0,0,0,1803,1804,5,173,0,0,1804,
+		431,1,0,0,0,1805,1806,5,174,0,0,1806,433,1,0,0,0,1807,1808,5,175,0,0,1808,
+		435,1,0,0,0,1809,1810,5,176,0,0,1810,437,1,0,0,0,1811,1812,5,177,0,0,1812,
+		439,1,0,0,0,1813,1814,5,178,0,0,1814,441,1,0,0,0,1815,1816,5,179,0,0,1816,
+		443,1,0,0,0,1817,1818,5,180,0,0,1818,445,1,0,0,0,1819,1820,5,181,0,0,1820,
+		447,1,0,0,0,1821,1822,5,182,0,0,1822,449,1,0,0,0,1823,1824,5,183,0,0,1824,
+		451,1,0,0,0,1825,1826,5,184,0,0,1826,453,1,0,0,0,1827,1828,5,185,0,0,1828,
+		455,1,0,0,0,1829,1830,5,186,0,0,1830,457,1,0,0,0,1831,1832,5,187,0,0,1832,
+		459,1,0,0,0,1833,1834,5,188,0,0,1834,461,1,0,0,0,1835,1836,5,189,0,0,1836,
+		463,1,0,0,0,1837,1838,5,190,0,0,1838,465,1,0,0,0,1839,1840,5,191,0,0,1840,
+		467,1,0,0,0,1841,1842,5,192,0,0,1842,469,1,0,0,0,1843,1844,5,193,0,0,1844,
+		471,1,0,0,0,1845,1846,5,194,0,0,1846,473,1,0,0,0,1847,1848,5,195,0,0,1848,
+		475,1,0,0,0,1849,1850,5,196,0,0,1850,477,1,0,0,0,1851,1852,5,197,0,0,1852,
+		479,1,0,0,0,1853,1854,5,198,0,0,1854,481,1,0,0,0,1855,1856,5,199,0,0,1856,
+		483,1,0,0,0,1857,1858,5,200,0,0,1858,485,1,0,0,0,1859,1860,5,201,0,0,1860,
+		487,1,0,0,0,1861,1862,5,202,0,0,1862,489,1,0,0,0,1863,1864,5,203,0,0,1864,
+		491,1,0,0,0,1865,1866,5,204,0,0,1866,493,1,0,0,0,1867,1868,5,205,0,0,1868,
+		495,1,0,0,0,1869,1870,5,206,0,0,1870,497,1,0,0,0,1871,1872,5,207,0,0,1872,
+		499,1,0,0,0,1873,1874,5,208,0,0,1874,501,1,0,0,0,1875,1876,5,209,0,0,1876,
+		503,1,0,0,0,1877,1878,5,210,0,0,1878,505,1,0,0,0,1879,1880,5,211,0,0,1880,
+		507,1,0,0,0,1881,1882,5,212,0,0,1882,509,1,0,0,0,1883,1884,5,213,0,0,1884,
+		511,1,0,0,0,1885,1886,5,214,0,0,1886,513,1,0,0,0,1887,1888,5,215,0,0,1888,
+		515,1,0,0,0,1889,1890,5,216,0,0,1890,517,1,0,0,0,1891,1892,5,217,0,0,1892,
+		519,1,0,0,0,1893,1894,5,218,0,0,1894,521,1,0,0,0,1895,1896,5,219,0,0,1896,
+		523,1,0,0,0,1897,1898,5,220,0,0,1898,525,1,0,0,0,1899,1900,5,221,0,0,1900,
+		527,1,0,0,0,1901,1902,5,222,0,0,1902,529,1,0,0,0,1903,1904,5,223,0,0,1904,
+		531,1,0,0,0,1905,1906,5,224,0,0,1906,533,1,0,0,0,1907,1908,5,225,0,0,1908,
+		535,1,0,0,0,1909,1910,5,226,0,0,1910,537,1,0,0,0,1911,1912,5,227,0,0,1912,
+		539,1,0,0,0,1913,1914,5,228,0,0,1914,541,1,0,0,0,1915,1916,5,229,0,0,1916,
+		543,1,0,0,0,1917,1918,5,231,0,0,1918,545,1,0,0,0,1919,1920,5,232,0,0,1920,
+		547,1,0,0,0,1921,1922,5,233,0,0,1922,549,1,0,0,0,1923,1924,5,234,0,0,1924,
+		551,1,0,0,0,1925,1926,5,235,0,0,1926,553,1,0,0,0,1927,1928,5,236,0,0,1928,
+		555,1,0,0,0,1929,1930,5,237,0,0,1930,557,1,0,0,0,1931,1932,5,238,0,0,1932,
+		559,1,0,0,0,1933,1934,5,239,0,0,1934,561,1,0,0,0,1935,1936,5,240,0,0,1936,
+		563,1,0,0,0,1937,1938,5,241,0,0,1938,565,1,0,0,0,1939,1940,5,242,0,0,1940,
+		567,1,0,0,0,1941,1942,5,243,0,0,1942,569,1,0,0,0,1943,1944,5,244,0,0,1944,
+		571,1,0,0,0,1945,1946,5,245,0,0,1946,573,1,0,0,0,1947,1948,5,246,0,0,1948,
+		575,1,0,0,0,1949,1950,5,247,0,0,1950,577,1,0,0,0,1951,1952,5,249,0,0,1952,
+		579,1,0,0,0,1953,1954,5,250,0,0,1954,581,1,0,0,0,1955,1956,5,251,0,0,1956,
+		583,1,0,0,0,1957,1958,5,252,0,0,1958,585,1,0,0,0,1959,1960,5,253,0,0,1960,
+		587,1,0,0,0,1961,1962,5,254,0,0,1962,589,1,0,0,0,1963,1964,5,255,0,0,1964,
+		591,1,0,0,0,1965,1966,5,256,0,0,1966,593,1,0,0,0,1967,1968,5,257,0,0,1968,
+		595,1,0,0,0,1969,1970,5,258,0,0,1970,597,1,0,0,0,1971,1972,5,259,0,0,1972,
+		599,1,0,0,0,1973,1974,5,260,0,0,1974,601,1,0,0,0,1975,1976,5,261,0,0,1976,
+		603,1,0,0,0,1977,1978,5,262,0,0,1978,605,1,0,0,0,1979,1980,5,263,0,0,1980,
+		607,1,0,0,0,1981,1982,5,264,0,0,1982,609,1,0,0,0,1983,1984,5,265,0,0,1984,
+		611,1,0,0,0,1985,1986,5,266,0,0,1986,613,1,0,0,0,1987,1988,5,267,0,0,1988,
+		615,1,0,0,0,1989,1990,5,268,0,0,1990,617,1,0,0,0,1991,1992,5,269,0,0,1992,
+		619,1,0,0,0,1993,1994,5,270,0,0,1994,621,1,0,0,0,1995,1996,5,271,0,0,1996,
+		623,1,0,0,0,1997,1998,5,272,0,0,1998,625,1,0,0,0,1999,2000,5,273,0,0,2000,
+		627,1,0,0,0,2001,2002,5,274,0,0,2002,629,1,0,0,0,2003,2004,5,275,0,0,2004,
+		631,1,0,0,0,2005,2006,5,276,0,0,2006,633,1,0,0,0,2007,2008,5,277,0,0,2008,
+		635,1,0,0,0,2009,2010,5,230,0,0,2010,637,1,0,0,0,2011,2012,5,33,0,0,2012,
+		639,1,0,0,0,2013,2014,5,281,0,0,2014,641,1,0,0,0,2015,2018,3,136,68,0,
+		2016,2019,3,358,179,0,2017,2019,3,360,180,0,2018,2016,1,0,0,0,2018,2017,
+		1,0,0,0,2019,2020,1,0,0,0,2020,2021,3,116,58,0,2021,2022,3,650,325,0,2022,
+		643,1,0,0,0,2023,2024,5,300,0,0,2024,645,1,0,0,0,2025,2026,3,644,322,0,
+		2026,2034,3,296,148,0,2027,2035,3,638,319,0,2028,2029,3,10,5,0,2029,2030,
+		3,98,49,0,2030,2031,3,296,148,0,2031,2032,3,638,319,0,2032,2033,3,12,6,
+		0,2033,2035,1,0,0,0,2034,2027,1,0,0,0,2034,2028,1,0,0,0,2035,647,1,0,0,
+		0,2036,2049,5,17,0,0,2037,2038,3,10,5,0,2038,2043,3,646,323,0,2039,2040,
+		5,7,0,0,2040,2042,3,646,323,0,2041,2039,1,0,0,0,2042,2045,1,0,0,0,2043,
+		2041,1,0,0,0,2043,2044,1,0,0,0,2044,2046,1,0,0,0,2045,2043,1,0,0,0,2046,
+		2047,3,12,6,0,2047,2049,1,0,0,0,2048,2036,1,0,0,0,2048,2037,1,0,0,0,2049,
+		649,1,0,0,0,2050,2055,3,362,181,0,2051,2052,3,364,182,0,2052,2053,3,644,
+		322,0,2053,2055,1,0,0,0,2054,2050,1,0,0,0,2054,2051,1,0,0,0,2055,2066,
+		1,0,0,0,2056,2057,3,366,183,0,2057,2058,3,644,322,0,2058,2066,1,0,0,0,
+		2059,2060,3,368,184,0,2060,2061,3,644,322,0,2061,2066,1,0,0,0,2062,2063,
+		3,370,185,0,2063,2064,3,644,322,0,2064,2066,1,0,0,0,2065,2054,1,0,0,0,
+		2065,2056,1,0,0,0,2065,2059,1,0,0,0,2065,2062,1,0,0,0,2066,651,1,0,0,0,
+		2067,2068,3,138,69,0,2068,2069,3,116,58,0,2069,2070,3,16,8,0,2070,2071,
+		3,654,327,0,2071,653,1,0,0,0,2072,2073,3,372,186,0,2073,2074,3,656,328,
+		0,2074,2075,5,294,0,0,2075,2083,1,0,0,0,2076,2077,3,374,187,0,2077,2078,
+		5,294,0,0,2078,2083,1,0,0,0,2079,2080,3,376,188,0,2080,2081,3,658,329,
+		0,2081,2083,1,0,0,0,2082,2072,1,0,0,0,2082,2076,1,0,0,0,2082,2079,1,0,
+		0,0,2083,655,1,0,0,0,2084,2087,3,374,187,0,2085,2087,3,310,155,0,2086,
+		2084,1,0,0,0,2086,2085,1,0,0,0,2087,657,1,0,0,0,2088,2089,3,304,152,0,
+		2089,2090,3,36,18,0,2090,2091,3,32,16,0,2091,2092,5,294,0,0,2092,2093,
+		3,660,330,0,2093,2103,1,0,0,0,2094,2095,3,306,153,0,2095,2096,3,36,18,
+		0,2096,2103,1,0,0,0,2097,2098,3,308,154,0,2098,2099,3,374,187,0,2099,2100,
+		3,36,18,0,2100,2101,5,294,0,0,2101,2103,1,0,0,0,2102,2088,1,0,0,0,2102,
+		2094,1,0,0,0,2102,2097,1,0,0,0,2103,659,1,0,0,0,2104,2108,3,304,152,0,
+		2105,2108,3,312,156,0,2106,2108,3,314,157,0,2107,2104,1,0,0,0,2107,2105,
+		1,0,0,0,2107,2106,1,0,0,0,2108,661,1,0,0,0,2109,2110,3,140,70,0,2110,2111,
+		3,666,333,0,2111,663,1,0,0,0,2112,2113,5,299,0,0,2113,665,1,0,0,0,2114,
+		2115,3,304,152,0,2115,2116,3,664,332,0,2116,2117,3,34,17,0,2117,2131,1,
+		0,0,0,2118,2119,3,374,187,0,2119,2120,3,664,332,0,2120,2121,3,672,336,
+		0,2121,2131,1,0,0,0,2122,2131,3,190,95,0,2123,2124,3,306,153,0,2124,2125,
+		3,664,332,0,2125,2131,1,0,0,0,2126,2127,3,310,155,0,2127,2128,3,664,332,
+		0,2128,2129,3,674,337,0,2129,2131,1,0,0,0,2130,2114,1,0,0,0,2130,2118,
+		1,0,0,0,2130,2122,1,0,0,0,2130,2123,1,0,0,0,2130,2126,1,0,0,0,2131,667,
+		1,0,0,0,2132,2133,5,299,0,0,2133,669,1,0,0,0,2134,2135,5,299,0,0,2135,
+		671,1,0,0,0,2136,2141,3,316,158,0,2137,2141,3,318,159,0,2138,2141,3,308,
+		154,0,2139,2141,3,320,160,0,2140,2136,1,0,0,0,2140,2137,1,0,0,0,2140,2138,
+		1,0,0,0,2140,2139,1,0,0,0,2141,673,1,0,0,0,2142,2143,3,322,161,0,2143,
+		2144,3,670,335,0,2144,2164,1,0,0,0,2145,2146,3,316,158,0,2146,2147,3,18,
+		9,0,2147,2164,1,0,0,0,2148,2149,3,324,162,0,2149,2150,3,34,17,0,2150,2164,
+		1,0,0,0,2151,2152,3,318,159,0,2152,2153,3,116,58,0,2153,2164,1,0,0,0,2154,
+		2155,3,326,163,0,2155,2156,3,668,334,0,2156,2164,1,0,0,0,2157,2158,3,308,
+		154,0,2158,2159,3,18,9,0,2159,2164,1,0,0,0,2160,2161,3,320,160,0,2161,
+		2162,3,30,15,0,2162,2164,1,0,0,0,2163,2142,1,0,0,0,2163,2145,1,0,0,0,2163,
+		2148,1,0,0,0,2163,2151,1,0,0,0,2163,2154,1,0,0,0,2163,2157,1,0,0,0,2163,
+		2160,1,0,0,0,2164,675,1,0,0,0,2165,2173,3,142,71,0,2166,2168,3,116,58,
+		0,2167,2169,3,68,34,0,2168,2167,1,0,0,0,2168,2169,1,0,0,0,2169,2171,1,
+		0,0,0,2170,2172,3,678,339,0,2171,2170,1,0,0,0,2171,2172,1,0,0,0,2172,2174,
+		1,0,0,0,2173,2166,1,0,0,0,2173,2174,1,0,0,0,2174,677,1,0,0,0,2175,2176,
+		5,289,0,0,2176,679,1,0,0,0,2177,2178,3,144,72,0,2178,2179,3,682,341,0,
+		2179,2181,3,688,344,0,2180,2182,3,692,346,0,2181,2180,1,0,0,0,2181,2182,
+		1,0,0,0,2182,681,1,0,0,0,2183,2184,3,366,183,0,2184,2185,3,14,7,0,2185,
+		2187,1,0,0,0,2186,2183,1,0,0,0,2186,2187,1,0,0,0,2187,2188,1,0,0,0,2188,
+		2189,3,684,342,0,2189,2190,3,686,343,0,2190,683,1,0,0,0,2191,2192,3,84,
+		42,0,2192,2193,3,86,43,0,2193,2194,3,88,44,0,2194,685,1,0,0,0,2195,2196,
+		3,84,42,0,2196,2197,3,86,43,0,2197,2198,3,88,44,0,2198,687,1,0,0,0,2199,
+		2200,3,340,170,0,2200,2201,3,14,7,0,2201,2203,1,0,0,0,2202,2199,1,0,0,
+		0,2202,2203,1,0,0,0,2203,2204,1,0,0,0,2204,2205,3,690,345,0,2205,689,1,
+		0,0,0,2206,2207,3,84,42,0,2207,2208,3,86,43,0,2208,2209,3,88,44,0,2209,
+		691,1,0,0,0,2210,2211,3,328,164,0,2211,2212,3,72,36,0,2212,2218,1,0,0,
+		0,2213,2216,3,330,165,0,2214,2216,3,332,166,0,2215,2213,1,0,0,0,2215,2214,
+		1,0,0,0,2216,2218,1,0,0,0,2217,2210,1,0,0,0,2217,2215,1,0,0,0,2218,2220,
+		1,0,0,0,2219,2221,3,694,347,0,2220,2219,1,0,0,0,2220,2221,1,0,0,0,2221,
+		693,1,0,0,0,2222,2226,3,334,167,0,2223,2226,3,336,168,0,2224,2226,3,338,
+		169,0,2225,2222,1,0,0,0,2225,2223,1,0,0,0,2225,2224,1,0,0,0,2226,695,1,
+		0,0,0,2227,2228,3,146,73,0,2228,2229,3,116,58,0,2229,2230,5,294,0,0,2230,
+		2231,3,698,349,0,2231,2232,3,700,350,0,2232,697,1,0,0,0,2233,2234,5,299,
+		0,0,2234,699,1,0,0,0,2235,2236,3,2,1,0,2236,2237,3,90,45,0,2237,2244,1,
+		0,0,0,2238,2239,3,342,171,0,2239,2240,3,116,58,0,2240,2241,3,366,183,0,
+		2241,2242,3,116,58,0,2242,2244,1,0,0,0,2243,2235,1,0,0,0,2243,2238,1,0,
+		0,0,2244,701,1,0,0,0,2245,2246,3,148,74,0,2246,2247,3,708,354,0,2247,703,
+		1,0,0,0,2248,2249,5,289,0,0,2249,705,1,0,0,0,2250,2251,5,289,0,0,2251,
+		707,1,0,0,0,2252,2253,3,374,187,0,2253,2254,3,710,355,0,2254,2265,1,0,
+		0,0,2255,2256,3,344,172,0,2256,2257,3,712,356,0,2257,2265,1,0,0,0,2258,
+		2259,3,346,173,0,2259,2260,3,722,361,0,2260,2265,1,0,0,0,2261,2262,3,306,
+		153,0,2262,2263,3,724,362,0,2263,2265,1,0,0,0,2264,2252,1,0,0,0,2264,2255,
+		1,0,0,0,2264,2258,1,0,0,0,2264,2261,1,0,0,0,2265,709,1,0,0,0,2266,2267,
+		3,348,174,0,2267,2268,3,90,45,0,2268,2270,3,64,32,0,2269,2271,3,22,11,
+		0,2270,2269,1,0,0,0,2270,2271,1,0,0,0,2271,2285,1,0,0,0,2272,2273,3,350,
+		175,0,2273,2274,3,116,58,0,2274,2276,3,64,32,0,2275,2277,3,22,11,0,2276,
+		2275,1,0,0,0,2276,2277,1,0,0,0,2277,2285,1,0,0,0,2278,2279,3,352,176,0,
+		2279,2280,3,82,41,0,2280,2282,3,64,32,0,2281,2283,3,22,11,0,2282,2281,
+		1,0,0,0,2282,2283,1,0,0,0,2283,2285,1,0,0,0,2284,2266,1,0,0,0,2284,2272,
+		1,0,0,0,2284,2278,1,0,0,0,2285,711,1,0,0,0,2286,2287,3,348,174,0,2287,
+		2288,3,90,45,0,2288,2289,3,74,37,0,2289,2299,1,0,0,0,2290,2291,3,350,175,
+		0,2291,2292,3,116,58,0,2292,2293,3,76,38,0,2293,2299,1,0,0,0,2294,2295,
+		3,352,176,0,2295,2296,3,80,40,0,2296,2297,3,34,17,0,2297,2299,1,0,0,0,
+		2298,2286,1,0,0,0,2298,2290,1,0,0,0,2298,2294,1,0,0,0,2299,713,1,0,0,0,
+		2300,2301,3,348,174,0,2301,2302,3,90,45,0,2302,2303,3,64,32,0,2303,2305,
+		3,704,352,0,2304,2306,3,706,353,0,2305,2304,1,0,0,0,2305,2306,1,0,0,0,
+		2306,2320,1,0,0,0,2307,2308,3,350,175,0,2308,2309,3,116,58,0,2309,2310,
+		3,64,32,0,2310,2311,3,704,352,0,2311,2312,3,706,353,0,2312,2320,1,0,0,
+		0,2313,2314,3,352,176,0,2314,2315,3,80,40,0,2315,2316,3,64,32,0,2316,2317,
+		3,704,352,0,2317,2318,3,706,353,0,2318,2320,1,0,0,0,2319,2300,1,0,0,0,
+		2319,2307,1,0,0,0,2319,2313,1,0,0,0,2320,715,1,0,0,0,2321,2322,3,348,174,
+		0,2322,2323,3,90,45,0,2323,2324,3,64,32,0,2324,2334,1,0,0,0,2325,2326,
+		3,350,175,0,2326,2327,3,116,58,0,2327,2328,3,64,32,0,2328,2334,1,0,0,0,
+		2329,2330,3,352,176,0,2330,2331,3,80,40,0,2331,2332,3,64,32,0,2332,2334,
+		1,0,0,0,2333,2321,1,0,0,0,2333,2325,1,0,0,0,2333,2329,1,0,0,0,2334,717,
+		1,0,0,0,2335,2336,3,366,183,0,2336,2337,3,716,358,0,2337,2345,1,0,0,0,
+		2338,2339,3,354,177,0,2339,2340,3,714,357,0,2340,2345,1,0,0,0,2341,2342,
+		3,308,154,0,2342,2343,3,52,26,0,2343,2345,1,0,0,0,2344,2335,1,0,0,0,2344,
+		2338,1,0,0,0,2344,2341,1,0,0,0,2345,719,1,0,0,0,2346,2347,3,534,267,0,
+		2347,2348,3,718,359,0,2348,2363,1,0,0,0,2349,2350,3,494,247,0,2350,2351,
+		3,18,9,0,2351,2352,3,718,359,0,2352,2363,1,0,0,0,2353,2354,3,344,172,0,
+		2354,2355,3,718,359,0,2355,2363,1,0,0,0,2356,2357,3,576,288,0,2357,2358,
+		3,718,359,0,2358,2363,1,0,0,0,2359,2360,3,310,155,0,2360,2361,3,718,359,
+		0,2361,2363,1,0,0,0,2362,2346,1,0,0,0,2362,2349,1,0,0,0,2362,2353,1,0,
+		0,0,2362,2356,1,0,0,0,2362,2359,1,0,0,0,2363,721,1,0,0,0,2364,2365,3,348,
+		174,0,2365,2366,3,90,45,0,2366,2367,3,64,32,0,2367,2368,3,720,360,0,2368,
+		2380,1,0,0,0,2369,2370,3,350,175,0,2370,2371,3,116,58,0,2371,2372,3,64,
+		32,0,2372,2373,3,720,360,0,2373,2380,1,0,0,0,2374,2375,3,352,176,0,2375,
+		2376,3,80,40,0,2376,2377,3,64,32,0,2377,2378,3,720,360,0,2378,2380,1,0,
+		0,0,2379,2364,1,0,0,0,2379,2369,1,0,0,0,2379,2374,1,0,0,0,2380,723,1,0,
+		0,0,2381,2382,3,348,174,0,2382,2383,3,90,45,0,2383,2384,3,64,32,0,2384,
+		2394,1,0,0,0,2385,2386,3,350,175,0,2386,2387,3,116,58,0,2387,2388,3,64,
+		32,0,2388,2394,1,0,0,0,2389,2390,3,352,176,0,2390,2391,3,82,41,0,2391,
+		2392,3,64,32,0,2392,2394,1,0,0,0,2393,2381,1,0,0,0,2393,2385,1,0,0,0,2393,
+		2389,1,0,0,0,2394,725,1,0,0,0,2395,2396,3,150,75,0,2396,2397,3,734,367,
+		0,2397,727,1,0,0,0,2398,2401,3,378,189,0,2399,2401,3,380,190,0,2400,2398,
+		1,0,0,0,2400,2399,1,0,0,0,2401,729,1,0,0,0,2402,2403,5,301,0,0,2403,731,
+		1,0,0,0,2404,2405,3,382,191,0,2405,2406,3,730,365,0,2406,2413,1,0,0,0,
+		2407,2408,3,384,192,0,2408,2409,3,730,365,0,2409,2413,1,0,0,0,2410,2413,
+		3,386,193,0,2411,2413,3,388,194,0,2412,2404,1,0,0,0,2412,2407,1,0,0,0,
+		2412,2410,1,0,0,0,2412,2411,1,0,0,0,2413,733,1,0,0,0,2414,2415,3,390,195,
+		0,2415,2416,3,730,365,0,2416,2425,1,0,0,0,2417,2418,3,380,190,0,2418,2419,
+		3,730,365,0,2419,2420,3,732,366,0,2420,2425,1,0,0,0,2421,2422,3,190,95,
+		0,2422,2423,3,728,364,0,2423,2425,1,0,0,0,2424,2414,1,0,0,0,2424,2417,
+		1,0,0,0,2424,2421,1,0,0,0,2425,735,1,0,0,0,2426,2427,3,152,76,0,2427,2428,
+		3,738,369,0,2428,737,1,0,0,0,2429,2430,3,172,86,0,2430,2431,3,730,365,
+		0,2431,2435,1,0,0,0,2432,2435,3,392,196,0,2433,2435,3,394,197,0,2434,2429,
+		1,0,0,0,2434,2432,1,0,0,0,2434,2433,1,0,0,0,2435,739,1,0,0,0,2436,2437,
+		3,154,77,0,2437,2438,3,94,47,0,2438,741,1,0,0,0,2439,2440,3,156,78,0,2440,
+		2441,3,744,372,0,2441,743,1,0,0,0,2442,2447,3,398,199,0,2443,2447,3,400,
+		200,0,2444,2447,3,338,169,0,2445,2447,3,402,201,0,2446,2442,1,0,0,0,2446,
+		2443,1,0,0,0,2446,2444,1,0,0,0,2446,2445,1,0,0,0,2447,745,1,0,0,0,2448,
+		2449,3,158,79,0,2449,2450,3,748,374,0,2450,747,1,0,0,0,2451,2456,3,142,
+		71,0,2452,2454,3,116,58,0,2453,2455,3,750,375,0,2454,2453,1,0,0,0,2454,
+		2455,1,0,0,0,2455,2457,1,0,0,0,2456,2452,1,0,0,0,2456,2457,1,0,0,0,2457,
+		2470,1,0,0,0,2458,2459,3,178,89,0,2459,2460,3,116,58,0,2460,2461,3,750,
+		375,0,2461,2462,3,752,376,0,2462,2468,1,0,0,0,2463,2464,3,396,198,0,2464,
+		2465,3,756,378,0,2465,2466,3,758,379,0,2466,2468,1,0,0,0,2467,2458,1,0,
+		0,0,2467,2463,1,0,0,0,2468,2470,1,0,0,0,2469,2451,1,0,0,0,2469,2467,1,
+		0,0,0,2470,749,1,0,0,0,2471,2472,5,302,0,0,2472,751,1,0,0,0,2473,2474,
+		5,289,0,0,2474,753,1,0,0,0,2475,2476,5,289,0,0,2476,755,1,0,0,0,2477,2478,
+		5,289,0,0,2478,757,1,0,0,0,2479,2480,5,33,0,0,2480,759,1,0,0,0,2481,2482,
+		3,160,80,0,2482,2483,3,116,58,0,2483,2484,3,764,382,0,2484,2485,3,762,
+		381,0,2485,761,1,0,0,0,2486,2487,5,289,0,0,2487,763,1,0,0,0,2488,2489,
+		5,302,0,0,2489,765,1,0,0,0,2490,2491,3,162,81,0,2491,2492,3,794,397,0,
+		2492,767,1,0,0,0,2493,2496,3,404,202,0,2494,2496,3,406,203,0,2495,2493,
+		1,0,0,0,2495,2494,1,0,0,0,2496,769,1,0,0,0,2497,2498,5,37,0,0,2498,771,
+		1,0,0,0,2499,2502,3,408,204,0,2500,2502,3,330,165,0,2501,2499,1,0,0,0,
+		2501,2500,1,0,0,0,2502,773,1,0,0,0,2503,2506,3,316,158,0,2504,2506,3,308,
+		154,0,2505,2503,1,0,0,0,2505,2504,1,0,0,0,2506,775,1,0,0,0,2507,2508,3,
+		348,174,0,2508,2509,3,90,45,0,2509,2510,3,64,32,0,2510,2520,1,0,0,0,2511,
+		2512,3,350,175,0,2512,2513,3,116,58,0,2513,2514,3,64,32,0,2514,2520,1,
+		0,0,0,2515,2516,3,352,176,0,2516,2517,3,80,40,0,2517,2518,3,64,32,0,2518,
+		2520,1,0,0,0,2519,2507,1,0,0,0,2519,2511,1,0,0,0,2519,2515,1,0,0,0,2520,
+		777,1,0,0,0,2521,2522,3,410,205,0,2522,2523,3,90,45,0,2523,2524,3,28,14,
+		0,2524,2559,1,0,0,0,2525,2526,3,348,174,0,2526,2527,3,90,45,0,2527,2528,
+		3,72,36,0,2528,2559,1,0,0,0,2529,2530,3,412,206,0,2530,2531,3,90,45,0,
+		2531,2532,3,90,45,0,2532,2533,3,90,45,0,2533,2534,3,772,386,0,2534,2559,
+		1,0,0,0,2535,2536,3,148,74,0,2536,2537,3,776,388,0,2537,2559,1,0,0,0,2538,
+		2539,3,414,207,0,2539,2540,3,14,7,0,2540,2559,1,0,0,0,2541,2542,3,350,
+		175,0,2542,2543,3,116,58,0,2543,2559,1,0,0,0,2544,2545,3,416,208,0,2545,
+		2546,3,90,45,0,2546,2559,1,0,0,0,2547,2549,3,418,209,0,2548,2550,3,4,2,
+		0,2549,2548,1,0,0,0,2549,2550,1,0,0,0,2550,2551,1,0,0,0,2551,2552,3,114,
+		57,0,2552,2559,1,0,0,0,2553,2554,3,420,210,0,2554,2555,3,116,58,0,2555,
+		2556,3,78,39,0,2556,2557,3,780,390,0,2557,2559,1,0,0,0,2558,2521,1,0,0,
+		0,2558,2525,1,0,0,0,2558,2529,1,0,0,0,2558,2535,1,0,0,0,2558,2538,1,0,
+		0,0,2558,2541,1,0,0,0,2558,2544,1,0,0,0,2558,2547,1,0,0,0,2558,2553,1,
+		0,0,0,2559,779,1,0,0,0,2560,2565,3,292,146,0,2561,2565,3,294,147,0,2562,
+		2565,3,296,148,0,2563,2565,3,300,150,0,2564,2560,1,0,0,0,2564,2561,1,0,
+		0,0,2564,2562,1,0,0,0,2564,2563,1,0,0,0,2565,2566,1,0,0,0,2566,2567,3,
+		116,58,0,2567,2568,3,78,39,0,2568,2576,1,0,0,0,2569,2570,3,422,211,0,2570,
+		2571,3,18,9,0,2571,2574,1,0,0,0,2572,2574,3,20,10,0,2573,2569,1,0,0,0,
+		2573,2572,1,0,0,0,2574,2576,1,0,0,0,2575,2564,1,0,0,0,2575,2573,1,0,0,
+		0,2576,781,1,0,0,0,2577,2586,3,424,212,0,2578,2586,3,426,213,0,2579,2586,
+		3,428,214,0,2580,2586,3,430,215,0,2581,2586,3,432,216,0,2582,2586,3,434,
+		217,0,2583,2586,3,436,218,0,2584,2586,3,438,219,0,2585,2577,1,0,0,0,2585,
+		2578,1,0,0,0,2585,2579,1,0,0,0,2585,2580,1,0,0,0,2585,2581,1,0,0,0,2585,
+		2582,1,0,0,0,2585,2583,1,0,0,0,2585,2584,1,0,0,0,2586,783,1,0,0,0,2587,
+		2592,3,440,220,0,2588,2592,3,442,221,0,2589,2592,3,444,222,0,2590,2592,
+		3,446,223,0,2591,2587,1,0,0,0,2591,2588,1,0,0,0,2591,2589,1,0,0,0,2591,
+		2590,1,0,0,0,2592,785,1,0,0,0,2593,2594,3,356,178,0,2594,2595,3,116,58,
+		0,2595,2600,1,0,0,0,2596,2597,3,448,224,0,2597,2598,3,784,392,0,2598,2600,
+		1,0,0,0,2599,2593,1,0,0,0,2599,2596,1,0,0,0,2600,787,1,0,0,0,2601,2602,
+		3,348,174,0,2602,2603,3,90,45,0,2603,2604,3,64,32,0,2604,2605,3,66,33,
+		0,2605,2606,5,294,0,0,2606,2628,1,0,0,0,2607,2608,3,140,70,0,2608,2609,
+		3,664,332,0,2609,2610,3,774,387,0,2610,2628,1,0,0,0,2611,2612,3,350,175,
+		0,2612,2613,3,116,58,0,2613,2614,3,64,32,0,2614,2615,3,66,33,0,2615,2616,
+		5,294,0,0,2616,2628,1,0,0,0,2617,2618,3,420,210,0,2618,2619,3,116,58,0,
+		2619,2620,3,78,39,0,2620,2628,1,0,0,0,2621,2622,3,352,176,0,2622,2623,
+		3,80,40,0,2623,2624,3,64,32,0,2624,2625,3,66,33,0,2625,2626,5,294,0,0,
+		2626,2628,1,0,0,0,2627,2601,1,0,0,0,2627,2607,1,0,0,0,2627,2611,1,0,0,
+		0,2627,2617,1,0,0,0,2627,2621,1,0,0,0,2628,789,1,0,0,0,2629,2632,3,450,
+		225,0,2630,2632,3,452,226,0,2631,2629,1,0,0,0,2631,2630,1,0,0,0,2632,2633,
+		1,0,0,0,2633,2634,3,788,394,0,2634,791,1,0,0,0,2635,2636,3,90,45,0,2636,
+		2637,3,794,397,0,2637,2644,1,0,0,0,2638,2639,3,350,175,0,2639,2640,3,116,
+		58,0,2640,2641,3,768,384,0,2641,2642,3,794,397,0,2642,2644,1,0,0,0,2643,
+		2635,1,0,0,0,2643,2638,1,0,0,0,2644,793,1,0,0,0,2645,2646,3,454,227,0,
+		2646,2647,3,770,385,0,2647,2648,3,794,397,0,2648,2703,1,0,0,0,2649,2650,
+		3,456,228,0,2650,2651,3,768,384,0,2651,2652,3,794,397,0,2652,2703,1,0,
+		0,0,2653,2656,3,356,178,0,2654,2656,3,2,1,0,2655,2653,1,0,0,0,2655,2654,
+		1,0,0,0,2656,2657,1,0,0,0,2657,2658,3,116,58,0,2658,2659,3,794,397,0,2659,
+		2703,1,0,0,0,2660,2661,3,574,287,0,2661,2662,3,792,396,0,2662,2663,3,794,
+		397,0,2663,2703,1,0,0,0,2664,2667,3,458,229,0,2665,2667,3,460,230,0,2666,
+		2664,1,0,0,0,2666,2665,1,0,0,0,2667,2668,1,0,0,0,2668,2669,3,778,389,0,
+		2669,2670,3,794,397,0,2670,2703,1,0,0,0,2671,2672,3,462,231,0,2672,2673,
+		3,14,7,0,2673,2674,3,794,397,0,2674,2703,1,0,0,0,2675,2676,3,464,232,0,
+		2676,2677,3,782,391,0,2677,2678,3,794,397,0,2678,2703,1,0,0,0,2679,2682,
+		3,466,233,0,2680,2683,3,90,45,0,2681,2683,3,786,393,0,2682,2680,1,0,0,
+		0,2682,2681,1,0,0,0,2683,2684,1,0,0,0,2684,2685,3,794,397,0,2685,2703,
+		1,0,0,0,2686,2687,3,468,234,0,2687,2688,3,356,178,0,2688,2689,3,116,58,
+		0,2689,2690,3,794,397,0,2690,2703,1,0,0,0,2691,2692,3,470,235,0,2692,2693,
+		3,130,65,0,2693,2703,1,0,0,0,2694,2695,3,472,236,0,2695,2696,3,790,395,
+		0,2696,2697,3,794,397,0,2697,2703,1,0,0,0,2698,2699,3,236,118,0,2699,2700,
+		3,112,56,0,2700,2701,3,794,397,0,2701,2703,1,0,0,0,2702,2645,1,0,0,0,2702,
+		2649,1,0,0,0,2702,2655,1,0,0,0,2702,2660,1,0,0,0,2702,2666,1,0,0,0,2702,
+		2671,1,0,0,0,2702,2675,1,0,0,0,2702,2679,1,0,0,0,2702,2686,1,0,0,0,2702,
+		2691,1,0,0,0,2702,2694,1,0,0,0,2702,2698,1,0,0,0,2703,795,1,0,0,0,2704,
+		2705,3,164,82,0,2705,2706,3,802,401,0,2706,797,1,0,0,0,2707,2708,5,289,
+		0,0,2708,799,1,0,0,0,2709,2712,3,476,238,0,2710,2712,3,478,239,0,2711,
+		2709,1,0,0,0,2711,2710,1,0,0,0,2712,801,1,0,0,0,2713,2716,3,304,152,0,
+		2714,2716,3,310,155,0,2715,2713,1,0,0,0,2715,2714,1,0,0,0,2716,2717,1,
+		0,0,0,2717,2718,3,116,58,0,2718,2719,3,798,399,0,2719,2720,3,800,400,0,
+		2720,2726,1,0,0,0,2721,2722,3,474,237,0,2722,2723,3,116,58,0,2723,2724,
+		3,800,400,0,2724,2726,1,0,0,0,2725,2715,1,0,0,0,2725,2721,1,0,0,0,2726,
+		803,1,0,0,0,2727,2728,3,166,83,0,2728,2729,3,90,45,0,2729,2730,3,90,45,
+		0,2730,2731,3,72,36,0,2731,2732,3,806,403,0,2732,805,1,0,0,0,2733,2738,
+		3,480,240,0,2734,2738,3,482,241,0,2735,2738,3,484,242,0,2736,2738,3,486,
+		243,0,2737,2733,1,0,0,0,2737,2734,1,0,0,0,2737,2735,1,0,0,0,2737,2736,
+		1,0,0,0,2738,2743,1,0,0,0,2739,2740,3,332,166,0,2740,2741,3,72,36,0,2741,
+		2743,1,0,0,0,2742,2737,1,0,0,0,2742,2739,1,0,0,0,2743,807,1,0,0,0,2744,
+		2745,3,168,84,0,2745,2746,3,90,45,0,2746,2747,3,90,45,0,2747,2748,3,28,
+		14,0,2748,2749,3,810,405,0,2749,809,1,0,0,0,2750,2751,3,332,166,0,2751,
+		2752,3,28,14,0,2752,811,1,0,0,0,2753,2754,3,170,85,0,2754,2755,3,816,408,
+		0,2755,813,1,0,0,0,2756,2757,3,92,46,0,2757,2758,3,92,46,0,2758,2761,1,
+		0,0,0,2759,2761,3,408,204,0,2760,2756,1,0,0,0,2760,2759,1,0,0,0,2761,815,
+		1,0,0,0,2762,2763,3,304,152,0,2763,2764,3,92,46,0,2764,2765,3,92,46,0,
+		2765,2773,1,0,0,0,2766,2767,3,474,237,0,2767,2768,3,92,46,0,2768,2773,
+		1,0,0,0,2769,2770,3,306,153,0,2770,2771,3,814,407,0,2771,2773,1,0,0,0,
+		2772,2762,1,0,0,0,2772,2766,1,0,0,0,2772,2769,1,0,0,0,2773,817,1,0,0,0,
+		2774,2775,3,172,86,0,2775,2776,3,952,476,0,2776,819,1,0,0,0,2777,2778,
+		3,174,87,0,2778,2780,3,94,47,0,2779,2781,3,116,58,0,2780,2779,1,0,0,0,
+		2780,2781,1,0,0,0,2781,821,1,0,0,0,2782,2783,3,176,88,0,2783,2784,3,824,
+		412,0,2784,2785,3,826,413,0,2785,823,1,0,0,0,2786,2787,5,299,0,0,2787,
+		825,1,0,0,0,2788,2789,7,6,0,0,2789,827,1,0,0,0,2790,2791,3,178,89,0,2791,
+		2792,3,116,58,0,2792,2793,3,68,34,0,2793,2794,3,18,9,0,2794,829,1,0,0,
+		0,2795,2796,3,180,90,0,2796,2797,3,832,416,0,2797,831,1,0,0,0,2798,2799,
+		5,299,0,0,2799,833,1,0,0,0,2800,2801,3,182,91,0,2801,2802,3,840,420,0,
+		2802,835,1,0,0,0,2803,2804,5,302,0,0,2804,837,1,0,0,0,2805,2806,5,302,
+		0,0,2806,839,1,0,0,0,2807,2808,3,346,173,0,2808,2809,3,844,422,0,2809,
+		2814,1,0,0,0,2810,2811,3,332,166,0,2811,2812,3,846,423,0,2812,2814,1,0,
+		0,0,2813,2807,1,0,0,0,2813,2810,1,0,0,0,2814,841,1,0,0,0,2815,2816,3,366,
+		183,0,2816,2817,3,844,422,0,2817,2823,1,0,0,0,2818,2819,3,578,289,0,2819,
+		2820,3,68,34,0,2820,2821,3,18,9,0,2821,2823,1,0,0,0,2822,2815,1,0,0,0,
+		2822,2818,1,0,0,0,2823,843,1,0,0,0,2824,2825,3,348,174,0,2825,2826,3,90,
+		45,0,2826,2827,3,836,418,0,2827,2828,3,838,419,0,2828,2835,1,0,0,0,2829,
+		2830,3,350,175,0,2830,2831,3,116,58,0,2831,2832,3,836,418,0,2832,2833,
+		3,838,419,0,2833,2835,1,0,0,0,2834,2824,1,0,0,0,2834,2829,1,0,0,0,2835,
+		845,1,0,0,0,2836,2837,3,348,174,0,2837,2838,3,90,45,0,2838,2839,3,836,
+		418,0,2839,2840,3,842,421,0,2840,2847,1,0,0,0,2841,2842,3,350,175,0,2842,
+		2843,3,116,58,0,2843,2844,3,836,418,0,2844,2845,3,842,421,0,2845,2847,
+		1,0,0,0,2846,2836,1,0,0,0,2846,2841,1,0,0,0,2847,847,1,0,0,0,2848,2849,
+		3,184,92,0,2849,2850,3,850,425,0,2850,849,1,0,0,0,2851,2854,3,392,196,
+		0,2852,2854,3,394,197,0,2853,2851,1,0,0,0,2853,2852,1,0,0,0,2854,851,1,
+		0,0,0,2855,2856,3,186,93,0,2856,2857,3,116,58,0,2857,2858,3,854,427,0,
+		2858,853,1,0,0,0,2859,2860,5,305,0,0,2860,855,1,0,0,0,2861,2862,3,188,
+		94,0,2862,2863,3,116,58,0,2863,857,1,0,0,0,2864,2865,3,190,95,0,2865,2866,
+		3,488,244,0,2866,859,1,0,0,0,2867,2868,3,192,96,0,2868,2869,3,866,433,
+		0,2869,861,1,0,0,0,2870,2871,5,299,0,0,2871,863,1,0,0,0,2872,2873,5,299,
+		0,0,2873,865,1,0,0,0,2874,2875,3,410,205,0,2875,2876,3,28,14,0,2876,2884,
+		1,0,0,0,2877,2878,3,490,245,0,2878,2879,3,862,431,0,2879,2884,1,0,0,0,
+		2880,2881,3,492,246,0,2881,2882,3,864,432,0,2882,2884,1,0,0,0,2883,2874,
+		1,0,0,0,2883,2877,1,0,0,0,2883,2880,1,0,0,0,2884,867,1,0,0,0,2885,2886,
+		3,194,97,0,2886,2887,3,874,437,0,2887,869,1,0,0,0,2888,2889,5,302,0,0,
+		2889,871,1,0,0,0,2890,2894,3,580,290,0,2891,2894,3,582,291,0,2892,2894,
+		5,302,0,0,2893,2890,1,0,0,0,2893,2891,1,0,0,0,2893,2892,1,0,0,0,2894,873,
+		1,0,0,0,2895,2896,3,178,89,0,2896,2897,3,116,58,0,2897,2898,3,878,439,
+		0,2898,2911,1,0,0,0,2899,2900,3,494,247,0,2900,2901,3,90,45,0,2901,2902,
+		3,878,439,0,2902,2911,1,0,0,0,2903,2904,3,332,166,0,2904,2905,3,876,438,
+		0,2905,2911,1,0,0,0,2906,2907,3,496,248,0,2907,2908,3,90,45,0,2908,2909,
+		3,878,439,0,2909,2911,1,0,0,0,2910,2895,1,0,0,0,2910,2899,1,0,0,0,2910,
+		2903,1,0,0,0,2910,2906,1,0,0,0,2911,875,1,0,0,0,2912,2913,3,348,174,0,
+		2913,2914,3,90,45,0,2914,2915,3,836,418,0,2915,2916,3,878,439,0,2916,2923,
+		1,0,0,0,2917,2918,3,350,175,0,2918,2919,3,116,58,0,2919,2920,3,836,418,
+		0,2920,2921,3,878,439,0,2921,2923,1,0,0,0,2922,2912,1,0,0,0,2922,2917,
+		1,0,0,0,2923,877,1,0,0,0,2924,2925,3,498,249,0,2925,2926,3,870,435,0,2926,
+		2927,3,90,45,0,2927,2928,3,872,436,0,2928,2940,1,0,0,0,2929,2930,3,188,
+		94,0,2930,2931,3,116,58,0,2931,2940,1,0,0,0,2932,2933,3,194,97,0,2933,
+		2934,3,870,435,0,2934,2940,1,0,0,0,2935,2936,3,500,250,0,2936,2937,3,90,
+		45,0,2937,2938,3,872,436,0,2938,2940,1,0,0,0,2939,2924,1,0,0,0,2939,2929,
+		1,0,0,0,2939,2932,1,0,0,0,2939,2935,1,0,0,0,2940,879,1,0,0,0,2941,2942,
+		3,196,98,0,2942,2943,3,882,441,0,2943,881,1,0,0,0,2944,2945,5,305,0,0,
+		2945,883,1,0,0,0,2946,2947,3,198,99,0,2947,2948,3,116,58,0,2948,2949,3,
+		886,443,0,2949,885,1,0,0,0,2950,2951,5,305,0,0,2951,887,1,0,0,0,2952,2953,
+		3,200,100,0,2953,2964,3,898,449,0,2954,2955,3,90,45,0,2955,2956,3,894,
+		447,0,2956,2957,3,890,445,0,2957,2959,3,892,446,0,2958,2960,3,896,448,
+		0,2959,2958,1,0,0,0,2959,2960,1,0,0,0,2960,2962,1,0,0,0,2961,2963,3,116,
+		58,0,2962,2961,1,0,0,0,2962,2963,1,0,0,0,2963,2965,1,0,0,0,2964,2954,1,
+		0,0,0,2964,2965,1,0,0,0,2965,889,1,0,0,0,2966,2967,7,0,0,0,2967,891,1,
+		0,0,0,2968,2969,5,289,0,0,2969,893,1,0,0,0,2970,2971,3,84,42,0,2971,2972,
+		3,86,43,0,2972,2973,3,88,44,0,2973,895,1,0,0,0,2974,2977,3,334,167,0,2975,
+		2977,3,338,169,0,2976,2974,1,0,0,0,2976,2975,1,0,0,0,2977,897,1,0,0,0,
+		2978,2980,3,900,450,0,2979,2981,3,38,19,0,2980,2979,1,0,0,0,2980,2981,
+		1,0,0,0,2981,899,1,0,0,0,2982,2983,7,5,0,0,2983,901,1,0,0,0,2984,2985,
+		3,202,101,0,2985,2986,3,912,456,0,2986,903,1,0,0,0,2987,2988,5,299,0,0,
+		2988,905,1,0,0,0,2989,2990,5,299,0,0,2990,907,1,0,0,0,2991,2992,5,302,
+		0,0,2992,909,1,0,0,0,2993,2994,5,302,0,0,2994,911,1,0,0,0,2995,2996,3,
+		502,251,0,2996,2997,3,904,452,0,2997,2998,3,90,45,0,2998,3017,1,0,0,0,
+		2999,3000,3,504,252,0,3000,3001,3,908,454,0,3001,3002,3,906,453,0,3002,
+		3003,3,18,9,0,3003,3004,3,90,45,0,3004,3017,1,0,0,0,3005,3006,3,492,246,
+		0,3006,3007,3,864,432,0,3007,3008,3,90,45,0,3008,3017,1,0,0,0,3009,3010,
+		3,506,253,0,3010,3011,3,910,455,0,3011,3012,3,90,45,0,3012,3013,3,916,
+		458,0,3013,3014,5,294,0,0,3014,3015,3,18,9,0,3015,3017,1,0,0,0,3016,2995,
+		1,0,0,0,3016,2999,1,0,0,0,3016,3005,1,0,0,0,3016,3009,1,0,0,0,3017,913,
+		1,0,0,0,3018,3022,3,508,254,0,3019,3022,3,510,255,0,3020,3022,3,512,256,
+		0,3021,3018,1,0,0,0,3021,3019,1,0,0,0,3021,3020,1,0,0,0,3022,915,1,0,0,
+		0,3023,3028,3,640,320,0,3024,3028,3,514,257,0,3025,3028,3,516,258,0,3026,
+		3028,3,512,256,0,3027,3023,1,0,0,0,3027,3024,1,0,0,0,3027,3025,1,0,0,0,
+		3027,3026,1,0,0,0,3028,3029,1,0,0,0,3029,3030,3,914,457,0,3030,917,1,0,
+		0,0,3031,3032,3,204,102,0,3032,3033,3,1000,500,0,3033,3034,3,926,463,0,
+		3034,3035,3,116,58,0,3035,3036,3,90,45,0,3036,3037,3,920,460,0,3037,3038,
+		3,922,461,0,3038,3039,3,924,462,0,3039,919,1,0,0,0,3040,3041,5,294,0,0,
+		3041,921,1,0,0,0,3042,3043,5,294,0,0,3043,923,1,0,0,0,3044,3045,5,294,
+		0,0,3045,925,1,0,0,0,3046,3056,3,518,259,0,3047,3056,3,520,260,0,3048,
+		3056,3,522,261,0,3049,3056,3,524,262,0,3050,3056,3,526,263,0,3051,3056,
+		3,528,264,0,3052,3056,3,530,265,0,3053,3056,3,532,266,0,3054,3056,3,260,
+		130,0,3055,3046,1,0,0,0,3055,3047,1,0,0,0,3055,3048,1,0,0,0,3055,3049,
+		1,0,0,0,3055,3050,1,0,0,0,3055,3051,1,0,0,0,3055,3052,1,0,0,0,3055,3053,
+		1,0,0,0,3055,3054,1,0,0,0,3056,927,1,0,0,0,3057,3058,3,206,103,0,3058,
+		3059,3,30,15,0,3059,3060,3,94,47,0,3060,3061,3,930,465,0,3061,929,1,0,
+		0,0,3062,3063,5,289,0,0,3063,931,1,0,0,0,3064,3065,3,208,104,0,3065,3066,
+		3,936,468,0,3066,3067,3,116,58,0,3067,3068,3,934,467,0,3068,933,1,0,0,
+		0,3069,3070,5,302,0,0,3070,935,1,0,0,0,3071,3074,3,178,89,0,3072,3074,
+		3,584,292,0,3073,3071,1,0,0,0,3073,3072,1,0,0,0,3074,937,1,0,0,0,3075,
+		3076,3,210,105,0,3076,939,1,0,0,0,3077,3078,3,212,106,0,3078,3079,3,18,
+		9,0,3079,941,1,0,0,0,3080,3081,3,214,107,0,3081,3082,3,116,58,0,3082,3083,
+		3,944,472,0,3083,943,1,0,0,0,3084,3089,3,536,268,0,3085,3086,3,538,269,
+		0,3086,3087,3,116,58,0,3087,3089,1,0,0,0,3088,3084,1,0,0,0,3088,3085,1,
+		0,0,0,3089,945,1,0,0,0,3090,3091,3,216,108,0,3091,3092,3,948,474,0,3092,
+		947,1,0,0,0,3093,3094,5,305,0,0,3094,949,1,0,0,0,3095,3096,3,218,109,0,
+		3096,3097,3,956,478,0,3097,951,1,0,0,0,3098,3099,5,302,0,0,3099,953,1,
+		0,0,0,3100,3103,3,534,267,0,3101,3103,3,332,166,0,3102,3100,1,0,0,0,3102,
+		3101,1,0,0,0,3103,955,1,0,0,0,3104,3105,3,142,71,0,3105,3106,3,952,476,
+		0,3106,3113,1,0,0,0,3107,3108,3,172,86,0,3108,3109,3,952,476,0,3109,3110,
+		5,294,0,0,3110,3111,3,954,477,0,3111,3113,1,0,0,0,3112,3104,1,0,0,0,3112,
+		3107,1,0,0,0,3113,957,1,0,0,0,3114,3115,3,220,110,0,3115,3116,3,960,480,
+		0,3116,959,1,0,0,0,3117,3118,3,540,270,0,3118,3119,3,972,486,0,3119,3124,
+		1,0,0,0,3120,3121,3,318,159,0,3121,3122,3,974,487,0,3122,3124,1,0,0,0,
+		3123,3117,1,0,0,0,3123,3120,1,0,0,0,3124,961,1,0,0,0,3125,3126,5,299,0,
+		0,3126,963,1,0,0,0,3127,3128,5,302,0,0,3128,965,1,0,0,0,3129,3132,3,542,
+		271,0,3130,3132,3,18,9,0,3131,3129,1,0,0,0,3131,3130,1,0,0,0,3132,967,
+		1,0,0,0,3133,3143,3,290,145,0,3134,3143,3,284,142,0,3135,3143,3,286,143,
+		0,3136,3143,3,288,144,0,3137,3143,3,282,141,0,3138,3143,3,292,146,0,3139,
+		3143,3,296,148,0,3140,3143,3,298,149,0,3141,3143,3,302,151,0,3142,3133,
+		1,0,0,0,3142,3134,1,0,0,0,3142,3135,1,0,0,0,3142,3136,1,0,0,0,3142,3137,
+		1,0,0,0,3142,3138,1,0,0,0,3142,3139,1,0,0,0,3142,3140,1,0,0,0,3142,3141,
+		1,0,0,0,3143,969,1,0,0,0,3144,3145,5,302,0,0,3145,971,1,0,0,0,3146,3147,
+		3,304,152,0,3147,3148,3,962,481,0,3148,3149,3,964,482,0,3149,3150,3,34,
+		17,0,3150,3170,1,0,0,0,3151,3170,3,190,95,0,3152,3153,3,346,173,0,3153,
+		3154,3,78,39,0,3154,3155,3,636,318,0,3155,3156,3,34,17,0,3156,3161,1,0,
+		0,0,3157,3158,3,544,272,0,3158,3159,3,966,483,0,3159,3161,1,0,0,0,3160,
+		3152,1,0,0,0,3160,3157,1,0,0,0,3161,3170,1,0,0,0,3162,3163,3,306,153,0,
+		3163,3164,3,78,39,0,3164,3170,1,0,0,0,3165,3166,3,546,273,0,3166,3167,
+		3,970,485,0,3167,3168,3,78,39,0,3168,3170,1,0,0,0,3169,3146,1,0,0,0,3169,
+		3151,1,0,0,0,3169,3160,1,0,0,0,3169,3162,1,0,0,0,3169,3165,1,0,0,0,3170,
+		973,1,0,0,0,3171,3172,3,304,152,0,3172,3173,3,116,58,0,3173,3174,3,78,
+		39,0,3174,3175,3,308,154,0,3175,3209,1,0,0,0,3176,3177,3,380,190,0,3177,
+		3178,3,116,58,0,3178,3179,3,78,39,0,3179,3209,1,0,0,0,3180,3181,3,374,
+		187,0,3181,3182,3,116,58,0,3182,3183,3,962,481,0,3183,3209,1,0,0,0,3184,
+		3185,3,190,95,0,3185,3186,3,116,58,0,3186,3209,1,0,0,0,3187,3188,3,548,
+		274,0,3188,3189,3,116,58,0,3189,3190,3,78,39,0,3190,3191,3,968,484,0,3191,
+		3192,3,116,58,0,3192,3193,3,78,39,0,3193,3209,1,0,0,0,3194,3195,3,306,
+		153,0,3195,3196,3,116,58,0,3196,3197,3,962,481,0,3197,3198,3,308,154,0,
+		3198,3209,1,0,0,0,3199,3200,3,550,275,0,3200,3201,3,116,58,0,3201,3202,
+		3,78,39,0,3202,3209,1,0,0,0,3203,3204,3,310,155,0,3204,3205,3,116,58,0,
+		3205,3206,3,78,39,0,3206,3207,3,308,154,0,3207,3209,1,0,0,0,3208,3171,
+		1,0,0,0,3208,3176,1,0,0,0,3208,3180,1,0,0,0,3208,3184,1,0,0,0,3208,3187,
+		1,0,0,0,3208,3194,1,0,0,0,3208,3199,1,0,0,0,3208,3203,1,0,0,0,3209,975,
+		1,0,0,0,3210,3211,3,222,111,0,3211,977,1,0,0,0,3212,3213,3,224,112,0,3213,
+		3214,3,90,45,0,3214,3215,3,72,36,0,3215,3216,3,980,490,0,3216,979,1,0,
+		0,0,3217,3221,3,480,240,0,3218,3221,3,484,242,0,3219,3221,3,332,166,0,
+		3220,3217,1,0,0,0,3220,3218,1,0,0,0,3220,3219,1,0,0,0,3221,981,1,0,0,0,
+		3222,3223,3,226,113,0,3223,3224,3,90,45,0,3224,3225,5,294,0,0,3225,983,
+		1,0,0,0,3226,3227,3,228,114,0,3227,3228,3,116,58,0,3228,3229,3,90,45,0,
+		3229,3230,5,294,0,0,3230,985,1,0,0,0,3231,3232,3,230,115,0,3232,3233,3,
+		116,58,0,3233,3234,3,116,58,0,3234,987,1,0,0,0,3235,3236,3,232,116,0,3236,
+		3237,3,92,46,0,3237,3238,3,992,496,0,3238,3239,3,994,497,0,3239,3240,3,
+		990,495,0,3240,989,1,0,0,0,3241,3242,3,638,319,0,3242,3243,3,116,58,0,
+		3243,3250,1,0,0,0,3244,3245,3,552,276,0,3245,3246,3,18,9,0,3246,3247,3,
+		30,15,0,3247,3248,3,116,58,0,3248,3250,1,0,0,0,3249,3241,1,0,0,0,3249,
+		3244,1,0,0,0,3250,991,1,0,0,0,3251,3252,5,294,0,0,3252,993,1,0,0,0,3253,
+		3254,5,294,0,0,3254,995,1,0,0,0,3255,3256,5,33,0,0,3256,997,1,0,0,0,3257,
+		3258,3,234,117,0,3258,3259,3,116,58,0,3259,3260,3,1002,501,0,3260,3261,
+		3,1000,500,0,3261,999,1,0,0,0,3262,3263,5,302,0,0,3263,1001,1,0,0,0,3264,
+		3276,3,134,67,0,3265,3276,3,518,259,0,3266,3276,3,348,174,0,3267,3276,
+		3,520,260,0,3268,3276,3,522,261,0,3269,3276,3,524,262,0,3270,3276,3,526,
+		263,0,3271,3276,3,528,264,0,3272,3276,3,530,265,0,3273,3276,3,532,266,
+		0,3274,3276,3,260,130,0,3275,3264,1,0,0,0,3275,3265,1,0,0,0,3275,3266,
+		1,0,0,0,3275,3267,1,0,0,0,3275,3268,1,0,0,0,3275,3269,1,0,0,0,3275,3270,
+		1,0,0,0,3275,3271,1,0,0,0,3275,3272,1,0,0,0,3275,3273,1,0,0,0,3275,3274,
+		1,0,0,0,3276,1003,1,0,0,0,3277,3278,3,236,118,0,3278,3279,3,112,56,0,3279,
+		3280,3,90,45,0,3280,3281,3,34,17,0,3281,1005,1,0,0,0,3282,3283,3,238,119,
+		0,3283,3284,3,116,58,0,3284,3285,3,1008,504,0,3285,1007,1,0,0,0,3286,3291,
+		3,304,152,0,3287,3288,3,306,153,0,3288,3289,3,1010,505,0,3289,3291,1,0,
+		0,0,3290,3286,1,0,0,0,3290,3287,1,0,0,0,3291,3294,1,0,0,0,3292,3294,3,
+		190,95,0,3293,3290,1,0,0,0,3293,3292,1,0,0,0,3294,1009,1,0,0,0,3295,3296,
+		5,299,0,0,3296,1011,1,0,0,0,3297,3298,3,240,120,0,3298,3299,3,1024,512,
+		0,3299,1013,1,0,0,0,3300,3301,5,299,0,0,3301,1015,1,0,0,0,3302,3303,5,
+		299,0,0,3303,1017,1,0,0,0,3304,3309,3,586,293,0,3305,3309,3,588,294,0,
+		3306,3309,3,590,295,0,3307,3309,3,592,296,0,3308,3304,1,0,0,0,3308,3305,
+		1,0,0,0,3308,3306,1,0,0,0,3308,3307,1,0,0,0,3309,1019,1,0,0,0,3310,3311,
+		5,299,0,0,3311,1021,1,0,0,0,3312,3317,3,586,293,0,3313,3317,3,594,297,
+		0,3314,3317,3,596,298,0,3315,3317,3,588,294,0,3316,3312,1,0,0,0,3316,3313,
+		1,0,0,0,3316,3314,1,0,0,0,3316,3315,1,0,0,0,3317,1023,1,0,0,0,3318,3319,
+		3,304,152,0,3319,3320,3,1016,508,0,3320,3321,3,34,17,0,3321,3344,1,0,0,
+		0,3322,3323,3,622,311,0,3323,3324,3,1014,507,0,3324,3344,1,0,0,0,3325,
+		3326,3,624,312,0,3326,3328,3,1014,507,0,3327,3329,3,116,58,0,3328,3327,
+		1,0,0,0,3328,3329,1,0,0,0,3329,3344,1,0,0,0,3330,3331,3,626,313,0,3331,
+		3332,3,116,58,0,3332,3344,1,0,0,0,3333,3334,3,190,95,0,3334,3335,3,1014,
+		507,0,3335,3344,1,0,0,0,3336,3337,3,346,173,0,3337,3338,3,1014,507,0,3338,
+		3339,3,1026,513,0,3339,3344,1,0,0,0,3340,3341,3,306,153,0,3341,3342,3,
+		1014,507,0,3342,3344,1,0,0,0,3343,3318,1,0,0,0,3343,3322,1,0,0,0,3343,
+		3325,1,0,0,0,3343,3330,1,0,0,0,3343,3333,1,0,0,0,3343,3336,1,0,0,0,3343,
+		3340,1,0,0,0,3344,1025,1,0,0,0,3345,3346,3,628,314,0,3346,3347,3,1018,
+		509,0,3347,3373,1,0,0,0,3348,3349,3,322,161,0,3349,3350,3,1020,510,0,3350,
+		3373,1,0,0,0,3351,3352,3,630,315,0,3352,3353,3,1022,511,0,3353,3373,1,
+		0,0,0,3354,3355,3,636,318,0,3355,3356,3,34,17,0,3356,3373,1,0,0,0,3357,
+		3358,3,598,299,0,3358,3359,3,30,15,0,3359,3373,1,0,0,0,3360,3361,3,600,
+		300,0,3361,3362,3,1022,511,0,3362,3373,1,0,0,0,3363,3366,3,632,316,0,3364,
+		3366,3,634,317,0,3365,3363,1,0,0,0,3365,3364,1,0,0,0,3366,3367,1,0,0,0,
+		3367,3368,3,34,17,0,3368,3373,1,0,0,0,3369,3370,3,602,301,0,3370,3371,
+		3,30,15,0,3371,3373,1,0,0,0,3372,3345,1,0,0,0,3372,3348,1,0,0,0,3372,3351,
+		1,0,0,0,3372,3354,1,0,0,0,3372,3357,1,0,0,0,3372,3360,1,0,0,0,3372,3365,
+		1,0,0,0,3372,3369,1,0,0,0,3373,1027,1,0,0,0,3374,3375,3,242,121,0,3375,
+		3376,3,1030,515,0,3376,1029,1,0,0,0,3377,3378,5,305,0,0,3378,1031,1,0,
+		0,0,3379,3380,3,244,122,0,3380,3381,3,1036,518,0,3381,1033,1,0,0,0,3382,
+		3385,3,404,202,0,3383,3385,3,406,203,0,3384,3382,1,0,0,0,3384,3383,1,0,
+		0,0,3385,1035,1,0,0,0,3386,3406,3,90,45,0,3387,3403,3,116,58,0,3388,3404,
+		3,116,58,0,3389,3398,3,90,45,0,3390,3396,3,574,287,0,3391,3392,3,350,175,
+		0,3392,3393,3,116,58,0,3393,3394,3,1034,517,0,3394,3397,1,0,0,0,3395,3397,
+		3,90,45,0,3396,3391,1,0,0,0,3396,3395,1,0,0,0,3397,3399,1,0,0,0,3398,3390,
+		1,0,0,0,3398,3399,1,0,0,0,3399,3402,1,0,0,0,3400,3402,3,92,46,0,3401,3389,
+		1,0,0,0,3401,3400,1,0,0,0,3402,3404,1,0,0,0,3403,3388,1,0,0,0,3403,3401,
+		1,0,0,0,3404,3406,1,0,0,0,3405,3386,1,0,0,0,3405,3387,1,0,0,0,3406,1037,
+		1,0,0,0,3407,3408,3,246,123,0,3408,3409,3,116,58,0,3409,3410,3,1040,520,
+		0,3410,1039,1,0,0,0,3411,3412,5,305,0,0,3412,1041,1,0,0,0,3413,3414,3,
+		248,124,0,3414,3415,3,116,58,0,3415,3416,3,34,17,0,3416,1043,1,0,0,0,3417,
+		3418,3,250,125,0,3418,3419,3,1050,525,0,3419,1045,1,0,0,0,3420,3424,3,
+		608,304,0,3421,3424,3,614,307,0,3422,3424,3,618,309,0,3423,3420,1,0,0,
+		0,3423,3421,1,0,0,0,3423,3422,1,0,0,0,3424,1047,1,0,0,0,3425,3430,3,608,
+		304,0,3426,3430,3,610,305,0,3427,3430,3,612,306,0,3428,3430,3,616,308,
+		0,3429,3425,1,0,0,0,3429,3426,1,0,0,0,3429,3427,1,0,0,0,3429,3428,1,0,
+		0,0,3430,1049,1,0,0,0,3431,3432,3,304,152,0,3432,3433,3,26,13,0,3433,3444,
+		1,0,0,0,3434,3435,3,474,237,0,3435,3436,3,1046,523,0,3436,3444,1,0,0,0,
+		3437,3438,3,310,155,0,3438,3439,3,1048,524,0,3439,3442,1,0,0,0,3440,3442,
+		3,26,13,0,3441,3437,1,0,0,0,3441,3440,1,0,0,0,3442,3444,1,0,0,0,3443,3431,
+		1,0,0,0,3443,3434,1,0,0,0,3443,3441,1,0,0,0,3444,1051,1,0,0,0,3445,3446,
+		3,252,126,0,3446,3447,3,116,58,0,3447,3448,3,1054,527,0,3448,1053,1,0,
+		0,0,3449,3453,3,554,277,0,3450,3453,3,556,278,0,3451,3453,3,252,126,0,
+		3452,3449,1,0,0,0,3452,3450,1,0,0,0,3452,3451,1,0,0,0,3453,3454,1,0,0,
+		0,3454,3455,3,34,17,0,3455,3466,1,0,0,0,3456,3459,3,142,71,0,3457,3459,
+		3,550,275,0,3458,3456,1,0,0,0,3458,3457,1,0,0,0,3459,3466,1,0,0,0,3460,
+		3461,3,558,279,0,3461,3462,3,560,280,0,3462,3463,3,562,281,0,3463,3464,
+		3,564,282,0,3464,3466,1,0,0,0,3465,3452,1,0,0,0,3465,3458,1,0,0,0,3465,
+		3460,1,0,0,0,3466,1055,1,0,0,0,3467,3468,5,289,0,0,3468,1057,1,0,0,0,3469,
+		3470,3,254,127,0,3470,3471,3,1060,530,0,3471,1059,1,0,0,0,3472,3473,5,
+		305,0,0,3473,1061,1,0,0,0,3474,3475,3,256,128,0,3475,3476,3,1036,518,0,
+		3476,1063,1,0,0,0,3477,3478,3,258,129,0,3478,3479,3,1066,533,0,3479,3480,
+		3,1068,534,0,3480,3481,3,308,154,0,3481,1065,1,0,0,0,3482,3483,5,299,0,
+		0,3483,1067,1,0,0,0,3484,3487,3,304,152,0,3485,3487,3,310,155,0,3486,3484,
+		1,0,0,0,3486,3485,1,0,0,0,3487,1069,1,0,0,0,3488,3489,3,260,130,0,3489,
+		3490,3,1072,536,0,3490,3491,5,294,0,0,3491,1071,1,0,0,0,3492,3496,3,142,
+		71,0,3493,3496,3,604,302,0,3494,3496,3,606,303,0,3495,3492,1,0,0,0,3495,
+		3493,1,0,0,0,3495,3494,1,0,0,0,3496,1073,1,0,0,0,3497,3498,3,262,131,0,
+		3498,3499,3,1076,538,0,3499,1075,1,0,0,0,3500,3501,3,304,152,0,3501,3502,
+		5,294,0,0,3502,3503,3,18,9,0,3503,3521,1,0,0,0,3504,3505,3,566,283,0,3505,
+		3506,3,92,46,0,3506,3521,1,0,0,0,3507,3508,3,146,73,0,3508,3509,3,1080,
+		540,0,3509,3510,5,294,0,0,3510,3521,1,0,0,0,3511,3521,3,374,187,0,3512,
+		3513,3,310,155,0,3513,3514,5,294,0,0,3514,3515,3,18,9,0,3515,3521,1,0,
+		0,0,3516,3517,3,568,284,0,3517,3518,3,1078,539,0,3518,3519,3,18,9,0,3519,
+		3521,1,0,0,0,3520,3500,1,0,0,0,3520,3504,1,0,0,0,3520,3507,1,0,0,0,3520,
+		3511,1,0,0,0,3520,3512,1,0,0,0,3520,3516,1,0,0,0,3521,1077,1,0,0,0,3522,
+		3525,3,620,310,0,3523,3525,3,250,125,0,3524,3522,1,0,0,0,3524,3523,1,0,
+		0,0,3525,1079,1,0,0,0,3526,3529,3,570,285,0,3527,3529,3,572,286,0,3528,
+		3526,1,0,0,0,3528,3527,1,0,0,0,3529,1081,1,0,0,0,3530,3531,3,264,132,0,
+		3531,3532,3,802,401,0,3532,1083,1,0,0,0,170,1129,1134,1143,1148,1169,1174,
+		1177,1185,1196,1202,1212,1219,1238,1243,1245,1296,1298,1309,1312,1316,
+		1323,1327,1336,1339,1343,1357,1367,1373,1378,1397,1400,1405,1412,1419,
+		1426,1429,1434,1436,1503,2018,2034,2043,2048,2054,2065,2082,2086,2102,
+		2107,2130,2140,2163,2168,2171,2173,2181,2186,2202,2215,2217,2220,2225,
+		2243,2264,2270,2276,2282,2284,2298,2305,2319,2333,2344,2362,2379,2393,
+		2400,2412,2424,2434,2446,2454,2456,2467,2469,2495,2501,2505,2519,2549,
+		2558,2564,2573,2575,2585,2591,2599,2627,2631,2643,2655,2666,2682,2702,
+		2711,2715,2725,2737,2742,2760,2772,2780,2813,2822,2834,2846,2853,2883,
+		2893,2910,2922,2939,2959,2962,2964,2976,2980,3016,3021,3027,3055,3073,
+		3088,3102,3112,3123,3131,3142,3160,3169,3208,3220,3249,3275,3290,3293,
+		3308,3316,3328,3343,3365,3372,3384,3396,3398,3401,3403,3405,3423,3429,
+		3441,3443,3452,3458,3465,3486,3495,3520,3524,3528
 	};
 
 	public static readonly ATN _ATN =
