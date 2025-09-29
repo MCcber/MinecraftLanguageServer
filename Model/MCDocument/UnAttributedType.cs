@@ -5,18 +5,18 @@ namespace MinecraftLanguageServer.Model.MCDocument
 {
     public class UnAttributedType
     {
-        KeyWordType? KeyWordType { get; set; }
-        StringType? StringType { get; set; }
-        LiteralType? LiteralType { get; set; }
-        NumericType? NumericType { get; set; }
-        PrimitiveArrayType? PrimitiveArrayType { get; set; }
-        ListType? ListType { get; set; }
-        TupleType? TupleType { get; set; }
-        Enumeration? EnumType { get; set; }
-        Structure? Structure { get; set; }
-        ReferenceType? ReferenceType { get; set; }
-        DispatchType? DispatchType { get; set; }
-        UnionType? UnionType { get; set; }
-        IndexOnAType? IndexOnAType { get; set; }
+        public KeyWordType? KeyWordType { get; set; }
+        public StringType? StringType { get; set; }
+        public LiteralType? LiteralType { get; set; }
+        public NumericType? NumericType { get; set; }
+        public PrimitiveArrayType? PrimitiveArrayType { get; set; }
+        public ListType? ListType { get; set; }
+        public TupleType? TupleType { get; set; }
+        public Enumeration? EnumType { get; set; }
+        public Structure? Structure { get; set; }
+        public ReferenceType? ReferenceType { get; set; }
+        public DispatchType? DispatchType { get; set; }
+        public UnionType? UnionType { get; set; }
+        public IndexOnAType? IndexOnAType { get; set; }
     }
 }

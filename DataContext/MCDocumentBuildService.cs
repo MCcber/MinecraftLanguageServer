@@ -74,6 +74,7 @@ namespace MinecraftLanguageServer.DataContext
                 ParseTreeWalker.Default.Walk(mcdocListener, context);
             });
 
+            MCDocumentFileModel model = mcdocListener.GetResult();
             byte[] resultArray = new byte[2048];
             string value = "success";
             resultArray = Encoding.UTF8.GetBytes(value);

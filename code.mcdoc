@@ -1,9 +1,5 @@
 use ::java::util::attribute::AttributeName
 use ::java::util::attribute::LegacyOperation
-use ::java::util::slot::EquipmentSlotGroup
-use ::java::world::block::BlockEntityData
-use ::java::world::component::DataComponentPatch
-use ::java::world::component::item::Trim
 
 // 单个物品
 struct SingleItem {
