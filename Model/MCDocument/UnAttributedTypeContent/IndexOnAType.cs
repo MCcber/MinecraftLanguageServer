@@ -2,6 +2,6 @@
 {
     public class IndexOnAType
     {
-        public IndexBody IndexBody { get; set; } = new();
+        public IndexBody? IndexBody { get; set; }
     }
 }

@@ -4,7 +4,7 @@ namespace MinecraftLanguageServer.Model.MCDocument.UnAttributedTypeContent
 {
     public class NumericType
     {
-        public BaseDataType BaseDataType { get; set; }
+        public BaseDataType? BaseDataType { get; set; }
         public string? Range { get; set; }
     }
 }

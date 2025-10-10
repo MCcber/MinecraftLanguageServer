@@ -2,7 +2,7 @@
 {
     public class EnumValue
     {
-        public TypedNumber TypedNumber { get; set; } = new();
+        public TypedNumber? TypedNumber { get; set; } = new();
         public string String { get; set; } = "";
     }
 }

@@ -13,40 +13,34 @@ namespace MinecraftLanguageServer.MCDocumentService
     public partial class MCDocmentListener : mcdocParserBaseListener
     {
         #region Field
-        private bool boolValueOfLiteralType = false;
-        private bool typedNumberOfLiteralType = false;
-        private bool stringValueOfLiteralType = false;
-        private bool identifierOfLiteralType = false;
+        //private Stack<bool> boolValueOfParentStack = [];
+        //private Stack<bool> typedNumberOfParentStack = [];
+        //private Stack<bool> stringValueOfParentStack = [];
+        //private Stack<bool> identifierOfParentStack = [];
+        //private Stack<bool> keywordTypeOfParentStack = [];
+        //private Stack<bool> stringTypeOfParentStack = [];
+        //private Stack<bool> literialTypeOfParentStack = [];
+        //private Stack<bool> numericTypeOfParentStack = [];
+        //private Stack<bool> primitiveArrayTypeOfParentStack = [];
+        //private Stack<bool> listTypeOfParentStack = [];
+        //private Stack<bool> tupleTypeOfParentStack = [];
+        //private Stack<bool> enumTypeOfParentStack = [];
+        //private Stack<bool> structOfParentStack = [];
+        //private Stack<bool> referenceOfParentStack = [];
+        //private Stack<bool> dispatcherTypeOfParentStack = [];
+        //private Stack<bool> unionTypeOfParentStack = [];
+        //private Stack<bool> indexingOnATypeOfParentStack = [];
+        //private Stack<bool> positionalValuesOfParentStack = [];
+        //private Stack<bool> namedValuesOfParentStack = [];
+        //private Stack<bool> valueOfParentStack = [];
+        //private Stack<bool> treeValueOfParentStack = [];
+        //private Stack<bool> attributeOfParentStack = [];
+        //private Stack<bool> indexBodyOfParentStack = [];
+        //private Stack<bool> typeArgBlockOfParentStack = [];
+        //private Stack<bool> prelimOfParentStack = [];
+        //private Stack<bool> enumInjectionOfParentStack = [];
+        //private Stack<bool> structInjectionOfParentStack = [];
 
-        private bool keywordTypeOfUnAttributedType = false;
-        private bool stringTypeOfUnAttributedType = false;
-        private bool literialTypeOfUnAttributedType = false;
-        private bool numericTypeOfUnAttributedType = false;
-        private bool primitiveArrayTypeOfUnAttributedType = false;
-        private bool listTypeOfUnAttributedType = false;
-        private bool tupleTypeOfUnAttributedType = false;
-        private bool enumTypeOfUnAttributedType = false;
-        private bool structOfUnAttributedType = false;
-        private bool referenceOfUnAttributedType = false;
-        private bool dispatcherTypeOfUnAttributedType = false;
-        private bool unionTypeOfUnAttributedType = false;
-        private bool indexingOnATypeOfUnAttributedType = false;
-
-        private bool positionalValuesOfTreeBody = false;
-        private bool namedValuesOfTreeBody = false;
-        private bool valueOfParent = false;
-        private bool treeValueOfParent = false;
-
-        private bool attributeOfParent = false;
-        private bool indexBodyOfParent = false;
-        private bool typeArgBlockOfParent = false;
-
-        private bool prelimOfParent = false;
-
-        private bool enumInjectionOfParent = false;
-        private bool structInjectionOfParent = false;
-
-        private string lastContextName = "";
         private string[] intUnit = ["b","s","l"];
         private string[] floatUnit = ["d","f"];
         private List<string> BlackList = ["IntegerContext", "IntegerRangeContext"];
@@ -82,44 +76,68 @@ namespace MinecraftLanguageServer.MCDocumentService
             if(!result.IsCollected)
             {
                 #region 收集结构体
-                if (DocumentFieldMap.TryGetValue("Struct", out Stack<List<object>>? structSentence) && structSentence is not null && structSentence.Count > 0)
+                if (DocumentFieldMap.TryGetValue("StructContext", out Stack<List<object>>? structSentence) && structSentence is not null)
                 {
-                    result.StructureList.AddRange(structSentence.Peek().Cast<Structure>().Where(item=>item.IsTop));
+                    while (structSentence.Count > 0)
+                    {
+                        result.StructureList.AddRange(structSentence.Pop().Cast<Structure>().Where(item=>item.IsTop));
+                    }
+                    result.StructureList.Reverse();
                 }
                 #endregion
 
                 #region 收集枚举
-                if (DocumentFieldMap.TryGetValue("EnumType", out Stack<List<object>>? enumTypeSentence) && enumTypeSentence is not null && enumTypeSentence.Count > 0)
+                if (DocumentFieldMap.TryGetValue("EnumTypeContext", out Stack<List<object>>? enumTypeSentence) && enumTypeSentence is not null)
                 {
-                    result.EnumerationList.AddRange(enumTypeSentence.Peek().Cast<Enumeration>().Where(item => item.IsTop));
+                    while (enumTypeSentence.Count > 0)
+                    {
+                        result.EnumerationList.AddRange(enumTypeSentence.Pop().Cast<Enumeration>().Where(item => item.IsTop));
+                    }
+                    result.EnumerationList.Reverse();
                 }
                 #endregion
 
                 #region 收集TypeAlias
-                if (DocumentFieldMap.TryGetValue("TypeAlias", out Stack<List<object>>? typeAliasSentence) && typeAliasSentence is not null && typeAliasSentence.Count > 0)
+                if (DocumentFieldMap.TryGetValue("TypeAliasContext", out Stack<List<object>>? typeAliasSentence) && typeAliasSentence is not null)
                 {
-                    result.TypeAliaList.AddRange(typeAliasSentence.Peek().Cast<TypeAlia>());
+                    while (typeAliasSentence.Count > 0)
+                    {
+                        result.TypeAliaList.AddRange(typeAliasSentence.Pop().Cast<TypeAlia>());
+                    }
+                    result.TypeAliaList.Reverse();
                 }
                 #endregion
 
                 #region 收集外部引用
-                if (DocumentFieldMap.TryGetValue("UseStatement", out Stack<List<object>>? useStatementSentence) && useStatementSentence is not null && useStatementSentence.Count > 0)
+                if (DocumentFieldMap.TryGetValue("UseStatementContext", out Stack<List<object>>? useStatementSentence) && useStatementSentence is not null)
                 {
-                    result.UseStatementList.AddRange(useStatementSentence.Peek().Cast<UseStatement>());
+                    while (useStatementSentence.Count > 0)
+                    {
+                        result.UseStatementList.AddRange(useStatementSentence.Pop().Cast<UseStatement>());
+                    }
+                    result.UseStatementList.Reverse();
                 }
                 #endregion
 
                 #region 收集注入
-                if (DocumentFieldMap.TryGetValue("Injection", out Stack<List<object>>? injectionSentence) && injectionSentence is not null && injectionSentence.Count > 0)
+                if (DocumentFieldMap.TryGetValue("InjectionContext", out Stack<List<object>>? injectionSentence) && injectionSentence is not null)
                 {
-                    result.InjectionList.AddRange(injectionSentence.Peek().Cast<Injection>());
+                    while (injectionSentence.Count > 0)
+                    {
+                        result.InjectionList.AddRange(injectionSentence.Pop().Cast<Injection>());
+                    }
+                    result.InjectionList.Reverse();
                 }
                 #endregion
 
                 #region 收集调度命令
-                if (DocumentFieldMap.TryGetValue("DispatchStatement", out Stack<List<object>>? dispatchStatementSentence) && dispatchStatementSentence is not null && dispatchStatementSentence.Count > 0)
+                if (DocumentFieldMap.TryGetValue("DispatchStatementContext", out Stack<List<object>>? dispatchStatementSentence) && dispatchStatementSentence is not null)
                 {
-                    result.DispatchStatementList.AddRange(dispatchStatementSentence.Peek().Cast<DispatchStatement>());
+                    while (dispatchStatementSentence.Count > 0)
+                    {
+                        result.DispatchStatementList.AddRange(dispatchStatementSentence.Pop().Cast<DispatchStatement>());
+                    }
+                    result.DispatchStatementList.Reverse();
                 }
                 #endregion
 
@@ -133,7 +151,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        private string GetTypeName(ParserRuleContext context)
+        private string GetTypeName(RuleContext context)
         {
             return context.GetType().ToString().Replace("mcdocParser+", "");
         }
@@ -150,6 +168,10 @@ namespace MinecraftLanguageServer.MCDocumentService
                 DocumentFieldMap.Add(typeName, value);
             }
 
+            if(value.Count == 0)
+            {
+                value.Push([]);
+            }
             value.Peek().Add(data);
         }
         #endregion
@@ -161,21 +183,21 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.EnterEveryRule(context);
             string typeName = GetTypeName(context);
-            if(BlackList.Contains(typeName))
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") ?? "";
+            if(parentTypeName.Length > 0)
+            {
+                parentTypeName += '.';
+            }
+            if (BlackList.Contains(typeName))
             {
                 return;
             }
             string lowerTypeName = typeName.Replace("Context", "").ToLower().Trim();
             string currentValue = context.GetText().Trim();
-            if (lowerTypeName != currentValue && lastContextName != typeName)
+            if (lowerTypeName != currentValue)
             {
-                DocumentFieldMap.TryAdd(typeName, []);
-                DocumentFieldMap[typeName].Push([]);
-                lastContextName = typeName;
-            }
-            else
-            {
-
+                DocumentFieldMap.TryAdd(parentTypeName + typeName, []);
+                DocumentFieldMap[parentTypeName + typeName].Push([]);
             }
         }
 
@@ -196,128 +218,133 @@ namespace MinecraftLanguageServer.MCDocumentService
                 if(methodArray[i].ReturnType != typeof(ParserRuleContext) && methodArray[i].ReturnType.BaseType is null)
                 {
                     typeName = GetTypeName(context);
+                    string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") ?? "";
+                    if(parentTypeName.Length > 0)
+                    {
+                        parentTypeName += '.';
+                    }
                     string currentValue = context.GetText().Trim();
                     List<object> targetList = [];
-                    if (DocumentFieldMap.TryGetValue(typeName, out Stack<List<object>>? stack))
+                    if (DocumentFieldMap.TryGetValue(parentTypeName + typeName, out Stack<List<object>>? stack))
                     {
                         targetList = stack.Peek();
                     }
-                    if (DocumentFieldMap.TryGetValue(typeName,out Stack<List<object>>? list) && list is not null && (targetList.Count == 0 || (targetList.Count > 0 && targetList[^1].GetType() is null)))
+                    if (DocumentFieldMap.TryGetValue(parentTypeName + typeName, out Stack<List<object>>? list) && list is not null && (targetList.Count == 0 || (targetList.Count > 0 && targetList[^1].GetType() is null)))
                     {
-                        DocumentFieldMap[typeName].Peek().Add(currentValue);
+                        DocumentFieldMap[parentTypeName + typeName].Peek().Add(currentValue);
                     }
                 }
             }
 
             #region 判断拥有多个父级或拥有多个子语法的节点是否被"走过"
-            if (context is BoolValueContext)
-            {
-                boolValueOfLiteralType = true;
-            }
-            if(context is TypedNumberContext)
-            {
-                typedNumberOfLiteralType = true;
-            }
-            if(context is StringContext)
-            {
-                stringValueOfLiteralType = true;
-            }
-            if(context is IdentifierContext)
-            {
-                identifierOfLiteralType = true;
-            }
-            if(context is KeywordTypeContext)
-            {
-                keywordTypeOfUnAttributedType = true;
-            }
-            if(context is StringTypeContext)
-            {
-                stringTypeOfUnAttributedType = true;
-            }
-            if(context is LiteralTypeContext)
-            {
-                literialTypeOfUnAttributedType = true;
-            }
-            if(context is NumericTypeContext)
-            {
-                numericTypeOfUnAttributedType = true;
-            }
-            if(context is PrimitiveArrayTypeContext)
-            {
-                primitiveArrayTypeOfUnAttributedType = true;
-            }
-            if(context is ListTypeContext)
-            {
-                listTypeOfUnAttributedType = true;
-            }
-            if(context is TupleTypeContext)
-            {
-                tupleTypeOfUnAttributedType = true;
-            }
-            if(context is EnumTypeContext)
-            {
-                enumTypeOfUnAttributedType = true;
-            }
-            if(context is StructContext)
-            {
-                structOfUnAttributedType = true;
-            }
-            if(context is ReferenceTypeContext)
-            {
-                referenceOfUnAttributedType = true;
-            }
-            if(context is DispatcherTypeContext)
-            {
-                dispatcherTypeOfUnAttributedType = true;
-            }
-            if(context is UnionTypeContext)
-            {
-                unionTypeOfUnAttributedType = true;
-            }
-            if(context is IndexingOnATypeContext)
-            {
-                indexingOnATypeOfUnAttributedType = true;
-            }
-            if(context is PositionalValuesContext)
-            {
-                positionalValuesOfTreeBody = true;
-            }
-            if(context is NamedValuesContext)
-            {
-                namedValuesOfTreeBody = true;
-            }
-            if(context is ValueContext)
-            {
-                valueOfParent = true;
-            }
-            if(context is TreeValueContext)
-            {
-                treeValueOfParent = true;
-            }
-            if(context is AttributeContext)
-            {
-                attributeOfParent = true;
-            }
-            if(context is IndexBodyContext)
-            {
-                indexBodyOfParent = true;
-            }
-            if(context is TypeArgBlockContext)
-            {
-                typeArgBlockOfParent = true;
-            }
-            if(context is PrelimContext)
-            {
-                prelimOfParent = true;
-            }
-            if(context is EnumInjectionContext)
-            {
-                enumInjectionOfParent = true;
-            }
-            if(context is StructInjectionContext)
-            {
-                structInjectionOfParent = true;
-            }
+            //if (context is BoolValueContext)
+            //{
+            //    boolValueOfParentStack.Push(true);
+            //}
+            //if (context is TypedNumberContext)
+            //{
+            //    typedNumberOfParentStack.Push(true);
+            //}
+            //if (context is StringContext)
+            //{
+            //    stringValueOfParentStack.Push(true);
+            //}
+            //if (context is IdentifierContext)
+            //{
+            //    identifierOfParentStack.Push(true);
+            //}
+            //if (context is KeywordTypeContext)
+            //{
+            //    keywordTypeOfParentStack.Push(true);
+            //}
+            //if (context is StringTypeContext)
+            //{
+            //    stringTypeOfParentStack.Push(true);
+            //}
+            //if (context is LiteralTypeContext)
+            //{
+            //    literialTypeOfParentStack.Push(true);
+            //}
+            //if (context is NumericTypeContext)
+            //{
+            //    numericTypeOfParentStack.Push(true);
+            //}
+            //if (context is PrimitiveArrayTypeContext)
+            //{
+            //    primitiveArrayTypeOfParentStack.Push(true);
+            //}
+            //if (context is ListTypeContext)
+            //{
+            //    listTypeOfParentStack.Push(true);
+            //}
+            //if (context is TupleTypeContext)
+            //{
+            //    tupleTypeOfParentStack.Push(true);
+            //}
+            //if (context is EnumTypeContext)
+            //{
+            //    enumTypeOfParentStack.Push(true);
+            //}
+            //if (context is StructContext)
+            //{
+            //    structOfParentStack.Push(true);
+            //}
+            //if (context is ReferenceTypeContext)
+            //{
+            //    referenceOfParentStack.Push(true);
+            //}
+            //if (context is DispatcherTypeContext)
+            //{
+            //    dispatcherTypeOfParentStack.Push(true);
+            //}
+            //if (context is UnionTypeContext)
+            //{
+            //    unionTypeOfParentStack.Push(true);
+            //}
+            //if (context is IndexingOnATypeContext)
+            //{
+            //    indexingOnATypeOfParentStack.Push(true);
+            //}
+            //if (context is PositionalValuesContext)
+            //{
+            //    positionalValuesOfParentStack.Push(true);
+            //}
+            //if (context is NamedValuesContext)
+            //{
+            //    namedValuesOfParentStack.Push(true);
+            //}
+            //if (context is ValueContext)
+            //{
+            //    valueOfParentStack.Push(true);
+            //}
+            //if (context is TreeValueContext)
+            //{
+            //    treeValueOfParentStack.Push(true);
+            //}
+            //if (context is AttributeContext)
+            //{
+            //    attributeOfParentStack.Push(true);
+            //}
+            //if (context is IndexBodyContext)
+            //{
+            //    indexBodyOfParentStack.Push(true);
+            //}
+            //if (context is TypeArgBlockContext)
+            //{
+            //    typeArgBlockOfParentStack.Push(true);
+            //}
+            //if (context is PrelimContext)
+            //{
+            //    prelimOfParentStack.Push(true);
+            //}
+            //if (context is EnumInjectionContext)
+            //{
+            //    enumInjectionOfParentStack.Push(true);
+            //}
+            //if (context is StructInjectionContext)
+            //{
+            //    structInjectionOfParentStack.Push(true);
+            //}
             #endregion
         }
         #endregion
@@ -353,11 +380,21 @@ namespace MinecraftLanguageServer.MCDocumentService
             string currentValue = context.GetText();
             string stringValue = currentValue.TrimStart().StartsWith('"') ? currentValue : "";
 
-            PushToStack(typeName,new EnumValue()
+            EnumValue enumValue = new()
             {
-                String = stringValue,
-                TypedNumber = DocumentFieldMap["TypedNumberContext"].Peek().Last() as TypedNumber
-            });
+                String = stringValue
+            };
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypedNumberContext", out Stack<List<object>>? typedNumberStack) && typedNumberStack is not null && typedNumberStack.Count > 0)
+            {
+                List<object>? list = typedNumberStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    enumValue.TypedNumber = list[^1] as TypedNumber;
+                }
+            }
+
+            PushToStack(typeName, enumValue);
         }
 
         public override void ExitEnumField([NotNull] EnumFieldContext context)
@@ -368,21 +405,32 @@ namespace MinecraftLanguageServer.MCDocumentService
 
             EnumField enumField = new();
 
-            if(DocumentFieldMap.TryGetValue("PrelimContext",out Stack<List<object>>? prelimStack) && prelimStack is not null && prelimStack.Count > 0)
+            if(DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null && prelimStack.Count > 0)
             {
                 enumField.PrelimList = [..prelimStack.Pop().Cast<Prelim>()];
             }
-            if (DocumentFieldMap.TryGetValue("AttributeContext", out Stack<List<object>>? attributeStack) && attributeStack is not null && attributeStack.Count > 0)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".AttributeContext", out Stack<List<object>>? attributeStack) && attributeStack is not null && attributeStack.Count > 0)
             {
                 enumField.AttributeList = [.. attributeStack.Pop().Cast<MCDocumentAttribute>()];
             }
-            if (DocumentFieldMap.TryGetValue("IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
+            
+            if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
             {
-                enumField.Key = identifierStack.Pop().Last().ToString();
+                List<object> lastObjList = identifierStack.Pop();
+                if (lastObjList is not null && lastObjList.Count > 0)
+                {
+                    enumField.Key = lastObjList[^1].ToString();
+                }
             }
+            
             if (DocumentFieldMap.TryGetValue("EnumValueContext", out Stack<List<object>>? enumValueStack) && enumValueStack is not null && enumValueStack.Count > 0)
             {
-                enumField.Value = enumValueStack.Pop().Last() as EnumValue;
+                List<object> lastObjList = enumValueStack.Pop();
+                if (lastObjList is not null && lastObjList.Count > 0)
+                {
+                    enumField.Value = lastObjList[^1] as EnumValue;
+                }
             }
 
             PushToStack(typeName,enumField);
@@ -414,36 +462,35 @@ namespace MinecraftLanguageServer.MCDocumentService
 
             LiteralType literalType = new();
 
-            if (boolValueOfLiteralType)
+            if (bool.TryParse(currentValue, out bool boolValue))
             {
-                boolValueOfLiteralType = false;
-                literalType.BoolValue = bool.Parse(currentValue);
+                literalType.BoolValue = boolValue;
             }
 
-            if (typedNumberOfLiteralType)
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypedNumberContext", out Stack<List<object>>? typedNumberStack) && typedNumberStack is not null && typedNumberStack.Count > 0)
             {
-                typedNumberOfLiteralType = false;
-                if (DocumentFieldMap.TryGetValue("TypedNumberContext", out Stack<List<object>> typedNumberStack) && typedNumberStack is not null && typedNumberStack.Count > 0)
+                List<object>? list = typedNumberStack.Pop();
+                if (list is not null && list.Count > 0)
                 {
-                    literalType.TypedNumber = typedNumberStack.Pop().Last() as TypedNumber;
-                }
-            }
-            
-            if (stringValueOfLiteralType)
-            {
-                stringValueOfLiteralType = false;
-                if (DocumentFieldMap.TryGetValue("StringContext", out Stack<List<object>> stringStack) && stringStack is not null && stringStack.Count > 0)
-                {
-                    literalType.String = DocumentFieldMap["StringContext"].Pop().Last().ToString();
+                    literalType.TypedNumber = list[^1] as TypedNumber;
                 }
             }
 
-            if (identifierOfLiteralType)
+            if (DocumentFieldMap.TryGetValue(typeName + ".StringContext", out Stack<List<object>>? stringStack) && stringStack is not null && stringStack.Count > 0)
             {
-                identifierOfLiteralType = false;
-                if (DocumentFieldMap.TryGetValue("IdentifierContext", out Stack<List<object>> identifierStack) && identifierStack is not null && identifierStack.Count > 0)
+                List<object>? list = stringStack.Pop();
+                if (list is not null && list.Count > 0)
                 {
-                    literalType.Identifier = DocumentFieldMap["IdentifierContext"].Pop().Last().ToString();
+                    literalType.String = list[^1].ToString();
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
+            {
+                List<object>? list = identifierStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    literalType.String = list[^1].ToString();
                 }
             }
 
@@ -462,9 +509,13 @@ namespace MinecraftLanguageServer.MCDocumentService
                 numericType.Range = currentValue[(atIndex + 1)..].Trim();
             }
 
-            if(DocumentFieldMap.TryGetValue("BaseDataTypeContext",out Stack<List<object>> baseDataTypeStack) && baseDataTypeStack is not null && baseDataTypeStack.Count > 0)
+            if(DocumentFieldMap.TryGetValue(typeName + ".BaseDataTypeContext", out Stack<List<object>>? baseDataTypeStack) && baseDataTypeStack is not null && baseDataTypeStack.Count > 0)
             {
-                numericType.BaseDataType = (BaseDataType)System.Enum.Parse(typeof(BaseDataType), baseDataTypeStack.Pop().Last().ToString());
+                List<object> list = baseDataTypeStack.Pop();
+                if (list.Count > 0 && list[^1] is not null && System.Enum.TryParse(typeof(BaseDataType), list[^1].ToString(), out object? result))
+                {
+                    numericType.BaseDataType = (BaseDataType)result;
+                }
             }
 
             PushToStack(typeName, numericType);
@@ -474,21 +525,24 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitPrimitiveArrayType(context);
             string typeName = GetTypeName(context);
-            string currentValue = context.GetText();
+            string? currentValue = context.GetText();
             int atIndex = currentValue.IndexOf('@');
             PrimitiveArrayType primitiveArrayType = new();
 
-            if (atIndex > -1)
+            if (currentValue is not null && currentValue.Length > 0)
             {
-                primitiveArrayType.Range = currentValue[(atIndex + 1)..].Trim();
-                primitiveArrayType.DataType = (PrimitiveArrayDataType)System.Enum.Parse(typeof(PrimitiveArrayDataType), currentValue.Trim()[..atIndex]);
-            }
-            else
-            {
-                primitiveArrayType.DataType = (PrimitiveArrayDataType)System.Enum.Parse(typeof(PrimitiveArrayDataType), currentValue.Trim());
-            }
+                if (atIndex > -1)
+                {
+                    primitiveArrayType.Range = currentValue[(atIndex + 1)..].Trim();
+                    primitiveArrayType.DataType = (PrimitiveArrayDataType)System.Enum.Parse(typeof(PrimitiveArrayDataType), currentValue.Trim()[..atIndex]);
+                }
+                else
+                {
+                    primitiveArrayType.DataType = (PrimitiveArrayDataType)System.Enum.Parse(typeof(PrimitiveArrayDataType), currentValue.Trim());
+                }
 
-            PushToStack(typeName, primitiveArrayType);
+                PushToStack(typeName, primitiveArrayType);
+            }
         }
 
         public override void ExitListType([NotNull] ListTypeContext context)
@@ -497,10 +551,16 @@ namespace MinecraftLanguageServer.MCDocumentService
             string typeName = GetTypeName(context);
             string currentValue = context.GetText();
 
-            ListType listType = new()
+            ListType listType = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack.Count > 0)
             {
-                Type = DocumentFieldMap["TypeSentenceContext"].Peek().Last() as MCDocumentType
-            };
+                List<object> typeList = typeStack.Pop();
+                if (typeList.Count > 0 && typeList[^1] is not null)
+                {
+                    listType.Type = typeList[^1] as MCDocumentType;
+                }
+            }
 
             int atIndex = currentValue.LastIndexOf('@');
             if(atIndex > -1)
@@ -516,43 +576,47 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitTupleType(context);
             string typeName = GetTypeName(context);
 
-            MCDocumentType[] typeList = [..DocumentFieldMap["TypeSentenceContext"].Pop().Cast<MCDocumentType>()];
-
-            PushToStack(typeName,new TupleType()
+            if(DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
             {
-                Type1 = typeList[0],
-                Type2 = typeList[1]
-            });
+                List<object>? typeList = typeStack.Pop();
+                if (typeList is not null && typeList.Count > 0)
+                {
+                    PushToStack(typeName, new TupleType()
+                    {
+                        Type1 = typeList[0] as MCDocumentType,
+                        Type2 = typeList[1] as MCDocumentType
+                    });
+                }
+            }
         }
 
         public override void ExitPrelim([NotNull] PrelimContext context)
         {
             base.ExitPrelim(context);
             string typeName = GetTypeName(context);
-            List<string> commentaryList = [];
-            List<string> docCommentaryList = [];
-            if(DocumentFieldMap.TryGetValue("CommentaryContext",out Stack<List<object>> CommentaryStack) && CommentaryStack.Count > 0)
+
+            Prelim prelim = new();
+
+            if(DocumentFieldMap.TryGetValue(typeName + ".CommentaryContext", out Stack<List<object>>? CommentaryStack) && CommentaryStack is not null && CommentaryStack.Count > 0)
             {
                 List<string> CommentaryList = [..CommentaryStack.Pop().Cast<string>()];
-                commentaryList.AddRange(CommentaryList.Cast<string>());
+                prelim.CommentaryList.AddRange(CommentaryList.Cast<string>());
             }
-            if(DocumentFieldMap.TryGetValue("DocCommentaryContext",out Stack<List<object>> DocCommentaryStack) && DocCommentaryStack.Count > 0)
+
+            if(DocumentFieldMap.TryGetValue(typeName + ".DocCommentaryContext", out Stack<List<object>>? DocCommentaryStack) && DocCommentaryStack is not null && DocCommentaryStack.Count > 0)
             {
                 List<string> DocCommentaryList = [.. DocCommentaryStack.Pop().Cast<string>()];
-                docCommentaryList.AddRange(DocCommentaryList.Cast<string>());
+                prelim.DocCommentaryList.AddRange(DocCommentaryList.Cast<string>());
             }
+
             MCDocumentAttribute? attribute = null;
-            if(DocumentFieldMap.TryGetValue("AttributeContext",out Stack<List<object>> AttributeStack))
+
+            if(DocumentFieldMap.TryGetValue(typeName + ".AttributeContext", out Stack<List<object>>? AttributeStack) && AttributeStack is not null && AttributeStack.Count > 0)
             {
                 attribute = AttributeStack.Pop().Cast<MCDocumentAttribute>().First();
             }
 
-            PushToStack(typeName,new Prelim()
-            {
-                CommentaryList = commentaryList,
-                DocCommentaryList = docCommentaryList,
-                Attribute = attribute
-            });
+            PushToStack(typeName, prelim);
         }
 
         public override void ExitDispatcherType([NotNull] DispatcherTypeContext context)
@@ -560,11 +624,27 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitDispatcherType(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new DispatchType()
+            DispatchType dispatchType = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".ResourceLocationContext", out Stack<List<object>>? resourceStack) && resourceStack is not null && resourceStack.Count > 0)
             {
-                ResourceLocation = DocumentFieldMap["ResourceLocationContext"].Pop().Last().ToString(),
-                DispatcherIndexBody = DocumentFieldMap["IndexBodyContext"].Pop().Last() as IndexBody
-            });
+                List<object>? resourceList = resourceStack.Pop();
+                if(resourceList is not null && resourceList.Count > 0)
+                {
+                    dispatchType.ResourceLocation = resourceList[^1].ToString();
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IndexBodyContext", out Stack<List<object>>? indexBodyStack) && indexBodyStack is not null && indexBodyStack.Count > 0)
+            {
+                List<object>? indexBodyList = indexBodyStack.Pop();
+                if (indexBodyList is not null && indexBodyList.Count > 0)
+                {
+                    dispatchType.DispatcherIndexBody = indexBodyList[^1] as IndexBody;
+                }
+            }
+
+            PushToStack(typeName, dispatchType);
         }
 
         public override void ExitUnionType([NotNull] UnionTypeContext context)
@@ -572,10 +652,18 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitUnionType(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new UnionType()
+            UnionType unionType = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
             {
-                TypeList = [..DocumentFieldMap["TypeSentenceContext"].Pop().Cast<MCDocumentType>()]
-            });
+                List<object>? typeList = typeStack.Pop();
+                if (typeList is not null && typeList.Count > 0)
+                {
+                    unionType.TypeList = [..typeList.Cast<MCDocumentType>()];
+                }
+            }
+
+            PushToStack(typeName, unionType);
         }
 
         public override void ExitIndexBody([NotNull] IndexBodyContext context)
@@ -583,10 +671,18 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitIndexBody(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new IndexBody()
+            IndexBody indexBody = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IndexContext", out Stack<List<object>>? indexStack) && indexStack is not null && indexStack.Count > 0)
             {
-                IndexList = [..DocumentFieldMap["IndexContext"].Pop().Cast<string>()]
-            });
+                List<object>? indexList = indexStack.Pop();
+                if (indexList is not null && indexList.Count > 0)
+                {
+                    indexBody.IndexList = [.. indexList.Cast<string>()];
+                }
+            }
+
+            PushToStack(typeName, indexBody);
         }
 
         public override void ExitIndexingOnAType([NotNull] IndexingOnATypeContext context)
@@ -594,10 +690,18 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitIndexingOnAType(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new IndexOnAType()
+            IndexOnAType indexOnAType = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IndexBodyContext", out Stack<List<object>>? indexBodyStack) && indexBodyStack is not null && indexBodyStack.Count > 0)
             {
-                IndexBody = DocumentFieldMap["IndexBodyContext"].Pop().Last() as IndexBody
-            });
+                List<object>? indexBodyList = indexBodyStack.Pop();
+                if (indexBodyList is not null && indexBodyList.Count > 0)
+                {
+                    indexOnAType.IndexBody = indexBodyList[^1] as IndexBody;
+                }
+            }
+
+            PushToStack(typeName, indexOnAType);
         }
 
         public override void ExitTypeArgBlock([NotNull] TypeArgBlockContext context)
@@ -605,10 +709,17 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitTypeArgBlock(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new TypeArgBlock()
+            TypeArgBlock typeArgBlock = new();
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
             {
-                TypeList = [.. DocumentFieldMap["TypeSentenceContext"].Pop().Cast<MCDocumentType>()]
-            });
+                List<object>? typeList = typeStack.Pop();
+                if (typeList is not null && typeList.Count > 0)
+                {
+                    typeArgBlock.TypeList = [..typeList.Cast<MCDocumentType>()];
+                }
+            }
+
+            PushToStack(typeName, typeArgBlock);
         }
 
         public override void ExitUnAttributedType([NotNull] UnAttributedTypeContext context)
@@ -617,70 +728,70 @@ namespace MinecraftLanguageServer.MCDocumentService
             string typeName = GetTypeName(context);
             UnAttributedType unAttributedType = new();
 
-            if (keywordTypeOfUnAttributedType)
+            if (DocumentFieldMap.TryGetValue(typeName + ".KeywordTypeContext", out Stack<List<object>>? keywordTypeStack) && keywordTypeStack is not null && keywordTypeStack.Count > 0)
             {
-                keywordTypeOfUnAttributedType = false;
-                unAttributedType.KeyWordType = DocumentFieldMap["KeywordTypeContext"].Pop().Last() as KeyWordType;
+                unAttributedType.KeyWordType = keywordTypeStack.Pop()[^1] as KeyWordType;
             }
-            if (stringTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".StringTypeContext", out Stack<List<object>>? stringTypeStack) && stringTypeStack is not null && stringTypeStack.Count > 0)
             {
-                stringTypeOfUnAttributedType = false;
-                unAttributedType.StringType = DocumentFieldMap["StringTypeContext"].Pop().Last() as StringType;
+                unAttributedType.StringType = stringTypeStack.Pop()[^1] as StringType;
             }
-            if (literialTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".LiteralTypeContext", out Stack<List<object>>? literalTypeStack) && literalTypeStack is not null && literalTypeStack.Count > 0)
             {
-                literialTypeOfUnAttributedType = false;
-                unAttributedType.LiteralType = DocumentFieldMap["LiteralTypeContext"].Pop().Last() as LiteralType;
+                unAttributedType.LiteralType = literalTypeStack.Pop()[^1] as LiteralType;
             }
-            if (numericTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".NumericTypeContext", out Stack<List<object>>? numericTypeStack) && numericTypeStack is not null && numericTypeStack.Count > 0)
             {
-                numericTypeOfUnAttributedType = false;
-                unAttributedType.NumericType = DocumentFieldMap["NumericTypeContext"].Pop().Last() as NumericType;
+                unAttributedType.NumericType = numericTypeStack.Pop()[^1] as NumericType;
             }
-            if (primitiveArrayTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".PrimitiveArrayTypeContext", out Stack<List<object>>? primitiveArrayTypeStack) && primitiveArrayTypeStack is not null && primitiveArrayTypeStack.Count > 0)
             {
-                primitiveArrayTypeOfUnAttributedType = false;
-                unAttributedType.PrimitiveArrayType = DocumentFieldMap["PrimitiveArrayTypeContext"].Pop().Last() as PrimitiveArrayType;
+                unAttributedType.PrimitiveArrayType = primitiveArrayTypeStack.Pop()[^1] as PrimitiveArrayType;
             }
-            if (listTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".ListTypeContext", out Stack<List<object>>? listTypeStack) && listTypeStack is not null && listTypeStack.Count > 0)
             {
-                listTypeOfUnAttributedType = false;
-                unAttributedType.ListType = DocumentFieldMap["ListTypeContext"].Pop().Last() as ListType;
+                unAttributedType.ListType = listTypeStack.Pop()[^1] as ListType;
             }
-            if (tupleTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TupleTypeContext", out Stack<List<object>>? tupleTypeStack) && tupleTypeStack is not null && tupleTypeStack.Count > 0)
             {
-                tupleTypeOfUnAttributedType = false;
-                unAttributedType.TupleType = DocumentFieldMap["TupleTypeContext"].Pop().Last() as TupleType;
+                unAttributedType.TupleType = tupleTypeStack.Pop()[^1] as TupleType;
             }
-            if (enumTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".EnumTypeContext", out Stack<List<object>>? enumTypeStack) && enumTypeStack is not null && enumTypeStack.Count > 0)
             {
-                enumTypeOfUnAttributedType = false;
-                unAttributedType.EnumType = DocumentFieldMap["EnumTypeContext"].Pop().Last() as Enumeration;
+                unAttributedType.EnumType = enumTypeStack.Pop()[^1] as Enumeration;
             }
-            if (structOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".StructContext", out Stack<List<object>>? structStack) && structStack is not null && structStack.Count > 0)
             {
-                structOfUnAttributedType = false;
-                unAttributedType.Structure = DocumentFieldMap["StructContext"].Pop().Last() as Structure;
+
+                unAttributedType.Structure = structStack.Pop()[^1] as Structure;
             }
-            if (referenceOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".ReferenceTypeContext", out Stack<List<object>>? referenceTypeStack) && referenceTypeStack is not null && referenceTypeStack.Count > 0)
             {
-                referenceOfUnAttributedType = false;
-                unAttributedType.ReferenceType = DocumentFieldMap["ReferenceTypeContext"].Pop().Last() as ReferenceType;
+                unAttributedType.ReferenceType = referenceTypeStack.Pop()[^1] as ReferenceType;
             }
-            if (dispatcherTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".DispatcherTypeContext", out Stack<List<object>>? dispatcherTypeStack) && dispatcherTypeStack is not null && dispatcherTypeStack.Count > 0)
             {
-                dispatcherTypeOfUnAttributedType = false;
-                unAttributedType.DispatchType = DocumentFieldMap["DispatcherTypeContext"].Pop().Last() as DispatchType;
+                unAttributedType.DispatchType = dispatcherTypeStack.Pop()[^1] as DispatchType;
             }
-            if (unionTypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".UnionTypeContext", out Stack<List<object>>? unionTypeStack) && unionTypeStack is not null && unionTypeStack.Count > 0)
             {
-                unionTypeOfUnAttributedType = false;
-                unAttributedType.UnionType = DocumentFieldMap["UnionTypeContext"].Pop().Last() as UnionType;
+                unAttributedType.UnionType = unionTypeStack.Pop()[^1] as UnionType;
             }
-            if (indexingOnATypeOfUnAttributedType)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IndexingOnATypeContext", out Stack<List<object>>? indexingOnATypeStack) && indexingOnATypeStack is not null && indexingOnATypeStack.Count > 0)
             {
-                indexingOnATypeOfUnAttributedType = false;
-                unAttributedType.IndexOnAType = DocumentFieldMap["IndexingOnATypeContext"].Pop().Last() as IndexOnAType;
+                unAttributedType.IndexOnAType = indexingOnATypeStack.Pop()[^1] as IndexOnAType;
             }
 
             PushToStack(typeName,unAttributedType);
@@ -691,37 +802,100 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitStructField(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new StructField()
+            StructField structField = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".QuestionMarkContext", out Stack<List<object>>? questionMarkStack) && questionMarkStack is not null && questionMarkStack.Count > 0)
             {
-                IsOptional = DocumentFieldMap["QuestionMarkContext"].Pop()?.Cast<bool>().Last(),
-                IsReference = DocumentFieldMap["TripleDotContext"].Pop().Count > 0,
-                AttributeList = [..DocumentFieldMap["AttributeContext"].Pop().Cast<MCDocumentAttribute>()],
-                StructKey = DocumentFieldMap["StructKeyContext"].Pop().Cast<StructKey>().Last(),
-                PrelimList = [..DocumentFieldMap["PrelimContext"].Pop().Cast<Prelim>()],
-                Type = DocumentFieldMap["TypeSentenceContext"].Pop().Last() as MCDocumentType
-            });
+                List<object>? list = questionMarkStack.Pop();
+                if (list is not null && list.Count > 0 && bool.TryParse(list[^1].ToString(),out bool result))
+                {
+                    structField.IsOptional = result;
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TripleDotContext", out Stack<List<object>>? tripleDotStack) && tripleDotStack is not null && tripleDotStack.Count > 0)
+            {
+                List<object>? list = tripleDotStack.Pop();
+                if (list is not null && list.Count > 0 && bool.TryParse(list[^1].ToString(), out bool result))
+                {
+                    structField.IsReference = result;
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".AttributeContext", out Stack<List<object>>? attributeStack) && attributeStack is not null && attributeStack.Count > 0)
+            {
+                List<object>? list = attributeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    structField.AttributeList = [..list.Cast<MCDocumentAttribute>()];
+                }
+            }
+            
+            if (DocumentFieldMap.TryGetValue(typeName + ".StructKeyContext", out Stack<List<object>>? structKeyStack) && structKeyStack is not null && structKeyStack.Count > 0)
+            {
+                List<object>? list = structKeyStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    structField.StructKey = list[^1] as StructKey;
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null && prelimStack.Count > 0)
+            {
+                List<object>? list = prelimStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    structField.PrelimList = [..list.Cast<Prelim>()];
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
+            {
+                List<object>? list = typeStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    structField.Type = list[^1] as MCDocumentType;
+                }
+            }
+
+            PushToStack(typeName, structField);
         }
 
         public override void ExitAttribute([NotNull] AttributeContext context)
         {
             base.ExitAttribute(context);
             string typeName = GetTypeName(context);
-            MCDocumentAttribute attribute = new()
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") ?? "";
+            MCDocumentAttribute attribute = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
             {
-                Identifier = DocumentFieldMap["IdentifierContext"].Pop().Last().ToString()
-            };
-            if(valueOfParent)
-            {
-                valueOfParent = false;
-                attribute.Value = DocumentFieldMap["ValueContext"].Pop().Last() as MCDocumentValue;
-            }
-            if(treeValueOfParent)
-            {
-                treeValueOfParent = false;
-                attribute.TreeValue = DocumentFieldMap["TreeValueContext"].Pop().Last() as MCDocumentTreeValue;
+                List<object>? list = identifierStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    attribute.Identifier = list[^1].ToString();
+                }
             }
 
-            PushToStack(typeName,attribute);
+            if (DocumentFieldMap.TryGetValue(typeName + ".ValueContext", out Stack<List<object>>? valueStack) && valueStack is not null && valueStack.Count > 0)
+            {
+                List<object>? list = valueStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    attribute.Value = list[^1] as MCDocumentValue;
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TreeValueContext", out Stack<List<object>>? treeValueStack) && treeValueStack is not null && treeValueStack.Count > 0)
+            {
+                List<object>? list = treeValueStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    attribute.TreeValue = list[^1] as MCDocumentTreeValue;
+                }
+            }
+
+            PushToStack(parentTypeName + '.' + typeName, attribute);
         }
 
         public override void ExitValue([NotNull] ValueContext context)
@@ -729,11 +903,27 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitValue(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName, new MCDocumentValue()
+            MCDocumentValue mcDocumentValue = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
             {
-                Type = DocumentFieldMap.TryGetValue("TypeSentenceContext", out Stack<List<object>>? TypeSentenceValue) ? TypeSentenceValue.Pop().Last() as MCDocumentType : null,
-                TreeValue = DocumentFieldMap.TryGetValue("TreeValueContext",out Stack<List<object>>? TreeValueValue) ? TreeValueValue.Pop().Last() as MCDocumentTreeValue:null
-            });
+                List<object>? list = typeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    mcDocumentValue.Type = list[^1] as MCDocumentType;
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TreeValueContext", out Stack<List<object>>? treeValueStack) && treeValueStack is not null && treeValueStack.Count > 0)
+            {
+                List<object>? list = treeValueStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    mcDocumentValue.TreeValue = list[^1] as MCDocumentTreeValue;
+                }
+            }
+
+            PushToStack(typeName, mcDocumentValue);
         }
 
         public override void ExitNamedValue([NotNull] NamedValueContext context)
@@ -741,26 +931,54 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitNamedValue(context);
             string typeName = GetTypeName(context);
             string currentValue = context.GetText();
-            string inlineValue = "";
             NamedValue namedValue = new();
-            if(currentValue.TrimStart().StartsWith('"'))
+            string inlineValue = "";
+            if (currentValue.TrimStart().StartsWith('"'))
             {
-                inlineValue = DocumentFieldMap["StringContext"].Pop().Last().ToString();
-                namedValue.String = inlineValue;
+                if (DocumentFieldMap.TryGetValue(typeName + ".StringContext", out Stack<List<object>>? stringStack) && stringStack is not null && stringStack.Count > 0)
+                {
+                    List<object>? list = stringStack.Pop();
+                    if (list is not null && list.Count > 0 && list[^1] is not null)
+                    {
+                        namedValue.String = list[^1].ToString();
+                        inlineValue = namedValue.String;
+                    }
+                }
             }
             else
             {
-                inlineValue = DocumentFieldMap["IdentifierContext"].Pop().Last().ToString();
-                namedValue.Identifier = inlineValue;
+                if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
+                {
+                    List<object>? list = identifierStack.Pop();
+                    if (list is not null && list.Count > 0 && list[^1] is not null)
+                    {
+                        namedValue.Identifier = list[^1].ToString();
+                        inlineValue = namedValue.Identifier;
+                    }
+                }
             }
 
-            if(currentValue[(inlineValue.Length + 1)..((inlineValue.Length + 2))] == "=")
+            if(inlineValue is not null && inlineValue.Length > 0 && currentValue[(inlineValue.Length + 1)..((inlineValue.Length + 2))] == "=")
             {
-                namedValue.Value = DocumentFieldMap["ValueContext"].Pop().Last() as MCDocumentValue;
+                if (DocumentFieldMap.TryGetValue(typeName + ".ValueContext", out Stack<List<object>>? valueStack) && valueStack is not null && valueStack.Count > 0)
+                {
+                    List<object>? list = valueStack.Pop();
+                    if (list is not null && list.Count > 0)
+                    {
+                        namedValue.Value = list[^1] as MCDocumentValue;
+                    }
+                }
             }
             else
             {
-                namedValue.TreeValue = DocumentFieldMap["TreeValueContext"].Pop().Last() as MCDocumentTreeValue;
+                if (DocumentFieldMap.TryGetValue(typeName + ".TreeValueContext", out Stack<List<object>>? treeValueStack) && treeValueStack is not null && treeValueStack.Count > 0)
+                {
+                    List<object>? list = treeValueStack.Pop();
+                    if (list is not null && list.Count > 0)
+                    {
+                        namedValue.TreeValue = list[^1] as MCDocumentTreeValue;
+                    }
+                }
             }
 
             PushToStack(typeName,namedValue);
@@ -771,10 +989,18 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitNamedValues(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new NamedValues()
+            NamedValues namedValues = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".NamedValueContext", out Stack<List<object>>? nameValuesStack) && nameValuesStack is not null && nameValuesStack.Count > 0)
             {
-                NameValueList = [..DocumentFieldMap["NamedValueContext"].Pop().Cast<NamedValue>()]
-            });
+                List<object>? list = nameValuesStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    namedValues.NameValueList = [..list.Cast<NamedValue>()];
+                }
+            }
+
+            PushToStack(typeName, namedValues);
         }
 
         public override void ExitTreeBody([NotNull] TreeBodyContext context)
@@ -783,15 +1009,22 @@ namespace MinecraftLanguageServer.MCDocumentService
             string typeName = GetTypeName(context);
             MCDocumentTreeBody treeBody = new();
 
-            if(positionalValuesOfTreeBody)
+            if (DocumentFieldMap.TryGetValue(typeName + ".PositionalValuesContext", out Stack<List<object>>? positionalValuesStack) && positionalValuesStack is not null && positionalValuesStack.Count > 0)
             {
-                treeBody.PositionalValueList = [..DocumentFieldMap["PositionalValuesContext"].Pop().Cast<PositionalValue>()];
-                positionalValuesOfTreeBody = false;
+                List<object>? list = positionalValuesStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    treeBody.PositionalValueList = [.. list.Cast<PositionalValue>()];
+                }
             }
-            if(namedValuesOfTreeBody)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".NamedValuesContext", out Stack<List<object>>? namedValuesStack) && namedValuesStack is not null && namedValuesStack.Count > 0)
             {
-                treeBody.NamedValueList = [..DocumentFieldMap["NamedValuesContext"].Pop().Cast<NamedValues>()];
-                namedValuesOfTreeBody = false;
+                List<object>? list = namedValuesStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    treeBody.NamedValueList = [.. list.Cast<NamedValues>()];
+                }
             }
 
             PushToStack(typeName,treeBody);
@@ -802,10 +1035,18 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitTreeValue(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new MCDocumentTreeValue()
+            MCDocumentTreeValue mcDocumentTreeValue = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TreeBodyContext", out Stack<List<object>>? treeBodyStack) && treeBodyStack is not null && treeBodyStack.Count > 0)
             {
-                TreeBody = DocumentFieldMap["TreeBodyContext"].Pop().Last() as MCDocumentTreeBody
-            });
+                List<object>? list = treeBodyStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    mcDocumentTreeValue.TreeBody = list[^1] as MCDocumentTreeBody;
+                }
+            }
+
+            PushToStack(typeName, mcDocumentTreeValue);
         }
 
         public override void ExitPositionalValues([NotNull] PositionalValuesContext context)
@@ -813,10 +1054,18 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitPositionalValues(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new PositionalValue()
+            PositionalValue positionalValue = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".ValueContext", out Stack<List<object>>? valueStack) && valueStack is not null && valueStack.Count > 0)
             {
-                ValueList = [..DocumentFieldMap["ValueContext"].Pop().Cast<MCDocumentValue>()]
-            });
+                List<object>? list = valueStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    positionalValue.ValueList = [.. list.Cast<MCDocumentValue>()];
+                }
+            }
+
+            PushToStack(typeName, positionalValue);
         }
         #endregion
 
@@ -827,23 +1076,27 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitUseStatement(context);
             string typeName = GetTypeName(context);
 
-            string? currentPath = "";
-            string? currentName = "";
-            if (DocumentFieldMap.TryGetValue("PathContext", out Stack<List<object>>? pathStack)
-                && pathStack.Peek() is List<object> pathList && pathList.Count > 0 && pathList[0] is string path)
+            UseStatement useStatement = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".PathContext", out Stack<List<object>>? pathStack) && pathStack is not null && pathStack.Count > 0)
             {
-                currentPath = path;
-            }
-            if (DocumentFieldMap.TryGetValue("IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack.Peek() is List<object> identifierList && identifierList.Count > 0 && identifierList[0] is string identifier)
-            {
-                currentName = identifier;
+                List<object>? list = pathStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    useStatement.Path = list[^1].ToString();
+                }
             }
 
-            PushToStack(typeName,new UseStatement()
+            if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
             {
-                Path = currentPath,
-                Name = currentName
-            });
+                List<object>? list = identifierStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    useStatement.Name = list[^1].ToString();
+                }
+            }
+
+            PushToStack(typeName, useStatement);
         }
 
         public override void ExitStructKey([NotNull] StructKeyContext context)
@@ -859,7 +1112,14 @@ namespace MinecraftLanguageServer.MCDocumentService
             else
             if(value.TrimEnd().EndsWith(']'))
             {
-                structKey.Type = DocumentFieldMap["TypeSentenceContext"].Pop().Last() as MCDocumentType;
+                if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
+                {
+                    List<object>? list = typeStack.Pop();
+                    if (list is not null && list.Count > 0)
+                    {
+                        structKey.Type = list[^1] as MCDocumentType;
+                    }
+                }
             }
             else
             {
@@ -873,12 +1133,34 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitStruct(context);
             string typeName = GetTypeName(context);
-            Structure structure = new()
+            Structure structure = new();
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null && prelimStack.Count > 0)
             {
-                PrelimList = [..DocumentFieldMap["PrelimContext"].Pop().Cast<Prelim>()],
-                Identifier = DocumentFieldMap["IdentifierContext"].Pop().Cast<string>().Last(),
-                StructFieldList = [..DocumentFieldMap["StructFieldContext"].Pop().Cast<StructField>()]
-            };
+                List<object>? list = prelimStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    structure.PrelimList = [..list.Cast<Prelim>()];
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
+            {
+                List<object>? list = identifierStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    structure.Identifier = list[^1].ToString();
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".StructFieldContext", out Stack<List<object>>? structFieldStack) && structFieldStack is not null && structFieldStack.Count > 0)
+            {
+                List<object>? list = structFieldStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    structure.StructFieldList = [.. list.Cast<StructField>()];
+                }
+            }
 
             PushToStack(typeName,structure);
         }
@@ -888,23 +1170,41 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitTypeSentence(context);
             string typeName = GetTypeName(context);
             MCDocumentType type = new();
-            if(attributeOfParent)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".AttributeContext", out Stack<List<object>>? attributeStack) && attributeStack is not null && attributeStack.Count > 0)
             {
-                attributeOfParent = false;
-                type.AttributeList = [..DocumentFieldMap["AttributeContext"].Pop().Cast<MCDocumentAttribute>()];
+                List<object>? list = attributeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    type.AttributeList = [.. list.Cast<MCDocumentAttribute>()];
+                }
             }
 
-            type.UnAttributedType = DocumentFieldMap["UnAttributedTypeContext"].Pop().Last() as UnAttributedType;
-
-            if(indexBodyOfParent)
+            if (DocumentFieldMap.TryGetValue(typeName + ".UnAttributedTypeContext", out Stack<List<object>>? unAttributedTypeStack) && unAttributedTypeStack is not null && unAttributedTypeStack.Count > 0)
             {
-                indexBodyOfParent = false;
-                type.IndexBodyList = [.. DocumentFieldMap["IndexBodyContext"].Pop().Cast<IndexBody>()];
+                List<object>? list = unAttributedTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    type.UnAttributedType = list[^1] as UnAttributedType;
+                }
             }
-            if(typeArgBlockOfParent)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IndexBodyContext", out Stack<List<object>>? indexBodyStack) && indexBodyStack is not null && indexBodyStack.Count > 0)
             {
-                typeArgBlockOfParent = false;
-                type.TypeArgBlockList = [.. DocumentFieldMap["TypeArgBlockContext"].Pop().Cast<TypeArgBlock>()];
+                List<object>? list = indexBodyStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    type.IndexBodyList = [.. list.Cast<IndexBody>()];
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeArgBlockContext", out Stack<List<object>>? typeArgBlockStack) && typeArgBlockStack is not null && typeArgBlockStack.Count > 0)
+            {
+                List<object>? list = typeArgBlockStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    type.TypeArgBlockList = [.. list.Cast<TypeArgBlock>()];
+                }
             }
 
             PushToStack(typeName, type);
@@ -915,13 +1215,45 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitEnumType(context);
             string typeName = GetTypeName(context);
 
-            PushToStack(typeName,new Enumeration()
+            Enumeration enumeration = new();
+
+            if(DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null)
             {
-                Name = DocumentFieldMap["IdentifierContext"].Pop().Last().ToString(),
-                Prelim = DocumentFieldMap["PrelimContext"].Pop().Last() as Prelim,
-                EnumFieldList = [.. DocumentFieldMap["EnumFieldContext"].Pop().Cast<EnumField>()],
-                MemberType = (EnumMemberType)System.Enum.Parse(typeof(EnumMemberType), DocumentFieldMap["EnumMemberTypeContext"].Peek().Last().ToString())
-            });
+                List<object> list = identifierStack.Pop();
+                if(list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    enumeration.Name = list[^1].ToString();
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null)
+            {
+                List<object> list = prelimStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    enumeration.Prelim = list[^1] as Prelim;
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".EnumFieldContext", out Stack<List<object>>? enumFieldStack) && enumFieldStack is not null)
+            {
+                List<object> list = enumFieldStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    enumeration.EnumFieldList = [..list.Cast<EnumField>()];
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".EnumMemberTypeContext", out Stack<List<object>>? enumMemberTypeStack) && enumMemberTypeStack is not null)
+            {
+                List<object> list = enumMemberTypeStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    enumeration.MemberType = (EnumMemberType)System.Enum.Parse(typeof(EnumMemberType), list[^1].ToString());
+                }
+            }
+
+            PushToStack(typeName, enumeration);
         }
 
         public override void ExitTypeAlias([NotNull] TypeAliasContext context)
@@ -929,14 +1261,41 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitTypeAlias(context);
             string typeName = GetTypeName(context);
             TypeAlia typeAlia = new();
-            if(prelimOfParent)
+            if (DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null)
             {
-                prelimOfParent = false;
-                typeAlia.PrelimList = [..DocumentFieldMap["PrelimContext"].Pop().Cast<Prelim>()];
+                List<object> list = prelimStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    typeAlia.PrelimList = [.. list.Cast<Prelim>()];
+                }
             }
-            typeAlia.Identifier = DocumentFieldMap["IdentifierContext"].Pop().ToString();
-            typeAlia.TypeParameterBlock = [.. DocumentFieldMap["TypeParamBlockContext"].Pop().Cast<string>()];
-            typeAlia.TypeSentence = DocumentFieldMap["TypeSentenceContext"].Pop().Last() as MCDocumentType;
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null)
+            {
+                List<object> list = identifierStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    typeAlia.Identifier = list[^1].ToString();
+                }
+            }
+            
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeParamBlockContext", out Stack<List<object>>? typeParamBlockStack) && typeParamBlockStack is not null)
+            {
+                List<object> list = typeParamBlockStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    typeAlia.TypeParameterBlock = [..list.Cast<string>()];
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null)
+            {
+                List<object> list = typeStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    typeAlia.TypeSentence = list[^1] as MCDocumentType;
+                }
+            }
 
             PushToStack(typeName, typeAlia);
         }
@@ -946,15 +1305,22 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitInjection(context);
             string typeName = GetTypeName(context);
             Injection injection = new();
-            if(enumInjectionOfParent)
+            if (DocumentFieldMap.TryGetValue(typeName + ".EnumInjectionContext", out Stack<List<object>>? enumInjectionStack) && enumInjectionStack is not null)
             {
-                enumInjectionOfParent = false;
-                injection.EnumInjection = DocumentFieldMap["EnumInjectionContext"].Pop().Last() as EnumInjection;
+                List<object> list = enumInjectionStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    injection.EnumInjection = list[^1] as EnumInjection;
+                }
             }
-            if(structInjectionOfParent)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".StructInjectionContext", out Stack<List<object>>? structInjectionStack) && structInjectionStack is not null)
             {
-                structInjectionOfParent = false;
-                injection.StructInjection = DocumentFieldMap["StructInjectionContext"].Pop().Last() as StructInjection;
+                List<object> list = structInjectionStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    injection.StructInjection = list[^1] as StructInjection;
+                }
             }
 
             PushToStack(typeName,injection);
@@ -965,20 +1331,60 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitDispatchStatement(context);
             string typeName = GetTypeName(context);
             DispatchStatement dispatchStatement = new();
-            dispatchStatement.Prelim = DocumentFieldMap["PrelimContext"].Pop().Last() as Prelim;
-            if(attributeOfParent)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null)
             {
-                attributeOfParent = false;
-                dispatchStatement.AttributeList = [.. DocumentFieldMap["AttributeContext"].Pop().Cast<MCDocumentAttribute>()];
+                List<object> list = prelimStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    dispatchStatement.Prelim = list[^1] as Prelim;
+                }
             }
-            dispatchStatement.ResourceLocation = DocumentFieldMap["ResourceLocationContext"].Pop().Last().ToString();
-            dispatchStatement.IndexBody = DocumentFieldMap["IndexBodyContext"].Pop().Last() as IndexBody;
-            if(typeArgBlockOfParent)
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".AttributeContext", out Stack<List<object>>? attributeStack) && attributeStack is not null)
             {
-                typeArgBlockOfParent = false;
-                dispatchStatement.TypeParameterBlock = [..DocumentFieldMap["TypeParamBlockContext"].Pop().Cast<string>()];
+                List<object> list = attributeStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    dispatchStatement.AttributeList = [.. list.Cast<MCDocumentAttribute>()];
+                }
             }
-            dispatchStatement.Type = DocumentFieldMap["TypeSentenceContext"].Pop().Last() as MCDocumentType;
+            
+            if (DocumentFieldMap.TryGetValue(typeName + ".ResourceLocationContext", out Stack<List<object>>? resourceStack) && resourceStack is not null)
+            {
+                List<object> list = resourceStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    dispatchStatement.ResourceLocation = list[^1].ToString();
+                }
+            }
+            
+            if (DocumentFieldMap.TryGetValue(typeName + ".IndexBodyContext", out Stack<List<object>>? indexBodyStack) && indexBodyStack is not null)
+            {
+                List<object> list = indexBodyStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    dispatchStatement.IndexBody = list[^1] as IndexBody;
+                }
+            }
+            
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeParamBlockContext", out Stack<List<object>>? typeParamBlockStack) && typeParamBlockStack is not null)
+            {
+                List<object> list = typeParamBlockStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    dispatchStatement.TypeParameterBlock = [.. list.Cast<string>()];
+                }
+            }
+
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null)
+            {
+                List<object> list = typeStack.Pop();
+                if (list is not null && list.Count > 0 && list[^1] is not null)
+                {
+                    dispatchStatement.Type = list[^1] as MCDocumentType;
+                }
+            }
 
             PushToStack(typeName,dispatchStatement);
         }
