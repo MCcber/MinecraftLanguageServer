@@ -43,7 +43,7 @@ namespace MinecraftLanguageServer.MCDocumentService
 
         private string[] intUnit = ["b","s","l"];
         private string[] floatUnit = ["d","f"];
-        private List<string> BlackList = ["IntegerContext", "IntegerRangeContext"];
+        private List<string> BlackList = ["IntegerContext", "IntegerRangeContext", "NamedValueContext", "NamedValuesContext", "TreeBodyContext"];
         private MCDocumentFileModel result = new();
         private List<string> reservedWordList = 
         [
@@ -225,13 +225,13 @@ namespace MinecraftLanguageServer.MCDocumentService
                     }
                     string currentValue = context.GetText().Trim();
                     List<object> targetList = [];
-                    if (DocumentFieldMap.TryGetValue(parentTypeName + typeName, out Stack<List<object>>? stack))
+                    if (DocumentFieldMap.TryGetValue(parentTypeName + typeName, out Stack<List<object>>? stack) && stack.Count > 0)
                     {
                         targetList = stack.Peek();
                     }
-                    if (DocumentFieldMap.TryGetValue(parentTypeName + typeName, out Stack<List<object>>? list) && list is not null && (targetList.Count == 0 || (targetList.Count > 0 && targetList[^1].GetType() is null)))
+                    if (targetList.Count == 0 || (targetList.Count > 0 && targetList[^1].GetType() is null))
                     {
-                        DocumentFieldMap[parentTypeName + typeName].Peek().Add(currentValue);
+                        targetList.Add(currentValue);
                     }
                 }
             }
@@ -730,68 +730,119 @@ namespace MinecraftLanguageServer.MCDocumentService
 
             if (DocumentFieldMap.TryGetValue(typeName + ".KeywordTypeContext", out Stack<List<object>>? keywordTypeStack) && keywordTypeStack is not null && keywordTypeStack.Count > 0)
             {
-                unAttributedType.KeyWordType = keywordTypeStack.Pop()[^1] as KeyWordType;
+                List<object> list = keywordTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.KeyWordType = list[^1] as KeyWordType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".StringTypeContext", out Stack<List<object>>? stringTypeStack) && stringTypeStack is not null && stringTypeStack.Count > 0)
             {
-                unAttributedType.StringType = stringTypeStack.Pop()[^1] as StringType;
+                List<object> list = stringTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.StringType = list[^1] as StringType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".LiteralTypeContext", out Stack<List<object>>? literalTypeStack) && literalTypeStack is not null && literalTypeStack.Count > 0)
             {
-                unAttributedType.LiteralType = literalTypeStack.Pop()[^1] as LiteralType;
+                List<object> list = literalTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.LiteralType = list[^1] as LiteralType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".NumericTypeContext", out Stack<List<object>>? numericTypeStack) && numericTypeStack is not null && numericTypeStack.Count > 0)
             {
-                unAttributedType.NumericType = numericTypeStack.Pop()[^1] as NumericType;
+                List<object> list = numericTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.NumericType = list[^1] as NumericType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".PrimitiveArrayTypeContext", out Stack<List<object>>? primitiveArrayTypeStack) && primitiveArrayTypeStack is not null && primitiveArrayTypeStack.Count > 0)
             {
-                unAttributedType.PrimitiveArrayType = primitiveArrayTypeStack.Pop()[^1] as PrimitiveArrayType;
+                List<object> list = primitiveArrayTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.PrimitiveArrayType = list[^1] as PrimitiveArrayType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".ListTypeContext", out Stack<List<object>>? listTypeStack) && listTypeStack is not null && listTypeStack.Count > 0)
             {
-                unAttributedType.ListType = listTypeStack.Pop()[^1] as ListType;
+                List<object> list = listTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.ListType = list[^1] as ListType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".TupleTypeContext", out Stack<List<object>>? tupleTypeStack) && tupleTypeStack is not null && tupleTypeStack.Count > 0)
             {
-                unAttributedType.TupleType = tupleTypeStack.Pop()[^1] as TupleType;
+                List<object> list = tupleTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.TupleType = list[^1] as TupleType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".EnumTypeContext", out Stack<List<object>>? enumTypeStack) && enumTypeStack is not null && enumTypeStack.Count > 0)
             {
-                unAttributedType.EnumType = enumTypeStack.Pop()[^1] as Enumeration;
+                List<object> list = enumTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.EnumType = list[^1] as Enumeration;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".StructContext", out Stack<List<object>>? structStack) && structStack is not null && structStack.Count > 0)
             {
-
-                unAttributedType.Structure = structStack.Pop()[^1] as Structure;
+                List<object> list = structStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.Structure = list[^1] as Structure;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".ReferenceTypeContext", out Stack<List<object>>? referenceTypeStack) && referenceTypeStack is not null && referenceTypeStack.Count > 0)
             {
-                unAttributedType.ReferenceType = referenceTypeStack.Pop()[^1] as ReferenceType;
+                List<object> list = referenceTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.ReferenceType = list[^1] as ReferenceType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".DispatcherTypeContext", out Stack<List<object>>? dispatcherTypeStack) && dispatcherTypeStack is not null && dispatcherTypeStack.Count > 0)
             {
-                unAttributedType.DispatchType = dispatcherTypeStack.Pop()[^1] as DispatchType;
+                List<object> list = dispatcherTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.DispatchType = list[^1] as DispatchType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".UnionTypeContext", out Stack<List<object>>? unionTypeStack) && unionTypeStack is not null && unionTypeStack.Count > 0)
             {
-                unAttributedType.UnionType = unionTypeStack.Pop()[^1] as UnionType;
+                List<object> list = unionTypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.UnionType = list[^1] as UnionType;
+                }
             }
 
             if (DocumentFieldMap.TryGetValue(typeName + ".IndexingOnATypeContext", out Stack<List<object>>? indexingOnATypeStack) && indexingOnATypeStack is not null && indexingOnATypeStack.Count > 0)
             {
-                unAttributedType.IndexOnAType = indexingOnATypeStack.Pop()[^1] as IndexOnAType;
+                List<object> list = indexingOnATypeStack.Pop();
+                if (list is not null && list.Count > 0)
+                {
+                    unAttributedType.IndexOnAType = list[^1] as IndexOnAType;
+                }
             }
 
             PushToStack(typeName,unAttributedType);
@@ -933,7 +984,7 @@ namespace MinecraftLanguageServer.MCDocumentService
             string currentValue = context.GetText();
             NamedValue namedValue = new();
             string inlineValue = "";
-            if (currentValue.TrimStart().StartsWith('"'))
+            if (currentValue.TrimStart().EndsWith('"'))
             {
                 if (DocumentFieldMap.TryGetValue(typeName + ".StringContext", out Stack<List<object>>? stringStack) && stringStack is not null && stringStack.Count > 0)
                 {
