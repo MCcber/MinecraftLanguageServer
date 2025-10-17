@@ -1,7 +1,6 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using MinecraftLanguageServer.MCFunctionService;
-using MinecraftLanguageServer.Model.MCFunction;
 using Newtonsoft.Json;
 using System.IO.Pipes;
 using System.Text;
@@ -12,8 +11,6 @@ namespace MinecraftLanguageServer.DataContext
     public partial class MCFunctionIntellisenseService
     {
         #region Field
-        Dictionary<string, MCFunctionIntellisenseModel> DataContextList = [];
-        MCFunctionIntellisenseModel? MCFunctionDataContext = new();
         NamedPipeServerStream mcfunctionPiperServerStream;
         AntlrInputStream mcfInputStream = null;
         MCCommandLexer mcfLexer = null;
@@ -23,7 +20,7 @@ namespace MinecraftLanguageServer.DataContext
         /// <summary>
         /// 命令路径
         /// </summary>
-        public StringBuilder SyntaxPath = new();
+        public StringBuilder CommandPath = new();
 
         #region 正则属性
         [GeneratedRegex(@"executeOptions")]
@@ -61,17 +58,15 @@ namespace MinecraftLanguageServer.DataContext
             {
                 try
                 {
-                    byte[] functionByteArray = new byte[2048];
-                    await mcfunctionPiperServerStream.WaitForConnectionAsync();
-                    await mcfunctionPiperServerStream.ReadAsync(functionByteArray, 0, functionByteArray.Length);
-                    string data = Encoding.UTF8.GetString(functionByteArray);
-                    data = data.TrimEnd('\0');
-                    //MCFunctionDataContext = JsonConvert.DeserializeObject<MCFunctionIntellisenseModel>(data);
-                    MCFunctionDataContext = new();
-                    await Service("");
-                    string result = JsonConvert.SerializeObject(MCFunctionDataContext);
-                    functionByteArray = Encoding.UTF8.GetBytes(result);
-                    await mcfunctionPiperServerStream.WriteAsync(functionByteArray, 0, functionByteArray.Length);
+                    //byte[] functionByteArray = new byte[2048];
+                    //await mcfunctionPiperServerStream.WaitForConnectionAsync();
+                    //await mcfunctionPiperServerStream.ReadAsync(functionByteArray, 0, functionByteArray.Length);
+                    //string data = Encoding.UTF8.GetString(functionByteArray);
+                    //data = data.TrimEnd('\0');
+                    string data = File.ReadAllText(@"D:\C#Project\MinecraftLanguageServer\code.txt");
+                    await Service(new(data));
+                    //functionByteArray = Encoding.UTF8.GetBytes(CommandPath.ToString());
+                    //await mcfunctionPiperServerStream.WriteAsync(functionByteArray, 0, functionByteArray.Length);
                 }
                 catch (Exception e)
                 {
@@ -84,13 +79,13 @@ namespace MinecraftLanguageServer.DataContext
         /// 执行语法分析
         /// </summary>
         /// <returns></returns>
-        private async Task Service(string CurrentCode)
+        private async Task Service(StringBuilder CurrentCode)
         {
             #region 创建主语法树的词法语法分析器
             //清空命令路径
-            SyntaxPath.Clear();
+            CommandPath.Clear();
             // 创建词法分析器
-            mcfInputStream = new AntlrInputStream(CurrentCode);
+            mcfInputStream = new AntlrInputStream(CurrentCode.ToString());
             mcfLexer = new MCCommandLexer(mcfInputStream);
             mcfTokenStream = new CommonTokenStream(mcfLexer);
             // 创建语法分析器
@@ -100,7 +95,7 @@ namespace MinecraftLanguageServer.DataContext
             #endregion
 
             #region 初始化监听器
-            MCFunctionListener mcfunctionListener = new(CurrentCode);
+            MCFunctionListener mcfunctionListener = new();
             #endregion
 
             #region 根据当前键入内容生成抽象语法树
@@ -108,15 +103,16 @@ namespace MinecraftLanguageServer.DataContext
             {
                 ParseTreeWalker.Default.Walk(mcfunctionListener, context);
             });
-            string commandPath = SyntaxPath.ToString();
+            CommandPath = mcfunctionListener.CommandPath;
             #endregion
 
             #region 处理execute命令的重定向
-            int lastCommandIndex = commandPath.LastIndexOf("commands");
+            string commandPathString = CommandPath.ToString();
+            int lastCommandIndex = commandPathString.LastIndexOf("commands");
             if (lastCommandIndex >= 0)
-                commandPath = commandPath[lastCommandIndex..];
-            if (commandPath.StartsWith("commands.execute") && Regex.Matches(commandPath, @"executeOptions").Count > 1)
-                commandPath = "commands.execute." + commandPath[commandPath.LastIndexOf("executeOptions")..];
+                commandPathString = commandPathString[lastCommandIndex..];
+            if (commandPathString.StartsWith("commands.execute") && Regex.Matches(commandPathString, @"executeOptions").Count > 1)
+                CommandPath = new("commands.execute." + commandPathString[commandPathString.LastIndexOf("executeOptions")..]);
             #endregion
         }
         #endregion

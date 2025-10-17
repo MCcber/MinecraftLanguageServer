@@ -1,5 +1,6 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
+using System.Text;
 using static MCCommandParser;
 
 namespace MinecraftLanguageServer.MCFunctionService
@@ -7,19 +8,23 @@ namespace MinecraftLanguageServer.MCFunctionService
     /// <summary>
     /// 创建自定义的监听器类，继承自 mccommandBaseListener
     /// </summary>
-    public class MCFunctionListener(string CurrentCode) : MCCommandParserBaseListener
+    public class MCFunctionListener() : MCCommandParserBaseListener
     {
         #region Field
-        public string Code = CurrentCode;
+        public StringBuilder CommandPath { get; set; } = new();
         #endregion
 
         #region Event
 
-        #region 处理标识符
+        #region 处理顶层命令路径
         public override void EnterEveryRule([NotNull] ParserRuleContext context)
         {
             base.EnterEveryRule(context);
-
+            string currentText = context.GetText();
+            if (currentText.Length > 0 && context.Start.Text != "<EOF>")
+            {
+                CommandPath.Append(context.GetType().ToString().Replace("MCCommandParser+", "") + '.');
+            }
         }
         #endregion
 

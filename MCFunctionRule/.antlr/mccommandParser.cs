@@ -478,6 +478,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_atChar; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAtChar(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAtChar(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -509,6 +519,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_atLetter; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAtLetter(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAtLetter(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -540,6 +560,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_exclamationMark; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExclamationMark(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExclamationMark(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -571,6 +601,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_leftSquareBracket; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLeftSquareBracket(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLeftSquareBracket(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -602,6 +642,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rightSquareBracket; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRightSquareBracket(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRightSquareBracket(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -633,6 +683,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_leftCurlyBracket; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLeftCurlyBracket(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLeftCurlyBracket(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -664,6 +724,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rightCurlyBracket; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRightCurlyBracket(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRightCurlyBracket(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -695,6 +765,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dimensionId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDimensionId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDimensionId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -726,6 +806,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_mobAttribute; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMobAttribute(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMobAttribute(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -757,6 +847,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_integer; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterInteger(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitInteger(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -788,6 +888,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_intInterval; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterIntInterval(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitIntInterval(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -819,6 +929,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_double; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDouble(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDouble(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -851,6 +971,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_axeValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAxeValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAxeValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -890,6 +1020,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gameTimeValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGameTimeValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGameTimeValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -921,6 +1061,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_biomeId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBiomeId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBiomeId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -952,6 +1102,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bool; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBool(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBool(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -983,6 +1143,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_stringValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStringValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStringValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1016,6 +1186,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jsonComponent; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJsonComponent(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJsonComponent(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1047,6 +1227,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_uuid; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterUuid(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitUuid(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1090,6 +1280,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jobject; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJobject(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJobject(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1171,6 +1371,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jarray; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJarray(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJarray(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1240,6 +1450,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jkey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJkey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJkey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1277,6 +1497,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jpair; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJpair(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJpair(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1314,6 +1544,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_sNbt; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSNbt(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSNbt(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1346,6 +1586,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jDouble; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJDouble(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJDouble(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1385,6 +1635,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jFloat; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJFloat(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJFloat(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1436,6 +1696,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jvalue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJvalue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJvalue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1531,6 +1801,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nbtPathItem; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNbtPathItem(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNbtPathItem(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1635,6 +1915,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nbtObject; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNbtObject(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNbtObject(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1698,6 +1988,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nbtArray; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNbtArray(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNbtArray(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1756,6 +2056,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nbtPair; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNbtPair(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNbtPair(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1814,6 +2124,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nbtValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNbtValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNbtValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1890,6 +2210,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nbtPath; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNbtPath(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNbtPath(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1943,6 +2273,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataType; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataType(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataType(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -1982,6 +2322,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2017,6 +2367,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_blockState; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBlockState(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBlockState(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2069,6 +2429,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_blockID; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBlockID(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBlockID(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2150,6 +2520,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_blockNBT; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBlockNBT(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBlockNBT(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2183,6 +2563,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_entityNBT; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEntityNBT(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEntityNBT(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2214,6 +2604,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_targetObjective; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTargetObjective(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTargetObjective(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2245,6 +2645,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_storageId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStorageId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStorageId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2276,6 +2686,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_storageIdString; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStorageIdString(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStorageIdString(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2309,6 +2729,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_coordinateX; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCoordinateX(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCoordinateX(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2350,6 +2780,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_coordinateY; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCoordinateY(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCoordinateY(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2391,6 +2831,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_coordinateZ; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCoordinateZ(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCoordinateZ(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2438,6 +2888,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_pos3D; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPos3D(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPos3D(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2478,6 +2938,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_pos2D; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPos2D(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPos2D(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2511,6 +2981,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gamemodeValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGamemodeValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGamemodeValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2542,6 +3022,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_sortValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSortValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSortValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2573,6 +3063,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_identifier; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterIdentifier(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitIdentifier(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2605,6 +3105,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_viewRotationValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterViewRotationValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitViewRotationValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2644,6 +3154,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_doubleInterval; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDoubleInterval(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDoubleInterval(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2675,6 +3195,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_positiveDouble; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPositiveDouble(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPositiveDouble(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2706,6 +3236,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_positiveDoubleInterval; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPositiveDoubleInterval(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPositiveDoubleInterval(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2737,6 +3277,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_levelValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLevelValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLevelValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2769,6 +3319,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nameValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNameValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNameValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2809,6 +3369,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_entityType; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEntityType(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEntityType(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2848,6 +3418,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_predicateValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPredicateValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPredicateValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2890,6 +3470,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_selector; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSelector(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSelector(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2951,6 +3541,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_selectorName; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSelectorName(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSelectorName(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -2998,6 +3598,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_selectorParameter; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSelectorParameter(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSelectorParameter(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -3075,6 +3685,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scorePath; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScorePath(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScorePath(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -3120,6 +3740,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreParameter; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreParameter(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreParameter(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -3198,6 +3828,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoresValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoresValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoresValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -3379,6 +4019,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_parameter; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParameter(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParameter(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -3958,6 +4608,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_commands; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCommands(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCommands(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4445,6 +5105,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_axeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAxeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAxeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4476,6 +5146,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_star; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStar(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStar(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4507,6 +5187,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_advancementKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdvancementKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdvancementKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4538,6 +5228,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_attributeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAttributeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAttributeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4569,6 +5269,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4600,6 +5310,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_clearKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterClearKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitClearKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4631,6 +5351,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4662,6 +5392,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_damageKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDamageKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDamageKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4693,6 +5433,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4724,6 +5474,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_datapackKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDatapackKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDatapackKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4755,6 +5515,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_debugKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDebugKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDebugKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4786,6 +5556,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_defaultgamemodeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDefaultgamemodeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDefaultgamemodeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4817,6 +5597,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_difficultyKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDifficultyKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDifficultyKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4848,6 +5638,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_effectKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEffectKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEffectKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4879,6 +5679,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_enchantKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEnchantKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEnchantKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4910,6 +5720,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4941,6 +5761,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_experienceKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExperienceKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExperienceKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -4972,6 +5802,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fillKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFillKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFillKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5003,6 +5843,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fillbiomeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFillbiomeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFillbiomeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5034,6 +5884,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_forceloadKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterForceloadKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitForceloadKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5065,6 +5925,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_functionKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFunctionKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFunctionKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5096,6 +5966,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gamemodeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGamemodeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGamemodeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5127,6 +6007,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gameruleKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGameruleKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGameruleKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5158,6 +6048,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_giveKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGiveKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGiveKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5189,6 +6089,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_helpKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHelpKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHelpKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5220,6 +6130,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5251,6 +6171,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jfrKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJfrKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJfrKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5282,6 +6212,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_kickKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterKickKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitKickKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5313,6 +6253,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_killKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterKillKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitKillKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5344,6 +6294,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_listKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterListKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitListKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5375,6 +6335,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_locateKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLocateKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLocateKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5406,6 +6376,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lootKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLootKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLootKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5437,6 +6417,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_meKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5468,6 +6458,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_msgKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMsgKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMsgKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5499,6 +6499,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5530,6 +6540,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_placeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlaceKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlaceKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5561,6 +6581,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_playsoundKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlaysoundKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlaysoundKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5592,6 +6622,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_publishKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPublishKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPublishKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5623,6 +6663,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_recipeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRecipeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRecipeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5654,6 +6704,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_reloadKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterReloadKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitReloadKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5685,6 +6745,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_returnKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterReturnKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitReturnKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5716,6 +6786,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rideKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRideKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRideKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5747,6 +6827,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_sayKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSayKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSayKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5778,6 +6868,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scheduleKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScheduleKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScheduleKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5809,6 +6909,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5840,6 +6950,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_seedKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSeedKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSeedKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5871,6 +6991,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_setblockKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSetblockKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSetblockKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5902,6 +7032,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_setworldspawnKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSetworldspawnKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSetworldspawnKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5933,6 +7073,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spawnpointKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpawnpointKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpawnpointKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5964,6 +7114,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spectateKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpectateKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpectateKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -5995,6 +7155,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spreadplayersKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpreadplayersKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpreadplayersKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6026,6 +7196,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_stopsoundKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStopsoundKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStopsoundKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6057,6 +7237,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_summonKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSummonKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSummonKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6088,6 +7278,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tagKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTagKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTagKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6119,6 +7319,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6150,6 +7360,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teammsgKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeammsgKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeammsgKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6181,6 +7401,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teleportKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeleportKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeleportKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6212,6 +7442,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tellKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTellKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTellKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6243,6 +7483,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tellrawKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTellrawKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTellrawKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6274,6 +7524,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_timeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTimeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTimeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6305,6 +7565,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_titleKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTitleKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTitleKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6336,6 +7606,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tmKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTmKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTmKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6367,6 +7647,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tpKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTpKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTpKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6398,6 +7688,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_triggerKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTriggerKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTriggerKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6429,6 +7729,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_weatherKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWeatherKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWeatherKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6460,6 +7770,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_worldborderKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWorldborderKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWorldborderKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6491,6 +7811,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_xpKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterXpKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitXpKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6522,6 +7852,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_axeLengthKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAxeLengthKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAxeLengthKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6553,6 +7893,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_viewRotationKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterViewRotationKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitViewRotationKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6584,6 +7934,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_level; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLevel(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLevel(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6615,6 +7975,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6646,6 +8016,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_limit; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLimit(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLimit(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6677,6 +8057,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_typeKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTypeKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTypeKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6708,6 +8098,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nbt; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNbt(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNbt(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6739,6 +8139,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_sortKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSortKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSortKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6770,6 +8180,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_divisionEqual; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDivisionEqual(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDivisionEqual(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6801,6 +8221,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_multiplicationEqual; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMultiplicationEqual(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMultiplicationEqual(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6832,6 +8262,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_additionEqual; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdditionEqual(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdditionEqual(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6863,6 +8303,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_subtractionEqual; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSubtractionEqual(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSubtractionEqual(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6894,6 +8344,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_remainderEqual; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRemainderEqual(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRemainderEqual(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6925,6 +8385,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lessThan; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLessThan(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLessThan(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6956,6 +8426,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lessThanOrEqualTo; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLessThanOrEqualTo(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLessThanOrEqualTo(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -6987,6 +8467,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_equal; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEqual(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEqual(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7018,6 +8508,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_greaterThan; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGreaterThan(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGreaterThan(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7049,6 +8549,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_greaterThanOrEqualTo; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGreaterThanOrEqualTo(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGreaterThanOrEqualTo(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7080,6 +8590,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_greaterThanLessThan; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGreaterThanLessThan(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGreaterThanLessThan(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7111,6 +8631,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_add; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdd(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdd(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7142,6 +8672,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_remove; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRemove(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRemove(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7173,6 +8713,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_value; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7204,6 +8754,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_set; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSet(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSet(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7235,6 +8795,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_multiply; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMultiply(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMultiply(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7266,6 +8836,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_multiply_base; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMultiply_base(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMultiply_base(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7297,6 +8877,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_max; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMax(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMax(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7328,6 +8918,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_players; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlayers(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlayers(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7359,6 +8959,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_visible; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterVisible(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitVisible(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7390,6 +9000,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_color; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterColor(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitColor(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7421,6 +9041,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_name; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterName(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitName(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7452,6 +9082,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_style; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStyle(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStyle(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7483,6 +9123,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_filtered; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFiltered(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFiltered(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7514,6 +9164,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_masked; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMasked(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMasked(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7545,6 +9205,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_replace; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterReplace(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitReplace(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7576,6 +9246,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_force; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterForce(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitForce(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7607,6 +9287,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_move; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMove(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMove(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7638,6 +9328,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_normal; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNormal(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNormal(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7669,6 +9369,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_to; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTo(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTo(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7700,6 +9410,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_by; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBy(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBy(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7731,6 +9451,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_merge; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMerge(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMerge(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7762,6 +9492,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_modify; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterModify(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitModify(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7793,6 +9533,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_block; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBlock(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBlock(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7824,6 +9574,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_entity; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEntity(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEntity(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7855,6 +9615,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_storage; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStorage(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStorage(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7886,6 +9656,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_stringKey; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStringKey(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStringKey(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7917,6 +9697,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_as; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAs(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAs(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7948,6 +9738,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_grant; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGrant(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGrant(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -7979,6 +9779,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_revoke; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRevoke(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRevoke(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8010,6 +9820,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_everything; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEverything(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEverything(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8041,6 +9861,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_only; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOnly(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOnly(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8072,6 +9902,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_from; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFrom(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFrom(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8103,6 +9943,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_through; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterThrough(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitThrough(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8134,6 +9984,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_until; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterUntil(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitUntil(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8165,6 +10025,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_base; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBase(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBase(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8196,6 +10066,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_get; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGet(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGet(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8227,6 +10107,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_modifier; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterModifier(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitModifier(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8258,6 +10148,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_available; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAvailable(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAvailable(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8289,6 +10189,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_enable; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEnable(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEnable(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8320,6 +10230,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_after; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAfter(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAfter(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8351,6 +10271,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_before; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBefore(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBefore(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8382,6 +10312,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_first; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFirst(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFirst(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8413,6 +10353,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_last; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLast(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLast(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8444,6 +10394,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_disable; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDisable(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDisable(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8475,6 +10435,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_start; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStart(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStart(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8506,6 +10476,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_stop; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStop(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStop(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8537,6 +10517,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_infinite; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterInfinite(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitInfinite(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8568,6 +10558,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_easy; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEasy(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEasy(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8599,6 +10599,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_hard; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHard(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHard(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8630,6 +10640,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_peaceful; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPeaceful(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPeaceful(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8661,6 +10681,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_eyes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEyes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEyes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8692,6 +10722,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_feet; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFeet(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFeet(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8723,6 +10763,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_all; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAll(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAll(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8754,6 +10804,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_biome; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBiome(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBiome(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8785,6 +10845,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_blocks; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBlocks(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBlocks(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8816,6 +10886,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dimension; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDimension(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDimension(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8847,6 +10927,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_loaded; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLoaded(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLoaded(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8878,6 +10968,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_predicate; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPredicate(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPredicate(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8909,6 +11009,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_score; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScore(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScore(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8940,6 +11050,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_matches; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMatches(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMatches(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -8971,6 +11091,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_attacker; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAttacker(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAttacker(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9002,6 +11132,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_controller; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterController(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitController(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9033,6 +11173,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_leasher; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLeasher(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLeasher(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9064,6 +11214,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_origin; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOrigin(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOrigin(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9095,6 +11255,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_owner; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOwner(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOwner(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9126,6 +11296,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_passengers; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPassengers(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPassengers(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9157,6 +11337,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_target; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9188,6 +11378,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_vehicle; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterVehicle(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitVehicle(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9219,6 +11419,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_motion_blocking; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMotion_blocking(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMotion_blocking(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9250,6 +11460,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_motion_blocking_no_leaves; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMotion_blocking_no_leaves(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMotion_blocking_no_leaves(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9281,6 +11501,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_ocean_floor; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOcean_floor(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOcean_floor(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9312,6 +11542,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_world_surface; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWorld_surface(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWorld_surface(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9343,6 +11583,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_over; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOver(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOver(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9374,6 +11624,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_result; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterResult(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitResult(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9405,6 +11665,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_success; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSuccess(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSuccess(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9436,6 +11706,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_align; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAlign(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAlign(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9467,6 +11747,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_anchored; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAnchored(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAnchored(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9498,6 +11788,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_if; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterIf(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitIf(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9529,6 +11829,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_unless; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterUnless(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitUnless(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9560,6 +11870,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_in; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterIn(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitIn(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9591,6 +11911,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_on; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOn(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOn(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9622,6 +11952,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_positioned; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPositioned(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPositioned(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9653,6 +11993,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rotated; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRotated(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRotated(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9684,6 +12034,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_run; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRun(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRun(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9715,6 +12075,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_store; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStore(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStore(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9746,6 +12116,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_query; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterQuery(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitQuery(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9777,6 +12157,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_levels; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLevels(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLevels(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9808,6 +12198,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_points; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPoints(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPoints(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9839,6 +12239,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_destroy; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDestroy(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDestroy(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9870,6 +12280,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_hollow; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHollow(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHollow(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9901,6 +12321,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_keep; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterKeep(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitKeep(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9932,6 +12362,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_outline; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOutline(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOutline(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9963,6 +12403,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_uuids; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterUuids(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitUuids(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -9994,6 +12444,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_poi; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPoi(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPoi(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10025,6 +12485,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_structure; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStructure(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStructure(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10056,6 +12526,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_insert; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterInsert(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitInsert(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10087,6 +12567,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spawn; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpawn(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpawn(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10118,6 +12608,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fish; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFish(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFish(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10149,6 +12649,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_mine; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMine(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMine(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10180,6 +12690,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_feature; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFeature(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFeature(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10211,6 +12731,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jigsaw; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJigsaw(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJigsaw(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10242,6 +12772,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_template; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTemplate(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTemplate(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10273,6 +12813,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_front_back; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFront_back(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFront_back(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10304,6 +12854,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_left_right; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLeft_right(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLeft_right(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10335,6 +12895,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_none; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNone(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNone(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10366,6 +12936,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_clockwise_90; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterClockwise_90(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitClockwise_90(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10397,6 +12977,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_counterclockwise_90; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCounterclockwise_90(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCounterclockwise_90(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10428,6 +13018,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_ambient; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAmbient(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAmbient(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10459,6 +13059,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_hostile; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHostile(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHostile(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10490,6 +13100,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_master; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMaster(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMaster(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10521,6 +13141,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_music; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMusic(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMusic(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10552,6 +13182,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_neutral; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNeutral(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNeutral(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10583,6 +13223,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_player; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlayer(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlayer(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10614,6 +13264,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_record; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRecord(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRecord(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10645,6 +13305,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_voice; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterVoice(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitVoice(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10676,6 +13346,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_append; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAppend(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAppend(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10707,6 +13387,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dismount; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDismount(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDismount(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10738,6 +13428,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_mount; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMount(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMount(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10769,6 +13469,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_objectives; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterObjectives(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitObjectives(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10800,6 +13510,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_hearts; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHearts(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHearts(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10831,6 +13551,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rendertype; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRendertype(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRendertype(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10862,6 +13592,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_setdisplay; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSetdisplay(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSetdisplay(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10893,6 +13633,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_operation; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOperation(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOperation(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10924,6 +13674,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_reset; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterReset(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitReset(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10955,6 +13715,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_under; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterUnder(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitUnder(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -10986,6 +13756,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_actionbar; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterActionbar(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitActionbar(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11017,6 +13797,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_subtitle; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSubtitle(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSubtitle(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11048,6 +13838,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_times; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTimes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTimes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11079,6 +13879,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fadeIn; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFadeIn(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFadeIn(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11110,6 +13920,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_stay; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStay(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStay(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11141,6 +13961,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fadeOut; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFadeOut(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFadeOut(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11172,6 +14002,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_center; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCenter(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCenter(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11203,6 +14043,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_warning; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWarning(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWarning(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11234,6 +14084,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_amount; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAmount(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAmount(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11265,6 +14125,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_buffer; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBuffer(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBuffer(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11296,6 +14166,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_facing; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFacing(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFacing(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11327,6 +14207,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_prepend; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPrepend(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPrepend(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11358,6 +14248,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_with; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWith(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWith(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11389,6 +14289,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_mainhand; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMainhand(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMainhand(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11420,6 +14330,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_offhand; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOffhand(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOffhand(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11451,6 +14371,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_take; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTake(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTake(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11482,6 +14412,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_always; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAlways(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAlways(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11513,6 +14453,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_never; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNever(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNever(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11544,6 +14494,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_pushOtherTeams; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPushOtherTeams(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPushOtherTeams(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11575,6 +14535,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_pushOwnTeam; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPushOwnTeam(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPushOwnTeam(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11606,6 +14576,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_hideForOtherTeams; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHideForOtherTeams(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHideForOtherTeams(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11637,6 +14617,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_hideForOwnTeam; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHideForOwnTeam(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHideForOwnTeam(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11668,6 +14658,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_friendlyFire; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFriendlyFire(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFriendlyFire(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11699,6 +14699,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_nametagVisibility; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNametagVisibility(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNametagVisibility(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11730,6 +14740,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_seeFriendlyInvisibles; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSeeFriendlyInvisibles(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSeeFriendlyInvisibles(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11761,6 +14781,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rain; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRain(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRain(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11792,6 +14822,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_thunder; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterThunder(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitThunder(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11823,6 +14863,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_day; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDay(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDay(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11854,6 +14904,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_midnight; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMidnight(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMidnight(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11885,6 +14945,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_night; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNight(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNight(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11916,6 +14986,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_daytime; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDaytime(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDaytime(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11947,6 +15027,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_noon; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterNoon(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitNoon(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -11978,6 +15068,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gametime; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGametime(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGametime(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12009,6 +15109,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_distance; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDistance(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDistance(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12040,6 +15150,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_empty; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEmpty(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEmpty(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12071,6 +15191,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_join; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJoin(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJoin(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12102,6 +15232,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_leave; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLeave(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLeave(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12133,6 +15273,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_collisionRule; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCollisionRule(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCollisionRule(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12164,6 +15314,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_deathMessageVisibility; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDeathMessageVisibility(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDeathMessageVisibility(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12195,6 +15355,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_prefix; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPrefix(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPrefix(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12226,6 +15396,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_suffix; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSuffix(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSuffix(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12257,6 +15437,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_displayName; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDisplayName(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDisplayName(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12288,6 +15478,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_booleanValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBooleanValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBooleanValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12319,6 +15519,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_oneHundredAndEighty; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterOneHundredAndEighty(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitOneHundredAndEighty(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12364,6 +15574,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_advancementRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdvancementRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdvancementRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12417,6 +15637,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_advancementCriterion; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdvancementCriterion(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdvancementCriterion(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12468,6 +15698,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_advancementCriterionBlock; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdvancementCriterionBlock(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdvancementCriterionBlock(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12545,6 +15785,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_advancementValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdvancementValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdvancementValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12631,6 +15881,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_advancementModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAdvancementModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAdvancementModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12735,6 +15995,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_attributeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAttributeRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAttributeRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12787,6 +16057,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_attributeOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAttributeOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAttributeOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12859,6 +16139,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_baseModifier; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBaseModifier(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBaseModifier(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -12926,6 +16216,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_modifierOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterModifierOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitModifierOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13009,6 +16309,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_modifierModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterModifierModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitModifierModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13067,6 +16377,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13100,6 +16420,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarID; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarID(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarID(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13157,6 +16487,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13244,6 +16584,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarStyle; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarStyle(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarStyle(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13275,6 +16625,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarColor; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarColor(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarColor(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13317,6 +16677,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarGetTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarGetTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarGetTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13415,6 +16785,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_bossbarAttributes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterBossbarAttributes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitBossbarAttributes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13535,6 +16915,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_clearRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterClearRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitClearRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13597,6 +16987,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_count; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCount(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCount(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13639,6 +17039,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13696,6 +17106,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneSource; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneSource(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneSource(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13750,6 +17170,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneBegin; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneBegin(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneBegin(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13793,6 +17223,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneEnd; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneEnd(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneEnd(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13836,6 +17276,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneDestination; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneDestination(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneDestination(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13888,6 +17338,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_destinationPos; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDestinationPos(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDestinationPos(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -13937,6 +17397,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneMode; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneMode(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneMode(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14024,6 +17494,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_cloneBehavior; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCloneBehavior(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCloneBehavior(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14089,6 +17569,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_damageRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDamageRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDamageRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14128,6 +17618,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_damageType; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDamageType(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDamageType(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14176,6 +17676,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_damageOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDamageOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDamageOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14239,6 +17749,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14272,6 +17792,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataStringStart; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataStringStart(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataStringStart(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14303,6 +17833,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataStringEnd; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataStringEnd(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataStringEnd(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14357,6 +17897,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14456,6 +18006,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataGetTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataGetTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataGetTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14584,6 +18144,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataMergeTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataMergeTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataMergeTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14681,6 +18251,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataModifyStringTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataModifyStringTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataModifyStringTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14793,6 +18373,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataModifyFromTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataModifyFromTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataModifyFromTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14881,6 +18471,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataModifyBehaviors; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataModifyBehaviors(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataModifyBehaviors(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -14966,6 +18566,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataModifyOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataModifyOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataModifyOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15078,6 +18688,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataModifyTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataModifyTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataModifyTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15175,6 +18795,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_dataRemoveTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDataRemoveTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDataRemoveTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15251,6 +18881,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_datapackRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDatapackRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDatapackRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15289,6 +18929,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_datapackState; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDatapackState(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDatapackState(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15335,6 +18985,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_datapackId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDatapackId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDatapackId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15380,6 +19040,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_datapackBehaviors; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDatapackBehaviors(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDatapackBehaviors(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15465,6 +19135,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_datapackOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDatapackOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDatapackOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15537,6 +19217,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_debugRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDebugRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDebugRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15581,6 +19271,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_debugOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDebugOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDebugOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15643,6 +19343,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_defaultgamemodeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDefaultgamemodeRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDefaultgamemodeRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15681,6 +19391,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_difficultyRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDifficultyRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDifficultyRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15725,6 +19445,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_difficultyValues; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterDifficultyValues(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitDifficultyValues(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15790,6 +19520,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_effectRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEffectRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEffectRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15846,6 +19586,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_effectOption; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEffectOption(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEffectOption(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15942,6 +19692,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_effectID; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEffectID(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEffectID(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -15973,6 +19733,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_effectTime; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEffectTime(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEffectTime(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16004,6 +19774,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_seconds; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSeconds(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSeconds(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16035,6 +19815,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_amplifier; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAmplifier(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAmplifier(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16066,6 +19856,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_hideParticles; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHideParticles(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHideParticles(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16108,6 +19908,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_enchantRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEnchantRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEnchantRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16145,6 +19955,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_enchantLevel; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEnchantLevel(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEnchantLevel(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16176,6 +19996,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_enchantID; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterEnchantID(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitEnchantID(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16212,6 +20042,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16250,6 +20090,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeEyesOrFeet; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteEyesOrFeet(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteEyesOrFeet(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16296,6 +20146,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_axes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAxes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAxes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16332,6 +20192,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeAllOrMasked; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteAllOrMasked(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteAllOrMasked(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16383,6 +20253,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeMaxOrValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteMaxOrValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteMaxOrValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16449,6 +20329,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeJudgeDataOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteJudgeDataOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteJudgeDataOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16582,6 +20472,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeJudgementOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteJudgementOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteJudgementOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16760,6 +20660,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeOperations; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteOperations(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteOperations(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16885,6 +20795,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeOn; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteOn(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteOn(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -16984,6 +20904,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeOver; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteOver(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteOver(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17055,6 +20985,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executePositioned; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecutePositioned(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecutePositioned(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17148,6 +21088,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeStoreTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteStoreTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteStoreTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17265,6 +21215,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeStore; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteStore(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteStore(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17328,6 +21288,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeFacing; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteFacing(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteFacing(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17468,6 +21438,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_executeOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExecuteOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExecuteOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17714,6 +21694,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_experienceRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExperienceRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExperienceRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17747,6 +21737,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_experienceAmount; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExperienceAmount(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExperienceAmount(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17783,6 +21783,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_expreienceType; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExpreienceType(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExpreienceType(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17846,6 +21856,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_experienceOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterExperienceOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitExperienceOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17937,6 +21957,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fillRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFillRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFillRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -17993,6 +22023,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fillOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFillOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFillOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18088,6 +22128,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fillbiomeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFillbiomeRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFillbiomeRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18132,6 +22182,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_fillBiomeOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFillBiomeOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFillBiomeOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18170,6 +22230,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_forceloadRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterForceloadRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitForceloadRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18211,6 +22281,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_forceloadRemoveObjectives; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterForceloadRemoveObjectives(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitForceloadRemoveObjectives(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18280,6 +22360,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_forceloadOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterForceloadOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitForceloadOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18352,6 +22442,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_functionRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFunctionRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFunctionRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18393,6 +22493,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gamemodeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGamemodeRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGamemodeRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18445,6 +22555,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gameruleRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGameruleRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGameruleRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18480,6 +22600,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gameruleName; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGameruleName(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGameruleName(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18512,6 +22642,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_gameruleValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGameruleValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGameruleValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18562,6 +22702,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_giveRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterGiveRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitGiveRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18604,6 +22754,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_helpRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterHelpRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitHelpRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18639,6 +22799,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_commandList; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterCommandList(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitCommandList(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18675,6 +22845,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18708,6 +22888,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemSlot; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemSlot(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemSlot(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18739,6 +22929,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemModifierFile; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemModifierFile(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemModifierFile(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18781,6 +22981,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18849,6 +23059,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemBehaviors; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemBehaviors(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemBehaviors(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -18922,6 +23142,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemModifyTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemModifyTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemModifyTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19001,6 +23231,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_itemReplaceTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterItemReplaceTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitItemReplaceTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19068,6 +23308,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jfrRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJfrRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJfrRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19106,6 +23356,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jfrStartOrStop; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJfrStartOrStop(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJfrStartOrStop(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19160,6 +23420,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_kickRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterKickRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitKickRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19195,6 +23465,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_reason; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterReason(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitReason(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19231,6 +23511,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_killRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterKillRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitKillRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19269,6 +23559,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_listRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterListRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitListRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19307,6 +23607,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_locateRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLocateRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLocateRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19340,6 +23650,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_poiId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPoiId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPoiId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19371,6 +23691,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_structureId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStructureId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStructureId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19419,6 +23749,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_locateOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLocateOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLocateOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19489,6 +23829,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lootRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLootRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLootRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19522,6 +23872,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lootFilePath; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLootFilePath(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLootFilePath(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19559,6 +23919,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lootTool; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLootTool(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLootTool(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19635,6 +24005,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lootOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLootOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLootOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19734,6 +24114,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lootReplace; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLootReplace(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLootReplace(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19819,6 +24209,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_lootModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterLootModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitLootModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19906,6 +24306,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_meRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMeRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMeRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19939,6 +24349,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_action; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterAction(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitAction(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -19978,6 +24398,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_msgRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMsgRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMsgRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20013,6 +24443,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_msgMessage; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMsgMessage(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMsgMessage(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20067,6 +24507,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20138,6 +24588,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleSpeed; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleSpeed(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleSpeed(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20177,6 +24637,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleCount; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleCount(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleCount(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20216,6 +24686,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleDelta; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleDelta(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleDelta(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20256,6 +24736,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20307,6 +24797,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20350,6 +24850,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_particleIDString; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterParticleIDString(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitParticleIDString(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20394,6 +24904,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_placeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlaceRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlaceRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20427,6 +24947,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_featureId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFeatureId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFeatureId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20458,6 +24988,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jigsawTarget; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJigsawTarget(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJigsawTarget(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20489,6 +25029,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_jigsawFilePath; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterJigsawFilePath(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitJigsawFilePath(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20520,6 +25070,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_templateFilePath; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTemplateFilePath(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTemplateFilePath(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20587,6 +25147,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_placeModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlaceModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlaceModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20689,6 +25259,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_placeMirrorItems; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlaceMirrorItems(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlaceMirrorItems(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20756,6 +25336,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_placeRotationModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlaceRotationModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlaceRotationModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20840,6 +25430,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_playsoundRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPlaysoundRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPlaysoundRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20885,6 +25485,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_volume; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterVolume(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitVolume(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20916,6 +25526,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_pitch; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPitch(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPitch(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -20947,6 +25567,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_minVolume; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMinVolume(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMinVolume(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21004,6 +25634,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_soundTypes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSoundTypes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSoundTypes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21110,6 +25750,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_publishRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPublishRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPublishRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21147,6 +25797,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_port; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterPort(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitPort(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21189,6 +25849,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_recipeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRecipeRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRecipeRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21226,6 +25896,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_recipeFilePath; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRecipeFilePath(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRecipeFilePath(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21262,6 +25942,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_recipeGiveOrTake; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRecipeGiveOrTake(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRecipeGiveOrTake(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21310,6 +26000,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_reloadRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterReloadRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitReloadRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21346,6 +26046,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_returnRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterReturnRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitReturnRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21387,6 +26097,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rideRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRideRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRideRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21430,6 +26150,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rideModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRideModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRideModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21485,6 +26215,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_sayRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSayRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSayRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21518,6 +26258,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_sayMessage; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSayMessage(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSayMessage(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21554,6 +26304,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scheduleRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScheduleRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScheduleRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21587,6 +26347,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_functionId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFunctionId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFunctionId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21623,6 +26393,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scheduleAppendOrReplace; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScheduleAppendOrReplace(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScheduleAppendOrReplace(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21681,6 +26461,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scheduleModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScheduleModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScheduleModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21744,6 +26534,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21788,6 +26588,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21842,6 +26652,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardObjective; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardObjective(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardObjective(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21873,6 +26693,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardType; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardType(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardType(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21909,6 +26739,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardHeartsOrInteger; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardHeartsOrInteger(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardHeartsOrInteger(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -21981,6 +26821,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardOperator; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardOperator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardOperator(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22076,6 +26926,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardSlots; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardSlots(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardSlots(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22145,6 +27005,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardObjectivesBehaviors; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardObjectivesBehaviors(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardObjectivesBehaviors(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22303,6 +27173,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_scoreboardPlayersBehaviors; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterScoreboardPlayersBehaviors(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitScoreboardPlayersBehaviors(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22451,6 +27331,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_seedRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSeedRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSeedRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22493,6 +27383,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_setblockRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSetblockRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSetblockRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22538,6 +27438,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_setblockModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSetblockModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSetblockModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22597,6 +27507,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_setworldspawnRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSetworldspawnRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSetworldspawnRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22641,6 +27561,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spawnpointRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpawnpointRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpawnpointRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22686,6 +27616,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spectateRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpectateRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpectateRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22735,6 +27675,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spreadplayersRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpreadplayersRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpreadplayersRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22788,6 +27738,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spreadplayersOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpreadplayersOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpreadplayersOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22846,6 +27806,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_spreadDistance; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSpreadDistance(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSpreadDistance(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22877,6 +27847,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_maxRange; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterMaxRange(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitMaxRange(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22908,6 +27888,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_respectTeams; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterRespectTeams(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitRespectTeams(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22950,6 +27940,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_stopsoundRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStopsoundRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStopsoundRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -22987,6 +27987,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_soundId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSoundId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSoundId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23050,6 +28060,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_stopsoundTypes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterStopsoundTypes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitStopsoundTypes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23170,6 +28190,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_summonRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterSummonRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitSummonRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23215,6 +28245,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tagRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTagRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTagRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23261,6 +28301,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tagOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTagOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTagOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23326,6 +28376,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tagValue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTagValue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTagValue(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23362,6 +28422,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23395,6 +28465,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamId; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamId(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamId(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23426,6 +28506,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamName; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamName(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamName(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23468,6 +28558,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamCollisionRule; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamCollisionRule(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamCollisionRule(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23528,6 +28628,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamColor; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamColor(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamColor(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23570,6 +28680,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamVisibility; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamVisibility(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamVisibility(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23665,6 +28785,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23830,6 +28960,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamAttributes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamAttributes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamAttributes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -23972,6 +29112,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teammsgRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeammsgRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeammsgRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24005,6 +29155,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teamMessage; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeamMessage(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeamMessage(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24041,6 +29201,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teleportRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeleportRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeleportRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24079,6 +29249,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teleportEyesOrFeet; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeleportEyesOrFeet(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeleportEyesOrFeet(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24148,6 +29328,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_teleportOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTeleportOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTeleportOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24278,6 +29468,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tellRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTellRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTellRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24313,6 +29513,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tellMessage; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTellMessage(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTellMessage(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24352,6 +29562,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tellrawRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTellrawRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTellrawRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24392,6 +29612,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_timeRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTimeRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTimeRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24433,6 +29663,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_timeDataTypes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTimeDataTypes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTimeDataTypes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24497,6 +29737,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_timeTimePoints; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTimeTimePoints(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTimeTimePoints(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24574,6 +29824,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_timeOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTimeOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTimeOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24662,6 +29922,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_titleRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTitleRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTitleRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24726,6 +29996,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_titleBehaviors; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTitleBehaviors(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTitleBehaviors(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24832,6 +30112,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_faedIn; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterFaedIn(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitFaedIn(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24868,6 +30158,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tmRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTmRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTmRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24901,6 +30201,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tmMessage; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTmMessage(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTmMessage(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24937,6 +30247,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_tpRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTpRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTpRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -24981,6 +30301,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_triggerRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTriggerRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTriggerRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25018,6 +30348,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_triggerObjective; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTriggerObjective(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTriggerObjective(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25054,6 +30394,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_triggerBehaviors; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterTriggerBehaviors(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitTriggerBehaviors(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25106,6 +30456,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_weatherRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWeatherRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWeatherRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25149,6 +30509,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_weatherMembers; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWeatherMembers(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWeatherMembers(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25207,6 +30577,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_worldborderRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWorldborderRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWorldborderRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25270,6 +30650,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_worldborderOptions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWorldborderOptions(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWorldborderOptions(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25377,6 +30767,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_worldborderWarningTypes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWorldborderWarningTypes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWorldborderWarningTypes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25428,6 +30828,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_worldborderModes; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterWorldborderModes(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitWorldborderModes(this);
+		}
 	}
 
 	[RuleVersion(0)]
@@ -25479,6 +30889,16 @@ public partial class MCCommandParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_xpRadical; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.EnterXpRadical(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMCCommandParserListener typedListener = listener as IMCCommandParserListener;
+			if (typedListener != null) typedListener.ExitXpRadical(this);
+		}
 	}
 
 	[RuleVersion(0)]

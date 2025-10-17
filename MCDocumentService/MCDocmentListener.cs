@@ -43,7 +43,7 @@ namespace MinecraftLanguageServer.MCDocumentService
 
         private string[] intUnit = ["b","s","l"];
         private string[] floatUnit = ["d","f"];
-        private List<string> BlackList = ["IntegerContext", "IntegerRangeContext", "NamedValueContext", "NamedValuesContext", "TreeBodyContext"];
+        private List<string> BlackList = ["IntegerContext", "IntegerRangeContext", "NamedValueContext", "NamedValuesContext", "TreeBodyContext", "AttributeContext", "StructBlockContext"];
         private MCDocumentFileModel result = new();
         private List<string> reservedWordList = 
         [
@@ -76,68 +76,92 @@ namespace MinecraftLanguageServer.MCDocumentService
             if(!result.IsCollected)
             {
                 #region 收集结构体
-                if (DocumentFieldMap.TryGetValue("StructContext", out Stack<List<object>>? structSentence) && structSentence is not null)
+                if (DocumentFieldMap.TryGetValue("FileContext.StructContext", out Stack<List<object>>? structSentence) && structSentence is not null)
                 {
                     while (structSentence.Count > 0)
                     {
                         result.StructureList.AddRange(structSentence.Pop().Cast<Structure>().Where(item=>item.IsTop));
                     }
-                    result.StructureList.Reverse();
+
+                    if (result.StructureList.Count > 1)
+                    {
+                        result.StructureList.Reverse();
+                    }
                 }
                 #endregion
 
                 #region 收集枚举
-                if (DocumentFieldMap.TryGetValue("EnumTypeContext", out Stack<List<object>>? enumTypeSentence) && enumTypeSentence is not null)
+                if (DocumentFieldMap.TryGetValue("FileContext.EnumTypeContext", out Stack<List<object>>? enumTypeSentence) && enumTypeSentence is not null)
                 {
                     while (enumTypeSentence.Count > 0)
                     {
                         result.EnumerationList.AddRange(enumTypeSentence.Pop().Cast<Enumeration>().Where(item => item.IsTop));
                     }
-                    result.EnumerationList.Reverse();
+
+                    if (result.StructureList.Count > 1)
+                    {
+                        result.EnumerationList.Reverse();
+                    }
                 }
                 #endregion
 
                 #region 收集TypeAlias
-                if (DocumentFieldMap.TryGetValue("TypeAliasContext", out Stack<List<object>>? typeAliasSentence) && typeAliasSentence is not null)
+                if (DocumentFieldMap.TryGetValue("FileContext.TypeAliasContext", out Stack<List<object>>? typeAliasSentence) && typeAliasSentence is not null)
                 {
                     while (typeAliasSentence.Count > 0)
                     {
                         result.TypeAliaList.AddRange(typeAliasSentence.Pop().Cast<TypeAlia>());
                     }
-                    result.TypeAliaList.Reverse();
+
+                    if (result.StructureList.Count > 1)
+                    {
+                        result.TypeAliaList.Reverse();
+                    }
                 }
                 #endregion
 
                 #region 收集外部引用
-                if (DocumentFieldMap.TryGetValue("UseStatementContext", out Stack<List<object>>? useStatementSentence) && useStatementSentence is not null)
+                if (DocumentFieldMap.TryGetValue("FileContext.UseStatementContext", out Stack<List<object>>? useStatementSentence) && useStatementSentence is not null)
                 {
                     while (useStatementSentence.Count > 0)
                     {
                         result.UseStatementList.AddRange(useStatementSentence.Pop().Cast<UseStatement>());
                     }
-                    result.UseStatementList.Reverse();
+
+                    if (result.UseStatementList.Count > 1)
+                    {
+                        result.UseStatementList.Reverse();
+                    }
                 }
                 #endregion
 
                 #region 收集注入
-                if (DocumentFieldMap.TryGetValue("InjectionContext", out Stack<List<object>>? injectionSentence) && injectionSentence is not null)
+                if (DocumentFieldMap.TryGetValue("FileContext.InjectionContext", out Stack<List<object>>? injectionSentence) && injectionSentence is not null)
                 {
                     while (injectionSentence.Count > 0)
                     {
                         result.InjectionList.AddRange(injectionSentence.Pop().Cast<Injection>());
                     }
-                    result.InjectionList.Reverse();
+
+                    if (result.StructureList.Count > 1)
+                    {
+                        result.InjectionList.Reverse();
+                    }
                 }
                 #endregion
 
                 #region 收集调度命令
-                if (DocumentFieldMap.TryGetValue("DispatchStatementContext", out Stack<List<object>>? dispatchStatementSentence) && dispatchStatementSentence is not null)
+                if (DocumentFieldMap.TryGetValue("FileContext.DispatchStatementContext", out Stack<List<object>>? dispatchStatementSentence) && dispatchStatementSentence is not null)
                 {
                     while (dispatchStatementSentence.Count > 0)
                     {
                         result.DispatchStatementList.AddRange(dispatchStatementSentence.Pop().Cast<DispatchStatement>());
                     }
-                    result.DispatchStatementList.Reverse();
+
+                    if (result.StructureList.Count > 1)
+                    {
+                        result.DispatchStatementList.Reverse();
+                    }
                 }
                 #endregion
 
@@ -183,11 +207,8 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.EnterEveryRule(context);
             string typeName = GetTypeName(context);
-            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") ?? "";
-            if(parentTypeName.Length > 0)
-            {
-                parentTypeName += '.';
-            }
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
+
             if (BlackList.Contains(typeName))
             {
                 return;
@@ -218,11 +239,8 @@ namespace MinecraftLanguageServer.MCDocumentService
                 if(methodArray[i].ReturnType != typeof(ParserRuleContext) && methodArray[i].ReturnType.BaseType is null)
                 {
                     typeName = GetTypeName(context);
-                    string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") ?? "";
-                    if(parentTypeName.Length > 0)
-                    {
-                        parentTypeName += '.';
-                    }
+                    string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
+
                     string currentValue = context.GetText().Trim();
                     List<object> targetList = [];
                     if (DocumentFieldMap.TryGetValue(parentTypeName + typeName, out Stack<List<object>>? stack) && stack.Count > 0)
@@ -354,6 +372,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitTypedNumber(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string currentValue = context.GetText();
             TypedNumber typedNumber = new();
 
@@ -363,13 +382,26 @@ namespace MinecraftLanguageServer.MCDocumentService
                 typedNumber.IntTypedUnit = char.Parse(unit);
                 typedNumber.Integer = int.Parse(currentValue[..^1]);
             }
-            if (floatUnit.Contains(unit))
+            else
+            if(int.TryParse(currentValue,out int intValue))
+            {
+                typedNumber.IsIntType = true;
+                typedNumber.Integer = intValue;
+            }
+
+            if (floatUnit.Contains(unit) && !typedNumber.IsIntType)
             {
                 typedNumber.FloatTypedUnit = char.Parse(unit);
                 typedNumber.Float = float.Parse(currentValue[..^1]);
             }
+            else
+            if(float.TryParse(currentValue,out float floatValue) && !typedNumber.IsIntType)
+            {
+                typedNumber.Float = floatValue;
+                typedNumber.IsFloatType = true;
+            }
 
-            PushToStack(typeName,typedNumber);
+            PushToStack(parentTypeName + typeName, typedNumber);
         }
 
         public override void ExitEnumValue([NotNull] EnumValueContext context)
@@ -377,6 +409,7 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitEnumValue(context);
 
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string currentValue = context.GetText();
             string stringValue = currentValue.TrimStart().StartsWith('"') ? currentValue : "";
 
@@ -394,7 +427,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, enumValue);
+            PushToStack(parentTypeName + typeName, enumValue);
         }
 
         public override void ExitEnumField([NotNull] EnumFieldContext context)
@@ -402,6 +435,11 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitEnumField(context);
 
             string typeName = GetTypeName(context);
+            string parentTypeName = "";
+            if (context.Parent is not null && context.Parent.Parent is not null)
+            {
+                parentTypeName = context.Parent.Parent.GetType().ToString().Replace("mcdocParser+", "") + '.';
+            }
 
             EnumField enumField = new();
 
@@ -424,7 +462,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
             
-            if (DocumentFieldMap.TryGetValue("EnumValueContext", out Stack<List<object>>? enumValueStack) && enumValueStack is not null && enumValueStack.Count > 0)
+            if (DocumentFieldMap.TryGetValue(typeName + ".EnumValueContext", out Stack<List<object>>? enumValueStack) && enumValueStack is not null && enumValueStack.Count > 0)
             {
                 List<object> lastObjList = enumValueStack.Pop();
                 if (lastObjList is not null && lastObjList.Count > 0)
@@ -433,13 +471,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName,enumField);
+            PushToStack(parentTypeName + typeName, enumField);
         }
 
         public override void ExitStringType([NotNull] StringTypeContext context)
         {
             base.ExitStringType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string currentValue = context.GetText();
             string range = "";
             int atIndex = currentValue.IndexOf('@');
@@ -448,7 +487,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                 range = currentValue.Trim()[(atIndex + 1)..];
             }
 
-            PushToStack(typeName,new StringType()
+            PushToStack(parentTypeName + typeName,new StringType()
             {
                 Range = range
             });
@@ -458,6 +497,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitLiteralType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string currentValue = context.GetText();
 
             LiteralType literalType = new();
@@ -494,7 +534,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, literalType);
+            PushToStack(parentTypeName + typeName, literalType);
         }
 
         public override void ExitNumericType([NotNull] NumericTypeContext context)
@@ -502,6 +542,7 @@ namespace MinecraftLanguageServer.MCDocumentService
             base.ExitNumericType(context);
             NumericType numericType = new();
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string currentValue = context.GetText();
             int atIndex = currentValue.IndexOf('@');
             if(atIndex > -1)
@@ -518,13 +559,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, numericType);
+            PushToStack(parentTypeName + typeName, numericType);
         }
 
         public override void ExitPrimitiveArrayType([NotNull] PrimitiveArrayTypeContext context)
         {
             base.ExitPrimitiveArrayType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string? currentValue = context.GetText();
             int atIndex = currentValue.IndexOf('@');
             PrimitiveArrayType primitiveArrayType = new();
@@ -541,7 +583,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                     primitiveArrayType.DataType = (PrimitiveArrayDataType)System.Enum.Parse(typeof(PrimitiveArrayDataType), currentValue.Trim());
                 }
 
-                PushToStack(typeName, primitiveArrayType);
+                PushToStack(parentTypeName + typeName, primitiveArrayType);
             }
         }
 
@@ -549,6 +591,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitListType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string currentValue = context.GetText();
 
             ListType listType = new();
@@ -568,20 +611,21 @@ namespace MinecraftLanguageServer.MCDocumentService
                 listType.Range = currentValue[(atIndex + 1)..].Trim();
             }
 
-            PushToStack(typeName, listType);
+            PushToStack(parentTypeName + typeName, listType);
         }
 
         public override void ExitTupleType([NotNull] TupleTypeContext context)
         {
             base.ExitTupleType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
-            if(DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
+            if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
             {
                 List<object>? typeList = typeStack.Pop();
                 if (typeList is not null && typeList.Count > 0)
                 {
-                    PushToStack(typeName, new TupleType()
+                    PushToStack(parentTypeName + typeName, new TupleType()
                     {
                         Type1 = typeList[0] as MCDocumentType,
                         Type2 = typeList[1] as MCDocumentType
@@ -594,6 +638,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitPrelim(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             Prelim prelim = new();
 
@@ -616,13 +661,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 attribute = AttributeStack.Pop().Cast<MCDocumentAttribute>().First();
             }
 
-            PushToStack(typeName, prelim);
+            PushToStack(parentTypeName + typeName, prelim);
         }
 
         public override void ExitDispatcherType([NotNull] DispatcherTypeContext context)
         {
             base.ExitDispatcherType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             DispatchType dispatchType = new();
 
@@ -644,13 +690,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, dispatchType);
+            PushToStack(parentTypeName + typeName, dispatchType);
         }
 
         public override void ExitUnionType([NotNull] UnionTypeContext context)
         {
             base.ExitUnionType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             UnionType unionType = new();
 
@@ -663,13 +710,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, unionType);
+            PushToStack(parentTypeName + typeName, unionType);
         }
 
         public override void ExitIndexBody([NotNull] IndexBodyContext context)
         {
             base.ExitIndexBody(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             IndexBody indexBody = new();
 
@@ -682,13 +730,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, indexBody);
+            PushToStack(parentTypeName + typeName, indexBody);
         }
 
         public override void ExitIndexingOnAType([NotNull] IndexingOnATypeContext context)
         {
             base.ExitIndexingOnAType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             IndexOnAType indexOnAType = new();
 
@@ -701,13 +750,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, indexOnAType);
+            PushToStack(parentTypeName + typeName, indexOnAType);
         }
 
         public override void ExitTypeArgBlock([NotNull] TypeArgBlockContext context)
         {
             base.ExitTypeArgBlock(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             TypeArgBlock typeArgBlock = new();
             if (DocumentFieldMap.TryGetValue(typeName + ".TypeSentenceContext", out Stack<List<object>>? typeStack) && typeStack is not null && typeStack.Count > 0)
@@ -719,13 +769,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, typeArgBlock);
+            PushToStack(parentTypeName + typeName, typeArgBlock);
         }
 
         public override void ExitUnAttributedType([NotNull] UnAttributedTypeContext context)
         {
             base.ExitUnAttributedType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             UnAttributedType unAttributedType = new();
 
             if (DocumentFieldMap.TryGetValue(typeName + ".KeywordTypeContext", out Stack<List<object>>? keywordTypeStack) && keywordTypeStack is not null && keywordTypeStack.Count > 0)
@@ -845,13 +896,18 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName,unAttributedType);
+            PushToStack(parentTypeName + typeName,unAttributedType);
         }
 
         public override void ExitStructField([NotNull] StructFieldContext context)
         {
             base.ExitStructField(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = "";
+            if (context.Parent is not null && context.Parent.Parent is not null)
+            {
+                parentTypeName = context.Parent.Parent.GetType().ToString().Replace("mcdocParser+", "") + '.';
+            }
 
             StructField structField = new();
 
@@ -909,14 +965,16 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, structField);
+            PushToStack(parentTypeName + typeName, structField);
         }
 
         public override void ExitAttribute([NotNull] AttributeContext context)
         {
             base.ExitAttribute(context);
+
             string typeName = GetTypeName(context);
-            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") ?? "";
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
+            DocumentFieldMap.TryAdd((context.Parent is not null ? GetTypeName(context.Parent) + '.' : "") + typeName, new Stack<List<object>>());
             MCDocumentAttribute attribute = new();
 
             if (DocumentFieldMap.TryGetValue(typeName + ".IdentifierContext", out Stack<List<object>>? identifierStack) && identifierStack is not null && identifierStack.Count > 0)
@@ -946,13 +1004,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(parentTypeName + '.' + typeName, attribute);
+            PushToStack(parentTypeName + typeName, attribute);
         }
 
         public override void ExitValue([NotNull] ValueContext context)
         {
             base.ExitValue(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             MCDocumentValue mcDocumentValue = new();
 
@@ -974,15 +1033,17 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, mcDocumentValue);
+            PushToStack(parentTypeName + typeName, mcDocumentValue);
         }
 
         public override void ExitNamedValue([NotNull] NamedValueContext context)
         {
             base.ExitNamedValue(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             string currentValue = context.GetText();
             NamedValue namedValue = new();
+            DocumentFieldMap.TryAdd((context.Parent is not null ? GetTypeName(context.Parent) + '.' : "") + typeName, new Stack<List<object>>());
             string inlineValue = "";
             if (currentValue.TrimStart().EndsWith('"'))
             {
@@ -1032,16 +1093,17 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName,namedValue);
+            PushToStack(parentTypeName + typeName,namedValue);
         }
 
         public override void ExitNamedValues([NotNull] NamedValuesContext context)
         {
             base.ExitNamedValues(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             NamedValues namedValues = new();
-
+            DocumentFieldMap.TryAdd((context.Parent is not null ? GetTypeName(context.Parent) + '.' : "") + typeName, new Stack<List<object>>());
             if (DocumentFieldMap.TryGetValue(typeName + ".NamedValueContext", out Stack<List<object>>? nameValuesStack) && nameValuesStack is not null && nameValuesStack.Count > 0)
             {
                 List<object>? list = nameValuesStack.Pop();
@@ -1051,15 +1113,16 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, namedValues);
+            PushToStack(parentTypeName + typeName, namedValues);
         }
 
         public override void ExitTreeBody([NotNull] TreeBodyContext context)
         {
             base.ExitTreeBody(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             MCDocumentTreeBody treeBody = new();
-
+            DocumentFieldMap.TryAdd((context.Parent is not null ? GetTypeName(context.Parent) + '.' : "") + typeName, new Stack<List<object>>());
             if (DocumentFieldMap.TryGetValue(typeName + ".PositionalValuesContext", out Stack<List<object>>? positionalValuesStack) && positionalValuesStack is not null && positionalValuesStack.Count > 0)
             {
                 List<object>? list = positionalValuesStack.Pop();
@@ -1078,13 +1141,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName,treeBody);
+            PushToStack(parentTypeName + typeName,treeBody);
         }
 
         public override void ExitTreeValue([NotNull] TreeValueContext context)
         {
             base.ExitTreeValue(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             MCDocumentTreeValue mcDocumentTreeValue = new();
 
@@ -1097,13 +1161,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, mcDocumentTreeValue);
+            PushToStack(parentTypeName + typeName, mcDocumentTreeValue);
         }
 
         public override void ExitPositionalValues([NotNull] PositionalValuesContext context)
         {
             base.ExitPositionalValues(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             PositionalValue positionalValue = new();
 
@@ -1116,7 +1181,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, positionalValue);
+            PushToStack(parentTypeName + typeName, positionalValue);
         }
         #endregion
 
@@ -1126,6 +1191,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitUseStatement(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             UseStatement useStatement = new();
 
@@ -1147,7 +1213,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, useStatement);
+            PushToStack(parentTypeName + typeName, useStatement);
         }
 
         public override void ExitStructKey([NotNull] StructKeyContext context)
@@ -1184,6 +1250,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitStruct(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             Structure structure = new();
 
             if (DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null && prelimStack.Count > 0)
@@ -1213,13 +1280,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName,structure);
+            PushToStack(parentTypeName + typeName,structure);
         }
 
         public override void ExitTypeSentence([NotNull] TypeSentenceContext context)
         {
             base.ExitTypeSentence(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             MCDocumentType type = new();
 
             if (DocumentFieldMap.TryGetValue(typeName + ".AttributeContext", out Stack<List<object>>? attributeStack) && attributeStack is not null && attributeStack.Count > 0)
@@ -1258,13 +1326,14 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName, type);
+            PushToStack(parentTypeName + typeName, type);
         }
 
         public override void ExitEnumType([NotNull] EnumTypeContext context)
         {
             base.ExitEnumType(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
 
             Enumeration enumeration = new();
 
@@ -1300,11 +1369,16 @@ namespace MinecraftLanguageServer.MCDocumentService
                 List<object> list = enumMemberTypeStack.Pop();
                 if (list is not null && list.Count > 0 && list[^1] is not null)
                 {
-                    enumeration.MemberType = (EnumMemberType)System.Enum.Parse(typeof(EnumMemberType), list[^1].ToString());
+                    string? typeString = list[^1].ToString();
+                    if (typeString is not null && typeString.Length > 0)
+                    {
+                        typeString = typeString[0].ToString().ToUpper() + typeString[1..];
+                        enumeration.MemberType = (EnumMemberType)System.Enum.Parse(typeof(EnumMemberType), typeString);
+                    }
                 }
             }
 
-            PushToStack(typeName, enumeration);
+            PushToStack(parentTypeName + typeName, enumeration);
         }
 
         public override void ExitTypeAlias([NotNull] TypeAliasContext context)

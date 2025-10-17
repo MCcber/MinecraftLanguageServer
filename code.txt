@@ -1,1 +1,1 @@
-data merge entity @n[type=minecart] {CustomDisplayTile:1b,DisplayState:{Name:"stonecutter",Properties:{facing:"west"}},DisplayOffset:-4}
+clone ~ ~
