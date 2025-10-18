@@ -1,7 +1,6 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using MinecraftLanguageServer.MCFunctionService;
-using Newtonsoft.Json;
 using System.IO.Pipes;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -11,11 +10,10 @@ namespace MinecraftLanguageServer.DataContext
     public partial class MCFunctionIntellisenseService
     {
         #region Field
-        NamedPipeServerStream mcfunctionPiperServerStream;
-        AntlrInputStream mcfInputStream = null;
-        MCCommandLexer mcfLexer = null;
-        CommonTokenStream mcfTokenStream = null;
-        CancellationTokenSource cts = new();
+        private readonly NamedPipeServerStream mcfunctionPiperServerStream = new("MCFunctionLanguageServerPipe", PipeDirection.InOut);
+        AntlrInputStream? mcfInputStream;
+        MCCommandLexer? mcfLexer;
+        CommonTokenStream? mcfTokenStream;
 
         /// <summary>
         /// 命令路径
@@ -44,7 +42,6 @@ namespace MinecraftLanguageServer.DataContext
         #region Method
         public MCFunctionIntellisenseService()
         {
-            mcfunctionPiperServerStream = new("MCFunctionLanguageServerPipe", PipeDirection.InOut);
             Task.Run(ReceiveClient);
             Console.ReadKey();
         }
@@ -54,24 +51,23 @@ namespace MinecraftLanguageServer.DataContext
         /// </summary>
         private async void ReceiveClient()
         {
-            while (!cts.IsCancellationRequested)
+            try
             {
-                try
+                byte[] dataArray = new byte[2048];
+                await mcfunctionPiperServerStream.WaitForConnectionAsync();
+                await mcfunctionPiperServerStream.ReadAsync(dataArray);
+                string filePath = Encoding.UTF8.GetString(dataArray);
+                filePath = filePath.TrimEnd('\0');
+                string fileContent = filePath;
+                if (File.Exists(filePath))
                 {
-                    //byte[] functionByteArray = new byte[2048];
-                    //await mcfunctionPiperServerStream.WaitForConnectionAsync();
-                    //await mcfunctionPiperServerStream.ReadAsync(functionByteArray, 0, functionByteArray.Length);
-                    //string data = Encoding.UTF8.GetString(functionByteArray);
-                    //data = data.TrimEnd('\0');
-                    string data = File.ReadAllText(@"D:\C#Project\MinecraftLanguageServer\code.txt");
-                    await Service(new(data));
-                    //functionByteArray = Encoding.UTF8.GetBytes(CommandPath.ToString());
-                    //await mcfunctionPiperServerStream.WriteAsync(functionByteArray, 0, functionByteArray.Length);
+                    fileContent = File.ReadAllText(filePath);
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
+                await Service(new(fileContent));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
 
@@ -81,6 +77,11 @@ namespace MinecraftLanguageServer.DataContext
         /// <returns></returns>
         private async Task Service(StringBuilder CurrentCode)
         {
+            #region Field
+            //初始化监听器
+            MCFunctionListener mcfunctionListener = new();
+            #endregion
+
             #region 创建主语法树的词法语法分析器
             //清空命令路径
             CommandPath.Clear();
@@ -92,10 +93,6 @@ namespace MinecraftLanguageServer.DataContext
             MCCommandParser parser = new(mcfTokenStream);
             // 重新执行语法分析器以获取更新后的上下文
             MCCommandParser.CommandsContext context = parser.commands();
-            #endregion
-
-            #region 初始化监听器
-            MCFunctionListener mcfunctionListener = new();
             #endregion
 
             #region 根据当前键入内容生成抽象语法树
@@ -113,6 +110,12 @@ namespace MinecraftLanguageServer.DataContext
                 commandPathString = commandPathString[lastCommandIndex..];
             if (commandPathString.StartsWith("commands.execute") && Regex.Matches(commandPathString, @"executeOptions").Count > 1)
                 CommandPath = new("commands.execute." + commandPathString[commandPathString.LastIndexOf("executeOptions")..]);
+            #endregion
+
+            #region 将结果发送回客户端
+            byte[] resultArray = new byte[2048];
+            resultArray = Encoding.UTF8.GetBytes(CommandPath.ToString());
+            await mcfunctionPiperServerStream.WriteAsync(resultArray);
             #endregion
         }
         #endregion

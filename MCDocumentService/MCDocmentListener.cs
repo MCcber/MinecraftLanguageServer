@@ -1,51 +1,23 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
-using MinecraftLanguageServer.Model.MCDocument;
-using MinecraftLanguageServer.Model.MCDocument.EnumContent;
-using MinecraftLanguageServer.Model.MCDocument.InjectionContent;
-using MinecraftLanguageServer.Model.MCDocument.UnAttributedTypeContent;
+using MinecraftLanguageModelLibrary.Model.MCDocument;
+using MinecraftLanguageModelLibrary.Model.MCDocument.EnumContent;
+using MinecraftLanguageModelLibrary.Model.MCDocument.InjectionContent;
+using MinecraftLanguageModelLibrary.Model.MCDocument.UnAttributedTypeContent;
 using System.Reflection;
 using static mcdocParser;
-using static MinecraftLanguageServer.Model.MCDocument.MCDocumentEnum;
+using static MinecraftLanguageModelLibrary.Model.MCDocument.MCDocumentEnum;
 
 namespace MinecraftLanguageServer.MCDocumentService
 {
     public partial class MCDocmentListener : mcdocParserBaseListener
     {
         #region Field
-        //private Stack<bool> boolValueOfParentStack = [];
-        //private Stack<bool> typedNumberOfParentStack = [];
-        //private Stack<bool> stringValueOfParentStack = [];
-        //private Stack<bool> identifierOfParentStack = [];
-        //private Stack<bool> keywordTypeOfParentStack = [];
-        //private Stack<bool> stringTypeOfParentStack = [];
-        //private Stack<bool> literialTypeOfParentStack = [];
-        //private Stack<bool> numericTypeOfParentStack = [];
-        //private Stack<bool> primitiveArrayTypeOfParentStack = [];
-        //private Stack<bool> listTypeOfParentStack = [];
-        //private Stack<bool> tupleTypeOfParentStack = [];
-        //private Stack<bool> enumTypeOfParentStack = [];
-        //private Stack<bool> structOfParentStack = [];
-        //private Stack<bool> referenceOfParentStack = [];
-        //private Stack<bool> dispatcherTypeOfParentStack = [];
-        //private Stack<bool> unionTypeOfParentStack = [];
-        //private Stack<bool> indexingOnATypeOfParentStack = [];
-        //private Stack<bool> positionalValuesOfParentStack = [];
-        //private Stack<bool> namedValuesOfParentStack = [];
-        //private Stack<bool> valueOfParentStack = [];
-        //private Stack<bool> treeValueOfParentStack = [];
-        //private Stack<bool> attributeOfParentStack = [];
-        //private Stack<bool> indexBodyOfParentStack = [];
-        //private Stack<bool> typeArgBlockOfParentStack = [];
-        //private Stack<bool> prelimOfParentStack = [];
-        //private Stack<bool> enumInjectionOfParentStack = [];
-        //private Stack<bool> structInjectionOfParentStack = [];
-
-        private string[] intUnit = ["b","s","l"];
-        private string[] floatUnit = ["d","f"];
-        private List<string> BlackList = ["IntegerContext", "IntegerRangeContext", "NamedValueContext", "NamedValuesContext", "TreeBodyContext", "AttributeContext", "StructBlockContext"];
-        private MCDocumentFileModel result = new();
-        private List<string> reservedWordList = 
+        private readonly string[] intUnit = ["b","s","l"];
+        private readonly string[] floatUnit = ["d","f"];
+        private readonly List<string> BlackList = ["IntegerContext", "IntegerRangeContext", "NamedValueContext", "NamedValuesContext", "TreeBodyContext", "AttributeContext", "StructBlockContext"];
+        private readonly MCDocumentFileModel result = new();
+        private readonly List<string> reservedWordList = 
         [
             "any",
             "boolean",
@@ -67,7 +39,7 @@ namespace MinecraftLanguageServer.MCDocumentService
 
         #region Property
 
-        private Dictionary<string, Stack<List<object>>> DocumentFieldMap = [];
+        private readonly Dictionary<string, Stack<List<object>>> DocumentFieldMap = [];
         #endregion
 
         #region Method
@@ -175,7 +147,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         /// </summary>
         /// <param name="context"></param>
         /// <returns></returns>
-        private string GetTypeName(RuleContext context)
+        private static string GetTypeName(RuleContext context)
         {
             return context.GetType().ToString().Replace("mcdocParser+", "");
         }
@@ -654,11 +626,9 @@ namespace MinecraftLanguageServer.MCDocumentService
                 prelim.DocCommentaryList.AddRange(DocCommentaryList.Cast<string>());
             }
 
-            MCDocumentAttribute? attribute = null;
-
             if(DocumentFieldMap.TryGetValue(typeName + ".AttributeContext", out Stack<List<object>>? AttributeStack) && AttributeStack is not null && AttributeStack.Count > 0)
             {
-                attribute = AttributeStack.Pop().Cast<MCDocumentAttribute>().First();
+                prelim.Attribute = AttributeStack.Pop().Cast<MCDocumentAttribute>().First();
             }
 
             PushToStack(parentTypeName + typeName, prelim);
@@ -1044,7 +1014,7 @@ namespace MinecraftLanguageServer.MCDocumentService
             string currentValue = context.GetText();
             NamedValue namedValue = new();
             DocumentFieldMap.TryAdd((context.Parent is not null ? GetTypeName(context.Parent) + '.' : "") + typeName, new Stack<List<object>>());
-            string inlineValue = "";
+            string? inlineValue = "";
             if (currentValue.TrimStart().EndsWith('"'))
             {
                 if (DocumentFieldMap.TryGetValue(typeName + ".StringContext", out Stack<List<object>>? stringStack) && stringStack is not null && stringStack.Count > 0)

@@ -1,7 +1,8 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
+using MinecraftLanguageModelLibrary.Model.MCDocument;
 using MinecraftLanguageServer.MCDocumentService;
-using MinecraftLanguageServer.Model.MCDocument;
+using Newtonsoft.Json;
 using System.IO.Pipes;
 using System.Text;
 
@@ -10,19 +11,15 @@ namespace MinecraftLanguageServer.DataContext
     public class MCDocumentBuildService
     {
         #region Field
-        private MCDocumentFileModel? CurrentDocumentDataContext = new();
-        private NamedPipeServerStream mcdocumentPiperServerStream;
-        private AntlrInputStream mcdocInputStream = null;
-        private mcdocLexer mcdocLexer = null;
-        private CommonTokenStream mcdocTokenStream = null;
-        CancellationTokenSource cts = new();
+        private readonly NamedPipeServerStream mcdocumentPiperServerStream = new("MCDocumentLanguageServerPipe", PipeDirection.InOut);
+        private AntlrInputStream mcdocInputStream = new();
+        private mcdocLexer? mcdocLexer;
+        private CommonTokenStream? mcdocTokenStream;
         #endregion
 
         #region Method
         public MCDocumentBuildService()
         {
-            mcdocumentPiperServerStream = new("MCDocumentLanguageServerPipe", PipeDirection.InOut);
-
             Task.Run(ReceiveClient);
             Console.ReadKey();
         }
@@ -32,16 +29,20 @@ namespace MinecraftLanguageServer.DataContext
         /// </summary>
         private async void ReceiveClient()
         {
-            while (!cts.IsCancellationRequested)
+            while (true)
             {
                 try
                 {
                     byte[] documentByteArray = new byte[2048];
                     await mcdocumentPiperServerStream.WaitForConnectionAsync();
-                    await mcdocumentPiperServerStream.ReadAsync(documentByteArray, 0, documentByteArray.Length);
+                    await mcdocumentPiperServerStream.ReadAsync(documentByteArray);
                     string filePath = Encoding.UTF8.GetString(documentByteArray);
                     filePath = filePath.TrimEnd('\0');
-                    string fileContent = File.ReadAllText(@"D:\C#Project\MinecraftLanguageServer\code.mcdoc");
+                    string fileContent = filePath;
+                    if (File.Exists(filePath))
+                    {
+                        fileContent = File.ReadAllText(filePath);
+                    }
                     await Service(fileContent);
                 }
                 catch (Exception e)
@@ -53,6 +54,11 @@ namespace MinecraftLanguageServer.DataContext
 
         private async Task Service(string currentCode)
         {
+            #region Field
+            //初始化监听器
+            MCDocmentListener mcdocListener = new();
+            #endregion
+
             #region 创建主语法树的词法语法分析器
             // 创建词法分析器
             mcdocInputStream = new AntlrInputStream(currentCode);
@@ -64,21 +70,19 @@ namespace MinecraftLanguageServer.DataContext
             var context = parser.file();
             #endregion
 
-            #region 初始化监听器
-            MCDocmentListener mcdocListener = new();
-            #endregion
-
             #region 根据当前键入内容生成抽象语法树
             await Task.Run(() =>
             {
                 ParseTreeWalker.Default.Walk(mcdocListener, context);
             });
+            #endregion
 
+            #region 将结果发送回客户端
             MCDocumentFileModel model = mcdocListener.GetResult();
             byte[] resultArray = new byte[2048];
-            string value = "success";
+            string value = JsonConvert.SerializeObject(model);
             resultArray = Encoding.UTF8.GetBytes(value);
-            await mcdocumentPiperServerStream.WriteAsync(resultArray, 0, resultArray.Length);
+            await mcdocumentPiperServerStream.WriteAsync(resultArray);
             #endregion
         }
         #endregion
