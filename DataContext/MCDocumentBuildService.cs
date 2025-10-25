@@ -21,7 +21,6 @@ namespace MinecraftLanguageServer.DataContext
         public MCDocumentBuildService()
         {
             Task.Run(ReceiveClient);
-            Console.ReadKey();
         }
 
         /// <summary>

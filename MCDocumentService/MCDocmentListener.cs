@@ -70,7 +70,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                         result.EnumerationList.AddRange(enumTypeSentence.Pop().Cast<Enumeration>().Where(item => item.IsTop));
                     }
 
-                    if (result.StructureList.Count > 1)
+                    if (result.EnumerationList.Count > 1)
                     {
                         result.EnumerationList.Reverse();
                     }
@@ -85,7 +85,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                         result.TypeAliaList.AddRange(typeAliasSentence.Pop().Cast<TypeAlia>());
                     }
 
-                    if (result.StructureList.Count > 1)
+                    if (result.TypeAliaList.Count > 1)
                     {
                         result.TypeAliaList.Reverse();
                     }
@@ -115,7 +115,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                         result.InjectionList.AddRange(injectionSentence.Pop().Cast<Injection>());
                     }
 
-                    if (result.StructureList.Count > 1)
+                    if (result.InjectionList.Count > 1)
                     {
                         result.InjectionList.Reverse();
                     }
@@ -130,7 +130,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                         result.DispatchStatementList.AddRange(dispatchStatementSentence.Pop().Cast<DispatchStatement>());
                     }
 
-                    if (result.StructureList.Count > 1)
+                    if (result.DispatchStatementList.Count > 1)
                     {
                         result.DispatchStatementList.Reverse();
                     }
@@ -1425,6 +1425,7 @@ namespace MinecraftLanguageServer.MCDocumentService
         {
             base.ExitDispatchStatement(context);
             string typeName = GetTypeName(context);
+            string parentTypeName = context.Parent?.GetType().ToString().Replace("mcdocParser+", "") + '.' ?? "";
             DispatchStatement dispatchStatement = new();
 
             if (DocumentFieldMap.TryGetValue(typeName + ".PrelimContext", out Stack<List<object>>? prelimStack) && prelimStack is not null)
@@ -1481,7 +1482,7 @@ namespace MinecraftLanguageServer.MCDocumentService
                 }
             }
 
-            PushToStack(typeName,dispatchStatement);
+            PushToStack(parentTypeName + typeName,dispatchStatement);
         }
         #endregion
 

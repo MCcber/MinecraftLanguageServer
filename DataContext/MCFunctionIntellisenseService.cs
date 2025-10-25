@@ -43,7 +43,6 @@ namespace MinecraftLanguageServer.DataContext
         public MCFunctionIntellisenseService()
         {
             Task.Run(ReceiveClient);
-            Console.ReadKey();
         }
 
         /// <summary>

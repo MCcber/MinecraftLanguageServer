@@ -14,7 +14,7 @@ namespace MinecraftLanguageServer
             {
                 _ = new MCFunctionIntellisenseService();
             });
-
+            Console.ReadKey();
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }
 
