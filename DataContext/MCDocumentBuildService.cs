@@ -32,7 +32,7 @@ namespace MinecraftLanguageServer.DataContext
             {
                 try
                 {
-                    byte[] documentByteArray = new byte[2048];
+                    byte[] documentByteArray = new byte[10240];
                     await mcdocumentPiperServerStream.WaitForConnectionAsync();
                     await mcdocumentPiperServerStream.ReadAsync(documentByteArray);
                     string filePath = Encoding.UTF8.GetString(documentByteArray);
@@ -82,6 +82,7 @@ namespace MinecraftLanguageServer.DataContext
             string value = JsonConvert.SerializeObject(model);
             resultArray = Encoding.UTF8.GetBytes(value);
             await mcdocumentPiperServerStream.WriteAsync(resultArray);
+            mcdocumentPiperServerStream.Disconnect();
             #endregion
         }
         #endregion
