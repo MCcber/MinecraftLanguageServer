@@ -13,10 +13,10 @@ leftCurlyBracket:LeftCurlyBracket;
 rightCurlyBracket:RightCurlyBracket;
 dimensionId:ResourceLocation;
 mobAttribute:ResourceLocation;
-integer:Integer;
+integer:Int;
 intInterval:IntInterval;
 double:Double;
-axeValue:Integer | Double;
+axeValue:Int | Double;
 gameTimeValue:GameTimeValue;
 biomeId:ResourceLocation;
 bool:BooleanValue;
@@ -53,9 +53,9 @@ targetObjective:Identifier;
 storageId:ResourceLocation;
 storageIdString:Identifier;
 
-coordinateX:Coordinate|Double|Integer;
-coordinateY:Coordinate|Double|Integer;
-coordinateZ:Coordinate|Double|Integer;
+coordinateX:Coordinate|Double|Int;
+coordinateY:Coordinate|Double|Int;
+coordinateZ:Coordinate|Double|Int;
 
 pos3D:coordinateX coordinateY coordinateZ;
 pos2D:coordinateX coordinateZ;
@@ -66,7 +66,7 @@ viewRotationValue:Double|PositiveDouble;
 doubleInterval:DoubleInterval;
 positiveDouble:PositiveDouble;
 positiveDoubleInterval:PositiveDoubleInterval;
-levelValue:Integer;
+levelValue:Int;
 nameValue:Identifier|String;
 entityType: Identifier | ResourceLocation;
 predicateValue:ResourceLocation;
@@ -449,7 +449,7 @@ bossbarAttributes:(color bossbarColor)|(max integer)|(name jsonComponent)|(playe
 
 //clear
 clearRadical:clearKey (selector itemId? count?)?;
-count:Integer;
+count:Int;
 
 //clone
 cloneRadical: cloneKey cloneSource cloneDestination cloneMode?;
@@ -469,8 +469,8 @@ damageOptions:(atLetter pos3D)|(by selector from selector);
 //data
 dataRadical:dataKey dataOptions;
 
-dataStringStart:Integer;
-dataStringEnd:Integer;
+dataStringStart:Int;
+dataStringEnd:Int;
 
 dataOptions: (get dataGetTarget)|(merge dataMergeTarget)|(modify dataModifyTarget)|(remove dataRemoveTarget);
 
@@ -513,14 +513,14 @@ effectRadical:effectKey effectOption;
 effectOption:(clearKey (selector effectID?)?)|(giveKey selector effectID effectTime|infinite amplifier hideParticles);
 effectID:ResourceLocation;
 //infinite|
-effectTime:Integer;
-seconds:Integer;
-amplifier:Integer;
+effectTime:Int;
+seconds:Int;
+amplifier:Int;
 hideParticles:BooleanValue;
 
 //enchant
 enchantRadical:enchantKey selector enchantID enchantLevel;
-enchantLevel:Integer;
+enchantLevel:Int;
 enchantID:ResourceLocation;
 
 //execute
@@ -579,7 +579,7 @@ executeOptions:(align axes executeOptions)
 
 //experience
 experienceRadical:experienceKey experienceOptions;
-experienceAmount:Integer;
+experienceAmount:Int;
 expreienceType:levels|points;
 experienceOptions:((add|set) selector experienceAmount expreienceType)|(query selector expreienceType);
 
@@ -605,7 +605,7 @@ gamemodeRadical: gamemodeKey gamemodeValue selector?;
 // gamerule
 gameruleRadical: gameruleKey gameruleName gameruleValue;
 gameruleName: Identifier;
-gameruleValue: BooleanValue | Integer;
+gameruleValue: BooleanValue | Int;
 
 //give
 giveRadical:giveKey selector itemId integer;
@@ -661,8 +661,8 @@ msgMessage:MessageContent;
 
 //particle
 particleRadical:particleKey particleId (pos3D particleDelta particleSpeed particleCount particleOptions? selector?)?;
-particleSpeed:Double|Integer;
-particleCount:Integer;
+particleSpeed:Double|Int;
+particleCount:Int;
 particleDelta:coordinateX coordinateY coordinateZ;
 particleOptions:force|normal;
 particleId:particleIDString jobject?;
@@ -687,7 +687,7 @@ soundTypes:ambient|hostile|master|music|neutral|player|record|voice|weatherKey;
 
 //publish
 publishRadical:publishKey bool gamemodeValue port;
-port:Integer;
+port:Int;
 
 //recipe
 recipeRadical:recipeKey recipeGiveOrTake selector recipeFilePath;
@@ -796,7 +796,7 @@ timeOptions:(add gameTimeValue)|(query timeDataTypes)|(set timeTimePoints|gameTi
 //title
 titleRadical:titleKey selector titleBehaviors;
 titleBehaviors:((actionbar|subtitle|titleKey) jsonComponent)|(clearKey|reset)|(times fadeIn stay fadeOut);
-faedIn:Integer;
+faedIn:Int;
 
 //tm
 tmRadical:tmKey tmMessage;

@@ -311,8 +311,8 @@ fragment EscapeChar: '\\' (["\\bfnrt] | UnicodeEscape);
 
 UUID:[0-9]+'-'[0-9]+'-'[0-9]+'-'[0-9]+'-'[0-9]+;
 fragment FloatExponent:[eE]([-+])?[0-9]+;
-Integer:([-+])?[0-9]+;
-IntInterval:(Integer DoubleDot)|(DoubleDot Integer)|(Integer DoubleDot Integer);
+Int:([-+])?[0-9]+;
+IntInterval:(Int DoubleDot)|(DoubleDot Int)|(Int DoubleDot Int);
 PositiveDouble:([0-9]+('.'[0-9]+)?)|([0-9]+?('.'[0-9]+));
 PositiveDoubleInterval:(PositiveDouble DoubleDot)|(DoubleDot PositiveDouble)|(PositiveDouble DoubleDot PositiveDouble);
 Float:(([-+])?[0-9]+(FloatExponent|FloatTypedUnit)?)|(([-+])?[0-9]*Dot[0-9]+(FloatExponent|FloatTypedUnit)?);
@@ -322,7 +322,7 @@ GameTimeValue:([0-9]+('.'[0-9]+)?)[dst]?;
 IntTypedUnit:[bBsSlL];
 FloatTypedUnit:[dDfF];
 
-Position: ((('~'|'^') (Double|Integer)?) | (Double|Integer)) -> pushMode(Coordinate_Mode),type(Coordinate);
+Position: ((('~'|'^') (Double|Int)?) | (Double|Int)) -> pushMode(Coordinate_Mode),type(Coordinate);
 
 fragment IdentStart:[\p{L}\p{Nl}_%$];
 fragment IdentContinue:IdentStart|[\u200C\u200D]|[\p{Mn}\p{Mc}\p{Nd}\p{Pc}\p{Pd}];
@@ -349,5 +349,5 @@ Message:~[\r\n]+;
 MESSAGE_END: EOF -> popMode;
 
 mode Coordinate_Mode;
-Coordinate:((('~'|'^') (Double|Integer)?) | (Double|Integer));
+Coordinate:((('~'|'^') (Double|Int)?) | (Double|Int));
 COORDINATE_END: [ ] -> skip,popMode;

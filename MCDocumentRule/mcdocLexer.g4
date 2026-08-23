@@ -3,95 +3,95 @@ options {
     language = CSharp;
 }
 
-//{ !IsReservedWord($text) }?
-// RESERVED_WORD:'any'|'boolean'|'byte'|'double'|'enum'|'false'|'float'|'int'|'long'|'short'|'string'|'struct'|'super'|'true';
-
 WS : [ \t\r\n\u000C\u00A0\p{Mn}\p{Mc}\p{Zs}] -> skip;
-As:'as';
-At:'@';
-QuestionMark:'?';
-Dot:'.';
-TypeKey:'type ';
-StructKeyType:'struct';
-fragment Minus:'-';
-Inject:'inject';
-Enum:'enum';
-Use:'use';
-To:'to';
-Dispatch:'dispatch';
-Fallback:'%fallback';
-None:'%none';
-Unknown:'%unknown';
-Parent:'%parent';
-Key:'%key';
-Plus:'+';
-Remainder:'%';
-Equal:'=';
-Sharp:'#';
 
-SquareBrackets:'[]';
-LeftSquareBracket:'[';
-RightSquareBracket:']';
+// ========== 最长符号（三字符、双字符）优先 ==========
+TripleDot : '...';
+DoubleDot : '..';
+DoubleColon : '::';
 
-RoundBrackets:'()';
-LeftRoundBracket:'(';
-RightRoundBracket:')';
+// ========== 括号对（两字符）优先于单括号 ==========
+SquareBrackets : '[]';
+RoundBrackets : '()';
+CurlyBrackets : '{}';
+AngleBrackets : '<>';
 
-CurlyBrackets:'{}';
-LeftCurlyBracket:'{';
-RightCurlyBracket:'}';
+// ========== ResourceLocation 包含冒号，必须在 ColonMark 和 Identifier 之前 ==========
+fragment ResourceLocationChar : [a-z0-9-_.];
+ResourceLocation : [a-zA-Z0-9_-] ResourceLocationChar* ':' ResourceLocationChar+ ('/' ResourceLocationChar+)*;
 
-AngleBrackets:'<>';
-LeftAngleBracket:'<';
-RightAngleBracket:'>';
+// ========== 单字符符号 ==========
+ColonMark : ':';
+Comma : ',';
+Dot : '.';
+At : '@';
+QuestionMark : '?';
+Plus : '+';
+Equal : '=';
+Sharp : '#';
+Remainder : '%';
+LeftSquareBracket : '[';
+RightSquareBracket : ']';
+LeftRoundBracket : '(';
+RightRoundBracket : ')';
+LeftCurlyBracket : '{';
+RightCurlyBracket : '}';
+LeftAngleBracket : '<';
+RightAngleBracket : '>';
+LogicalOR : '|';
 
-LogicalOR:'|';
-Comma:',';
-DoubleColon:'::';
-ColonMark: ':';
-TripleDot:'...';
-DoubleDot:'..';
-ByteKeyType:'byte';
-IntKeyType:'int';
-LongKeyType:'long';
-StringKeyType:'string';
-BooleanKeyType:'boolean';
-ShortKeyType:'short';
-FloatKeyType:'float';
-DoubleKeyType:'double';
-Any:'any';
-BoolValue:'true'|'false';
+// ========== 关键字（字母） ==========
+As : 'as';
+TypeKey : 'type ';
+StructKeyType : 'struct';
+Inject : 'inject';
+Enum : 'enum';
+Use : 'use';
+To : 'to';
+Dispatch : 'dispatch';
+RemainderFallback : '%fallback';
+RemainderNone : '%none';
+RemainderUnknown : '%unknown';
+RemainderParent : '%parent';
+RemainderKey : '%key';
+Any : 'any';
+BoolValue : 'true' | 'false';
 
-fragment HexDigit: [0-9a-fA-F];
+// 基本类型关键字
+ByteKeyType : 'byte';
+IntKeyType : 'int';
+LongKeyType : 'long';
+StringKeyType : 'string';
+BooleanKeyType : 'boolean';
+ShortKeyType : 'short';
+FloatKeyType : 'float';
+DoubleKeyType : 'double';
 
-fragment UnicodeEscape: 'u' HexDigit HexDigit HexDigit HexDigit;
+// ========== 数值单位（必须在 Identifier 之前） ==========
+IntTypedUnit : [bBsSlL];
+FloatTypedUnit : [dDfF];
 
-fragment EscapeChar: '\\' (["\\bfnrt] | UnicodeEscape);
+// ========== 标识符（最后匹配） ==========
+fragment IdentStart : [\p{L}\p{Nl}_%];
+fragment IdentContinue : IdentStart | [\u200C\u200D.] | [\p{Mn}\p{Mc}\p{Nd}\p{Pc}];
+Identifier : IdentStart IdentContinue*;
+
+// ========== 其余规则保持不变 ==========
+fragment HexDigit : [0-9a-fA-F];
+fragment UnicodeEscape : 'u' HexDigit HexDigit HexDigit HexDigit;
+fragment EscapeChar : '\\' (["\\bfnrt] | UnicodeEscape);
 
 DocCommentary : '///' ~[\r\n]* ('\r'? '\n')?;
-Commentary : '//' ~[/] ~[\r\n]* ('\r'? '\n')?;
-DoubleQuotes:'"';
+Commentary : '//' ~[/] ~[\r\n]* ('\r'? '\n')? -> skip;
+DoubleQuotes : '"';
 
-Integer: '0'|([-+]?[1-9][0-9]*);
-fragment FloatExponent:[eE]([-+])?[0-9]+;
-Float:(([-+])?[0-9]+FloatExponent?)|(([-+])?[0-9]*Dot[0-9]+FloatExponent);
-PositiveInteger:[0-9]+;
-IntTypedUnit:[bBsSlL];
-FloatTypedUnit:[dDfF];
+Int : '0' | ([-+]?[1-9][0-9]*);
+fragment FloatExponent : [eE]([-+])?[0-9]+;
+Float : (([-+])?[0-9]+ FloatExponent?) | (([-+])?[0-9]* Dot [0-9]+ FloatExponent?);
+PositiveInteger : [0-9]+;
 
-IntegerRange:(DoubleDot Integer) | (Integer DoubleDot) | (Integer DoubleDot Integer);
-FloatRange: (DoubleDot Float) | (Float DoubleDot) | (Float DoubleDot Float);
+fragment SingleStringValue : ~["\p{Cc}] | EscapeChar;
+String : '"' SingleStringValue* '"';
 
-//\p{Letter}\p{Letter_Number}\p{Number}\p{Space_Separator}\p{Dash_Punctuation}\p{Other_Punctuation}\p{Connector_Punctuation}
-fragment IdentStart:[\p{L}\p{Nl}_%.];
-fragment IdentContinue:IdentStart|[\u200C\u200D]|[\p{Mn}\p{Mc}\p{Nd}\p{Pc}];
-Identifier:IdentStart IdentContinue*;
-
-fragment SingleStringValue:~["\p{Cc}]|EscapeChar;
-String: '"' SingleStringValue* '"';
-
-ResourceLocationChar:[a-z0-9-_.]+;
-ResourceLocation: ResourceLocationChar ':' ResourceLocationChar ('/' ResourceLocationChar)*;
-
-PathSegment:'super'|Identifier;
-Path: ('::')?PathSegment ('::'PathSegment)*;
+PathSegment : 'super' | Identifier;
+Path : ('::')? PathSegment ('::' PathSegment)*;

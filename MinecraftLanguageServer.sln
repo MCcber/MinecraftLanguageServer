@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34330.188
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11919.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinecraftLanguageServer", "MinecraftLanguageServer.csproj", "{E44B5FB9-52B9-44C9-A292-6A33B6C66016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinecraftLanguageModelLibrary", "..\MinecraftLanguageModelLibrary\MinecraftLanguageModelLibrary.csproj", "{895087A9-BC65-1149-1BFF-1AAD50314301}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E44B5FB9-52B9-44C9-A292-6A33B6C66016}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E44B5FB9-52B9-44C9-A292-6A33B6C66016}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E44B5FB9-52B9-44C9-A292-6A33B6C66016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{895087A9-BC65-1149-1BFF-1AAD50314301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{895087A9-BC65-1149-1BFF-1AAD50314301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{895087A9-BC65-1149-1BFF-1AAD50314301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{895087A9-BC65-1149-1BFF-1AAD50314301}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

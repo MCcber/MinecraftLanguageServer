@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:/C#Project/MinecraftLanguageServer/MCDocumentRule/mcdocParser.g4 by ANTLR 4.13.2
+// Generated from mcdocParser.g4 by ANTLR 4.13.2
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -287,6 +287,18 @@ public partial class mcdocParserBaseListener : ImcdocParserListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitIntegerRange([NotNull] mcdocParser.IntegerRangeContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="mcdocParser.floatRange"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterFloatRange([NotNull] mcdocParser.FloatRangeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="mcdocParser.floatRange"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitFloatRange([NotNull] mcdocParser.FloatRangeContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="mcdocParser.identifier"/>.
 	/// <para>The default implementation does nothing.</para>

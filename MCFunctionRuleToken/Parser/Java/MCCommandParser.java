@@ -68,7 +68,7 @@ public class MCCommandParser extends Parser {
 		Suffix=277, LessThanOrEqualTo=278, Equal=279, GreaterThanOrEqualTo=280, 
 		OneHundredAndEighty=281, GreaterThanLessThan=282, DivisionEqual=283, MultiplicationEqual=284, 
 		AdditionEqual=285, SubtractionEqual=286, RemainderEqual=287, UUID=288, 
-		Integer=289, IntInterval=290, PositiveDouble=291, PositiveDoubleInterval=292, 
+		Int=289, IntInterval=290, PositiveDouble=291, PositiveDoubleInterval=292, 
 		Float=293, Double=294, DoubleInterval=295, GameTimeValue=296, IntTypedUnit=297, 
 		FloatTypedUnit=298, Identifier=299, FileReference=300, String=301, ResourceLocation=302, 
 		BlockStateKey=303, BlockStateValue=304, MessageContent=305, Message=306, 
@@ -439,7 +439,7 @@ public class MCCommandParser extends Parser {
 			"Join", "Leave", "CollisionRule", "DeathMessageVisibility", "Prefix", 
 			"Suffix", "LessThanOrEqualTo", "Equal", "GreaterThanOrEqualTo", "OneHundredAndEighty", 
 			"GreaterThanLessThan", "DivisionEqual", "MultiplicationEqual", "AdditionEqual", 
-			"SubtractionEqual", "RemainderEqual", "UUID", "Integer", "IntInterval", 
+			"SubtractionEqual", "RemainderEqual", "UUID", "Int", "IntInterval", 
 			"PositiveDouble", "PositiveDoubleInterval", "Float", "Double", "DoubleInterval", 
 			"GameTimeValue", "IntTypedUnit", "FloatTypedUnit", "Identifier", "FileReference", 
 			"String", "ResourceLocation", "BlockStateKey", "BlockStateValue", "MessageContent", 
@@ -841,7 +841,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class IntegerContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public IntegerContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -863,7 +863,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(1104);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -955,7 +955,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class AxeValueContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
 		public AxeValueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -980,7 +980,7 @@ public class MCCommandParser extends Parser {
 			{
 			setState(1110);
 			_la = _input.LA(1);
-			if ( !(_la==Integer || _la==Double) ) {
+			if ( !(_la==Int || _la==Double) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -1670,7 +1670,7 @@ public class MCCommandParser extends Parser {
 				stringValue();
 				}
 				break;
-			case Integer:
+			case Int:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(1165);
@@ -1811,7 +1811,7 @@ public class MCCommandParser extends Parser {
 				case Append:
 				case Facing:
 				case Prepend:
-				case Integer:
+				case Int:
 				case Double:
 					break;
 				default:
@@ -2083,7 +2083,7 @@ public class MCCommandParser extends Parser {
 				stringValue();
 				}
 				break;
-			case Integer:
+			case Int:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(1210);
@@ -2627,7 +2627,7 @@ public class MCCommandParser extends Parser {
 	public static class CoordinateXContext extends ParserRuleContext {
 		public TerminalNode Coordinate() { return getToken(MCCommandParser.Coordinate, 0); }
 		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public CoordinateXContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2676,7 +2676,7 @@ public class MCCommandParser extends Parser {
 	public static class CoordinateYContext extends ParserRuleContext {
 		public TerminalNode Coordinate() { return getToken(MCCommandParser.Coordinate, 0); }
 		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public CoordinateYContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2725,7 +2725,7 @@ public class MCCommandParser extends Parser {
 	public static class CoordinateZContext extends ParserRuleContext {
 		public TerminalNode Coordinate() { return getToken(MCCommandParser.Coordinate, 0); }
 		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public CoordinateZContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -3143,7 +3143,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class LevelValueContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public LevelValueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -3165,7 +3165,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(1286);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3623,7 +3623,7 @@ public class MCCommandParser extends Parser {
 			setState(1329);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case Integer:
+			case Int:
 				{
 				setState(1327);
 				integer();
@@ -3959,7 +3959,7 @@ public class MCCommandParser extends Parser {
 					positiveDoubleInterval();
 					}
 					break;
-				case Integer:
+				case Int:
 					{
 					setState(1365);
 					integer();
@@ -4000,7 +4000,7 @@ public class MCCommandParser extends Parser {
 				setState(1375);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
-				case Integer:
+				case Int:
 					{
 					setState(1373);
 					levelValue();
@@ -16016,7 +16016,7 @@ public class MCCommandParser extends Parser {
 				setState(2175);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (_la==Integer) {
+				if (_la==Int) {
 					{
 					setState(2174);
 					count();
@@ -16041,7 +16041,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class CountContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public CountContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -16063,7 +16063,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2179);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -16807,7 +16807,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class DataStringStartContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public DataStringStartContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -16829,7 +16829,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2252);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -16845,7 +16845,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class DataStringEndContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public DataStringEndContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -16867,7 +16867,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2254);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -17289,7 +17289,7 @@ public class MCCommandParser extends Parser {
 				setState(2309);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if (_la==Integer) {
+				if (_la==Int) {
 					{
 					setState(2308);
 					dataStringEnd();
@@ -18676,7 +18676,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class EffectTimeContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public EffectTimeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -18698,7 +18698,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2477);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -18714,7 +18714,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class SecondsContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public SecondsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -18736,7 +18736,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2479);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -18752,7 +18752,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class AmplifierContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public AmplifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -18774,7 +18774,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2481);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -18883,7 +18883,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class EnchantLevelContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public EnchantLevelContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -18905,7 +18905,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2490);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -20193,7 +20193,7 @@ public class MCCommandParser extends Parser {
 			setState(2647);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case Integer:
+			case Int:
 			case Double:
 			case Coordinate:
 				enterOuterAlt(_localctx, 1);
@@ -20474,7 +20474,7 @@ public class MCCommandParser extends Parser {
 				setState(2686);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
-				case Integer:
+				case Int:
 				case Double:
 				case Coordinate:
 					{
@@ -20611,7 +20611,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ExperienceAmountContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public ExperienceAmountContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -20633,7 +20633,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2711);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -21153,7 +21153,7 @@ public class MCCommandParser extends Parser {
 			setState(2764);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case Integer:
+			case Int:
 			case Double:
 			case Coordinate:
 				enterOuterAlt(_localctx, 1);
@@ -21474,7 +21474,7 @@ public class MCCommandParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class GameruleValueContext extends ParserRuleContext {
 		public TerminalNode BooleanValue() { return getToken(MCCommandParser.BooleanValue, 0); }
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public GameruleValueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -21498,7 +21498,7 @@ public class MCCommandParser extends Parser {
 			{
 			setState(2792);
 			_la = _input.LA(1);
-			if ( !(_la==BooleanValue || _la==Integer) ) {
+			if ( !(_la==BooleanValue || _la==Int) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -23325,7 +23325,7 @@ public class MCCommandParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class ParticleSpeedContext extends ParserRuleContext {
 		public TerminalNode Double() { return getToken(MCCommandParser.Double, 0); }
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public ParticleSpeedContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -23349,7 +23349,7 @@ public class MCCommandParser extends Parser {
 			{
 			setState(2970);
 			_la = _input.LA(1);
-			if ( !(_la==Integer || _la==Double) ) {
+			if ( !(_la==Int || _la==Double) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -23372,7 +23372,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ParticleCountContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public ParticleCountContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -23394,7 +23394,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(2972);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -24476,7 +24476,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class PortContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public PortContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -24498,7 +24498,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(3066);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -25393,7 +25393,7 @@ public class MCCommandParser extends Parser {
 				hearts();
 				}
 				break;
-			case Integer:
+			case Int:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(3134);
@@ -27870,7 +27870,7 @@ public class MCCommandParser extends Parser {
 			setState(3409);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case Integer:
+			case Int:
 			case Double:
 			case Coordinate:
 				enterOuterAlt(_localctx, 1);
@@ -27896,7 +27896,7 @@ public class MCCommandParser extends Parser {
 					selector();
 					}
 					break;
-				case Integer:
+				case Int:
 				case Double:
 				case Coordinate:
 					{
@@ -27929,7 +27929,7 @@ public class MCCommandParser extends Parser {
 								}
 								}
 								break;
-							case Integer:
+							case Int:
 							case Double:
 							case Coordinate:
 								{
@@ -28602,7 +28602,7 @@ public class MCCommandParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class FaedInContext extends ParserRuleContext {
-		public TerminalNode Integer() { return getToken(MCCommandParser.Integer, 0); }
+		public TerminalNode Int() { return getToken(MCCommandParser.Int, 0); }
 		public FaedInContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -28624,7 +28624,7 @@ public class MCCommandParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(3471);
-			match(Integer);
+			match(Int);
 			}
 		}
 		catch (RecognitionException re) {

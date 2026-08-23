@@ -1,4 +1,5 @@
-﻿using MinecraftLanguageServer.DataContext;
+﻿
+using MinecraftLanguageServer.Service;
 
 namespace MinecraftLanguageServer
 {
@@ -20,8 +21,7 @@ namespace MinecraftLanguageServer
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Exception? exception = e.ExceptionObject as Exception;
-            if (exception is null)
+            if (e.ExceptionObject is not Exception exception)
             {
                 return;
             }

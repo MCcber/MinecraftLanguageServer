@@ -88,7 +88,7 @@ public partial class MCCommandParser : Parser {
 		Suffix=277, LessThanOrEqualTo=278, Equal=279, GreaterThanOrEqualTo=280, 
 		OneHundredAndEighty=281, GreaterThanLessThan=282, DivisionEqual=283, MultiplicationEqual=284, 
 		AdditionEqual=285, SubtractionEqual=286, RemainderEqual=287, UUID=288, 
-		Integer=289, IntInterval=290, PositiveDouble=291, PositiveDoubleInterval=292, 
+		Int=289, IntInterval=290, PositiveDouble=291, PositiveDoubleInterval=292, 
 		Float=293, Double=294, DoubleInterval=295, GameTimeValue=296, IntTypedUnit=297, 
 		FloatTypedUnit=298, Identifier=299, FileReference=300, String=301, ResourceLocation=302, 
 		BlockStateKey=303, BlockStateValue=304, MessageContent=305, Message=306, 
@@ -433,7 +433,7 @@ public partial class MCCommandParser : Parser {
 		"Distance", "Empty", "Join", "Leave", "CollisionRule", "DeathMessageVisibility", 
 		"Prefix", "Suffix", "LessThanOrEqualTo", "Equal", "GreaterThanOrEqualTo", 
 		"OneHundredAndEighty", "GreaterThanLessThan", "DivisionEqual", "MultiplicationEqual", 
-		"AdditionEqual", "SubtractionEqual", "RemainderEqual", "UUID", "Integer", 
+		"AdditionEqual", "SubtractionEqual", "RemainderEqual", "UUID", "Int", 
 		"IntInterval", "PositiveDouble", "PositiveDoubleInterval", "Float", "Double", 
 		"DoubleInterval", "GameTimeValue", "IntTypedUnit", "FloatTypedUnit", "Identifier", 
 		"FileReference", "String", "ResourceLocation", "BlockStateKey", "BlockStateValue", 
@@ -841,7 +841,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class IntegerContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public IntegerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -867,7 +867,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1102;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -964,7 +964,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class AxeValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
 		public AxeValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -993,7 +993,7 @@ public partial class MCCommandParser : Parser {
 			{
 			State = 1108;
 			_la = TokenStream.LA(1);
-			if ( !(_la==Integer || _la==Double) ) {
+			if ( !(_la==Int || _la==Double) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -1723,7 +1723,7 @@ public partial class MCCommandParser : Parser {
 				stringValue();
 				}
 				break;
-			case Integer:
+			case Int:
 				EnterOuterAlt(_localctx, 2);
 				{
 				State = 1163;
@@ -1867,7 +1867,7 @@ public partial class MCCommandParser : Parser {
 				case Append:
 				case Facing:
 				case Prepend:
-				case Integer:
+				case Int:
 				case Double:
 					break;
 				default:
@@ -2151,7 +2151,7 @@ public partial class MCCommandParser : Parser {
 				stringValue();
 				}
 				break;
-			case Integer:
+			case Int:
 				EnterOuterAlt(_localctx, 2);
 				{
 				State = 1208;
@@ -2723,7 +2723,7 @@ public partial class MCCommandParser : Parser {
 	public partial class CoordinateXContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinate() { return GetToken(MCCommandParser.Coordinate, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public CoordinateXContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -2774,7 +2774,7 @@ public partial class MCCommandParser : Parser {
 	public partial class CoordinateYContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinate() { return GetToken(MCCommandParser.Coordinate, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public CoordinateYContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -2825,7 +2825,7 @@ public partial class MCCommandParser : Parser {
 	public partial class CoordinateZContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Coordinate() { return GetToken(MCCommandParser.Coordinate, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public CoordinateZContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -3271,7 +3271,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class LevelValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public LevelValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -3297,7 +3297,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1284;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -3777,7 +3777,7 @@ public partial class MCCommandParser : Parser {
 			State = 1327;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case Integer:
+			case Int:
 				{
 				State = 1325;
 				integer();
@@ -4119,7 +4119,7 @@ public partial class MCCommandParser : Parser {
 					positiveDoubleInterval();
 					}
 					break;
-				case Integer:
+				case Int:
 					{
 					State = 1363;
 					integer();
@@ -4160,7 +4160,7 @@ public partial class MCCommandParser : Parser {
 				State = 1373;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case Integer:
+				case Int:
 					{
 					State = 1371;
 					levelValue();
@@ -16957,7 +16957,7 @@ public partial class MCCommandParser : Parser {
 				State = 2171;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==Integer) {
+				if (_la==Int) {
 					{
 					State = 2170;
 					count();
@@ -16981,7 +16981,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class CountContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public CountContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -17007,7 +17007,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2175;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -17786,7 +17786,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class DataStringStartContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public DataStringStartContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -17812,7 +17812,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2248;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -17827,7 +17827,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class DataStringEndContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public DataStringEndContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -17853,7 +17853,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2250;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -18287,7 +18287,7 @@ public partial class MCCommandParser : Parser {
 				State = 2305;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==Integer) {
+				if (_la==Int) {
 					{
 					State = 2304;
 					dataStringEnd();
@@ -19727,7 +19727,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class EffectTimeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public EffectTimeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -19753,7 +19753,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2473;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -19768,7 +19768,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class SecondsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public SecondsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -19794,7 +19794,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2475;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -19809,7 +19809,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class AmplifierContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public AmplifierContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -19835,7 +19835,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2477;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -19949,7 +19949,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class EnchantLevelContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public EnchantLevelContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -19975,7 +19975,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2486;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -21308,7 +21308,7 @@ public partial class MCCommandParser : Parser {
 			State = 2643;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case Integer:
+			case Int:
 			case Double:
 			case Coordinate:
 				EnterOuterAlt(_localctx, 1);
@@ -21592,7 +21592,7 @@ public partial class MCCommandParser : Parser {
 				State = 2682;
 				ErrorHandler.Sync(this);
 				switch (TokenStream.LA(1)) {
-				case Integer:
+				case Int:
 				case Double:
 				case Coordinate:
 					{
@@ -21731,7 +21731,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class ExperienceAmountContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public ExperienceAmountContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -21757,7 +21757,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2707;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -22301,7 +22301,7 @@ public partial class MCCommandParser : Parser {
 			State = 2760;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case Integer:
+			case Int:
 			case Double:
 			case Coordinate:
 				EnterOuterAlt(_localctx, 1);
@@ -22636,7 +22636,7 @@ public partial class MCCommandParser : Parser {
 
 	public partial class GameruleValueContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BooleanValue() { return GetToken(MCCommandParser.BooleanValue, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public GameruleValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -22664,7 +22664,7 @@ public partial class MCCommandParser : Parser {
 			{
 			State = 2788;
 			_la = TokenStream.LA(1);
-			if ( !(_la==BooleanValue || _la==Integer) ) {
+			if ( !(_la==BooleanValue || _la==Int) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -24582,7 +24582,7 @@ public partial class MCCommandParser : Parser {
 
 	public partial class ParticleSpeedContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Double() { return GetToken(MCCommandParser.Double, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public ParticleSpeedContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -24610,7 +24610,7 @@ public partial class MCCommandParser : Parser {
 			{
 			State = 2966;
 			_la = TokenStream.LA(1);
-			if ( !(_la==Integer || _la==Double) ) {
+			if ( !(_la==Int || _la==Double) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -24631,7 +24631,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class ParticleCountContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public ParticleCountContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -24657,7 +24657,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 2968;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -25791,7 +25791,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class PortContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public PortContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -25817,7 +25817,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 3062;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {
@@ -26766,7 +26766,7 @@ public partial class MCCommandParser : Parser {
 				hearts();
 				}
 				break;
-			case Integer:
+			case Int:
 				EnterOuterAlt(_localctx, 2);
 				{
 				State = 3130;
@@ -29348,7 +29348,7 @@ public partial class MCCommandParser : Parser {
 			State = 3405;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case Integer:
+			case Int:
 			case Double:
 			case Coordinate:
 				EnterOuterAlt(_localctx, 1);
@@ -29374,7 +29374,7 @@ public partial class MCCommandParser : Parser {
 					selector();
 					}
 					break;
-				case Integer:
+				case Int:
 				case Double:
 				case Coordinate:
 					{
@@ -29407,7 +29407,7 @@ public partial class MCCommandParser : Parser {
 								}
 								}
 								break;
-							case Integer:
+							case Int:
 							case Double:
 							case Coordinate:
 								{
@@ -30106,7 +30106,7 @@ public partial class MCCommandParser : Parser {
 	}
 
 	public partial class FaedInContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Integer() { return GetToken(MCCommandParser.Integer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Int() { return GetToken(MCCommandParser.Int, 0); }
 		public FaedInContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -30132,7 +30132,7 @@ public partial class MCCommandParser : Parser {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 3467;
-			Match(Integer);
+			Match(Int);
 			}
 		}
 		catch (RecognitionException re) {

@@ -600,7 +600,7 @@ AdditionEqual
 SubtractionEqual
 RemainderEqual
 UUID
-Integer
+Int
 IntInterval
 PositiveDouble
 PositiveDoubleInterval
@@ -915,7 +915,7 @@ UnicodeEscape
 EscapeChar
 UUID
 FloatExponent
-Integer
+Int
 IntInterval
 PositiveDouble
 PositiveDoubleInterval
