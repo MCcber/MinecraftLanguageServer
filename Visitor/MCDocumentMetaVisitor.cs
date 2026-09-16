@@ -703,6 +703,21 @@ namespace MinecraftLanguageServer.Visitor
             return result;
         }
 
+        public override object VisitTypeParamBlock([NotNull] TypeParamBlockContext context)
+        {
+            var typeParamArray = context.typeParam();
+            List<MetaValue> resultList = [];
+            for (int i = 0; i < typeParamArray.Length; i++)
+            {
+                MetaValue? metaValue = Visit(typeParamArray[i]) as MetaValue;
+                if (metaValue is not null)
+                {
+                    resultList.Add(metaValue);
+                }
+            }
+            return resultList;
+        }
+
         /// <summary>
         /// TypedNumber（用于 enum value 和 literal）
         /// </summary>
@@ -747,6 +762,7 @@ namespace MinecraftLanguageServer.Visitor
                 Kind = MetaTypeKind.Dispatch,
             };
 
+            #region 整理注释与属性标注
             PrelimContext prelim = context.prelim();
             meta.AttributeList ??= [];
             if (prelim is not null)
@@ -769,7 +785,9 @@ namespace MinecraftLanguageServer.Visitor
                     }
                 }
             }
+            #endregion
 
+            #region 整理调度器资源路径与索引成员
             // 将 resource 和 index 作为特殊属性存入 AttributeList
             var resource = context.resourceLocation()?.GetText();
             // 解析 indexBody 为索引键列表
@@ -788,7 +806,7 @@ namespace MinecraftLanguageServer.Visitor
                 {
                     meta.AttributeList["Index"] = new MetaValue { Kind = MetaValueKind.List, Items = [.. indexKeys.Select(k => new MetaValue { Kind = MetaValueKind.Literal, LiteralValue = k })] };
                 }
-                else if(indexKeys.Count == 1)
+                else if (indexKeys.Count == 1)
                 {
                     meta.AttributeList["Index"] = new MetaValue { Kind = MetaValueKind.Literal, LiteralValue = indexKeys[0] };
                 }
@@ -798,35 +816,50 @@ namespace MinecraftLanguageServer.Visitor
                 // 会将 DispatcherResource 设置为 "attribute_modifiers"
                 meta.DispatcherResource = indexKeys[0];
             }
+
             if (!string.IsNullOrEmpty(resource))
             {
                 meta.AttributeList["Resource"] = new MetaValue() { LiteralValue = resource };
             }
+            #endregion
 
-            // 目标类型
+            #region 解析内嵌的类型
             if (context.typeSentence() is not null)
             {
                 meta.BaseType = (MetaType)Visit(context.typeSentence());
-                // 从目标类型深取名称：Struct.Name > 容器.ElementType.Name/ReferencePath > Reference.ReferencePath
-                string? targetName = meta.BaseType.Name
-                    ?? meta.BaseType.ElementType?.Name
-                    ?? meta.BaseType.ElementType?.ReferencePath
-                    ?? meta.BaseType.ElementType?.Identifier
-                    ?? meta.BaseType.ReferencePath;
-                if (targetName is not null)
-                {
-                    meta.Name = targetName;
-                }
-                else if (indexKeys.Count > 0)
-                {
-                    //%unknown/%key等动态索引：目标类型无名称时用resource+index拼唯一名
-                    meta.Name = (resource ?? "") + ":" + indexKeys[0];
-                }
-                if(meta.BaseType.BaseType?.Kind is MetaTypeKind.Literal && meta.BaseType.BaseType.LiteralValue is not null)
+
+                //防止类型名撞键
+                meta.Name = Guid.NewGuid().ToString();
+
+                if (meta.BaseType.BaseType?.Kind is MetaTypeKind.Literal && meta.BaseType.BaseType.LiteralValue is not null)
                 {
                     meta.MetaTypeName = meta.BaseType.BaseType.LiteralValue.ToString();
                 }
+                else if (!string.IsNullOrEmpty(meta.BaseType.Name))
+                {
+                    meta.MetaTypeName = meta.BaseType.Name;
+                }
             }
+            #endregion
+
+            #region 解析内嵌的泛型结构
+            if (context.typeParamBlock() is not null)
+            {
+                List<MetaValue>? typeParamBlock = Visit(context.typeParamBlock()) as List<MetaValue>;
+                if (typeParamBlock is not null)
+                {
+                    meta.MetaTypeParameterNameList ??= [];
+                    for (int i = 0; i < typeParamBlock.Count; i++)
+                    {
+                        string? literalValueString = typeParamBlock[i].LiteralValue?.ToString();
+                        if (literalValueString is not null)
+                        {
+                            meta.MetaTypeParameterNameList.Add(literalValueString, typeParamBlock[i]);
+                        }
+                    }
+                }
+            }
+            #endregion
 
             return meta;
         }

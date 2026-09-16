@@ -12,4 +12,8 @@
     <PackageReference Include="StreamJsonRpc" Version="2.24.84" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MinecraftLanguageModelLibrary\MinecraftLanguageModelLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

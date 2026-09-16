@@ -63,7 +63,7 @@ namespace MinecraftLanguageServer.DTOTemplateBuilder
                     currentDTO.FeatureMap["Generic"] = new()
                     {
                         Kind = MetaValueKind.Literal,
-                        LiteralValue = schema.BaseType?.MetaTypeName ?? ""
+                        LiteralValue = schema.BaseType?.BaseType?.LiteralValue ?? ""
                     };
                 }
             }

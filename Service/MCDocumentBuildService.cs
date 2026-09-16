@@ -86,7 +86,7 @@ namespace MinecraftLanguageServer.Service
                 });
             }
 
-            //string content = "type ItemStackOfComponent<T> = struct {\r\n\t...SingleItemOfComponent<T>,\r\n\t/// Number of items in the stack.\r\n\t/// Defaults to `1`.\r\n\t#[since=\"1.20.5\"]\r\n\tcount?: int @ 1..99,\r\n\t/// Number of items in the stack.\r\n\t#[until=\"1.20.5\"]\r\n\tCount?: byte,\r\n}";
+            //string content = "dispatch minecraft:environment_attribute_float_modifier[alpha_blend]<T> to struct FloatWithAlpha {\r\n\tvalue: float,\r\n\t/// Defaults to 1.0\r\n\talpha?: float @ 0..1,\r\n}";
             //string json = await Service(content, "");
         }
 
