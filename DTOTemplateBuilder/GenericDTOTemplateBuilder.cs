@@ -11,7 +11,7 @@ namespace MinecraftLanguageServer.DTOTemplateBuilder
 
         public MetaTypeEditorFieldDTO Build(MetaType schema, string fieldName = "", bool isRequired = false, string watermark = "", HashSet<MetaType>? visitor = null)
         {
-            var currentDTO = MetaTypeEditorFieldDTODefaultBuilder.BuildDefault(schema, fieldName, isRequired, watermark);
+            var currentDTO = MetaTypeEditorFieldDTODefaultBuilder.BuildDefault(schema, fieldName, true, watermark);
             if (schema.BaseType is not null)
             {
                 //记录引用的目标泛型结构
