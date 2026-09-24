@@ -1,4 +1,4 @@
-﻿using MinecraftLanguageModelLibrary.Data;
+using MinecraftLanguageModelLibrary.Data;
 using MinecraftLanguageServer.DTOTemplateBuilder;
 using MinecraftLanguageServer.Interface;
 
@@ -49,7 +49,7 @@ namespace MinecraftLanguageServer.Service
 
             // 兜底类型：必须注册 Any，否则 Get 的兜底分支会在未注册 kind 时再次抛 KeyNotFoundException
             registry.Register(MetaTypeKind.Any, new AnyDTOTemplateBuilder());
-            registry.Register(MetaTypeKind.Tuple, new AnyDTOTemplateBuilder());
+            registry.Register(MetaTypeKind.Tuple, new TupleDTOTemplateBuilder(registry));
             registry.Register(MetaTypeKind.None, new AnyDTOTemplateBuilder());
             registry.Register(MetaTypeKind.Identifier, new AnyDTOTemplateBuilder());
 

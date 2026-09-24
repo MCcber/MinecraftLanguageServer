@@ -1,4 +1,4 @@
-﻿using Antlr4.Runtime;
+using Antlr4.Runtime;
 using Antlr4.Runtime.Misc;
 using MinecraftLanguageModelLibrary.Data;
 using System.Text.RegularExpressions;
@@ -402,6 +402,10 @@ namespace MinecraftLanguageServer.Visitor
                 Type = new(),
             };
 
+            //方括号计算键（如 [K]）的类型：元素 0 = 键类型，元素 1 = 值类型
+            MetaType keyElementType = null;
+            MetaType valueElementType = null;
+
             var key = context.structKey();
             if (key is not null)
             {
@@ -423,6 +427,8 @@ namespace MinecraftLanguageServer.Visitor
                             field.Name = keyMetaTypeString;
                             field.Type.MetaTypeName = keyMetaTypeString;
                         }
+
+                        keyElementType = keyMetaType;
                     }
                 }
                 else
@@ -466,6 +472,7 @@ namespace MinecraftLanguageServer.Visitor
                 var typeResult = Visit(context.typeSentence());
                 if (typeResult is MetaType metaType)
                 {
+                    valueElementType = metaType;
                     field.Type.LiteralValue ??= metaType.LiteralValue;
                     field.Type.MemberMinValue ??= metaType.MemberMinValue;
                     field.Type.MemberMaxValue ??= metaType.MemberMaxValue;
@@ -543,6 +550,13 @@ namespace MinecraftLanguageServer.Visitor
                         Name = context.typeSentence().GetText()
                     };
                 }
+            }
+
+            //方括号计算键：字段类型标记为 Tuple，供验证器管线识别动态 Key Map
+            if (keyElementType is not null && valueElementType is not null)
+            {
+                field.Type.Kind = MetaTypeKind.Tuple;
+                field.Type.TupleElementTypeList = [keyElementType, valueElementType];
             }
 
             if (field.IsSpread)
