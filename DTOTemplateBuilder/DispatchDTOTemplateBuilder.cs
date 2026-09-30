@@ -1,4 +1,4 @@
-﻿using MinecraftLanguageModelLibrary.Data;
+using MinecraftLanguageModelLibrary.Data;
 using MinecraftLanguageServer.Interface;
 using MinecraftLanguageServer.Service;
 using MinecraftLanguageServer.Utility;
@@ -14,7 +14,7 @@ namespace MinecraftLanguageServer.DTOTemplateBuilder
             var currentDTO = MetaTypeEditorFieldDTODefaultBuilder.BuildDefault(schema, fieldName, isRequired, watermark);
             if (schema.BaseType is not null)
             {
-                // 业务过程：泛型 dispatch 目标不能直接把实参当成目标结构。
+                // 泛型 dispatch 目标不能直接把实参当成目标结构。
                 // 例如 dispatch ... to Holder<struct Inner>，目标是 Holder<T>，不是 Inner。
                 // 这里只保留泛型基类名与实参列表，真正的泛型替换交给客户端解析链完成。
                 if (schema.BaseType.Kind is MetaTypeKind.Generic)
@@ -27,18 +27,16 @@ namespace MinecraftLanguageServer.DTOTemplateBuilder
                         ?? "";
 
                     currentDTO.TypeName = genericName;
-                    currentDTO.TypeParameterNameList = [];
+                    currentDTO.ActualTypeArguments = [];
                     if (schema.BaseType.TypeArgumentList is not null)
                     {
-                        for (int i = 0; i < schema.BaseType.TypeArgumentList.Count; i++)
+                        foreach (MetaType argumentType in schema.BaseType.TypeArgumentList)
                         {
-                            currentDTO.TypeParameterNameList.Add(new Tuple<string, MetaValue>(
-                                i.ToString(),
-                                new MetaValue
-                                {
-                                    Kind = MetaValueKind.Type,
-                                    TypeValue = schema.BaseType.TypeArgumentList[i]
-                                }));
+                            currentDTO.ActualTypeArguments.Add(new MetaValue
+                            {
+                                Kind = MetaValueKind.Type,
+                                TypeValue = argumentType
+                            });
                         }
                     }
 

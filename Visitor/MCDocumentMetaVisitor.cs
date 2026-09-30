@@ -111,7 +111,8 @@ namespace MinecraftLanguageServer.Visitor
             }
             else if (context is NumericTypeContext numericTypeContext)
             {
-                object? from = new(), to = new();
+                //没有捕获到值域区间时不登记 ValueFrom/ValueTo
+                string? from = null, to = null;
                 if (numericTypeContext.integerRange() is not null)
                 {
                     rangeText = numericTypeContext.integerRange().GetText();
@@ -481,6 +482,8 @@ namespace MinecraftLanguageServer.Visitor
                     field.Type.Kind = metaType.Kind;
                     field.Type.Name ??= metaType.Name;
                     field.Type.MetaTypeName ??= metaType.MetaTypeName;
+                    field.Type.ReferencePath ??= metaType.ReferencePath;
+                    field.Type.Identifier ??= metaType.Identifier;
                     field.Type.MinLength ??= metaType.MinLength;
                     field.Type.MaxLength ??= metaType.MaxLength;
                     field.Type.DocumentComments ??= metaType.DocumentComments;
